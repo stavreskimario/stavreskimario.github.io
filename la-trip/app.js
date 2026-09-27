@@ -94,17 +94,19 @@ const days=[
 {time:'Before your flight',title:'Hotel → LAX',location:'Airport transfer',status:'proposed',type:'car',note:'Choose transport and departure time once the flight schedule is confirmed.',query:'Los Angeles International Airport LAX'},
 {time:'Time to confirm · LA local time',title:'Los Angeles → Melbourne',location:'Delta Air Lines · DL11',status:'plan',type:'plane',note:'Depart Los Angeles on 28 December. Flight times, booking reference and Melbourne arrival date to add.',reservation:'inbound'}]}
 ];
+// Stable identifiers let saved edits survive day changes and reloads.
+days.forEach(d=>d.events.forEach((e,i)=>e.id=`day-${d.date}-event-${i+1}`));
 let selectedDay=0;
 const dayPresentation={20:{photo:'assets/westin-bonaventure.jpg',position:'50% 62%',label:'Arrive',icon:'plane'},21:{photo:'assets/la-skyline.jpg',position:'23% 50%',label:'Warner Bros.',icon:'film'},22:{photo:'assets/la-skyline.jpg',position:'66% 35%',label:'Universal',icon:'film'},23:{photo:'assets/la-skyline.jpg',position:'25% 60%',label:'Clippers',icon:'ball'},24:{photo:'assets/westin-bonaventure.jpg',position:'55% 40%',label:'Explore LA',icon:'sun'},25:{photo:'assets/la-skyline.jpg',position:'60% 45%',label:'Lakers',icon:'ball'},26:{photo:'assets/golden-gate-sunset.jpg',position:'50% 45%',label:'San Francisco',icon:'plane'},27:{photo:'assets/la-skyline.jpg',position:'83% 70%',label:'The coast',icon:'sun'},28:{photo:'assets/westin-bonaventure.jpg',position:'42% 50%',label:'Fly home',icon:'plane'}};
 function renderDates(){
  const strip=$('#date-strip');
  if(!strip.children.length)strip.innerHTML=days.map((d,i)=>{const t=dayPresentation[d.date];return `<button class="date-button" data-day="${i}" aria-pressed="false" aria-label="Day ${i+1}, ${d.weekday} ${d.date} December: ${esc(d.label)}"><span class="date-copy"><span class="date-meta">DAY ${i+1}</span><span class="day-label">${esc(t.label)}</span><span class="date-number">${d.date} DEC</span></span><img class="date-photo" src="${t.photo}" style="object-position:${t.position}" alt="" width="87" height="78" loading="lazy"><span class="date-stamp">${icon(t.icon)}</span></button>`}).join('');
- strip.querySelectorAll('[data-day]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.day)===selectedDay)));
+ strip.querySelectorAll('[data-day]').forEach(el=>{const i=Number(el.dataset.day),d=days[i];el.setAttribute('aria-pressed',String(i===selectedDay));el.querySelector('.day-label').textContent=d.label;el.setAttribute('aria-label',`Day ${i+1}, ${d.weekday} ${d.date} December: ${d.label}`)});
 }
 function readableTime(e){
  if(e.time==='Time to confirm · MEL local time')return 'Time to confirm · Melbourne';
  if(e.time==='Time to confirm · LA local time')return 'Time to confirm · Los Angeles';
- if(e.time.includes('check-in time'))return 'Check-in time to confirm';
+ if(e.time==='20 December · check-in time to confirm')return 'Check-in time to confirm';
  if(e.time==='28 December · time to confirm')return 'Check-out time to confirm';
  return e.time;
 }
@@ -120,16 +122,17 @@ function renderPackingPeek(){
  const items=[['passport','Passport'],['knits','Warm layers'],['jacket','Jacket'],['shoes','Walking shoes'],['phone','Phone charger'],['adapter','US adaptor'],['headphones','Headphones'],['jersey','Game-day outfit']];
  $('#packing-peek-list').innerHTML=items.map(([id,label])=>{const p=packing.find(p=>p.id===id);return `<label class="peek-check"><input type="checkbox" data-pack-id="${id}" ${p.checked?'checked':''} aria-label="${esc(p.label)}"><span>${esc(label)}</span></label>`}).join('');
 }
-function eventActions(e){let actions=[];if(e.map){actions.push(mapActionLink(place(e.map).query,'directions'))}else if(e.query){actions.push(mapActionLink(e.query))}if(e.reservation)actions.push(`<button data-reservation="${e.reservation}">${icon('ticket')}View details</button>`);if(e.source)actions.push(`<a href="${e.source}" target="_blank" rel="noopener noreferrer">Official information ${icon('external')}</a>`);return actions.length?`<div class="event-actions">${actions.join('')}</div>`:''}
+function eventActions(e){let actions=[];if(e.query||e.map)actions.push(mapActionLink(e.query||place(e.map).query,'directions'));if(e.reservation)actions.push(`<button data-reservation="${esc(e.reservation)}">${icon('ticket')}Booking details</button>`);if(e.source)actions.push(`<a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Website ${icon('external')}</a>`);return actions.length?`<div class="event-actions">${actions.join('')}</div>`:''}
 function selectDay(index,scroll=false){
  if(!Number.isInteger(index)||index<0||index>=days.length)throw new Error('Choose a day from 20 to 28 December.');
  const changed=selectedDay!==index;
  selectedDay=index;const d=days[index];renderDates();
  $('#day-number').textContent=`DAY ${index+1} · ${d.weekday.toUpperCase()} ${d.date} DEC`;
  $('#day-title').textContent=d.title;$('#day-description').textContent=d.description;
- $('#timeline').innerHTML=d.events.map(e=>`<article class="timeline-item ${e.status}"><span class="timeline-node" aria-hidden="true">${icon(e.type)}</span><div class="event-card ${e.highlight?'highlight':''}"><span class="event-time">${esc(readableTime(e))}</span><h4 class="event-title">${esc(e.title)}</h4><p class="event-location">${esc(e.location)}</p><span class="badge ${e.status}">${statuses[e.status]}</span><details class="event-more"><summary>Details${e.map||e.query?' & directions':''}</summary><p class="event-note">${esc(e.note)}</p>${eventActions(e)}</details></div></article>`).join('');
+ $('#timeline').innerHTML=d.events.length?d.events.map(e=>`<article class="timeline-item ${e.status}"><span class="timeline-node" aria-hidden="true">${icon(e.type)}</span><div class="event-card ${e.highlight?'highlight':''}"><span class="event-time">${esc(readableTime(e))}</span><h4 class="event-title">${esc(e.title)}</h4><p class="event-location">${esc(e.location)}</p><div class="event-controls"><span class="badge ${e.status}">${statuses[e.status]}</span><button type="button" class="edit-event" data-edit-event="${esc(e.id)}" aria-label="Edit ${esc(e.title)}">Edit</button></div><details class="event-more"><summary>Details${e.map||e.query?' & directions':''}</summary><p class="event-note">${esc(e.note)}</p>${eventActions(e)}</details></div></article>`).join(''):'<p class="empty-day">A little room to wander. Add an event to start this day’s plan.</p>';
  const p=place(d.map);renderMapCard('#day-map',p);$('#day-map-name').textContent=p.name;$('#day-map-area').textContent=p.area;$('#day-note-title').textContent=d.noteTitle;$('#day-note').textContent=d.note;
  $('#prev-day').disabled=index===0;$('#next-day').disabled=index===days.length-1;
+ window.tripEditor?.dayChanged();
  if(changed)window.tripMotion?.dayChanged();
  if(scroll&&window.tripMotion){window.tripMotion.centerDay(index);return}
  if(scroll){const button=$('#date-strip').querySelector(`[data-day="${index}"]`);const strip=$('#date-strip');strip.scrollTo({left:button.offsetLeft-strip.offsetLeft-(strip.clientWidth-button.clientWidth)/2,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
@@ -215,7 +218,7 @@ $('#strip-next').addEventListener('click',()=>window.tripMotion?window.tripMotio
 // Optional WebMCP enhancement shares the visible itinerary and packing state.
 const modelContext=document.modelContext;const lifecycle=new AbortController();
 if(modelContext?.registerTool){const definitions=[
-{name:'read_trip_itinerary',title:'Read LA trip',description:'Read known trip details and proposed plans; this does not verify or book reservations.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:false},execute:()=>({dates:'20–28 December 2026',timeZone:'America/Los_Angeles',days:days.map(({date,title,events})=>({date,title,events})),reservations})},
+{name:'read_trip_itinerary',title:'Read LA trip',description:'Read the current device-local itinerary, including user edits, and separate booking records; this does not verify or book reservations.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:true},execute:()=>({dates:'20–28 December 2026',timeZone:'America/Los_Angeles',days:days.map(({date,title,events})=>({date,title,events})),reservations})},
 {name:'read_packing_list',title:'Read packing list',description:'Read the device-local packing checklist and its item identifiers.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:true},execute:()=>({items:packing.map(p=>({...p})),savedOnDevice:storageAvailable})},
 {name:'update_packing_items',title:'Update packing checks',description:'Check or uncheck known packing items in the visible checklist. Saves only on this device, with no cross-device sync.',inputSchema:{type:'object',properties:{updates:{type:'array',minItems:1,items:{type:'object',properties:{id:{type:'string'},checked:{type:'boolean'}},required:['id','checked'],additionalProperties:false}}},required:['updates'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:input=>{if(!input||typeof input!=='object'||Object.keys(input).some(k=>k!=='updates'))throw new Error('Expected only an updates array.');const result=setPackingItems(input.updates);showView('packing');return result}}
 ];for(const definition of definitions){try{Promise.resolve(modelContext.registerTool(definition,{signal:lifecycle.signal})).catch(()=>{})}catch{}}window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true})}

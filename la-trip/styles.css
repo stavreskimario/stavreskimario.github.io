@@ -253,3 +253,62 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{o
  .main-nav a[aria-current=page],.date-button[aria-pressed=true],.map-app-choice button[aria-pressed=true]{outline:2px solid Highlight;outline-offset:-3px}
 }
 @media print{.date-strip.fluid-strip{overflow:visible}.date-rail{transform:none!important;flex-wrap:wrap}}
+
+/* Editing stays close to the plan; the form uses the same bone-paper material. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.event-controls{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.edit-event{border:0;background:transparent;color:var(--rust);font:inherit;font-size:.875rem;font-weight:600;min-width:3rem;min-height:2.75rem;border-radius:.65rem;padding:.4rem .6rem}
+.edit-event:hover,.edit-event:active{background:var(--soft)}
+.event-card{min-width:0;overflow-wrap:anywhere}
+.event-note{white-space:pre-wrap}
+.itinerary-tools{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin:0 0 .65rem}
+.itinerary-tools .button{font-size:.875rem;min-height:2.75rem}
+.itinerary-tools .text-link,.itinerary-feedback .text-link{min-height:2.75rem;border:0;background:none;font:inherit;font-size:.875rem;color:var(--rust);padding:.45rem}
+.editor-storage{font-size:.8125rem;line-height:1.5;color:var(--muted);margin:0 0 1rem}
+.itinerary-feedback{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;font-size:.875rem;margin-bottom:.75rem;line-height:1.5}
+.itinerary-feedback p:empty{display:none}
+.itinerary-feedback p{margin:0;flex:1;min-width:0}
+.empty-day{padding:1rem 0;font-size:1rem;line-height:1.6;color:var(--muted)}
+.itinerary-backup{border-top:1px solid var(--line);padding-top:.5rem;margin:.75rem 0 1rem;font-size:.875rem}
+.itinerary-backup summary{min-height:2.75rem;cursor:pointer;align-content:center;color:var(--rust)}
+.itinerary-backup p{margin:.6rem 0;line-height:1.5}
+.itinerary-backup>div{display:flex;flex-wrap:wrap;gap:.5rem}
+.itinerary-backup .button{font-size:.875rem;position:relative;min-height:2.75rem;overflow:hidden}
+.itinerary-backup input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.itinerary-backup label:focus-within{outline:2px solid var(--rust);outline-offset:3px}
+#itinerary-editor{box-sizing:border-box;width:min(40rem,calc(100% - 1.5rem));max-height:calc(100dvh - 2rem);margin:auto;padding:0;border:1px solid #e2d8c7;border-radius:1.5rem;background:var(--paper);color:var(--ink);box-shadow:0 1.5rem 5rem #39362f40;overflow:auto;overscroll-behavior:contain}
+#itinerary-editor::backdrop{background:#302a226b}
+body:has(#itinerary-editor[open]){overflow:hidden}
+#itinerary-form{padding:1.5rem}
+.editor-heading{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem}
+.editor-heading .eyebrow{font-size:.75rem;letter-spacing:.06em;margin:0 0 .5rem}
+.editor-heading h2{font-family:'Instrument Serif',Georgia,serif;font-size:2.5rem;line-height:1.05;letter-spacing:-.025em;font-weight:400;margin:0}
+.editor-heading .plain-icon{flex-shrink:0;min-width:2.75rem;min-height:2.75rem;font-size:1.1rem}
+.editor-fields{min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;border:0;padding:0;margin:0}
+.editor-fields[hidden],#import-preview[hidden]{display:none}
+.editor-fields label{display:flex;flex-direction:column;gap:.4rem;font-size:.875rem;font-weight:550;min-width:0}
+.editor-fields label>span{font-size:.8125rem;font-weight:400;color:var(--muted)}
+.full-field{grid-column:1/-1}
+.editor-fields input,.editor-fields textarea,.editor-fields select{box-sizing:border-box;min-width:0;width:100%;max-width:100%;min-height:2.9rem;border:1px solid #c5b9a6;border-radius:.8rem;background:#fffdf7;color:var(--ink);font:inherit;font-size:1rem;line-height:1.5;padding:.65rem .75rem}
+.editor-fields select{text-overflow:ellipsis}
+.editor-fields textarea{resize:vertical;min-height:6rem}
+.editor-fields input:focus-visible,.editor-fields textarea:focus-visible,.editor-fields select:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.editor-fields [aria-invalid=true]{border-color:#a3372e}
+.editor-fields .editor-check{flex-direction:row;align-items:center;gap:.65rem;align-self:end;min-height:2.9rem}
+.editor-check input{width:1.2rem;height:1.2rem;min-height:0;accent-color:var(--olive-dark)}
+.editor-extras{border-top:1px solid var(--line);padding-top:.35rem}
+.editor-extras summary{font-size:.9375rem;font-weight:550;cursor:pointer;min-height:2.75rem;align-content:center;color:var(--rust)}
+.editor-extras>.editor-fields{margin-top:.75rem}
+.field-hint{font-size:.8125rem;color:var(--muted);line-height:1.5;margin:-.5rem 0 0}
+.editor-error{color:#963b30;font-size:.875rem;line-height:1.5;margin:.75rem 0;overflow-wrap:anywhere}
+.editor-error:empty{margin:0}
+.editor-footer{position:sticky;bottom:-1.5rem;display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:.6rem;padding:1rem 0 max(1rem,env(safe-area-inset-bottom));margin:1rem 0 -1.5rem;border:0;background:#faf7eff0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.editor-footer>div{display:flex;gap:.5rem;flex-wrap:wrap;margin-left:auto}
+.editor-footer .button{font-size:.875rem;min-height:2.75rem}
+.editor-footer .danger{background:transparent;color:#963b30;border:1px solid #d6b5a8}
+#import-preview{font-size:1rem;line-height:1.6}
+#import-summary{font-weight:600}
+@media(max-width:450px){#itinerary-form{padding:1.1rem}.editor-fields{grid-template-columns:minmax(0,1fr)}.editor-footer{bottom:-1.1rem;margin-bottom:-1.1rem}.editor-footer>div{width:100%;display:grid;grid-template-columns:1fr 1fr}.editor-footer .danger{width:100%}.editor-heading h2{font-size:2.2rem}}
+@media(prefers-reduced-transparency:reduce){.editor-footer{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-contrast:more){#itinerary-editor,.editor-fields input,.editor-fields select,.editor-fields textarea{border-color:var(--ink)}.editor-footer{background:var(--paper);backdrop-filter:none}.editor-error{color:#75251c}}
+@media print{.itinerary-tools,.itinerary-feedback,.editor-storage,.edit-event,.itinerary-backup,#itinerary-editor{display:none!important}}

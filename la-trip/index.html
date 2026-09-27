@@ -7,9 +7,10 @@
   <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
   <title>Nine Days in Los Angeles · December ’26</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=fluid-6">
-  <script src="app.js?v=fluid-6" defer></script>
+  <link rel="stylesheet" href="styles.css?v=editor-1">
+  <script src="app.js?v=editor-1" defer></script>
   <script src="fluid.js?v=fluid-6" defer></script>
+  <script src="editor.js?v=editor-1" defer></script>
 </head>
 <body data-view="itinerary">
   <a class="skip-link" href="#main">Skip to trip content</a>
@@ -39,7 +40,11 @@
           <div class="day-heading"><p class="eyebrow" id="day-number" aria-live="polite" aria-atomic="true"></p><div class="day-arrows"><button id="prev-day" class="plain-icon" aria-label="Previous day"><span data-icon="left"></span></button><button id="next-day" class="plain-icon" aria-label="Next day"><span data-icon="right"></span></button></div></div>
           <h2 id="day-title"></h2>
           <div class="plan-heading"><h3>The day’s plan</h3><span>LA time · PST</span></div>
+          <div class="itinerary-tools"><button type="button" class="button secondary" id="add-event"><span data-icon="plus"></span>Add event</button><button type="button" class="text-link" id="edit-day">Edit day</button></div>
+          <p id="itinerary-storage" class="editor-storage">Edits save in this browser on this device.</p>
+          <div class="itinerary-feedback"><p id="itinerary-feedback" role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" class="text-link" hidden>Undo</button></div>
           <div id="timeline"></div>
+          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download a backup to keep a copy or import it on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
           <p class="handwritten" id="day-note-title"></p>
           <details class="day-context"><summary>Day notes <span aria-hidden="true">+</span></summary><p id="day-description"></p><p id="day-note"></p><p class="small-note">Flight dates and times use the departure city’s local time. Game times are from your itinerary; ticket details are still to add.</p></details>
         </section>
@@ -52,7 +57,7 @@
       </section>
     <section id="reservations" class="view" aria-labelledby="reservations-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">THE DETAILS</p><h2 id="reservations-title">Reservations & plans</h2></div><span class="small-note">20–28 Dec 2026</span></div>
-      <p class="intro-copy">Your hotel is booked. Flights and games are in the itinerary; their booking references and tickets haven’t been added.</p>
+      <p class="intro-copy">Saved booking records from the original trip plan. Editing an itinerary event or its status does not change these records or make a booking.</p>
       <div id="reservation-list" class="reservation-list"></div>
       <h3 class="subsection-title">Still to arrange</h3><div id="pending-plans" class="pending-grid"></div>
       <p class="small-note section-footnote">Dates and game times follow your latest trip details. Official venue links are included for directions and current visitor information.</p>
@@ -73,6 +78,41 @@
     </main>
     <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
   </div>
+  <dialog id="itinerary-editor" aria-labelledby="editor-title" aria-describedby="editor-context">
+    <form id="itinerary-form" novalidate>
+      <header class="editor-heading"><div><p class="eyebrow" id="editor-context"></p><h2 id="editor-title">Edit event</h2></div><button type="button" class="plain-icon" id="close-editor" aria-label="Close editor">✕</button></header>
+      <fieldset id="event-fields" class="editor-fields">
+        <legend class="sr-only">Event details</legend>
+        <label class="full-field" for="event-title">Event name <span>(required)</span><input id="event-title" maxlength="160" required autocomplete="off"></label>
+        <label for="event-day">Day<select id="event-day"></select></label>
+        <label for="event-position">Position in the day<select id="event-position"></select></label>
+        <label for="event-time">Time<input id="event-time" maxlength="160" placeholder="e.g. 2:00 pm · PST or Afternoon"></label>
+        <label for="event-status">Status<select id="event-status"><option value="proposed">Proposed</option><option value="plan">In itinerary</option><option value="booked">Booked</option></select></label>
+        <label class="full-field" for="event-location">Location<input id="event-location" maxlength="240" placeholder="Venue or neighbourhood"></label>
+        <label class="full-field" for="event-note">Notes<textarea id="event-note" rows="4" maxlength="5000" placeholder="Your plans and details"></textarea></label>
+        <details class="editor-extras full-field" id="event-extras"><summary>Map, links & appearance</summary><div class="editor-fields">
+          <label class="full-field" for="event-map">Saved map location<select id="event-map"></select></label>
+          <label class="full-field" for="event-query">Custom map destination<input id="event-query" maxlength="500" placeholder="Place name or street address" aria-describedby="map-query-help"></label><p id="map-query-help" class="field-hint full-field">A custom destination takes priority over the saved location. Directions use your Google or Apple Maps choice.</p>
+          <label class="full-field" for="event-source">Website<input id="event-source" type="url" maxlength="2000" placeholder="https://…" inputmode="url"></label>
+          <label class="full-field" for="event-reservation">Linked booking record<select id="event-reservation"></select></label><p class="field-hint full-field">This links to existing booking details. Changing this event does not change a booking record.</p>
+          <label for="event-type">Icon<select id="event-type"></select></label>
+          <label class="editor-check" for="event-highlight"><input type="checkbox" id="event-highlight">Highlight this event</label>
+        </div></details>
+      </fieldset>
+      <fieldset id="day-fields" class="editor-fields" hidden disabled>
+        <legend class="sr-only">Day details</legend>
+        <label class="full-field" for="edit-day-title">Day title <span>(required)</span><input id="edit-day-title" maxlength="160" required></label>
+        <label for="edit-day-label">Day selector label <span>(required)</span><input id="edit-day-label" maxlength="50" required></label>
+        <label for="edit-day-map">Day map<select id="edit-day-map"></select></label>
+        <label class="full-field" for="edit-day-description">Description<textarea id="edit-day-description" maxlength="3000" rows="3"></textarea></label>
+        <label class="full-field" for="edit-day-note-title">Handwritten caption<input id="edit-day-note-title" maxlength="160"></label>
+        <label class="full-field" for="edit-day-note">Day notes<textarea id="edit-day-note" maxlength="5000" rows="4"></textarea></label>
+      </fieldset>
+      <div id="import-preview" hidden><p id="import-summary"></p><p>This replaces your current browser’s itinerary with the backup. You can undo it immediately afterwards. Packing and map preferences are kept.</p></div>
+      <p id="editor-error" class="editor-error" role="alert"></p>
+      <footer class="editor-footer"><button type="button" id="remove-event" class="button danger">Remove event</button><div><button type="button" id="cancel-editor" class="button secondary">Cancel</button><button type="submit" id="save-event" class="button primary">Save event</button></div></footer>
+    </form>
+  </dialog>
   <noscript><p class="noscript">Turn on JavaScript to use the day selector, maps and packing checklist. The Westin Bonaventure stay is 20–28 December 2026. UA99 departs Melbourne on 20 December; DL11 departs LA on 28 December. Clippers–Warriors: 23 December, 7:30 pm. Lakers–76ers: 25 December, 2:00 pm.</p></noscript>
 </body>
 </html>
