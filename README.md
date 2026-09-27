@@ -1,2 +1,1 @@
-# stavreskimario.github.io
-vibes
+`vibes`
