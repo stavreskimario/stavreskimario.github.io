@@ -7,10 +7,10 @@
   <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
   <title>Nine Days in Los Angeles · December ’26</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=editor-1">
-  <script src="app.js?v=editor-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=records-2">
+  <script src="app.js?v=records-2" defer></script>
   <script src="fluid.js?v=fluid-6" defer></script>
-  <script src="editor.js?v=editor-1" defer></script>
+  <script src="editor.js?v=records-2" defer></script>
 </head>
 <body data-view="itinerary">
   <a class="skip-link" href="#main">Skip to trip content</a>
@@ -41,10 +41,10 @@
           <h2 id="day-title"></h2>
           <div class="plan-heading"><h3>The day’s plan</h3><span>LA time · PST</span></div>
           <div class="itinerary-tools"><button type="button" class="button secondary" id="add-event"><span data-icon="plus"></span>Add event</button><button type="button" class="text-link" id="edit-day">Edit day</button></div>
-          <p id="itinerary-storage" class="editor-storage">Edits save in this browser on this device.</p>
-          <div class="itinerary-feedback"><p id="itinerary-feedback" role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" class="text-link" hidden>Undo</button></div>
+          <p id="itinerary-storage" class="editor-storage" data-trip-storage>Edits save in this browser on this device.</p>
+          <div class="itinerary-feedback"><p id="itinerary-feedback" data-trip-feedback role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" data-undo-trip class="text-link" hidden>Undo</button></div>
           <div id="timeline"></div>
-          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download a backup to keep a copy or import it on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
+          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings and locations together, or import a backup on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
           <p class="handwritten" id="day-note-title"></p>
           <details class="day-context"><summary>Day notes <span aria-hidden="true">+</span></summary><p id="day-description"></p><p id="day-note"></p><p class="small-note">Flight dates and times use the departure city’s local time. Game times are from your itinerary; ticket details are still to add.</p></details>
         </section>
@@ -57,15 +57,17 @@
       </section>
     <section id="reservations" class="view" aria-labelledby="reservations-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">THE DETAILS</p><h2 id="reservations-title">Reservations & plans</h2></div><span class="small-note">20–28 Dec 2026</span></div>
-      <p class="intro-copy">Saved booking records from the original trip plan. Editing an itinerary event or its status does not change these records or make a booking.</p>
+      <p class="intro-copy">Your booking details, kept together. Add or update records here; itinerary events keep their own planning status. Saving a record does not make a reservation.</p>
+      <div class="records-toolbar"><button type="button" class="button secondary" id="add-booking"><span data-icon="plus"></span>Add booking</button><button type="button" class="text-link" data-open-backup>Back up your trip</button></div><p class="editor-storage" data-trip-storage></p><div class="itinerary-feedback"><p data-trip-feedback role="status"></p><button type="button" class="text-link" data-undo-trip hidden>Undo</button></div>
       <div id="reservation-list" class="reservation-list"></div>
-      <h3 class="subsection-title">Still to arrange</h3><div id="pending-plans" class="pending-grid"></div>
+      <h3 class="subsection-title" id="pending-heading">Still to arrange</h3><div id="pending-plans" class="pending-grid"></div>
       <p class="small-note section-footnote">Dates and game times follow your latest trip details. Official venue links are included for directions and current visitor information.</p>
     </section>
     <section id="maps" class="view" aria-labelledby="maps-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">GET YOUR BEARINGS</p><h2 id="maps-title">Your California map</h2></div></div>
-      <div class="map-preferences"><span class="map-choice-label">Open links with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div><span id="map-choice-note" class="small-note" role="status">Applies to all location and directions links.</span></div><div class="maps-layout"><div id="place-list" class="place-list" aria-label="Choose a place"></div><div class="large-map-card"><iframe id="large-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="large-map-info"><div><span class="eyebrow" id="map-category"></span><h3 id="map-title"></h3><p id="map-address"></p></div><div class="map-actions"><a id="map-open" class="button primary" href="#" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> <span data-icon="external"></span></a><a id="map-directions" class="button secondary" href="#" target="_blank" rel="noopener noreferrer">Directions from hotel <span data-icon="route"></span></a><a id="map-source" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Official visitor information ↗</a></div></div></div></div>
-      <p class="small-note section-footnote">Explore each place on the map here. Location and directions links use your selected map app. San Francisco is a separate, proposed flight day trip.</p>
+      <div class="records-toolbar"><button type="button" class="button secondary" id="add-location"><span data-icon="plus"></span>Add location</button><button type="button" class="text-link" data-open-backup>Back up your trip</button></div><p class="editor-storage" data-trip-storage></p><div class="itinerary-feedback"><p data-trip-feedback role="status"></p><button type="button" class="text-link" data-undo-trip hidden>Undo</button></div>
+      <div class="map-preferences"><span class="map-choice-label">Open links with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div><span id="map-choice-note" class="small-note" role="status">Applies to all location and directions links.</span></div><div class="maps-layout"><div id="place-list" class="place-list" aria-label="Choose a place"></div><div class="large-map-card"><iframe id="large-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="large-map-info"><div><span class="eyebrow" id="map-category"></span><h3 id="map-title"></h3><p id="map-address"></p></div><div class="map-actions"><a id="map-open" class="button primary" href="#" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> <span data-icon="external"></span></a><a id="map-directions" class="button secondary" href="#" target="_blank" rel="noopener noreferrer">Directions from hotel <span data-icon="route"></span></a><a id="map-source" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Visitor information ↗</a><button type="button" class="text-link" id="map-day-jump" hidden>See linked day</button></div></div></div></div>
+      <p class="small-note section-footnote">Explore each place on the map here. Location and directions links use your selected map app. Edit a location to change its name, destination and details.</p>
     </section>
     <section id="packing" class="view" aria-labelledby="packing-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2 id="packing-title">Pack for California</h2></div><span class="packing-counter" id="packing-counter" aria-live="polite" aria-atomic="true"></span></div>
@@ -94,7 +96,7 @@
           <label class="full-field" for="event-map">Saved map location<select id="event-map"></select></label>
           <label class="full-field" for="event-query">Custom map destination<input id="event-query" maxlength="500" placeholder="Place name or street address" aria-describedby="map-query-help"></label><p id="map-query-help" class="field-hint full-field">A custom destination takes priority over the saved location. Directions use your Google or Apple Maps choice.</p>
           <label class="full-field" for="event-source">Website<input id="event-source" type="url" maxlength="2000" placeholder="https://…" inputmode="url"></label>
-          <label class="full-field" for="event-reservation">Linked booking record<select id="event-reservation"></select></label><p class="field-hint full-field">This links to existing booking details. Changing this event does not change a booking record.</p>
+          <label class="full-field" for="event-reservation">Linked booking record<select id="event-reservation"></select></label><p class="field-hint full-field">Manage these records in Bookings. Changing an event does not change its linked booking record.</p>
           <label for="event-type">Icon<select id="event-type"></select></label>
           <label class="editor-check" for="event-highlight"><input type="checkbox" id="event-highlight">Highlight this event</label>
         </div></details>
@@ -108,7 +110,30 @@
         <label class="full-field" for="edit-day-note-title">Handwritten caption<input id="edit-day-note-title" maxlength="160"></label>
         <label class="full-field" for="edit-day-note">Day notes<textarea id="edit-day-note" maxlength="5000" rows="4"></textarea></label>
       </fieldset>
-      <div id="import-preview" hidden><p id="import-summary"></p><p>This replaces your current browser’s itinerary with the backup. You can undo it immediately afterwards. Packing and map preferences are kept.</p></div>
+      <fieldset id="booking-fields" class="editor-fields" hidden disabled>
+        <legend class="sr-only">Booking details</legend>
+        <label class="full-field" for="booking-title">Booking name <span>(required)</span><input id="booking-title" required maxlength="160"></label>
+        <label class="full-field" for="booking-subtitle">Summary<input id="booking-subtitle" maxlength="300" placeholder="Dates, guests or flight number"></label>
+        <label for="booking-status">Status<select id="booking-status"><option value="proposed">Proposed</option><option value="plan">In itinerary</option><option value="booked">Booked</option></select></label>
+        <label for="booking-icon">Icon<select id="booking-icon"></select></label>
+        <label class="full-field" for="booking-map">Map location<select id="booking-map"></select></label>
+        <label class="full-field" for="booking-source">Website<input id="booking-source" type="url" inputmode="url" maxlength="2000" placeholder="https://…"></label>
+        <section class="full-field booking-detail-editor" aria-labelledby="booking-details-heading"><h3 id="booking-details-heading">Booking fields</h3><p class="field-hint">Add any details you need, such as seats or a confirmation number.</p><div id="booking-detail-rows"></div><button type="button" class="button secondary" id="add-booking-detail">Add field</button><p id="booking-field-feedback" class="field-hint" role="status"></p></section>
+        <label class="full-field" for="booking-note">Notes<textarea id="booking-note" maxlength="5000" rows="4"></textarea></label>
+      </fieldset>
+      <fieldset id="location-fields" class="editor-fields" hidden disabled>
+        <legend class="sr-only">Map location details</legend>
+        <label for="location-name">Short name <span>(required)</span><input id="location-name" required maxlength="160" placeholder="e.g. Griffith Observatory"></label>
+        <label for="location-full">Full name<input id="location-full" maxlength="240" placeholder="Optional longer name"></label>
+        <label for="location-area">Area<input id="location-area" maxlength="240" placeholder="e.g. Griffith Park"></label>
+        <label for="location-category">Label<input id="location-category" maxlength="240" placeholder="e.g. Sunset stop · proposed"></label>
+        <label class="full-field" for="location-address">Address<input id="location-address" maxlength="500"></label>
+        <label class="full-field" for="location-query">Map destination <span>(required)</span><input id="location-query" required maxlength="500" placeholder="Place name, address or latitude, longitude" aria-describedby="location-query-help"></label><p class="full-field field-hint" id="location-query-help">Used for the embedded Google map and directions in your chosen map app.</p>
+        <label class="full-field" for="location-source">Visitor website<input id="location-source" type="url" inputmode="url" maxlength="2000" placeholder="https://…"></label>
+        <label class="full-field" for="location-day">Linked trip day<select id="location-day"></select></label>
+      </fieldset>
+      <div id="import-preview" hidden><p id="import-summary"></p><p id="import-legacy-note" hidden></p><p>This replaces your current browser’s itinerary, bookings and map locations with the backup. You can undo it immediately afterwards. Packing and map preferences are kept.</p></div>
+      <p id="record-remove-note" class="field-hint" hidden></p>
       <p id="editor-error" class="editor-error" role="alert"></p>
       <footer class="editor-footer"><button type="button" id="remove-event" class="button danger">Remove event</button><div><button type="button" id="cancel-editor" class="button secondary">Cancel</button><button type="submit" id="save-event" class="button primary">Save event</button></div></footer>
     </form>

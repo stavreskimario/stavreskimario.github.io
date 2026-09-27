@@ -312,3 +312,24 @@ body:has(#itinerary-editor[open]){overflow:hidden}
 @media(prefers-reduced-transparency:reduce){.editor-footer{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}}
 @media(prefers-contrast:more){#itinerary-editor,.editor-fields input,.editor-fields select,.editor-fields textarea{border-color:var(--ink)}.editor-footer{background:var(--paper);backdrop-filter:none}.editor-error{color:#75251c}}
 @media print{.itinerary-tools,.itinerary-feedback,.editor-storage,.edit-event,.itinerary-backup,#itinerary-editor{display:none!important}}
+
+/* Saved records use the same controls and editor as the daily plan. */
+.records-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem}
+.records-toolbar .text-link{border:0;background:none;font:inherit;font-size:.875rem;color:var(--rust);padding:.5rem;min-height:2.75rem}
+.booking-record{border-bottom:1px solid var(--line)}
+.booking-edit{display:flex;justify-content:flex-end;padding-top:.5rem}
+.booking-record .reservation{border:0}
+.booking-record .reservation>summary{padding-top:.5rem}
+.booking-record .reservation-text,.booking-record dd,.detail-note{overflow-wrap:anywhere;white-space:pre-wrap}
+.location-record{min-width:0;border-bottom:1px solid var(--line);padding-bottom:.35rem;margin-bottom:.35rem}
+.location-record>.place-button{width:100%;min-width:0;margin:0}
+.location-record>.edit-event{display:block;margin-left:auto}
+.place-button strong,.place-button small,#map-title,#map-address,#map-category{overflow-wrap:anywhere}
+.booking-detail-editor h3{font-size:1.5rem;margin:0 0 .75rem}
+.booking-detail-editor>.field-hint{margin:0 0 .75rem}
+.booking-field-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:.5rem;margin-bottom:1rem;padding:.75rem;background:var(--soft);border-radius:.875rem}
+.booking-field-row>.edit-event{grid-column:1/-1;justify-self:end}
+#record-remove-note{margin:1rem 0 0;line-height:1.5}
+#booking-field-feedback{margin:.5rem 0 0}
+@media(max-width:450px){.booking-field-row{grid-template-columns:minmax(0,1fr)}.place-list{grid-template-columns:minmax(0,1fr)}}
+@media print{.records-toolbar,.booking-edit,.location-record>.edit-event{display:none!important}}

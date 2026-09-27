@@ -6,7 +6,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 
 | App | What it does | Open |
 | --- | --- | --- |
-| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, booking records, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
+| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
 
 ## Edit the LA itinerary
@@ -19,13 +19,27 @@ Choose a day, then **Add event** or **Edit** beside an existing event.
 - **Remove event** deletes it from that day. **Undo** restores the last change, including edits, removals, moves and imports, until another change or a reload. Cancelling the editor leaves the itinerary unchanged.
 - **Edit day** changes its title, selector label, description, handwritten caption, notes and overview map. Trip dates remain December 20–28, 2026.
 
-Changes save automatically when you press **Save event**, **Add event** or **Save day**. Each changed day is saved in this browser’s `localStorage` under `mario-la-dec2026-itinerary-v1`; untouched days continue using the published defaults. Reloading keeps saved changes in the same browser and origin. Clearing website data removes them. Private browsing may discard them when the session ends. If storage is blocked or full, the app displays a visit-only notice and keeps the current edits in memory.
+Changes save automatically when you press **Save event**, **Add event** or **Save day**. Trip changes are saved together in this browser’s `localStorage` under `mario-la-dec2026-itinerary-v1`. The key is retained for compatibility; its current payload is version 2 and contains day overrides, booking records and map locations. Untouched days continue using the published defaults. Version 1 saved itinerary edits load automatically and upgrade on the next save. Reloading keeps saved changes in the same browser and origin. Clearing website data removes them. Private browsing may discard them when the session ends. If storage is blocked or full, the app displays a visit-only notice and keeps the current edits in memory.
 
-**Back up or move your plan** downloads a JSON copy of all nine days. Import that file on another device, review the day/event count and choose **Import itinerary**. Import replaces the local itinerary and can be undone immediately. Invalid files leave the current plan intact. Backups contain itinerary events and day notes; they do not include packing checks, map preferences or booking records.
+**Back up or move your plan** downloads a JSON copy of all nine days, booking records and map locations. The Bookings and Maps toolbars link directly to this backup control. Import that file on another device, review the day/event count and choose **Import itinerary**. Import replaces the local itinerary, bookings and locations together and can be undone immediately. Invalid files leave the current plan intact. Backups include itinerary events, day notes, booking fields and locations, but not packing checks or map preferences. Older version 1 backups remain supported: their import preview explains that original booking and location records will be restored because those backups contain only itinerary days. Cancel leaves the current records intact.
 
 This is a static app with no accounts or cloud sync. Local edits do not modify GitHub, change other visitors’ plans or move automatically between the old Sites address and this Pages address. Keep backups somewhere private if you add personal details. Website links accept only HTTP(S) URLs; input is escaped before display. Changes detected from another browser tab are blocked from overwriting that tab’s saved plan; download a backup and reload to resolve it.
 
-**Booking records are separate.** Selecting “Booked” is your own planning label; it does not buy tickets, make a reservation or change the saved records in Bookings. The Maps section remains the saved places directory; an event’s custom destination appears in its own directions link. Use **Edit day → Day map** to change the day’s overview map.
+## Edit bookings and map locations
+
+In **Bookings**, use **Add booking** or **Edit booking**. Edit the name, summary, status, icon, linked map location, website and notes. **Add field** creates a labelled detail such as dates, seats, guests or a confirmation number. Edit or remove any field, then save the record. Cancel discards the draft.
+
+In **Maps**, use **Add location** or **Edit** beside a location. Edit its short/full name, area, label, address, map destination, visitor website and linked trip day. The map destination can be a place name, address or coordinates. It controls the embedded Google map and Google/Apple search and directions links. Saved locations are immediately available in event, day and booking editors. A linked day adds a **See linked day** shortcut; use **Edit day → Day map** to choose that day’s overview map.
+
+Names and details refresh across previews, lists, links and editor choices. Bookings and locations have the same device-local saving, visit-only fallback, cross-tab conflict protection and last-change **Undo** as events.
+
+- **Remove booking** removes the record and clears its links from itinerary events. The events remain.
+- **Remove location** removes the saved location and clears its links from day maps and bookings. Events keep their directions by converting that location’s destination to a custom destination; any existing custom destination is preserved.
+- **Undo** restores the removed record and its links. Empty Bookings and Maps sections still offer Add controls and stay empty after a reload.
+
+**Booking and event statuses are independent planning labels.** Selecting “Booked” does not buy tickets or make a reservation. Edit the booking record in Bookings and the event in Itinerary as needed. Clearing a booking record does not cancel an actual reservation.
+
+Backups now include any booking details you enter, including confirmation numbers. Keep those files private. Local editing does not publish these details to this public repository.
 
 ## Add a new app
 
@@ -61,7 +75,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) an
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
 | `hello-world/` | Copyable app starter |
-| `la-trip/` | Trip app, event editor, photos and source attributions |
+| `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `AGENTS.md` | Design decisions, interaction rules and development lessons |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
 

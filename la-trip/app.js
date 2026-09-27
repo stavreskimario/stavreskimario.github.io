@@ -13,7 +13,8 @@ const places=[
 {id:'sf',name:'San Francisco',full:'San Francisco · Ferry Building',area:'Day trip · Proposed 26 Dec',address:'Ferry Building, Embarcadero, San Francisco, CA',category:'DAY TRIP BY AIR · PROPOSED',query:'Ferry Building San Francisco California',source:'https://www.sftravel.com/article/everything-you-need-to-know-about-san-franciscos-ferry-building',day:26},
 {id:'santamonica',name:'Santa Monica',full:'Santa Monica Pier & beach',area:'Coast day · Proposed 27 Dec',address:'Santa Monica Pier, Santa Monica, CA',category:'COAST DAY · PROPOSED',query:'Santa Monica Pier California',source:'https://www.santamonica.com/things-to-do/visiting-santa-monica-pier/',day:27}
 ];
-const place=id=>places.find(p=>p.id===id)||places[0];
+const place=id=>places.find(p=>p.id===id);
+let selectedPlace='hotel';
 const mapPreferenceKey='mario-la-dec2026-map-provider';
 let mapProvider='google',mapPreferenceSaved=false;
 try{const saved=localStorage.getItem(mapPreferenceKey);if(saved==='google'||saved==='apple'){mapProvider=saved;mapPreferenceSaved=true}}catch{}
@@ -52,6 +53,9 @@ function chooseMapProvider(provider){
 
 function renderMapCard(id,p){
  const el=$(id);
+ el.hidden=!p;
+ if(!p){el.removeAttribute('src');el.dataset.placeId='';if(id==='#day-map')$('#day-map-open').hidden=true;return}
+ if(id==='#day-map')$('#day-map-open').hidden=false;
  const src=`https://maps.google.com/maps?q=${encodeURIComponent(p.query)}&z=${p.id==='sf'?13:14}&output=embed`;
  if(el.getAttribute('src')!==src)el.setAttribute('src',src);
  el.title=`Google Maps: ${p.full}`;el.dataset.placeId=p.id;
@@ -111,18 +115,20 @@ function readableTime(e){
  return e.time;
 }
 function renderReservationPeek(){
- const cards=[{id:'hotel',title:'Westin Bonaventure',detail:'20–28 Dec · 8 nights',status:'booked',photo:true},{id:'clippers',title:'Clippers vs Warriors',detail:'23 Dec · 7:30 pm PST',status:'plan',photo:false},{id:'lakers',title:'Lakers vs 76ers',detail:'25 Dec · 2:00 pm PST',status:'plan',photo:false}];
- $('#reservation-peek-list').innerHTML=cards.map(r=>`<button class="mini-reservation" data-reservation="${r.id}" aria-label="View details: ${esc(r.title)}">${r.photo?'<img src="assets/westin-bonaventure.jpg" alt="Westin Bonaventure towers" width="67" height="77" loading="lazy">':`<span class="mini-art ${r.id}" aria-hidden="true">${icon('ball')}</span>`}<div><h3>${esc(r.title)}</h3><p>${esc(r.detail)}</p><span class="badge ${r.status}">${statuses[r.status]}</span></div></button>`).join('');
+ const featured=['hotel','clippers','lakers'].map(id=>reservations.find(r=>r.id===id)).filter(Boolean);
+ const cards=[...featured,...reservations.filter(r=>!featured.includes(r))].slice(0,3);
+ $('#reservation-peek-list').innerHTML=cards.length?cards.map(r=>`<button class="mini-reservation" data-reservation="${esc(r.id)}" aria-label="View details: ${esc(r.title)}">${r.id==='hotel'&&r.title.includes('Westin Bonaventure')?'<img src="assets/westin-bonaventure.jpg" alt="Westin Bonaventure towers" width="67" height="77" loading="lazy">':`<span class="mini-art ${esc(r.id)}" aria-hidden="true">${icon(r.icon)}</span>`}<div><h3>${esc(r.title)}</h3><p>${esc(r.subtitle)}</p><span class="badge ${r.status}">${statuses[r.status]}</span></div></button>`).join(''):'<p class="empty-day">No bookings yet. Add one in Bookings.</p>';
 }
 function renderPlacesPeek(){
- const snippets=[{id:'hotel',label:'Westin Bonaventure',area:'Downtown LA',photo:'assets/westin-bonaventure.jpg'},{id:'warner',label:'Warner Bros. Studio Tour',area:'Burbank · proposed',icon:'film'},{id:'universal',label:'Universal Studios',area:'Universal City · proposed',icon:'film'},{id:'sf',label:'San Francisco',area:'Day trip · proposed',photo:'assets/golden-gate-sunset.jpg'}];
- $('#places-peek-list').innerHTML=snippets.map(p=>`<button class="place-peek-button" data-open-map="${p.id}" aria-label="Open map: ${esc(p.label)}">${p.photo?`<img src="${p.photo}" alt="" width="30" height="30" loading="lazy">`:`<span class="place-peek-icon">${icon(p.icon)}</span>`}<div><strong>${esc(p.label)}</strong><small>${esc(p.area)}</small></div><span aria-hidden="true">↗</span></button>`).join('');
+ const featured=['hotel','warner','universal','sf'].map(place).filter(Boolean);
+ const preview=[...featured,...places.filter(p=>!featured.includes(p))].slice(0,4);
+ $('#places-peek-list').innerHTML=preview.map(p=>`<button class="place-peek-button" data-open-map="${esc(p.id)}" aria-label="Open map: ${esc(p.name)}">${p.id==='hotel'&&p.name.includes('Westin Bonaventure')?'<img src="assets/westin-bonaventure.jpg" alt="" width="30" height="30" loading="lazy">':`<span class="place-peek-icon">${icon('pin')}</span>`}<div><strong>${esc(p.name)}</strong><small>${esc(p.area)}</small></div><span aria-hidden="true">↗</span></button>`).join('')||'<p class="empty-day">No saved locations. Add one in Maps.</p>';
 }
 function renderPackingPeek(){
  const items=[['passport','Passport'],['knits','Warm layers'],['jacket','Jacket'],['shoes','Walking shoes'],['phone','Phone charger'],['adapter','US adaptor'],['headphones','Headphones'],['jersey','Game-day outfit']];
  $('#packing-peek-list').innerHTML=items.map(([id,label])=>{const p=packing.find(p=>p.id===id);return `<label class="peek-check"><input type="checkbox" data-pack-id="${id}" ${p.checked?'checked':''} aria-label="${esc(p.label)}"><span>${esc(label)}</span></label>`}).join('');
 }
-function eventActions(e){let actions=[];if(e.query||e.map)actions.push(mapActionLink(e.query||place(e.map).query,'directions'));if(e.reservation)actions.push(`<button data-reservation="${esc(e.reservation)}">${icon('ticket')}Booking details</button>`);if(e.source)actions.push(`<a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Website ${icon('external')}</a>`);return actions.length?`<div class="event-actions">${actions.join('')}</div>`:''}
+function eventActions(e){let actions=[];if(e.query||place(e.map))actions.push(mapActionLink(e.query||place(e.map).query,'directions'));if(reservations.some(r=>r.id===e.reservation))actions.push(`<button data-reservation="${esc(e.reservation)}">${icon('ticket')}Booking details</button>`);if(e.source)actions.push(`<a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Website ${icon('external')}</a>`);return actions.length?`<div class="event-actions">${actions.join('')}</div>`:''}
 function selectDay(index,scroll=false){
  if(!Number.isInteger(index)||index<0||index>=days.length)throw new Error('Choose a day from 20 to 28 December.');
  const changed=selectedDay!==index;
@@ -130,7 +136,7 @@ function selectDay(index,scroll=false){
  $('#day-number').textContent=`DAY ${index+1} · ${d.weekday.toUpperCase()} ${d.date} DEC`;
  $('#day-title').textContent=d.title;$('#day-description').textContent=d.description;
  $('#timeline').innerHTML=d.events.length?d.events.map(e=>`<article class="timeline-item ${e.status}"><span class="timeline-node" aria-hidden="true">${icon(e.type)}</span><div class="event-card ${e.highlight?'highlight':''}"><span class="event-time">${esc(readableTime(e))}</span><h4 class="event-title">${esc(e.title)}</h4><p class="event-location">${esc(e.location)}</p><div class="event-controls"><span class="badge ${e.status}">${statuses[e.status]}</span><button type="button" class="edit-event" data-edit-event="${esc(e.id)}" aria-label="Edit ${esc(e.title)}">Edit</button></div><details class="event-more"><summary>Details${e.map||e.query?' & directions':''}</summary><p class="event-note">${esc(e.note)}</p>${eventActions(e)}</details></div></article>`).join(''):'<p class="empty-day">A little room to wander. Add an event to start this day’s plan.</p>';
- const p=place(d.map);renderMapCard('#day-map',p);$('#day-map-name').textContent=p.name;$('#day-map-area').textContent=p.area;$('#day-note-title').textContent=d.noteTitle;$('#day-note').textContent=d.note;
+ const p=place(d.map);renderMapCard('#day-map',p);$('#day-map-name').textContent=p?.name||'No location selected';$('#day-map-area').textContent=p?.area||'Choose a location in Edit day.';$('#day-note-title').textContent=d.noteTitle;$('#day-note').textContent=d.note;
  $('#prev-day').disabled=index===0;$('#next-day').disabled=index===days.length-1;
  window.tripEditor?.dayChanged();
  if(changed)window.tripMotion?.dayChanged();
@@ -144,9 +150,30 @@ const reservations=[
 {id:'lakers',title:'Los Angeles Lakers vs Philadelphia 76ers',subtitle:'25 December · 2:00 pm PST · Crypto.com Arena',status:'plan',icon:'ball',details:[['Date & time','25 December 2026 · 2:00 pm PST'],['Venue','Crypto.com Arena, Los Angeles'],['Section & seats','To add'],['Tickets / booking reference','To add']],note:'Time matches your Christmas game calendar plan. Doors and other ticket details have not been added.',map:'crypto',source:places[4].source},
 {id:'inbound',title:'Los Angeles → Melbourne',subtitle:'28 December · Delta Air Lines · DL11',status:'plan',icon:'plane',details:[['Flight','DL11 · Delta Air Lines'],['Departure','28 December · LA local time'],['Melbourne arrival date & time','To confirm from your ticket'],['Booking reference','To add']],note:'28 December is treated as the departure date from LA. Exact times, seats and terminal are still to add.',source:'https://www.delta.com/'}
 ];
-function renderReservations(){$('#reservation-list').innerHTML=reservations.map(r=>`<details class="reservation" id="reservation-${r.id}" ${r.id==='hotel'?'open':''}><summary><span class="event-icon">${icon(r.icon)}</span><div class="reservation-text"><h3>${esc(r.title)}</h3><p>${esc(r.subtitle)}</p></div><span class="badge ${r.status}">${statuses[r.status]}</span><span class="chevron">${icon('right')}</span></summary><div class="reservation-body"><dl>${r.details.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><p class="detail-note">${esc(r.note)}</p><div class="event-actions">${r.map?mapActionLink(place(r.map).query):''}<a href="${r.source}" target="_blank" rel="noopener noreferrer">Official website ${icon('external')}</a></div></div></details>`).join('');$('#pending-plans').innerHTML=[['warner','21 DEC · PROPOSED','Warner Bros. Studio Tour','Choose a tour, tickets and a start time.'],['universal','22 DEC · PROPOSED','Universal Studios Hollywood','Choose admission and check park hours.'],['sf','26 DEC · PROPOSED','San Francisco day trip','Choose flights, transfers and city stops.']].map(([id,date,title,copy])=>`<article class="pending-card"><span class="badge proposed">Not booked</span><p class="eyebrow">${date}</p><h4>${title}</h4><p>${copy}</p><button class="button secondary" data-jump-day="${place(id).day}">See proposed day ${icon('right')}</button></article>`).join('')}
-function renderPlaces(){$('#place-list').innerHTML=places.map((p,i)=>`<button class="place-button" data-place="${p.id}" aria-pressed="false"><span class="place-number">${String(i+1).padStart(2,'0')}</span><span><strong>${esc(p.name)}</strong><small>${esc(p.area)}</small></span></button>`).join('')}
-function selectPlace(id){if(!places.some(p=>p.id===id))throw new Error('Unknown place.');const p=place(id);document.querySelectorAll('[data-place]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.place===id)));renderMapCard('#large-map',p);$('#map-title').textContent=p.full;$('#map-category').textContent=p.category;$('#map-address').textContent=p.address;setMapLink('#map-open',p.query);$('#map-source').href=p.source;$('#map-directions').hidden=id==='hotel'||id==='sf';setMapLink('#map-directions',p.query,'directions',places[0].query);}
+function renderReservations(){
+ const open=new Set([...document.querySelectorAll('.reservation[open]')].map(el=>el.id));
+ $('#reservation-list').innerHTML=reservations.map(r=>`<article class="booking-record"><div class="booking-edit"><button type="button" class="edit-event" data-edit-booking="${esc(r.id)}" aria-label="Edit booking: ${esc(r.title)}">Edit booking</button></div><details class="reservation" id="reservation-${esc(r.id)}" ${open.has('reservation-'+r.id)||r.id==='hotel'?'open':''}><summary><span class="event-icon">${icon(r.icon)}</span><div class="reservation-text"><h3>${esc(r.title)}</h3><p>${esc(r.subtitle)}</p></div><span class="badge ${r.status}">${statuses[r.status]}</span><span class="chevron">${icon('right')}</span></summary><div class="reservation-body"><dl>${r.details.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><p class="detail-note">${esc(r.note)}</p><div class="event-actions">${place(r.map)?mapActionLink(place(r.map).query):''}${r.source?`<a href="${esc(r.source)}" target="_blank" rel="noopener noreferrer">Website ${icon('external')}</a>`:''}</div></div></details></article>`).join('')||'<p class="empty-day">No bookings yet. Add your first booking above.</p>';
+ const pending=days.flatMap(d=>d.events.filter(e=>e.status==='proposed'&&['film','plane'].includes(e.type)).map(e=>({event:e,date:d.date}))).slice(0,3);
+ $('#pending-heading').hidden=!pending.length;
+ $('#pending-plans').innerHTML=pending.map(({event:e,date})=>`<article class="pending-card"><span class="badge proposed">Proposed</span><p class="eyebrow">${date} DEC</p><h4>${esc(e.title)}</h4><p>${esc(e.note)}</p><button class="button secondary" data-jump-day="${date}">See proposed day ${icon('right')}</button></article>`).join('');
+}
+function renderPlaces(){
+ $('#place-list').innerHTML=places.map((p,i)=>`<div class="location-record"><button class="place-button" data-place="${esc(p.id)}" aria-pressed="false"><span class="place-number">${String(i+1).padStart(2,'0')}</span><span><strong>${esc(p.name)}</strong><small>${esc(p.area)}</small></span></button><button type="button" class="edit-event" data-edit-location="${esc(p.id)}" aria-label="Edit location: ${esc(p.name)}">Edit</button></div>`).join('')||'<p class="empty-day">No saved locations. Add a location to see it on the map.</p>';
+}
+function selectPlace(id){
+ const p=place(id);selectedPlace=p?.id||'';
+ document.querySelectorAll('[data-place]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.place===selectedPlace)));
+ renderMapCard('#large-map',p);
+ $('#map-title').textContent=p?.full||'Your map starts here';$('#map-category').textContent=p?.category||'';$('#map-address').textContent=p?.address||'Add a location to get directions and plan your stops.';
+ for(const selector of ['#map-open','#map-source','#map-directions'])$(selector).hidden=!p;
+ $('#map-day-jump').hidden=!p?.day;
+ if(p?.day)$('#map-day-jump').dataset.jumpDay=String(p.day);else $('#map-day-jump').removeAttribute('data-jump-day');
+ if(!p)return;
+ setMapLink('#map-open',p.query);$('#map-source').hidden=!p.source;$('#map-source').href=p.source||'#';
+ const hotel=place('hotel');$('#map-directions').hidden=p.id==='hotel'||p.id==='sf';
+ $('#map-directions').textContent=hotel?'Directions from hotel':'Directions';
+ setMapLink('#map-directions',p.query,'directions',hotel?.query||'');
+}
 const defaultPacking=[
 {id:'passport',group:'Travel essentials',label:'Passport & travel documents'},
 {id:'bookings',group:'Travel essentials',label:'Flight, hotel & ticket confirmations'},
@@ -202,7 +229,7 @@ document.addEventListener('click',e=>{
  const provider=e.target.closest('button[data-map-provider]');if(provider){chooseMapProvider(provider.dataset.mapProvider);return}
  const nav=e.target.closest('a[data-view], button[data-view]');if(nav){e.preventDefault();showView(nav.dataset.view);return}
  const d=e.target.closest('[data-day]');if(d){selectDay(Number(d.dataset.day),true);return}
- const r=e.target.closest('[data-reservation]');if(r){showView('reservations');const details=$(`#reservation-${r.dataset.reservation}`);details.open=true;details.querySelector('summary').focus();tripScroll(details);return}
+ const r=e.target.closest('[data-reservation]');if(r){showView('reservations');const details=$(`#reservation-${r.dataset.reservation}`);if(!details)return;details.open=true;details.querySelector('summary').focus();tripScroll(details);return}
  const j=e.target.closest('[data-jump-day]');if(j){showView('itinerary');selectDay(days.findIndex(d=>d.date===Number(j.dataset.jumpDay)),true);tripScroll($('#day-title'));return}
  const peek=e.target.closest('[data-open-map]');if(peek){showView('maps');selectPlace(peek.dataset.openMap);return}
  const p=e.target.closest('[data-place]');if(p){selectPlace(p.dataset.place);return}
