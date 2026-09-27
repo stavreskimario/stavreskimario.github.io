@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3e9">
+  <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
+  <title>Nine Days in Los Angeles · December ’26</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=fluid-6">
+  <script src="app.js?v=fluid-6" defer></script>
+  <script src="fluid.js?v=fluid-6" defer></script>
+</head>
+<body data-view="itinerary">
+  <a class="skip-link" href="#main">Skip to trip content</a>
+  <div class="book-shell">
+    <header class="masthead">
+      <a class="wordmark" href="#itinerary" data-view="itinerary">Mario’s trip book<span>CALIFORNIA / DECEMBER 2026</span></a>
+      <nav class="main-nav" aria-label="Trip sections">
+        <a href="#itinerary" data-view="itinerary" aria-current="page"><span data-icon="calendar"></span>Itinerary</a>
+        <a href="#reservations" data-view="reservations"><span data-icon="ticket"></span>Bookings</a>
+        <a href="#maps" data-view="maps"><span data-icon="map"></span>Maps</a>
+        <a href="#packing" data-view="packing"><span data-icon="bag"></span>Packing<span id="nav-pack-count" class="nav-count">0</span></a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="itinerary" class="view journal-grid" aria-label="Los Angeles trip overview">
+        <div class="cover">
+          <img class="cover-photo" src="assets/la-skyline.jpg" alt="Palm-lined road overlooking the Los Angeles skyline at golden hour" width="1200" height="600" fetchpriority="high">
+          <div class="cover-copy"><p class="cover-kicker">20 — 28 DECEMBER 2026</p><h1><span>Nine Days</span><span>in Los Angeles</span></h1><span class="cover-rule"></span><p class="cover-caption"><span>Palm trees, game nights</span><span>and Christmas lights.</span></p></div>
+          <div class="cover-bottom"><span>8 nights · 2 travellers</span><a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer" aria-label="Photo by Venti Views on Unsplash">Venti Views / Unsplash ↗</a></div>
+        </div>
+        <section class="itinerary-strip" aria-labelledby="itinerary-title">
+          <div class="panel-heading"><h2 id="itinerary-title">Itinerary</h2><span>December ’26</span><div class="strip-controls"><button class="plain-icon" id="strip-prev" aria-label="Scroll to earlier trip days"><span data-icon="left"></span></button><button class="plain-icon" id="strip-next" aria-label="Scroll to later trip days"><span data-icon="right"></span></button></div></div>
+          <div id="date-strip" class="date-strip" role="group" aria-label="Choose a trip day"></div>
+          <p class="strip-caption">Choose a day to open its plan.</p>
+        </section>
+        <section class="day-main" aria-labelledby="day-title">
+          <div class="day-heading"><p class="eyebrow" id="day-number" aria-live="polite" aria-atomic="true"></p><div class="day-arrows"><button id="prev-day" class="plain-icon" aria-label="Previous day"><span data-icon="left"></span></button><button id="next-day" class="plain-icon" aria-label="Next day"><span data-icon="right"></span></button></div></div>
+          <h2 id="day-title"></h2>
+          <div class="plan-heading"><h3>The day’s plan</h3><span>LA time · PST</span></div>
+          <div id="timeline"></div>
+          <p class="handwritten" id="day-note-title"></p>
+          <details class="day-context"><summary>Day notes <span aria-hidden="true">+</span></summary><p id="day-description"></p><p id="day-note"></p><p class="small-note">Flight dates and times use the departure city’s local time. Game times are from your itinerary; ticket details are still to add.</p></details>
+        </section>
+        <aside class="overview-side" aria-label="Reservations and map">
+          <section class="reservation-peek" aria-labelledby="reservation-peek-title"><div class="panel-heading"><h2 id="reservation-peek-title">Reservations</h2><a href="#reservations" data-view="reservations">View all ↗</a></div><div id="reservation-peek-list"></div></section>
+          <section class="map-card" aria-labelledby="overview-map-title"><div class="panel-heading"><h2 id="overview-map-title">Map</h2><a href="#maps" data-view="maps">All places ↗</a></div><div class="map-viewport"><iframe id="day-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="map-caption"><strong id="day-map-name"></strong><span id="day-map-area"></span><div class="map-preferences compact"><span class="map-choice-label">Open with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div></div><a id="day-map-open" class="text-link" href="https://www.google.com/maps/" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> ↗</a></div></section>
+        </aside>
+        <section class="places-peek" aria-labelledby="places-peek-title"><div class="panel-heading"><h2 id="places-peek-title">Places in your plan</h2><a href="#maps" data-view="maps">See all ↗</a></div><div id="places-peek-list"></div></section>
+        <section class="packing-peek" aria-labelledby="packing-peek-title"><div class="panel-heading"><h2 id="packing-peek-title">Packing list</h2><a href="#packing" data-view="packing">See all ↗</a></div><div id="packing-peek-list" class="packing-peek-list"></div><div class="packing-peek-foot"><span id="peek-packing-count">0 packed</span><span id="peek-storage-note">Saved on this device</span></div></section>
+      </section>
+    <section id="reservations" class="view" aria-labelledby="reservations-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">THE DETAILS</p><h2 id="reservations-title">Reservations & plans</h2></div><span class="small-note">20–28 Dec 2026</span></div>
+      <p class="intro-copy">Your hotel is booked. Flights and games are in the itinerary; their booking references and tickets haven’t been added.</p>
+      <div id="reservation-list" class="reservation-list"></div>
+      <h3 class="subsection-title">Still to arrange</h3><div id="pending-plans" class="pending-grid"></div>
+      <p class="small-note section-footnote">Dates and game times follow your latest trip details. Official venue links are included for directions and current visitor information.</p>
+    </section>
+    <section id="maps" class="view" aria-labelledby="maps-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">GET YOUR BEARINGS</p><h2 id="maps-title">Your California map</h2></div></div>
+      <div class="map-preferences"><span class="map-choice-label">Open links with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div><span id="map-choice-note" class="small-note" role="status">Applies to all location and directions links.</span></div><div class="maps-layout"><div id="place-list" class="place-list" aria-label="Choose a place"></div><div class="large-map-card"><iframe id="large-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="large-map-info"><div><span class="eyebrow" id="map-category"></span><h3 id="map-title"></h3><p id="map-address"></p></div><div class="map-actions"><a id="map-open" class="button primary" href="#" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> <span data-icon="external"></span></a><a id="map-directions" class="button secondary" href="#" target="_blank" rel="noopener noreferrer">Directions from hotel <span data-icon="route"></span></a><a id="map-source" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Official visitor information ↗</a></div></div></div></div>
+      <p class="small-note section-footnote">Explore each place on the map here. Location and directions links use your selected map app. San Francisco is a separate, proposed flight day trip.</p>
+    </section>
+    <section id="packing" class="view" aria-labelledby="packing-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2 id="packing-title">Pack for California</h2></div><span class="packing-counter" id="packing-counter" aria-live="polite" aria-atomic="true"></span></div>
+      <div class="packing-summary"><div><span class="note-icon" data-icon="bag"></span><h3>A few layers. A good pair of shoes.</h3><p>Suggested essentials for city days, studio visits and cool evenings.</p></div><div class="packing-progress"><strong id="packing-percent">0%</strong><span>ready to go</span><progress id="packing-progress" value="0" max="1" aria-label="Packing progress"></progress></div></div>
+      <p class="storage-note" id="storage-note"><span data-icon="device"></span>Checklist changes save on this device. They don’t sync between devices.</p>
+      <div id="packing-groups" class="packing-grid"></div>
+      <form id="add-packing" class="add-packing"><label for="new-packing">Something else to bring?</label><div><input type="text" id="new-packing" placeholder="e.g. Lakers jersey" maxlength="100" required autocomplete="off"><button type="submit" class="button primary"><span data-icon="plus"></span>Add item</button></div><p id="packing-feedback" class="small-note" role="status"></p></form>
+    </section>
+
+    </main>
+    <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
+  </div>
+  <noscript><p class="noscript">Turn on JavaScript to use the day selector, maps and packing checklist. The Westin Bonaventure stay is 20–28 December 2026. UA99 departs Melbourne on 20 December; DL11 departs LA on 28 December. Clippers–Warriors: 23 December, 7:30 pm. Lakers–76ers: 25 December, 2:00 pm.</p></noscript>
+</body>
+</html>
