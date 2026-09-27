@@ -43,7 +43,7 @@ Backups now include any booking details you enter, including confirmation number
 
 ## Add a new app
 
-From the repository root:
+First create a descriptive `feature/<short-description>` branch from the latest remote `main`. Make all edits and commits on that branch. From the repository root:
 
 ```sh
 cp -R hello-world my-app
@@ -64,7 +64,7 @@ cp -R hello-world my-app
    ```
 
 3. Run `python3 scripts/validate.py` and check the app’s actual interactions, mobile layout and accessibility.
-4. Commit the app folder and manifest together to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. Verify the matching Pages deployment and live app URL.
+4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. After the pull request is merged, verify the matching Pages deployment and live app URL.
 
 See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
 
@@ -80,6 +80,8 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) an
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
 
 ## Development and publishing
+
+All changes, including fixes and documentation, use a `feature/<short-description>` branch and a pull request targeting `main`. Never push or directly update the `main` ref, including through GitHub API/connector tools. Preserve concurrent changes and do not force-push. An open pull request is not a deployment; changes reach the live site after the pull request is merged.
 
 No build step or package install is required to serve the apps. Python 3 and Node.js are needed for the validator:
 

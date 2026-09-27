@@ -4,7 +4,7 @@ This is a live, working subpage and the starting point for new apps in Mario’s
 
 ## Publish another app
 
-From the repository root:
+Create a descriptive `feature/<short-description>` branch from the latest remote `main` before editing. Work and commit on that branch. From the repository root:
 
 ```sh
 cp -R hello-world my-app
@@ -27,7 +27,7 @@ Append this object to the `apps` array in root `apps.json` (use a unique id and 
 
 For a real photo preview, replace specimen with `image: "./my-app/assets/preview.jpg"` and meaningful `imageAlt`. `meta` is optional short context. Do not invent images or apps. Array order controls collection order. No manual homepage card or router edit is needed.
 
-Run `python3 scripts/validate.py`. Preview with an HTTP server (for example `python3 -m http.server 8000` from the repository root); file:// cannot load the manifest reliably. This is optional local developer guidance, not a replacement for a managed preview workflow when one is required by the environment. Check the app at `/my-app/`, its All apps link, keyboard use, phone-width layout, longer text and reduced motion. Commit the folder plus apps.json to main using the repository’s normal authorization/review process. Existing GitHub Pages publishing deploys the commit; verify the matching run and live URL.
+Run `python3 scripts/validate.py`. Preview with an HTTP server (for example `python3 -m http.server 8000` from the repository root); file:// cannot load the manifest reliably. This is optional local developer guidance, not a replacement for a managed preview workflow when one is required by the environment. Check the app at `/my-app/`, its All apps link, keyboard use, phone-width layout, longer text and reduced motion. Commit and push the folder plus apps.json on the feature branch, then open a pull request targeting `main`. Never push or directly update `main`, including through connector/API tools. After the pull request is merged through the repository’s review workflow, existing GitHub Pages publishing deploys the merge; verify the matching run and live URL.
 
 ## Files
 
