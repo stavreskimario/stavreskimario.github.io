@@ -7,28 +7,10 @@
   <meta name="description" content="Mario’s collection of sites and small apps made with Codex.">
   <title>Mario’s Sites</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Ctext x='7' y='29' font-family='Georgia' font-size='27' fill='%23ad5738'%3EM%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
-  <style>
-    :root{font:100%/1.5 'DM Sans',system-ui,sans-serif;color:#39362f;background:#faf7ef;font-optical-sizing:auto}
-    *{box-sizing:border-box}body{margin:0}a{color:inherit}a:focus-visible{outline:3px solid #ad5738;outline-offset:5px}
-    .shell{max-width:70rem;margin:auto;padding:0 2.5rem}header{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;gap:1rem}
-    .signature{font:1.7rem/1.1 'Instrument Serif',Georgia,serif}.colophon{font-size:.8125rem;color:#71685d;letter-spacing:.04em}
-    main{padding:4rem 0 5rem}.eyebrow{margin:0 0 1rem;color:#ad5738;font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-    h1{font:clamp(3.1rem,7vw,5.5rem)/1.02 'Instrument Serif',Georgia,serif;letter-spacing:-.035em;margin:0 0 3.5rem;max-width:13ch}
-    h1 em{font-weight:400;color:#63828a}h2{font:clamp(2rem,4vw,3rem)/1.05 'Instrument Serif',Georgia,serif;letter-spacing:-.025em;margin:.9rem 0 1rem}
-    .project{display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;border:1px solid #e2d8c7;border-radius:1.75rem;background:#fffdf7;text-decoration:none;box-shadow:0 8px 28px #55443109;touch-action:manipulation}
-    .photo{position:relative;min-height:23rem;background:#ece2d5;overflow:hidden}.photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:35% center}
-    .photo:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 65%,#302c2950)}
-    .photo span{position:absolute;bottom:1.5rem;left:1.5rem;z-index:1;padding:.4rem .7rem;border-radius:.6rem;background:#faf7ef;color:#39362f;font-size:.8125rem;letter-spacing:.025em}
-    .copy{padding:2.5rem;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.category{color:#ad5738;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
-    .copy p{font-size:1rem;line-height:1.65;color:#71685d;max-width:27ch;margin:0 0 2rem}.open{display:flex;align-items:center;gap:.75rem;min-height:2.75rem;font-weight:600;font-size:.9375rem;color:#436672}
-    .arrow{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:#e6edeb;font-size:1.25rem}
-    .project:hover{border-color:#bba58b}.project:hover .open{text-decoration:underline;text-underline-offset:4px}.project:active{background:#f2ebdf;transform:scale(.995)}
-    footer{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid #e2d8c7;padding:1.5rem 0 2rem;color:#71685d;font-size:.8125rem;letter-spacing:.015em}
-    @media(max-width:640px){.shell{padding:0 1.25rem}header{padding:1.5rem 0}.colophon{font-size:.75rem}main{padding:2.25rem 0 3rem}h1{margin-bottom:2rem}.project{grid-template-columns:1fr;border-radius:1.4rem}.photo{min-height:13rem}.copy{padding:1.75rem}.copy p{max-width:none;margin-bottom:1.25rem}.open{width:100%;justify-content:space-between}.photo span{bottom:1rem;left:1rem}footer{flex-wrap:wrap}}
-    @media(prefers-reduced-motion:reduce){.project:active{transform:none}}
-    @media(prefers-contrast:more){:root{color:#29251f}.copy p,.colophon,footer{color:#494137}.project,footer{border-color:#756958}.open{color:#274853}}
-  </style>
+  <link rel="stylesheet" href="./shared/theme.css?v=1">
+  <link rel="stylesheet" href="./shared/catalog.css?v=1">
+  <script src="./shared/ui.js?v=1" defer></script>
+  <script src="./shared/catalog.js?v=1" defer></script>
 </head>
 <body>
   <div class="shell">
@@ -36,10 +18,15 @@
     <main>
       <p class="eyebrow">The collection</p>
       <h1>A few ideas,<br><em>brought to life.</em></h1>
+      <div id="apps" class="app-list">
       <a class="project" href="./la-trip/" aria-label="Open Nine Days in Los Angeles trip planner">
         <div class="photo"><img src="./la-trip/assets/la-skyline.jpg" alt="Palm trees overlooking the Los Angeles skyline" width="1200" height="600" fetchpriority="high"><span>20–28 December 2026</span></div>
         <div class="copy"><span class="category">Travel · 01</span><h2>Nine Days<br>in Los Angeles</h2><p>A California Christmas, planned one day at a time. The itinerary, bookings, maps and packing list.</p><span class="open">Open trip planner <span class="arrow" aria-hidden="true">↗</span></span></div>
       </a>
+      <a class="project" href="./hello-world/"><div class="specimen" aria-hidden="true">Hello,<br>world.</div><div class="copy"><span class="category">Starter · 02</span><h2>Hello World</h2><p>A small hello. The starting point for the next app.</p><span class="open">Open app <span class="arrow" aria-hidden="true">→</span></span></div></a>
+      </div>
+      <p id="catalog-status" class="catalog-status" role="status"></p>
+      <noscript><p>The apps above work without the collection loader. Enable JavaScript to see the latest collection.</p></noscript>
     </main>
     <footer><span>Mario Stavreski</span><span>Sites & small apps</span></footer>
   </div>

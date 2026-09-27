@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#faf7ef">
+ <meta name="description" content="A friendly Hello World app and reusable starting point for Mario’s sites.">
+ <title>Hello World · Mario’s Sites</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Ctext x='8' y='29' font-family='Georgia' font-size='28' fill='%23ad5738'%3EH%3C/text%3E%3C/svg%3E">
+ <link rel="stylesheet" href="../shared/theme.css?v=1">
+ <link rel="stylesheet" href="./styles.css?v=1">
+ <script src="../shared/ui.js?v=1" defer></script>
+ <script src="./app.js?v=1" defer></script>
+</head>
+<body>
+ <a class="skip-link" href="#main">Skip to greeting</a>
+ <div class="site-shell">
+  <header class="site-header"><a href="../">← All apps</a><span class="wordmark">Mario’s sites</span></header>
+  <main id="main">
+   <p class="eyebrow">A little beginning</p>
+   <h1 class="display">Hello, world.</h1>
+   <div class="hello-layout">
+    <section class="panel greeting-panel" aria-labelledby="greeting-title">
+     <p class="eyebrow">Your greeting</p>
+     <h2 id="greeting-title" aria-live="polite" aria-atomic="true">Hello, world.</h2>
+     <p class="handwritten">Every good idea starts somewhere.</p>
+     <form id="greeting-form">
+      <label class="field-label" for="name">What should we call you?</label>
+      <input id="name" name="name" type="text" maxlength="40" autocomplete="given-name" placeholder="Your name" aria-describedby="name-note">
+      <p id="name-note" class="muted small">Leave it blank to greet the world.</p>
+      <div class="actions"><button class="button" type="submit">Say hello</button><button class="button secondary" id="reset" type="button">Reset</button></div>
+      <p class="status" id="feedback" role="status"></p>
+     </form>
+    </section>
+    <section class="panel options-panel" aria-labelledby="tone-title">
+     <h2 id="tone-title">Make it yours</h2>
+     <div class="segmented" role="group" aria-label="Greeting style"><button type="button" data-style="simple" aria-pressed="true">Simple</button><button type="button" data-style="warm" aria-pressed="false">Warm</button></div>
+     <h3>Pick a greeting</h3>
+     <p class="muted small" id="rail-help">Swipe to browse, tap to choose. Arrow keys work too.</p>
+     <div class="snap-rail" id="greeting-rail" role="group" aria-label="Greeting language" aria-describedby="rail-help">
+      <button type="button" data-slide="0" aria-pressed="true"><strong>Hello</strong><span>English</span></button>
+      <button type="button" data-slide="1" aria-pressed="false"><strong>Hola</strong><span>Spanish</span></button>
+      <button type="button" data-slide="2" aria-pressed="false"><strong>Ciao</strong><span>Italian</span></button>
+     </div>
+     <p class="muted small">This greeting stays in this tab. Nothing is saved or sent.</p>
+    </section>
+   </div>
+  </main>
+ </div>
+ <nav class="material floating-nav" aria-label="App navigation"><a href="../">← All apps</a><span aria-current="page">Hello World</span></nav>
+ <noscript><p class="site-shell">Hello, world! Enable JavaScript to personalise your greeting.</p></noscript>
+</body>
+</html>
