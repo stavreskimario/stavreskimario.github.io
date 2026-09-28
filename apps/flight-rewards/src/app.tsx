@@ -34,6 +34,7 @@ import { emptyFilters, resultList, type Sort } from "../lib/search/results";
 import { parseWallet, walletKey, emptyWallet } from "../lib/points/wallet";
 import {
   Field,
+  AirlinePicker,
   Guide,
   ItineraryCard,
   Segmented,
@@ -496,54 +497,36 @@ function App() {
                           <option value="3">±3 days</option>
                         </select>
                       </Field>
-                      <Field
-                        label="Preferred airlines"
-                        hint="Optional. Select more than one with Ctrl / Command."
-                      >
-                        <select
-                          multiple
-                          value={q.preferredAirlines}
-                          onChange={(e) =>
-                            update(
-                              "preferredAirlines",
-                              Array.from(
-                                e.target.selectedOptions,
-                                (o) => o.value,
-                              ),
-                            )
-                          }
-                        >
-                          {airlines.map((a) => (
-                            <option key={a.code} value={a.code}>
-                              {a.name}
-                            </option>
-                          ))}
-                        </select>
-                      </Field>
-                      <Field
+                      <AirlinePicker
+                        label="Included airlines"
+                        emptyLabel="Any airline"
+                        hint="Tap the airlines you want to fly with. Leave all unchecked for any airline."
+                        value={q.preferredAirlines}
+                        onChange={(value) =>
+                          setQ((s) => ({
+                            ...s,
+                            preferredAirlines: value,
+                            excludedAirlines: s.excludedAirlines.filter(
+                              (code) => !value.includes(code),
+                            ),
+                          }))
+                        }
+                      />
+                      <AirlinePicker
                         label="Excluded airlines"
-                        hint="Leave blank to include every supported airline."
-                      >
-                        <select
-                          multiple
-                          value={q.excludedAirlines}
-                          onChange={(e) =>
-                            update(
-                              "excludedAirlines",
-                              Array.from(
-                                e.target.selectedOptions,
-                                (o) => o.value,
-                              ),
-                            )
-                          }
-                        >
-                          {airlines.map((a) => (
-                            <option key={a.code} value={a.code}>
-                              {a.name}
-                            </option>
-                          ))}
-                        </select>
-                      </Field>
+                        emptyLabel="None excluded"
+                        hint="Tap any airlines you want to avoid. Selecting an airline here removes it from your included airlines."
+                        value={q.excludedAirlines}
+                        onChange={(value) =>
+                          setQ((s) => ({
+                            ...s,
+                            excludedAirlines: value,
+                            preferredAirlines: s.preferredAirlines.filter(
+                              (code) => !value.includes(code),
+                            ),
+                          }))
+                        }
+                      />
                     </div>
                     <button
                       type="button"

@@ -29,6 +29,7 @@ const browser = await chromium.launch({
 try {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 1100 },
+    hasTouch: true,
   });
   const page = await context.newPage();
   const errors = [];
@@ -37,6 +38,108 @@ try {
   await page
     .getByRole("heading", { name: "Your points. More possibilities." })
     .waitFor();
+  // Multi-selection works with ordinary taps and Space, without modifier keys.
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.locator(".search-options > summary").tap();
+  await page
+    .locator(".airline-picker > summary")
+    .filter({ hasText: "Included airlines" })
+    .tap();
+  const included = page.getByRole("group", {
+    name: "Included airlines",
+    exact: true,
+  });
+  await included
+    .locator("label")
+    .filter({ hasText: /^Qantas$/ })
+    .tap();
+  await included
+    .getByRole("checkbox", { name: "United Airlines", exact: true })
+    .focus();
+  await page.keyboard.press("Space");
+  assert.ok(
+    await included
+      .getByRole("checkbox", { name: "Qantas", exact: true })
+      .isChecked(),
+  );
+  assert.ok(
+    await included
+      .getByRole("checkbox", { name: "United Airlines", exact: true })
+      .isChecked(),
+  );
+  assert.ok(
+    (
+      await page.locator(".airline-picker > summary").first().innerText()
+    ).includes("2 selected"),
+  );
+  await page
+    .locator(".airline-picker > summary")
+    .filter({ hasText: "Excluded airlines" })
+    .tap();
+  const excluded = page.getByRole("group", {
+    name: "Excluded airlines",
+    exact: true,
+  });
+  await excluded
+    .locator("label")
+    .filter({ hasText: /^Qantas$/ })
+    .tap();
+  assert.equal(
+    await included
+      .getByRole("checkbox", { name: "Qantas", exact: true })
+      .isChecked(),
+    false,
+  );
+  assert.ok(
+    await excluded
+      .getByRole("checkbox", { name: "Qantas", exact: true })
+      .isChecked(),
+  );
+  assert.equal(await page.locator("select[multiple]").count(), 0);
+  for (const width of [375, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    assert.equal(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth > innerWidth + 1,
+      ),
+      false,
+    );
+  }
+  await page.evaluate(() => (document.documentElement.style.fontSize = "200%"));
+  assert.equal(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth > innerWidth + 1,
+    ),
+    false,
+  );
+  await page.evaluate(() => (document.documentElement.style.fontSize = ""));
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page
+    .locator(".search-options")
+    .screenshot({ path: join(output, "airline-choices-mobile.png") });
+  const pickerAxe = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa"])
+    .analyze();
+  assert.deepEqual(
+    pickerAxe.violations,
+    [],
+    "Accessible expanded airline choices",
+  );
+  await page.getByRole("button", { name: "Explore points options" }).tap();
+  await page.locator(".itinerary-card").first().waitFor();
+  for (const name of await page
+    .locator(".itinerary-card")
+    .evaluateAll((es) => es.map((e) => e.getAttribute("aria-label"))))
+    assert.ok(name.startsWith("United Airlines"));
+  await included
+    .getByRole("button", { name: "Clear included airlines", exact: true })
+    .tap();
+  await excluded
+    .getByRole("button", { name: "Clear excluded airlines", exact: true })
+    .tap();
+  assert.equal(await page.locator(".airline-picker input:checked").count(), 0);
+  await page.locator(".search-options > summary").tap();
+  await page.setViewportSize({ width: 1440, height: 1100 });
   await page.screenshot({
     path: join(output, "desktop-start.png"),
     fullPage: true,
@@ -70,10 +173,10 @@ try {
     .fill("2000");
   await ua
     .getByRole("spinbutton", { name: "Reward taxes, fees & charges (AUD)" })
-    .fill("150");
+    .fill("150.50");
   await ua.getByRole("button", { name: "Update comparison" }).click();
   assert.ok((await ua.innerText()).includes("3.85¢"));
-  assert.ok((await ua.innerText()).includes("$1,014"));
+  assert.ok((await ua.innerText()).includes("$1,014.50"));
   await page.getByText("Refine results", { exact: false }).first().click();
   await page
     .getByLabel("Availability", { exact: true })

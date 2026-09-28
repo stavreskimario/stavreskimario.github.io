@@ -6,6 +6,7 @@ A React + TypeScript app for comparing Qantas and Velocity redemptions. The inte
 
 - Illustrative route search and a custom one-to-three-segment route builder, with one-way/return, adult passenger totals, cabin choices, airline inclusion/exclusion and stops.
 - Separate Qantas and Velocity calculators using versioned reward charts, great-circle statute miles, connections, stopovers, changes of airline/table and mixed cabins.
+- Touch-friendly airline selection with checkbox cards, selection counts and per-list clear actions. Included and excluded choices stay mutually exclusive; no Ctrl/Command selection is needed. Single-choice controls keep native mobile pickers.
 - Partner redemptions grouped under the itinerary. No points transfer is implied or performed.
 - A manual Qantas/Velocity wallet, editable AUD-cent valuations and points-shortfall/coverage indicators.
 - Per-option cash comparison, cents per point and effective cost. User-entered amounts cover the whole trip and all passengers. Unknown charges are never substituted with zero. Foreign-currency fares do not enter AUD calculations without a user-supplied AUD equivalent.
@@ -103,3 +104,5 @@ Velocity uses separate United, Singapore/Qatar, Air Canada/ANA and Virgin Austra
 Codeshares, special Virgin Australia/Doha region pricing, unsupported date versions and out-of-chart distances produce **Quote required** instead of a guessed value. Singapore Airlines First rewards and flights to/from China/Hong Kong are excluded from Velocity estimates. The shared premium-economy chart does not establish UA/AC/ANA eligibility; those estimates are withheld. Emirates First status/age restrictions are called out without collecting or promising status-dependent inventory.
 
 Airport coordinates and IANA timezones are a small bundled planning catalog, not an exhaustive airport directory. Actual carrier mileage, routing restrictions and availability can differ. Verify all estimates and unavoidable charges on the booking program’s site.
+
+Seats.aero flight departure timestamps are explicitly normalized as airport-local wall-clock values, including the documented `Z` suffix; they are not converted from UTC. Undocumented numeric-offset formats and invalid calendar dates are rejected. Observation `UpdatedAt` remains an actual instant for freshness checks. Regression tests protect this distinction.

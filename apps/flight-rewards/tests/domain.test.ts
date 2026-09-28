@@ -480,6 +480,65 @@ test("Seats adapter ignores other programs, summary-only records and unknown cur
   assert.equal(row.totalCharges!.amount, 150);
   assert.equal(row.availability.seats, null);
   assert.equal(row.availability.status, "INDICATIVE");
+  assert.equal(row.segments[0].departureLocal, q.departureDate + "T11:00:00");
+  assert.equal(row.availability.checkedAt, trip.UpdatedAt);
+  assert.equal(
+    applyObservations(scheduled(), [row]).redemptions[0].availability.status,
+    "INDICATIVE",
+  );
+  for (const timestamp of [
+    q.departureDate + "T11:00:00",
+    q.departureDate + "T11:00:00.123Z",
+  ]) {
+    const [local] = normalizeSeats({
+      data: [
+        {
+          Source: "velocity",
+          AvailabilityTrips: [
+            {
+              ...trip,
+              AvailabilitySegments: [
+                { ...trip.AvailabilitySegments[0], DepartsAt: timestamp },
+              ],
+            },
+          ],
+        },
+      ],
+    });
+    assert.equal(
+      local.segments[0].departureLocal,
+      q.departureDate + "T11:00:00",
+    );
+    assert.equal(
+      applyObservations(scheduled(), [local]).redemptions[0].availability
+        .status,
+      "INDICATIVE",
+    );
+  }
+  for (const timestamp of [
+    "2026-02-30T11:00:00Z",
+    "invalid",
+    q.departureDate + "T11:00:00+10:00",
+  ]) {
+    assert.deepEqual(
+      normalizeSeats({
+        data: [
+          {
+            Source: "velocity",
+            AvailabilityTrips: [
+              {
+                ...trip,
+                AvailabilitySegments: [
+                  { ...trip.AvailabilitySegments[0], DepartsAt: timestamp },
+                ],
+              },
+            ],
+          },
+        ],
+      }),
+      [],
+    );
+  }
   assert.equal(
     normalizeSeats({
       data: [

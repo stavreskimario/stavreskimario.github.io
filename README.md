@@ -10,7 +10,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 | Flight Rewards | Qantas and Velocity route estimates, partner redemptions, a device-local points wallet and cash comparisons. Live search requires the optional external backend. | [Flight Rewards](apps/flight-rewards/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/apps/hello-world/) |
 
-All app folders live under `apps/`, with URLs at `/apps/<app-id>/`. The collection remains at `/`, and shared assets remain in `shared/`. Previous root-level app URLs are replaced by these paths; update bookmarks after deployment. Moving paths on the same Pages origin preserves existing device-local saved data because storage keys are unchanged.
+All app folders live under `apps/`, with URLs at `/apps/<app-id>/`. The collection remains at `/`, and shared assets remain in `shared/`. The previously published `/la-trip/` and `/hello-world/` URLs retain small compatibility entrypoints that redirect to the new app paths, preserving query strings and fragments. They provide ordinary links when JavaScript is unavailable. Moving paths on the same Pages origin preserves existing device-local saved data because storage keys are unchanged.
 
 ## Edit the LA itinerary
 
@@ -78,6 +78,7 @@ See the [starter recipe](apps/hello-world/README.md), [design language](DESIGN.m
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
 | `apps/` | All app folders and their app-local assets |
+| `la-trip/index.html`, `hello-world/index.html` | Compatibility redirects for previously published URLs; no app code |
 | `apps/hello-world/` | Copyable app starter |
 | `apps/flight-rewards/` | Static rewards planner, TypeScript calculators and optional external Next.js API |
 | `apps/la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |

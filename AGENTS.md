@@ -15,6 +15,7 @@ This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md`
 1. Copy `apps/hello-world/` to a new, unique, lowercase kebab-case folder inside `apps/`.
 2. Adapt that copy’s title, description, favicon, visible content, styles and behavior to the requested app. Keep `../../shared/` imports and the `../../` All apps links.
 3. Add its entry to the root `apps.json`. The collection reads that file at runtime; no additional card markup or route configuration is required.
+   Keep existing published URLs working when moving an app. Root-level legacy folders may contain compatibility redirect entrypoints only; all app implementation and assets stay under `apps/`.
 4. Run `python3 scripts/validate.py`, then verify the actual requested interactions. Commit all new app files and the manifest together on the feature branch and open a pull request to `main`. Merging the pull request triggers the existing GitHub Pages deployment; verify that deployment and the live subpage after merge.
 
 Do not overwrite another app, remove unknown files, force-push, or change the publishing source. Re-read remote main before editing/publishing and preserve concurrent changes. Use the requested GitHub Pages destination rather than creating a separate Sites-hosted copy.

@@ -20,6 +20,7 @@ import {
   cabinLabel,
   qantasSource,
   velocitySource,
+  airlines,
 } from "../lib/loyalty/catalog";
 import {
   balanceStatus,
@@ -34,7 +35,8 @@ export const aud = (value: number) =>
   new Intl.NumberFormat("en-AU", {
     style: "currency",
     currency: "AUD",
-    maximumFractionDigits: 0,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   }).format(value);
 export const dateLabel = (date: string) =>
   new Date(date + "T12:00:00Z").toLocaleDateString("en-AU", {
@@ -81,6 +83,71 @@ export function Field({
         </small>
       )}
     </div>
+  );
+}
+export function AirlinePicker({
+  label,
+  value,
+  emptyLabel,
+  hint,
+  onChange,
+}: {
+  label: string;
+  value: string[];
+  emptyLabel: string;
+  hint: string;
+  onChange: (value: string[]) => void;
+}) {
+  const id = useId();
+  return (
+    <details className="airline-picker">
+      <summary>
+        <span className="picker-title">{label}</span>
+        <span className="picker-count">
+          {value.length ? `${value.length} selected` : emptyLabel}
+        </span>
+      </summary>
+      {value.length > 0 && (
+        <p className="picker-selection" aria-live="polite">
+          {airlines
+            .filter((a) => value.includes(a.code))
+            .map((a) => a.name)
+            .join(" · ")}
+        </p>
+      )}
+      <fieldset aria-describedby={`${id}-hint`}>
+        <legend className="visually-hidden">{label}</legend>
+        <p className="muted small" id={`${id}-hint`}>
+          {hint}
+        </p>
+        <div className="airline-choices">
+          {airlines.map((a) => (
+            <label key={a.code} className="airline-choice" data-press>
+              <input
+                type="checkbox"
+                checked={value.includes(a.code)}
+                onChange={(e) =>
+                  onChange(
+                    e.target.checked
+                      ? [...value, a.code]
+                      : value.filter((code) => code !== a.code),
+                  )
+                }
+              />
+              <span>{a.name}</span>
+            </label>
+          ))}
+        </div>
+        <button
+          type="button"
+          className="text-button"
+          onClick={() => onChange([])}
+          disabled={!value.length}
+        >
+          Clear {label.toLowerCase()}
+        </button>
+      </fieldset>
+    </details>
   );
 }
 export function External({

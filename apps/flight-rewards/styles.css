@@ -10,6 +10,13 @@ body {
   background: var(--paper);
   overflow-wrap: anywhere;
 }
+.skip-link:not(:focus) {
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .site-shell {
   max-width: 82rem;
   padding-inline: clamp(16px, 4vw, 3rem);
@@ -173,12 +180,111 @@ body {
   min-width: 0;
   appearance: none;
 }
-.field select[multiple] {
-  min-height: 7.5rem;
-  padding: 0.5rem;
+.field select {
+  appearance: none;
+  padding-right: 2.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23436672' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 1rem;
 }
-.field select option {
-  padding: 0.2rem;
+.field input:hover,
+.field select:hover {
+  border-color: var(--coast-dark);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.airline-picker {
+  grid-column: 1 / -1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.airline-picker > summary {
+  padding: 0.75rem 1rem;
+  min-height: 3.2rem;
+  flex-wrap: wrap;
+}
+.airline-picker .picker-title {
+  flex: 1;
+}
+.picker-count {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.picker-selection {
+  margin: 0;
+  padding: 0 1rem 0.8rem;
+  color: var(--coast-dark);
+  font-size: 0.8125rem;
+}
+.airline-picker fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0 1rem 0.5rem;
+  border: 0;
+}
+.airline-picker fieldset > p {
+  margin: 0 0 0.75rem;
+}
+.airline-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.airline-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: var(--surface);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.airline-choice:has(:checked) {
+  border-color: var(--coast-dark);
+  background: var(--accent-wash);
+  color: #315143;
+}
+.airline-choice:has(:focus-visible) {
+  outline: 3px solid var(--rust);
+  outline-offset: 2px;
+}
+.airline-choice input {
+  flex: 0 0 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--coast-dark);
+}
+@media (max-width: 45rem) {
+  .airline-choices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 24rem) {
+  .airline-choices {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (forced-colors: active) {
+  .field select {
+    appearance: auto;
+    background-image: none;
+  }
+  .airline-choice:has(:checked) {
+    border: 2px solid Highlight;
+  }
 }
 .field select:disabled {
   opacity: 0.6;
@@ -422,6 +528,7 @@ details > summary > span[aria-hidden] {
   padding: 2rem 0.15rem;
 }
 .presets {
+  --muted: #62594f;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem;
@@ -777,6 +884,7 @@ details > summary > span[aria-hidden] {
   color: var(--muted);
 }
 .empty-state {
+  --muted: #62594f;
   background: var(--soft);
   border: 1px dashed #c1b19b;
   border-radius: 1rem;
@@ -1013,6 +1121,9 @@ summary:focus-visible {
   .field input,
   .field select {
     padding: 0.7rem 0.6rem;
+  }
+  .field select {
+    padding-right: 2.6rem;
   }
   .search-action .button {
     width: 100%;

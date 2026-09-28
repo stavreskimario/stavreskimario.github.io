@@ -23,6 +23,23 @@ interface RawAvailability {
   Route?: { Source?: string };
   AvailabilityTrips?: RawTrip[];
 }
+/** Seats.aero flight times are airport-local, including their misleading Z suffix.
+ * https://developers.seats.aero/reference/concepts-copy#availability-trips
+ * UpdatedAt is a real instant and must not use this normalization.
+ */
+export function seatsDepartureLocal(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  const match = /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.\d+)?Z?$/.exec(
+    value,
+  );
+  if (!match) return null; // Numeric offsets are outside the documented local-time format.
+  const local = match[1];
+  const date = new Date(local + "Z");
+  return Number.isFinite(date.getTime()) &&
+    date.toISOString().slice(0, 19) === local
+    ? local
+    : null;
+}
 export function normalizeSeats(payload: unknown): AwardObservation[] {
   if (
     !payload ||
@@ -53,7 +70,7 @@ export function normalizeSeats(payload: unknown): AwardObservation[] {
             !s.OriginAirport ||
             !s.DestinationAirport ||
             !s.FlightNumber ||
-            !s.DepartsAt,
+            !seatsDepartureLocal(s.DepartsAt),
         )
       )
         continue;
@@ -66,7 +83,7 @@ export function normalizeSeats(payload: unknown): AwardObservation[] {
           origin: s.OriginAirport!,
           destination: s.DestinationAirport!,
           flightNumber: s.FlightNumber!,
-          departureLocal: s.DepartsAt!,
+          departureLocal: seatsDepartureLocal(s.DepartsAt)!,
         })),
         points:
           typeof trip.MileageCost === "number" &&
