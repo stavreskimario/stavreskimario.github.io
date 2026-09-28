@@ -120,7 +120,9 @@
  .reservation-body dl{grid-template-columns:1fr}
  .reservation-body dd,.detail-note{font-size:1rem}
  .place-list{display:flex;flex-direction:row;overflow-x:auto;gap:8px;padding:3px 2px 9px;scroll-snap-type:x proximity;width:100%}
- .place-button{flex:0 0 170px;min-height:82px;padding:13px;scroll-snap-align:start}
+ /* The editable record is the flex item; keep its card and Edit control together. */
+ .place-list>.location-record{flex:0 0 10.625rem;scroll-snap-align:start}
+ .place-button{min-height:82px;padding:13px}
  .place-button strong{font-size:1.25rem}
  .place-number{display:none}
  .maps-layout{gap:18px}
