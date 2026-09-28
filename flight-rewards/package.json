@@ -1,0 +1,35 @@
+{
+  "name": "mario-flight-rewards",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "dev:api": "next dev server",
+    "build:api": "next build server --webpack",
+    "start:api": "next start server",
+    "db:setup": "tsx server/db/setup.ts",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.2",
+    "next": "16.3.6",
+    "pg": "8.23.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@types/node": "26.6.3",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.55.1",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "6.0.3"
+  }
+}

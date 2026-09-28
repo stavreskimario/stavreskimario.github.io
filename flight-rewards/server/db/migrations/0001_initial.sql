@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS app_user (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), created_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS airport (iata text PRIMARY KEY, icao text, city text NOT NULL, country text NOT NULL, latitude numeric NOT NULL CHECK(latitude BETWEEN -90 AND 90), longitude numeric NOT NULL CHECK(longitude BETWEEN -180 AND 180), timezone text NOT NULL);
+CREATE TABLE IF NOT EXISTS airline (code text PRIMARY KEY, name text NOT NULL, data jsonb NOT NULL);
+CREATE TABLE IF NOT EXISTS loyalty_program (id text PRIMARY KEY, name text NOT NULL, currency text NOT NULL, booking_url text NOT NULL);
+CREATE TABLE IF NOT EXISTS redemption_partner (program_id text REFERENCES loyalty_program(id), airline_code text REFERENCES airline(code), source text NOT NULL, PRIMARY KEY(program_id,airline_code));
+CREATE TABLE IF NOT EXISTS reward_chart (id text PRIMARY KEY, program_id text NOT NULL REFERENCES loyalty_program(id), partner_group text NOT NULL);
+CREATE TABLE IF NOT EXISTS reward_chart_version (id text PRIMARY KEY, chart_id text NOT NULL REFERENCES reward_chart(id), effective_from text NOT NULL, effective_to text, data jsonb NOT NULL);
+CREATE UNIQUE INDEX IF NOT EXISTS chart_effective_unique ON reward_chart_version(chart_id,effective_from);
+CREATE TABLE IF NOT EXISTS points_balance (user_id uuid REFERENCES app_user(id), program_id text REFERENCES loyalty_program(id), balance integer CHECK(balance>=0), updated_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY(user_id,program_id));
+CREATE TABLE IF NOT EXISTS point_valuation (user_id uuid REFERENCES app_user(id), program_id text REFERENCES loyalty_program(id), aud_cents numeric NOT NULL CHECK(aud_cents>=0), updated_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY(user_id,program_id));
+CREATE TABLE IF NOT EXISTS search_history (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid NOT NULL REFERENCES app_user(id), query jsonb NOT NULL, created_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS cached_flight_search (key text PRIMARY KEY, payload jsonb NOT NULL, checked_at timestamptz NOT NULL DEFAULT now(), expires_at timestamptz NOT NULL);
+CREATE TABLE IF NOT EXISTS cached_award_availability (key text PRIMARY KEY, payload jsonb NOT NULL, checked_at timestamptz NOT NULL DEFAULT now(), expires_at timestamptz NOT NULL);
+CREATE TABLE IF NOT EXISTS search_rate_limit (key text PRIMARY KEY, count integer NOT NULL, expires_at timestamptz NOT NULL);
+CREATE INDEX IF NOT EXISTS flight_cache_expiry ON cached_flight_search(expires_at);
+CREATE INDEX IF NOT EXISTS award_cache_expiry ON cached_award_availability(expires_at);
+CREATE INDEX IF NOT EXISTS rate_limit_expiry ON search_rate_limit(expires_at);

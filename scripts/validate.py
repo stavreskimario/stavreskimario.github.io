@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
+GENERATED_DIRS = {'.git', 'node_modules', '.next', 'test-results'}
 
 def require(condition, message):
     if not condition:
@@ -50,10 +51,10 @@ def validate():
             require((ROOT/image).is_file(), f'{slug}: missing preview image')
             require(isinstance(app.get('imageAlt'),str) and app['imageAlt'].strip(), f'{slug}: add imageAlt')
     for page in ROOT.rglob('*.html'):
-        if '.git' not in page.parts:
+        if not GENERATED_DIRS.intersection(page.relative_to(ROOT).parts):
             LocalLinks(page).feed(page.read_text())
     for script in ROOT.rglob('*.js'):
-        if '.git' not in script.parts:
+        if not GENERATED_DIRS.intersection(script.relative_to(ROOT).parts):
             subprocess.run(['node','--check',str(script)],check=True)
     require((ROOT/'.nojekyll').exists(), 'Keep .nojekyll for static Pages publishing')
     print(f'Validated {len(ids)} apps: manifest, entrypoints, relative HTML links/assets and JavaScript syntax.')

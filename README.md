@@ -7,6 +7,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 | App | What it does | Open |
 | --- | --- | --- |
 | Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
+| Flight Rewards | Qantas and Velocity route estimates, partner redemptions, a device-local points wallet and cash comparisons. Live search requires the optional external backend. | [Flight Rewards](flight-rewards/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
 
 ## Edit the LA itinerary
@@ -75,6 +76,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) an
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
 | `hello-world/` | Copyable app starter |
+| `flight-rewards/` | Static rewards planner, TypeScript calculators and optional external Next.js API |
 | `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `AGENTS.md` | Design decisions, interaction rules and development lessons |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
@@ -83,7 +85,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) an
 
 All changes, including fixes and documentation, use a `feature/<short-description>` branch and a pull request targeting `main`. Never push or directly update the `main` ref, including through GitHub API/connector tools. Preserve concurrent changes and do not force-push. An open pull request is not a deployment; changes reach the live site after the pull request is merged.
 
-No build step or package install is required to serve the apps. Python 3 and Node.js are needed for the validator:
+No build step or package install is required to serve the committed apps. Flight Rewards has React/TypeScript sources and a committed browser bundle; after editing it, run its [build and tests](flight-rewards/README.md). Its optional Next.js/PostgreSQL backend runs outside GitHub Pages. Python 3 and Node.js are needed for the validator:
 
 ```sh
 python3 scripts/validate.py
