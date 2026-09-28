@@ -55,6 +55,8 @@ export async function cacheSet(
 }
 /** Shared global work budget: cannot be bypassed by spoofing an IP or by adding instances. */
 export async function takeSearchBudget(units: number): Promise<boolean> {
+  if (!Number.isInteger(units) || units < 1 || units > 28)
+    throw new RangeError("Invalid search budget units.");
   const minute = Math.floor(Date.now() / 60000),
     key = `global:${minute}`;
   const [row] = await db()
@@ -63,8 +65,9 @@ export async function takeSearchBudget(units: number): Promise<boolean> {
     .onConflictDoUpdate({
       target: rateLimits.key,
       set: { count: sql`${rateLimits.count}+${units}` },
+      setWhere: sql`${rateLimits.count}+${units} <= 28`,
     })
     .returning({ count: rateLimits.count });
   await db().delete(rateLimits).where(lt(rateLimits.expiresAt, new Date()));
-  return row.count <= 28;
+  return !!row;
 }

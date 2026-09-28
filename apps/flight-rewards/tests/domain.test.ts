@@ -1,3 +1,8 @@
+import {
+  cachedFlights,
+  ProviderBudgetExceeded,
+} from "../server/search/cached-flights";
+import { formatMoney } from "../lib/points/format";
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
@@ -570,4 +575,117 @@ test("Surcharge filters omit unknown amounts, while highest-value sorting puts u
     ).length,
     1,
   );
+});
+
+test("Cached searches remain available when the paid-provider budget is exhausted", async () => {
+  const data = { itineraries: [], notices: [] };
+  let reservations = 0;
+  const deps = {
+    read: async () => data,
+    reserve: async () => {
+      reservations++;
+      return false;
+    },
+    search: async () => {
+      throw new Error("Cache hit must not call provider");
+    },
+    write: async () => {
+      throw new Error("Cache hit must not refresh expiry");
+    },
+  };
+  const results = await Promise.all(
+    Array.from({ length: 35 }, () => cachedFlights(deps)),
+  );
+  assert.equal(reservations, 0);
+  assert.ok(results.every((r) => r === data));
+});
+
+test("Mixed flexible-date searches reserve only their missing dates", async () => {
+  const data = { itineraries: [], notices: [] };
+  let reservations = 0,
+    calls = 0,
+    writes = 0;
+  await Promise.all(
+    Array.from({ length: 7 }, (_, i) =>
+      cachedFlights({
+        read: async () => (i < 5 ? data : null),
+        reserve: async () => {
+          reservations++;
+          return true;
+        },
+        search: async () => {
+          calls++;
+          return data;
+        },
+        write: async () => {
+          writes++;
+        },
+      }),
+    ),
+  );
+  assert.equal(reservations, 2);
+  assert.equal(calls, 2);
+  assert.equal(writes, 2);
+});
+
+test("Expired offers require a reservation and budget rejection never calls the provider", async () => {
+  const data = normalizeDuffel(
+    { data: { live_mode: true, offers: [duffelOffer()] } },
+    q,
+  );
+  const itinerary = data.itineraries[0];
+  itinerary.cashFare!.expiresAt = "2026-01-01T00:00:00Z";
+  let calls = 0,
+    reservations = 0;
+  await assert.rejects(
+    () =>
+      cachedFlights({
+        read: async () => ({ itineraries: [itinerary], notices: [] }),
+        reserve: async () => {
+          reservations++;
+          return false;
+        },
+        search: async () => {
+          calls++;
+          return { itineraries: [], notices: [] };
+        },
+        write: async () => {},
+      }),
+    ProviderBudgetExceeded,
+  );
+  assert.equal(reservations, 1);
+  assert.equal(calls, 0);
+});
+
+test("Concurrent cache misses cannot call the provider without a successful reservation", async () => {
+  let remaining = 28,
+    calls = 0;
+  const results = await Promise.allSettled(
+    Array.from({ length: 40 }, () =>
+      cachedFlights({
+        read: async () => null,
+        // An atomic-reservation test double; production uses a conditional PostgreSQL upsert.
+        reserve: async () => (remaining > 0 ? (remaining--, true) : false),
+        search: async () => {
+          calls++;
+          return { itineraries: [], notices: [] };
+        },
+        write: async () => {},
+      }),
+    ),
+  );
+  assert.equal(calls, 28);
+  assert.equal(results.filter((r) => r.status === "fulfilled").length, 28);
+  assert.ok(
+    results
+      .filter((r) => r.status === "rejected")
+      .every((r) => r.reason instanceof ProviderBudgetExceeded),
+  );
+});
+
+test("Currency display retains the currency's normal minor units", () => {
+  assert.match(formatMoney(150.5, "AUD", "code"), /^AUD\s150\.50$/);
+  assert.match(formatMoney(150.5, "USD", "code"), /^USD\s150\.50$/);
+  assert.match(formatMoney(150.5, "JPY", "code"), /^JPY\s151$/);
+  assert.match(formatMoney(150.505, "KWD", "code"), /^KWD\s150\.505$/);
 });

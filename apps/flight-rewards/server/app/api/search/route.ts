@@ -1,4 +1,8 @@
 import {
+  cachedFlights,
+  ProviderBudgetExceeded,
+} from "../../../search/cached-flights";
+import {
   validateQuery,
   flexibleQueries,
   today,
@@ -96,35 +100,23 @@ export async function POST(request: Request) {
   }
   try {
     const queries = flexibleQueries(query);
-    if (!(await takeSearchBudget(queries.length)))
-      return reply(
-        { error: "Search is busy. Please try again in a minute." },
-        429,
-      );
     const flights = new DuffelProvider(process.env.DUFFEL_ACCESS_TOKEN),
       awards = process.env.SEATS_AERO_API_KEY
         ? new SeatsAeroProvider(process.env.SEATS_AERO_API_KEY)
         : null;
     const results = await Promise.allSettled(
       queries.map(async (q) => {
-        const key = cacheKey({ v: 1, provider: "duffel", q }),
-          cached = await cacheGet<
-            Awaited<ReturnType<DuffelProvider["search"]>>
-          >("flights", key);
-        let data = cached;
-        // Never extend provider offer validity because our own cache lasts longer.
-        if (
-          data?.itineraries.some(
-            (i) =>
-              i.cashFare?.expiresAt &&
-              Date.parse(i.cashFare.expiresAt) <= Date.now(),
-          )
-        )
-          data = null;
-        if (!data) {
-          data = await flights.search(q);
-          await cacheSet("flights", key, data, 300);
-        }
+        const key = cacheKey({ v: 1, provider: "duffel", q });
+        const data = await cachedFlights({
+          read: () =>
+            cacheGet<Awaited<ReturnType<DuffelProvider["search"]>>>(
+              "flights",
+              key,
+            ),
+          reserve: () => takeSearchBudget(1),
+          search: () => flights.search(q),
+          write: (data) => cacheSet("flights", key, data, 300),
+        });
         const observations: AwardObservation[] = [];
         const notices = [...data.notices];
         if (awards) {
@@ -189,6 +181,15 @@ export async function POST(request: Request) {
         Awaited<ReturnType<typeof flights.search>>
       > => x.status === "fulfilled",
     );
+    const budgetExceeded = results.some(
+      (r) =>
+        r.status === "rejected" && r.reason instanceof ProviderBudgetExceeded,
+    );
+    if (!fulfilled.length && budgetExceeded)
+      return reply(
+        { error: "Search is busy. Please try again in a minute." },
+        429,
+      );
     if (!fulfilled.length)
       return reply(
         {
@@ -198,6 +199,10 @@ export async function POST(request: Request) {
         502,
       );
     const notices = [...new Set(fulfilled.flatMap((x) => x.value.notices))];
+    if (budgetExceeded)
+      notices.push(
+        "Some uncached dates reached the live-search limit. Available results are shown.",
+      );
     if (fulfilled.length < queries.length)
       notices.push("Some dates could not be searched; results are incomplete.");
     const response: SearchResponse = {

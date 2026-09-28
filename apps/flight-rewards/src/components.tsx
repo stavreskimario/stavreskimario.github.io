@@ -1,3 +1,4 @@
+import { formatMoney } from "../lib/points/format";
 import {
   useEffect,
   useRef,
@@ -31,13 +32,7 @@ import { rewardCharts } from "../lib/rewards/charts";
 import { segmentMiles } from "../lib/search/distance";
 import { stops } from "../lib/search/results";
 export const number = (value: number) => value.toLocaleString("en-AU");
-export const aud = (value: number) =>
-  new Intl.NumberFormat("en-AU", {
-    style: "currency",
-    currency: "AUD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value);
+export const aud = (value: number) => formatMoney(value, "AUD");
 export const dateLabel = (date: string) =>
   new Date(date + "T12:00:00Z").toLocaleDateString("en-AU", {
     day: "numeric",
@@ -784,12 +779,11 @@ export function ItineraryCard({
           </span>
           <strong>
             {i.cashFare
-              ? new Intl.NumberFormat("en-AU", {
-                  style: "currency",
-                  currency: i.cashFare.total.currency,
-                  currencyDisplay: "code",
-                  maximumFractionDigits: 0,
-                }).format(i.cashFare.total.amount)
+              ? formatMoney(
+                  i.cashFare.total.amount,
+                  i.cashFare.total.currency,
+                  "code",
+                )
               : "Quote needed"}
           </strong>
         </div>
