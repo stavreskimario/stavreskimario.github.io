@@ -5,7 +5,7 @@ import { spawn } from "node:child_process";
 import { mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
-const root = fileURLToPath(new URL("../../", import.meta.url));
+const root = fileURLToPath(new URL("../../../", import.meta.url));
 const output = fileURLToPath(new URL("../test-results/", import.meta.url));
 await mkdir(output, { recursive: true });
 const staticServer = spawn(
@@ -33,7 +33,7 @@ try {
   const page = await context.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto("http://127.0.0.1:8123/flight-rewards/");
+  await page.goto("http://127.0.0.1:8123/apps/flight-rewards/");
   await page
     .getByRole("heading", { name: "Your points. More possibilities." })
     .waitFor();
@@ -181,7 +181,7 @@ try {
     .getByRole("link", { name: /Flight Rewards/ })
     .first()
     .click();
-  await page.waitForURL("**/flight-rewards/");
+  await page.waitForURL("**/apps/flight-rewards/");
   const blocked = await browser.newContext();
   await blocked.addInitScript(() => {
     Storage.prototype.setItem = function () {
@@ -189,7 +189,7 @@ try {
     };
   });
   const b = await blocked.newPage();
-  await b.goto("http://127.0.0.1:8123/flight-rewards/");
+  await b.goto("http://127.0.0.1:8123/apps/flight-rewards/");
   await b
     .getByRole("spinbutton", { name: "Velocity balance", exact: true })
     .fill("100000");

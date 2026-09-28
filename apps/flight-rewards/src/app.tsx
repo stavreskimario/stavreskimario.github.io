@@ -254,7 +254,7 @@ function App() {
     <>
       <div className="site-shell">
         <header className="site-header">
-          <a href="../">← All apps</a>
+          <a href="../../">← All apps</a>
           <a className="wordmark app-brand" href="#main">
             Flight Rewards <span aria-hidden="true">↗</span>
           </a>
@@ -1048,7 +1048,7 @@ function App() {
           <Guide />
         </main>
         <footer>
-          <a href="../">← All apps</a>
+          <a href="../../">← All apps</a>
           <span>A little further, thoughtfully.</span>
           <span>Flight Rewards · AUD comparisons</span>
         </footer>
@@ -1074,7 +1074,7 @@ class ErrorBoundary extends Component<
           Reload app
         </button>
         <p>
-          <a href="../">All apps</a>
+          <a href="../../">All apps</a>
         </p>
       </div>
     ) : (

@@ -6,9 +6,11 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 
 | App | What it does | Open |
 | --- | --- | --- |
-| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
-| Flight Rewards | Qantas and Velocity route estimates, partner redemptions, a device-local points wallet and cash comparisons. Live search requires the optional external backend. | [Flight Rewards](flight-rewards/) |
-| Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
+| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/apps/la-trip/) |
+| Flight Rewards | Qantas and Velocity route estimates, partner redemptions, a device-local points wallet and cash comparisons. Live search requires the optional external backend. | [Flight Rewards](apps/flight-rewards/) |
+| Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/apps/hello-world/) |
+
+All app folders live under `apps/`, with URLs at `/apps/<app-id>/`. The collection remains at `/`, and shared assets remain in `shared/`. Previous root-level app URLs are replaced by these paths; update bookmarks after deployment. Moving paths on the same Pages origin preserves existing device-local saved data because storage keys are unchanged.
 
 ## Edit the LA itinerary
 
@@ -47,10 +49,10 @@ Backups now include any booking details you enter, including confirmation number
 First create a descriptive `feature/<short-description>` branch from the latest remote `main`. Make all edits and commits on that branch. From the repository root:
 
 ```sh
-cp -R hello-world my-app
+cp -R apps/hello-world apps/my-app
 ```
 
-1. Build the new app inside that folder. Update its title, description, favicon and content. Keep its `../shared/` imports and `../` All apps links.
+1. Build the new app inside that folder. Update its title, description, favicon and content. Keep its `../../shared/` imports and `../../` All apps links.
 2. Add an entry to the `apps` array in [`apps.json`](apps.json), using a unique folder name and ID:
 
    ```json
@@ -59,7 +61,7 @@ cp -R hello-world my-app
      "name": "My App",
      "description": "What this app does.",
      "category": "Tool",
-     "path": "./my-app/",
+     "path": "./apps/my-app/",
      "specimen": "My App"
    }
    ```
@@ -67,7 +69,7 @@ cp -R hello-world my-app
 3. Run `python3 scripts/validate.py` and check the app’s actual interactions, mobile layout and accessibility.
 4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. After the pull request is merged, verify the matching Pages deployment and live app URL.
 
-See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
+See the [starter recipe](apps/hello-world/README.md), [design language](DESIGN.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
 
 ## Repository layout
 
@@ -75,23 +77,27 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md) an
 | --- | --- |
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
-| `hello-world/` | Copyable app starter |
-| `flight-rewards/` | Static rewards planner, TypeScript calculators and optional external Next.js API |
-| `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
+| `apps/` | All app folders and their app-local assets |
+| `apps/hello-world/` | Copyable app starter |
+| `apps/flight-rewards/` | Static rewards planner, TypeScript calculators and optional external Next.js API |
+| `apps/la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `AGENTS.md` | Design decisions, interaction rules and development lessons |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
+| `tests/la-scroll.cjs` | Chromium regression checks for LA map cards, touch scrolling and local edits |
 
 ## Development and publishing
 
 All changes, including fixes and documentation, use a `feature/<short-description>` branch and a pull request targeting `main`. Never push or directly update the `main` ref, including through GitHub API/connector tools. Preserve concurrent changes and do not force-push. An open pull request is not a deployment; changes reach the live site after the pull request is merged.
 
-No build step or package install is required to serve the committed apps. Flight Rewards has React/TypeScript sources and a committed browser bundle; after editing it, run its [build and tests](flight-rewards/README.md). Its optional Next.js/PostgreSQL backend runs outside GitHub Pages. Python 3 and Node.js are needed for the validator:
+No build step or package install is required to serve the committed apps. Flight Rewards has React/TypeScript sources and a committed browser bundle; after editing it, run its [build and tests](apps/flight-rewards/README.md). Its optional Next.js/PostgreSQL backend runs outside GitHub Pages. Python 3 and Node.js are needed for the validator:
 
 ```sh
 python3 scripts/validate.py
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/` and `/la-trip/` or `/hello-world/`. Use HTTP rather than `file://` so the catalog can load its manifest. Localhost has its own browser storage, separate from the live site.
+Open `http://localhost:8000/` and `/apps/la-trip/`, `/apps/flight-rewards/` or `/apps/hello-world/`. Use HTTP rather than `file://` so the catalog can load its manifest. Localhost has its own browser storage, separate from the live site.
+
+After installing Flight Rewards' development dependencies and Chromium, run the LA scrolling regression from the repository root with `PLAYWRIGHT_MODULE="$PWD/apps/flight-rewards/node_modules/playwright" node tests/la-scroll.cjs`. The test also documents how to use a separate Playwright installation. Flight Rewards' browser checks run from `apps/flight-rewards/` with `npm run test:browser`.
 
 GitHub Pages deploys the **root of `main`** using the existing Pages workflow. Keep `.nojekyll`, preserve relative paths and check the deployment result, not only the commit. The validator is not a substitute for keyboard, touch, reduced-motion, narrow-screen and storage-failure checks. All repository files are public; never commit credentials or private booking references.

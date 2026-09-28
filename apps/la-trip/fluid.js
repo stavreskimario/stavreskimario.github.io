@@ -208,7 +208,11 @@
  }, {passive:false});
  strip.addEventListener('pointerup', e => finishGesture(e));
  strip.addEventListener('pointercancel', e => finishGesture(e, true));
- strip.addEventListener('lostpointercapture', e => finishGesture(e, true));
+ strip.addEventListener('lostpointercapture', e => {
+  // Touch starts with implicit capture on a child. Its bubbling capture-loss
+  // event is the handoff to this strip, not a cancellation of the drag.
+  if (e.target === strip) finishGesture(e, true);
+ });
  // Mouse releases can occur outside the rail before direction recognition/capture.
  window.addEventListener('pointerup', e => finishGesture(e));
  window.addEventListener('pointercancel', e => finishGesture(e, true));

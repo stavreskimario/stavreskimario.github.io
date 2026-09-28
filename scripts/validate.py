@@ -41,8 +41,8 @@ def validate():
         require(isinstance(slug, str) and re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug), f'Invalid app id: {slug}')
         require(slug not in ids, f'Duplicate app id: {slug}')
         ids.add(slug)
-        require(app.get('path') == f'./{slug}/', f'{slug}: path must be ./{slug}/')
-        require((ROOT/slug/'index.html').is_file(), f'{slug}: missing app index.html')
+        require(app.get('path') == f'./apps/{slug}/', f'{slug}: path must be ./apps/{slug}/')
+        require((ROOT/'apps'/slug/'index.html').is_file(), f'{slug}: missing app index.html')
         for key in ('name','description','category'):
             require(isinstance(app.get(key), str) and app[key].strip(), f'{slug}: missing {key}')
         if app.get('image'):

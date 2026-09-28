@@ -25,7 +25,7 @@ Use rem/em and flexible grids; support 200% text enlargement, long names and nar
 
 ## Shared primitives
 
-Load `../shared/theme.css`, then app-local CSS. Load the deferred `../shared/ui.js` before app JS. The global `SiteUI` exposes:
+Load `../../shared/theme.css`, then app-local CSS. Load the deferred `../../shared/ui.js` before app JS. The global `SiteUI` exposes:
 
 - `Spring(value, render, response = .34, epsilon = .08)`: `.set(value)` for direct manipulation; `.to(target, {velocity, damping})` for spring settling; `.stop()` retains the presentation value. `.value`, `.velocity` and `.running` expose current state. Velocity is in value units per second, not relative velocity. Response is a tuning parameter, not a promised duration.
 - `SelectionPill(group, selectedSelector)`: `.sync()` after updating ARIA selection; `.sync(true)` after layout changes. An anchored solid selection surface follows independent X/Y springs. Keep segment sizes equal and handle resize/font loading as Hello World does.

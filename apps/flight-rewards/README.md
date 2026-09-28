@@ -22,10 +22,10 @@ Serve the repository root (not just this folder) to keep the shared imports and 
 
 ```sh
 python3 -m http.server 8000
-# Open http://localhost:8000/flight-rewards/
+# Open http://localhost:8000/apps/flight-rewards/
 ```
 
-For TypeScript changes, from `flight-rewards/` (Node.js 22.12+ recommended):
+For TypeScript changes, from `apps/flight-rewards/` (Node.js 22.12+ recommended):
 
 ```sh
 npm ci
@@ -35,7 +35,7 @@ npm run build
 npm run build:api
 npx playwright install chromium
 npm run test:browser
-cd ..
+cd ../..
 python3 scripts/validate.py
 ```
 
@@ -49,11 +49,11 @@ Only the wallet and valuations persist, under `mario-flight-rewards-wallet-v1`. 
 
 ## Optional live backend
 
-`server/` is a separate Next.js server deployment with a `POST /api/search` route, PostgreSQL and Drizzle. It cannot run on GitHub Pages. The public client continues to live at `/flight-rewards/`.
+`server/` is a separate Next.js server deployment with a `POST /api/search` route, PostgreSQL and Drizzle. It cannot run on GitHub Pages. The public client continues to live at `/apps/flight-rewards/`.
 
 1. Provision an external Node/Next.js host and PostgreSQL instance. This repository does not create those services or change Pages hosting.
 2. In that host’s secret/environment configuration, set `DATABASE_URL`, `DUFFEL_ACCESS_TOKEN`, optional `SEATS_AERO_API_KEY`, and `ALLOWED_ORIGIN=https://stavreskimario.github.io`. Set `ENABLE_LIVE_SEARCH=true` only when ready. Use the provider’s appropriate account/access permissions; Seats.aero API access has account and usage restrictions. Do not paste real values into the repository or `config.json`.
-3. With `DATABASE_URL` in the process environment, run `npm run db:setup` from `flight-rewards/`. This applies the initial schema in a transaction and inserts catalog/chart seeds. Existing chart versions are never overwritten. Prefer a migration/seed role with write permissions, and give the runtime only the cache/rate-limit permissions it needs.
+3. With `DATABASE_URL` in the process environment, run `npm run db:setup` from `apps/flight-rewards/`. This applies the initial schema in a transaction and inserts catalog/chart seeds. Existing chart versions are never overwritten. Prefer a migration/seed role with write permissions, and give the runtime only the cache/rate-limit permissions it needs.
 4. Build with `npm ci && npm run build:api`, then start with `npm run start:api`. The host must support the Node runtime and a request timeout of at least 60 seconds. For local development, `npm run dev:api`; supply environment variables in the process or `server/.env.local` (ignored by git).
 5. In a feature-branch PR, set the **public URL only** in `config.json`, e.g. `{ "apiBaseUrl": "https://your-flight-api.example" }`. No credentials go in this file. The client enables Live flights when a valid HTTPS endpoint is configured. “Connected” describes configuration, not a health check; provider failures remain visible.
 6. Validate with real provider sandbox credentials before enabling production data. Duffel test offers are explicitly labelled as test data. The original provider data must be reviewed against actual production payloads before release; the current automated adapter tests use documented fixtures.
