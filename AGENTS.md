@@ -2,12 +2,20 @@
 
 This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md` and `hello-world/README.md` before creating an app.
 
+## Branch and pull request workflow
+
+- Make every repository change on a feature branch, including app work, fixes and documentation. Start a descriptive `feature/<short-description>` branch from the latest remote `main` before editing.
+- Commit and push only to the feature branch. Never commit directly to `main`, push to `main`, or update the `main` ref directly through a GitHub connector/API.
+- Open a pull request from the feature branch to `main`, with a concise explanation and relevant validation results. Keep changes on the feature branch until the pull request is merged through the repository’s review workflow; do not bypass the pull request to publish.
+- Re-read the remote base and feature branch before writing, preserve concurrent changes, and do not force-push.
+- GitHub Pages continues to deploy from `main`. A feature-branch push or open pull request does not publish the site. When a pull request is merged, verify the matching Pages deployment and live URLs before reporting a change as published.
+
 ## Add an app
 
 1. Copy `hello-world/` to a new, unique, lowercase kebab-case folder at repository root.
 2. Adapt that copy’s title, description, favicon, visible content, styles and behavior to the requested app. Keep `../shared/` imports and the `../` All apps links.
 3. Add its entry to the root `apps.json`. The collection reads that file at runtime; no additional card markup or route configuration is required.
-4. Run `python3 scripts/validate.py`, then verify the actual requested interactions. Commit all new app files and the manifest together. Publishing main triggers the existing GitHub Pages deployment; verify that deployment and the live subpage.
+4. Run `python3 scripts/validate.py`, then verify the actual requested interactions. Commit all new app files and the manifest together on the feature branch and open a pull request to `main`. Merging the pull request triggers the existing GitHub Pages deployment; verify that deployment and the live subpage after merge.
 
 Do not overwrite another app, remove unknown files, force-push, or change the publishing source. Re-read remote main before editing/publishing and preserve concurrent changes. Use the requested GitHub Pages destination rather than creating a separate Sites-hosted copy.
 
