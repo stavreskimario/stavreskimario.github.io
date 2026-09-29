@@ -1,4 +1,20 @@
 'use strict';
+const tripMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+// Capture modality before any delegated action runs, including native/AT clicks.
+function tripInputMode(mode) {
+ document.documentElement.dataset.input = mode;
+ if (mode === 'keyboard') window.tripMotion?.finishAnimations?.();
+}
+document.addEventListener('keydown', e => {
+ if (!['Shift','Control','Alt','Meta'].includes(e.key)) tripInputMode('keyboard');
+}, true);
+document.addEventListener('pointerdown', () => tripInputMode('pointer'), {capture:true, passive:true});
+document.addEventListener('click', e => { if (e.detail === 0) tripInputMode('keyboard'); }, true);
+function tripAllowsMotion() {
+ return document.documentElement.dataset.input !== 'keyboard' && !tripMotionPreference.matches;
+}
+function tripScrollBehavior() { return tripAllowsMotion() ? 'smooth' : 'instant'; }
+
 const icons={calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M7 15h2m6 0h2m-10 3h2"/>',ticket:'<path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7Z"/><path d="M15 5v3m0 3v2m0 3v3"/>',map:'<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"/><path d="M9 3v15M15 6v15"/>',bag:'<rect x="5" y="6" width="14" height="15" rx="3"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M9 10v7m6-7v7M8 21v1m8-1v1"/>',plane:'<path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="m22 2-11 11"/>',moon:'<path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/>',users:'<circle cx="9" cy="8" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 4v2"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',left:'<path d="m14 6-6 6 6 6"/>',right:'<path d="m10 6 6 6-6 6"/>',external:'<path d="M14 3h7v7m0-7L10 14m0-11H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/>',pin:'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',spark:'<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>',hotel:'<path d="M4 21V3h12v18M2 21h20M16 10h4v11M8 7h4M8 11h4M8 15h4m-3 6v-3h2v3"/>',car:'<path d="m4 10 2-6h12l2 6M3 10h18v8H3v-8Zm2 8v3m14-3v3M6 14h2m8 0h2"/>',ball:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M6 5a11 11 0 0 1 0 14M18 5a11 11 0 0 0 0 14"/>',film:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 7h4m-4 5h4m-4 5h4M17 7h4m-4 5h4m-4 5h4M7 12h10"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',coffee:'<path d="M4 8h12v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Zm12 0h2a3 3 0 0 1 0 6h-2M7 2v3m4-3v3M2 21h17"/>',route:'<circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h9a4 4 0 0 1 0 8H8a3 3 0 0 0 0 6h9"/>',device:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/>',plus:'<path d="M12 5v14M5 12h14"/>',trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/>'};
 function icon(name){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]||icons.pin}</svg>`}
 function injectIcons(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon))}
@@ -131,7 +147,6 @@ function renderPackingPeek(){
 function eventActions(e){let actions=[];if(e.query||place(e.map))actions.push(mapActionLink(e.query||place(e.map).query,'directions'));if(reservations.some(r=>r.id===e.reservation))actions.push(`<button data-reservation="${esc(e.reservation)}">${icon('ticket')}Booking details</button>`);if(e.source)actions.push(`<a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Website ${icon('external')}</a>`);return actions.length?`<div class="event-actions">${actions.join('')}</div>`:''}
 function selectDay(index,scroll=false){
  if(!Number.isInteger(index)||index<0||index>=days.length)throw new Error('Choose a day from 20 to 28 December.');
- const changed=selectedDay!==index;
  selectedDay=index;const d=days[index];renderDates();
  $('#day-number').textContent=`DAY ${index+1} · ${d.weekday.toUpperCase()} ${d.date} DEC`;
  $('#day-title').textContent=d.title;$('#day-description').textContent=d.description;
@@ -139,9 +154,8 @@ function selectDay(index,scroll=false){
  const p=place(d.map);renderMapCard('#day-map',p);$('#day-map-name').textContent=p?.name||'No location selected';$('#day-map-area').textContent=p?.area||'Choose a location in Edit day.';$('#day-note-title').textContent=d.noteTitle;$('#day-note').textContent=d.note;
  $('#prev-day').disabled=index===0;$('#next-day').disabled=index===days.length-1;
  window.tripEditor?.dayChanged();
- if(changed)window.tripMotion?.dayChanged();
  if(scroll&&window.tripMotion){window.tripMotion.centerDay(index);return}
- if(scroll){const button=$('#date-strip').querySelector(`[data-day="${index}"]`);const strip=$('#date-strip');strip.scrollTo({left:button.offsetLeft-strip.offsetLeft-(strip.clientWidth-button.clientWidth)/2,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+ if(scroll){const button=$('#date-strip').querySelector(`[data-day="${index}"]`);const strip=$('#date-strip');strip.scrollTo({left:button.offsetLeft-strip.offsetLeft-(strip.clientWidth-button.clientWidth)/2,behavior:tripScrollBehavior()});}
 }
 const reservations=[
 {id:'hotel',title:'The Westin Bonaventure Hotel & Suites',subtitle:'20–28 December · 8 nights · 2 guests',status:'booked',icon:'hotel',details:[['Check-in','20 December 2026 · time to add'],['Check-out','28 December 2026 · time to add'],['Address',places[0].address],['Booking reference','To add']],note:'Confirmed stay. Room type and any additional booking details can be added later.',map:'hotel',source:places[0].source},
@@ -224,7 +238,7 @@ function showView(name,updateHash=true){
  if(document.activeElement?.closest('.view[hidden]'))$('#main').focus({preventScroll:true});
  window.tripMotion?.viewChanged(name,changed);
 }
-function tripScroll(el,block='center'){el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block})}
+function tripScroll(el,block='center'){el.scrollIntoView({behavior:tripScrollBehavior(),block})}
 document.addEventListener('click',e=>{
  const provider=e.target.closest('button[data-map-provider]');if(provider){chooseMapProvider(provider.dataset.mapProvider);return}
  const nav=e.target.closest('a[data-view], button[data-view]');if(nav){e.preventDefault();showView(nav.dataset.view);return}
@@ -240,8 +254,8 @@ document.addEventListener('change',e=>{if(e.target.matches('[data-pack-id]')){co
 $('#add-packing').addEventListener('submit',e=>{e.preventDefault();const input=$('#new-packing');const label=input.value.trim();if(!label){input.setCustomValidity('Enter an item to add.');input.reportValidity();return}if(packing.some(p=>p.label.toLowerCase()===label.toLowerCase())){$('#packing-feedback').textContent='That item is already on your list.';return}const id=`custom-${typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2)}`;packing.push({id,group:'Your additions',label,checked:false,custom:true});savePacking();renderPacking();input.value='';input.focus();$('#packing-feedback').textContent=`Added “${label}”.`});$('#new-packing').addEventListener('input',e=>e.target.setCustomValidity(''));
 window.addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
 injectIcons();selectDay(0);renderReservations();renderReservationPeek();renderPlaces();renderPlacesPeek();selectPlace('hotel');renderPacking();refreshMapPreference();showView(location.hash.slice(1)||'itinerary',false);
-$('#strip-prev').addEventListener('click',()=>window.tripMotion?window.tripMotion.browseDays(-1):$('#date-strip').scrollBy({left:-280,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
-$('#strip-next').addEventListener('click',()=>window.tripMotion?window.tripMotion.browseDays(1):$('#date-strip').scrollBy({left:280,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+$('#strip-prev').addEventListener('click',()=>window.tripMotion?window.tripMotion.browseDays(-1):$('#date-strip').scrollBy({left:-280,behavior:tripScrollBehavior()}));
+$('#strip-next').addEventListener('click',()=>window.tripMotion?window.tripMotion.browseDays(1):$('#date-strip').scrollBy({left:280,behavior:tripScrollBehavior()}));
 // Optional WebMCP enhancement shares the visible itinerary and packing state.
 const modelContext=document.modelContext;const lifecycle=new AbortController();
 if(modelContext?.registerTool){const definitions=[

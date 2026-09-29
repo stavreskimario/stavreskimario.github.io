@@ -40,7 +40,7 @@
    this.damping = damping;
    // Retargets preserve presentation position AND velocity. Only a gesture supplies a new velocity.
    if (velocity !== undefined) this.velocity = velocity;
-   if (motionPreference.matches) return this.set(target);
+   if (!tripAllowsMotion()) return this.set(target);
    schedule(this);
   }
   step(dt) {
@@ -66,6 +66,7 @@
  }
 
  const pressSelector = 'button:not(:disabled), a[href], summary, .packing-row label, .peek-check';
+ document.documentElement.dataset.fluidPress = 'true';
  const presses = new WeakMap();
  let press = null, canceledTap = null;
  function pressFeedback(el, down) {
@@ -74,13 +75,13 @@
   let spring = presses.get(el);
   if (!spring) {
    spring = new Spring(1, value => {
-    el.style.setProperty('--press-scale', value);
-    el.style.willChange = spring.running ? 'transform' : '';
+    el.style.scale = String(value);
+    el.style.willChange = spring.running ? 'scale' : '';
    }, .19, .0002);
    presses.set(el, spring);
   }
   // Colour changes on pointer-down. Scale follows from the live spring value.
-  spring.to(down && !motionPreference.matches ? .975 : 1);
+  spring.to(down && tripAllowsMotion() ? .975 : 1);
  }
  function endPress() {
   if (press) pressFeedback(press.el, false);
@@ -270,19 +271,16 @@
  }
  const choices = [new SelectionPill(document.querySelector('.main-nav'), '[aria-current="page"]'),
   ...[...document.querySelectorAll('.map-app-choice')].map(group => new SelectionPill(group, '[aria-pressed="true"]'))];
- const dayElements = [...document.querySelectorAll('#day-title, #timeline, #day-note-title')];
- const reveal = new Spring(1, value => dayElements.forEach(el => { el.style.opacity = value; }), .25, .001);
- function revealDay() {
-  if (motionPreference.matches) return reveal.set(1);
-  if (!reveal.running) reveal.set(.78);
-  reveal.to(1);
- }
+ // Day changes are frequent: render their content immediately, without a reveal.
  function syncChoices(immediate = false) { choices.forEach(choice => choice.sync(immediate)); }
  function refreshLayout() { measureStrip(); syncChoices(true); }
  window.tripMotion = {
   centerDay,
   browseDays: direction => springTo(scroll.target + direction * strip.clientWidth * .75),
-  dayChanged: revealDay,
+  finishAnimations: () => {
+   endPress();
+   [...activeSprings].forEach(spring => spring.set(spring.target));
+  },
   syncChoices,
   viewChanged: name => { if (name === 'itinerary') measureStrip(); syncChoices(); }
  };
