@@ -41,3 +41,6 @@ Run `python3 scripts/validate.py`. Preview with an HTTP server (for example `pyt
 A name form and reset action; English/Spanish/Italian greetings; a simple/warm segmented control; swipeable choices with tap and keyboard alternatives; press feedback, interruptible springs, velocity projection and soft boundaries; bone-tinted floating navigation; reduced-motion, transparency and contrast support. Nothing is saved or transmitted. If shared UI fails to load, the ordinary form and option buttons still work.
 
 Read ../DESIGN.md for the design language and ../AGENTS.md for repository conventions. Reuse the primitives that serve the requested app; remove demo controls that don't. Never add trip data to a new app just because the LA planner is the visual reference.
+
+
+Also read the [UI craft reference](../docs/UI_CRAFT_REFERENCE.md) and the [repository application rules](../DESIGN.md#ui-craft-and-motion-decisions). Apply them to the new app: instant keyboard actions, purposeful pointer motion, hover-capability checks and a Before/After/Why table in its UI-change PR. The starter's existing shared primitives are a starting point, not proof that every guideline is already implemented.

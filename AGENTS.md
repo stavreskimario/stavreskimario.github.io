@@ -1,6 +1,6 @@
 # Mario’s Codex sites
 
-This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md` and `hello-world/README.md` before creating an app.
+This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, the root `README.md` and `hello-world/README.md` before creating or updating an app.
 
 ## Branch and pull request workflow
 
@@ -31,6 +31,12 @@ Do not overwrite another app, remove unknown files, force-push, or change the pu
 - Use textContent / DOM construction for input and catalog data, not interpolated untrusted HTML. Validate manifest paths; no external script URLs or traversal paths in entries.
 - New apps default to transient state. Persist only requested device-local preferences with an app-specific versioned key, try/catch and honest feedback when storage is unavailable. No credentials, private booking references, or secrets in this public repository. GitHub Pages has no private server runtime.
 - Do not invent trip facts, reservations, app entries or capabilities. List only working, published app folders.
+
+## UI craft reviews
+
+Follow the motion decision framework and application rules in `DESIGN.md`. Keyboard/AT actions and frequent content updates stay immediate; preserve functional gesture springs and the established visual identity. Treat the reference's decorative patterns as optional, not a feature checklist.
+
+UI reviews and UI-change PR descriptions must use a Markdown **Before | After | Why** table, one row per finding. Include concrete interaction checks and honestly state any physical-device coverage gap.
 
 ## Checks and handoff
 

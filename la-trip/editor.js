@@ -255,6 +255,9 @@
   $('#editor-error').textContent = '';
  });
  form.addEventListener('focusout',e => {
+  // Do not move footer actions between pointer-down and click. Save validates
+  // on submit; Cancel/Close/Remove must work even with an incomplete draft.
+  if (e.relatedTarget?.closest('.editor-footer button, #close-editor')) return;
   if (e.target.matches('input,textarea')) { const message = validateInput(e.target); if (message) $('#editor-error').textContent = message; }
  });
  $('#event-day').addEventListener('change',() => positions());

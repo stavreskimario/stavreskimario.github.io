@@ -39,11 +39,11 @@ Press feedback is delegated automatically to buttons, links, summaries and optio
 1. **Response:** highlight on pointer-down, commit on click/touch-up. No arbitrary debounces, timers or transition locks in the input path. `touch-action: manipulation` on controls avoids legacy tap delay. Update form state immediately and report meaningful completion inline.
 2. **Direct manipulation:** Pointer Events track from the original grab point. A 10px direction threshold distinguishes horizontal drag from vertical page scrolling; capture starts when horizontal intent wins, then movement follows 1:1. Keep vertical scrolling and pinch zoom available. Cancel drag-generated clicks.
 3. **Interruptibility:** every retarget starts from the live spring value and retains velocity. A pointer-down stops the moving rail at its current presentation so it can be grabbed and reversed. Never set a new start position from the previous target. Use independent springs for X and Y.
-4. **Springs:** default damping `1`, response `.3–.4`; rail `.38`. Only momentum releases use damping `.8`. Press feedback uses a smaller `.19` response; subtle text opacity uses `.25`. No decorative bounce on ordinary menus or toggles. Gesture motion must not use fixed CSS transitions/keyframes.
+4. **Springs:** default damping `1`, response `.3–.4`; rail `.38`. Only momentum releases use damping `.8`. Press feedback uses a smaller `.19` response; frequent content changes stay immediate. No decorative bounce on ordinary menus or toggles. Gesture motion must not use fixed CSS transitions/keyframes.
 5. **Velocity handoff:** sample up to eight positions over the last 100ms. Treat a stopped finger as zero velocity. A direction reversal drops stale samples from the prior direction. Pass release velocity directly into the settling spring, in px/s for translation.
 6. **Projection:** `current + (velocity/1000) * .998 / (1-.998)`, then choose the nearest valid snap point. Clamp the destination to the content range. Do not use the ballistic `v²/(2a)` formula.
 7. **Boundaries:** while dragging, apply `distance * dimension * .55 / (dimension + .55 * abs(distance))` beyond an edge. Settle back with a spring. Cancellation uses zero momentum. Reduced motion clamps edges without elasticity.
-8. **Spatial consistency:** selection indicators remain anchored inside their control; state changes are immediate. If a future app needs a sheet/popover, use symmetric entry/exit paths, an origin tied to its trigger and accessible dismissal/focus restoration. Do not add a sheet just to show an animation.
+8. **Spatial consistency:** selection indicators remain anchored inside their control; state changes are immediate. If a future app needs a sheet/popover, use symmetric entry/exit paths, an origin tied to its trigger for popovers (centered for viewport modals) and accessible dismissal/focus restoration. Do not add a sheet just to show an animation.
 9. **Direction and continuity:** intermediate motion must show where the content is going. Preserve velocity through retargets; avoid jumps at reversals. Don’t add whole-page slides or animated backgrounds.
 10. **Frame discipline:** one requestAnimationFrame scheduler runs only while springs are active. Animate transform/opacity; apply will-change only while needed. Cancel/settle work when hidden. Motion blur/stretch is reserved for a genuinely fast physical object, not normal navigation.
 
@@ -74,3 +74,36 @@ Persistent toolbars do not need entrance theatrics. A future transient material 
 ## Extending the collection
 
 The collection renders apps.json with DOM APIs; invalid data or a failed fetch leaves usable static links and an honest status message. The manifest is navigation, not access control: unlisted folders remain public. Never put secrets in a static app. New product-specific behavior belongs inside the copied folder; shared primitives should stay generic. Existing LA-specific code remains self-contained to avoid an unrequested migration/regression.
+
+
+## UI craft and motion decisions
+
+Read the full [UI craft reference](docs/UI_CRAFT_REFERENCE.md) for the supplied philosophy, component examples and review checklist. Train taste by studying useful interfaces, understanding why their details work, and checking the result in motion. Small, predictable details and good defaults compound. Apply this craft on top of our bone-paper journal identity.
+
+These application rules resolve overlapping advice in the reference and this document:
+
+1. **Decide whether to animate first.** Keyboard and assistive-technology activations are immediate, including scrolling and selection indicators. High-frequency content changes (day navigation, list changes, form input) should not fade or stagger. Keep direct feedback through colour, focus, ARIA and status text. Occasional modal transitions can be restrained; rare decorative moments need a clear purpose.
+2. **Name the purpose.** Motion must explain position, state, feedback or continuity. Do not add a tooltip, toast, drawer, hold-to-delete control, image reveal, duplicated tabs or a new dependency solely to demonstrate an effect. The reference's examples are optional patterns for relevant tasks.
+3. **Choose the right mechanism.** Keep 1:1 functional dragging and our interruptible springs, release velocity, projection, capture handoff and soft boundaries. Decorative mouse tracking may spring toward a pointer; a functional drag must stay under it. Use explicit-property CSS transitions for simple retargetable state changes; use WAAPI when programmatic control is useful. Avoid restarting keyframes on rapidly repeated actions. `@starting-style` is progressive enhancement, with an instant usable fallback.
+4. **Tune to frequency and intent.** Simple transitions normally take 125–250ms and stay under 300ms; press feedback is roughly 100–160ms. Use `--ease-out: cubic-bezier(.23,1,.32,1)` for entrances/exits, `--ease-in-out: cubic-bezier(.77,0,.175,1)` for deliberate on-screen morphs, and `--ease-drawer: cubic-bezier(.32,.72,0,1)` where a drawer warrants it. Avoid slow-start `ease-in`. Springs have response rather than fixed duration, so retain their existing physical tuning. A deliberate hold can take longer; do not apply the reference's 2s hold example to normal navigation.
+5. **Preserve spatial continuity.** Popovers originate at their trigger; viewport modals stay centered. Enter and exit along the same path, starting at a subtle scale of .95–.98 and opacity rather than scale zero. Exit may be faster (the LA editor uses 180ms in / 120ms out). Do not lock input or delay saving/focus restoration until an animation finishes.
+6. **Keep touch honest.** Gate hover styling behind `(hover: hover) and (pointer: fine)`. Give immediate press feedback, commit on release, and retain cancellation, direction thresholds, multitouch protection, vertical scrolling and pinch zoom. Keep the native Maps rail scrollable and its editable card wrappers non-shrinking. Ignore a child's bubbling capture-loss event when capture is moving to the day rail; genuine rail capture loss must still cancel.
+7. **Spend rendering work deliberately.** Prefer transform/opacity and update only the moving element. Avoid per-frame inherited CSS custom properties. Use `will-change` only during movement, and stop work when hidden. Blur, clip-path, layout animation and 3D effects are optional measured exceptions; they are not guaranteed to be compositor-accelerated. CSS, WAAPI, JavaScript and library shorthands do not by themselves guarantee GPU/off-thread animation. Test the actual property, browser and workload rather than copying an acceleration claim from an example.
+8. **Respect access preferences.** Reduced motion removes positional motion and overshoot while preserving instant feedback. Keyboard actions remain instant even when reduced motion is off. Retain reduced-transparency, contrast, forced-colours, focus management, large text and native form semantics. Stagger never blocks input and is omitted for routine planner tasks. Do not replace reversible deletion plus Undo with an inaccessible hold-only gesture.
+9. **Review the whole interaction.** Test fast repetition, reversal, keyboard-to-pointer switching, touch cancellation, background/resume, narrow layouts and enlarged text. Inspect representative transitions mid-flight and with slower playback when useful. Physical-device checks and later fresh-eye review are valuable; report them as outstanding if they have not happened.
+
+### Required UI review format
+
+Every UI code review and UI-change PR description must include one actual Markdown table with **Before**, **After** and **Why** columns, one row per finding. Do not use separate Before/After bullet lists. Include specific validation and distinguish implemented changes from optional patterns that do not apply.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Keyboard action animates selection or scroll | State, focus and position update immediately | Repeated keyboard input must not wait for visual settling |
+| Frequent day changes fade the timeline | New content is fully visible immediately | Reduce repeated visual noise |
+| Hover styles also respond to touch | Fine-pointer, hover-capable media query | Avoid sticky touch hover |
+| Popover and modal share a trigger origin | Trigger origin for popovers; center for viewport modals | Match the surface's spatial relationship |
+| Dynamic UI uses broad or restarting effects | Explicit properties and retargetable motion | Keep interruptions predictable |
+
+### Current implementation scope
+
+The LA planner applies this policy in its local motion layer: immediate keyboard/AT actions, immediate day content, pointer-only press scale written to the element, gated hover rules and a short centered native-dialog transition. The shared starter retains its existing implementation; new work must apply this policy and verify any shared primitive changes across its consumers. Documentation of the policy is not a claim that every existing app has been migrated.
