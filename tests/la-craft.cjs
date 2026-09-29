@@ -65,7 +65,7 @@ const root = path.resolve(__dirname, '..');
   await keyClick(page,'.main-nav [data-view="maps"]');
   await noMotion(page);
   await keyClick(page,'#maps [data-map-provider="apple"]',' ');
-  assert.match(await page.locator('#map-open').getAttribute('href'),/maps.apple.com/);
+  assert.match(await page.locator('#map-open').getAttribute('href'),/maps\.apple\.com/);
   await noMotion(page);
   await page.locator('#maps [data-map-provider="google"]').evaluate(el => el.click());
   await noMotion(page); // Zero-detail activation used by programmatic/AT controls.
