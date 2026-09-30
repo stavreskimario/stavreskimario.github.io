@@ -7,6 +7,24 @@
   let catalogue = {articles:[],sources:[]}, sourceMap = new Map(), entries = {}, storageAvailable = true;
   let visible = 30, pendingImport = null, filters = {view:'latest',q:'',topic:'all',companies:[],days:'all',type:'all',unread:false}, loaded = false;
   const scrollPositions = {};
+  const renderedArticles = new WeakMap();
+  const viewButtons = document.querySelector('.view-buttons');
+  const viewIndicator = document.createElement('span');
+  viewIndicator.className = 'view-indicator';
+  viewIndicator.setAttribute('aria-hidden','true');
+  viewButtons.append(viewIndicator);
+  let indicatorWidth=0, indicatorHeight=0;
+  function syncViewIndicator(immediate=false) {
+    const selected = viewButtons.querySelector('[aria-pressed=true]');
+    if (!selected?.offsetWidth) return;
+    immediate=immediate||viewIndicator.dataset.indicatorView===selected.dataset.view||!viewIndicator.dataset.indicatorView;
+    if (immediate) viewIndicator.style.transition = 'none';
+    viewIndicator.style.transform = `translateX(${selected.offsetLeft}px) scaleX(${selected.offsetWidth})`;
+    viewButtons.classList.add('has-indicator');
+    viewIndicator.dataset.indicatorView=selected.dataset.view;
+    indicatorWidth=viewButtons.offsetWidth;indicatorHeight=viewButtons.offsetHeight;
+    if (immediate) { void viewIndicator.offsetWidth; viewIndicator.style.transition = ''; }
+  }
   function node(tag, text, className) { const el = document.createElement(tag); if (text !== undefined) el.textContent = text; if (className) el.className = className; return el; }
   function announce(text) { $('feedback').textContent = text; }
   function validUrl(value, sourceId) {
@@ -62,9 +80,11 @@
   function updateFilters(replace=false) { visible=30;writeFilters(replace);render(); }
   function fmtDate(value) { return value ? new Intl.DateTimeFormat('en-AU',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(value)) : 'Date unavailable'; }
   function fmtTime(value) { return new Intl.DateTimeFormat('en-AU',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit',timeZone:'Australia/Melbourne',timeZoneName:'short'}).format(new Date(value)); }
-  function icon(saved) {
+  function icon() {
     const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('aria-hidden','true');
-    const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d','M6 3h12v18l-6-4-6 4V3Z');path.setAttribute('fill',saved?'currentColor':'none');path.setAttribute('stroke','currentColor');path.setAttribute('stroke-width','1.6');svg.append(path);return svg;
+    const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d','M6 3h12v18l-6-4-6 4V3Z');path.setAttribute('fill','none');path.setAttribute('stroke','currentColor');path.setAttribute('stroke-width','1.6');
+    const fill=path.cloneNode();fill.setAttribute('fill','currentColor');fill.setAttribute('stroke','none');fill.classList.add('bookmark-fill');
+    svg.append(fill,path);return svg;
   }
   function articleCard(a) {
     const source=sourceMap.get(a.sourceId), state=entries[a.id], card=node('article',undefined,'article');card.dataset.id=a.id;
@@ -77,9 +97,33 @@
     for(const topic of a.topics.slice(0,2))tags.append(node('span',TOPICS[topic],'tag'));
     if(a.type==='research'||a.type==='announcement')tags.append(node('span',TYPES[a.type],'tag'));
     const actions=node('div',undefined,'article-actions');
-    const save=node('button');save.type='button';save.dataset.action='save';save.dataset.id=a.id;save.setAttribute('aria-pressed',String(!!state?.saved));save.setAttribute('aria-label',(state?.saved?'Unsave: ':'Save: ')+a.title);save.append(icon(!!state?.saved),node('span',state?.saved?'Saved':'Save'));
+    const save=node('button');save.type='button';save.dataset.action='save';save.dataset.id=a.id;save.setAttribute('aria-pressed',String(!!state?.saved));save.setAttribute('aria-label',(state?.saved?'Unsave: ':'Save: ')+a.title);save.append(icon(),node('span',state?.saved?'Saved':'Save'));
     const read=node('button',state?.read?'✓ Read':'Mark read');read.type='button';read.dataset.action='read';read.dataset.id=a.id;read.setAttribute('aria-pressed',String(!!state?.read));read.setAttribute('aria-label',(state?.read?'Mark unread: ':'Mark read: ')+a.title);
-    actions.append(read,save);bottom.append(tags,actions);card.append(bottom);return card;
+    actions.append(read,save);bottom.append(tags,actions);card.append(bottom);renderedArticles.set(card,a);return card;
+  }
+  function updateArticleState(card,a) {
+    const state=entries[a.id];
+    const save=card.querySelector('[data-action=save]'),read=card.querySelector('[data-action=read]');
+    save.setAttribute('aria-pressed',String(!!state?.saved));
+    save.setAttribute('aria-label',(state?.saved?'Unsave: ':'Save: ')+a.title);
+    save.querySelector('span').textContent=state?.saved?'Saved':'Save';
+    read.setAttribute('aria-pressed',String(!!state?.read));
+    read.setAttribute('aria-label',(state?.read?'Mark unread: ':'Mark read: ')+a.title);
+    read.textContent=state?.read?'✓ Read':'Mark read';
+    const label=card.querySelector('.read-label');
+    if(state?.read&&!label)card.querySelector('.article-meta').append(node('span','Read','read-label'));
+    else if(!state?.read)label?.remove();
+  }
+  function renderArticles(articles) {
+    const list=$('reading-list'),existing=new Map([...list.children].map(el=>[el.dataset.id,el]));
+    const cards=articles.map(a=>{
+      const prior=existing.get(a.id);
+      const card=prior&&renderedArticles.get(prior)===a?prior:articleCard(a);
+      updateArticleState(card,a);return card;
+    });
+    const keep=new Set(cards);
+    for(const child of [...list.children])if(!keep.has(child))child.remove();
+    cards.forEach((card,i)=>{if(list.children[i]!==card)list.insertBefore(card,list.children[i]||null);});
   }
   function filteredArticles() {
     const all=filters.view==='saved' ? Object.values(entries).filter(e=>e.saved).map(e=>catalogue.articles.find(a=>a.id===e.article.id)||e.article) : catalogue.articles;
@@ -100,15 +144,16 @@
     $('reader').hidden=filters.view==='sources';$('sources-view').hidden=filters.view!=='sources';$('saved-tools').hidden=filters.view!=='saved';
     $('saved-count').textContent=Object.values(entries).filter(e=>e.saved).length;
     $('latest-count').textContent=catalogue.articles.length;
+    syncViewIndicator();
     $('search').value=filters.q;$('date-range').value=filters.days;$('article-type').value=filters.type;$('unread-only').checked=filters.unread;
     document.querySelectorAll('#company-options input').forEach(c=>c.checked=filters.companies.includes(c.value));
     document.querySelectorAll('#topic-options button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topic===filters.topic)));
     const activeCount=filters.companies.length+(filters.days!=='all')+(filters.type!=='all')+Number(filters.unread);
     $('filter-count').textContent=activeCount?`(${activeCount})`:'';
     const matches=filteredArticles();$('result-count').textContent=matches.length+' '+(matches.length===1?'article':'articles');$('list-title').textContent=filters.view==='saved'?'For a quieter moment.':'The latest';
-    $('reading-list').replaceChildren();
-    if(matches.length)matches.slice(0,visible).forEach(a=>$('reading-list').append(articleCard(a)));
+    if(matches.length)renderArticles(matches.slice(0,visible));
     else {
+      $('reading-list').replaceChildren();
       const empty=node('div',undefined,'empty-state');empty.append(node('h3',filters.view==='saved'&&!Object.values(entries).some(e=>e.saved)?'Keep a good read for later.':'A different rabbit hole?'),node('p',filters.view==='saved'&&!Object.values(entries).some(e=>e.saved)?'Tap Save beside an article. Your list stays on this browser.':'No articles match these filters. Try another topic or clear your search.'));
       if(filters.q||activeCount||filters.topic!=='all'){const reset=node('button','Clear filters','button secondary');reset.type='button';reset.addEventListener('click',resetFilters);empty.append(reset);}
       $('reading-list').append(empty);
@@ -133,8 +178,14 @@
     const stale=Date.now()-Date.parse(catalogue.lastPollAt)>36*3600000, failed=catalogue.sources.filter(s=>s.status==='error').length;
     $('freshness').textContent=`Last checked ${fmtTime(catalogue.lastPollAt)}${stale?' · update overdue':''}${failed?` · ${failed} ${failed===1?'source unavailable':'sources unavailable'}`:''}. Next scheduled check: around 6 am Melbourne time.`;$('freshness').dataset.stale=String(stale||failed>0);
   }
-  document.addEventListener('keydown',()=>document.documentElement.dataset.journalInput='keyboard',true);
-  document.addEventListener('pointerdown',()=>document.documentElement.dataset.journalInput='pointer',true);
+  document.documentElement.dataset.input='keyboard';
+  document.addEventListener('keydown',e=>{if(!['Shift','Control','Alt','Meta'].includes(e.key))document.documentElement.dataset.input='keyboard';},true);
+  document.addEventListener('pointerdown',()=>document.documentElement.dataset.input='pointer',{capture:true,passive:true});
+  document.addEventListener('click',e=>{if(e.detail===0)document.documentElement.dataset.input='keyboard';},true);
+  document.addEventListener('visibilitychange',()=>document.documentElement.toggleAttribute('data-motion-paused',document.hidden));
+  if(window.ResizeObserver)new ResizeObserver(()=>{if(viewButtons.offsetWidth!==indicatorWidth||viewButtons.offsetHeight!==indicatorHeight)syncViewIndicator(true);}).observe(viewButtons);
+  else window.addEventListener('resize',()=>syncViewIndicator(true),{passive:true});
+  document.fonts?.ready.then(()=>syncViewIndicator(true));
   document.querySelectorAll('button[data-view]').forEach(b=>b.addEventListener('click',()=>{if(!loaded)return;scrollPositions[filters.view]=scrollY;filters.view=b.dataset.view;visible=30;writeFilters();render();window.scrollTo({top:scrollPositions[filters.view]||0,behavior:'instant'});}));
   $('search').addEventListener('input',()=>{filters.q=$('search').value;updateFilters(true);});
   $('date-range').addEventListener('change',()=>{filters.days=$('date-range').value;updateFilters();});

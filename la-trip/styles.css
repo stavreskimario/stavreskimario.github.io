@@ -338,23 +338,35 @@ body:has(#itinerary-editor[open]){overflow:hidden}
 
 
 /* UI craft: restrained, retargetable feedback; keyboard actions stay immediate. */
-:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-in-out:cubic-bezier(.77,0,.175,1);--ease-drawer:cubic-bezier(.32,.72,0,1)}
 html[data-input=keyboard]{scroll-behavior:auto}
 html[data-input=keyboard] *,html[data-input=keyboard] *::before,html[data-input=keyboard] *::after,html[data-input=keyboard] #itinerary-editor::backdrop{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 html:not([data-fluid-press]) :where(button:not(:disabled),a[href],summary):active:not(:focus-visible){scale:.975}
-/* Native dialog focus/escape semantics remain intact; unsupported browsers stay instant. */
-@supports (transition-behavior:allow-discrete){
- #itinerary-editor{opacity:0;transform:scale(.97);transform-origin:center;transition:opacity 120ms var(--ease-out),transform 120ms var(--ease-out),display 120ms allow-discrete,overlay 120ms allow-discrete}
- #itinerary-editor[open]{opacity:1;transform:scale(1);transition-duration:180ms}
- #itinerary-editor:not([open]),#itinerary-editor:not([open])::backdrop{pointer-events:none}
- #itinerary-editor::backdrop{opacity:0;transition:opacity 120ms var(--ease-out),display 120ms allow-discrete,overlay 120ms allow-discrete}
- #itinerary-editor[open]::backdrop{opacity:1;transition-duration:180ms}
- @starting-style{
-  #itinerary-editor[open]{opacity:0;transform:scale(.97)}
-  #itinerary-editor[open]::backdrop{opacity:0}
- }
-}
 @media(prefers-reduced-motion:reduce){
  :where(button,a,summary,.packing-row label,.peek-check){scale:1!important}
  #itinerary-editor,#itinerary-editor::backdrop{transition:none!important;transform:none!important}
 }
+
+/* Presentation follows the native progress value; persistence and announcements are instant. */
+.packing-progress { position:relative; }
+.packing-progress #packing-progress { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+.packing-meter { width:100%; height:.3125rem; overflow:hidden; border-radius:6px; background:#ddd1bd; }
+#packing-fill { width:100%; height:100%; background:var(--olive); transform:scaleX(0); transform-origin:left center; }
+@media (prefers-reduced-motion:no-preference) {
+ html[data-input=pointer]:not([data-motion-paused]) #packing-fill { transition:transform var(--motion-feedback) var(--ease-out); }
+}
+@media (max-width:740px) {
+ .wordmark>span { overflow-wrap:anywhere; }
+ #packing .section-heading { flex-wrap:wrap; }
+ #packing .section-heading>div { min-width:0; }
+ #packing .section-heading h2 { overflow-wrap:anywhere; }
+ #packing .packing-counter { max-width:100%; }
+ .packing-summary { flex-wrap:wrap; }
+ .packing-summary>div:first-child { flex:1 1 10rem; min-width:0; }
+ .packing-progress { max-width:100%; }
+ .packing-grid { grid-template-columns:minmax(0,1fr); }
+ .packing-group h3 { flex-wrap:wrap; overflow-wrap:anywhere; }
+ .packing-row label { min-width:0; }
+ .packing-row label span { overflow-wrap:anywhere; }
+ .add-packing>label { overflow-wrap:anywhere; }
+}
+@media (forced-colors:active) { .packing-meter { border:1px solid CanvasText; } #packing-fill { background:Highlight; } }

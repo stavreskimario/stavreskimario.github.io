@@ -44,3 +44,5 @@ Read ../DESIGN.md for the design language and ../AGENTS.md for repository conven
 
 
 Also read the [UI craft reference](../docs/UI_CRAFT_REFERENCE.md) and the [repository application rules](../DESIGN.md#ui-craft-and-motion-decisions). Apply them to the new app: instant keyboard actions, purposeful pointer motion, hover-capability checks and a Before/After/Why table in its UI-change PR. The starter's existing shared primitives are a starting point, not proof that every guideline is already implemented.
+
+Use the [animation guide](../docs/ANIMATION_GUIDE.md) and [implementation/review recipes](../docs/ANIMATION_RECIPES.md) when adding motion. `shared/motion.css` is optional; import it only for relevant feedback or native details/dialog recipes and implement the documented input/preference handling. This starter does not import it or add demo dialogs solely to show an effect.

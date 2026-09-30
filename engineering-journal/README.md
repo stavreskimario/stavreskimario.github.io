@@ -31,3 +31,7 @@ python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
 ```
 
 For browser checks, install Playwright 1.51.1 outside the repository, install its Chromium headless shell, then run `tests/engineering-journal.cjs` with that installation’s `node_modules` in `NODE_PATH`. Tests start their own local server and do not poll publishers. Chromium emulation covers narrow layouts and accessibility preferences; physical iOS/Android and Safari checks still need a person/device.
+
+## Motion implementation
+
+The view underline and bookmark fill provide brief pointer feedback. Search/results and saved state update immediately; unchanged article cards retain focus and DOM continuity. The native import dialog and filter/backup disclosures opt into `shared/motion.css`. Keyboard/AT actions, reduced motion and hidden tabs settle to the current state without decoration. See the [animation guide](../docs/ANIMATION_GUIDE.md), [recipes](../docs/ANIMATION_RECIPES.md) and `tests/animations.cjs` for input switching, interruption and fallback checks.

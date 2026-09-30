@@ -1,10 +1,19 @@
-name: Engineering Journal checks
+name: Site interaction checks
 on:
   pull_request:
     paths:
       - engineering-journal/**
+      - la-trip/**
+      - shared/**
+      - hello-world/**
+      - index.html
+      - DESIGN.md
+      - AGENTS.md
+      - docs/ANIMATION*.md
       - scripts/engineering-feed/**
       - tests/*engineering*
+      - tests/animations.cjs
+      - tests/la-*.cjs
       - tests/fixtures/engineering-feed/**
       - .github/workflows/engineering-journal-*.yml
       - apps.json
@@ -26,7 +35,11 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1
           "$RUNNER_TEMP/journal-tools/node_modules/.bin/playwright" install --with-deps chromium --only-shell
-      - name: Verify reader interactions
+      - name: Verify app interactions and motion
         env:
           NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
-        run: node tests/engineering-journal.cjs
+        run: |
+          node tests/engineering-journal.cjs
+          node tests/animations.cjs
+          node tests/la-craft.cjs
+          node tests/la-scroll.cjs
