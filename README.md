@@ -8,6 +8,13 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 | --- | --- | --- |
 | Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
+| Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](engineering-journal/) |
+
+## Engineering Journal
+
+The new [Engineering Journal](engineering-journal/) collects official technical articles into a searchable, filterable reading list. Saves and read status stay in your browser; JSON backup import/export moves them between devices. See its [reader guide](engineering-journal/README.md) and [daily publishing runbook](docs/ENGINEERING_JOURNAL.md).
+
+The daily workflow targets 6 am Australia/Melbourne and is initially disabled. Enabling it requires approval to change the existing Pages source to GitHub Actions; this branch does not change any Pages setting. The initial collection is included with the app.
 
 ## Edit the LA itinerary
 
@@ -75,6 +82,8 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
 | `hello-world/` | Copyable app starter |
+| `engineering-journal/` | Daily engineering reader and public article catalogue |
+| `scripts/engineering-feed/` | Bounded, standard-library collection and whole-site staging |
 | `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, `AGENTS.md` | Design decisions, UI craft reference, interaction rules and development lessons |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |

@@ -1,0 +1,32 @@
+name: Engineering Journal checks
+on:
+  pull_request:
+    paths:
+      - engineering-journal/**
+      - scripts/engineering-feed/**
+      - tests/*engineering*
+      - tests/fixtures/engineering-feed/**
+      - .github/workflows/engineering-journal-*.yml
+      - apps.json
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - run: |
+          python3 scripts/validate.py
+          python3 scripts/engineering-feed/collect.py --validate-only
+          python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1
+          "$RUNNER_TEMP/journal-tools/node_modules/.bin/playwright" install --with-deps chromium --only-shell
+      - name: Verify reader interactions
+        env:
+          NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
+        run: node tests/engineering-journal.cjs

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf7ef">
+  <meta name="description" content="A daily reading list from the teams building modern software and AI. Engineering stories from Uber, OpenAI, Anthropic and more.">
+  <title>Engineering Journal · Mario’s Sites</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Ctext x='8' y='30' font-family='Georgia' font-size='30' fill='%23ad5738'%3Ee%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../shared/theme.css?v=1">
+  <link rel="stylesheet" href="./styles.css?v=1">
+  <script src="../shared/ui.js?v=1" defer></script>
+  <script src="./app.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#reading-list">Skip to articles</a>
+  <div class="journal-shell">
+    <header class="site-header journal-header">
+      <a href="../">← All apps</a>
+      <a class="journal-wordmark" href="./" aria-label="Engineering Journal home">ej<span>.</span></a>
+      <span class="edition-label">The daily edition</span>
+    </header>
+    <main id="main">
+      <section class="masthead" aria-labelledby="journal-title">
+        <div>
+          <p class="eyebrow">Engineering Journal</p>
+          <h1 id="journal-title">Notes from<br>the <em>builders.</em></h1>
+          <p class="intro">What they’re building. How it works.<br class="desktop-break"> What we can learn from it.</p>
+        </div>
+        <div class="edition-note">
+          <span class="handwritten">a little deeper, every day</span>
+          <p>Architecture, AI &amp; the decisions behind the software we use.</p>
+          <div class="edition-rule"></div>
+          <p class="edition-time">A morning read · Melbourne</p>
+        </div>
+      </section>
+      <nav class="journal-nav" aria-label="Journal views">
+        <div class="view-buttons">
+          <button type="button" data-view="latest" aria-pressed="true">Latest <span class="nav-count" id="latest-count">—</span></button>
+          <button type="button" data-view="saved" aria-pressed="false">Saved <span class="nav-count" id="saved-count">0</span></button>
+          <button type="button" data-view="sources" aria-pressed="false">Sources</button>
+        </div>
+        <span class="schedule-note">Collected daily, around 6 am</span>
+      </nav>
+      <p id="freshness" class="freshness">Loading the journal…</p>
+      <p id="storage-notice" class="notice" hidden></p>
+      <p id="feedback" class="sr-only" role="status" aria-live="polite"></p>
+      <section id="reader" aria-label="Article reader">
+        <div class="search-row">
+          <label class="search-label" for="search"><span class="sr-only">Search titles, excerpts, publishers and topics</span><span aria-hidden="true" class="search-icon">⌕</span><input id="search" type="search" placeholder="Find your next rabbit hole…" autocomplete="off" maxlength="200"></label>
+          <button id="reset-filters" class="text-button" type="button">Reset filters</button>
+        </div>
+        <div class="reader-layout">
+          <aside class="filter-sidebar" aria-label="Reading filters">
+            <details id="filter-details" open>
+              <summary>Refine your reading <span id="filter-count"></span></summary>
+              <div class="filter-content">
+                <fieldset><legend>From the teams at</legend><div id="company-options" class="company-options"></div></fieldset>
+                <div class="select-field"><label for="date-range">Published</label><select id="date-range"><option value="all">Any time in the collection</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select></div>
+                <div class="select-field"><label for="article-type">Article type</label><select id="article-type"><option value="all">All technical articles</option><option value="case-study">Engineering stories</option><option value="research">Research</option><option value="tutorial">Guides &amp; tutorials</option><option value="announcement">Technical updates</option></select></div>
+                <label class="check-row unread-option"><input type="checkbox" id="unread-only"><span>Unread only</span></label>
+                <p class="filter-note">A curated set of sources.<br>An open invitation to go deeper.</p>
+              </div>
+            </details>
+          </aside>
+          <div class="reading-column">
+            <div id="topic-options" class="topic-options" role="group" aria-label="Topics"></div>
+            <div id="saved-tools" hidden>
+              <p class="saved-intro">Your reading list, saved on this browser. No account or cloud sync.</p>
+              <details class="backup-tools"><summary>Back up or move your reading list</summary><div class="backup-actions"><button id="export-saved" type="button" class="button secondary">Export reading list</button><label class="button secondary" for="import-saved">Import a backup</label><input id="import-saved" type="file" accept="application/json,.json" class="sr-only"></div><p class="small muted">Imports merge with your existing list. Exported files contain your saved articles and read status.</p></details>
+            </div>
+            <div class="list-heading"><h2 id="list-title" tabindex="-1">The latest</h2><span id="result-count" class="muted small" role="status"></span></div>
+            <div id="reading-list" tabindex="-1" aria-busy="true"></div>
+            <button id="load-more" class="button secondary load-more" type="button" hidden>Load more articles</button>
+          </div>
+        </div>
+      </section>
+      <section id="sources-view" hidden aria-labelledby="sources-title">
+        <div class="section-intro"><div><p class="eyebrow">Direct from the source</p><h2 id="sources-title" tabindex="-1">The teams behind the stories.</h2></div><p>Official engineering and research publications. Open a publisher’s collection, or follow a link to the original blog.</p></div>
+        <div id="source-list" class="source-grid"></div>
+        <p class="source-footnote">A successful check can find no new articles. If a source is unavailable, its previous articles stay in the collection. Research and product news are labelled separately; general corporate news is filtered out.</p>
+      </section>
+      <noscript><div class="panel"><h2>Read from the source</h2><p>Enable JavaScript to search and save articles, or visit the publishers directly.</p><ul><li><a href="https://www.uber.com/us/en/blog/engineering/">Uber Engineering</a></li><li><a href="https://openai.com/news/engineering/">OpenAI Engineering</a></li><li><a href="https://www.anthropic.com/engineering">Anthropic Engineering</a></li><li><a href="https://research.google/blog/">Google Research</a></li><li><a href="https://engineering.fb.com/">Meta Engineering</a></li><li><a href="https://x.ai/news">xAI</a></li></ul></div></noscript>
+    </main>
+    <footer class="journal-footer"><p>Good engineering is worth reading about.</p><a href="../">Back to all apps ↗</a><span>Read at the source. Save for yourself.</span></footer>
+  </div>
+  <dialog id="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Bring your reading list along.</h2><p id="import-description"></p><div class="backup-actions"><button type="button" id="confirm-import" class="button">Merge reading list</button><button type="button" id="cancel-import" class="button secondary">Cancel</button></div></dialog>
+</body>
+</html>

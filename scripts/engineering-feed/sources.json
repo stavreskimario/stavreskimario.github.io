@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "uber",
+      "name": "Uber",
+      "mark": "U",
+      "homepage": "https://www.uber.com/us/en/blog/engineering/",
+      "hosts": [
+        "www.uber.com",
+        "uber.com"
+      ],
+      "description": "Production systems, data platforms and engineering at scale.",
+      "method": "html",
+      "pathPattern": "/(?:[a-z]{2}/[a-z]{2}/)?blog/(?!engineering/?$|category/|tag/|page/)[^/]+/?$",
+      "defaultTopics": [
+        "architecture"
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.uber.com/us/en/blog/engineering/",
+          "kind": "html"
+        }
+      ],
+      "requireDate": true
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "mark": "O",
+      "homepage": "https://openai.com/news/engineering/",
+      "hosts": [
+        "openai.com",
+        "www.openai.com"
+      ],
+      "description": "The systems and engineering behind frontier AI.",
+      "method": "html",
+      "pathPattern": "/index/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://openai.com/news/engineering/",
+          "kind": "html"
+        }
+      ],
+      "titleClass": "\\btext-h5\\b",
+      "requireDate": true
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "mark": "A",
+      "homepage": "https://www.anthropic.com/engineering",
+      "hosts": [
+        "www.anthropic.com",
+        "anthropic.com"
+      ],
+      "description": "Agent systems, evaluations and practical AI engineering.",
+      "method": "html",
+      "pathPattern": "/engineering/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.anthropic.com/engineering",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google Research",
+      "mark": "G",
+      "homepage": "https://research.google/blog/",
+      "hosts": [
+        "research.google",
+        "research.googleblog.com"
+      ],
+      "description": "Research methods, machine learning and applied AI.",
+      "method": "rss",
+      "pathPattern": "/blog/[^/]+/?$",
+      "defaultTopics": [
+        "ai",
+        "data"
+      ],
+      "defaultType": "research",
+      "endpoints": [
+        {
+          "url": "https://research.google/blog/rss/",
+          "kind": "rss"
+        },
+        {
+          "url": "https://research.google/blog/",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "mark": "D",
+      "homepage": "https://deepmind.google/blog/",
+      "hosts": [
+        "deepmind.google",
+        "deepmind.google.com"
+      ],
+      "description": "Frontier models, research and the systems around them.",
+      "method": "html",
+      "pathPattern": "/blog/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "defaultType": "research",
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://deepmind.google/blog/",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "mark": "M",
+      "homepage": "https://engineering.fb.com/",
+      "hosts": [
+        "engineering.fb.com",
+        "code.facebook.com"
+      ],
+      "description": "Infrastructure, data systems and AI at global scale.",
+      "method": "rss",
+      "pathPattern": "/20[0-9]{2}/",
+      "defaultTopics": [
+        "architecture"
+      ],
+      "endpoints": [
+        {
+          "url": "https://engineering.fb.com/feed/",
+          "kind": "rss"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "mark": "X",
+      "homepage": "https://x.ai/news",
+      "hosts": [
+        "x.ai",
+        "www.x.ai"
+      ],
+      "description": "Technical model and API updates from the xAI team.",
+      "method": "html",
+      "pathPattern": "/news/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://x.ai/news",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "mark": "C",
+      "homepage": "https://cursor.com/blog",
+      "hosts": [
+        "cursor.com",
+        "www.cursor.com"
+      ],
+      "description": "Coding agents, developer tools and engineering research.",
+      "method": "html",
+      "pathPattern": "/blog/[^/]+/?$",
+      "defaultTopics": [
+        "ai",
+        "devtools"
+      ],
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://cursor.com/blog",
+          "kind": "html"
+        }
+      ],
+      "titleClass": "(?:^|\\s)text-theme-text(?:\\s|$)"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "mark": "P",
+      "homepage": "https://www.perplexity.ai/hub/blog/category/research",
+      "hosts": [
+        "www.perplexity.ai",
+        "perplexity.ai",
+        "research.perplexity.ai"
+      ],
+      "description": "Search, retrieval and reasoning research.",
+      "method": "html",
+      "pathPattern": "/(?:hub/blog|articles)/(?!category/)[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "defaultType": "research",
+      "endpoints": [
+        {
+          "url": "https://www.perplexity.ai/hub/blog/category/research",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "thinking-machines",
+      "name": "Thinking Machines",
+      "mark": "TM",
+      "homepage": "https://thinkingmachines.ai/blog/",
+      "hosts": [
+        "thinkingmachines.ai",
+        "www.thinkingmachines.ai"
+      ],
+      "description": "Training, inference and research from Thinking Machines Lab.",
+      "method": "html",
+      "pathPattern": "/blog/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "defaultType": "research",
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://thinkingmachines.ai/blog/",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "mark": "T",
+      "homepage": "https://www.together.ai/blog",
+      "hosts": [
+        "www.together.ai",
+        "together.ai"
+      ],
+      "description": "Inference performance, open models and AI infrastructure.",
+      "method": "html",
+      "pathPattern": "/blog/[^/]+/?$",
+      "defaultTopics": [
+        "ai"
+      ],
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://www.together.ai/blog",
+          "kind": "html"
+        }
+      ],
+      "titleClass": "(?:^|\\s)h[2-5](?:\\s|$)"
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "mark": "DB",
+      "homepage": "https://www.databricks.com/blog/category/engineering",
+      "hosts": [
+        "www.databricks.com",
+        "databricks.com"
+      ],
+      "description": "Data platforms, infrastructure and AI engineering.",
+      "method": "html",
+      "pathPattern": "/blog/(?!category/|author/)[^/]+/?$",
+      "defaultTopics": [
+        "data"
+      ],
+      "endpoints": [
+        {
+          "url": "https://www.databricks.com/blog/category/engineering",
+          "kind": "html"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "mark": "GH",
+      "homepage": "https://github.blog/engineering/",
+      "hosts": [
+        "github.blog"
+      ],
+      "description": "Developer infrastructure and AI-assisted software delivery.",
+      "method": "rss",
+      "pathPattern": "/engineering/.+",
+      "defaultTopics": [
+        "devtools"
+      ],
+      "endpoints": [
+        {
+          "url": "https://github.blog/engineering/feed/",
+          "kind": "rss"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "mark": "CF",
+      "homepage": "https://blog.cloudflare.com/",
+      "hosts": [
+        "blog.cloudflare.com"
+      ],
+      "description": "Networks, distributed systems and performance.",
+      "method": "rss",
+      "pathPattern": "/[^/]+/?$",
+      "defaultTopics": [
+        "architecture"
+      ],
+      "technicalOnly": true,
+      "endpoints": [
+        {
+          "url": "https://blog.cloudflare.com/rss/",
+          "kind": "rss"
+        }
+      ]
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "mark": "N",
+      "homepage": "https://netflixtechblog.com/",
+      "hosts": [
+        "netflixtechblog.com",
+        "medium.com"
+      ],
+      "description": "Distributed systems, streaming and production machine learning.",
+      "method": "rss",
+      "pathPattern": "/[^/]+",
+      "defaultTopics": [
+        "architecture"
+      ],
+      "endpoints": [
+        {
+          "url": "https://netflixtechblog.com/feed",
+          "kind": "rss"
+        }
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "mark": "S",
+      "homepage": "https://engineering.atspotify.com/",
+      "hosts": [
+        "engineering.atspotify.com"
+      ],
+      "description": "Developer experience, experimentation and software quality.",
+      "method": "rss",
+      "pathPattern": "/20[0-9]{2}/",
+      "defaultTopics": [
+        "devtools"
+      ],
+      "endpoints": [
+        {
+          "url": "https://engineering.atspotify.com/feed/",
+          "kind": "rss"
+        },
+        {
+          "url": "https://engineering.atspotify.com/",
+          "kind": "html"
+        }
+      ]
+    }
+  ]
+}

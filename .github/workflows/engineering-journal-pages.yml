@@ -1,0 +1,74 @@
+name: Engineering Journal and Pages
+
+# This remains disabled until the owner approves switching Pages to GitHub Actions.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+      timezone: Australia/Melbourne
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Serialize code and data publishing. A running deployment finishes before the next
+# checkout, so a code-only run recovers the catalogue it just published.
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main' && vars.ENGINEERING_JOURNAL_PAGES_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    outputs:
+      revision: ${{ steps.revision.outputs.sha }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          persist-credentials: false
+      - id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Recover catalogue on code deploys; collect on daily or manual runs
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          args=()
+          if [ "$EVENT_NAME" = push ]; then args+=(--reuse-only); fi
+          python3 scripts/engineering-feed/collect.py \
+            --previous-url https://stavreskimario.github.io/engineering-journal/data/catalogue.json \
+            "${args[@]}"
+      - name: Validate and stage the complete site
+        run: |
+          python3 scripts/validate.py
+          python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
+          python3 scripts/engineering-feed/stage.py "$RUNNER_TEMP/pages"
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: ${{ runner.temp }}/pages
+          retention-days: 1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Refuse an outdated code revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          BUILT_SHA: ${{ needs.build.outputs.revision }}
+        run: |
+          current=$(gh api "repos/$REPOSITORY/commits/main" --jq .sha)
+          test "$current" = "$BUILT_SHA"
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
