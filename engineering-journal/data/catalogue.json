@@ -1,0 +1,3098 @@
+{
+  "version": 1,
+  "seed": true,
+  "generatedAt": "2026-09-30T05:06:43.980877Z",
+  "lastPollAt": "2026-09-30T05:06:43.980877Z",
+  "sources": [
+    {
+      "id": "uber",
+      "name": "Uber",
+      "mark": "U",
+      "homepage": "https://www.uber.com/us/en/blog/engineering/",
+      "hosts": [
+        "www.uber.com",
+        "uber.com"
+      ],
+      "description": "Production systems, data platforms and engineering at scale.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://www.uber.com/us/en/blog/engineering/",
+      "http": {
+        "etag": null,
+        "modified": "Wed, 30 Sep 2026 05:02:22 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "mark": "O",
+      "homepage": "https://openai.com/news/engineering/",
+      "hosts": [
+        "openai.com",
+        "www.openai.com"
+      ],
+      "description": "The systems and engineering behind frontier AI.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://openai.com/news/engineering/",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "mark": "A",
+      "homepage": "https://www.anthropic.com/engineering",
+      "hosts": [
+        "www.anthropic.com",
+        "anthropic.com"
+      ],
+      "description": "Agent systems, evaluations and practical AI engineering.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://www.anthropic.com/engineering",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "google",
+      "name": "Google Research",
+      "mark": "G",
+      "homepage": "https://research.google/blog/",
+      "hosts": [
+        "research.google",
+        "research.googleblog.com"
+      ],
+      "description": "Research methods, machine learning and applied AI.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://research.google/blog/rss/",
+      "http": {
+        "etag": null,
+        "modified": "Tue, 29 Sep 2026 18:38:27 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "mark": "D",
+      "homepage": "https://deepmind.google/blog/",
+      "hosts": [
+        "deepmind.google",
+        "deepmind.google.com"
+      ],
+      "description": "Frontier models, research and the systems around them.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://deepmind.google/blog/",
+      "http": {
+        "etag": "\"4gxr9Q\"",
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "mark": "M",
+      "homepage": "https://engineering.fb.com/",
+      "hosts": [
+        "engineering.fb.com",
+        "code.facebook.com"
+      ],
+      "description": "Infrastructure, data systems and AI at global scale.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://engineering.fb.com/feed/",
+      "http": {
+        "etag": "\"fd91df472148d7e75a0bcd2341540ccb\"",
+        "modified": "Tue, 29 Sep 2026 16:24:20 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "mark": "X",
+      "homepage": "https://x.ai/news",
+      "hosts": [
+        "x.ai",
+        "www.x.ai"
+      ],
+      "description": "Technical model and API updates from the xAI team.",
+      "method": "html",
+      "lastSuccessAt": null,
+      "status": "error",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "mark": "C",
+      "homepage": "https://cursor.com/blog",
+      "hosts": [
+        "cursor.com",
+        "www.cursor.com"
+      ],
+      "description": "Coding agents, developer tools and engineering research.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://cursor.com/blog",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "mark": "P",
+      "homepage": "https://www.perplexity.ai/hub/blog/category/research",
+      "hosts": [
+        "www.perplexity.ai",
+        "perplexity.ai",
+        "research.perplexity.ai"
+      ],
+      "description": "Search, retrieval and reasoning research.",
+      "method": "html",
+      "lastSuccessAt": null,
+      "status": "error",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "thinking-machines",
+      "name": "Thinking Machines",
+      "mark": "TM",
+      "homepage": "https://thinkingmachines.ai/blog/",
+      "hosts": [
+        "thinkingmachines.ai",
+        "www.thinkingmachines.ai"
+      ],
+      "description": "Training, inference and research from Thinking Machines Lab.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://thinkingmachines.ai/blog/",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "mark": "T",
+      "homepage": "https://www.together.ai/blog",
+      "hosts": [
+        "www.together.ai",
+        "together.ai"
+      ],
+      "description": "Inference performance, open models and AI infrastructure.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://www.together.ai/blog",
+      "http": {
+        "etag": null,
+        "modified": "Tue, 29 Sep 2026 21:39:56 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "mark": "DB",
+      "homepage": "https://www.databricks.com/blog/category/engineering",
+      "hosts": [
+        "www.databricks.com",
+        "databricks.com"
+      ],
+      "description": "Data platforms, infrastructure and AI engineering.",
+      "method": "html",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://www.databricks.com/blog/category/engineering",
+      "http": {
+        "etag": null,
+        "modified": "Wed, 30 Sep 2026 01:01:24 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "mark": "GH",
+      "homepage": "https://github.blog/engineering/",
+      "hosts": [
+        "github.blog"
+      ],
+      "description": "Developer infrastructure and AI-assisted software delivery.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://github.blog/engineering/feed/",
+      "http": {
+        "etag": "\"292587fd37ad7111ea93585f0b57e7bb\"",
+        "modified": "Tue, 29 Sep 2026 21:56:41 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "mark": "CF",
+      "homepage": "https://blog.cloudflare.com/",
+      "hosts": [
+        "blog.cloudflare.com"
+      ],
+      "description": "Networks, distributed systems and performance.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://blog.cloudflare.com/rss/",
+      "http": {
+        "etag": null,
+        "modified": "Tue, 29 Sep 2026 17:15:23 GMT"
+      },
+      "error": null
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "mark": "N",
+      "homepage": "https://netflixtechblog.com/",
+      "hosts": [
+        "netflixtechblog.com",
+        "medium.com"
+      ],
+      "description": "Distributed systems, streaming and production machine learning.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://netflixtechblog.com/feed",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "mark": "S",
+      "homepage": "https://engineering.atspotify.com/",
+      "hosts": [
+        "engineering.atspotify.com"
+      ],
+      "description": "Developer experience, experimentation and software quality.",
+      "method": "rss",
+      "lastSuccessAt": "2026-09-30T05:06:43.980877Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-09-30T05:06:43.980877Z",
+      "endpoint": "https://engineering.atspotify.com/feed/",
+      "http": {
+        "etag": null,
+        "modified": null
+      },
+      "error": null
+    }
+  ],
+  "articles": [
+    {
+      "id": "b05df22ee898887491f13a54",
+      "sourceId": "google",
+      "title": "How Diffusion Controller unifies and simplifies AI image generation",
+      "url": "https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/",
+      "publishedAt": "2026-09-29T18:38:27Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "eb3a720d45b0bcf90df72b81",
+      "sourceId": "cloudflare",
+      "title": "Adaptive application security for the AI era: how Cloudflare connects code, traffic, and intelligence to stop attacks",
+      "url": "https://blog.cloudflare.com/ai-era-framework/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Cloudflare introduces an adaptive security framework connecting risk discovery, agent governance, runtime protection, and AI-powered response in a continuous learning loop.",
+      "topics": [
+        "ai",
+        "security",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d2a5d7492f3245fed0e2bbb1",
+      "sourceId": "cloudflare",
+      "title": "Preventing quantum downgrade attacks against IPsec",
+      "url": "https://blog.cloudflare.com/ipsec-downgrade-protection/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "A sophisticated attacker with a quantum computer can exploit a protocol design flaw to downgrade post-quantum IPsec tunnels to classical crypto. We helped the IETF develop a transcript authentication extension to prevent these attacks.",
+      "topics": [
+        "architecture",
+        "security"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d22c51a4118b1413cbbb2619",
+      "sourceId": "cloudflare",
+      "title": "Enforce positive security with Cloudflare Application Profiles",
+      "url": "https://blog.cloudflare.com/application-profiles/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Cloudflare learns the structure of your HTTP requests and identifies deviations. You can add a positive security layer that helps reduce attack surface as AI makes it easier for attackers to generate and vary payloads.",
+      "topics": [
+        "ai",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "cfaa4d8a048fd8380fd54e68",
+      "sourceId": "cloudflare",
+      "title": "Is your domain using post-quantum encryption? Now you can see for yourself",
+      "url": "https://blog.cloudflare.com/post-quantum-visibility/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Cloudflare has added visibility into post-quantum (PQ) encryption in TLS 1.3 directly into HTTP Analytics, Log Explorer, and Logpush. Learn how to make sure your domain is protected with PQ encryption.",
+      "topics": [
+        "data",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "bbc02058f544d672ad52ad4a",
+      "sourceId": "cloudflare",
+      "title": "Using AI to chart a course for our post-quantum migration",
+      "url": "https://blog.cloudflare.com/ai-driven-cryptography-discovery/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We’re building CryptoLabe, an internal AI-powered tool that discovers cryptography across our codebase, surfaces dependencies, and helps us progress toward a full post-quantum migration by 2029. Here’s what we’ve learned so far.",
+      "topics": [
+        "ai",
+        "architecture",
+        "security",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "953953d4e2bca5be497abea6",
+      "sourceId": "cloudflare",
+      "title": "Building a post-quantum certificate authority with Merkle Tree Certificates",
+      "url": "https://blog.cloudflare.com/pq-ca-with-mtcs/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "As post-quantum signatures threaten to inflate TLS handshakes and certificate transparency logs, Merkle Tree Certificates offer a path to compact, auditable authentication. Cloudflare’s new certificate authority will support MTC issuance at",
+      "topics": [
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "916a57cd427a61e5e2204a46",
+      "sourceId": "cloudflare",
+      "title": "Introducing Threat Signals: agentic skills for open-source threat intelligence, free for every Cloudflare account",
+      "url": "https://blog.cloudflare.com/threat-signals/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We are expanding access to Cloudforce One's Threat Events Platform to every Cloudflare account and introducing Threat Signals. Threat Signals automatically parses open-source threat reporting, extracts structured indicators, and connects th",
+      "topics": [
+        "ai",
+        "architecture",
+        "security"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "830de58cacf62ad1b88c42f5",
+      "sourceId": "cloudflare",
+      "title": "Building a certificate authority for the whole Internet",
+      "url": "https://blog.cloudflare.com/cloudflare-certificate-authority/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Twelve years after launching Universal SSL, Cloudflare is applying to become a certificate authority. By combining an established root, an ACME-first approach, and Merkle Tree Certificates, we are building a post-quantum CA for the open web",
+      "topics": [
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3ec68f877978c141cc7b2a23",
+      "sourceId": "cloudflare",
+      "title": "We tested our own WAF with frontier AI models. Here’s what we found",
+      "url": "https://blog.cloudflare.com/adaptive-ai-waf-testing/",
+      "publishedAt": "2026-09-29T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We built a WAF tester that adapted each request based on what the WAF blocked or passed. This helped us explore variations that a fixed test might miss. We ran it across six attack categories on an authorized staging environment and discove",
+      "topics": [
+        "ai",
+        "data",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d8139ee5b66b8461667b31cc",
+      "sourceId": "cloudflare",
+      "title": "Introducing cf: the agentic CLI for the entire Cloudflare API",
+      "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+      "publishedAt": "2026-09-28T15:50:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We are releasing cf, our new command-line tool that mirrors the entire Cloudflare API and supports programmatic TypeScript configuration. We are also open-sourcing Forge, our internal SDK generator.",
+      "topics": [
+        "ai",
+        "devtools",
+        "architecture"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "f6fea840478968e23f6fc2a9",
+      "sourceId": "cloudflare",
+      "title": "Next.js applications, powered by Vite: introducing Vinext 1.0",
+      "url": "https://blog.cloudflare.com/vinext-nextjs-on-vite/",
+      "publishedAt": "2026-09-28T14:51:57Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Vinext 1.0 graduates from an AI experiment to a production-ready framework, letting developers run Next.js apps on Vite. This release brings advanced cache warming, broader compatibility, and an automated testing pipeline.",
+      "topics": [
+        "ai",
+        "architecture",
+        "data",
+        "reliability"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "e5229365263615c03088ff30",
+      "sourceId": "cloudflare",
+      "title": "How fast is the web? Explore billions of real-user measurements with BEACON",
+      "url": "https://blog.cloudflare.com/how-fast-is-the-web/",
+      "publishedAt": "2026-09-28T14:43:05Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Cloudflare is open-sourcing the BEACON dataset, making billions of anonymized Real User Monitoring (RUM) performance records publicly available on Google BigQuery. Explore real-world Core Web Vitals, soft navigation metrics, and performance",
+      "topics": [
+        "data",
+        "reliability",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "fdbc96024d7130f363eba8b1",
+      "sourceId": "cloudflare",
+      "title": "EmDash 1.0: the stable CMS with a secure plugin registry",
+      "url": "https://blog.cloudflare.com/emdash-cms-plugin-registry/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "EmDash 1.0 is a stable, open source CMS built for Astro, with agent-friendly workflows, secure sandboxed plugins, and a decentralized registry that keeps publishers in control.",
+      "topics": [
+        "ai",
+        "security",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "dca4381835d8e7ce47402099",
+      "sourceId": "cloudflare",
+      "title": "Introducing Forge: the open source pipeline for generating SDKs, CLIs, docs, and more",
+      "url": "https://blog.cloudflare.com/forge-open-source-generation-pipeline/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Forge is a pluggable, open-source pipeline that runs in CI to generate SDKs, CLIs, and documentation directly from API definitions. By shifting generation upstream into individual team repositories, Forge keeps developer tools continuously ",
+      "topics": [
+        "ai",
+        "data",
+        "devtools",
+        "architecture"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "c21a6e84faf67f612a2ec4ea",
+      "sourceId": "cloudflare",
+      "title": "Four months of VoidZero at Cloudflare: making the open-source JavaScript toolchain faster for all humans and agents",
+      "url": "https://blog.cloudflare.com/voidzero-update/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Since joining Cloudflare, VoidZero has delivered more than 80 releases that drastically speed up JavaScript compilation, linting, and testing. From a 10x faster React compiler to Vite+ 1.0, here’s how we are building faster tools for develo",
+      "topics": [
+        "ai",
+        "reliability",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "438e0269e7ce84f8da190b64",
+      "sourceId": "cloudflare",
+      "title": "Introducing The Cold Start: pitch your startup live at Cloudflare Connect",
+      "url": "https://blog.cloudflare.com/introducing-the-cold-start/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Cloudflare is launching The Cold Start, a startup competition giving five early-stage companies five minutes on stage at Cloudflare Connect. Grand Prize winner receives $500,000 in credits, a San Francisco billboard, and an invitation to ou",
+      "topics": [
+        "devtools",
+        "architecture"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "15e7841ebe7c1dd7b7c4f47f",
+      "sourceId": "cloudflare",
+      "title": "Supporting native Rust in Workers with the new Emscripten target for wasm-bindgen",
+      "url": "https://blog.cloudflare.com/rust-workers-emscripten-target/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "With the new experimental support for the Emscripten target in Rust Workers, many previously unsupported Rust libraries and applications can now be built and deployed directly to Cloudflare’s global Workers platform, including upcoming supp",
+      "topics": [
+        "architecture",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "15939a0632edddf1aa854a52",
+      "sourceId": "cloudflare",
+      "title": "The road to the agentic browser: A Kitesurf update",
+      "url": "https://blog.cloudflare.com/kitesurf-update/",
+      "publishedAt": "2026-09-28T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We’ve updated Kitesurf, our Workers-based browser for AI agents, with WebMCP support, improved DOM performance, and terminal-based rendering. With over 730,000 Web Platform subtests passing, agents can now navigate complex sites faster.",
+      "topics": [
+        "ai",
+        "architecture",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "ec5235c5099fc8562c01c1db",
+      "sourceId": "databricks",
+      "title": "Lakebase Search: State-of-the-art full text and vector search for Postgres",
+      "url": "https://www.databricks.com/blog/lakebase-search-state-art-full-text-and-vector-search-postgres",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "e59ee44418ceceb9cc2e58b9",
+      "sourceId": "databricks",
+      "title": "How Databricks rolls out frontier models to 12,000 employees on Day 1",
+      "url": "https://www.databricks.com/blog/how-databricks-rolls-out-frontier-models-12000-employees-day-1",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "dee29e2f8c415b8b3330a666",
+      "sourceId": "cloudflare",
+      "title": "Cloudflare’s 2026 Annual Founders’ Letter",
+      "url": "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/",
+      "publishedAt": "2026-09-27T17:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "The Internet is changing more today than at any point since Cloudflare launched back on September 27, 2010. As automated traffic surpasses human activity, we reflect on the rise of AI agents, new creators, and how we can help build a fair, ",
+      "topics": [
+        "ai",
+        "architecture",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "6e91fd633bd60a884836bd5f",
+      "sourceId": "netflix",
+      "title": "Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute",
+      "url": "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252",
+      "publishedAt": "2026-09-25T16:01:03Z",
+      "updatedAt": "2026-09-25T16:01:02.900000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "df0f4b95aa75fa2d62098d37",
+      "sourceId": "github",
+      "title": "Improving site performance by shipping more CSS",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+      "publishedAt": "2026-09-25T15:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
+      "topics": [
+        "architecture",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "a21be8da5be1d3ff6ef1214e",
+      "sourceId": "cloudflare",
+      "title": "Agents can now set up your website’s security with Turnstile Spin",
+      "url": "https://blog.cloudflare.com/turnstile-spin/",
+      "publishedAt": "2026-09-25T13:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Misconfiguring Turnstile by skipping backend validation leaves sites exposed to bots. Turnstile Spin fixes incomplete setups by using your preferred AI coding agent to wire up server-side verification.",
+      "topics": [
+        "ai",
+        "security",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "813cd9f4296a9ed0a6ddc916",
+      "sourceId": "google",
+      "title": "Automating coherent long-form video generation",
+      "url": "https://research.google/blog/coherent-long-form-video-generation/",
+      "publishedAt": "2026-09-24T19:40:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "fe19c32b683d437ceec04ed0",
+      "sourceId": "meta",
+      "title": "Bringing Private Processing to Meta AI Glasses",
+      "url": "https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We believe glasses are the best form factor for having AI help throughout your day. They can understand your personal context better than other kinds of devices and keep you present without picking up a mobile phone. Most of the time, glass",
+      "topics": [
+        "ai",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "52b39c859fb2a0496b472929",
+      "sourceId": "databricks",
+      "title": "Running open-Jev in SQL on Databricks",
+      "url": "https://www.databricks.com/blog/running-open-jev-sql-databricks",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3e2ba655384ad263a5884a02",
+      "sourceId": "databricks",
+      "title": "How I built agent-based security reviews on Databricks",
+      "url": "https://www.databricks.com/blog/how-i-built-agent-based-security-reviews-databricks",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "security",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "adfc9716558ca6b5ec069670",
+      "sourceId": "github",
+      "title": "Rendering huge pull requests in the GitHub Copilot app",
+      "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+      "publishedAt": "2026-09-23T18:29:49Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments. The post Rendering huge pull requests in the GitHub Copilot app appeared first on The GitHub Blog .",
+      "topics": [
+        "ai",
+        "data",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "b7f5386936f0c35c94527e3c",
+      "sourceId": "cursor",
+      "title": "Bots for the last mile: Rollouts, Security Review",
+      "url": "https://cursor.com/blog/rollouts-and-security-reviewer",
+      "publishedAt": "2026-09-23T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "security",
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "14383ac75ba71973585fa78a",
+      "sourceId": "cursor",
+      "title": "Improved token efficiency for longer agent runs",
+      "url": "https://cursor.com/blog/improved-token-efficiency",
+      "publishedAt": "2026-09-23T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "b81c6ced363adf096b23e5c6",
+      "sourceId": "uber",
+      "title": "Taming the ML Firehose: Scaling Feature Consistency",
+      "url": "https://www.uber.com/us/en/blog/taming-ml-firehose/",
+      "publishedAt": "2026-09-22T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "e98a4432b7cceb9eeb8b6baf",
+      "sourceId": "meta",
+      "title": "Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems",
+      "url": "https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/",
+      "publishedAt": "2026-09-21T16:00:37Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We’re open-sourcing Rebalancer, the assignment-problem solver that has been used to solve resource allocation problems throughout Meta for over nine years. Rebalancer separates several related concerns: how to specify an assignment problem,",
+      "topics": [
+        "reliability",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c76e4cfa3cba0ca09d9d2c88",
+      "sourceId": "meta",
+      "title": "Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable",
+      "url": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
+      "publishedAt": "2026-09-21T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Petal, the next step in Meta’s subsea innovation, will be the first subsea cable to deliver petabit capacity at transoceanic distances, connecting France and the United States over approximately 7,000 km (4,300 mi). Expected to enter servic",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "8bc15d2d1c9f7dbc75de07c1",
+      "sourceId": "google",
+      "title": "MilleMiglia: A realistic instance generator for middle-mile logistics",
+      "url": "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics/",
+      "publishedAt": "2026-09-18T17:46:09Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "9aeae17595274bd804ce1ef7",
+      "sourceId": "netflix",
+      "title": "Leave the Class Path in the Rearview Mirror",
+      "url": "https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be",
+      "publishedAt": "2026-09-18T16:01:02Z",
+      "updatedAt": "2026-09-18T16:51:42.515000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "9a68e948c26f7b488b0638a3",
+      "sourceId": "google",
+      "title": "The future of practice: Enabling teachers to create learning interactives with generative UI",
+      "url": "https://research.google/blog/the-future-of-practice-enabling-teachers-to-create-learning-interactives-with-generative-ui/",
+      "publishedAt": "2026-09-17T20:45:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Education Innovation",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "a865e442afea1530fc97d205",
+      "sourceId": "uber",
+      "title": "How Uber Protects Against Retry Storms",
+      "url": "https://www.uber.com/us/en/blog/protecting-against-retry-storms/",
+      "publishedAt": "2026-09-17T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "reliability",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "f881c9fa451a4a651c5b4046",
+      "sourceId": "spotify",
+      "title": "AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity",
+      "url": "https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/",
+      "publishedAt": "2026-09-16T19:13:53Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Quality and reliability have always been a point of pride for Spotify. We run an extraordinarily complex... The post AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engin",
+      "topics": [
+        "ai",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "acfc7f548a899d3e8ea5ebdb",
+      "sourceId": "google",
+      "title": "Bypassing inference bottlenecks: Accelerating complex AI search with Retrieve-for-Train",
+      "url": "https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/",
+      "publishedAt": "2026-09-15T20:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "d2de74b8c81eba231a4dda37",
+      "sourceId": "cursor",
+      "title": "How Grab put Cursor in the hands of Design, Ops, and Engineering",
+      "url": "https://cursor.com/blog/grab",
+      "publishedAt": "2026-09-15T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "devtools",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "9945da4c6bf5425cff5d8c70",
+      "sourceId": "uber",
+      "title": "Large-Scale Automated Dependency Analysis Across Uber's Service Mesh",
+      "url": "https://www.uber.com/us/en/blog/automated-dependency-analysis/",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "cd1b919322a43965889aeb39",
+      "sourceId": "databricks",
+      "title": "Announcing On-Demand State Repartitioning for Apache Spark™ Structured Streaming on Databricks",
+      "url": "https://www.databricks.com/blog/announcing-demand-state-repartitioning-apache-sparktm-structured-streaming-databricks",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "46fcf5bb7b99520f1816e2b7",
+      "sourceId": "openai",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one/",
+      "publishedAt": "2026-09-11T10:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "08a3d9b2900ccf7dfe1f58df",
+      "sourceId": "google",
+      "title": "ToolGrad: Efficient tool-use dataset generation with textual \"gradients\"",
+      "url": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/",
+      "publishedAt": "2026-09-10T22:50:22Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Machine Intelligence",
+      "topics": [
+        "reliability",
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "7508117db52bf676ab331ae5",
+      "sourceId": "uber",
+      "title": "Halving the Time: How Uber Eats Rebuilt Its Search Pipeline",
+      "url": "https://www.uber.com/us/en/blog/uber-eats-search-pipeline/",
+      "publishedAt": "2026-09-10T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "5e0906e6e44774479103b7cb",
+      "sourceId": "databricks",
+      "title": "Improving Lakebase Postgres compute cache",
+      "url": "https://www.databricks.com/blog/improving-lakebase-postgres-compute-cache",
+      "publishedAt": "2026-09-10T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "de41f6273eec9a359a4c2ec1",
+      "sourceId": "uber",
+      "title": "From One Horizontal Scaling Controller to Many: Evolving Uber's Compute Platform",
+      "url": "https://www.uber.com/us/en/blog/evolving-ubers-compute-platform/",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d836e8160b409bd1f4f95adc",
+      "sourceId": "databricks",
+      "title": "Introducing Consort: Test-driven development on a branching database",
+      "url": "https://www.databricks.com/blog/introducing-consort-test-driven-development-branching-database",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "3bfcc9ef73e9cf9d71e95776",
+      "sourceId": "databricks",
+      "title": "Evaluation-First AI Agents: How Zepto Scales Customer Support on Databricks and MLflow",
+      "url": "https://www.databricks.com/blog/evaluation-first-ai-agents-how-zepto-scales-customer-support-databricks-and-mlflow",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "ca436420ac076b3ee8bb4378",
+      "sourceId": "spotify",
+      "title": "Why Spotify Is Not Using Bayesian A/B Testing",
+      "url": "https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/",
+      "publishedAt": "2026-09-08T13:18:44Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Clearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering .",
+      "topics": [
+        "data",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "13817e0e116aa71e1418b68d",
+      "sourceId": "databricks",
+      "title": "Build durable agents with Temporal and Lakebase",
+      "url": "https://www.databricks.com/blog/build-durable-agents-temporal-and-lakebase",
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "1917d56039f1110348c51fe5",
+      "sourceId": "cursor",
+      "title": "How Basis builds long-horizon accounting agents with Cursor",
+      "url": "https://cursor.com/blog/basis",
+      "publishedAt": "2026-09-04T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "aad1b1d43726ae991505958c",
+      "sourceId": "databricks",
+      "title": "Achieving Extreme Efficiency through Specialized GPU Kernel Generation",
+      "url": "https://www.databricks.com/blog/achieving-extreme-efficiency-through-specialized-gpu-kernel-generation",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "reliability",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "9864db7c0affa4555c47c357",
+      "sourceId": "google",
+      "title": "Transfer learning for genomic prediction in underrepresented populations",
+      "url": "https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/",
+      "publishedAt": "2026-09-03T18:20:31Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "e870d219d769fc5a2055dc39",
+      "sourceId": "spotify",
+      "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+      "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/",
+      "publishedAt": "2026-09-03T16:06:40Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Most of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering .",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "2a2935aeb1a6a8debd787856",
+      "sourceId": "meta",
+      "title": "ZGateway: Learnings from Putting a Proxy in Front of ZippyDB",
+      "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
+      "publishedAt": "2026-09-03T16:00:20Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We’re introducing ZGateway, the proxy we are using to unify traffic through ZippyDB, Meta’s most widely-used key value store. As a bonus, it also enables admission control, load balancing, cross-region resilience, and richer operations. Zip",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "7fd820e1b998b43eaf2e8700",
+      "sourceId": "google",
+      "title": "A connectomics milestone: Mapping the complete male fruit fly brain",
+      "url": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+      "publishedAt": "2026-09-03T16:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "c3a0d443767e88bd97e52b0a",
+      "sourceId": "xai",
+      "title": "Designing Grok Bot for a world of persistent agents",
+      "url": "https://x.ai/news/designing-grok-bot",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.923647Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "ced5db4778ab34675dcd45c2",
+      "sourceId": "cursor",
+      "title": "Run cloud agents on machines you manage",
+      "url": "https://cursor.com/blog/self-hosted-machines",
+      "publishedAt": "2026-09-02T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c36107ac47fd614c729cd6f8",
+      "sourceId": "cursor",
+      "title": "Nokia analyzes 50M+ lines of code in two weeks with Cursor",
+      "url": "https://cursor.com/blog/nokia",
+      "publishedAt": "2026-09-02T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "devtools",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "82bc78e5d75e190fdec512f1",
+      "sourceId": "meta",
+      "title": "An Organizational Second Brain: Building an AI That Learns From Experts",
+      "url": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/",
+      "publishedAt": "2026-09-02T09:00:29Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We’ve built an AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available and preserved for anyone in an organization to access, share, and build upon. This is not a typical domain-specif",
+      "topics": [
+        "ai",
+        "data",
+        "security",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "9d08610d0aa41c2f4bf8928e",
+      "sourceId": "google",
+      "title": "Mapping global methane emissions from space with deep learning",
+      "url": "https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/",
+      "publishedAt": "2026-09-01T18:40:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Climate & Sustainability",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "915678a697157f4b0f5dc241",
+      "sourceId": "uber",
+      "title": "From Chaos to Control: Addressing Shard Distribution Challenges in M3DB with Subclusters",
+      "url": "https://www.uber.com/us/en/blog/from-chaos-to-control/",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "dea1017d6754b207c7bb48f5",
+      "sourceId": "google",
+      "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
+      "url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+      "publishedAt": "2026-08-31T17:19:40Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Data Management",
+      "topics": [
+        "data",
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "cbf07e5e2acdb643dd3cb4b5",
+      "sourceId": "netflix",
+      "title": "MAPS: Netflix’s Multimodal Asset Personalization at Scale",
+      "url": "https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e",
+      "publishedAt": "2026-08-28T16:01:02Z",
+      "updatedAt": "2026-08-28T16:01:02.559000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c5b24f7b84897b1adcf87c22",
+      "sourceId": "google",
+      "title": "Planetary prediction engine: Automating global models via Earth AI",
+      "url": "https://research.google/blog/planetary-prediction-engine-automating-global-models-via-earth-ai/",
+      "publishedAt": "2026-08-27T17:37:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Earth AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "fc41ee52393fc090893ddc1e",
+      "sourceId": "uber",
+      "title": "Running a Software Factory Efficiently at Uber Scale",
+      "url": "https://www.uber.com/us/en/blog/efficient-software-factory/",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "05cc66113318e80dcc598b22",
+      "sourceId": "google",
+      "title": "GlucoFM: Foundation model for continuous glucose monitoring",
+      "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/",
+      "publishedAt": "2026-08-26T18:42:43Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Health & Bioscience",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "b10425dbb6909dfa9611d657",
+      "sourceId": "google",
+      "title": "AgentHands: Generating interactive hand gestures for spatially grounded agent conversations in XR",
+      "url": "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr/",
+      "publishedAt": "2026-08-25T19:10:59Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Human-Computer Interaction and Visualization",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "2ca486e7b34a574448e40bff",
+      "sourceId": "cursor",
+      "title": "IMDEX uses Cursor to build integrated subsurface data and analytics platform in months, not years",
+      "url": "https://cursor.com/blog/imdex",
+      "publishedAt": "2026-08-25T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data",
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "b9406ae170bd91336ab3bb25",
+      "sourceId": "openai",
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results/",
+      "publishedAt": "2026-08-25T07:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "0149cc88b149ef151ff23ed8",
+      "sourceId": "github",
+      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
+      "publishedAt": "2026-08-24T20:56:32Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared first on The GitHub Blo",
+      "topics": [
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "bc03a0c77f5011fd44c8fe87",
+      "sourceId": "meta",
+      "title": "MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet",
+      "url": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/",
+      "publishedAt": "2026-08-24T18:02:29Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Training and serving frontier AI models depends on fast, reliable networks that move data between GPUs without wasting compute cycles. To meet this challenge at scale, Meta designed MetaRoCE – a clean-sheet RDMA transport protocol purpose-b",
+      "topics": [
+        "ai",
+        "architecture",
+        "data",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "7aadc05d024a3a525d014ae9",
+      "sourceId": "meta",
+      "title": "MTIA 300: Meta’s First Training Chip with Built-in NICs and Communication-Offloading Engines",
+      "url": "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/",
+      "publishedAt": "2026-08-24T17:45:52Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "MTIA 300 is the first of Meta’s family of in-house training and inference accelerators optimized for training ranking and recommendation models. We’re sharing how MTIA 300’s built-in NIC chiplets allow it to meet the communication needs ass",
+      "topics": [
+        "ai",
+        "architecture",
+        "data",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "6307133702148d12f92a36a0",
+      "sourceId": "google",
+      "title": "An AI tool for prioritizing candidate biomarkers from wearable sensor data",
+      "url": "https://research.google/blog/an-ai-tool-for-prioritizing-candidate-biomarkers-from-wearable-sensor-data/",
+      "publishedAt": "2026-08-21T17:02:24Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "d0a312eee94715a28b21426f",
+      "sourceId": "netflix",
+      "title": "A Tale of Two Flink Autoscalers",
+      "url": "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b",
+      "publishedAt": "2026-08-21T16:01:01Z",
+      "updatedAt": "2026-08-21T23:12:48.276000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "e1b962a17419559b83c72383",
+      "sourceId": "google",
+      "title": "How mobility gives language models a deeper understanding of place",
+      "url": "https://research.google/blog/how-mobility-gives-language-models-a-deeper-understanding-of-place/",
+      "publishedAt": "2026-08-21T10:54:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "3e6d22f2b773ec27ca4ca4be",
+      "sourceId": "cursor",
+      "title": "Git at any scale",
+      "url": "https://cursor.com/blog/git-at-any-scale",
+      "publishedAt": "2026-08-18T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "devtools",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "f987f977374481b4c327f655",
+      "sourceId": "google",
+      "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+      "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+      "publishedAt": "2026-08-17T10:34:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "7202efe3d783d831ccab84d4",
+      "sourceId": "spotify",
+      "title": "When Can LLMs Replace Humans in A/B Tests?",
+      "url": "https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests/",
+      "publishedAt": "2026-08-13T18:57:22Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "TL;DR: LLM predictions can stand in for human outcomes in A/B tests, but only by assumption, not by design.... The post When Can LLMs Replace Humans in A/B Tests? appeared first on Spotify Engineering .",
+      "topics": [
+        "ai",
+        "data",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "e08ff3ba237122fdf2cdf100",
+      "sourceId": "cursor",
+      "title": "Cursor earns AIUC-1 certification for agent security and reliability",
+      "url": "https://cursor.com/blog/aiuc-1",
+      "publishedAt": "2026-08-13T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability",
+        "security",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "5315ab5d598d9cb22686e622",
+      "sourceId": "cursor",
+      "title": "Cloud agents start 3x faster with builds",
+      "url": "https://cursor.com/blog/builds",
+      "publishedAt": "2026-08-13T12:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "80a3938684c737f3727477f8",
+      "sourceId": "meta",
+      "title": "How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees",
+      "url": "https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/",
+      "publishedAt": "2026-08-12T13:00:28Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "WhatsApp is committed to helping people stay safe while protecting the privacy of their messages. As scam tactics evolve — from impersonation to social engineering to AI-generated lures — we’re always evolving as well, so that our protectio",
+      "topics": [
+        "ai",
+        "security",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "503d2ff076e3c25ffdc59c3e",
+      "sourceId": "google",
+      "title": "Empty shelves or lost keys? Recall is the bottleneck for parametric factuality",
+      "url": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/",
+      "publishedAt": "2026-08-12T09:51:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "865d12ec3f0b4e603a96f512",
+      "sourceId": "cursor",
+      "title": "Introducing Grok 4.6",
+      "url": "https://cursor.com/blog/grok-4-6",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "361c0cb0d08c404d7896c1fa",
+      "sourceId": "uber",
+      "title": "Running Cost-Efficient Export Workloads at Uber",
+      "url": "https://www.uber.com/us/en/blog/running-cost-efficient-export/",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "reliability",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "695b538e38b8d1904f3d2278",
+      "sourceId": "google",
+      "title": "Advancing AMIE towards expert-level audio-visual clinical consultations",
+      "url": "https://research.google/blog/advancing-amie-towards-expert-level-audio-visual-clinical-consultations/",
+      "publishedAt": "2026-08-11T17:04:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Health & Bioscience",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "65c11cd6697d24998d9d17cf",
+      "sourceId": "github",
+      "title": "Using the GitHub Copilot SDK for Java",
+      "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
+      "publishedAt": "2026-08-10T19:30:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Enterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java code with annotations, virtual threads, and more. The post Using the GitHub Copilot SDK for Java appeared first on The GitHub Blog .",
+      "topics": [
+        "ai",
+        "data",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c9a84293696c51a4bd2f8806",
+      "sourceId": "netflix",
+      "title": "How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…",
+      "url": "https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607",
+      "publishedAt": "2026-08-07T16:01:02Z",
+      "updatedAt": "2026-08-07T16:01:01.979000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "8e4edbb1cae3f4287040fc42",
+      "sourceId": "uber",
+      "title": "Zero-Sum by Design: 10 Years of Uber’s Payments Platform",
+      "url": "https://www.uber.com/us/en/blog/ubers-payments-platform/",
+      "publishedAt": "2026-08-06T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c1d866c5ae209a4f25c2267d",
+      "sourceId": "meta",
+      "title": "From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking",
+      "url": "https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/",
+      "publishedAt": "2026-08-05T19:20:20Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Every day, Meta’s recommendation platforms handle billions of user interactions, generating rich temporal signals that capture individual preferences and intent across products, ads, and content. In our 2024 post on sequence learning for ad",
+      "topics": [
+        "architecture",
+        "data",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "157257b7e616fb06d925b9fd",
+      "sourceId": "github",
+      "title": "Turn one giant AI-generated pull request to a reviewable stack",
+      "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/",
+      "publishedAt": "2026-08-04T16:47:18Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Instead of one huge, un-reviewable pull request, teach coding agents to decompose work into a clean, ordered stack with GitHub stacked pull requests. The post Turn one giant AI-generated pull request to a reviewable stack appeared first on ",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "deec56a13e2b9b57f5b59222",
+      "sourceId": "openai",
+      "title": "Continuous voice interaction with GPT Live",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/",
+      "publishedAt": "2026-08-03T07:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "6170e378d729f7c483af9340",
+      "sourceId": "netflix",
+      "title": "Modeling Device Capabilities for Analytics",
+      "url": "https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8",
+      "publishedAt": "2026-07-31T16:01:02Z",
+      "updatedAt": "2026-07-31T16:01:01.820000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "data",
+        "devtools",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "8374eb3de5361b2e06c4038d",
+      "sourceId": "github",
+      "title": "Don’t stop early: Case-folding source code at memory speed",
+      "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
+      "publishedAt": "2026-07-31T16:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "How a branch-free loop and byte-space arithmetic let GitHub case-fold every byte of code search at >45 GiB/s on a single core. The post Don’t stop early: Case-folding source code at memory speed appeared first on The GitHub Blog .",
+      "topics": [
+        "architecture",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "b718c754e1fc2a84522d4be0",
+      "sourceId": "google",
+      "title": "Science One Framework: A verifiable autonomous research framework via Chain-of-Evidence",
+      "url": "https://research.google/blog/science-one-framework-a-verifiable-autonomous-research-framework-via-chain-of-evidence/",
+      "publishedAt": "2026-07-30T20:36:36Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "c81353905109f68e8c7c3645",
+      "sourceId": "netflix",
+      "title": "GenRec: Towards LLM-Native Recommendation at Netflix",
+      "url": "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3",
+      "publishedAt": "2026-07-30T20:10:15Z",
+      "updatedAt": "2026-07-30T20:10:17.269000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "fbbff9124a6959adda957ed9",
+      "sourceId": "uber",
+      "title": "Scaling Exact COUNT(DISTINCT) for High-Cardinality Non-Rollup Metrics in Distributed Data Pipelines",
+      "url": "https://www.uber.com/us/en/blog/scaling-exact-count/",
+      "publishedAt": "2026-07-30T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "eb71f165025c2507b7b7067a",
+      "sourceId": "openai",
+      "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+      "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/",
+      "publishedAt": "2026-07-29T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "8b3544c0aa0b748826374184",
+      "sourceId": "spotify",
+      "title": "Indexing the Data Lake for Online Point Queries",
+      "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries/",
+      "publishedAt": "2026-07-27T20:34:28Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Companies like Spotify need vast quantities of data accessible at low latency for online services and,... The post Indexing the Data Lake for Online Point Queries appeared first on Spotify Engineering .",
+      "topics": [
+        "architecture",
+        "data",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3cf71528e601f2c61764bd2f",
+      "sourceId": "google",
+      "title": "SymptomAI: Towards a conversational AI agent for everyday symptom assessment",
+      "url": "https://research.google/blog/symptomai-towards-a-conversational-ai-agent-for-everyday-symptom-assessment/",
+      "publishedAt": "2026-07-22T21:32:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "e6d40de049c53b834ceac640",
+      "sourceId": "google",
+      "title": "Towards a quantum computer that learns from its errors",
+      "url": "https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/",
+      "publishedAt": "2026-07-22T18:40:21Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Machine Intelligence",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "839a552b00636472cd17b4a6",
+      "sourceId": "netflix",
+      "title": "In-House LLM Serving at Netflix",
+      "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c",
+      "publishedAt": "2026-07-17T21:32:39Z",
+      "updatedAt": "2026-07-17T21:32:40.432000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3877d136049d29e0dcce549b",
+      "sourceId": "github",
+      "title": "The cost of saying yes has changed",
+      "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/",
+      "publishedAt": "2026-07-17T16:46:47Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "The cost of writing code dropped; the cost of owning it didn't. A framework for deciding which changes are actually cheap in the AI era. The post The cost of saying yes has changed appeared first on The GitHub Blog .",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "0877aa60b576cb39f29a875b",
+      "sourceId": "google",
+      "title": "Towards demystifying the creativity of diffusion models",
+      "url": "https://research.google/blog/towards-demystifying-the-creativity-of-diffusion-models/",
+      "publishedAt": "2026-07-15T18:06:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "142952f1a3a0823fc4a1fd9e",
+      "sourceId": "netflix",
+      "title": "Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned",
+      "url": "https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8",
+      "publishedAt": "2026-07-13T22:44:11Z",
+      "updatedAt": "2026-07-14T02:00:39.064000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "fe4b92f86d70ac2652641f8d",
+      "sourceId": "google",
+      "title": "SensorFM: Towards a general intelligence and interface for wearable health data",
+      "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+      "publishedAt": "2026-07-09T09:56:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "f10e2bccfa6390f12c6c4cf7",
+      "sourceId": "uber",
+      "title": "GitFarm: Git® as a Service for Large-Scale Monorepos",
+      "url": "https://www.uber.com/us/en/blog/gitfarm-as-a-service/",
+      "publishedAt": "2026-07-09T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "7133420019ec8821a06fe73f",
+      "sourceId": "google",
+      "title": "The power of collaboration: How we can reduce traffic congestion",
+      "url": "https://research.google/blog/the-power-of-collaboration-how-we-can-reduce-traffic-congestion/",
+      "publishedAt": "2026-07-07T16:42:08Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "data",
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "b92dd0b94679a471d10e4f69",
+      "sourceId": "google",
+      "title": "Expanding our Heat Resilience data to 50+ global cities",
+      "url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities/",
+      "publishedAt": "2026-06-30T17:03:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Climate & Sustainability",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "09003992a429ebe53bdda998",
+      "sourceId": "google",
+      "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
+      "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/",
+      "publishedAt": "2026-06-30T10:26:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Data Management",
+      "topics": [
+        "data",
+        "ai"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "cc512ee9f9f07ae273ba6538",
+      "sourceId": "netflix",
+      "title": "GenPage: Towards End-to-End Generative Homepage Construction at Netflix",
+      "url": "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08",
+      "publishedAt": "2026-06-29T13:01:02Z",
+      "updatedAt": "2026-07-22T20:13:22.023000Z",
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "773726e7ec977d1ea9b9b453",
+      "sourceId": "google",
+      "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
+      "url": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/",
+      "publishedAt": "2026-06-26T18:30:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Machine Intelligence",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "8b24d51ca38decccd5033ea0",
+      "sourceId": "google",
+      "title": "Optimizing cloud economics with linear elastic caching",
+      "url": "https://research.google/blog/optimizing-cloud-economics-with-linear-elastic-caching/",
+      "publishedAt": "2026-06-25T10:03:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "data",
+        "reliability",
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "28ee992eff0938d4029c38e4",
+      "sourceId": "uber",
+      "title": "Zone-Failure-Resilient OpenSearch® at Uber",
+      "url": "https://www.uber.com/us/en/blog/zone-failure-resilient/",
+      "publishedAt": "2026-06-25T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4d2ad8ba5e89bcefdeba2b02",
+      "sourceId": "google",
+      "title": "Thinking to recall: How reasoning unlocks parametric knowledge in LLMs",
+      "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/",
+      "publishedAt": "2026-06-24T16:51:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "66517b890287762e0524c3e5",
+      "sourceId": "google",
+      "title": "From pixels to planning: Earth AI for nature restoration",
+      "url": "https://research.google/blog/from-pixels-to-planning-earth-ai-for-nature-restoration/",
+      "publishedAt": "2026-06-16T17:30:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Climate & Sustainability",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "68352a2da575528301974c14",
+      "sourceId": "google",
+      "title": "Research into how AI can help users understand skin conditions",
+      "url": "https://research.google/blog/research-into-how-ai-can-help-users-understand-skin-conditions/",
+      "publishedAt": "2026-06-12T17:52:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Health & Bioscience",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "59f30464f6ca874be40b68e9",
+      "sourceId": "google",
+      "title": "A low-carbon computing platform from your retired phones",
+      "url": "https://research.google/blog/a-low-carbon-computing-platform-from-your-retired-phones/",
+      "publishedAt": "2026-06-12T17:37:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Climate & Sustainability",
+      "topics": [
+        "architecture",
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "3bd2405fa849103b3ec70e72",
+      "sourceId": "google",
+      "title": "New framework for auditing machine unlearning",
+      "url": "https://research.google/blog/new-framework-for-auditing-machine-unlearning/",
+      "publishedAt": "2026-06-10T17:34:55Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Algorithms & Theory",
+      "topics": [
+        "ai",
+        "security",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "815a4303a2348f452a611cf7",
+      "sourceId": "google",
+      "title": "Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG",
+      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "publishedAt": "2026-06-05T11:26:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Data Management",
+      "topics": [
+        "ai",
+        "architecture",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "cc7c822bf62475033cdb2064",
+      "sourceId": "google",
+      "title": "Towards passive heart health monitoring via smartphone camera",
+      "url": "https://research.google/blog/towards-passive-heart-health-monitoring-via-smartphone-camera/",
+      "publishedAt": "2026-06-04T19:47:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Health & Bioscience",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "01507632ebf5ab02c738f65e",
+      "sourceId": "google",
+      "title": "The next chapter in flood resilience: Open sourcing Google’s hydrology framework",
+      "url": "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework/",
+      "publishedAt": "2026-06-03T18:37:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Climate & Sustainability",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "e9f372c48d8f924b22e9aaae",
+      "sourceId": "google",
+      "title": "A New Era of Discovery: Google Research at I/O 2026",
+      "url": "https://research.google/blog/a-new-era-of-innovation-google-research-at-io-2026/",
+      "publishedAt": "2026-05-28T20:58:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "cda1e8ddd46f6db16e84b41e",
+      "sourceId": "google",
+      "title": "Private analytics via zero-trust aggregation",
+      "url": "https://research.google/blog/private-analytics-via-zero-trust-aggregation/",
+      "publishedAt": "2026-05-27T16:56:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Security, Privacy and Abuse Prevention",
+      "topics": [
+        "data",
+        "security",
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "c7affab7451ec44b906790d3",
+      "sourceId": "openai",
+      "title": "Building self-improving tax agents with Codex",
+      "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+      "publishedAt": "2026-05-27T07:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "ee84c66d03eb8e3254794710",
+      "sourceId": "google",
+      "title": "Empirical Research Assistance (ERA): From Nature publication to catalyzing Computational Discovery",
+      "url": "https://research.google/blog/empirical-research-assistance-era-from-nature-publication-to-catalyzing-computational-discovery/",
+      "publishedAt": "2026-05-19T17:52:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "4a3442a5ca8c193564d3ec25",
+      "sourceId": "openai",
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "url": "https://openai.com/index/building-codex-windows-sandbox/",
+      "publishedAt": "2026-05-13T11:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "security",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "a5dde56082e995a9374b45e6",
+      "sourceId": "thinking-machines",
+      "title": "Interaction Models: A Scalable Approach to Human-AI Collaboration",
+      "url": "https://thinkingmachines.ai/blog/interaction-models/",
+      "publishedAt": "2026-05-11T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "a2a811b50a4c64f58274effb",
+      "sourceId": "openai",
+      "title": "Supercomputer networking to accelerate large scale AI training",
+      "url": "https://openai.com/index/mrc-supercomputer-networking/",
+      "publishedAt": "2026-05-05T10:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "36d441f5f7e46b6a54bbae3f",
+      "sourceId": "databricks",
+      "title": "10 trillion samples a day: Scaling beyond traditional monitoring infra at Databricks",
+      "url": "https://www.databricks.com/blog/10-trillion-samples-day-scaling-beyond-traditional-monitoring-infra-databricks",
+      "publishedAt": "2026-05-05T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "5c3d93bd7160f244287bb4ed",
+      "sourceId": "openai",
+      "title": "How OpenAI delivers low-latency voice AI at scale",
+      "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+      "publishedAt": "2026-05-04T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "2cb0912b2aa5562e5504ea0f",
+      "sourceId": "google",
+      "title": "Catalyzing scientific impact through global partnerships and open resources",
+      "url": "https://research.google/blog/catalyzing-scientific-impact-through-global-partnerships-and-open-resources/",
+      "publishedAt": "2026-05-01T16:37:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Data Mining & Modeling",
+      "topics": [
+        "data",
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "169e3a83d6ead3e579e11f8e",
+      "sourceId": "google",
+      "title": "Four ways Google Research scientists have been using Empirical Research Assistance",
+      "url": "https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/",
+      "publishedAt": "2026-04-29T21:07:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Data Mining & Modeling",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "85b0ca3c45b5c9931e3c1fa0",
+      "sourceId": "anthropic",
+      "title": "An update on recent Claude Code quality reports",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "publishedAt": "2026-04-23T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "9ad1c68e89568ef4e1d6915d",
+      "sourceId": "google",
+      "title": "It's all about the angle: Your photos, re-composed",
+      "url": "https://research.google/blog/its-all-about-the-angle-your-photos-re-composed/",
+      "publishedAt": "2026-04-22T17:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "ed9f2c4091ae02827c1a4446",
+      "sourceId": "google",
+      "title": "ReasoningBank: Enabling agents to learn from experience",
+      "url": "https://research.google/blog/reasoningbank-enabling-agents-to-learn-from-experience/",
+      "publishedAt": "2026-04-21T16:42:22Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "4fb8919576cc8d967c84f2c0",
+      "sourceId": "google",
+      "title": "Designing synthetic datasets for the real world: Mechanism design and reasoning from first principles",
+      "url": "https://research.google/blog/designing-synthetic-datasets-for-the-real-world-mechanism-design-and-reasoning-from-first-principles/",
+      "publishedAt": "2026-04-16T14:41:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "b479c17f32ca19a1972186fe",
+      "sourceId": "google",
+      "title": "AI-generated synthetic neurons speed up brain mapping",
+      "url": "https://research.google/blog/ai-generated-synthetic-neurons-speed-up-brain-mapping/",
+      "publishedAt": "2026-04-16T12:18:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "General Science",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "281396d0eace67323a0c884e",
+      "sourceId": "google",
+      "title": "Towards developing future-ready skills with generative AI",
+      "url": "https://research.google/blog/towards-developing-future-ready-skills-with-generative-ai/",
+      "publishedAt": "2026-04-13T18:15:59Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Education Innovation",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "7516481b7fb444d5f35f0eae",
+      "sourceId": "google",
+      "title": "ConvApparel: Measuring and bridging the realism gap in user simulators",
+      "url": "https://research.google/blog/convapparel-measuring-and-bridging-the-realism-gap-in-user-simulators/",
+      "publishedAt": "2026-04-09T11:22:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "aabb9c1c0739999cb14a7f87",
+      "sourceId": "google",
+      "title": "Improving the academic workflow: Introducing two AI agents for better figures and peer review",
+      "url": "https://research.google/blog/improving-the-academic-workflow-introducing-two-ai-agents-for-better-figures-and-peer-review/",
+      "publishedAt": "2026-04-08T20:01:33Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "announcement"
+    },
+    {
+      "id": "8537165d23c701b725b2bce4",
+      "sourceId": "anthropic",
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+      "url": "https://www.anthropic.com/engineering/managed-agents",
+      "publishedAt": "2026-04-08T00:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "edc350c678eb564991a21378",
+      "sourceId": "google",
+      "title": "Evaluating alignment of behavioral dispositions in LLMs",
+      "url": "https://research.google/blog/evaluating-alignment-of-behavioral-dispositions-in-llms/",
+      "publishedAt": "2026-04-03T08:00:00Z",
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "Generative AI",
+      "topics": [
+        "ai",
+        "data"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "f5fd6d5f46fb1c5b4d14957f",
+      "sourceId": "together",
+      "title": "How a global fintech scaled coding agent traffic with Dedicated Model Inference",
+      "url": "https://www.together.ai/blog/global-fintech-scales-coding-agent-traffic-with-dedicated-model-inference",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "f5fcd5096bdf7eb8f7f03ed5",
+      "sourceId": "together",
+      "title": "GLM-5.3 vs. Claude Fable 5 on DeepSWE: Cost, Coding, and Routing",
+      "url": "https://www.together.ai/blog/glm-5-3-vs-claude-fable-5-on-deepswe-cost-coding-and-routing",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "f0dc85dcc6d3444f64828299",
+      "sourceId": "deepmind",
+      "title": "Piloting the world's first double-blind AI evaluations",
+      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "ebc5821a44c45c7a5386a7b9",
+      "sourceId": "deepmind",
+      "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "e86ae8aa8923c7c63b109267",
+      "sourceId": "together",
+      "title": "Together AI at NVIDIA GTC 2026: Explore our latest innovations across research and products",
+      "url": "https://www.together.ai/blog/together-ai-at-nvidia-gtc-2026",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "e3be1bdd382547fbdb0426ba",
+      "sourceId": "together",
+      "title": "ThunderAgent: 2x Faster Agentic Inference for Synthetic Data Generation at Scale",
+      "url": "https://www.together.ai/blog/thunderagent",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "data"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d9e3b4db045ba75bcce253bf",
+      "sourceId": "together",
+      "title": "The production platform for open-weight AI inference",
+      "url": "https://www.together.ai/blog/the-production-platform-for-open-weight-ai-inference",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "d656bdaac72c3c1db5990b8f",
+      "sourceId": "together",
+      "title": "DeepSeek-V4 Flash 0731 vs GPT-5.6 Luna on DeepSWE: Cost and Coding",
+      "url": "https://www.together.ai/blog/deepseek-v4-flash-0731-vs-gpt-5-6-luna-on-deepswe-cost-and-coding",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "cbc5828756e2a10b15dd6e4a",
+      "sourceId": "together",
+      "title": "Together AI expands fine-tuning service with more models, live metrics, and finer controls",
+      "url": "https://www.together.ai/blog/together-ai-expands-fine-tuning-service-with-more-models-live-metrics-and-finer-controls",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "c26c8d5a4e90c67829e9c660",
+      "sourceId": "deepmind",
+      "title": "Putting sign language AI into users’ hands",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "953ae495dfd59d6e65b7a290",
+      "sourceId": "together",
+      "title": "Serving MiniMax-M3 for efficient inference: Unlocking 1M-Token Context and Multimodality Without Regrets",
+      "url": "https://www.together.ai/blog/serving-minimax-m3-for-efficient-inference-unlocking-1m-token-context-and-multimodality-without-regrets",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "76900827bd8bbfff398d6c8f",
+      "sourceId": "deepmind",
+      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "767b1876e97da031e53ab648",
+      "sourceId": "together",
+      "title": "GLM-5.3 vs. GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing",
+      "url": "https://www.together.ai/blog/glm-5-3-vs-gpt-5-6-sol-on-deepswe-cost-coding-and-routing",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "762cfb378a5efc9f4a5712af",
+      "sourceId": "together",
+      "title": "Kimi K2.7 Code vs Claude Fable 5: Landing pages that cost 94% less",
+      "url": "https://www.together.ai/blog/kimi-k2-7-code-vs-claude-fable-5",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "717fa9f8dfb15940de0a8bd1",
+      "sourceId": "together",
+      "title": "What is an AI Native Cloud?",
+      "url": "https://www.together.ai/blog/what-is-an-ai-native-cloud",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "70074ab93bb7f58aeed95643",
+      "sourceId": "together",
+      "title": "Together AI brings Thinking Machines Lab’s new model Inkling on day 0",
+      "url": "https://www.together.ai/blog/together-ai-brings-thinking-machines-labs-new-model-inkling-on-day-0",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "64af1d1a2fd48283363f2a58",
+      "sourceId": "anthropic",
+      "title": "How we contain Claude across products",
+      "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "security"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "61d9e4b0f1259a055ae20840",
+      "sourceId": "together",
+      "title": "Inside the Together AI kernels team",
+      "url": "https://www.together.ai/blog/inside-the-together-ai-kernels-team",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "56dedafc3795255b9cd3abb3",
+      "sourceId": "together",
+      "title": "Foundational research powering efficient inference at scale",
+      "url": "https://www.together.ai/blog/foundational-research-powering-efficient-inference-at-scale",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "reliability"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4f79d1d276a7df16b91d3b68",
+      "sourceId": "together",
+      "title": "Configuring Dedicated Model Inference",
+      "url": "https://www.together.ai/blog/configuring-dedicated-model-inference",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4ef49bb651c3f69a108f24dd",
+      "sourceId": "together",
+      "title": "New in Together GPU Clusters: Reliability and control for production GPU clusters",
+      "url": "https://www.together.ai/blog/new-in-together-gpu-clusters-reliability-and-control-for-production-gpu-clusters",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "reliability",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4ed856e7925d24dd773b0c45",
+      "sourceId": "together",
+      "title": "DeepSeek V4 Pro 0813 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing",
+      "url": "https://www.together.ai/blog/deepseek-v4-pro-0813-vs-gpt-5-6-sol-on-deepswe-cost-coding-and-routing",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4eceec3f112ab0dfca840388",
+      "sourceId": "together",
+      "title": "What does 99.9% uptime mean for inference?",
+      "url": "https://www.together.ai/blog/99-9-uptime-for-inference",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "4c3ac510f9bcf4f72c40a63d",
+      "sourceId": "together",
+      "title": "Together AI at ICML 2026: frontier research across the full stack",
+      "url": "https://www.together.ai/blog/icml-2026",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3fd7b9ca87dd01986a1cc0a3",
+      "sourceId": "cursor",
+      "title": "“We’re building toward a future of self-driving codebases, where agents merge PRs, manage rollouts, and monitor production.” From “Towards self-driving codebases” Read more →",
+      "url": "https://cursor.com/blog/self-driving-codebases",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "3aed471f86e7be108d7d255c",
+      "sourceId": "together",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "url": "https://www.together.ai/blog/flashattention-4",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "architecture",
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "31d067cccd3af44f8c11835f",
+      "sourceId": "together",
+      "title": "Building trust in enterprise AI: Together AI earns ISO 27001:2022 certification",
+      "url": "https://www.together.ai/blog/iso-27001-2022-certification",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "2f25902add89bdb8608ebbf6",
+      "sourceId": "together",
+      "title": "Key research and product announcements at the AI Native Conf",
+      "url": "https://www.together.ai/blog/ai-native-conf-research-and-product-announcements",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "2db059e354491f3e59c405d2",
+      "sourceId": "together",
+      "title": "Benchmarking inference at scale: coding agents",
+      "url": "https://www.together.ai/blog/coding-agent-benchmarks",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "architecture",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "2ab45f3fec065b4e6504bad7",
+      "sourceId": "together",
+      "title": "The Open Source AI Stack",
+      "url": "https://www.together.ai/blog/the-open-source-ai-stack",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "259bfaa461ceb6c5bbafab2c",
+      "sourceId": "together",
+      "title": "Kimi K3 vs Claude Fable 5 on DeepSWE: Cost and Coding",
+      "url": "https://www.together.ai/blog/kimi-k3-vs-claude-fable-5-on-deepswe-cost-and-coding",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "1043d9fe80283e6f409b90e0",
+      "sourceId": "deepmind",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "security"
+      ],
+      "type": "research"
+    },
+    {
+      "id": "0e9ac5bce6f0e6e83ad19ea2",
+      "sourceId": "together",
+      "title": "Kimi K3: the complete developer guide",
+      "url": "https://www.together.ai/blog/kimi-k3-guide",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "devtools",
+        "ai"
+      ],
+      "type": "tutorial"
+    },
+    {
+      "id": "0c779611c409218ffcfbb468",
+      "sourceId": "together",
+      "title": "Together AI and Y Combinator partner to launch the first dedicated GPU cluster for the YC community",
+      "url": "https://www.together.ai/blog/together-yc-gpu-cluster",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "0b8d9dce8cff70c8cd220882",
+      "sourceId": "together",
+      "title": "Kimi K3 vs GPT-5.6 Sol on DeepSWE: Cost, Coding, and Routing",
+      "url": "https://www.together.ai/blog/kimi-k3-vs-gpt-5-6-sol-on-deepswe-cost-coding-and-routing",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai",
+        "devtools"
+      ],
+      "type": "case-study"
+    },
+    {
+      "id": "010aa2a729146f3ccfd8a7ff",
+      "sourceId": "together",
+      "title": "Autoscaling endpoints for LLM inference",
+      "url": "https://www.together.ai/blog/autoscaling-endpoints-for-llm-inference",
+      "publishedAt": null,
+      "updatedAt": null,
+      "firstSeenAt": "2026-09-30T05:06:43.980877Z",
+      "excerpt": "",
+      "topics": [
+        "ai"
+      ],
+      "type": "case-study"
+    }
+  ]
+}
