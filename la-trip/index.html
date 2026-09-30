@@ -7,8 +7,9 @@
   <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
   <title>Nine Days in Los Angeles · December ’26</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=craft-1">
-  <script src="app.js?v=craft-1" defer></script>
+  <link rel="stylesheet" href="../shared/motion.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=motion-1">
+  <script src="app.js?v=motion-1" defer></script>
   <script src="fluid.js?v=craft-1" defer></script>
   <script src="editor.js?v=craft-1" defer></script>
 </head>
@@ -44,7 +45,7 @@
           <p id="itinerary-storage" class="editor-storage" data-trip-storage>Edits save in this browser on this device.</p>
           <div class="itinerary-feedback"><p id="itinerary-feedback" data-trip-feedback role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" data-undo-trip class="text-link" hidden>Undo</button></div>
           <div id="timeline"></div>
-          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings and locations together, or import a backup on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
+          <details data-motion-disclosure class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings and locations together, or import a backup on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
           <p class="handwritten" id="day-note-title"></p>
           <details class="day-context"><summary>Day notes <span aria-hidden="true">+</span></summary><p id="day-description"></p><p id="day-note"></p><p class="small-note">Flight dates and times use the departure city’s local time. Game times are from your itinerary; ticket details are still to add.</p></details>
         </section>
@@ -71,7 +72,7 @@
     </section>
     <section id="packing" class="view" aria-labelledby="packing-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2 id="packing-title">Pack for California</h2></div><span class="packing-counter" id="packing-counter" aria-live="polite" aria-atomic="true"></span></div>
-      <div class="packing-summary"><div><span class="note-icon" data-icon="bag"></span><h3>A few layers. A good pair of shoes.</h3><p>Suggested essentials for city days, studio visits and cool evenings.</p></div><div class="packing-progress"><strong id="packing-percent">0%</strong><span>ready to go</span><progress id="packing-progress" value="0" max="1" aria-label="Packing progress"></progress></div></div>
+      <div class="packing-summary"><div><span class="note-icon" data-icon="bag"></span><h3>A few layers. A good pair of shoes.</h3><p>Suggested essentials for city days, studio visits and cool evenings.</p></div><div class="packing-progress"><strong id="packing-percent">0%</strong><span>ready to go</span><progress id="packing-progress" value="0" max="1" aria-label="Packing progress"></progress><div class="packing-meter" aria-hidden="true"><div id="packing-fill"></div></div></div></div>
       <p class="storage-note" id="storage-note"><span data-icon="device"></span>Checklist changes save on this device. They don’t sync between devices.</p>
       <div id="packing-groups" class="packing-grid"></div>
       <form id="add-packing" class="add-packing"><label for="new-packing">Something else to bring?</label><div><input type="text" id="new-packing" placeholder="e.g. Lakers jersey" maxlength="100" required autocomplete="off"><button type="submit" class="button primary"><span data-icon="plus"></span>Add item</button></div><p id="packing-feedback" class="small-note" role="status"></p></form>
@@ -80,7 +81,7 @@
     </main>
     <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
   </div>
-  <dialog id="itinerary-editor" aria-labelledby="editor-title" aria-describedby="editor-context">
+  <dialog data-motion-dialog id="itinerary-editor" aria-labelledby="editor-title" aria-describedby="editor-context">
     <form id="itinerary-form" novalidate>
       <header class="editor-heading"><div><p class="eyebrow" id="editor-context"></p><h2 id="editor-title">Edit event</h2></div><button type="button" class="plain-icon" id="close-editor" aria-label="Close editor">✕</button></header>
       <fieldset id="event-fields" class="editor-fields">

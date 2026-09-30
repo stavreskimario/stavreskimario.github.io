@@ -1,6 +1,6 @@
 # Mario’s Codex sites
 
-This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, the root `README.md` and `hello-world/README.md` before creating or updating an app.
+This repository is a public, buildless GitHub Pages collection. Read `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, `docs/ANIMATION_GUIDE.md`, the root `README.md` and `hello-world/README.md` before creating or updating an app. For motion changes, also read `docs/ANIMATION_RECIPES.md`.
 
 ## Branch and pull request workflow
 
@@ -23,7 +23,7 @@ Do not overwrite another app, remove unknown files, force-push, or change the pu
 
 - Preserve the established bone paper, Instrument Serif display type, DM Sans body and Caveat handwriting. Mario explicitly rejected a generic white/system-font redesign. Apple-inspired behavior belongs on top of this visual identity.
 - Reuse `shared/theme.css` and `shared/ui.js` for new apps. Put app-specific CSS and JS inside the app folder. Shared-file changes affect every consuming app: verify the collection and Hello World when changing them.
-- `la-trip/` is the original, self-contained reference implementation. It is intentionally not silently migrated to shared assets: preserve its appearance, Google map embeds, Google/Apple link choice, all nine days and device-local packing state unless explicitly asked to change them.
+- `la-trip/` is the original reference implementation, retaining its local theme and gesture engine. It explicitly opts into `shared/motion.css` for motion tokens and native details/dialog recipes; do not silently migrate its other assets. Preserve its appearance, Google map embeds, Google/Apple link choice, all nine days and device-local packing state unless explicitly asked to change them.
 - Do not put implementation instructions in a product’s main flow. The Hello World README and DESIGN.md carry the developer instructions.
 - Keep app paths relative: `./app.js`, `./assets/photo.jpg`, `../shared/theme.css`, `../` for the collection. Avoid root-absolute paths so the collection can also live under a project Pages URL.
 - Use semantic buttons, links, forms, labels and native details. Scope delegated clicks to actionable elements, e.g. `button[data-style]`, not a broad `[data-view]` selector that can accidentally match the body and swallow unrelated clicks.
@@ -35,6 +35,8 @@ Do not overwrite another app, remove unknown files, force-push, or change the pu
 ## UI craft reviews
 
 Follow the motion decision framework and application rules in `DESIGN.md`. Keyboard/AT actions and frequent content updates stay immediate; preserve functional gesture springs and the established visual identity. Treat the reference's decorative patterns as optional, not a feature checklist.
+
+Use `docs/ANIMATION_GUIDE.md` to justify purpose/frequency and `docs/ANIMATION_RECIPES.md` to implement and review. Opt into `shared/motion.css` deliberately; it does not make an app accessible by itself. Saving, ARIA, focus and native open/close state commit immediately. Keep transitions interruptible and verify the static fallback, input switching and reduced motion.
 
 UI reviews and UI-change PR descriptions must use a Markdown **Before | After | Why** table, one row per finding. Include concrete interaction checks and honestly state any physical-device coverage gap.
 

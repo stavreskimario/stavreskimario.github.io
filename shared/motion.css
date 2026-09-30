@@ -1,0 +1,84 @@
+/* Opt-in motion recipes. See docs/ANIMATION_GUIDE.md for purpose and input rules. */
+:root {
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+  --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+  --motion-feedback: 160ms;
+  --motion-disclosure: 200ms;
+  --motion-dialog-in: 180ms;
+  --motion-dialog-out: 120ms;
+}
+
+/* Native details keep their focus/keyboard semantics. Intrinsic-size interpolation
+   is an explicit layout exception for occasional disclosures, not reading lists.
+   Browsers without these features retain an ordinary, instant disclosure. */
+@supports (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) and selector(details::details-content) {
+  details[data-motion-disclosure] { interpolate-size: allow-keywords; }
+  /* Establish both static states before pointer-down, including the first tap. */
+  details[data-motion-disclosure]::details-content { height: 0; overflow: clip; }
+  details[data-motion-disclosure][open]::details-content { height: auto; }
+  /* Keyboard focus outlines may extend beyond the content's edge. */
+  html:not([data-input=pointer]) details[data-motion-disclosure]::details-content { overflow: visible; }
+  @media (prefers-reduced-motion: no-preference) {
+    html[data-input=pointer] details[data-motion-disclosure]::details-content {
+      transition: height var(--motion-disclosure) var(--ease-out),
+        content-visibility var(--motion-disclosure) allow-discrete;
+    }
+  }
+}
+
+/* Closing releases focus/inertness immediately. Only the visual exit lingers;
+   its surface/backdrop cannot intercept another click or block a reopen. */
+@supports (transition-behavior: allow-discrete) {
+  dialog[data-motion-dialog] {
+    opacity: 0;
+    transform: scale(.97);
+    transform-origin: center;
+    transition: opacity var(--motion-dialog-out) var(--ease-out),
+      transform var(--motion-dialog-out) var(--ease-out),
+      display var(--motion-dialog-out) allow-discrete,
+      overlay var(--motion-dialog-out) allow-discrete;
+  }
+  dialog[data-motion-dialog][open] {
+    opacity: 1;
+    transform: scale(1);
+    transition-duration: var(--motion-dialog-in);
+  }
+  dialog[data-motion-dialog]:not([open]),
+  dialog[data-motion-dialog]:not([open])::backdrop { pointer-events: none; }
+  dialog[data-motion-dialog]::backdrop {
+    opacity: 0;
+    transition: opacity var(--motion-dialog-out) var(--ease-out),
+      display var(--motion-dialog-out) allow-discrete,
+      overlay var(--motion-dialog-out) allow-discrete;
+  }
+  dialog[data-motion-dialog][open]::backdrop {
+    opacity: 1;
+    transition-duration: var(--motion-dialog-in);
+  }
+  @starting-style {
+    dialog[data-motion-dialog][open] { opacity: 0; transform: scale(.97); }
+    dialog[data-motion-dialog][open]::backdrop { opacity: 0; }
+  }
+}
+
+html:not([data-input=pointer]) dialog[data-motion-dialog],
+html:not([data-input=pointer]) dialog[data-motion-dialog]::backdrop {
+  transition: none;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog[data-motion-dialog], dialog[data-motion-dialog]::backdrop {
+    transition: none;
+    transform: none;
+  }
+}
+/* Suspend decoration when the tab is hidden; never replay it on return. */
+html[data-motion-paused] dialog[data-motion-dialog],
+html[data-motion-paused] dialog[data-motion-dialog]::backdrop,
+html[data-motion-paused] details[data-motion-disclosure]::details-content {
+  transition: none !important;
+}
+@media print {
+  details[data-motion-disclosure]::details-content { height: auto !important; }
+}

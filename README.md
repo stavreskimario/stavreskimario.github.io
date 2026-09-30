@@ -73,7 +73,7 @@ cp -R hello-world my-app
 3. Run `python3 scripts/validate.py` and check the app’s actual interactions, mobile layout and accessibility.
 4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. After the pull request is merged, verify the matching Pages deployment and live app URL.
 
-See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [UI craft reference](docs/UI_CRAFT_REFERENCE.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
+See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [UI craft reference](docs/UI_CRAFT_REFERENCE.md), [animation guide](docs/ANIMATION_GUIDE.md), [animation recipes and review](docs/ANIMATION_RECIPES.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. LA keeps its local theme and gesture engine, with an explicit opt-in to shared native motion recipes.
 
 ## Repository layout
 
@@ -86,6 +86,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [
 | `scripts/engineering-feed/` | Bounded, standard-library collection and whole-site staging |
 | `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, `AGENTS.md` | Design decisions, UI craft reference, interaction rules and development lessons |
+| `docs/ANIMATION_GUIDE.md`, `docs/ANIMATION_RECIPES.md` | Purpose, timing, accessible implementation and motion review, with attributed references |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
 
 ## Development and publishing
@@ -106,4 +107,4 @@ GitHub Pages deploys the **root of `main`** using the existing Pages workflow. K
 
 UI changes follow the [motion decision rules](DESIGN.md#ui-craft-and-motion-decisions) and include a Before/After/Why review table. The LA planner keeps keyboard navigation immediate and uses restrained pointer feedback while preserving its journal styling. Its saved edits remain device-local.
 
-Browser regressions are in `tests/la-scroll.cjs` and `tests/la-craft.cjs`; setup commands are at the top of each file. These supplement the static validator and cover relevant touch, keyboard, layout and motion behavior.
+Browser regressions are in `tests/animations.cjs`, `tests/engineering-journal.cjs`, `tests/la-scroll.cjs` and `tests/la-craft.cjs`; [setup and commands](docs/ANIMATION_RECIPES.md#review-and-test) install test tools outside the repository. These supplement the static validator and cover touch, keyboard, layout, motion and saved-state behavior. The animation references are attributed in [third-party notices](docs/THIRD_PARTY_NOTICES.md).

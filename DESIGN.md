@@ -34,6 +34,8 @@ Load `../shared/theme.css`, then app-local CSS. Load the deferred `../shared/ui.
 
 Press feedback is delegated automatically to buttons, links, summaries and optional `[data-press]` targets. Don’t initialise a second press controller. CSS `:active` provides immediate colour feedback; the spring carries press/release scale continuously. Native keyboard activation remains intact.
 
+`../shared/motion.css` is a separate optional import before app-local CSS. Its explicit data attributes enable native details/dialog recipes; it also supplies easing and 160ms feedback, 200ms disclosure, 180ms dialog-entry and 120ms dialog-exit tokens. See the [animation guide](docs/ANIMATION_GUIDE.md) and [implementation/review recipes](docs/ANIMATION_RECIPES.md). Apps own input tracking and instant semantic state updates.
+
 ## Fluid behavior
 
 1. **Response:** highlight on pointer-down, commit on click/touch-up. No arbitrary debounces, timers or transition locks in the input path. `touch-action: manipulation` on controls avoids legacy tap delay. Update form state immediately and report meaningful completion inline.
@@ -73,7 +75,7 @@ Persistent toolbars do not need entrance theatrics. A future transient material 
 
 ## Extending the collection
 
-The collection renders apps.json with DOM APIs; invalid data or a failed fetch leaves usable static links and an honest status message. The manifest is navigation, not access control: unlisted folders remain public. Never put secrets in a static app. New product-specific behavior belongs inside the copied folder; shared primitives should stay generic. Existing LA-specific code remains self-contained to avoid an unrequested migration/regression.
+The collection renders apps.json with DOM APIs; invalid data or a failed fetch leaves usable static links and an honest status message. The manifest is navigation, not access control: unlisted folders remain public. Never put secrets in a static app. New product-specific behavior belongs inside the copied folder; shared primitives should stay generic. LA retains its local theme and gesture engine, with an explicit opt-in to shared native motion recipes.
 
 
 ## UI craft and motion decisions
@@ -106,4 +108,4 @@ Every UI code review and UI-change PR description must include one actual Markdo
 
 ### Current implementation scope
 
-The LA planner applies this policy in its local motion layer: immediate keyboard/AT actions, immediate day content, pointer-only press scale written to the element, gated hover rules and a short centered native-dialog transition. The shared starter retains its existing implementation; new work must apply this policy and verify any shared primitive changes across its consumers. Documentation of the policy is not a claim that every existing app has been migrated.
+LA Trip and Engineering Journal explicitly use `shared/motion.css` for short native dialogs and occasional disclosures. LA adds a decorative packing fill alongside native progress and retains its gesture engine. The Journal adds a view underline and bookmark fill while updating list content instantly and retaining unchanged article DOM. Both keep keyboard/AT and reduced-motion feedback immediate, gate hover rules and stop decorative transitions while hidden. Native disclosure height is a bounded 200ms layout exception, with an instant unsupported-browser fallback. The collection and shared starter retain their existing implementation; new work must apply this policy and verify any shared primitive changes across consumers. Documentation is not a claim that every existing app has been migrated.

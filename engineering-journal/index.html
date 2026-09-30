@@ -8,9 +8,10 @@
   <title>Engineering Journal · Mario’s Sites</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Ctext x='8' y='30' font-family='Georgia' font-size='30' fill='%23ad5738'%3Ee%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="../shared/theme.css?v=1">
-  <link rel="stylesheet" href="./styles.css?v=1">
+  <link rel="stylesheet" href="../shared/motion.css?v=1">
+  <link rel="stylesheet" href="./styles.css?v=motion-1">
   <script src="../shared/ui.js?v=1" defer></script>
-  <script src="./app.js?v=1" defer></script>
+  <script src="./app.js?v=motion-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-list">Skip to articles</a>
@@ -52,7 +53,7 @@
         </div>
         <div class="reader-layout">
           <aside class="filter-sidebar" aria-label="Reading filters">
-            <details id="filter-details" open>
+            <details data-motion-disclosure id="filter-details" open>
               <summary>Refine your reading <span id="filter-count"></span></summary>
               <div class="filter-content">
                 <fieldset><legend>From the teams at</legend><div id="company-options" class="company-options"></div></fieldset>
@@ -67,7 +68,7 @@
             <div id="topic-options" class="topic-options" role="group" aria-label="Topics"></div>
             <div id="saved-tools" hidden>
               <p class="saved-intro">Your reading list, saved on this browser. No account or cloud sync.</p>
-              <details class="backup-tools"><summary>Back up or move your reading list</summary><div class="backup-actions"><button id="export-saved" type="button" class="button secondary">Export reading list</button><label class="button secondary" for="import-saved">Import a backup</label><input id="import-saved" type="file" accept="application/json,.json" class="sr-only"></div><p class="small muted">Imports merge with your existing list. Exported files contain your saved articles and read status.</p></details>
+              <details data-motion-disclosure class="backup-tools"><summary>Back up or move your reading list</summary><div class="backup-actions"><button id="export-saved" type="button" class="button secondary">Export reading list</button><label class="button secondary" for="import-saved">Import a backup</label><input id="import-saved" type="file" accept="application/json,.json" class="sr-only"></div><p class="small muted">Imports merge with your existing list. Exported files contain your saved articles and read status.</p></details>
             </div>
             <div class="list-heading"><h2 id="list-title" tabindex="-1">The latest</h2><span id="result-count" class="muted small" role="status"></span></div>
             <div id="reading-list" tabindex="-1" aria-busy="true"></div>
@@ -84,6 +85,6 @@
     </main>
     <footer class="journal-footer"><p>Good engineering is worth reading about.</p><a href="../">Back to all apps ↗</a><span>Read at the source. Save for yourself.</span></footer>
   </div>
-  <dialog id="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Bring your reading list along.</h2><p id="import-description"></p><div class="backup-actions"><button type="button" id="confirm-import" class="button">Merge reading list</button><button type="button" id="cancel-import" class="button secondary">Cancel</button></div></dialog>
+  <dialog data-motion-dialog id="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Bring your reading list along.</h2><p id="import-description"></p><div class="backup-actions"><button type="button" id="confirm-import" class="button">Merge reading list</button><button type="button" id="cancel-import" class="button secondary">Cancel</button></div></dialog>
 </body>
 </html>
