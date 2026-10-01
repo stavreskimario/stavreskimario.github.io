@@ -51,10 +51,51 @@ const root=path.resolve(__dirname,'..');
   s=await snap();assert(s.days.find(d=>d.date===24).events.some(e=>e.title==='Reviewed café'&&e.status==='proposed'));assert(s.companion.ideas.some(e=>e.title==='An idea for later'));
   console.log('PASS reviewed text import into ideas and itinerary');
 
-  await go('documents');await page.getByRole('button',{name:'Add document',exact:true}).click();await page.locator('#travel-event').selectOption('day-20-event-1');await page.locator('#travel-file').setInputFiles({name:'ticket.txt',mimeType:'text/plain',buffer:Buffer.from('A test ticket only')});await save();
+  await go('documents');await page.getByRole('button',{name:'Add document',exact:true}).click();await page.locator('#travel-event').selectOption('day-20-event-1');
+  // Some file pickers omit MIME metadata. Exercise that exact File through the form.
+  await page.locator('#travel-file').evaluate(input=>{const transfer=new DataTransfer();transfer.items.add(new File(['A test ticket only'],'ticket.txt'));input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));});
+  assert.equal(await page.locator('#travel-file').evaluate(input=>input.files[0].type),'');await save();
   assert(await page.getByRole('heading',{name:'ticket.txt',exact:true}).isVisible());
   await page.reload();await go('documents');await page.waitForSelector('text=ticket.txt');
   await page.getByRole('button',{name:'Remove',exact:true}).click();await page.waitForSelector('text=Undo document removal');await page.getByRole('button',{name:'Undo document removal',exact:true}).click();await page.waitForSelector('text=ticket.txt');
+  const fileChecks=await page.evaluate(async()=>{
+   const canvas=document.createElement('canvas');canvas.width=canvas.height=1;
+   const image=type=>new Promise(resolve=>canvas.toBlob(resolve,type));
+   const jpeg=await image('image/jpeg');
+   const fixtures=[
+    {name:'ticket.PDF',type:'application/pdf',data:new Blob(['%PDF-1.4\n% Test signature fixture\n%%EOF'])},
+    {name:'ticket.PNG',type:'image/png',data:await image('image/png')},
+    {name:'ticket.JPG',type:'image/jpeg',data:jpeg},
+    {name:'ticket.jpeg',type:'image/jpeg',data:jpeg},
+    {name:'ticket.WeBp',type:'image/webp',data:await image('image/webp')},
+    {name:'ticket.TXT',type:'text/plain',data:new Blob(['Travel notes: café ☀'])}
+   ];
+   const accepted=[];
+   for(const metadata of ['', 'application/octet-stream', 'binary/octet-stream']){
+    for(const fixture of fixtures){
+     const record=await TripDocuments.add(new File([fixture.data],fixture.name,{type:metadata}));
+     accepted.push({name:record.name,type:record.type,expected:fixture.type});
+     await TripDocuments.remove(record.id);
+    }
+   }
+   const before=JSON.stringify(await TripDocuments.all()),rejected=[];
+   const invalid=[
+    new File(['Not an image'],'fake.png'),
+    new File(['Not a PDF'],'fake.pdf',{type:'application/octet-stream'}),
+    new File([jpeg],'wrong.webp',{type:'binary/octet-stream'}),
+    new File([jpeg],'declared.png',{type:'image/png'}),
+    new File(['<html>Not supported</html>'],'page.txt',{type:'text/html'}),
+    new File(['Not supported'],'unknown.bin'),
+    new File(['Not an extension'],'txt')
+   ];
+   for(const file of invalid){try{await TripDocuments.add(file);rejected.push(false);}catch{rejected.push(true);}}
+   const saved=(await TripDocuments.all())[0];
+   for(const type of ['', 'application/octet-stream']){try{TripDocuments.validateList([{...saved,type}]);rejected.push(false);}catch{rejected.push(true);}}
+   return {accepted,rejected,unchanged:before===JSON.stringify(await TripDocuments.all())};
+  });
+  assert.equal(fileChecks.accepted.length,18);for(const file of fileChecks.accepted)assert.equal(file.type,file.expected,file.name);
+  assert.deepEqual(fileChecks.rejected,Array(9).fill(true));assert(fileChecks.unchanged);
+  console.log('PASS absent/generic upload MIME, canonical saved types, format checks and strict backup types');
   await go('travel');const backupDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Download complete backup',exact:true}).click();const backup=JSON.parse(await fs.readFile(await (await backupDownload).path(),'utf8'));
   assert.equal(backup.documents.length,1);assert.equal(backup.plan.companion.expenses.length,1);assert.equal(backup.packing.length,22);assert.equal(backup.plan.days.length,9);
   const beforeBad=await snap();await page.locator('#complete-backup-input').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...backup,documents:[{...backup.documents[0],type:'text/html'}]}))});await page.waitForFunction(()=>document.querySelector('#tools-feedback').textContent.includes('has not changed'));assert.deepEqual(await snap(),beforeBad);

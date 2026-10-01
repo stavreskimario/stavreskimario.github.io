@@ -5,6 +5,13 @@ window.TripDocuments = (() => {
  const MAX_FILE = 5 * 1024 * 1024, MAX_TOTAL = 20 * 1024 * 1024, MAX_COUNT = 40;
  let database;
  const allowed = ['application/pdf','image/png','image/jpeg','image/webp','text/plain'];
+ const extensions = {'.pdf':'application/pdf','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.txt':'text/plain'};
+ function uploadType(file) {
+  // Some file pickers leave File.type empty or generic. Infer only at upload;
+  // validate still checks binary signatures and backup records remain strict.
+  if (file.type && file.type !== 'application/octet-stream' && file.type !== 'binary/octet-stream') return file.type;
+  return extensions[file.name.slice(file.name.lastIndexOf('.')).toLowerCase()] || '';
+ }
  function open() {
   if (database) return database;
   database = new Promise((resolve,reject) => {
@@ -67,7 +74,7 @@ window.TripDocuments = (() => {
  async function add(file,event = '',eventTitle = '') {
   if (!file || file.size > MAX_FILE || file.size < 1) throw new Error('Choose a file between 1 byte and 5 MB.');
   const data = await new Promise((resolve,reject) => { const reader = new FileReader(); reader.onload = () => resolve(String(reader.result).split(',')[1]); reader.onerror = () => reject(new Error('Could not read this file.')); reader.readAsDataURL(file); });
-  const record = validate({id:`file-${crypto.randomUUID()}`,name:file.name,event,eventTitle,type:file.type,size:file.size,data});
+  const record = validate({id:`file-${crypto.randomUUID()}`,name:file.name,event,eventTitle,type:uploadType(file),size:file.size,data});
   await merge([record]); return record;
  }
  async function remove(id) {

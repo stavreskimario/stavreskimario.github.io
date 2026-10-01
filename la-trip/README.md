@@ -34,7 +34,7 @@ Amounts are integer cents; each converted expense and share rounds once to the n
 
 ## Tickets and documents
 
-Use **Tickets & documents** on an activity or **Trip tools → Tickets**. PDFs, PNGs, JPEGs, WebP images and text files are stored in this origin’s IndexedDB. Limits: 5 MB per file, 20 MB combined and 40 files. Basic MIME/signature checks reject mismatched formats. Files are downloaded/opened through a blob URL, not interpolated as HTML.
+Use **Tickets & documents** on an activity or **Trip tools → Tickets**. PDFs, PNGs, JPEGs, WebP images and text files are stored in this origin’s IndexedDB. Limits: 5 MB per file, 20 MB combined and 40 files. When a file picker omits the MIME type or returns a generic binary type, the upload uses the supported filename extension (case-insensitive). Basic MIME/signature checks still reject mismatched binary formats; backup imports require an explicit supported type. Files are downloaded/opened through a blob URL, not interpolated as HTML.
 
 Files are never uploaded by this app or committed to GitHub. Anyone using the same browser profile/origin may be able to access them. Clearing site data removes them. Keep originals. A removed document can be restored with **Undo document removal** until another removal or reload. Removing an event retains its documents and original activity label. File storage errors are shown rather than silently treating an attachment as saved.
 
