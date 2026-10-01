@@ -7,10 +7,15 @@
   <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
   <title>Nine Days in Los Angeles · December ’26</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=craft-1">
-  <script src="app.js?v=craft-1" defer></script>
-  <script src="fluid.js?v=craft-1" defer></script>
-  <script src="editor.js?v=craft-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=travel-1">
+  <link rel="stylesheet" href="travel.css?v=travel-1">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="travel-core.js?v=travel-1" defer></script>
+  <script src="app.js?v=travel-1" defer></script>
+  <script src="fluid.js?v=travel-1" defer></script>
+  <script src="editor.js?v=travel-1" defer></script>
+  <script src="documents.js?v=travel-1" defer></script>
+  <script src="companion.js?v=travel-1" defer></script>
 </head>
 <body data-view="itinerary">
   <a class="skip-link" href="#main">Skip to trip content</a>
@@ -19,7 +24,7 @@
       <a class="wordmark" href="#itinerary" data-view="itinerary">Mario’s trip book<span>CALIFORNIA / DECEMBER 2026</span></a>
       <nav class="main-nav" aria-label="Trip sections">
         <a href="#itinerary" data-view="itinerary" aria-current="page"><span data-icon="calendar"></span>Itinerary</a>
-        <a href="#reservations" data-view="reservations"><span data-icon="ticket"></span>Bookings</a>
+        <a href="#tools" data-view="tools"><span data-icon="spark"></span>Trip tools</a>
         <a href="#maps" data-view="maps"><span data-icon="map"></span>Maps</a>
         <a href="#packing" data-view="packing"><span data-icon="bag"></span>Packing<span id="nav-pack-count" class="nav-count">0</span></a>
       </nav>
@@ -37,6 +42,7 @@
           <p class="strip-caption">Choose a day to open its plan.</p>
         </section>
         <section class="day-main" aria-labelledby="day-title">
+          <section id="trip-now" class="trip-now" aria-label="Trip at a glance"></section>
           <div class="day-heading"><p class="eyebrow" id="day-number" aria-live="polite" aria-atomic="true"></p><div class="day-arrows"><button id="prev-day" class="plain-icon" aria-label="Previous day"><span data-icon="left"></span></button><button id="next-day" class="plain-icon" aria-label="Next day"><span data-icon="right"></span></button></div></div>
           <h2 id="day-title"></h2>
           <div class="plan-heading"><h3>The day’s plan</h3><span>LA time · PST</span></div>
@@ -44,19 +50,20 @@
           <p id="itinerary-storage" class="editor-storage" data-trip-storage>Edits save in this browser on this device.</p>
           <div class="itinerary-feedback"><p id="itinerary-feedback" data-trip-feedback role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" data-undo-trip class="text-link" hidden>Undo</button></div>
           <div id="timeline"></div>
-          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings and locations together, or import a backup on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
+          <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings, locations, ideas and expenses together, or import a backup on another device. For documents and packing too, use Trip tools → Travel & backup.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
           <p class="handwritten" id="day-note-title"></p>
           <details class="day-context"><summary>Day notes <span aria-hidden="true">+</span></summary><p id="day-description"></p><p id="day-note"></p><p class="small-note">Flight dates and times use the departure city’s local time. Game times are from your itinerary; ticket details are still to add.</p></details>
         </section>
         <aside class="overview-side" aria-label="Reservations and map">
           <section class="reservation-peek" aria-labelledby="reservation-peek-title"><div class="panel-heading"><h2 id="reservation-peek-title">Reservations</h2><a href="#reservations" data-view="reservations">View all ↗</a></div><div id="reservation-peek-list"></div></section>
-          <section class="map-card" aria-labelledby="overview-map-title"><div class="panel-heading"><h2 id="overview-map-title">Map</h2><a href="#maps" data-view="maps">All places ↗</a></div><div class="map-viewport"><iframe id="day-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="map-caption"><strong id="day-map-name"></strong><span id="day-map-area"></span><div class="map-preferences compact"><span class="map-choice-label">Open with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div></div><a id="day-map-open" class="text-link" href="https://www.google.com/maps/" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> ↗</a></div></section>
+          <section class="map-card" aria-labelledby="overview-map-title"><div class="panel-heading"><h2 id="overview-map-title">Map</h2><a href="#maps" data-view="maps">All places ↗</a></div><div id="day-stops" class="day-stops"></div><div class="map-viewport"><iframe id="day-map" class="embedded-map" title="Interactive destination map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="map-caption"><strong id="day-map-name"></strong><span id="day-map-area"></span><div class="map-preferences compact"><span class="map-choice-label">Open with</span><div class="map-app-choice" role="group" aria-label="Map app for links and directions"><button type="button" data-map-provider="google" aria-pressed="true">Google Maps</button><button type="button" data-map-provider="apple" aria-pressed="false">Apple Maps</button></div></div><a id="day-map-open" class="text-link" href="https://www.google.com/maps/" target="_blank" rel="noopener noreferrer">Open in <span data-map-provider-name>Google Maps</span> ↗</a></div></section>
         </aside>
         <section class="places-peek" aria-labelledby="places-peek-title"><div class="panel-heading"><h2 id="places-peek-title">Places in your plan</h2><a href="#maps" data-view="maps">See all ↗</a></div><div id="places-peek-list"></div></section>
         <section class="packing-peek" aria-labelledby="packing-peek-title"><div class="panel-heading"><h2 id="packing-peek-title">Packing list</h2><a href="#packing" data-view="packing">See all ↗</a></div><div id="packing-peek-list" class="packing-peek-list"></div><div class="packing-peek-foot"><span id="peek-packing-count">0 packed</span><span id="peek-storage-note">Saved on this device</span></div></section>
       </section>
     <section id="reservations" class="view" aria-labelledby="reservations-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">THE DETAILS</p><h2 id="reservations-title">Reservations & plans</h2></div><span class="small-note">20–28 Dec 2026</span></div>
+      <p><a href="#tools" data-view="tools" class="text-link">← Trip tools</a></p>
       <p class="intro-copy">Your booking details, kept together. Add or update records here; itinerary events keep their own planning status. Saving a record does not make a reservation.</p>
       <div class="records-toolbar"><button type="button" class="button secondary" id="add-booking"><span data-icon="plus"></span>Add booking</button><button type="button" class="text-link" data-open-backup>Back up your trip</button></div><p class="editor-storage" data-trip-storage></p><div class="itinerary-feedback"><p data-trip-feedback role="status"></p><button type="button" class="text-link" data-undo-trip hidden>Undo</button></div>
       <div id="reservation-list" class="reservation-list"></div>
@@ -77,9 +84,26 @@
       <form id="add-packing" class="add-packing"><label for="new-packing">Something else to bring?</label><div><input type="text" id="new-packing" placeholder="e.g. Lakers jersey" maxlength="100" required autocomplete="off"><button type="submit" class="button primary"><span data-icon="plus"></span>Add item</button></div><p id="packing-feedback" class="small-note" role="status"></p></form>
     </section>
 
+    <section id="tools" class="view" aria-labelledby="tools-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE ROOM TO WANDER</p><h2 id="tools-title">Your trip companion</h2></div><a href="#reservations" data-view="reservations" class="button secondary"><span data-icon="ticket"></span>Bookings</a></div>
+      <p class="intro-copy">Ideas for later. The details for now. Everything you need along the way.</p>
+      <nav class="tools-nav" aria-label="Trip tools">
+        <button type="button" data-tool="ideas" aria-pressed="true">Ideas</button>
+        <button type="button" data-tool="expenses" aria-pressed="false">Expenses</button>
+        <button type="button" data-tool="documents" aria-pressed="false">Tickets</button>
+        <button type="button" data-tool="import" aria-pressed="false">Import plans</button>
+        <button type="button" data-tool="calendar" aria-pressed="false">Calendar</button>
+        <button type="button" data-tool="travel" aria-pressed="false">Travel & backup</button>
+      </nav>
+      <p id="tools-feedback" role="status"></p>
+      <div class="itinerary-feedback"><p data-trip-feedback role="status"></p><button type="button" class="text-link" data-undo-trip hidden>Undo trip change</button></div>
+      <div id="tool-content"></div>
+      <p class="editor-storage" data-trip-storage></p>
+    </section>
     </main>
-    <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
+    <footer><a href="../">All apps ↗</a><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
   </div>
+  <dialog id="travel-dialog" aria-labelledby="travel-dialog-title"><form id="travel-form" novalidate><header class="editor-heading"><h2 id="travel-dialog-title"></h2><button type="button" class="plain-icon" data-travel-close aria-label="Close">✕</button></header><div id="travel-fields" class="editor-fields"></div><p id="travel-error" class="editor-error" role="alert"></p><footer class="editor-footer"><button type="button" class="button danger" id="travel-delete" hidden>Remove</button><div><button type="button" class="button secondary" data-travel-close>Cancel</button><button type="submit" class="button primary" id="travel-save">Save</button></div></footer></form></dialog>
   <dialog id="itinerary-editor" aria-labelledby="editor-title" aria-describedby="editor-context">
     <form id="itinerary-form" novalidate>
       <header class="editor-heading"><div><p class="eyebrow" id="editor-context"></p><h2 id="editor-title">Edit event</h2></div><button type="button" class="plain-icon" id="close-editor" aria-label="Close editor">✕</button></header>
@@ -88,10 +112,25 @@
         <label class="full-field" for="event-title">Event name <span>(required)</span><input id="event-title" maxlength="160" required autocomplete="off"></label>
         <label for="event-day">Day<select id="event-day"></select></label>
         <label for="event-position">Position in the day<select id="event-position"></select></label>
-        <label for="event-time">Time<input id="event-time" maxlength="160" placeholder="e.g. 2:00 pm · PST or Afternoon"></label>
+        <label for="event-time">Time label<input id="event-time" maxlength="160" placeholder="e.g. 2:00 pm · PST or Afternoon"></label>
         <label for="event-status">Status<select id="event-status"><option value="proposed">Proposed</option><option value="plan">In itinerary</option><option value="booked">Booked</option></select></label>
         <label class="full-field" for="event-location">Location<input id="event-location" maxlength="240" placeholder="Venue or neighbourhood"></label>
         <label class="full-field" for="event-note">Notes<textarea id="event-note" rows="4" maxlength="5000" placeholder="Your plans and details"></textarea></label>
+        <details id="timing-details" class="editor-extras full-field"><summary>Exact times, travel & flight details</summary><p class="small-note">Optional. Use the times on your ticket. Calendar export and Up next use these exact times; otherwise your time label stays flexible.</p><div class="editor-fields">
+          <label for="timing-start">Start / departure / check-in<input type="datetime-local" id="timing-start"></label>
+          <label for="timing-zone">Start timezone<input id="timing-zone" list="trip-timezones" maxlength="80"></label>
+          <label for="timing-end">End / arrival / check-out<input type="datetime-local" id="timing-end"></label>
+          <label for="timing-endZone">End timezone<input id="timing-endZone" list="trip-timezones" maxlength="80"></label>
+          <label for="timing-mode">Travel to this activity<select id="timing-mode"><option value="driving">Drive / rideshare</option><option value="walking">Walk</option><option value="transit">Public transport</option><option value="bicycling">Cycle</option></select></label>
+          <label for="timing-travel">Travel estimate (minutes)<input id="timing-travel" type="number" min="0" max="1440" step="1" placeholder="Your estimate"></label>
+          <label for="timing-buffer">Arrive early (minutes)<input id="timing-buffer" type="number" min="0" max="1440" step="1"></label>
+          <p class="field-hint full-field">Travel estimates are yours, not live traffic. Check the map app before leaving.</p>
+          <label for="timing-flight">Flight number<input id="timing-flight" maxlength="20" placeholder="e.g. UA99"></label>
+          <label for="timing-departure">Departure airport<input id="timing-departure" maxlength="100"></label>
+          <label for="timing-arrival">Arrival airport<input id="timing-arrival" maxlength="100"></label>
+          <label for="timing-terminal">Terminal / gate<input id="timing-terminal" maxlength="100"></label>
+        </div></details>
+        <datalist id="trip-timezones"><option value="America/Los_Angeles"><option value="Australia/Melbourne"><option value="UTC"></datalist>
         <details class="editor-extras full-field" id="event-extras"><summary>Map, links & appearance</summary><div class="editor-fields">
           <label class="full-field" for="event-map">Saved map location<select id="event-map"></select></label>
           <label class="full-field" for="event-query">Custom map destination<input id="event-query" maxlength="500" placeholder="Place name or street address" aria-describedby="map-query-help"></label><p id="map-query-help" class="field-hint full-field">A custom destination takes priority over the saved location. Directions use your Google or Apple Maps choice.</p>
@@ -132,7 +171,7 @@
         <label class="full-field" for="location-source">Visitor website<input id="location-source" type="url" inputmode="url" maxlength="2000" placeholder="https://…"></label>
         <label class="full-field" for="location-day">Linked trip day<select id="location-day"></select></label>
       </fieldset>
-      <div id="import-preview" hidden><p id="import-summary"></p><p id="import-legacy-note" hidden></p><p>This replaces your current browser’s itinerary, bookings and map locations with the backup. You can undo it immediately afterwards. Packing and map preferences are kept.</p></div>
+      <div id="import-preview" hidden><p id="import-summary"></p><p id="import-legacy-note" hidden></p><p>This replaces your current browser’s itinerary, bookings and map locations with the backup. Version 3 backups also replace ideas, tasks and expenses; older backups keep those records. You can undo it immediately afterwards. Packing and map preferences are kept.</p></div>
       <p id="record-remove-note" class="field-hint" hidden></p>
       <p id="editor-error" class="editor-error" role="alert"></p>
       <footer class="editor-footer"><button type="button" id="remove-event" class="button danger">Remove event</button><div><button type="button" id="cancel-editor" class="button secondary">Cancel</button><button type="submit" id="save-event" class="button primary">Save event</button></div></footer>

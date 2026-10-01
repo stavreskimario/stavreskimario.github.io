@@ -9,6 +9,7 @@
  const types = {plane:'Flight',car:'Transport',hotel:'Hotel',ball:'Game',film:'Studio / film',sun:'Explore',coffee:'Food & drink',bag:'Shopping / packing',pin:'Place',ticket:'Tickets',calendar:'Event',moon:'Evening',spark:'Highlight',users:'Meet up',route:'Journey',clock:'Reminder'};
  const dialog = $('#itinerary-editor'), form = $('#itinerary-form');
  let overrides = [], previous = null, editor = null, imported = null;
+ let travel = TripCore.defaults();
  let storedRaw = null, storageReadable = true, saved = true, loadIssue = '';
  let returnFocus = null;
 
@@ -31,7 +32,7 @@
   if (value.map && !mapRecords.some(p => p.id === value.map)) throw new Error('Choose a saved map location.');
   if (value.reservation && !bookingRecords.some(r => r.id === value.reservation)) throw new Error('Choose a linked booking record.');
   if (value.highlight !== undefined && typeof value.highlight !== 'boolean') throw new Error('Invalid highlight setting.');
-  return {id:value.id, title:string(value.title,160,'the event name',true), time:string(value.time ?? '',160,'the time'), location:string(value.location ?? '',240,'the location'), note:string(value.note ?? '',5000,'the notes'), status:value.status, type:value.type, map:value.map || '', query:string(value.query ?? '',500,'the custom map destination'), source:website(value.source), reservation:value.reservation || '', highlight:value.highlight === true};
+  return {id:value.id, title:string(value.title,160,'the event name',true), time:string(value.time ?? '',160,'the time'), location:string(value.location ?? '',240,'the location'), note:string(value.note ?? '',5000,'the notes'), status:value.status, type:value.type, map:value.map || '', query:string(value.query ?? '',500,'the custom map destination'), source:website(value.source), reservation:value.reservation || '', highlight:value.highlight === true, schedule:TripCore.schedule(value.schedule)};
  }
  function identifier(value) {
   if (typeof value !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(value)) throw new Error('Invalid record identifier.');
@@ -64,7 +65,8 @@
   const seen=new Set();return list.map(value=>{const result=validate(value);if(seen.has(result.id))throw new Error(`Duplicate ${label} identifier.`);seen.add(result.id);return result;});
  }
  function validBackup(data) {
-  if (!data || ![1,2].includes(data.version) || data.trip !== trip || !Array.isArray(data.days) || data.days.length > defaults.length) throw new Error('Choose a valid LA trip backup (version 1 or 2).');
+  if (!data || ![1,2,3].includes(data.version) || data.trip !== trip || !Array.isArray(data.days) || data.days.length > defaults.length) throw new Error('Choose a valid LA trip backup (version 1, 2 or 3).');
+  if(data.version===3 && (!data.companion || typeof data.companion!=='object')) throw new Error('This version 3 backup is missing trip tools data.');
   const mapRecords=records(data.version===1?defaultPlaces:data.places,validPlace,'locations');
   const bookingRecords=records(data.version===1?defaultBookings:data.reservations,value=>validBooking(value,mapRecords),'bookings');
   const dates = new Set();
@@ -88,20 +90,22 @@
     ids.add(event.id);
    }
   }
-  return {days:dayRecords,places:mapRecords,reservations:bookingRecords};
+  return {days:dayRecords,places:mapRecords,reservations:bookingRecords,companion:TripCore.companion(data.version === 3 ? data.companion : travel)};
  }
- const payload = (records,collections={places,reservations}) => ({version:2,trip,days:records,places:clone(collections.places),reservations:clone(collections.reservations)});
+ const payload = (records,collections={places,reservations}) => ({version:3,trip,days:records,places:clone(collections.places),reservations:clone(collections.reservations),companion:clone(collections.companion ?? travel)});
  function dayRecord(day) {
   const {date,title,label,description,noteTitle,note,map,events} = day;
   return clone({date,title,label,description,noteTitle,note,map,events});
  }
  function apply(state) {
+  travel = TripCore.companion(state.companion ?? travel);
   places.splice(0,places.length,...clone(state.places));
   reservations.splice(0,reservations.length,...clone(state.reservations));
   days.forEach((day,i) => Object.assign(day,clone(defaults[i]),clone(state.days.find(r => r.date === day.date) || {})));
   selectDay(selectedDay);renderReservations();renderReservationPeek();renderPlaces();renderPlacesPeek();
   selectPlace(place(selectedPlace)?selectedPlace:places[0]?.id);
   refreshOptions();refreshMapPreference();
+  window.dispatchEvent(new Event('trip:change'));
  }
  function storageNotice() {
   document.querySelectorAll('[data-trip-storage]').forEach(el=>el.textContent=loadIssue||(saved?'Trip edits save in this browser on this device. Use a backup to move them.':'Changes are kept for this visit only. Saving is unavailable — download a backup before leaving.'));
@@ -191,6 +195,9 @@
   const event = existing || {title:'',time:'',location:'',note:'',status:'proposed',type:'pin',map:'',query:'',source:'',reservation:'',highlight:false};
   for (const field of ['title','time','location','note','status','type','map','query','source','reservation']) $('#event-'+field).value = event[field] || '';
   $('#event-highlight').checked = event.highlight === true;
+  const timing = event.schedule || {};
+  for (const field of ['start','end','zone','endZone','mode','travel','buffer','flight','departure','arrival','terminal']) $('#timing-'+field).value = timing[field] ?? (['zone','endZone'].includes(field) ? TripCore.ZONE : field === 'mode' ? 'driving' : field === 'buffer' ? 0 : '');
+  $('#timing-details').open = false;
   $('#event-day').value = String(selectedDay);
   positions(existing ? day.events.indexOf(existing) : undefined);
   $('#event-extras').open = false;
@@ -303,6 +310,10 @@
    if (!Number.isInteger(destination) || !days[destination]) throw new Error('Choose a day.');
    const draft = {id:editor.id || `custom-${crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+Math.random().toString(36).slice(2)}`,highlight:$('#event-highlight').checked};
    for (const field of ['title','time','location','note','status','type','map','query','source','reservation']) draft[field] = $('#event-'+field).value;
+   draft.schedule = {};
+   for (const field of ['start','end','zone','endZone','mode','flight','departure','arrival','terminal']) draft.schedule[field] = $('#timing-'+field).value;
+   draft.schedule.travel = $('#timing-travel').value === '' ? null : Number($('#timing-travel').value);
+   draft.schedule.buffer = Number($('#timing-buffer').value);
    const event = validEvent(draft);
    const origin = dayRecord(days[editor.dayIndex]), target = destination === editor.dayIndex ? origin : dayRecord(days[destination]);
    origin.events = origin.events.filter(e => e.id !== editor.id);
@@ -342,7 +353,7 @@
    isCurrent(); const restored=previous;overrides=restored.days;previous=null;apply(restored);save();
    undoVisible(false);
    announce('Last change undone.' + (saved ? ' Saved on this device.' : ' Download a backup to keep it.'));
-   (document.body.dataset.view==='reservations'?$('#add-booking'):document.body.dataset.view==='maps'?$('#add-location'):$('#add-event')).focus({preventScroll:true});
+   (document.body.dataset.view==='tools'?$('#tool-content h3'):document.body.dataset.view==='reservations'?$('#add-booking'):document.body.dataset.view==='maps'?$('#add-location'):$('#add-event')).focus({preventScroll:true});
   } catch(e) { announce(e.message); }
  }));
  $('#export-itinerary').addEventListener('click',() => {
@@ -357,7 +368,7 @@
   const file = e.target.files?.[0]; e.target.value = '';
   if (!file) return;
   try {
-   if (file.size > 2*1024*1024) throw new Error('Choose a backup smaller than 2 MB.');
+   if (file.size > 32*1024*1024) throw new Error('Choose a backup smaller than 32 MB.');
    const data=JSON.parse(await file.text());
    imported = validBackup(data);
    $('#import-legacy-note').hidden=data.version!==1;
@@ -373,10 +384,19 @@
  try {
   storedRaw = localStorage.getItem(key);
   if (storedRaw) {
-   try { const loaded=validBackup(JSON.parse(storedRaw));overrides=loaded.days;places.splice(0,places.length,...loaded.places);reservations.splice(0,reservations.length,...loaded.reservations); }
+   try { const loaded=validBackup(JSON.parse(storedRaw));overrides=loaded.days;travel=loaded.companion;places.splice(0,places.length,...loaded.places);reservations.splice(0,reservations.length,...loaded.reservations); }
    catch { loadIssue = 'Your saved plan could not be read. Showing the original plan; a new save will replace the unreadable copy. Import a backup to recover it.'; }
   }
  } catch { storageReadable = false; saved = false; }
- window.tripEditor = {dayChanged:() => { $('#add-event').setAttribute('aria-label',`Add event on ${days[selectedDay].date} December`); }};
+ window.tripEditor = {
+  dayChanged:() => { $('#add-event').setAttribute('aria-label',`Add event on ${days[selectedDay].date} December`); window.dispatchEvent(new Event('trip:day')); },
+  snapshot:() => clone(payload(days.map(dayRecord))),
+  validate:validBackup,
+  assertCurrent:isCurrent,
+  update:(change, message) => { const next = clone(payload(days.map(dayRecord))); change(next); commit(next.days,message,selectedDay,next); },
+  replace:(data, message = 'Trip restored.') => { const next = validBackup(data); if(next.days.length !== days.length) throw new Error('Restore a complete nine-day plan.'); commit(next.days,message,selectedDay,next); },
+  editEvent:(id,trigger) => { const index = days.findIndex(d => d.events.some(e => e.id === id)); if(index < 0) return; showView('itinerary'); selectDay(index); openEvent(id,trigger); },
+  announce
+ };
  apply(payload(overrides)); storageNotice();
 })();
