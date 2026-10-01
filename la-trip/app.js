@@ -116,6 +116,13 @@ const days=[
 ];
 // Stable identifiers let saved edits survive day changes and reloads.
 days.forEach(d=>d.events.forEach((e,i)=>e.id=`day-${d.date}-event-${i+1}`));
+// Only timings already present in the published itinerary are structured here.
+for (const [date,time] of [[23,'19:30'],[25,'14:00']]) {
+ const game = days.find(d=>d.date===date).events.find(e=>e.type==='ball');
+ game.schedule = TripCore.schedule({start:`2026-12-${date}T${time}`,zone:TripCore.ZONE});
+}
+days[0].events[0].schedule = TripCore.schedule({flight:'UA99',zone:'Australia/Melbourne',endZone:TripCore.ZONE,departure:'MEL',arrival:'LAX'});
+days[8].events[2].schedule = TripCore.schedule({flight:'DL11',zone:TripCore.ZONE,endZone:'Australia/Melbourne',departure:'LAX',arrival:'MEL'});
 let selectedDay=0;
 const dayPresentation={20:{photo:'assets/westin-bonaventure.jpg',position:'50% 62%',label:'Arrive',icon:'plane'},21:{photo:'assets/la-skyline.jpg',position:'23% 50%',label:'Warner Bros.',icon:'film'},22:{photo:'assets/la-skyline.jpg',position:'66% 35%',label:'Universal',icon:'film'},23:{photo:'assets/la-skyline.jpg',position:'25% 60%',label:'Clippers',icon:'ball'},24:{photo:'assets/westin-bonaventure.jpg',position:'55% 40%',label:'Explore LA',icon:'sun'},25:{photo:'assets/la-skyline.jpg',position:'60% 45%',label:'Lakers',icon:'ball'},26:{photo:'assets/golden-gate-sunset.jpg',position:'50% 45%',label:'San Francisco',icon:'plane'},27:{photo:'assets/la-skyline.jpg',position:'83% 70%',label:'The coast',icon:'sun'},28:{photo:'assets/westin-bonaventure.jpg',position:'42% 50%',label:'Fly home',icon:'plane'}};
 function renderDates(){
@@ -124,6 +131,7 @@ function renderDates(){
  strip.querySelectorAll('[data-day]').forEach(el=>{const i=Number(el.dataset.day),d=days[i];el.setAttribute('aria-pressed',String(i===selectedDay));el.querySelector('.day-label').textContent=d.label;el.setAttribute('aria-label',`Day ${i+1}, ${d.weekday} ${d.date} December: ${d.label}`)});
 }
 function readableTime(e){
+ if(e.schedule?.start)return TripCore.displayTime(e);
  if(e.time==='Time to confirm · MEL local time')return 'Time to confirm · Melbourne';
  if(e.time==='Time to confirm · LA local time')return 'Time to confirm · Los Angeles';
  if(e.time==='20 December · check-in time to confirm')return 'Check-in time to confirm';
@@ -150,7 +158,7 @@ function selectDay(index,scroll=false){
  selectedDay=index;const d=days[index];renderDates();
  $('#day-number').textContent=`DAY ${index+1} · ${d.weekday.toUpperCase()} ${d.date} DEC`;
  $('#day-title').textContent=d.title;$('#day-description').textContent=d.description;
- $('#timeline').innerHTML=d.events.length?d.events.map(e=>`<article class="timeline-item ${e.status}"><span class="timeline-node" aria-hidden="true">${icon(e.type)}</span><div class="event-card ${e.highlight?'highlight':''}"><span class="event-time">${esc(readableTime(e))}</span><h4 class="event-title">${esc(e.title)}</h4><p class="event-location">${esc(e.location)}</p><div class="event-controls"><span class="badge ${e.status}">${statuses[e.status]}</span><button type="button" class="edit-event" data-edit-event="${esc(e.id)}" aria-label="Edit ${esc(e.title)}">Edit</button></div><details class="event-more"><summary>Details${e.map||e.query?' & directions':''}</summary><p class="event-note">${esc(e.note)}</p>${eventActions(e)}</details></div></article>`).join(''):'<p class="empty-day">A little room to wander. Add an event to start this day’s plan.</p>';
+ $('#timeline').innerHTML=d.events.length?d.events.map(e=>`<article class="timeline-item ${e.status}"><span class="timeline-node" aria-hidden="true">${icon(e.type)}</span><div class="event-card ${e.highlight?'highlight':''}"><span class="event-time">${esc(readableTime(e))}</span><h4 class="event-title">${esc(e.title)}</h4><p class="event-location">${esc(e.location)}</p><div class="event-controls"><span class="badge ${e.status}">${statuses[e.status]}</span><button type="button" class="edit-event" data-edit-event="${esc(e.id)}" aria-label="Edit ${esc(e.title)}">Edit</button></div><details class="event-more"><summary>Details${e.map||e.query?' & directions':''}</summary><p class="event-note">${esc(e.note)}</p>${eventActions(e)}<div class="event-actions"><button type="button" data-event-docs="${esc(e.id)}">Tickets & documents</button><button type="button" data-event-calendar="${esc(e.id)}">Export to calendar</button></div><div class="event-travel" data-event-travel="${esc(e.id)}"></div></details></div></article>`).join(''):'<p class="empty-day">A little room to wander. Add an event to start this day’s plan.</p>';
  const p=place(d.map);renderMapCard('#day-map',p);$('#day-map-name').textContent=p?.name||'No location selected';$('#day-map-area').textContent=p?.area||'Choose a location in Edit day.';$('#day-note-title').textContent=d.noteTitle;$('#day-note').textContent=d.note;
  $('#prev-day').disabled=index===0;$('#next-day').disabled=index===days.length-1;
  window.tripEditor?.dayChanged();
@@ -227,12 +235,12 @@ function updatePackingCounts(){
  document.querySelectorAll('[data-pack-id]').forEach(el=>{const item=packing.find(p=>p.id===el.dataset.packId);if(item)el.checked=item.checked});
 }
 function setPackingItems(updates){if(!Array.isArray(updates)||!updates.length||updates.some(u=>!u||typeof u.id!=='string'||typeof u.checked!=='boolean'||!packing.some(p=>p.id===u.id)))throw new Error('Each update must contain a known item id and a boolean checked value.');for(const u of updates)packing.find(p=>p.id===u.id).checked=u.checked;savePacking();renderPacking();return {packed:packing.filter(p=>p.checked).length,total:packing.length,savedOnDevice:storageAvailable}}
-const views=['itinerary','reservations','maps','packing'];
+const views=['itinerary','reservations','maps','packing','tools'];
 function showView(name,updateHash=true){
  if(!views.includes(name))name='itinerary';
  const changed=document.body.dataset.view!==name;
  document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==name);
- document.querySelectorAll('.main-nav [data-view]').forEach(el=>{if(el.dataset.view===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});
+ document.querySelectorAll('.main-nav [data-view]').forEach(el=>{if(el.dataset.view===(name==='reservations'?'tools':name))el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});
  document.body.dataset.view=name;
  if(updateHash){history.replaceState(null,'',`#${name}`);if(name!=='itinerary')$('#main').scrollIntoView({block:'start',behavior:'auto'})}
  if(document.activeElement?.closest('.view[hidden]'))$('#main').focus({preventScroll:true});

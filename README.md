@@ -6,7 +6,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 
 | App | What it does | Open |
 | --- | --- | --- |
-| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
+| Nine Days in Los Angeles | December 20–28, 2026 trip journal with editable plans, ideas, shared expenses, local tickets, calendar export, Google maps, weather, offline access and packing. | [LA trip](https://stavreskimario.github.io/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
 | Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](engineering-journal/) |
 
@@ -15,6 +15,14 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 The new [Engineering Journal](engineering-journal/) collects official technical articles into a searchable, filterable reading list. Saves and read status stay in your browser; JSON backup import/export moves them between devices. See its [reader guide](engineering-journal/README.md) and [daily publishing runbook](docs/ENGINEERING_JOURNAL.md).
 
 The daily workflow targets 6 am Australia/Melbourne and is initially disabled. Enabling it requires approval to change the existing Pages source to GitHub Actions; this branch does not change any Pages setting. The initial collection is included with the app.
+
+## LA trip companion
+
+The LA planner now groups **Ideas**, **Expenses**, **Tickets**, **Import plans**, **Calendar** and **Travel & backup** under **Trip tools**. Bookings remain available in its heading and from linked itinerary events. The itinerary adds a countdown/Up next card, exact timezone-aware activity times, manual travel estimates and numbered day stops.
+
+Expenses support AUD/USD, a manual exchange rate, actual AUD card charges, Mario/Andreas splits and repayments. Documents stay in this browser’s IndexedDB. A complete private backup transfers the plan, expenses, documents, packing and map preference. Explicit offline saving keeps the app and plan usable without a connection. Google map tiles and fresh weather still need internet.
+
+See the [LA trip guide](la-trip/README.md) for all workflows, backup compatibility, data limits, offline updates and service boundaries. Shared live editing, automatic image extraction and flight alerts need connected services and are not enabled; manual transfer, reviewed text import and official airline status links work now.
 
 ## Edit the LA itinerary
 
@@ -26,15 +34,15 @@ Choose a day, then **Add event** or **Edit** beside an existing event.
 - **Remove event** deletes it from that day. **Undo** restores the last change, including edits, removals, moves and imports, until another change or a reload. Cancelling the editor leaves the itinerary unchanged.
 - **Edit day** changes its title, selector label, description, handwritten caption, notes and overview map. Trip dates remain December 20–28, 2026.
 
-Changes save automatically when you press **Save event**, **Add event** or **Save day**. Trip changes are saved together in this browser’s `localStorage` under `mario-la-dec2026-itinerary-v1`. The key is retained for compatibility; its current payload is version 2 and contains day overrides, booking records and map locations. Untouched days continue using the published defaults. Version 1 saved itinerary edits load automatically and upgrade on the next save. Reloading keeps saved changes in the same browser and origin. Clearing website data removes them. Private browsing may discard them when the session ends. If storage is blocked or full, the app displays a visit-only notice and keeps the current edits in memory.
+Changes save automatically when you press **Save event**, **Add event** or **Save day**. Trip changes are saved together in this browser’s `localStorage` under `mario-la-dec2026-itinerary-v1`. The key is retained for compatibility; its current payload is version 3 and contains day overrides, booking records, map locations and companion data (ideas, tasks, expenses, repayments and budget settings). Events can include exact timing and travel estimates. Untouched days continue using the published defaults. Version 1 and 2 saved itinerary edits load automatically and upgrade on the next save. Reloading keeps saved changes in the same browser and origin. Clearing website data removes them. Private browsing may discard them when the session ends. If storage is blocked or full, the app displays a visit-only notice and keeps the current edits in memory.
 
-**Back up or move your plan** downloads a JSON copy of all nine days, booking records and map locations. The Bookings and Maps toolbars link directly to this backup control. Import that file on another device, review the day/event count and choose **Import itinerary**. Import replaces the local itinerary, bookings and locations together and can be undone immediately. Invalid files leave the current plan intact. Backups include itinerary events, day notes, booking fields and locations, but not packing checks or map preferences. Older version 1 backups remain supported: their import preview explains that original booking and location records will be restored because those backups contain only itinerary days. Cancel leaves the current records intact.
+**Back up or move your plan** downloads a JSON copy of all nine days, booking records and map locations. The Bookings and Maps toolbars link directly to this backup control. Import that file on another device, review the day/event count and choose **Import itinerary**. Import replaces the local itinerary, bookings and locations together and can be undone immediately. Invalid files leave the current plan intact. Itinerary-only backups include events, exact timing, day notes, booking fields, locations and companion records, but not document contents, packing checks or map preferences. **Trip tools → Travel & backup → Download complete backup** includes those too; see the guide for its reviewed restore and document-merge behavior. Older version 1/2 backups preserve the current companion records because those backups do not contain them. Version 1 backups remain supported: their import preview explains that original booking and location records will be restored because those backups contain only itinerary days. Cancel leaves the current records intact.
 
 This is a static app with no accounts or cloud sync. Local edits do not modify GitHub, change other visitors’ plans or move automatically between the old Sites address and this Pages address. Keep backups somewhere private if you add personal details. Website links accept only HTTP(S) URLs; input is escaped before display. Changes detected from another browser tab are blocked from overwriting that tab’s saved plan; download a backup and reload to resolve it.
 
 ## Edit bookings and map locations
 
-In **Bookings**, use **Add booking** or **Edit booking**. Edit the name, summary, status, icon, linked map location, website and notes. **Add field** creates a labelled detail such as dates, seats, guests or a confirmation number. Edit or remove any field, then save the record. Cancel discards the draft.
+Open **Trip tools → Bookings**, then use **Add booking** or **Edit booking**. Edit the name, summary, status, icon, linked map location, website and notes. **Add field** creates a labelled detail such as dates, seats, guests or a confirmation number. Edit or remove any field, then save the record. Cancel discards the draft.
 
 In **Maps**, use **Add location** or **Edit** beside a location. Edit its short/full name, area, label, address, map destination, visitor website and linked trip day. The map destination can be a place name, address or coordinates. It controls the embedded Google map and Google/Apple search and directions links. Saved locations are immediately available in event, day and booking editors. A linked day adds a **See linked day** shortcut; use **Edit day → Day map** to choose that day’s overview map.
 
@@ -106,4 +114,4 @@ GitHub Pages deploys the **root of `main`** using the existing Pages workflow. K
 
 UI changes follow the [motion decision rules](DESIGN.md#ui-craft-and-motion-decisions) and include a Before/After/Why review table. The LA planner keeps keyboard navigation immediate and uses restrained pointer feedback while preserving its journal styling. Its saved edits remain device-local.
 
-Browser regressions are in `tests/la-scroll.cjs` and `tests/la-craft.cjs`; setup commands are at the top of each file. These supplement the static validator and cover relevant touch, keyboard, layout and motion behavior.
+Browser regressions are in `tests/la-scroll.cjs`, `tests/la-craft.cjs` and `tests/la-travel.cjs`; pure travel-data checks are in `tests/la-travel-core.cjs`; setup commands are at the top of each file. These supplement the static validator and cover relevant touch, keyboard, layout and motion behavior.
