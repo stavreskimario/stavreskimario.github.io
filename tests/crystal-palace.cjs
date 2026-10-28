@@ -20,7 +20,7 @@ const server=http.createServer(async(req,res)=>{
 (async()=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const base='http://127.0.0.1:'+server.address().port;
- const browser=await chromium.launch({headless:true});
+ const browser=await chromium.launch({headless:true,args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
  try{
   const page=await browser.newPage({viewport:{width:1280,height:850},acceptDownloads:true});
   await page.goto(base+'/');
@@ -34,7 +34,9 @@ const server=http.createServer(async(req,res)=>{
   // Verify the real WebGL scene before deliberately blocking the CDN for fallback.
   const real=await browser.newPage({viewport:{width:1180,height:760},acceptDownloads:true});
   await real.emulateMedia({reducedMotion:'reduce'});
-  const threeErrors=[];real.on('pageerror',err=>threeErrors.push(err.message));
+  const threeErrors=[];real.on('pageerror',err=>threeErrors.push('page: '+err.message));
+  real.on('console',message=>{if(message.type()==='error')threeErrors.push('console: '+message.text())});
+  real.on('requestfailed',request=>{if(request.url().includes('jsdelivr'))threeErrors.push('module: '+request.url()+': '+request.failure()?.errorText)});
   // Serve exact version-pinned npm copies, avoiding flaky third-party CDN in CI.
   const threeBuild=path.join(path.dirname(require.resolve('three')),'three.module.js');
   const orbitModule=path.resolve(path.dirname(require.resolve('three')),'../examples/jsm/controls/OrbitControls.js');
@@ -43,10 +45,12 @@ const server=http.createServer(async(req,res)=>{
    await route.fulfill({body:await fs.readFile(moduleFile),contentType:'text/javascript',headers:{'Access-Control-Allow-Origin':'*'}});
   });
   await real.goto(base+'/apps/crystal-palace/',{waitUntil:'domcontentloaded'});
+  const glReady=await real.evaluate(()=>Boolean(document.createElement('canvas').getContext('webgl2')));
+  console.log('WebGL2 software renderer available:',glReady);
   try{
    await real.waitForFunction(()=>document.querySelector('#model-status')?.textContent.includes('Sydenham model ready.'),null,{timeout:45000});
   }catch(error){
-   throw new Error('Sydenham WebGL scene failed: '+(await real.locator('#model-status').innerText())+'; errors: '+threeErrors.join('; ')+'; '+error.message);
+   throw new Error('Sydenham WebGL scene failed: '+(await real.locator('#model-status').innerText())+'; WebGL2='+glReady+'; errors: '+threeErrors.join('; ')+'; '+error.message);
   }
   const webgl=await real.locator('#palace-canvas').evaluate(el=>Boolean(el.getContext('webgl2')));
   assert.equal(webgl,true,'WebGL2 rendered the Sydenham model');
