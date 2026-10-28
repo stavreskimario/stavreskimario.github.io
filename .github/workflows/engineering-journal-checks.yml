@@ -2,7 +2,10 @@ name: Engineering Journal checks
 on:
   pull_request:
     paths:
-      - engineering-journal/**
+      - apps/engineering-journal/**
+      - apps/crystal-palace/**
+      - apps/hello-world/**
+      - apps/la-trip/**
       - scripts/engineering-feed/**
       - tests/*engineering*
       - tests/fixtures/engineering-feed/**

@@ -39,7 +39,8 @@ jobs:
           args=()
           if [ "$EVENT_NAME" = push ]; then args+=(--reuse-only); fi
           python3 scripts/engineering-feed/collect.py \
-            --previous-url https://stavreskimario.github.io/engineering-journal/data/catalogue.json \
+            --previous-url https://stavreskimario.github.io/apps/engineering-journal/data/catalogue.json \\
+            --legacy-previous-url https://stavreskimario.github.io/engineering-journal/data/catalogue.json \
             "${args[@]}"
       - name: Validate and stage the complete site
         run: |

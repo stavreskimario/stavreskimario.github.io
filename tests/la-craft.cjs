@@ -31,7 +31,7 @@ const root = path.resolve(__dirname, '..');
    const page = await context.newPage();
    page.on('pageerror', e => errors.push(e.message));
    await page.route('**/*', route => route.request().url().startsWith(origin) && (fluid || !route.request().url().includes('/fluid.js')) ? route.continue() : route.abort());
-   await page.goto(origin + '/la-trip/');
+   await page.goto(origin + '/apps/la-trip/');
    return {page,context};
   }
   async function keyClick(page, selector, key='Enter') {

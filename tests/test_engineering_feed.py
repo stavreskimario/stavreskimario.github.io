@@ -112,7 +112,7 @@ class CollectionTests(unittest.TestCase):
     def test_recovery_failure_never_replaces_a_live_archive(self):
         with tempfile.TemporaryDirectory() as td:
             file = Path(td) / 'catalogue.json'; original = json.dumps(previous()); file.write_text(original)
-            argv = ['collect', '--output', str(file), '--previous-url', 'https://stavreskimario.github.io/engineering-journal/data/catalogue.json', '--reuse-only']
+            argv = ['collect', '--output', str(file), '--previous-url', 'https://stavreskimario.github.io/apps/engineering-journal/data/catalogue.json', '--reuse-only']
             with patch('sys.argv', argv), patch.object(feed, 'recover', side_effect=OSError('offline')):
                 with self.assertRaises(OSError): feed.main()
             self.assertEqual(file.read_text(), original)
@@ -144,9 +144,11 @@ class CollectionTests(unittest.TestCase):
             output = Path(td) / 'pages'; stage.stage(ROOT, output)
             self.assertTrue((output/'.nojekyll').exists())
             for app in json.loads((ROOT/'apps.json').read_text())['apps']:
-                self.assertTrue((output/app['id']/'index.html').exists())
-            self.assertTrue((output/'la-trip/assets/la-skyline.jpg').exists())
-            self.assertTrue((output/'engineering-journal/data/catalogue.json').exists())
+                self.assertTrue((output/'apps'/app['id']/'index.html').exists())
+            self.assertTrue((output/'apps/la-trip/assets/la-skyline.jpg').exists())
+            self.assertTrue((output/'apps/engineering-journal/data/catalogue.json').exists())
+            self.assertTrue((output/'la-trip/index.html').exists())
+            self.assertTrue((output/'crystal-palace/index.html').exists())
             self.assertFalse((output/'.git').exists())
             self.assertFalse((output/'scripts').exists())
             self.assertFalse((output/'.github').exists())
