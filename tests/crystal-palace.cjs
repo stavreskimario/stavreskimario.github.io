@@ -34,6 +34,7 @@ const server=http.createServer(async(req,res)=>{
   await page.route('**/cdn.jsdelivr.net/**',route=>route.abort());
   await page.goto(base+'/apps/crystal-palace/');
   await page.waitForFunction(()=>document.getElementById('model-status')?.textContent.includes('view'),{timeout:15000});
+  assert.match(await page.locator('#model-status').innerText(),/Sydenham/i);
   const size=await page.locator('#palace-canvas').evaluate(canvas=>[canvas.width,canvas.height]);
   assert(size[0]>200&&size[1]>200,'Canvas rendered by fallback');
   await page.locator('button[data-preset="plan"]').click();
@@ -47,13 +48,13 @@ const server=http.createServer(async(req,res)=>{
   assert.equal(await page.locator('button[data-preset="isometric"]').getAttribute('aria-pressed'),'true');
   const download=page.waitForEvent('download');
   await page.locator('#export-view').click();
-  assert.match((await download).suggestedFilename(),/crystal-palace-1851.*png/);
+  assert.match((await download).suggestedFilename(),/crystal-palace-sydenham.*png/);
   await page.setViewportSize({width:375,height:812});
   assert.equal(await page.locator('#palace-canvas').isVisible(),true);
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.locator('#zoom-in').click();
   assert.equal(await page.locator('#palace-canvas').isVisible(),true);
-  console.log('PASS canonical app cards, legacy redirects, shared links, offline CAD fallback, views, layers, keyboard, PNG export, mobile layout and reduced motion.');
+  console.log('PASS canonical app cards, legacy redirects, shared links, offline Sydenham elevation, views, layers, keyboard, PNG export, mobile layout and reduced motion.');
   await page.close();
  }finally{await browser.close()}
 })().catch(error=>{console.error(error);process.exitCode=1}).finally(()=>server.close());

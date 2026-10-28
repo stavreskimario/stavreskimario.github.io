@@ -8,7 +8,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 | --- | --- | --- |
 | Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/apps/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/apps/hello-world/) |
-| Crystal Palace, 1851 | Architectural study grounded in the original Hyde Park dimensions, with interactive 3D and CAD fallback. | [Crystal Palace](apps/crystal-palace/) |
+| Crystal Palace, Sydenham | Historical 3D study of the later Sydenham palace, its great vaults, water towers and landscaped terraces. | [Crystal Palace](apps/crystal-palace/) |
 | Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](apps/engineering-journal/) |
 
 ## Engineering Journal
