@@ -34,6 +34,13 @@ const server=http.createServer(async(req,res)=>{
   // Verify the real WebGL scene before deliberately blocking the CDN for fallback.
   const real=await browser.newPage({viewport:{width:1360,height:900},acceptDownloads:true});
   const threeErrors=[];real.on('pageerror',err=>threeErrors.push(err.message));
+  // Serve exact version-pinned npm copies, avoiding flaky third-party CDN in CI.
+  const threeBuild=path.join(path.dirname(require.resolve('three')),'three.module.js');
+  const orbitModule=path.resolve(path.dirname(require.resolve('three')),'../examples/jsm/controls/OrbitControls.js');
+  await real.route('**/cdn.jsdelivr.net/**',async route=>{
+   const moduleFile=route.request().url().includes('OrbitControls.js')?orbitModule:threeBuild;
+   await route.fulfill({body:await fs.readFile(moduleFile),contentType:'text/javascript',headers:{'Access-Control-Allow-Origin':'*'}});
+  });
   await real.goto(base+'/apps/crystal-palace/',{waitUntil:'domcontentloaded'});
   try{
    await real.waitForFunction(()=>document.querySelector('#model-status')?.textContent.includes('Sydenham model ready.'),null,{timeout:45000});

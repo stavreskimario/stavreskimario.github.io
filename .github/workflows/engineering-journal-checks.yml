@@ -28,7 +28,7 @@ jobs:
           python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
       - name: Install isolated browser test tools
         run: |
-          npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1
+          npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1 three@0.180.0
           "$RUNNER_TEMP/journal-tools/node_modules/.bin/playwright" install --with-deps chromium --only-shell
       - name: Verify reader interactions
         env:
