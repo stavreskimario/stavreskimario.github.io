@@ -4,8 +4,8 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta name="theme-color" content="#faf7ef">
- <meta name="description" content="Explore a dimensionally grounded, interactive 3D-style reconstruction of Joseph Paxton's original 1851 Crystal Palace in Hyde Park, London.">
- <title>Crystal Palace, 1851 · An Architectural Study</title>
+ <meta name="description" content="Explore a dimensionally grounded, interactive 3D-style reconstruction of Joseph Paxton's Sydenham Crystal Palace as it appeared after 1866 in London.">
+ <title>Crystal Palace, Sydenham · Architectural Reconstruction</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23faf7ef'/%3E%3Cpath d='M7 29V15L20 7l13 8v14M7 17h26M14 12v17m12-17v17' fill='none' stroke='%23436672' stroke-width='2'/%3E%3C/svg%3E">
  <link rel="stylesheet" href="../../shared/theme.css?v=1">
  <link rel="stylesheet" href="./styles.css?v=1">
@@ -21,27 +21,27 @@
   <header class="site-header topbar">
    <a href="../../" class="back-link">← All apps</a>
    <span class="wordmark">The architectural archive <span class="wordmark-dot">✳</span></span>
-   <span class="issue-number">STUDY NO. 001 / 1851</span>
+   <span class="issue-number">STUDY NO. 001 / c.1900</span>
   </header>
   <main id="main">
    <div class="intro">
     <div>
-     <p class="eyebrow">London, England · Hyde Park · 1 May 1851</p>
+     <p class="eyebrow">Sydenham, London · Photographic era, c.1900</p>
      <h1 class="display">The <em>Crystal Palace.</em></h1>
-     <p class="intro-subtitle">The 1851 building, reconstructed at historical scale. Explore Joseph Paxton’s glass-and-iron masterpiece as it stood for the Great Exhibition.</p>
+     <p class="intro-subtitle">Explore the enlarged Sydenham Crystal Palace: its magnificent vaulted transepts, vast glazed nave, Brunel water towers and formal Italian terraces.</p>
     </div>
-    <div class="intro-note"><span class="handwritten">A cathedral of industry</span><span>Rendered in 3D using glass, cast iron, sunlight and landscaped grounds.</span></div>
+    <div class="intro-note"><span class="handwritten">A cathedral of industry</span><span>Restored from period plans and photographs; undocumented details are interpretive.</span></div>
    </div>
    <div class="studio">
     <section class="model-panel" aria-labelledby="viewer-title">
      <div class="panel-toolbar">
-      <div><span class="signal-dot" aria-hidden="true"></span><strong id="viewer-title">Historically grounded 3D reconstruction</strong><span class="toolbar-divider" aria-hidden="true"></span><span class="model-code">CP-1851 / HYDE PARK</span></div>
+      <div><span class="signal-dot" aria-hidden="true"></span><strong id="viewer-title">Interactive Sydenham reconstruction</strong><span class="toolbar-divider" aria-hidden="true"></span><span class="model-code">CP-1854 / SYDENHAM</span></div>
       <span id="view-readout" class="model-code" aria-live="polite">ISOMETRIC · RECONSTRUCTION</span>
      </div>
      <div class="model-stage" id="model-stage">
-      <canvas id="palace-canvas" tabindex="0" role="img" aria-label="Interactive, rotatable model of the original 1851 Crystal Palace, showing the stepped glass roofs, monumental vaulted transept and repeating iron columns." aria-describedby="canvas-help"></canvas>
-      <div class="viewport-note" aria-hidden="true"><span class="crosshair">+</span> ARCHITECTURAL RECONSTRUCTION <span class="dimension-tag">HISTORICAL INTERPRETATION</span></div>
-      <div class="viewport-scale" id="scale-readout" aria-hidden="true">24 FT STRUCTURAL GRID</div>
+      <canvas id="palace-canvas" tabindex="0" role="img" aria-label="Interactive 3D reconstruction of the Sydenham Crystal Palace after 1866, with a massive central arch, vaulted nave, south transept, two water towers and formal gardens." aria-describedby="canvas-help"></canvas>
+      <div class="viewport-note" aria-hidden="true"><span class="crosshair">+</span> ARCHITECTURAL RECONSTRUCTION <span class="dimension-tag">AFTER THE 1866 NORTH TRANSEPT FIRE</span></div>
+      <div class="viewport-scale" id="scale-readout" aria-hidden="true">HISTORICAL DIMENSIONS · FEET</div>
       <div class="compass" aria-hidden="true"><span>N</span><span>+</span><span>S</span></div>
       <div class="zoom-controls" role="group" aria-label="Model zoom controls">
        <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
@@ -61,14 +61,14 @@
      <section class="inspector-section" aria-labelledby="views-heading">
       <h2 id="views-heading">Camera views</h2>
       <div class="views-grid" role="group" aria-label="Choose camera view">
-       <button type="button" data-preset="isometric" aria-pressed="true"><span class="view-glyph" aria-hidden="true">◇</span>Isometric</button>
+       <button type="button" data-preset="isometric" aria-pressed="true"><span class="view-glyph" aria-hidden="true">◇</span>Photograph</button>
        <button type="button" data-preset="elevation" aria-pressed="false"><span class="view-glyph" aria-hidden="true">▤</span>Elevation</button>
        <button type="button" data-preset="plan" aria-pressed="false"><span class="view-glyph" aria-hidden="true">▦</span>Roof plan</button>
        <button type="button" data-preset="transept" aria-pressed="false"><span class="view-glyph" aria-hidden="true">⌒</span>Transept</button>
       </div>
      </section>
      <section class="inspector-section" aria-labelledby="render-heading">
-      <h2 id="render-heading">Drawing style</h2>
+      <h2 id="render-heading">Render style</h2>
       <div class="segmented render-modes" role="group" aria-label="Drawing style">
        <button type="button" data-mode="reconstruction" aria-pressed="true">Realistic</button>
        <button type="button" data-mode="blueprint" aria-pressed="false">Blueprint</button>
@@ -87,32 +87,48 @@
      <section class="inspector-section landmarks" aria-labelledby="landmark-heading">
       <h2 id="landmark-heading">Inspect the architecture</h2>
       <div class="landmark-list" role="group" aria-label="Inspect architectural features">
-       <button type="button" data-focus="transept"><span class="landmark-index">01</span><span><strong>The great transept</strong><small>The 108-foot timber-ribbed vault</small></span><span aria-hidden="true">↗</span></button>
-       <button type="button" data-focus="avenue"><span class="landmark-index">02</span><span><strong>The grand avenue</strong><small>1,848 feet of exhibition space</small></span><span aria-hidden="true">↗</span></button>
-       <button type="button" data-focus="module"><span class="landmark-index">03</span><span><strong>Modular ironwork</strong><small>24-foot structural bays</small></span><span aria-hidden="true">↗</span></button>
-       <button type="button" data-focus="projection"><span class="landmark-index">04</span><span><strong>The north projection</strong><small>A 936-foot-long extension</small></span><span aria-hidden="true">↗</span></button>
+       <button type="button" data-focus="transept"><span class="landmark-index">01</span><span><strong>The great transept</strong><small>A 175-foot-high central vault</small></span><span aria-hidden="true">↗</span></button>
+       <button type="button" data-focus="avenue"><span class="landmark-index">02</span><span><strong>The grand avenue</strong><small>1,608-foot vaulted nave</small></span><span aria-hidden="true">↗</span></button>
+       <button type="button" data-focus="module"><span class="landmark-index">03</span><span><strong>Modular ironwork</strong><small>Iron, glass and galleries</small></span><span aria-hidden="true">↗</span></button>
+       <button type="button" data-focus="projection"><span class="landmark-index">04</span><span><strong>The gardens and towers</strong><small>Brunel water towers and terraces</small></span><span aria-hidden="true">↗</span></button>
       </div>
      </section>
     </aside>
    </div>
    <section class="feature-note" aria-live="polite" aria-atomic="true">
     <div><span class="eyebrow">Field note <span id="feature-index">01 / 04</span></span><h2 id="feature-title">The great transept</h2></div>
-    <p id="feature-description">The 72-foot-wide transept has a semicircular timber-ribbed vault, springing at 72 feet and reaching 108 feet in height.</p>
+    <p id="feature-description">A monumental 120-foot-span arch crowns the Sydenham central transept, rising approximately 175 feet above the ground-floor level.</p>
     <span class="handwritten">See it from every angle.</span>
    </section>
-   <section class="dimensions" aria-label="Original building dimensions">
-    <div><span class="eyebrow">Total length</span><strong>1,848 <span>ft</span></strong><span>563 metres</span></div>
-    <div><span class="eyebrow">Main width</span><strong>408 <span>ft</span></strong><span>124 metres</span></div>
-    <div><span class="eyebrow">Vault height</span><strong>108 <span>ft</span></strong><span>33 metres</span></div>
-    <div><span class="eyebrow">Structural module</span><strong>24 <span>ft</span></strong><span>7.3 metres</span></div>
+   <section class="dimensions" aria-label="Sydenham building dimensions">
+    <div><span class="eyebrow">Nave length</span><strong>1,608 <span>ft</span></strong><span>490 metres</span></div>
+    <div><span class="eyebrow">General width</span><strong>312 <span>ft</span></strong><span>95 metres</span></div>
+    <div><span class="eyebrow">Central transept</span><strong>175 <span>ft</span></strong><span>Approximate ground-floor height</span></div>
+    <div><span class="eyebrow">Water towers</span><strong>282 <span>ft</span></strong><span>Brunel's towers</span></div>
    </section>
    <section class="history" aria-labelledby="history-heading">
-    <div><p class="eyebrow">An impossible building, made possible</p><h2 id="history-heading">Built in glass. <em>Remembered in light.</em></h2></div>
-    <div><p>For the Great Exhibition of 1851, Joseph Paxton designed an immense structure of repeatable prefabricated iron and glass elements. The original Hyde Park building had stepped, ridge-and-furrow roofs and a single great cross-vault, rather than the sweeping nave and multiple transepts of its later Sydenham incarnation.</p><p>The Hyde Park structure was dismantled after the Exhibition. It was rebuilt, enlarged and substantially redesigned at Sydenham in 1854; that later palace was destroyed by fire in 1936.</p><details class="sources"><summary>Research sources & model accuracy</summary><p>This is an interpretive, browser-rendered model, not a measured archaeological reconstruction. Overall dimensions, the 24-foot grid, stepped roof heights, transept and north projection are based on historical plans and descriptions. Historical dimensions and the structural grid are grounded in period plans; details such as sash bars, decoration, glazing and park features remain interpretive.</p><ul><li><a href="https://www.vam.ac.uk/articles/the-great-exhibition-of-1851" target="_blank" rel="noopener noreferrer">Victoria and Albert Museum · The Great Exhibition of 1851</a></li><li><a href="https://gibsonlibrary.org.uk/online-exhibition-the-great-exhibition-1851/" target="_blank" rel="noopener noreferrer">Gibson Library · Building dimensions</a></li><li><a href="https://www.gutenberg.org/files/44192/44192-h/44192-h.htm" target="_blank" rel="noopener noreferrer">Contemporary account · The Crystal Palace</a></li><li><a href="https://commons.wikimedia.org/wiki/File:1851_ground_plan.jpg" target="_blank" rel="noopener noreferrer">1851 ground plan · Wikimedia Commons</a></li></ul></details></div>
+    <div><p class="eyebrow">The palace in the photograph</p><h2 id="history-heading">Glorious iron. <em>Enormous glass.</em></h2></div>
+    <div>
+     <p>Following the Great Exhibition in Hyde Park, Joseph Paxton's building was substantially redesigned and enlarged at Sydenham, reopening in 1854. Unlike the 1851 structure, the Sydenham palace had a long barrel-vaulted nave, a monumental central transept, two smaller end transepts and elaborate terraces, fountains and water towers.</p>
+     <p>The northern transept was lost in the 1866 fire and was never rebuilt. This visualization represents the later photographic-era composition with the central and southern transepts, not the complete 1854 plan. The entire building was destroyed by fire in 1936.</p>
+     <details class="sources"><summary>View archival reference and model accuracy</summary>
+      <p><strong>Historically scaled does not mean an exact replica.</strong> The documented main dimensions and major roof forms guide the geometry. Detailed castings, glazing sections, ornaments, stair dimensions, statuary, landscaping and the appearance of some secondary wings remain interpretive. No verified original as-built 3D model was used.</p>
+      <figure class="reference-photo">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Crystal_Palace%2C_Sydenham.png/960px-Crystal_Palace%2C_Sydenham.png" loading="lazy" alt="Archival photograph of the Sydenham Crystal Palace with its great transept, side vault, water tower and terraced gardens">
+       <figcaption>Historical Sydenham photograph, <a href="https://commons.wikimedia.org/wiki/File:Crystal_Palace,_Sydenham.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+      </figure>
+      <ul>
+       <li><a href="https://www.gutenberg.org/files/59843/59843-h/59843-h.htm" target="_blank" rel="noopener noreferrer">Contemporary Sydenham guide: detailed architectural dimensions</a></li>
+       <li><a href="https://www.londonmuseum.org.uk/collections/v/object-101205/crystal-palace-sydenham/" target="_blank" rel="noopener noreferrer">London Museum: rebuilt Sydenham palace</a></li>
+       <li><a href="https://historicengland.org.uk/listing/the-list/list-entry/1000373" target="_blank" rel="noopener noreferrer">Historic England: terraces and park setting</a></li>
+       <li><a href="https://www.victorianweb.org/victorian/art/architecture/feist/35.html" target="_blank" rel="noopener noreferrer">Historic photographic-era description</a></li>
+      </ul>
+     </details>
+    </div>
    </section>
    <p class="status" id="model-status" role="status" aria-live="polite">Model ready. Drag to explore.</p>
   </main>
-  <footer class="app-footer"><span>CRYSTAL PALACE · HYDE PARK, 1851</span><a href="../../">Return to all apps ↗</a><span>A study of what once was.</span></footer>
+  <footer class="app-footer"><span>CRYSTAL PALACE · SYDENHAM, c.1900</span><a href="../../">Return to all apps ↗</a><span>A study of what once was.</span></footer>
  </div>
  <noscript><p class="site-shell">Enable JavaScript to rotate and explore this reconstruction. Historical context and building dimensions are available above.</p></noscript>
 </body>
