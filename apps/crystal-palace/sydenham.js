@@ -383,7 +383,7 @@ function terrace(){
    box(grounds,x,-4,z,160,2,65,palette.hedge,false);
    for(let t=0;t<12;t++){
     const xx=x-66+t*12;
-    const flower=new THREE.Mesh(new THREE.IcosahedronGeometry(3,1),t%3===0?palette.brass:palette.leaf2);
+    const flower=new THREE.Mesh(new THREE.IcosahedronGeometry(.9,1),t%3===0?palette.brass:palette.hedge);
     flower.position.set(xx,1,z+((t%3)-1)*10);grounds.add(flower);
    }
   }
