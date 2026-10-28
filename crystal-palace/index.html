@@ -10,7 +10,10 @@
  <link rel="stylesheet" href="../shared/theme.css?v=1">
  <link rel="stylesheet" href="./styles.css?v=1">
  <script src="../shared/ui.js?v=1" defer></script>
- <script src="./app.js?v=1" defer></script>
+ <script type="importmap">
+ {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+ </script>
+ <script src="./app.js?v=2" defer></script>
 </head>
 <body>
  <a class="skip-link" href="#main">Skip to the Crystal Palace model</a>
@@ -27,17 +30,17 @@
      <h1 class="display">The <em>Crystal Palace.</em></h1>
      <p class="intro-subtitle">A building made almost entirely of light. Explore Joseph Paxton’s glass-and-iron masterpiece as it stood for the Great Exhibition.</p>
     </div>
-    <div class="intro-note"><span class="handwritten">A cathedral of industry</span><span>Reconstructed from historical dimensions and contemporary descriptions.</span></div>
+    <div class="intro-note"><span class="handwritten">A cathedral of industry</span><span>Rendered in 3D using glass, cast iron, sunlight and landscaped grounds.</span></div>
    </div>
    <div class="studio">
     <section class="model-panel" aria-labelledby="viewer-title">
      <div class="panel-toolbar">
-      <div><span class="signal-dot" aria-hidden="true"></span><strong id="viewer-title">Interactive architectural model</strong><span class="toolbar-divider" aria-hidden="true"></span><span class="model-code">CP-1851 / HYDE PARK</span></div>
+      <div><span class="signal-dot" aria-hidden="true"></span><strong id="viewer-title">Photorealistic 3D reconstruction</strong><span class="toolbar-divider" aria-hidden="true"></span><span class="model-code">CP-1851 / HYDE PARK</span></div>
       <span id="view-readout" class="model-code" aria-live="polite">ISOMETRIC · RECONSTRUCTION</span>
      </div>
      <div class="model-stage" id="model-stage">
       <canvas id="palace-canvas" tabindex="0" role="img" aria-label="Interactive, rotatable model of the original 1851 Crystal Palace, showing the stepped glass roofs, monumental vaulted transept and repeating iron columns." aria-describedby="canvas-help"></canvas>
-      <div class="viewport-note" aria-hidden="true"><span class="crosshair">+</span> ARCHITECTURAL RECONSTRUCTION <span class="dimension-tag">NOT A SURVEY DRAWING</span></div>
+      <div class="viewport-note" aria-hidden="true"><span class="crosshair">+</span> ARCHITECTURAL RECONSTRUCTION <span class="dimension-tag">HISTORICAL INTERPRETATION</span></div>
       <div class="viewport-scale" id="scale-readout" aria-hidden="true">24 FT STRUCTURAL GRID</div>
       <div class="compass" aria-hidden="true"><span>N</span><span>+</span><span>S</span></div>
       <div class="zoom-controls" role="group" aria-label="Model zoom controls">
@@ -47,7 +50,7 @@
       </div>
      </div>
      <div class="model-bottom">
-      <p id="canvas-help">Drag to orbit · Scroll or pinch to zoom · Shift-drag to pan · Arrow keys to rotate · +/− to zoom · 0 to reset.</p>
+      <p id="canvas-help">Drag to orbit · Scroll or pinch to zoom · Right-drag to pan · Arrow keys to rotate · +/− to zoom · 0 to reset.</p>
       <div class="bottom-actions">
        <button type="button" id="export-view" class="button secondary">Save PNG <span aria-hidden="true">↗</span></button>
       </div>
@@ -67,7 +70,7 @@
      <section class="inspector-section" aria-labelledby="render-heading">
       <h2 id="render-heading">Drawing style</h2>
       <div class="segmented render-modes" role="group" aria-label="Drawing style">
-       <button type="button" data-mode="reconstruction" aria-pressed="true">Reconstruction</button>
+       <button type="button" data-mode="reconstruction" aria-pressed="true">Realistic</button>
        <button type="button" data-mode="blueprint" aria-pressed="false">Blueprint</button>
       </div>
      </section>
