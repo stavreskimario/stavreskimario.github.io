@@ -190,21 +190,42 @@
  document.getElementById('zoom-in').addEventListener('click',()=>setZoom(1.25));
  document.getElementById('zoom-out').addEventListener('click',()=>setZoom(.8));
  document.getElementById('reset-view').addEventListener('click',()=>setPreset('isometric'));
- function cursorXY(e){return{x:e.clientX,y:e.clientY}}
+ const pointers=new Map();
  canvas.addEventListener('pointerdown',e=>{
   if(e.pointerType==='mouse'&&e.button!==0&&e.button!==1)return;
   canvas.setPointerCapture(e.pointerId);
-  if(!drag)drag={x:e.clientX,y:e.clientY,mode:e.shiftKey||e.button===1?'pan':'orbit',id:e.pointerId};
-  else {lastTouchDistance=0;panOrigin=null}
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===1)drag={x:e.clientX,y:e.clientY,mode:e.shiftKey||e.button===1?'pan':'orbit',id:e.pointerId};
+  if(pointers.size===2){
+   drag=null;
+   const [a,b]=[...pointers.values()];
+   lastTouchDistance=Math.hypot(a.x-b.x,a.y-b.y);
+   panOrigin={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+  }
  });
  canvas.addEventListener('pointermove',e=>{
+  if(!pointers.has(e.pointerId))return;
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===2){
+   const [a,b]=[...pointers.values()];
+   const distance=Math.hypot(a.x-b.x,a.y-b.y);
+   const midpoint={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+   if(lastTouchDistance>0)state.zoom=clamp(state.zoom*distance/lastTouchDistance,.45,4);
+   if(panOrigin){state.panX+=midpoint.x-panOrigin.x;state.panY+=midpoint.y-panOrigin.y}
+   lastTouchDistance=distance;panOrigin=midpoint;state.preset=null;invalidate();return;
+  }
   if(!drag||drag.id!==e.pointerId)return;
   const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
   if(drag.mode==='pan'){state.panX+=dx;state.panY+=dy}else{state.yaw+=dx*.0075;state.pitch=clamp(state.pitch-dy*.006,-1.48,1.56)}
   drag.x=e.clientX;drag.y=e.clientY;state.preset=null;invalidate();
  });
- function end(e){if(drag?.id===e.pointerId)drag=null}
- canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);
+ function end(e){
+  pointers.delete(e.pointerId);
+  if(drag?.id===e.pointerId)drag=null;
+  if(pointers.size===1){const [id,v]=[...pointers.entries()][0];drag={id,x:v.x,y:v.y,mode:'orbit'}}
+  if(pointers.size<2){lastTouchDistance=0;panOrigin=null}
+ }
+ canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);canvas.addEventListener('lostpointercapture',end);
  canvas.addEventListener('wheel',e=>{e.preventDefault();setZoom(Math.exp(-e.deltaY*.001))},{passive:false});
  canvas.addEventListener('keydown',e=>{
   const keys=['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-','_','0'];
