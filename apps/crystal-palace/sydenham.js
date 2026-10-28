@@ -15,11 +15,21 @@ const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'h
 renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.4));
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure=1.35;
+renderer.toneMappingExposure=1.06;
 renderer.shadowMap.enabled=true;
 renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 const scene=new THREE.Scene();
-scene.background=new THREE.Color('#c3d7dd');
+const skyCanvas=document.createElement('canvas');
+skyCanvas.width=8;skyCanvas.height=512;
+const skyG=skyCanvas.getContext('2d');
+const skyGradient=skyG.createLinearGradient(0,0,0,512);
+skyGradient.addColorStop(0,'#aabfc7');
+skyGradient.addColorStop(.45,'#c5d4d7');
+skyGradient.addColorStop(1,'#e1dfd4');
+skyG.fillStyle=skyGradient;skyG.fillRect(0,0,8,512);
+const daylightSky=new THREE.CanvasTexture(skyCanvas);
+daylightSky.colorSpace=THREE.SRGBColorSpace;
+scene.background=daylightSky;
 scene.fog=new THREE.Fog('#c3d7dd',2100,5500);
 const camera=new THREE.PerspectiveCamera(36,1,2,8500);
 const controls=new OrbitControls(camera,canvas);
@@ -30,19 +40,19 @@ controls.maxDistance=4700;
 controls.maxPolarAngle=Math.PI*.494;
 controls.screenSpacePanning=true;
 controls.target.set(0,66,0);
-const hemi=new THREE.HemisphereLight(0xeaf2ff,0x9d987d,2.2);
-const sun=new THREE.DirectionalLight(0xffedd1,3.6);
+const hemi=new THREE.HemisphereLight(0xf6f2e6,0x79765d,1.55);
+const sun=new THREE.DirectionalLight(0xfff0d5,2.6);
 sun.position.set(-620,950,760);
 sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);
 Object.assign(sun.shadow.camera,{left:-1800,right:1800,top:1000,bottom:-1000,near:1,far:3200});
 sun.shadow.bias=-.0003;
 scene.add(hemi,sun);
 const palette={
- iron:new THREE.MeshStandardMaterial({color:0x6f807a,metalness:.64,roughness:.31}),
- frame:new THREE.MeshStandardMaterial({color:0xc2cbbd,metalness:.38,roughness:.41}),
- cornice:new THREE.MeshStandardMaterial({color:0xe0dacb,metalness:.12,roughness:.61}),
- glazing:new THREE.MeshPhysicalMaterial({color:0xc8e4df,metalness:.03,roughness:.16,transparent:true,opacity:.33,depthWrite:false,side:THREE.DoubleSide,clearcoat:1,clearcoatRoughness:.12}),
- roof:new THREE.MeshPhysicalMaterial({color:0xbfdad9,metalness:.09,roughness:.13,transparent:true,opacity:.48,depthWrite:false,side:THREE.DoubleSide,clearcoat:.95,clearcoatRoughness:.1}),
+ iron:new THREE.MeshStandardMaterial({color:0x506667,metalness:.64,roughness:.34}),
+ frame:new THREE.MeshStandardMaterial({color:0x9daa9f,metalness:.35,roughness:.45}),
+ cornice:new THREE.MeshStandardMaterial({color:0xcac7b9,metalness:.12,roughness:.61}),
+ glazing:new THREE.MeshPhysicalMaterial({color:0xaec6c8,metalness:.04,roughness:.13,transparent:true,opacity:.26,depthWrite:false,side:THREE.DoubleSide,clearcoat:1,clearcoatRoughness:.08}),
+ roof:new THREE.MeshPhysicalMaterial({color:0xc1d3d0,metalness:.08,roughness:.18,transparent:true,opacity:.4,depthWrite:false,side:THREE.DoubleSide,clearcoat:.92,clearcoatRoughness:.12}),
  inside:new THREE.MeshStandardMaterial({color:0x4c6465,roughness:.82,side:THREE.DoubleSide}),
  base:new THREE.MeshStandardMaterial({color:0xb6ada0,roughness:.93}),
  pale:new THREE.MeshStandardMaterial({color:0xd4cbbb,roughness:.95}),
@@ -105,7 +115,7 @@ const cube=new THREE.BoxGeometry(1,1,1);
 const instances=new Map();
 function box(g,x,y,z,w,h,d,mat,shadow=false){
  const mesh=new THREE.Mesh(cube,mat);mesh.position.set(x,y,z);mesh.scale.set(w,h,d);
- mesh.castShadow=shadow;mesh.receiveShadow=shadow;g.add(mesh);return mesh;
+ mesh.castShadow=shadow;mesh.receiveShadow=shadow||g===grounds;g.add(mesh);return mesh;
 }
 function beam(a,b,width=1,mat='frame'){
  const A=new THREE.Vector3(...a),B=new THREE.Vector3(...b),v=B.clone().sub(A),length=v.length();
@@ -434,7 +444,7 @@ annotation('FORMAL TERRACES',330,34,560);
 groups.labels.visible=false;
 let renderMode='reconstruction',presetName='isometric',frame=0,remaining=0;
 const presets={
- isometric:{camera:[-600,250,1390],target:[-285,62,175]},
+ isometric:{camera:[-600,300,2080],target:[-350,65,380]},
  elevation:{camera:[-130,165,1400],target:[-130,75,0]},
  plan:{camera:[1,1900,1],target:[0,0,100]},
  transept:{camera:[140,185,630],target:[0,98,130]}
@@ -453,12 +463,12 @@ function setPreset(key){
 }
 function setMode(next){
  renderMode=next;const technical=next==='blueprint';
- scene.background.set(technical?'#193849':'#c3d7dd');
+ scene.background=technical?new THREE.Color('#193849'):daylightSky;
  scene.fog.color.set(technical?'#193849':'#c3d7dd');
- grounds.visible=!technical;sun.intensity=technical?1.4:3.6;
- palette.glazing.opacity=technical?.09:.33;palette.roof.opacity=technical?.13:.48;
- palette.iron.color.set(technical?'#96e1e7':'#6f807a');
- palette.frame.color.set(technical?'#d0f4ee':'#c2cbbd');
+ grounds.visible=!technical;sun.intensity=technical?1.4:2.6;
+ palette.glazing.opacity=technical?.09:.26;palette.roof.opacity=technical?.13:.4;
+ palette.iron.color.set(technical?'#96e1e7':'#506667');
+ palette.frame.color.set(technical?'#d0f4ee':'#9daa9f');
  document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===next)));
  readout.textContent=presetName.toUpperCase()+' · '+(technical?'BLUEPRINT':'SYDENHAM');invalidate();
 }
