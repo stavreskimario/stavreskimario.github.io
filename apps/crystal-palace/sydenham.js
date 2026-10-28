@@ -265,8 +265,8 @@ function mainHall(){
    for(const z of [a,b])windowWall(-HALF,HALF,z,lower,height,12);
   }
  }
- // Nave barrel, 72-foot span from 68-foot spring, apex ~104 feet.
- barrelRoof(-HALF,HALF,0,36,68,28);
+ // Nave measured crown 110 ft 3 in above floor; 72-ft semicylindrical span.
+ barrelRoof(-HALF,HALF,0,36,74.25,32);
  for(const z of [-36,36])windowWall(-HALF,HALF,z,46,68,12);
  // 72-foot transverse structural rhythm, plus paired projecting columns.
  for(let x=-HALF;x<=HALF;x+=24){
@@ -408,11 +408,11 @@ function build(){
  // After the 1866 north-end fire: retain central and surviving south transept.
  // The lost northern transept is deliberately not generated for the photo-era view.
  transept(0,60,115,-192,192);
- transept(-560,36,75,-162,162);
- subsidiaryWing(-804,-1250,0);
- subsidiaryWing(804,905,0);
+ transept(-560,36,75,-168,168);
+ subsidiaryWing(-804,-1378,0);
+ subsidiaryWing(804,1378,0);
  // Twin water towers appear in aerial and period photographs.
- waterTower(-1380,150);waterTower(1120,150);
+ waterTower(-1480,190);waterTower(1480,190);
  flush();
 }
 build();
@@ -429,7 +429,7 @@ function annotation(text,x,y,z){
 }
 annotation('CENTRAL TRANSEPT · 175 FT',0,207,170);
 annotation('SOUTH TRANSEPT · 110 FT',-560,133,170);
-annotation('BRUNEL WATER TOWER',-1380,310,150);
+annotation('BRUNEL WATER TOWER',-1480,310,190);
 annotation('FORMAL TERRACES',330,34,560);
 groups.labels.visible=false;
 let renderMode='reconstruction',presetName='isometric',frame=0,remaining=0;
