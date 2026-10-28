@@ -338,10 +338,10 @@ function waterTower(x,z){
 }
 function terrace(){
  // Terraces on the photographed garden front, not an evenly spaced tree orchard.
- const land=box(grounds,0,-12,0,4500,20,3300,palette.green,false);
+ const land=box(grounds,0,-16,0,4500,20,3300,palette.green,false);
  const plinth=box(grounds,0,-1,0,2920,3,500,palette.base,false);
  const mainPromenade=box(grounds,0,1,350,2280,3,165,palette.pathway,false);
- const lowerPromenade=box(grounds,0,-11,650,2400,3,130,palette.pathway,false);
+ const lowerPromenade=box(grounds,0,-6,650,2400,3,130,palette.pathway,false);
  for(const row of [210,430]){
   box(grounds,0,-2,row,2300,5,11,palette.pale,false);
   for(let x=-1120;x<=1120;x+=20){
@@ -357,11 +357,11 @@ function terrace(){
  }
  // Winding walks, flowerbeds, and the conspicuous reflecting basin.
  const pond=new THREE.Mesh(new THREE.CircleGeometry(180,96),palette.water);
- pond.rotation.x=-Math.PI/2;pond.position.set(-410,-9,895);grounds.add(pond);
+ pond.rotation.x=-Math.PI/2;pond.position.set(-410,-4,895);grounds.add(pond);
  const ring=new THREE.Mesh(new THREE.RingGeometry(180,189,96),palette.pale);
- ring.rotation.x=-Math.PI/2;ring.position.set(-410,-8.7,895);grounds.add(ring);
+ ring.rotation.x=-Math.PI/2;ring.position.set(-410,-3.8,895);grounds.add(ring);
  const inner=new THREE.Mesh(new THREE.RingGeometry(169,172,96),palette.cornice);
- inner.rotation.x=-Math.PI/2;inner.position.set(-410,-8.5,895);grounds.add(inner);
+ inner.rotation.x=-Math.PI/2;inner.position.set(-410,-3.7,895);grounds.add(inner);
  const fountainBase=new THREE.Mesh(new THREE.CylinderGeometry(15,17,8,32),palette.pale);
  fountainBase.position.set(-410,-3,895);grounds.add(fountainBase);
  const pedestal=new THREE.Mesh(new THREE.CylinderGeometry(2.6,3.4,23,16),palette.cornice);
@@ -444,7 +444,7 @@ annotation('FORMAL TERRACES',330,34,560);
 groups.labels.visible=false;
 let renderMode='reconstruction',presetName='isometric',frame=0,remaining=0;
 const presets={
- isometric:{camera:[-600,300,2080],target:[-350,65,380]},
+ isometric:{camera:[-980,175,1400],target:[-320,69,310]},
  elevation:{camera:[-130,165,1400],target:[-130,75,0]},
  plan:{camera:[1,1900,1],target:[0,0,100]},
  transept:{camera:[140,185,630],target:[0,98,130]}
