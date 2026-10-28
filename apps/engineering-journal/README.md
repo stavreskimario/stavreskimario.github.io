@@ -14,15 +14,15 @@ Articles open on the publisher’s website. The app contains links, dates and sh
 
 ## Sources and collection
 
-The Python standard-library collector reads the [source registry](../scripts/engineering-feed/sources.json). It uses RSS/Atom where suitable and official HTML indexes for dedicated engineering content or publishers without feeds. OpenAI uses its engineering index rather than general news. Uber is first in the source picker. Other sources include Anthropic, Google Research, DeepMind, Meta, xAI, Cursor, Perplexity, Thinking Machines, Together AI, Databricks, GitHub, Cloudflare, Netflix and Spotify.
+The Python standard-library collector reads the [source registry](../../scripts/engineering-feed/sources.json). It uses RSS/Atom where suitable and official HTML indexes for dedicated engineering content or publishers without feeds. OpenAI uses its engineering index rather than general news. Uber is first in the source picker. Other sources include Anthropic, Google Research, DeepMind, Meta, xAI, Cursor, Perplexity, Thinking Machines, Together AI, Databricks, GitHub, Cloudflare, Netflix and Spotify.
 
 The starter collection was fetched from official sources during implementation. Its xAI link was separately verified on the [official article](https://x.ai/news/designing-grok-bot). At implementation, xAI and Perplexity returned HTTP 403 to the collector, so their automated checks still report failure. Restrictions are not bypassed and full coverage is not promised. Some indexes omit dates/excerpts; those fields remain absent.
 
-The prepared workflow targets **06:00 Australia/Melbourne**, including daylight saving. GitHub may queue a run, so the interface says “around 6 am”. It is initially disabled pending approval of the Pages publishing change. See the [publishing runbook](../docs/ENGINEERING_JOURNAL.md).
+The prepared workflow targets **06:00 Australia/Melbourne**, including daylight saving. GitHub may queue a run, so the interface says “around 6 am”. It is initially disabled pending approval of the Pages publishing change. See the [publishing runbook](../../docs/ENGINEERING_JOURNAL.md).
 
 ## Local development
 
-From the repository root, run `python3 -m http.server 8000`, then open `http://localhost:8000/engineering-journal/`. No frontend build or package install is required. To intentionally collect once, run `python3 scripts/engineering-feed/collect.py`.
+From the repository root, run `python3 -m http.server 8000`, then open `http://localhost:8000/apps/engineering-journal/`. No frontend build or package install is required. To intentionally collect once, run `python3 scripts/engineering-feed/collect.py`.
 
 ```sh
 python3 scripts/validate.py

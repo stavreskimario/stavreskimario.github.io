@@ -6,13 +6,14 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 
 | App | What it does | Open |
 | --- | --- | --- |
-| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
-| Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
-| Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](engineering-journal/) |
+| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/apps/la-trip/) |
+| Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/apps/hello-world/) |
+| Crystal Palace, 1851 | Architectural study grounded in the original Hyde Park dimensions, with interactive 3D and CAD fallback. | [Crystal Palace](apps/crystal-palace/) |
+| Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](apps/engineering-journal/) |
 
 ## Engineering Journal
 
-The new [Engineering Journal](engineering-journal/) collects official technical articles into a searchable, filterable reading list. Saves and read status stay in your browser; JSON backup import/export moves them between devices. See its [reader guide](engineering-journal/README.md) and [daily publishing runbook](docs/ENGINEERING_JOURNAL.md).
+The new [Engineering Journal](apps/engineering-journal/) collects official technical articles into a searchable, filterable reading list. Saves and read status stay in your browser; JSON backup import/export moves them between devices. See its [reader guide](apps/engineering-journal/README.md) and [daily publishing runbook](docs/ENGINEERING_JOURNAL.md).
 
 The daily workflow targets 6 am Australia/Melbourne and is initially disabled. Enabling it requires approval to change the existing Pages source to GitHub Actions; this branch does not change any Pages setting. The initial collection is included with the app.
 
@@ -53,10 +54,10 @@ Backups now include any booking details you enter, including confirmation number
 First create a descriptive `feature/<short-description>` branch from the latest remote `main`. Make all edits and commits on that branch. From the repository root:
 
 ```sh
-cp -R hello-world my-app
+cp -R apps/hello-world apps/my-app
 ```
 
-1. Build the new app inside that folder. Update its title, description, favicon and content. Keep its `../shared/` imports and `../` All apps links.
+1. Build the new app inside that folder. Update its title, description, favicon and content. Keep its `../../shared/` imports and `../../` All apps links.
 2. Add an entry to the `apps` array in [`apps.json`](apps.json), using a unique folder name and ID:
 
    ```json
@@ -65,15 +66,15 @@ cp -R hello-world my-app
      "name": "My App",
      "description": "What this app does.",
      "category": "Tool",
-     "path": "./my-app/",
+     "path": "./apps/my-app/",
      "specimen": "My App"
    }
    ```
 
 3. Run `python3 scripts/validate.py` and check the app’s actual interactions, mobile layout and accessibility.
-4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. After the pull request is merged, verify the matching Pages deployment and live app URL.
+4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. Old app URLs redirect to their new `apps/` locations. After the pull request is merged, verify the matching Pages deployment and live app URL.
 
-See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [UI craft reference](docs/UI_CRAFT_REFERENCE.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
+See the [starter recipe](apps/hello-world/README.md), [design language](DESIGN.md), [UI craft reference](docs/UI_CRAFT_REFERENCE.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
 
 ## Repository layout
 
@@ -81,10 +82,10 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [
 | --- | --- |
 | `index.html`, `apps.json` | Collection shell and ordered app catalog |
 | `shared/` | Common theme, controls, catalog styles and rendering |
-| `hello-world/` | Copyable app starter |
-| `engineering-journal/` | Daily engineering reader and public article catalogue |
+| `apps/hello-world/` | Copyable app starter |
+| `apps/engineering-journal/` | Daily engineering reader and public article catalogue |
 | `scripts/engineering-feed/` | Bounded, standard-library collection and whole-site staging |
-| `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
+| `apps/la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, `AGENTS.md` | Design decisions, UI craft reference, interaction rules and development lessons |
 | `scripts/validate.py` | Manifest, local HTML links/assets and JavaScript syntax checks |
 
@@ -99,7 +100,7 @@ python3 scripts/validate.py
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/` and `/la-trip/` or `/hello-world/`. Use HTTP rather than `file://` so the catalog can load its manifest. Localhost has its own browser storage, separate from the live site.
+Open `http://localhost:8000/` and `/apps/la-trip/` or `/apps/hello-world/`. Use HTTP rather than `file://` so the catalog can load its manifest. Localhost has its own browser storage, separate from the live site.
 
 GitHub Pages deploys the **root of `main`** using the existing Pages workflow. Keep `.nojekyll`, preserve relative paths and check the deployment result, not only the commit. The validator is not a substitute for keyboard, touch, reduced-motion, narrow-screen and storage-failure checks. All repository files are public; never commit credentials or private booking references.
 
@@ -107,3 +108,7 @@ GitHub Pages deploys the **root of `main`** using the existing Pages workflow. K
 UI changes follow the [motion decision rules](DESIGN.md#ui-craft-and-motion-decisions) and include a Before/After/Why review table. The LA planner keeps keyboard navigation immediate and uses restrained pointer feedback while preserving its journal styling. Its saved edits remain device-local.
 
 Browser regressions are in `tests/la-scroll.cjs` and `tests/la-craft.cjs`; setup commands are at the top of each file. These supplement the static validator and cover relevant touch, keyboard, layout and motion behavior.
+
+## Apps folder layout
+
+All four app implementations live in `apps/<slug>/`. The root retains the collection, `apps.json`, shared assets, tooling and four redirect-only entrypoints. Existing browser storage stays on the same domain, so LA trip and Engineering Journal local saves remain available after redirect. Public links should now use `/apps/<slug>/`. GitHub Pages remains deployed from the root of `main` using the existing Pages settings.

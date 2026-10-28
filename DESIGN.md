@@ -25,7 +25,7 @@ Use rem/em and flexible grids; support 200% text enlargement, long names and nar
 
 ## Shared primitives
 
-Load `../shared/theme.css`, then app-local CSS. Load the deferred `../shared/ui.js` before app JS. The global `SiteUI` exposes:
+Load `../../shared/theme.css`, then app-local CSS. Load the deferred `../../shared/ui.js` before app JS. The global `SiteUI` exposes:
 
 - `Spring(value, render, response = .34, epsilon = .08)`: `.set(value)` for direct manipulation; `.to(target, {velocity, damping})` for spring settling; `.stop()` retains the presentation value. `.value`, `.velocity` and `.running` expose current state. Velocity is in value units per second, not relative velocity. Response is a tuning parameter, not a promised duration.
 - `SelectionPill(group, selectedSelector)`: `.sync()` after updating ARIA selection; `.sync(true)` after layout changes. An anchored solid selection surface follows independent X/Y springs. Keep segment sizes equal and handle resize/font loading as Hello World does.
@@ -107,3 +107,7 @@ Every UI code review and UI-change PR description must include one actual Markdo
 ### Current implementation scope
 
 The LA planner applies this policy in its local motion layer: immediate keyboard/AT actions, immediate day content, pointer-only press scale written to the element, gated hover rules and a short centered native-dialog transition. The shared starter retains its existing implementation; new work must apply this policy and verify any shared primitive changes across its consumers. Documentation of the policy is not a claim that every existing app has been migrated.
+
+## Canonical app layout
+
+The application source folders are `apps/<slug>/`, and `apps.json` paths must use `./apps/<slug>/`. Use `../../shared/theme.css`, `../../shared/ui.js`, and `../../` for navigation to the collection. Previous root paths contain only redirect entrypoints so they do not duplicate app implementations.
