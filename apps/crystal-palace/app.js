@@ -11,9 +11,9 @@
   status.textContent='WebGL unavailable. Displaying the architectural drawing instead.';
   loadFallback();return;
  }
- import('./realistic.js?v=2').catch(error=>{
+ import('./sydenham.js?v=3').catch(error=>{
   console.error('Crystal Palace 3D renderer:',error);
-  status.textContent='3D unavailable (the renderer requires an internet connection). Loading the drawing fallback.';
+  status.textContent='Sydenham 3D needs WebGL2 and a CDN connection. Loading a simplified Sydenham elevation.';
   loadFallback();
  });
 })();
