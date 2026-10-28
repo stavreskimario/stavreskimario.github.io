@@ -59,8 +59,11 @@ const server=http.createServer(async(req,res)=>{
   await real.locator('button[data-preset="transept"]').click();
   assert.equal(await real.locator('button[data-preset="transept"]').getAttribute('aria-pressed'),'true');
   await real.locator('button[data-mode="blueprint"]').click();
+  assert.equal(await real.locator('button[data-mode="blueprint"]').getAttribute('aria-pressed'),'true');
   await real.locator('button[data-mode="reconstruction"]').click();
-  // Capture WebGL without Playwright waiting for orbital camera animation to settle.
+  await real.locator('button[data-preset="isometric"]').click();
+  await real.waitForTimeout(500);
+  // Capture the full garden-facing scene in the realistic mode after repaint.
   if(process.env.PALACE_RENDER_SCREENSHOT){
    const png=await real.locator('#palace-canvas').evaluate(el=>el.toDataURL('image/png'));
    assert(png.startsWith('data:image/png;base64,'),'WebGL preview must be PNG');
