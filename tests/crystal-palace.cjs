@@ -41,7 +41,9 @@ const server=http.createServer(async(req,res)=>{
   const threeBuild=path.join(path.dirname(require.resolve('three')),'three.module.js');
   const orbitModule=path.resolve(path.dirname(require.resolve('three')),'../examples/jsm/controls/OrbitControls.js');
   await real.route('**/cdn.jsdelivr.net/**',async route=>{
-   const moduleFile=route.request().url().includes('OrbitControls.js')?orbitModule:threeBuild;
+   const requestUrl=route.request().url();
+   const moduleFile=requestUrl.includes('OrbitControls.js')?orbitModule:
+    requestUrl.includes('three.core.js')?path.join(path.dirname(threeBuild),'three.core.js'):threeBuild;
    await route.fulfill({body:await fs.readFile(moduleFile),contentType:'text/javascript',headers:{'Access-Control-Allow-Origin':'*'}});
   });
   await real.goto(base+'/apps/crystal-palace/',{waitUntil:'domcontentloaded'});
