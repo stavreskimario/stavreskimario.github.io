@@ -239,6 +239,20 @@ function landscape(){
  }
 }
 construct();landscape();
+// Camera-facing annotations are a separate, genuinely toggleable layer.
+function addAnnotation(title,x,y,z){
+ const c=document.createElement('canvas');c.width=440;c.height=88;
+ const t=c.getContext('2d');
+ t.fillStyle='rgba(252,250,238,.88)';t.fillRect(0,0,440,88);
+ t.strokeStyle='#7b9790';t.lineWidth=2;t.strokeRect(2,2,436,84);
+ t.fillStyle='#385e60';t.font='600 26px sans-serif';t.fillText(title,18,54);
+ const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;
+ const label=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,transparent:true,depthTest:false}));
+ label.position.set(x,y,z);label.scale.set(105,21,1);layers.labels.add(label);
+}
+addAnnotation('THE GREAT TRANSEPT · 108 FT',8,126,0);
+addAnnotation('24 FT IRON BAY',570,50,-204);
+addAnnotation('936 FT NORTH PROJECTION',380,43,253);
 const guide=new THREE.GridHelper(2400,100,0x698da0,0xa0b3ae);guide.position.y=.8;layers.grid.add(guide);layers.grid.visible=false;
 const presets={
  isometric:{position:[870,360,860],target:[0,30,0]},
