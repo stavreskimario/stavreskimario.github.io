@@ -33,6 +33,14 @@ jobs:
       - name: Verify reader interactions
         env:
           NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
+          PALACE_RENDER_SCREENSHOT: ${{ runner.temp }}/sydenham-preview.png
         run: |
           node tests/engineering-journal.cjs
           node tests/crystal-palace.cjs
+      - name: Save Sydenham browser render for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sydenham-3d-preview
+          path: ${{ runner.temp }}/sydenham-preview.png
+          if-no-files-found: warn
