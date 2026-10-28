@@ -154,6 +154,15 @@ function transept(x,r,spring,zStart,zEnd,facade=196){
    beam([ax,spring,z+.22],[ax,ya,z+.22],.56,'iron');
   }
   beam([x-r,spring,z+.4],[x+r,spring,z+.4],1.3,'iron');
+  // Concentric arch tracery follows surviving front elevations.
+  for(const proportion of [.68,.82,.92]){
+   for(let i=0;i<segments;i++){
+    const a=i*Math.PI/segments,b=(i+1)*Math.PI/segments;
+    beam([x-r*proportion*Math.cos(a),spring+r*proportion*Math.sin(a),z+1.4],
+         [x-r*proportion*Math.cos(b),spring+r*proportion*Math.sin(b),z+1.4],
+         .58,'frame');
+   }
+  }
   for(let t=0;t<=10;t++){
    const xx=x-r+(2*r*t/10);
    const sy=spring+Math.sqrt(Math.max(0,r*r-(xx-x)*(xx-x)));
@@ -167,6 +176,8 @@ function transept(x,r,spring,zStart,zEnd,facade=196){
    }
   }
   for(let y=0;y<=spring;y+=20)beam([x-r,y,z+.55],[x+r,y,z+.55],1,'frame');
+  for(const y of [22,45,68,91])if(y<spring)
+   beam([x-r-17,y,z+2],[x+r+17,y,z+2],1.6,'cornice');
   for(let x0=x-r;x0<=x+r;x0+=24)beam([x0,0,z+1],[x0,spring,z+1],1.3,'frame');
  }
  // Solid tiered flanking wings and four square pylons of the transepts.
@@ -191,6 +202,8 @@ function mainHall(){
  box(groups.iron,0,-1.8,0,LENGTH,4,312,palette.base,false);
  // Open two-storey galleries and deeply layered stepped facades.
  for(const z of [-156,156]){
+  // Recessed dark interior produces layered glazing instead of a flat pale surface.
+  box(groups.iron,0,36,z-Math.sign(z)*3,LENGTH,63,1.5,palette.inside,false);
   windowWall(-HALF,HALF,z,0,67,8);
   box(groups.iron,0,3,z+(z>0?4:-4),LENGTH,6,11,palette.base,false);
   for(const y of [23,46,67])box(groups.iron,0,y,z+(z>0?3:-3),LENGTH,1.75,5,palette.cornice,false);
@@ -259,7 +272,7 @@ function waterTower(x,z){
   const theta=i*2*Math.PI/24,c=Math.cos(theta),s=Math.sin(theta);
   const outer=18.5;
   for(let y=34;y<235;y+=23){
-   beam([outer*c,y,outer*s],[outer*c,y+16,outer*s],i%3===0?1.35:.55,'iron');
+   beam([x+outer*c,y,z+outer*s],[x+outer*c,y+16,z+outer*s],i%3===0?1.35:.55,'iron');
   }
  }
  const drum=new THREE.Mesh(new THREE.CylinderGeometry(25.5,19,26,polygon),palette.tower);
