@@ -32,7 +32,8 @@ const server=http.createServer(async(req,res)=>{
 
   // The realistic engine needs an external CDN. Fallback should remain usable offline.
   // Verify the real WebGL scene before deliberately blocking the CDN for fallback.
-  const real=await browser.newPage({viewport:{width:1360,height:900},acceptDownloads:true});
+  const real=await browser.newPage({viewport:{width:1180,height:760},acceptDownloads:true});
+  await real.emulateMedia({reducedMotion:'reduce'});
   const threeErrors=[];real.on('pageerror',err=>threeErrors.push(err.message));
   // Serve exact version-pinned npm copies, avoiding flaky third-party CDN in CI.
   const threeBuild=path.join(path.dirname(require.resolve('three')),'three.module.js');
@@ -53,7 +54,12 @@ const server=http.createServer(async(req,res)=>{
   assert.equal(await real.locator('button[data-preset="transept"]').getAttribute('aria-pressed'),'true');
   await real.locator('button[data-mode="blueprint"]').click();
   await real.locator('button[data-mode="reconstruction"]').click();
-  if(process.env.PALACE_RENDER_SCREENSHOT)await real.locator('#model-stage').screenshot({path:process.env.PALACE_RENDER_SCREENSHOT});
+  // Capture WebGL without Playwright waiting for orbital camera animation to settle.
+  if(process.env.PALACE_RENDER_SCREENSHOT){
+   const png=await real.locator('#palace-canvas').evaluate(el=>el.toDataURL('image/png'));
+   assert(png.startsWith('data:image/png;base64,'),'WebGL preview must be PNG');
+   await fs.writeFile(process.env.PALACE_RENDER_SCREENSHOT,Buffer.from(png.split(',')[1],'base64'));
+  }
   console.log('PASS true 3D WebGL model, transept camera and render modes.');
   await real.close();
 
