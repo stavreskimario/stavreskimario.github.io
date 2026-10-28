@@ -353,7 +353,7 @@ function terrace(){
  // Central ceremonial staircase between levels, with stepped treads.
  for(let i=0;i<18;i++){
   const z=390+i*10;
-  box(grounds,0,1-(i*.75),z,155,1.5,11,palette.pale,false);
+  box(grounds,0,1-(i*.45),z,155,1.5,11,palette.pale,false);
  }
  // Winding walks, flowerbeds, and the conspicuous reflecting basin.
  const pond=new THREE.Mesh(new THREE.CircleGeometry(180,96),palette.water);
