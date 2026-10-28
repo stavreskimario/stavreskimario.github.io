@@ -21,7 +21,7 @@ renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 const scene=new THREE.Scene();
 scene.background=new THREE.Color('#c3d7dd');
 scene.fog=new THREE.Fog('#c3d7dd',2100,5500);
-const camera=new THREE.PerspectiveCamera(42,1,2,8500);
+const camera=new THREE.PerspectiveCamera(36,1,2,8500);
 const controls=new OrbitControls(camera,canvas);
 controls.enableDamping=!reduced.matches;
 controls.dampingFactor=.08;
@@ -59,6 +59,45 @@ const palette={
  brass:new THREE.MeshStandardMaterial({color:0xb5a681,metalness:.61,roughness:.26}),
  visitor:new THREE.MeshStandardMaterial({color:0x454848,roughness:.91})
 };
+// Repeating, deterministic material microtexture gives ground and stone a natural scale
+// without external images or large downloads. This is illustrative, not a material survey.
+function surfaceTexture(paper,grain,repeat=1){
+ const c=document.createElement('canvas');c.width=c.height=256;
+ const g=c.getContext('2d');g.fillStyle=paper;g.fillRect(0,0,256,256);
+ for(let i=0;i<3400;i++){
+  const x=(i*97+((i*i*13)%257))%256,y=(i*53+(i*i*7)%259)%256;
+  const tone=(i*73)%100;g.fillStyle=tone%2?'rgba(255,255,255,.035)':'rgba(30,37,31,.046)';
+  const side=1+(tone%4);g.fillRect(x,y,side,side);
+ }
+ for(let i=0;i<120;i++){
+  g.strokeStyle='rgba(47,56,42,.035)';g.lineWidth=.5;
+  const x=(i*53)%256,y=(i*71)%256;
+  g.beginPath();g.moveTo(x,y);g.lineTo(x+11,y+((i%7)-3));g.stroke();
+ }
+ const texture=new THREE.CanvasTexture(c);
+ texture.wrapS=texture.wrapT=THREE.RepeatWrapping;
+ texture.repeat.set(repeat,repeat);
+ texture.colorSpace=THREE.SRGBColorSpace;
+ texture.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),4);
+ return texture;
+}
+palette.green.map=surfaceTexture('#a0b399',20,22);
+palette.pathway.map=surfaceTexture('#c9c0ac',20,7);
+palette.base.map=surfaceTexture('#c2bcb4',20,5);
+palette.tower.map=surfaceTexture('#d6d3ca',12,3);
+palette.brick.map=surfaceTexture('#b9b2a7',8,4);
+for(const key of ['green','pathway','base','tower','brick'])palette[key].needsUpdate=true;
+const pmrem=new THREE.PMREMGenerator(renderer);
+const reflectionScene=new THREE.Scene();
+reflectionScene.background=new THREE.Color('#a8cdd9');
+for(const [x,y,z,w,h] of [[-32,24,-24,22,13],[30,19,16,15,25],[-15,33,33,22,8]]){
+ const panel=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:'#fff8e6',side:THREE.DoubleSide}));
+ panel.position.set(x,y,z);panel.lookAt(0,8,0);reflectionScene.add(panel);
+}
+const illumination=pmrem.fromScene(reflectionScene,.05,.1,90);
+scene.environment=illumination.texture;
+pmrem.dispose();
+
 const groups={glass:new THREE.Group(),roof:new THREE.Group(),iron:new THREE.Group(),grid:new THREE.Group(),labels:new THREE.Group()};
 Object.values(groups).forEach(group=>scene.add(group));
 const grounds=new THREE.Group();scene.add(grounds);
@@ -395,7 +434,7 @@ annotation('FORMAL TERRACES',330,34,560);
 groups.labels.visible=false;
 let renderMode='reconstruction',presetName='isometric',frame=0,remaining=0;
 const presets={
- isometric:{camera:[-680,320,1080],target:[-170,68,75]},
+ isometric:{camera:[-535,210,1010],target:[-235,66,80]},
  elevation:{camera:[-130,165,1400],target:[-130,75,0]},
  plan:{camera:[1,1900,1],target:[0,0,100]},
  transept:{camera:[140,185,630],target:[0,98,130]}
