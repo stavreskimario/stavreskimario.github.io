@@ -8,6 +8,7 @@ This interactive WebGL reconstruction deliberately represents the **Sydenham Cry
 - Central transept: approximately **120-ft span**, **390-ft length**, with the crown approximately **175 ft above the ground floor**. The end face has a very large semicircular glazed lunette.
 - Surviving southern transept: approximately **72-ft span**, rising to roughly **110 ft** above the ground floor.
 - Water towers: **282 ft** high; the elaborate terraces, stairs, balustrades and fountain basins occupy the garden side.
+- Extended wings: contemporary guidebooks give **574 ft for each wing**, beyond the 1,608-ft main nave. The nave vault crown is recorded at approximately **110 ft 3 in** above its ground floor.
 - Post-1866 appearance: the burned northern transept is deliberately omitted. Surviving wings, ornamental facades and park geometry are approximated where reconstruction records are incomplete.
 
 The Three.js world uses **one unit per foot**; documented structural dimensions are applied at that scale. This is NOT a verified as-built 1:1 twin. Sash sections, mouldings, exact tower spacing, terrace details, sculpture, planted species, finish colours, transparency, lighting and some damaged wing geometry are interpretive.
@@ -40,4 +41,4 @@ python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
 node tests/crystal-palace.cjs
 ```
 
-Verify the Sydenham 3D scene in desktop Safari/Chromium and a physical mobile browser, using the photograph view and transept, elevation and plan presets. Check visually against the provided historic photograph, and check WebGL fallback, buttons, zoom, mouse/touch gestures and PNG export. Automated static and fallback tests cannot certify photographic realism, GPU performance or archaeological accuracy.
+Verify the Sydenham 3D scene in desktop Safari/Chromium and a physical mobile browser, using the photograph view and transept, elevation and plan presets. Check visually against the provided historic photograph, and check WebGL fallback, buttons, zoom, mouse/touch gestures and PNG export. The GitHub Actions browser check exercises a software-WebGL renderer and emits a screenshot artifact for review; passing it proves operation, **not** photorealistic appearance or historical fidelity. Automated static and fallback tests cannot certify photographic realism, GPU performance or archaeological accuracy.
