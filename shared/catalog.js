@@ -11,7 +11,7 @@
   const ids = new Set();
   if (data.version !== 1 || !Array.isArray(data.apps)) throw new Error('Invalid collection');
   const cards = data.apps.map((app, index) => {
-   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(app.id) || ids.has(app.id) || app.path !== `./${app.id}/` || !localPath(app.path) || ![app.name,app.description,app.category].every(value => typeof value === 'string' && value.trim()) || (app.image && !localPath(app.image))) throw new Error('Invalid app entry');
+   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(app.id) || ids.has(app.id) || app.path !== `./apps/${app.id}/` || !localPath(app.path) || ![app.name,app.description,app.category].every(value => typeof value === 'string' && value.trim()) || (app.image && !localPath(app.image))) throw new Error('Invalid app entry');
    ids.add(app.id);
    const card = element('a','project'); card.href = app.path; card.setAttribute('aria-label',`Open ${app.name}`);
    const visual = element('div',app.image ? 'photo' : 'specimen');

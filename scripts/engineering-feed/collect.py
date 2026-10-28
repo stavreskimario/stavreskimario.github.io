@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = Path(__file__).with_name('sources.json')
-USER_AGENT = 'EngineeringJournal/1.0 (+https://stavreskimario.github.io/engineering-journal/)'
+USER_AGENT = 'EngineeringJournal/1.0 (+https://stavreskimario.github.io/apps/engineering-journal/)'
 MAX_BYTES = 4_000_000
 MAX_ARTICLES = 2000
 TOPICS = {
@@ -292,14 +292,14 @@ def merge_catalogue(previous,sources,results,now):
 
 def recover(url,sources):
     u=urllib.parse.urlsplit(url)
-    if u.scheme!='https' or u.netloc!='stavreskimario.github.io' or not u.path.endswith('/engineering-journal/data/catalogue.json'): raise ValueError('Unexpected previous-catalogue location')
+    if u.scheme!='https' or u.netloc!='stavreskimario.github.io' or u.path not in ('/apps/engineering-journal/data/catalogue.json','/engineering-journal/data/catalogue.json'): raise ValueError('Unexpected previous-catalogue location')
     fake={'homepage':url,'hosts':['stavreskimario.github.io']}
     text,_,_=fetch(url,fake)
     return validate_catalogue(json.loads(text),sources)
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'engineering-journal/data/catalogue.json');parser.add_argument('--previous-url');parser.add_argument('--reuse-only',action='store_true');parser.add_argument('--validate-only',action='store_true');parser.add_argument('--sources',type=Path,default=REGISTRY);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'apps/engineering-journal/data/catalogue.json');parser.add_argument('--previous-url');parser.add_argument('--legacy-previous-url');parser.add_argument('--reuse-only',action='store_true');parser.add_argument('--validate-only',action='store_true');parser.add_argument('--sources',type=Path,default=REGISTRY);args=parser.parse_args()
     sources=json.loads(args.sources.read_text())['sources']
     previous=validate_catalogue(json.loads(args.output.read_text()),sources)
     if args.validate_only: print(f'Validated {len(previous["articles"])} articles.');return
@@ -307,7 +307,13 @@ def main():
         try: previous=recover(args.previous_url,sources)
         except urllib.error.HTTPError as exc:
             if exc.code!=404: raise
-            print('No previous deployment (404); using the checked-in starter collection.',file=sys.stderr)
+            if args.legacy_previous_url:
+                try: previous=recover(args.legacy_previous_url,sources)
+                except urllib.error.HTTPError as legacy:
+                    if legacy.code!=404: raise
+                    print('No previous catalogue at either URL; using checked-in seed.',file=sys.stderr)
+            else:
+                print('No previous deployment (404); using the checked-in starter collection.',file=sys.stderr)
         # Other network/schema errors fail closed: never replace a live archive with a seed.
     if args.reuse_only: data=previous
     else:

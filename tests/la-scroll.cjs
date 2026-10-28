@@ -34,7 +34,7 @@ async function main() {
    page.on('pageerror', error => errors.push(error.message));
    // Keep the regression independent of third-party maps, fonts and photo servers.
    await page.route('**/*', route => route.request().url().startsWith(origin) ? route.continue() : route.abort());
-   await page.goto(origin + '/la-trip/');
+   await page.goto(origin + '/apps/la-trip/');
    return {page, context, cdp:await context.newCDPSession(page)};
   }
   async function touch(cdp, type, x, y) {

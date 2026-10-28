@@ -18,14 +18,16 @@ def stage(root, destination):
     manifest = json.loads((root / 'apps.json').read_text())
     folders = ['shared']
     for app in manifest['apps']:
-        if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', app['id']) or app['path'] != f'./{app["id"]}/':
+        if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', app['id']) or app['path'] != f'./apps/{app["id"]}/':
             raise ValueError('Invalid app path')
-        if not (root / app['id'] / 'index.html').is_file():
+        if not (root / 'apps' / app['id'] / 'index.html').is_file():
             raise ValueError('Missing app entrypoint')
-        folders.append(app['id'])
+        folders.append(f'apps/{app["id"]}')
     # Explicit manifest directories retain all app assets, including LA photos.
     files = [p for folder in folders for p in (root / folder).rglob('*') if p.is_file()]
     files += [root / name for name in ('index.html', 'apps.json', '.nojekyll', 'CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico') if (root / name).is_file()]
+    # Stage legacy redirect entrypoints, but never duplicate old app assets.
+    files += [root / app['id'] / 'index.html' for app in manifest['apps'] if (root / app['id'] / 'index.html').is_file()]
     for file in files:
         relative = file.relative_to(root)
         if file.is_symlink() or any(part.startswith('.') for part in relative.parts) and relative.name != '.nojekyll':

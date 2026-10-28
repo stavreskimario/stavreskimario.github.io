@@ -28,7 +28,7 @@ After reviewing the PR and explicitly approving the publishing change:
 1. Merge through the normal PR review workflow. Existing branch-based Pages can publish the reader with its starter collection.
 2. In **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions**. Retain the existing public destination and restrict the `github-pages` environment to `main`.
 3. In **Settings → Secrets and variables → Actions → Variables**, add `ENGINEERING_JOURNAL_PAGES_ENABLED` with value `true`. No custom secrets are required; deployment uses the built-in job token.
-4. Run **Engineering Journal and Pages** manually on `main`. Verify build/deployment and live `/`, `/la-trip/`, `/hello-world/`, `/engineering-journal/` and `/engineering-journal/data/catalogue.json`. Check article counts/statuses and existing app assets.
+4. Run **Engineering Journal and Pages** manually on `main`. Verify build/deployment and live `/`, `/apps/la-trip/`, `/apps/hello-world/`, `/apps/engineering-journal/` and `/apps/engineering-journal/data/catalogue.json`. Check article counts/statuses and existing app assets.
 5. Verify the next Melbourne 6 am run. A commit alone is not proof of publication.
 
 GitHub schedules are best effort, especially on the hour. They run on the default branch and can be disabled after 60 days without repository activity in a public repo. Re-enable in Actions if necessary. The reader flags data older than 36 hours. This free setup does not promise minute-exact delivery.
@@ -50,3 +50,7 @@ Source records retain last attempt/success, endpoint, HTTP validators and a shor
 | Invalid reading-list backup | Reject without altering current state |
 
 Pause publishing by setting the gate variable to `false` or disabling the workflow; the current site stays available. Roll back code with a normal revert PR. Returning to branch-based Pages requires approval: disable this workflow and switch Pages back to `main` / root. That uses checked-in starter data until collection is enabled again. Routine data repair must not change Pages settings or bypass PR review.
+
+## Apps-folder migration
+
+The source reader lives in `apps/engineering-journal/`, while the original root route serves a redirect. Scheduled publishing stages all manifest-listed `apps/<slug>/` implementations and legacy redirects. During the initial relocation deployment, the collector first attempts the new catalogue location and, only for HTTP 404, recovers the old catalogue to avoid losing previously deployed history. Once deployed, the canonical catalogue URL is `/apps/engineering-journal/data/catalogue.json`.

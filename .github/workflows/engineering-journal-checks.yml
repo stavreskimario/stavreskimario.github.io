@@ -2,7 +2,11 @@ name: Engineering Journal checks
 on:
   pull_request:
     paths:
-      - engineering-journal/**
+      - apps/engineering-journal/**
+      - apps/crystal-palace/**
+      - tests/crystal-palace.cjs
+      - apps/hello-world/**
+      - apps/la-trip/**
       - scripts/engineering-feed/**
       - tests/*engineering*
       - tests/fixtures/engineering-feed/**
@@ -24,9 +28,19 @@ jobs:
           python3 -m unittest discover -s tests -p 'test_engineering_feed.py'
       - name: Install isolated browser test tools
         run: |
-          npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1
+          npm install --prefix "$RUNNER_TEMP/journal-tools" playwright@1.51.1 three@0.180.0
           "$RUNNER_TEMP/journal-tools/node_modules/.bin/playwright" install --with-deps chromium --only-shell
       - name: Verify reader interactions
         env:
           NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
-        run: node tests/engineering-journal.cjs
+          PALACE_RENDER_SCREENSHOT: ${{ runner.temp }}/sydenham-preview.png
+        run: |
+          node tests/engineering-journal.cjs
+          node tests/crystal-palace.cjs
+      - name: Save Sydenham browser render for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sydenham-3d-preview
+          path: ${{ runner.temp }}/sydenham-preview.png
+          if-no-files-found: warn
