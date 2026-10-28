@@ -4,6 +4,7 @@ on:
     paths:
       - apps/engineering-journal/**
       - apps/crystal-palace/**
+      - tests/crystal-palace.cjs
       - apps/hello-world/**
       - apps/la-trip/**
       - scripts/engineering-feed/**
@@ -32,4 +33,6 @@ jobs:
       - name: Verify reader interactions
         env:
           NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
-        run: node tests/engineering-journal.cjs
+        run: |
+          node tests/engineering-journal.cjs
+          node tests/crystal-palace.cjs
