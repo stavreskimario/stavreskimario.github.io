@@ -144,17 +144,12 @@ function construct(){
  for(const [lo,hi,h] of section)for(let x=-924;x<924;x+=24){
   // The transept roof replaces, rather than overlaps, these central 72 ft of the hall.
   if(x < -36 || x >= 36) frameBay(x,lo,hi,h);
-  if(x%48===-12||x%48===0) {
-   beam([x,0,lo],[x,h,lo],.85);
-   beam([x,0,hi],[x,h,hi],.85);
-  }
-  // Interior iron posts on 24-foot bays and 24/48/72-foot girder spans.
-  for(const z of [lo,hi]){
-   if(Math.round(x/24)%2===0){
-    const lower=heightNear(z+(z<0?-.01:.01));
-    beam([x,0,z],[x,Math.min(h,lower),z],.8,'ironLight');
-   }
-  }
+  // Column locations are added once below on EVERY 24-foot structural line.
+ }
+ // Hollow cast-iron columns repeat every 24 feet on each structural line.
+ for(let x=-924;x<=924;x+=24)for(const z of [-204,-108,-36,36,108,204]){
+  const next=section.filter(([a,b])=>a===z||b===z).map(row=>row[2]);
+  beam([x,0,z],[x,Math.max(...next),z],.87,'ironLight');
  }
  for(const z of [-204,-108,-36,36,108,204]){
   const adjacent=section.filter(([l,r])=>Math.abs(l-z)<.01||Math.abs(r-z)<.01).map(a=>a[2]);
