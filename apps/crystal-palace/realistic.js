@@ -123,7 +123,8 @@ function construct(){
  box(layers.iron,1848,1.15,408,0,-.5,0,material.paving,false);
  // Vertical facades at each setback, appropriately tiered.
  for(const [lo,hi,h] of section)for(let x=-924;x<924;x+=24){
-  frameBay(x,lo,hi,h);
+  // The transept roof replaces, rather than overlaps, these central 72 ft of the hall.
+  if(x < -36 || x >= 36) frameBay(x,lo,hi,h);
   if(x%48===-12||x%48===0) {
    beam([x,0,lo],[x,h,lo],.85);
    beam([x,0,hi],[x,h,hi],.85);
