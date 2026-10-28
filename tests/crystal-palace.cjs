@@ -31,6 +31,25 @@ const server=http.createServer(async(req,res)=>{
   assert.equal(await page.locator('a[href="../../"]').count()>0,true,'All apps link corrected');
 
   // The realistic engine needs an external CDN. Fallback should remain usable offline.
+  // Verify the real WebGL scene before deliberately blocking the CDN for fallback.
+  const real=await browser.newPage({viewport:{width:1360,height:900},acceptDownloads:true});
+  const threeErrors=[];real.on('pageerror',err=>threeErrors.push(err.message));
+  await real.goto(base+'/apps/crystal-palace/',{waitUntil:'domcontentloaded'});
+  try{
+   await real.waitForFunction(()=>document.querySelector('#model-status')?.textContent.includes('Sydenham model ready.'),null,{timeout:45000});
+  }catch(error){
+   throw new Error('Sydenham WebGL scene failed: '+(await real.locator('#model-status').innerText())+'; errors: '+threeErrors.join('; ')+'; '+error.message);
+  }
+  const webgl=await real.locator('#palace-canvas').evaluate(el=>Boolean(el.getContext('webgl2')));
+  assert.equal(webgl,true,'WebGL2 rendered the Sydenham model');
+  await real.locator('button[data-preset="transept"]').click();
+  assert.equal(await real.locator('button[data-preset="transept"]').getAttribute('aria-pressed'),'true');
+  await real.locator('button[data-mode="blueprint"]').click();
+  await real.locator('button[data-mode="reconstruction"]').click();
+  if(process.env.PALACE_RENDER_SCREENSHOT)await real.locator('#model-stage').screenshot({path:process.env.PALACE_RENDER_SCREENSHOT});
+  console.log('PASS true 3D WebGL model, transept camera and render modes.');
+  await real.close();
+
   await page.route('**/cdn.jsdelivr.net/**',route=>route.abort());
   await page.goto(base+'/apps/crystal-palace/');
   await page.waitForFunction(()=>document.getElementById('model-status')?.textContent.includes('view'),{timeout:15000});
