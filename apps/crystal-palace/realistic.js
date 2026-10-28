@@ -75,6 +75,25 @@ function finishBeams(){
   layers.iron.add(mesh);
  }
 }
+// Roof sash-bar seam approximation: ~49-inch glass panes within 8-foot furrows.
+function addSashBars(){
+ const lines=[];
+ const put=(a,b)=>lines.push(...a,...b);
+ // Thin line geometry is significantly lighter than individual bar meshes.
+ for(let x=-924;x<=924;x+=49/12){
+  for(const [z0,z1,h] of section)for(let z=z0;z<z1;z+=8){
+   const z2=Math.min(z+8,z1),mid=(z+z2)*.5;
+   if(x>-36&&x<36)continue; // Opening beneath the transept vault.
+   put([x,h+.08,z],[x,h+3.68,mid]);
+   put([x,h+3.68,mid],[x,h+.08,z2]);
+  }
+ }
+ const geo=new THREE.BufferGeometry();
+ geo.setAttribute('position',new THREE.Float32BufferAttribute(lines,3));
+ const sash=new THREE.LineSegments(geo,new THREE.LineBasicMaterial({color:0x829f99,transparent:true,opacity:.48}));
+ sash.frustumCulled=false;layers.iron.add(sash);
+}
+
 const panels={glass:[],roof:[]};
 function quad(layer,a,b,c,d){panels[layer].push(...a,...b,...c,...a,...c,...d)}
 function finishPanels(){
@@ -208,7 +227,7 @@ function construct(){
  }
  for(const z of [204,252])beam([-468,24,z],[468,24,z],.8,'ironLight');
  for(const x of [-468,468])for(const z of [204,252])beam([x,0,z],[x,24,z],.95,'iron');
- finishPanels();finishBeams();
+ finishPanels();finishBeams();addSashBars();
 }
 function landscape(){
  box(surroundings,3600,5,2200,0,-6,0,material.grass,false);
