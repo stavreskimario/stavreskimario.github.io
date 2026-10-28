@@ -434,7 +434,7 @@ annotation('FORMAL TERRACES',330,34,560);
 groups.labels.visible=false;
 let renderMode='reconstruction',presetName='isometric',frame=0,remaining=0;
 const presets={
- isometric:{camera:[-535,210,1010],target:[-235,66,80]},
+ isometric:{camera:[-600,250,1390],target:[-285,62,175]},
  elevation:{camera:[-130,165,1400],target:[-130,75,0]},
  plan:{camera:[1,1900,1],target:[0,0,100]},
  transept:{camera:[140,185,630],target:[0,98,130]}
