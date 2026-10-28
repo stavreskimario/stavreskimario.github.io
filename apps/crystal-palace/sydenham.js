@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {installSydenhamShaders,plantDetailedPark,dressTerraces} from './environment-shaders.js?v=1';
 
 /* Sydenham Crystal Palace, photographic-era (post-1866), interpretive reconstruction.
    World coordinates are historical feet. Based on contemporary guidebooks:
@@ -97,6 +98,8 @@ palette.base.map=surfaceTexture('#c2bcb4',20,5);
 palette.tower.map=surfaceTexture('#d6d3ca',12,3);
 palette.brick.map=surfaceTexture('#b9b2a7',8,4);
 for(const key of ['green','pathway','base','tower','brick'])palette[key].needsUpdate=true;
+const environmentShader=installSydenhamShaders(THREE,palette);
+palette.water=environmentShader.water;
 const pmrem=new THREE.PMREMGenerator(renderer);
 const reflectionScene=new THREE.Scene();
 reflectionScene.background=new THREE.Color('#a8cdd9');
@@ -344,10 +347,7 @@ function terrace(){
  const lowerPromenade=box(grounds,0,-6,650,2400,3,130,palette.pathway,false);
  for(const row of [210,430]){
   box(grounds,0,-2,row,2300,5,11,palette.pale,false);
-  for(let x=-1120;x<=1120;x+=20){
-   box(grounds,x,4,row,2.7,14,2.7,palette.cornice,false);
-   if(x%80===0){box(grounds,x,12,row,7,3.2,7,palette.cornice,false)}
-  }
+  for(let x=-1120;x<=1120;x+=104)box(grounds,x,12,row,7,3.2,7,palette.cornice,false);
   beam([-1120,12,row],[1120,12,row],2.4,'cornice');
  }
  // Central ceremonial staircase between levels, with stepped treads.
@@ -356,7 +356,7 @@ function terrace(){
   box(grounds,0,1-(i*.45),z,155,1.5,11,palette.pale,false);
  }
  // Winding walks, flowerbeds, and the conspicuous reflecting basin.
- const pond=new THREE.Mesh(new THREE.CircleGeometry(180,96),palette.water);
+ const pond=new THREE.Mesh(new THREE.CircleGeometry(180,192),palette.water);
  pond.rotation.x=-Math.PI/2;pond.position.set(-410,-4,895);grounds.add(pond);
  const ring=new THREE.Mesh(new THREE.RingGeometry(180,189,96),palette.pale);
  ring.rotation.x=-Math.PI/2;ring.position.set(-410,-3.8,895);grounds.add(ring);
@@ -388,20 +388,10 @@ function terrace(){
    }
   }
  }
- // Individual, varied broad-leaf trees for context, kept away from photograph's axial lawns.
- const trunkGeometry=new THREE.CylinderGeometry(2.1,3.6,30,10);
- const foliage=new THREE.IcosahedronGeometry(1,2);
- for(let side of [-1,1])for(let i=0;i<15;i++){
-  const x=side*(1120+(i%3)*85),z=270+i*91;
-  const tree=new THREE.Group();tree.position.set(x,-5,z);
-  const trunk=new THREE.Mesh(trunkGeometry,palette.wood);trunk.position.y=15;tree.add(trunk);
-  for(let j=0;j<6;j++){
-   const seed=(i*31+j*19)%37,leaf=new THREE.Mesh(foliage,[palette.leaf1,palette.leaf2,palette.leaf3][j%3]);
-   leaf.position.set(Math.sin(seed*3)*11,36+(j%3)*9,Math.cos(seed*2)*9);
-   leaf.scale.set(11+(j%4)*3,17+(j%2)*4,11+(j%3)*2);tree.add(leaf);
-  }
-  grounds.add(tree);
- }
+ // Richer plant silhouettes and dense beds, batched into instanced geometry.
+ plantDetailedPark(THREE,grounds,palette,{quality:window.innerWidth<720?'low':'high'});
+ dressTerraces(THREE,grounds,palette);
+
  // Human-scale features with varied placements.
  const coatGeo=new THREE.CylinderGeometry(1.4,2,7,8),headGeo=new THREE.SphereGeometry(1.6,9,7);
  for(let i=0;i<95;i++){
@@ -450,7 +440,9 @@ const presets={
  transept:{camera:[140,185,630],target:[0,98,130]}
 };
 function drawFrame(){
- frame=0;controls.update();renderer.render(scene,camera);
+ frame=0;controls.update();
+ environmentShader.time.value=reduced.matches?0:performance.now()*0.001;
+ renderer.render(scene,camera);
  if(remaining>0){remaining--;frame=requestAnimationFrame(drawFrame)}
 }
 function invalidate(){remaining=controls.enableDamping?22:0;if(!frame)frame=requestAnimationFrame(drawFrame)}
