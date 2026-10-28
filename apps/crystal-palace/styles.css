@@ -4,3 +4,23 @@
 .reference-photo img{display:block;width:100%;height:auto;max-height:380px;object-fit:contain}
 .reference-photo figcaption{padding:.65rem .85rem;color:var(--muted);font-size:.74rem;line-height:1.5;background:var(--paper,#faf7ef)}
 .reference-photo figcaption a{color:var(--coast-dark)}
+
+/* Architecture-first layout: panoramic view before controls. */
+.studio{grid-template-columns:minmax(0,1fr);align-items:start}
+.model-panel{width:100%}
+.model-stage{height:clamp(460px,58vw,700px);min-height:0;flex:none}
+.inspector{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start}
+.inspector-heading{grid-column:1/-1}
+.inspector-section{border-right:1px solid var(--line);border-bottom:0}
+.inspector-section:last-child{border-right:0}
+@media(max-width:950px){
+ .model-stage{height:clamp(410px,67vw,610px)}
+ .inspector{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .inspector-section:nth-child(3){border-right:0}
+ .inspector-section{border-bottom:1px solid var(--line)}
+}
+@media(max-width:650px){
+ .model-stage{height:clamp(360px,93vw,490px)}
+ .inspector{grid-template-columns:1fr}
+ .inspector-section{border-right:0}
+}
