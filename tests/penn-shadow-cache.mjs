@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import path from 'node:path';
-import { enableStaticShadowCache, refreshStaticShadows } from '../penn-station-1935/src/shadow-cache.mjs';
+import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from '../penn-station-1935/src/shadow-cache.mjs';
 const requireTools = createRequire(path.join(process.env.PENN_TOOLS || '/private/tmp/penn-station-tools', 'package.json'));
 const THREE = requireTools('three');
 const renderer = { isWebGLRenderer: true, capabilities: { maxTextureSize: 4096 }, shadowMap: { autoUpdate: true, needsUpdate: false } };
@@ -34,4 +34,54 @@ const extent = point.shadow.getFrameExtents(); point.shadow.map = new THREE.WebG
 const pointTarget = point.shadow.map; refreshStaticShadows(renderer, scene); assert.equal(point.shadow.map, pointTarget, 'Point-light atlas extents match r180 clamping');
 const experimental = { isWebGPURenderer: true, shadowMap: { autoUpdate: true, needsUpdate: false } };
 assert.equal(enableStaticShadowCache(experimental), false); assert.equal(refreshStaticShadows(experimental, scene), false); assert.deepEqual(experimental.shadowMap, { autoUpdate: true, needsUpdate: false });
-console.log('PASS WebGL static flags, unchanged targets, both resize directions, hardware/atlas clamps and untouched experimental renderer');
+// Reproduce r180's first-pass order: matrix/frustum first, then the first
+// depth draw lazily switches the camera projection. A static cache retains
+// that stale matrix unless the helper primes the convention beforehand.
+const negativeLight = new THREE.DirectionalLight();
+negativeLight.position.set(6, 10, 5); negativeLight.updateMatrixWorld();
+negativeLight.target.updateMatrixWorld();
+negativeLight.shadow.updateMatrices(negativeLight);
+const staleMatrix = negativeLight.shadow.matrix.clone();
+negativeLight.shadow.camera._reversedDepth = true;
+negativeLight.shadow.camera.updateProjectionMatrix();
+negativeLight.shadow.updateMatrices(negativeLight);
+assert(!negativeLight.shadow.matrix.equals(staleMatrix), 'Negative control reproduces first-draw reversed-depth matrix mismatch');
+
+const reversedRenderer = { isWebGLRenderer: true, capabilities: { maxTextureSize: 4096, reversedDepthBuffer: true }, shadowMap: { autoUpdate: true, needsUpdate: false } };
+const depthScene = new THREE.Scene();
+for (const light of [new THREE.DirectionalLight(), new THREE.SpotLight()]) {
+  light.castShadow = true; light.position.set(6, 10, 5); depthScene.add(light, light.target);
+}
+depthScene.updateMatrixWorld(true);
+refreshStaticShadows(reversedRenderer, depthScene);
+for (const light of depthScene.children.filter(object => object.isLight)) {
+  assert.equal(light.shadow.camera.reversedDepth, true, 'Shadow camera is synchronized before the first map draw');
+  light.shadow.updateMatrices(light);
+  const readyMatrix = light.shadow.matrix.clone();
+  // The renderer observes the desired convention already; a subsequent
+  // projection/matrix refresh must be bit-identical to the first shadow pass.
+  light.shadow.camera.updateProjectionMatrix();
+  light.shadow.updateMatrices(light);
+  assert(light.shadow.matrix.equals(readyMatrix), 'First cached matrix matches the projection actually drawn');
+}
+reversedRenderer.capabilities.reversedDepthBuffer = false;
+refreshStaticShadows(reversedRenderer, depthScene);
+for (const light of depthScene.children.filter(object => object.isLight)) {
+  assert.equal(light.shadow.camera.reversedDepth, false, 'Unsupported reversed-depth fallback retains forward projection');
+}
+
+// The shader compares the opposite depth inequality under reversed depth.
+// Keep declared forward bias magnitudes, invert only for supported WebGL,
+// and leave the geometric normal offset/native experimental renderer alone.
+reversedRenderer.capabilities.reversedDepthBuffer = true;
+assert.equal(shadowDepthBias(reversedRenderer, -.00002), .00002);
+assert.equal(shadowDepthBias(reversedRenderer, -.00005), .00005);
+assert.equal(shadowDepthBias(reversedRenderer, .00002), -.00002);
+assert.equal(shadowDepthBias(reversedRenderer, 0), 0);
+reversedRenderer.capabilities.reversedDepthBuffer = false;
+assert.equal(shadowDepthBias(reversedRenderer, -.00002), -.00002);
+assert.equal(shadowDepthBias(experimental, -.00002), -.00002);
+assert.equal(shadowDepthBias(null, -.00002), -.00002);
+assert.throws(() => shadowDepthBias(reversedRenderer, NaN), /finite/);
+
+console.log('PASS WebGL static flags, unchanged targets, both resize directions, hardware/atlas clamps, first-pass depth synchronization/fallback, bias convention and untouched experimental renderer');

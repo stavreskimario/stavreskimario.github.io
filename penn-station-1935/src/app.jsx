@@ -15,7 +15,7 @@ import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
-import { enableStaticShadowCache, refreshStaticShadows } from './shadow-cache.mjs';
+import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
@@ -417,10 +417,10 @@ function Lighting({ current }) {
     <fog attach="fog" args={[p.sky, 220, 620]} />
     <Environment files={assetURL('sky.hdr')} background={false} environmentIntensity={0.75} />
     <hemisphereLight args={['#e5edf2', '#726a60', 0.05]} />
-    <directionalLight position={p.position} color={p.color} intensity={p.intensity} castShadow={current.shadows && current.quality !== 'low'} shadow-mapSize={[current.quality === 'high' ? 4096 : 2048, current.quality === 'high' ? 4096 : 2048]} shadow-camera-left={-160} shadow-camera-right={160} shadow-camera-top={110} shadow-camera-bottom={-110} shadow-camera-near={0.5} shadow-camera-far={400} shadow-normalBias={0.015} shadow-bias={-0.00002} />
+    <directionalLight position={p.position} color={p.color} intensity={p.intensity} castShadow={current.shadows && current.quality !== 'low'} shadow-mapSize={[current.quality === 'high' ? 4096 : 2048, current.quality === 'high' ? 4096 : 2048]} shadow-camera-left={-160} shadow-camera-right={160} shadow-camera-top={110} shadow-camera-bottom={-110} shadow-camera-near={0.5} shadow-camera-far={400} shadow-normalBias={0.015} shadow-bias={shadowDepthBias(gl, -0.00002)} />
     {practicals.map(practical => <React.Fragment key={practical.id}>
       <primitive object={practical.target} />
-      <spotLight position={practical.position} target={practical.target} color="#ffe9cf" intensity={60} distance={26} decay={2} angle={1.47} penumbra={.25} castShadow={current.shadows && current.quality !== 'low' && (current.quality === 'high' || practical.primaryShadow)} shadow-mapSize={[1024, 1024]} shadow-camera-near={.1} shadow-camera-far={26} shadow-bias={-.00005} shadow-normalBias={.012} />
+      <spotLight position={practical.position} target={practical.target} color="#ffe9cf" intensity={60} distance={26} decay={2} angle={1.47} penumbra={.25} castShadow={current.shadows && current.quality !== 'low' && (current.quality === 'high' || practical.primaryShadow)} shadow-mapSize={[1024, 1024]} shadow-camera-near={.1} shadow-camera-far={26} shadow-bias={shadowDepthBias(gl, -.00005)} shadow-normalBias={.012} />
     </React.Fragment>)}
   </>;
 }
