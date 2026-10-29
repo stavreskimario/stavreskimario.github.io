@@ -14,6 +14,7 @@ import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
+import { enableStaticShadowCache, refreshStaticShadows } from './shadow-cache.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
@@ -24,7 +25,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '4');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '4-visual-2');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -78,16 +79,22 @@ async function loadManifest() {
 // raycast otherwise loops through its entire batch, even for a half-metre ray.
 // The railway alone has over 66,000 fitting instances that cannot stop a person.
 const COLLISION_CELL = 6;
+const vaultLightGlass = material => material?.name === 'SquareVaultLightGlass';
+const vaultLightConcrete = material => material?.name === 'ConcourseReinforcedVaultLightConcrete' || material?.name === 'ConcourseOpaqueCirculationConcrete';
+const collisionMaterialAt = hit => Array.isArray(hit.object.material) ? hit.object.material[hit.face.materialIndex] : hit.object.material;
 function decorativeCollisionMaterial(material) {
+  if (vaultLightGlass(material)) return false;
   return !material || material.transmission > 0 || material.transparent || /^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(material.name);
 }
 
 function buildCollisionIndex(model) {
   const started = performance.now();
-  const index = { cells: new Map(), records: [], stats: { sourceMeshes: 0, excludedMeshes: 0, excludedInstances: 0, structuralInstances: 0, colliders: 0, cells: 0, queries: 0, lastCandidates: 0, maximumCandidates: 0, buildMilliseconds: 0 } };
+  const index = { cells: new Map(), records: [], stats: { sourceMeshes: 0, excludedMeshes: 0, excludedInstances: 0, structuralInstances: 0, colliders: 0, vaultLightColliders: 0, vaultLightSupports: 0, ignoredGlazingMaterials: [], cells: 0, queries: 0, lastCandidates: 0, maximumCandidates: 0, buildMilliseconds: 0 } };
+  const ignoredGlazing = new Set();
   const instance = new THREE.Matrix4();
   const world = new THREE.Matrix4();
   const add = (object, bounds) => {
+    if ((Array.isArray(object.material) ? object.material : [object.material]).some(vaultLightGlass)) index.stats.vaultLightColliders++;
     const record = { object, bounds };
     index.records.push(record);
     for (let x = Math.floor(bounds.min.x / COLLISION_CELL); x <= Math.floor(bounds.max.x / COLLISION_CELL); x++) {
@@ -105,6 +112,7 @@ function buildCollisionIndex(model) {
     let zone = object;
     while (zone.parent && zone.parent !== model) zone = zone.parent;
     const materials = Array.isArray(object.material) ? object.material : [object.material];
+    for (const material of materials) if (material && !vaultLightGlass(material) && (material.transmission > 0 || material.transparent)) ignoredGlazing.add(material.name);
     if (zone.name === 'context' || zone.name === 'trains' || materials.every(decorativeCollisionMaterial)) {
       index.stats.excludedMeshes++;
       index.stats.excludedInstances += object.isInstancedMesh ? object.count : 0;
@@ -133,6 +141,7 @@ function buildCollisionIndex(model) {
     }
   });
   index.stats.colliders = index.records.length;
+  index.stats.ignoredGlazingMaterials = [...ignoredGlazing].sort();
   index.stats.cells = index.cells.size;
   index.stats.buildMilliseconds = performance.now() - started;
   return index;
@@ -251,6 +260,9 @@ async function loadModel(view, quality, renderer, progress) {
       object.castShadow = !materials.every(material => material.transmission > 0 || material.transparent);
       for (const material of materials) {
         if (assigned.has(material)) continue; assigned.add(material);
+        // The prism units are closed solids with outward faces. Rendering
+        // their backs adds a separate refraction pass for every unit.
+        if (vaultLightGlass(material)) material.side = THREE.FrontSide;
         if (material.aoMap) material.aoMapIntensity = .25;
         if (reflection) { material.envMap = reflection; material.envMapIntensity = 1; }
         for (const slot of ['map', 'normalMap', 'roughnessMap']) if (material[slot]) material[slot].anisotropy = quality === 'low' ? 2 : 8;
@@ -308,6 +320,7 @@ async function makeRenderer(props) {
   }
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
+  enableStaticShadowCache(renderer);
   debugRenderer = renderer;
   return renderer;
 }
@@ -315,7 +328,7 @@ async function makeRenderer(props) {
 function Building({ current, onModel }) {
   const [models, setModels] = useState([]);
   const group = useRef();
-  const { invalidate, gl } = useThree();
+  const { invalidate, gl, scene } = useThree();
   useEffect(() => {
     let active = true; setModels([]);
     update({ loading: true, error: '', progress: 0 });
@@ -338,6 +351,7 @@ function Building({ current, onModel }) {
   useLayoutEffect(() => {
     if (!models.length || !group.current) return;
     group.current.updateMatrixWorld(true); debugBuilding = group.current; onModel(group.current);
+    refreshStaticShadows(gl, scene);
     update({ loading: false, progress: 100 }); invalidate();
   }, [models]);
   // Keep the entire station present through portals and glazing in every mode.
@@ -346,7 +360,10 @@ function Building({ current, onModel }) {
 }
 
 function Lighting({ current }) {
-  const { gl, invalidate, camera } = useThree();
+  const { gl, invalidate, camera, scene } = useThree();
+  useLayoutEffect(() => {
+    refreshStaticShadows(gl, scene); invalidate();
+  }, [gl, scene, current.light, current.shadows, current.quality, current.revision]);
   const presets = {
     morning: { position: [130, 65, 70], color: '#ffe4c4', sky: '#becbd2', intensity: 3.2, exposure: 1.06 },
     afternoon: { position: [95, 125, -65], color: '#fff4df', sky: '#c7d2d7', intensity: 3.8, exposure: 1.04 },
@@ -541,7 +558,14 @@ function Navigation({ current, model }) {
     const permitted = point => (modelManifest.walkable || []).some(area => inRectangle(point, area.bounds)) || (modelManifest.railway?.platforms || []).some(platform => Math.abs(platform.floorWorld - feet.current) < .6 && insidePlatform(point, platform.polygonXZ)) || inRectangle(point, [119.48, 159, -70, 70]);
     const hitsAt = (origin, direction, distance) => {
       ray.current.set(origin, direction); ray.current.near = 0; ray.current.far = distance;
-      return ray.current.intersectObjects(nearbyCollisionObjects(collision.current, origin, direction, distance), false);
+      return ray.current.intersectObjects(nearbyCollisionObjects(collision.current, origin, direction, distance), false).filter(hit => {
+        const material = collisionMaterialAt(hit);
+        if (vaultLightConcrete(material) && direction.y < -.5) return hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y > .98;
+        if (!vaultLightGlass(material)) return !decorativeCollisionMaterial(material);
+        // The named prism panes carry feet; their vertical sides and every
+        // other transparent window remain outside body collision/support.
+        return direction.y < -.5 && hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y > .98;
+      });
     };
     const blockedAt = (reason, candidate, detail = '') => {
       if (debugNavigation) debugNavigation.lastBlocked = { reason, position: candidate.toArray(), floor: feet.current, detail };
@@ -559,7 +583,10 @@ function Navigation({ current, model }) {
         const supportNormal = Math.abs(normal.y);
         // Low-LOD quantization can steepen a centimetre-scale floor bevel.
         // A nearly level seam still supports a foot; vertical walls do not.
-        if (supportNormal > .5 || (supportNormal > .05 && Math.abs(hit.point.y - floor) < .035)) return hit.point.y;
+        if (supportNormal > .5 || (supportNormal > .05 && Math.abs(hit.point.y - floor) < .035)) {
+          if (debugNavigation && vaultLightGlass(collisionMaterialAt(hit))) debugNavigation.vaultLightSupports++;
+          return hit.point.y;
+        }
       }
       const contact = findStairBevelSupport(point.toArray(), floor, supportHits.map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y })), modelManifest.stairSupportFlights || [], neighbour => {
         const neighbourOrigin = new THREE.Vector3(...neighbour); neighbourOrigin.y = floor + .25;
@@ -811,5 +838,5 @@ function sceneReport() {
     return { name: zone.name, id: zone.children[0]?.uuid, visible: zone.visible, meshes };
   }) };
 }
-window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
+window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure, renderFrame: debugRenderer.info.render.frame, pixelRatio: debugRenderer.getPixelRatio(), canvasPixels: [debugRenderer.domElement.width, debugRenderer.domElement.height] } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
 syncUI(); createRoot($('#scene-root')).render(<Viewer />);
