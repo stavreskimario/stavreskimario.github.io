@@ -1,0 +1,435 @@
+{
+  "schema": 1,
+  "appearanceRevision": 4,
+  "architecturalUvRevision": 3,
+  "interpretation": "Modern CC0 material derivatives; target palettes and contrast are appearance interpretations, not calibrated samples of the demolished station.",
+  "algorithm": "Decode sRGB to linear; normalize each source channel by its spatial mean; apply contrast about that mean and multiply by the target linear palette; clip to0..1; resize in linear light; encode sRGB once.",
+  "scope": "Base colour and separately applied normal-strength scalars only. Normal-map pixels, roughness/metallic/AO maps, geometry, UV coordinates, lighting atlases and reflection captures are preserved.",
+  "rebakedIllumination": false,
+  "sourceMaps": [
+    {
+      "file": "Granite005A/Granite005A_2K-JPG_Color.jpg",
+      "sha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c",
+      "bytes": 8537509
+    },
+    {
+      "file": "Granite005A/Granite005A_2K-JPG_Roughness.jpg",
+      "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f",
+      "bytes": 2301486
+    },
+    {
+      "file": "Granite005A/Granite005A_2K-JPG_NormalGL.jpg",
+      "sha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b",
+      "bytes": 1742147
+    },
+    {
+      "file": "Travertine009/Travertine009_2K-JPG_Color.jpg",
+      "sha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc",
+      "bytes": 3798875
+    },
+    {
+      "file": "Travertine009/Travertine009_2K-JPG_Roughness.jpg",
+      "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc",
+      "bytes": 1135101
+    },
+    {
+      "file": "Travertine009/Travertine009_2K-JPG_NormalGL.jpg",
+      "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+      "bytes": 1312711
+    },
+    {
+      "file": "Marble018/Marble018_2K-JPG_Color.jpg",
+      "sha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06",
+      "bytes": 3945678
+    },
+    {
+      "file": "Marble018/Marble018_2K-JPG_Roughness.jpg",
+      "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235",
+      "bytes": 2097792
+    },
+    {
+      "file": "Marble018/Marble018_2K-JPG_NormalGL.jpg",
+      "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+      "bytes": 1288531
+    }
+  ],
+  "profiles": {
+    "MilfordFine": {
+      "source": "Granite005A",
+      "targetSrgb": [
+        0.76,
+        0.7,
+        0.66
+      ],
+      "contrast": 0.65,
+      "normalStrength": 0.045,
+      "sourceFile": "Granite005A/Granite005A_2K-JPG_Color.jpg",
+      "sourceSha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c",
+      "sourceLinearMean": [
+        0.38169735970817764,
+        0.33446696635937206,
+        0.33505656919221943
+      ],
+      "targetLinearMean": [
+        0.5382355236010181,
+        0.44798841244188325,
+        0.3931231302267222
+      ],
+      "clippedRgbSamples": 11300,
+      "rgbSamples": 12582912,
+      "variants": {
+        "full": {
+          "file": "MilfordFine-full.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 9191188,
+          "sha256": "cfdfe12098f4159874cea786cfb84b1593901be2cfbd47b1f0549ffed5339b25",
+          "decodedLinearMean": [
+            0.5381212292267972,
+            0.4479577514217038,
+            0.3931582214213703
+          ],
+          "decodedLinearStd": [
+            0.1629305011607204,
+            0.12758297161369817,
+            0.0923127660085252
+          ],
+          "ktx": {
+            "file": "MilfordFine-full.ktx2",
+            "bytes": 5419530,
+            "sha256": "98b6f7b2015a08858515f54783f7c4be0dcecbe38c51deb14033cde3e304d1e4",
+            "decodedLinearMean": [
+              0.5375664821881201,
+              0.44746480087056534,
+              0.39239811362011084
+            ],
+            "encodedRgbError255": {
+              "mean": 2.7663554350535073,
+              "p99": 12.0,
+              "max": 34.0
+            }
+          }
+        },
+        "low": {
+          "file": "MilfordFine-low.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 600709,
+          "sha256": "f032136c6015d37ba649d1b5d9676af5cb825adaacc49ab002b26ecef6b9b697",
+          "decodedLinearMean": [
+            0.5381389868024024,
+            0.447986718169908,
+            0.3931245068197147
+          ],
+          "decodedLinearStd": [
+            0.1185413032653633,
+            0.0931937829078996,
+            0.06463531152321933
+          ],
+          "ktx": {
+            "file": "MilfordFine-low.ktx2",
+            "bytes": 337280,
+            "sha256": "e58e49365084536eb7cb69a3e2125be65716445c90efa31b10cdbbff9a1620b6",
+            "decodedLinearMean": [
+              0.5379203263338158,
+              0.44760152327720454,
+              0.39239328494082426
+            ],
+            "encodedRgbError255": {
+              "mean": 2.6054890950520835,
+              "p99": 11.0,
+              "max": 30.0
+            }
+          }
+        }
+      }
+    },
+    "InteriorFine": {
+      "source": "Granite005A",
+      "targetSrgb": [
+        0.73,
+        0.71,
+        0.67
+      ],
+      "contrast": 0.55,
+      "normalStrength": 0.025,
+      "sourceFile": "Granite005A/Granite005A_2K-JPG_Color.jpg",
+      "sourceSha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c",
+      "sourceLinearMean": [
+        0.38169735970817764,
+        0.33446696635937206,
+        0.33505656919221943
+      ],
+      "targetLinearMean": [
+        0.49190504085677866,
+        0.46236136930676214,
+        0.40644830114675407
+      ],
+      "clippedRgbSamples": 0,
+      "rgbSamples": 12582912,
+      "variants": {
+        "full": {
+          "file": "InteriorFine-full.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 8803704,
+          "sha256": "f38b17209705f3b2ab4c32871ecb12784e21de2e00afb8b735223b2abba3ea34",
+          "decodedLinearMean": [
+            0.49189439331094315,
+            0.46226690798869835,
+            0.40653097357360957
+          ],
+          "decodedLinearStd": [
+            0.12613184705413938,
+            0.11143193868596382,
+            0.08074920741243284
+          ],
+          "ktx": {
+            "file": "InteriorFine-full.ktx2",
+            "bytes": 5398991,
+            "sha256": "61b26eeb1dd583ca6f974a04de2831bad97f61da8781f3bdddee155baf21f5fb",
+            "decodedLinearMean": [
+              0.4914818359985512,
+              0.46181188451850974,
+              0.4058650591310931
+            ],
+            "encodedRgbError255": {
+              "mean": 2.3377112547556558,
+              "p99": 10.0,
+              "max": 29.0
+            }
+          }
+        },
+        "low": {
+          "file": "InteriorFine-low.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 574077,
+          "sha256": "29c42ffb7d87f340fa883105bc1ac0dc6c0747e68c0c11a2fd1de33d5521fd6e",
+          "decodedLinearMean": [
+            0.49190539620233725,
+            0.46236420303396636,
+            0.4064511758559194
+          ],
+          "decodedLinearStd": [
+            0.09183205271945244,
+            0.08139596046009917,
+            0.05654918360497814
+          ],
+          "ktx": {
+            "file": "InteriorFine-low.ktx2",
+            "bytes": 334206,
+            "sha256": "166d724bb17361fb0c90dd92fefb8918c2eb2843836dc1d0ef3bff0dd8aca0c3",
+            "decodedLinearMean": [
+              0.4916499781952023,
+              0.4620375238688141,
+              0.40583072441363105
+            ],
+            "encodedRgbError255": {
+              "mean": 2.1929537455240884,
+              "p99": 9.0,
+              "max": 27.0
+            }
+          }
+        }
+      }
+    },
+    "RomanTravertine": {
+      "source": "Travertine009",
+      "targetSrgb": [
+        0.85,
+        0.82,
+        0.75
+      ],
+      "contrast": 0.48,
+      "normalStrength": 0.035,
+      "sourceFile": "Travertine009/Travertine009_2K-JPG_Color.jpg",
+      "sourceSha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc",
+      "sourceLinearMean": [
+        0.7409127966076815,
+        0.6012261438999726,
+        0.41479383117221313
+      ],
+      "targetLinearMean": [
+        0.692071056865372,
+        0.6382832153523972,
+        0.5225215539683921
+      ],
+      "clippedRgbSamples": 0,
+      "rgbSamples": 12582912,
+      "variants": {
+        "full": {
+          "file": "RomanTravertine-full.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 4613837,
+          "sha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+          "decodedLinearMean": [
+            0.6919187634251504,
+            0.6379615773968708,
+            0.5224880854210137
+          ],
+          "decodedLinearStd": [
+            0.029178033463290884,
+            0.030879858516623983,
+            0.03268156055133192
+          ],
+          "ktx": {
+            "file": "RomanTravertine-full.ktx2",
+            "bytes": 3934999,
+            "sha256": "fe7825c04b0e5f2847f80e1ac7e4641cffc8dbfce54fa3e0ea46b8ea932492b6",
+            "decodedLinearMean": [
+              0.6926407475101808,
+              0.6385578085519785,
+              0.5229263271257834
+            ],
+            "encodedRgbError255": {
+              "mean": 0.3449856440226237,
+              "p99": 1.0,
+              "max": 4.0
+            }
+          }
+        },
+        "low": {
+          "file": "RomanTravertine-low.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 269538,
+          "sha256": "8779a6b404aaa8df09930dd73dd2f13275a9f91ef43ff73283e13c1b099687c3",
+          "decodedLinearMean": [
+            0.6920736130971058,
+            0.6382822053759118,
+            0.5225173522958898
+          ],
+          "decodedLinearStd": [
+            0.026468493072999023,
+            0.028084112675087047,
+            0.02940853539192734
+          ],
+          "ktx": {
+            "file": "RomanTravertine-low.ktx2",
+            "bytes": 258545,
+            "sha256": "977914db6b9dcc3dfe4b764d95aefa3b85ee3e094242bbf6162c321361adf87d",
+            "decodedLinearMean": [
+              0.6928149417538879,
+              0.6388190541891073,
+              0.52289057239662
+            ],
+            "encodedRgbError255": {
+              "mean": 0.29941685994466144,
+              "p99": 1.0,
+              "max": 4.0
+            }
+          }
+        }
+      }
+    },
+    "HonedMarble": {
+      "source": "Marble018",
+      "targetSrgb": [
+        0.8,
+        0.78,
+        0.73
+      ],
+      "contrast": 0.68,
+      "normalStrength": 0.018,
+      "sourceFile": "Marble018/Marble018_2K-JPG_Color.jpg",
+      "sourceSha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06",
+      "sourceLinearMean": [
+        0.5032041910604279,
+        0.4706900144496657,
+        0.4414383190278915
+      ],
+      "targetLinearMean": [
+        0.6038273388553378,
+        0.5704815954749093,
+        0.49190504085677866
+      ],
+      "clippedRgbSamples": 0,
+      "rgbSamples": 12582912,
+      "variants": {
+        "full": {
+          "file": "HonedMarble-full.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 4785562,
+          "sha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+          "decodedLinearMean": [
+            0.6033432531771914,
+            0.5702468814845758,
+            0.49165079539882245
+          ],
+          "decodedLinearStd": [
+            0.01842762442175059,
+            0.03210231492085443,
+            0.0380090496697436
+          ],
+          "ktx": {
+            "file": "HonedMarble-full.ktx2",
+            "bytes": 3849094,
+            "sha256": "355f42746336c744872f7486d61fc1b11a45ad577e91f8a93b50aa680b299596",
+            "decodedLinearMean": [
+              0.6035794039014757,
+              0.5706952909717267,
+              0.4917776798475667
+            ],
+            "encodedRgbError255": {
+              "mean": 0.3657231330871582,
+              "p99": 2.0,
+              "max": 14.0
+            }
+          }
+        },
+        "low": {
+          "file": "HonedMarble-low.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 335024,
+          "sha256": "8fd739db6c28858189512e890dc01ae0f35289494855db537d2c43591c52cabc",
+          "decodedLinearMean": [
+            0.6038260274615477,
+            0.5704797310816471,
+            0.49190351734813126
+          ],
+          "decodedLinearStd": [
+            0.01647680691760601,
+            0.028817300579971845,
+            0.03376170552311282
+          ],
+          "ktx": {
+            "file": "HonedMarble-low.ktx2",
+            "bytes": 250189,
+            "sha256": "82aa9bac250f2d5627a5a298844954e3049ca76ee66527fe303078812c308a1f",
+            "decodedLinearMean": [
+              0.6046446606603207,
+              0.5712599572701491,
+              0.4920853827377534
+            ],
+            "encodedRgbError255": {
+              "mean": 0.31831614176432294,
+              "p99": 2.0,
+              "max": 12.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "ktxVersion": "toktx v4.4.2"
+}

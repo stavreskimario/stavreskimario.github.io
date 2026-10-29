@@ -1076,7 +1076,7 @@ for sx in [-1,1]:
                 for sign in [-1,1]:box('Botticino grille opening jamb',(sx*15.56,yy+dy+sign*.86,2.15),(.16,.12,2.16),BOTTICINO,.02)
             office_label='T I C K E T S' if (sx==1 and yy<0) or (sx==-1 and yy>0) else 'P A R C E L S' if sx==1 else 'T E L E P H O N E S'
             text("Opening-era office lettering",office_label,(sx*15.51,yy,3.68),.32,BLACK,
-                (math.pi/2,0,math.pi/2 if sx>0 else -math.pi/2))
+                (math.pi/2,0,-math.pi/2 if sx>0 else math.pi/2))
         order_tops=[]
         order_spacing=5.3 if yy==0 else 9.5
         for ystep in [yy-order_spacing,yy+order_spacing]:
@@ -1332,7 +1332,9 @@ TOR_LEVEL=((290+10.125/12)-320)*FT
 PLATFORM_LEVEL=TOR_LEVEL+(3+10/12)*FT
 STAIR_HEAD_X=CX+CW/2-1.4
 ACCESS_CENTRES=[-z for z in [68.764528,54.791453,40.818378,27.149065,13.327870,-.341443,-13.555112,-27.224425,-40.321460]]
-MAIN_STAIR_HOLES=[(STAIR_HEAD_X-6.4,STAIR_HEAD_X+.12,y-1.65,y+1.65) for y in ACCESS_CENTRES]
+# Meet the first tread at its head datum. Extending the opening120mm past it
+# left an unsupported118mm slot between floor and tread at every stair head.
+MAIN_STAIR_HOLES=[(STAIR_HEAD_X-6.4,STAIR_HEAD_X,y-1.65,y+1.65) for y in ACCESS_CENTRES]
 LOWER_SHIFT=.70
 EXIT_STAIR_HOLES=[(STAIR_HEAD_X-10.5-LOWER_SHIFT,STAIR_HEAD_X-6.0-LOWER_SHIFT,y-1.65,y+1.65) for y in ACCESS_CENTRES]
 def floor_with_voids(name,bounds,holes,level,thickness=.30):
@@ -1667,7 +1669,12 @@ for xx in [X_WEST_INNER,X_WEST_MIDDLE,CROSS_LEFT,CROSS_RIGHT,X_EAST_INNER]:
             steel_i("Upper pier branch to glazing valley",(xx+sign*half,yy,EW_SPRING),(xx+sign*half,yy,GLAZING_VALLEY),.14,.22,.022,.016)
         box("Glazing valley bearing cap",(xx,yy,GLAZING_VALLEY),(1.15,1.15,.12),IRON)
 
+STAIR_SUPPORT_FLIGHTS=[]
 def stair_flight(name,x0,x1,cy,z0,z1,width,steps):
+    # Record actual flight endpoints, distinct from receiving-landing centres.
+    # Bounded browser footprint checks still require real triangle support.
+    STAIR_SUPPORT_FLIGHTS.append({"label":f"{name} at Z{-cy:.6f}",
+        "start":[x0,z0-STREET_DROP,-cy],"end":[x1,z1-STREET_DROP,-cy],"width":width})
     run=(x1-x0)/steps;rise=(z1-z0)/steps
     for k in range(steps):
         top=z0+rise*k
@@ -1697,7 +1704,9 @@ for i,yy in enumerate(ACCESS_CENTRES):
         flatbar("Stair-well top rail",(STAIR_HEAD_X-6.4,y,1.15),(STAIR_HEAD_X,y,1.15),.06,.055,BRONZE)
     # Gibbs266: paired16ft cast-iron indicator posts, not floating boards.
     for side in [-1,1]:
-        px=STAIR_HEAD_X+.40;py=yy+side*1.95
+        # Exact post placement is reconstructed. Keep the documented paired
+        # indicators on solid floor beside the fence, clear of the east aisle.
+        px=STAIR_HEAD_X-.70;py=yy+side*2.15
         indicator=lathe('Sixteen-foot cast-iron gate indicator',[(0,.28),(.12,.31),(.24,.23),(.48,.14),(3.05,.105),(3.2,.14),(4.15,.12),(4.45,.15),(16*FT,.11)],IRON,24,12)
         indicator.location=(px,py,0);indicator['closed_support']=True
         contact('Gate indicator post foundation',indicator,CON_MAIN_FLOORS,source='Gibbs266: castiron16ft indicators, two at each gate')
@@ -1810,6 +1819,7 @@ manifest={
     "walkable":[{"label":"Main waiting hall","bounds":[-HALL_W/2,HALL_W/2,-HALL_L/2,HALL_L/2],"floor":-STREET_DROP},{"label":"East hall stair threshold","bounds":[HALL_W/2,16.5,-39.5*FT/2,39.5*FT/2],"floor":-STREET_DROP},{"label":"Main39ft6 stair","bounds":[16.5,24.9,-39.5*FT/2,39.5*FT/2],"floor":-STREET_DROP,"surface":"stair; use actual floor raycast"},{"label":"West hall axial threshold","bounds":[-HALL_ROOM_W/2,-HALL_W/2,-7.75,7.75],"floor":-STREET_DROP},{"label":"Street-level loggia and arcade","bounds":[24.9,L/2,-6.9,6.9],"floor":0},{"label":"Axial concourse passage","bounds":[-44.4,-HALL_ROOM_W/2,-7.75,7.75],"floor":-STREET_DROP},{"label":"Main concourse","bounds":[WEST,CX+CW/2,-CL/2,CL/2],"floor":-STREET_DROP},{"label":"Exit concourse","bounds":[STAIR_HEAD_X-13,STAIR_HEAD_X-5.5,-CL/2,CL/2],"floor":EXIT_LEVEL-STREET_DROP}],
     "mainStair":{"bounds":[16.5,24.9,-39.5*FT/2,39.5*FT/2],"startFloorWorld":-STREET_DROP,"endFloorWorld":0,"risers":28,"riser":.1524,"tread":.30,"riserCountStatus":"Reconstructed to fit verified14ft working drop and39ft6 publishedwidth"},
     "accessStairs":[{"centerZ":-y,"mainOpening":[h[0],h[1],-y-1.65,-y+1.65],"mainFlight":{"start":[STAIR_HEAD_X,-STREET_DROP,-y],"end":[STAIR_HEAD_X-5.7,EXIT_LEVEL-STREET_DROP,-y],"width":3.0,"steps":19},"exitToPlatform":{"upperStart":[STAIR_HEAD_X-6-LOWER_SHIFT,EXIT_LEVEL-STREET_DROP,-y+.83],"turningLanding":[STAIR_HEAD_X-11-LOWER_SHIFT,(EXIT_LEVEL+PLATFORM_LEVEL)/2-STREET_DROP,-y],"lowerLanding":[STAIR_HEAD_X-5.55-LOWER_SHIFT,PLATFORM_LEVEL-STREET_DROP,-y],"flightWidth":1.45,"stepsPerFlight":15}} for y,h in zip(ACCESS_CENTRES,MAIN_STAIR_HOLES)],
+    "stairSupportFlights":STAIR_SUPPORT_FLIGHTS,
     "representativePlatform":{"bounds":[PX0,PX1,PLATFORM_CENTER_Z-PLATFORM_WIDTH/2,PLATFORM_CENTER_Z+PLATFORM_WIDTH/2],"floor":PLATFORM_LEVEL-STREET_DROP,"trackCenterZ":TRACK_CENTER_Z,"trackTopOfRailWorld":TOR_LEVEL-STREET_DROP,"nearPlatformEdgeZ":PLATFORM_CENTER_Z-PLATFORM_WIDTH/2,"sourceEdgeOffset":(5+3/12)*FT,"representativeInterpretation":"One linked section; longitudinalposition,widthandassignmentnotcertifiedcomplete21-tracklayout;railsectionminuteprofileinferred100lbtype"},
     "obstacles":(
         [{"bounds":[x-.62,x+.62,-y-.62,-y+.62],"floor":-STREET_DROP,"label":"Main concourse lattice pier"} for x,y in MAIN_PIERS]

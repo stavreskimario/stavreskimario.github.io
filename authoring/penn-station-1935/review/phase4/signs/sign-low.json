@@ -1,0 +1,37 @@
+{
+  "sourceSha256": "e88cd39806d085e75720f56618a4aacf216d6c31a46eeb6b01aa0f902a6eedad",
+  "decodedSha256": "69997935dd2eae04c531380a4288d886e4393974f64a63b6b1669495e1e0b084",
+  "labels": [
+    {
+      "x": -15.51,
+      "z": -28.144,
+      "vertices": 563,
+      "frontNormals": 141
+    },
+    {
+      "x": -15.51,
+      "z": 28.144,
+      "vertices": 1002,
+      "frontNormals": 249
+    },
+    {
+      "x": 15.51,
+      "z": -28.144,
+      "vertices": 426,
+      "frontNormals": 100
+    },
+    {
+      "x": 15.51,
+      "z": 28.144,
+      "vertices": 525,
+      "frontNormals": 137
+    }
+  ],
+  "changedBufferViews": [
+    22,
+    1
+  ],
+  "operation": "180 degree vertical-axis rotation of four office-label glyph meshes about their original anchors",
+  "unchanged": "All other compressed geometry views, UVs, indices, material properties and lighting metadata; no sign wording or placement changes",
+  "limitation": "Existing static lighting and reflection captures predate this small unbaked lettering correction"
+}

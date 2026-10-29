@@ -13,6 +13,7 @@ import { MeshoptDecoder } from 'meshoptimizer';
 import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
+import { findStairBevelSupport } from './stair-contact.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
@@ -23,7 +24,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '3');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '4');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -412,6 +413,7 @@ function Navigation({ current, model }) {
   const velocity = useRef(new THREE.Vector3());
   const stepTime = useRef(performance.now());
   const keys = useRef(new Set());
+  const heldPointers = useRef(new Map());
   const yaw = useRef(0); const pitch = useRef(0);
   const pointer = useRef(null);
   const ray = useRef(new THREE.Raycaster());
@@ -432,7 +434,7 @@ function Navigation({ current, model }) {
     const look = new THREE.Vector3().fromArray(current.mode === 'walk' ? config.look : config.target);
     camera.lookAt(look); camera.fov = current.fov; camera.updateProjectionMatrix();
     const euler = new THREE.Euler().setFromQuaternion(camera.quaternion, 'YXZ'); yaw.current = euler.y; pitch.current = euler.x;
-    velocity.current.set(0, 0, 0); keys.current.clear();
+    velocity.current.set(0, 0, 0); keys.current.clear(); heldPointers.current.clear();
     feet.current = camera.position.y - 1.68;
     if (orbit.current) { orbit.current.target.copy(look); orbit.current.update(); }
     debugCamera = camera; invalidate();
@@ -440,19 +442,24 @@ function Navigation({ current, model }) {
   useEffect(() => { camera.fov = current.fov; camera.updateProjectionMatrix(); invalidate(); }, [current.fov]);
   useEffect(() => {
     const canvas = gl.domElement;
-    canvas.tabIndex = 0; canvas.setAttribute('aria-label', 'Interactive architectural reconstruction. Drag to look; use the viewpoints for accessible navigation.');
-    const isField = e => /INPUT|SELECT|TEXTAREA|BUTTON/.test(e.target.tagName) || e.target.closest('dialog');
+    canvas.tabIndex = 0; canvas.setAttribute('aria-label', 'Interactive station. Drag to turn. WASD or arrows move; Q and E change height in Orbit. Camera viewpoints are also available.');
+    const isField = e => /^(INPUT|SELECT|TEXTAREA|BUTTON|A|SUMMARY)$/.test(e.target.tagName) || e.target.closest('dialog,[contenteditable="true"]');
+    const canMove = () => state.entered && !state.loading && !state.tour && !document.hidden && !document.querySelector('dialog[open]');
+    const startKey = code => {
+      if (velocity.current.lengthSq() < .0001) stepTime.current = performance.now();
+      keys.current.add(code); invalidate();
+    };
     const keydown = e => {
       const padButton = e.target.closest('button[data-move]');
-      if (state.mode === 'walk' && padButton && ['Space', 'Enter'].includes(e.code)) { e.preventDefault(); keys.current.add(padButton.dataset.move); invalidate(); return; }
-      if (state.mode !== 'walk' || isField(e) || e.altKey || e.ctrlKey || e.metaKey) return;
-      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight'].includes(e.code)) {
-        if (!e.repeat && velocity.current.lengthSq() < 0.0001) stepTime.current = performance.now();
-        e.preventDefault(); keys.current.add(e.code); invalidate();
+      if (canMove() && padButton && ['Space', 'Enter'].includes(e.code)) { e.preventDefault(); startKey(padButton.dataset.move); return; }
+      if (!canMove() || isField(e) || e.altKey || e.ctrlKey || e.metaKey) return;
+      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight', ...(state.mode === 'orbit' ? ['KeyQ', 'KeyE'] : [])].includes(e.code)) {
+        e.preventDefault(); startKey(e.code);
       }
     };
     const keyup = e => { const padButton = e.target.closest('button[data-move]'); if (padButton && ['Space', 'Enter'].includes(e.code)) keys.current.delete(padButton.dataset.move); keys.current.delete(e.code); invalidate(); };
-    const stop = () => { keys.current.clear(); velocity.current.set(0, 0, 0); pointer.current = null; };
+    const stop = () => { keys.current.clear(); heldPointers.current.clear(); velocity.current.set(0, 0, 0); pointer.current = null; };
+    const focus = e => { if (isField(e) && !e.target.closest('button[data-move]')) stop(); };
     const down = e => {
       if (state.mode !== 'walk' || e.button !== 0 || pointer.current) return;
       pointer.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
@@ -466,19 +473,26 @@ function Navigation({ current, model }) {
     };
     const up = e => { if (pointer.current?.id === e.pointerId) pointer.current = null; };
     const touchMove = e => {
-      if (!e.target.closest('[data-move]')) return;
-      if (velocity.current.lengthSq() < 0.0001) stepTime.current = performance.now();
-      e.preventDefault(); keys.current.add(e.target.closest('[data-move]').dataset.move); invalidate();
+      const button = e.target.closest('button[data-move]');
+      if (!button || !canMove() || (state.mode === 'walk' && ['KeyQ', 'KeyE'].includes(button.dataset.move))) return;
+      e.preventDefault(); button.setPointerCapture(e.pointerId);
+      heldPointers.current.set(e.pointerId, button.dataset.move); startKey(button.dataset.move);
     };
-    const touchUp = () => { keys.current.clear(); invalidate(); };
+    const touchUp = e => {
+      const key = heldPointers.current.get(e.pointerId); heldPointers.current.delete(e.pointerId);
+      if (key && ![...heldPointers.current.values()].includes(key)) keys.current.delete(key);
+      invalidate();
+    };
     document.addEventListener('keydown', keydown); document.addEventListener('keyup', keyup);
     window.addEventListener('blur', stop); document.addEventListener('visibilitychange', stop);
+    document.addEventListener('focusin', focus);
     canvas.addEventListener('pointerdown', down); canvas.addEventListener('pointermove', move); canvas.addEventListener('pointerup', up); canvas.addEventListener('pointercancel', up); canvas.addEventListener('lostpointercapture', up);
-    document.addEventListener('pointerdown', touchMove); document.addEventListener('pointerup', touchUp); document.addEventListener('pointercancel', touchUp);
+    document.addEventListener('pointerdown', touchMove); document.addEventListener('pointerup', touchUp); document.addEventListener('pointercancel', touchUp); document.addEventListener('lostpointercapture', touchUp);
     return () => {
       stop(); document.removeEventListener('keydown', keydown); document.removeEventListener('keyup', keyup); window.removeEventListener('blur', stop); document.removeEventListener('visibilitychange', stop);
+      document.removeEventListener('focusin', focus);
       canvas.removeEventListener('pointerdown', down); canvas.removeEventListener('pointermove', move); canvas.removeEventListener('pointerup', up); canvas.removeEventListener('pointercancel', up); canvas.removeEventListener('lostpointercapture', up);
-      document.removeEventListener('pointerdown', touchMove); document.removeEventListener('pointerup', touchUp); document.removeEventListener('pointercancel', touchUp);
+      document.removeEventListener('pointerdown', touchMove); document.removeEventListener('pointerup', touchUp); document.removeEventListener('pointercancel', touchUp); document.removeEventListener('lostpointercapture', touchUp);
     };
   }, [camera, gl]);
   useFrame((_, delta) => {
@@ -494,11 +508,26 @@ function Navigation({ current, model }) {
       appliedPose.current = poseToken; debugCamera = camera; invalidate();
     }
     syncWalkingMap(camera);
-    if (current.mode !== 'walk' || state.mode !== 'walk' || current.loading || document.hidden || document.querySelector('dialog[open]')) return;
+    if (!state.entered || current.loading || state.tour || document.hidden || document.querySelector('dialog[open]')) {
+      keys.current.clear(); heldPointers.current.clear(); velocity.current.set(0, 0, 0); return;
+    }
     const now = performance.now();
     const k = keys.current; const dt = Math.min((now - stepTime.current) / 1000, 0.25); stepTime.current = now;
     const forward = Number(k.has('KeyW') || k.has('ArrowUp')) - Number(k.has('KeyS') || k.has('ArrowDown'));
     const sideways = Number(k.has('KeyD') || k.has('ArrowRight')) - Number(k.has('KeyA') || k.has('ArrowLeft'));
+    if (state.mode === 'orbit' && orbit.current) {
+      const vertical = Number(k.has('KeyE')) - Number(k.has('KeyQ'));
+      const direction = new THREE.Vector3(); camera.getWorldDirection(direction);
+      const right = new THREE.Vector3().crossVectors(direction, camera.up).normalize();
+      const desired = direction.multiplyScalar(forward).addScaledVector(right, sideways).addScaledVector(new THREE.Vector3(0, 1, 0), vertical);
+      desired.normalize().multiplyScalar(k.has('ShiftLeft') || k.has('ShiftRight') ? 28 : 10);
+      velocity.current.lerp(desired, 1 - Math.exp(-dt * 10));
+      if (velocity.current.lengthSq() < .0001 && !forward && !sideways && !vertical) return;
+      const translation = velocity.current.clone().multiplyScalar(dt);
+      camera.position.add(translation); orbit.current.target.add(translation);
+      orbit.current.update(); invalidate(); return;
+    }
+    if (current.mode !== 'walk' || state.mode !== 'walk') return;
     const desired = new THREE.Vector3(sideways, 0, -forward).normalize().applyAxisAngle(new THREE.Vector3(0, 1, 0), yaw.current).multiplyScalar(k.has('ShiftLeft') || k.has('ShiftRight') ? 5 : 2.6);
     velocity.current.lerp(desired, 1 - Math.exp(-dt * 10));
     if (velocity.current.lengthSq() < 0.0001 && !forward && !sideways) return;
@@ -514,9 +543,13 @@ function Navigation({ current, model }) {
       ray.current.set(origin, direction); ray.current.near = 0; ray.current.far = distance;
       return ray.current.intersectObjects(nearbyCollisionObjects(collision.current, origin, direction, distance), false);
     };
+    const blockedAt = (reason, candidate, detail = '') => {
+      if (debugNavigation) debugNavigation.lastBlocked = { reason, position: candidate.toArray(), floor: feet.current, detail };
+    };
     const groundAt = (point, floor = feet.current) => {
       const origin = point.clone(); origin.y = floor + .25;
-      for (const hit of hitsAt(origin, down, .65)) {
+      const supportHits = hitsAt(origin, down, .65);
+      for (const hit of supportHits) {
         const normal = hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld));
         // A real tread's rounded/chamfered edge remains a stepping surface.
         // Rise/drop limits below reject ledges; vertical walls still have y=0.
@@ -528,28 +561,41 @@ function Navigation({ current, model }) {
         // A nearly level seam still supports a foot; vertical walls do not.
         if (supportNormal > .5 || (supportNormal > .05 && Math.abs(hit.point.y - floor) < .035)) return hit.point.y;
       }
+      const contact = findStairBevelSupport(point.toArray(), floor, supportHits.map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y })), modelManifest.stairSupportFlights || [], neighbour => {
+        const neighbourOrigin = new THREE.Vector3(...neighbour); neighbourOrigin.y = floor + .25;
+        return hitsAt(neighbourOrigin, down, .65).map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y }));
+      });
+      if (contact) {
+        if (debugNavigation) { debugNavigation.stairBevelContacts = (debugNavigation.stairBevelContacts || 0) + 1; debugNavigation.lastStairBevelContact = contact; }
+        return contact.height;
+      }
       // The street surface belongs to the separately instanced neighbourhood.
       // Analytic navigation uses the same authored street/sidewalk datum.
       if (point.x >= 119.45 && point.x <= 159 && Math.abs(point.z) <= 70 && feet.current > -.5) return point.x <= 129 ? 0 : -.15;
+      if (debugNavigation) debugNavigation.lastSupportMiss = {
+        point: point.toArray(), floor, origin: origin.toArray(),
+        hits: supportHits.map(hit => ({ point: hit.point.toArray(), normal: hit.face.normal.toArray(), mesh: hit.object.name, material: hit.object.material?.name })),
+      };
       return null;
     };
     for (let step = 0; step < steps; step++) for (const axis of ['x', 'z']) {
       if (Math.abs(movement[axis]) < .00001) continue;
       const direction = new THREE.Vector3(); direction[axis] = Math.sign(movement[axis]);
       const candidate = camera.position.clone(); candidate[axis] += movement[axis];
-      if (!permitted(candidate)) continue;
+      if (!permitted(candidate)) { blockedAt('outside authored walking area', candidate); continue; }
       let blocked = false;
       for (const height of [.35, .55, 1.0, 1.6]) {
         const origin = camera.position.clone(); origin.y = feet.current + height;
-        if (hitsAt(origin, direction, Math.abs(movement[axis]) + .32).length) { blocked = true; break; }
+        const hits = hitsAt(origin, direction, Math.abs(movement[axis]) + .32);
+        if (hits.length) { const hit = hits[0]; blocked = true; blockedAt('body obstruction', candidate, { mesh: hit.object.name, material: hit.object.material?.name, height, point: hit.point.toArray(), normal: hit.face.normal.toArray() }); break; }
       }
       if (blocked) continue;
       const ground = groundAt(candidate);
-      if (ground === null || ground > feet.current + .24 || ground < feet.current - .35) continue;
+      if (ground === null || ground > feet.current + .24 || ground < feet.current - .35) { blockedAt('missing support or excessive step', candidate, ground); continue; }
       // Check the forward edge of a human footprint before entering a void.
       const leading = candidate.clone().addScaledVector(direction, .25);
       const ahead = groundAt(leading, ground);
-      if (ahead === null || Math.abs(ahead - ground) > .35) continue;
+      if (ahead === null || Math.abs(ahead - ground) > .35) { blockedAt('unsupported leading foot', candidate, { leading: leading.toArray(), ground, ahead, direction: direction.toArray(), originCamera: camera.position.toArray() }); continue; }
       camera.position[axis] = candidate[axis]; feet.current = ground;
     }
     camera.position.y = THREE.MathUtils.damp(camera.position.y, feet.current + 1.68, 18, dt);
@@ -685,7 +731,12 @@ function syncUI() {
   if ($('#location-index')) $('#location-index').textContent = { exterior: '01', waiting: '02', concourse: '03' }[state.view];
   if ($('#location-caption')) $('#location-caption').textContent = config.caption;
   if ($('#renderer-status')) $('#renderer-status').textContent = `${state.renderer || 'Starting renderer'} · ${state.quality === 'low' ? 'Mobile' : state.quality} quality`;
-  if ($('#movement-help')) $('#movement-help').textContent = state.mode === 'walk' ? 'Drag to look · WASD / arrows to walk · follow the central arcade and stairs into the station' : 'Drag to orbit · scroll to approach · right-drag / two fingers to pan';
+  if ($('#movement-help')) $('#movement-help').textContent = state.mode === 'walk' ? 'Drag to look · WASD / arrows to walk · Shift to move faster' : 'WASD / arrows to fly · Q down / E up · Shift faster · drag to turn';
+  document.querySelectorAll('.walk-pad button').forEach(button => {
+    const vertical = ['KeyQ', 'KeyE'].includes(button.dataset.move);
+    button.hidden = state.mode === 'walk' && vertical;
+    button.setAttribute('aria-label', `${state.mode === 'walk' ? 'Walk' : 'Fly'} ${button.dataset.direction}`);
+  });
   document.querySelectorAll('button[data-command]').forEach(button => {
     const { command, value } = button.dataset;
     if (['view', 'mode', 'light'].includes(command)) button.setAttribute('aria-pressed', String(state[command] === value));
@@ -705,7 +756,12 @@ document.addEventListener('click', async event => {
   const { command, value } = button.dataset; const instant = event.detail === 0 || reduced.matches;
   if (['enter', 'view', 'mode', 'reset'].includes(command)) stopTour();
   if (command === 'enter') { update({ entered: true }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
-  if (command === 'view') go(value, instant);
+  if (command === 'view') {
+    go(value, instant);
+    // A pointer-selected view is ready for WASD. Keyboard users retain the
+    // button focus so they can continue through the viewpoint controls.
+    if (event.detail > 0) $('#scene-root canvas')?.focus({ preventScroll: true });
+  }
   if (command === 'focus' && ['hotel', 'farley', 'platform'].includes(value)) { stopTour(); const view = value === 'platform' ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: 'orbit', pose: state.pose + 1 }); }
   if (command === 'reference' && framing[state.view]) update({ framing: state.view, mode: 'orbit', fov: framing[state.view].fov, pose: state.pose + 1 });
   if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: state.framing === 'platform' ? 'platform' : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
@@ -738,9 +794,9 @@ document.addEventListener('visibilitychange', () => { if (document.hidden && sta
 document.addEventListener('keydown', event => { if (event.key === 'Escape') stopTour(); });
 
 // Touch movement has native, labelled button alternatives to a gesture-only joystick.
-const pad = document.createElement('div'); pad.className = 'walk-pad'; pad.setAttribute('role', 'group'); pad.setAttribute('aria-label', 'Walking controls');
-[['KeyW', '↑', 'Walk forward'], ['KeyA', '←', 'Walk left'], ['KeyS', '↓', 'Walk backward'], ['KeyD', '→', 'Walk right']].forEach(([move, symbol, label]) => {
-  const button = document.createElement('button'); button.dataset.move = move; button.textContent = symbol; button.setAttribute('aria-label', label); button.type = 'button'; pad.append(button);
+const pad = document.createElement('div'); pad.className = 'walk-pad'; pad.setAttribute('role', 'group'); pad.setAttribute('aria-label', 'Movement controls');
+[['KeyQ', '−', 'down'], ['KeyW', '↑', 'forward'], ['KeyE', '+', 'up'], ['KeyA', '←', 'left'], ['KeyS', '↓', 'backward'], ['KeyD', '→', 'right']].forEach(([move, symbol, direction]) => {
+  const button = document.createElement('button'); button.dataset.move = move; button.dataset.direction = direction; button.textContent = symbol; button.setAttribute('aria-label', `Fly ${direction}`); button.type = 'button'; pad.append(button);
 });
 $('#viewport')?.append(pad);
 const neighbourhood = document.createElement('div'); neighbourhood.className = 'map-places';

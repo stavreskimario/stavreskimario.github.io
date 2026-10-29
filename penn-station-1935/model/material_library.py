@@ -9,11 +9,15 @@ import hashlib
 import bpy
 
 REVISION = 3
+# UV revision3 is intentionally retained. These scalar changes do not retile
+# geometry; the separately reviewed colour derivatives are applied downstream.
+NORMAL_APPEARANCE_REVISION = 4
 SURFACES = [
-    (("MilfordGranite", "InteriorGranite"), "Granite005A", 1.0, .14, .88),
-    (("Travertine",), "Travertine009", 1.5, .12, .95),
-    (("PublicFloorMarble", "TennesseeMarble"), "Marble018", 1.8, .045, .48),
-    (("BotticinoMarble",), "Marble018", 1.25, .055, .58),
+    (("MilfordGranite",), "Granite005A", 1.0, .045, .88),
+    (("InteriorGranite",), "Granite005A", 1.0, .025, .88),
+    (("Travertine",), "Travertine009", 1.5, .035, .95),
+    (("PublicFloorMarble", "TennesseeMarble"), "Marble018", 1.8, .018, .48),
+    (("BotticinoMarble",), "Marble018", 1.25, .025, .58),
 ]
 
 
@@ -115,6 +119,7 @@ def apply_materials(materials, library):
         material["surface_normal_strength"] = normal_strength
         material["surface_roughness_factor"] = roughness_factor
         material["surface_revision"] = REVISION
+        material["surface_normal_revision"] = NORMAL_APPEARANCE_REVISION
         report.append({"material": material.name, "asset": identity, "tileMetres": tile_metres,
                        "normalStrength": normal_strength, "roughnessFactor": roughness_factor})
     return report

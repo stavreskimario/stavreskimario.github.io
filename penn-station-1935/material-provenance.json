@@ -1,5 +1,5 @@
 {
-  "revision": 3,
+  "revision": 4,
   "references": [
     {
       "id": "Granite005A",
@@ -80,8 +80,102 @@
       ]
     }
   ],
-  "runtime": "Shared content-addressed KTX2/UASTC; 2K desktop /512px mobile. Physical grain-scale interpretations and reduced normal/roughness strengths are defined in model/material_library.py.",
+  "runtime": "Shared content-addressed KTX2/UASTC; 2K desktop/512px mobile. Appearance revision4 changes only interpreted colour and normal strength, keeping architectural UV revision3 and the existing roughness, metallic and AO data.",
   "lighting": "Blender Cycles neutral dome, six diffuse bounces and separate 2m AO; registered complete station, railway, context and rolling-stock occluders are included. Directional sun remains dynamic. Lighting-only outgoing radiance uses explicit Linear Rec.709 to Standard/sRGB PNG encoding, per-atlas HDR normalization and pixel-identical lossless WebP transport; browser restores scale and multiplies by pi for Three.js irradiance. Fine ironwork is excluded from the masonry atlas. Original HDR/AO authoring files and measured unit-hemisphere/browser calibration are retained outside runtime. Exact sample counts/resolutions and source hashes are recorded per delivered bake.",
   "reflections": "Three static room-centre HDR panoramas plus one elevated Seventh Avenue environment are captured from the assembled authored station under a neutral dome and afternoon reference sun. The old modern field HDR is archived. No parallax correction, moving-passenger reflections or time-specific indirect relighting; neither original material colours nor sun/exposure settings are historically calibrated. Source hashes/positions are in the runtime capture reports.",
-  "denoising": "Color-only OpenImageDenoise on explicitly recovered linear radiance; runtime sRGB is encoded once and pixel-verified lossless WebP is used. All four source/report hashes, mean changes, uniform transfer controls and clipping counts are retained in lighting-*-denoise.json. Filtering may soften tiny atlas features; mapped production views are separately reviewed."
+  "denoising": "Color-only OpenImageDenoise on explicitly recovered linear radiance; runtime sRGB is encoded once and pixel-verified lossless WebP is used. All four source/report hashes, mean changes, uniform transfer controls and clipping counts are retained in lighting-*-denoise.json. Filtering may soften tiny atlas features; mapped production views are separately reviewed.",
+  "architecturalUvRevision": 3,
+  "appearance": {
+    "revision": 4,
+    "scope": "Interpreted base-colour derivatives and reduced normal-strength scalars on existing material families. Geometry, physical grain scale, normal-map pixels, roughness/metallic/AO maps and lightmap/probe files are retained.",
+    "calibratedHistoricSamples": false,
+    "method": "Decode sRGB to linear; normalize each source channel by its spatial mean; apply contrast about that mean and multiply by the target linear palette; clip to0..1; resize in linear light; encode sRGB once.",
+    "sourceMapsVerified": 9,
+    "derivationReport": "../authoring/penn-station-1935/materials/phase4/surface-finish.json",
+    "applicationHelper": "model/apply_surface_finish.mjs",
+    "profiles": [
+      {
+        "name": "MilfordFine",
+        "source": "Granite005A",
+        "targetSrgb": [
+          0.76,
+          0.7,
+          0.66
+        ],
+        "contrast": 0.65,
+        "normalStrength": 0.045,
+        "decodedLinearMean": [
+          0.5375664821881201,
+          0.44746480087056534,
+          0.39239811362011084
+        ],
+        "clippedRgbSamples": 11300,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "InteriorFine",
+        "source": "Granite005A",
+        "targetSrgb": [
+          0.73,
+          0.71,
+          0.67
+        ],
+        "contrast": 0.55,
+        "normalStrength": 0.025,
+        "decodedLinearMean": [
+          0.4914818359985512,
+          0.46181188451850974,
+          0.4058650591310931
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "RomanTravertine",
+        "source": "Travertine009",
+        "targetSrgb": [
+          0.85,
+          0.82,
+          0.75
+        ],
+        "contrast": 0.48,
+        "normalStrength": 0.035,
+        "decodedLinearMean": [
+          0.6926407475101808,
+          0.6385578085519785,
+          0.5229263271257834
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "HonedMarble",
+        "source": "Marble018",
+        "targetSrgb": [
+          0.8,
+          0.78,
+          0.73
+        ],
+        "contrast": 0.68,
+        "normalStrength": 0.018,
+        "decodedLinearMean": [
+          0.6035794039014757,
+          0.5706952909717267,
+          0.4917776798475667
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      }
+    ],
+    "normalStrengths": {
+      "MilfordGranite": 0.045,
+      "InteriorGranite": 0.025,
+      "Travertine": 0.035,
+      "PublicFloorMarble": 0.018,
+      "TennesseeMarble": 0.018,
+      "BotticinoMarble": 0.025
+    },
+    "baseColourFactors": "Existing glTF baseColorFactor values are retained; the application report records each factor times the decoded UASTC map mean.",
+    "lightingLimitation": "This narrow appearance change retains the Phase3 indirect-illumination solution and static probes. It does not rebake the effects of revised albedo on secondary bounce light or restore the lost split-atlas/reflection work."
+  }
 }

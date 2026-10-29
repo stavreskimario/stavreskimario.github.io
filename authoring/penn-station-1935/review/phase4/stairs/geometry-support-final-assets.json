@@ -1,0 +1,115 @@
+{
+  "created": "2026-10-29T07:28:07.161Z",
+  "input": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets",
+  "variants": [
+    {
+      "name": "model-concourse.glb",
+      "sampledTriangles": 158,
+      "tested": 1377,
+      "unsupported": [],
+      "minimumSupportedHeight": -0.004715109814478605,
+      "stairs": [
+        {
+          "centreZ": 68.764528,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 54.791453,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 40.818378,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 27.149065,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 13.32787,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -0.341443,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -13.555112,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -27.224425,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -40.32146,
+          "checks": 153,
+          "unsupported": 0
+        }
+      ]
+    },
+    {
+      "name": "model-concourse-low.glb",
+      "sampledTriangles": 158,
+      "tested": 1377,
+      "unsupported": [],
+      "minimumSupportedHeight": -0.004715109814478605,
+      "stairs": [
+        {
+          "centreZ": 68.764528,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 54.791453,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 40.818378,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 27.149065,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": 13.32787,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -0.341443,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -13.555112,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -27.224425,
+          "checks": 153,
+          "unsupported": 0
+        },
+        {
+          "centreZ": -40.32146,
+          "checks": 153,
+          "unsupported": 0
+        }
+      ]
+    }
+  ],
+  "limitation": "Scoped main-floor-to-first-tread support check. Complete multi-level walking and collision checks are separate."
+}

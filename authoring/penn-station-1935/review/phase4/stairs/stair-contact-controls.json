@@ -1,0 +1,122 @@
+{
+  "created": "2026-10-29T07:44:44.111Z",
+  "cases": [
+    {
+      "name": "Quantized nosing with adjacent actual tread",
+      "result": {
+        "height": 0,
+        "offset": -0.01,
+        "sample": [
+          0.012,
+          0,
+          0
+        ],
+        "flight": "Registered interpreted access flight"
+      },
+      "probes": 2,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Void even when real support lies within20mm",
+      "result": null,
+      "probes": 0,
+      "central": []
+    },
+    {
+      "name": "Central bevel with no actual neighbouring tread",
+      "result": null,
+      "probes": 4,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Neighbouring ledge at a different height",
+      "result": null,
+      "probes": 4,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Downward-facing underside is not a tread",
+      "result": null,
+      "probes": 4,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Tread farther than the finite contact limit",
+      "result": null,
+      "probes": 4,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Actual geometry outside the registered flight",
+      "result": null,
+      "probes": 0,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Unregistered floor has no stair fallback",
+      "result": null,
+      "probes": 0,
+      "central": [
+        {
+          "height": -0.013673900350928303,
+          "normalY": 0.4472135954999579
+        }
+      ]
+    },
+    {
+      "name": "Excessive downward step",
+      "result": null,
+      "probes": 0,
+      "central": [
+        {
+          "height": -0.21367389900790024,
+          "normalY": 0.44721370861596316
+        }
+      ]
+    },
+    {
+      "name": "Excessive upward step",
+      "result": null,
+      "probes": 0,
+      "central": [
+        {
+          "height": 0.41132610436456674,
+          "normalY": 0.44721340697339385
+        }
+      ]
+    }
+  ],
+  "scope": "Ray intersections with triangulated support controls, supplemented by real full/mobile station route tests.",
+  "registeredFlights": 27,
+  "status": "passed"
+}

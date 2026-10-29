@@ -1,0 +1,554 @@
+{
+  "scope": "Isolated before/after material review with a frozen local browser bundle and released Phase3 geometry/assets. The after mount overrides only six reviewed GLBs and derived colour maps. This is separate from final integrated runtime QA.",
+  "records": [
+    {
+      "mount": "before",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequired": [],
+      "views": [
+        {
+          "view": "exterior",
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 160,
+            "triangles": 7315234,
+            "geometries": 113,
+            "textures": 44,
+            "exposure": 1.0395683242476772
+          },
+          "scene": {
+            "id": "bb7cee35-998a-4ad0-b865-86bbca428b15",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "964f9c7d-1429-4db7-861a-0b8e80fe966b",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "3059157d-a258-42e0-97b3-ff890017d203",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "4d28d67a-d294-4fbe-ae75-2019d42349a5",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "48b3168e-1711-4e9f-aaa6-63ae8db27ca3",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "0f88209e-64c3-49bb-94c4-0625d5b73781",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ecab8bdb-72d2-4de0-a835-ccccc9a85596",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        },
+        {
+          "view": "waiting",
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 2,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 146,
+            "triangles": 6549978,
+            "geometries": 113,
+            "textures": 45,
+            "exposure": 4.150675860999826
+          },
+          "scene": {
+            "id": "bb7cee35-998a-4ad0-b865-86bbca428b15",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "964f9c7d-1429-4db7-861a-0b8e80fe966b",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "3059157d-a258-42e0-97b3-ff890017d203",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "4d28d67a-d294-4fbe-ae75-2019d42349a5",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "48b3168e-1711-4e9f-aaa6-63ae8db27ca3",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "0f88209e-64c3-49bb-94c4-0625d5b73781",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ecab8bdb-72d2-4de0-a835-ccccc9a85596",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        },
+        {
+          "view": "concourse",
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 3,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 148,
+            "triangles": 7122514,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.5691098890439603
+          },
+          "scene": {
+            "id": "bb7cee35-998a-4ad0-b865-86bbca428b15",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "964f9c7d-1429-4db7-861a-0b8e80fe966b",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "3059157d-a258-42e0-97b3-ff890017d203",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "4d28d67a-d294-4fbe-ae75-2019d42349a5",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "48b3168e-1711-4e9f-aaa6-63ae8db27ca3",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "0f88209e-64c3-49bb-94c4-0625d5b73781",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ecab8bdb-72d2-4de0-a835-ccccc9a85596",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        }
+      ]
+    },
+    {
+      "mount": "after",
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequired": [],
+      "views": [
+        {
+          "view": "exterior",
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 160,
+            "triangles": 7315234,
+            "geometries": 113,
+            "textures": 45,
+            "exposure": 1.0395258921947386
+          },
+          "scene": {
+            "id": "9257b5b6-a13a-4696-8c5e-e8b987a3eeb5",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "544197d0-bba9-4e35-bf2e-2b12f8e45603",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "e29de193-0041-4ea8-9754-f761895e2039",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "597e177d-374f-4d52-b7df-ba32a6e75c6c",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "7460b035-7b4b-4f43-bc7e-3c4cfe3f4aca",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "d0d889d8-96f5-4dd5-88b1-61445f05b4bb",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "b688b5fc-60d2-4233-bdd7-707919b73816",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        },
+        {
+          "view": "waiting",
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 2,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 146,
+            "triangles": 6549978,
+            "geometries": 113,
+            "textures": 46,
+            "exposure": 4.150687661633953
+          },
+          "scene": {
+            "id": "9257b5b6-a13a-4696-8c5e-e8b987a3eeb5",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "544197d0-bba9-4e35-bf2e-2b12f8e45603",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "e29de193-0041-4ea8-9754-f761895e2039",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "597e177d-374f-4d52-b7df-ba32a6e75c6c",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "7460b035-7b4b-4f43-bc7e-3c4cfe3f4aca",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "d0d889d8-96f5-4dd5-88b1-61445f05b4bb",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "b688b5fc-60d2-4233-bdd7-707919b73816",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        },
+        {
+          "view": "concourse",
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 3,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 148,
+            "triangles": 7122514,
+            "geometries": 114,
+            "textures": 50,
+            "exposure": 1.5691215588557446
+          },
+          "scene": {
+            "id": "9257b5b6-a13a-4696-8c5e-e8b987a3eeb5",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "544197d0-bba9-4e35-bf2e-2b12f8e45603",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "e29de193-0041-4ea8-9754-f761895e2039",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "597e177d-374f-4d52-b7df-ba32a6e75c6c",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "7460b035-7b4b-4f43-bc7e-3c4cfe3f4aca",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "d0d889d8-96f5-4dd5-88b1-61445f05b4bb",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "b688b5fc-60d2-4233-bdd7-707919b73816",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+        }
+      ]
+    }
+  ],
+  "bundleSha256": "9e98140f6f062f2935941832c6974624d2b4264f683a5efc34ae231d882b87c7",
+  "browser": "156.0.8078.48",
+  "passed": true,
+  "review": {
+    "acceptedAsIncrementalAppearanceChange": true,
+    "observations": [
+      "Travertine has less yellow/brown colour variation; large stone planes read more calmly.",
+      "Exterior granite shifts from a cool purple cast towards a muted warm granite interpretation.",
+      "Lower normal strength reduces exaggerated grain on colossal granite columns."
+    ],
+    "limits": [
+      "Old dark arch bands and low-resolution coffer illumination remain visible in this isolated baseline.",
+      "The chosen palette/contrast are interpretations rather than historic colour calibration.",
+      "Lightmaps, AO and reflections are unchanged; no new illumination or photorealism claim."
+    ],
+    "cameraExposureNote": "Camera poses/settings are identical per view; exposure was allowed to settle separately and actual values are recorded."
+  }
+}

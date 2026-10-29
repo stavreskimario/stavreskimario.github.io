@@ -69,6 +69,13 @@ body[data-entered=true] .viewport-vignette{background:linear-gradient(0deg,#faf7
 .movement-help,.renderer-status{background:#faf7efdf;border-radius:.3rem;padding:.15rem .4rem}
 .walk-pad{display:none;background:var(--chrome);border:1px solid #fffdf7b3;border-radius:.75rem;box-shadow:var(--exhibit-shadow)}
 body[data-mode=walk] .walk-pad{display:grid}
+/* A compact held-button alternative for touch and narrow windows. */
+.walk-pad button:first-child,.walk-pad button:nth-child(2){grid-column:auto}
+.walk-pad button[hidden]{display:none}
+body[data-mode=walk] .walk-pad button[data-move=KeyW]{grid-column:2}
+body[data-mode=walk] .walk-pad button[data-move=KeyA]{grid-column:1}
+@media(max-width:700px),(any-pointer:coarse){body[data-mode=orbit][data-entered=true] .walk-pad{display:grid}}
+@media(max-width:700px){body[data-entered=true] .walk-pad{bottom:18rem}}
 /* Body copy and primary controls remain comfortably readable. */
 .text-button,.all-apps,.button-group button,.utility-buttons button,.viewpoints button,.settings-field>label,legend,summary,.checkbox-field,.settings-toggles button,select,.map-places button{font-size:.875rem}
 .intro-context,.intro-source,.location-card p,.comparison>a,.reference-caption,.dialog-intro,.accuracy-grid p,.source-list a,.source-list p,.help-sections p,.field-note{font-size:.875rem}
