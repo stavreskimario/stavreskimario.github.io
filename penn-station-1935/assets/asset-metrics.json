@@ -1,0 +1,91 @@
+{
+  "pipeline": "Blender 4.3 → glTF Transform 4.2.1 → Meshopt + KTX2/UASTC",
+  "assets": [
+    {
+      "file": "model-exterior.glb",
+      "rawBytes": 13544748,
+      "bytes": 6740312,
+      "nodes": 14,
+      "meshes": 14,
+      "materials": 14,
+      "textures": 6,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    },
+    {
+      "file": "model-exterior-low.glb",
+      "rawBytes": 13544748,
+      "bytes": 2134620,
+      "nodes": 14,
+      "meshes": 14,
+      "materials": 14,
+      "textures": 6,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "rawBytes": 15997284,
+      "bytes": 8984804,
+      "nodes": 11,
+      "meshes": 11,
+      "materials": 11,
+      "textures": 9,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    },
+    {
+      "file": "model-waiting-room-low.glb",
+      "rawBytes": 15997284,
+      "bytes": 2473144,
+      "nodes": 11,
+      "meshes": 11,
+      "materials": 11,
+      "textures": 9,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    },
+    {
+      "file": "model-concourse.glb",
+      "rawBytes": 16799160,
+      "bytes": 8761744,
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 9,
+      "textures": 9,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "rawBytes": 16799160,
+      "bytes": 2389776,
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 9,
+      "textures": 9,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ]
+    }
+  ]
+}

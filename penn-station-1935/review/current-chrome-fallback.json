@@ -1,0 +1,109 @@
+{
+  "created": "2026-10-29T00:28:37.005Z",
+  "deploymentPrefix": "/exhibition/",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "rendererNote": "Software ANGLE/SwiftShader is requested for deterministic availability. Frame intervals describe browser scheduling, not a hardware performance claim.",
+  "checks": [
+    "Current installed browser starts, decodes and renders the authored exterior with requested renderer/fallback"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/three.webgpu-K62HXD2J.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2 · compatibility",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 32,
+            "triangles": 0,
+            "geometries": 26,
+            "textures": 15
+          }
+        }
+      }
+    }
+  ],
+  "browser": "156.0.8078.48",
+  "passed": true
+}

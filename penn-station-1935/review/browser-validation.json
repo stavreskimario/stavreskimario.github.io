@@ -1,0 +1,821 @@
+{
+  "created": "2026-10-29T00:26:24.998Z",
+  "deploymentPrefix": "/exhibition/",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "rendererNote": "Software ANGLE/SwiftShader is requested for deterministic availability. Frame intervals describe browser scheduling, not a hardware performance claim.",
+  "checks": [
+    "Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths",
+    "Exterior, waiting-room and concourse viewpoints render; drag orbit changes camera position",
+    "WASD movement, fixed eye height and measured stop at waiting-room wall/envelope",
+    "Morning/afternoon/evening, keyboard FOV, shadow toggle, mobile GLB quality asset and historical hotspot dialog",
+    "Decoded public-domain comparison, native modal focus/Tab/Escape and guided tour start/cancel",
+    "390 px touch layout, low GLB, on-screen movement, reduced-motion keyboard and 200% text sources panel",
+    "A model 503 replaces loading with an alert, keeps sources available and recovers with Try again",
+    "A transient sky.hdr failure recovers with Try again rather than retaining a failed loader cache",
+    "Forced unavailable graphics provides a visible fallback and usable source information"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room-low.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reference-waiting.jpg",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reference-waiting.jpg",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior-low.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 16,
+            "triangles": 156184,
+            "geometries": 25,
+            "textures": 10
+          }
+        },
+        "desktop-waiting": {
+          "state": {
+            "view": "waiting",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              8,
+              8,
+              37
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 11,
+            "triangles": 113528,
+            "geometries": 36,
+            "textures": 19
+          }
+        },
+        "desktop-concourse": {
+          "state": {
+            "view": "concourse",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -64,
+              7.999999999999995,
+              38.000000000000014
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 10,
+            "triangles": 96792,
+            "geometries": 45,
+            "textures": 28
+          }
+        },
+        "desktop-archive-comparison": {
+          "state": {
+            "view": "waiting",
+            "mode": "orbit",
+            "light": "evening",
+            "quality": "low",
+            "fov": 40,
+            "shadows": false,
+            "annotations": true,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              8,
+              8,
+              37
+            ],
+            "fov": 40
+          },
+          "metrics": {
+            "calls": 11,
+            "triangles": 64654,
+            "geometries": 56,
+            "textures": 37
+          }
+        }
+      },
+      "walking": {
+        "before": [
+          0,
+          1.68,
+          31
+        ],
+        "afterForward": [
+          0,
+          1.68,
+          30.354379665549406
+        ],
+        "boundarySamples": [
+          [
+            0,
+            1.68,
+            31.497753256560724
+          ],
+          [
+            0,
+            1.68,
+            33.98828238483315
+          ],
+          [
+            0,
+            1.68,
+            36.48821857060141
+          ],
+          [
+            0,
+            1.68,
+            37.73821817324177
+          ],
+          [
+            0,
+            1.68,
+            40
+          ],
+          [
+            0,
+            1.68,
+            40
+          ]
+        ]
+      },
+      "qualityCycles": {
+        "before": {
+          "calls": 11,
+          "triangles": 64654,
+          "geometries": 56,
+          "textures": 37
+        },
+        "after": {
+          "calls": 11,
+          "triangles": 64654,
+          "geometries": 56,
+          "textures": 37
+        }
+      },
+      "frameScheduling": {
+        "samples": 45,
+        "medianFrameIntervalMs": 16.69999999999709,
+        "p95FrameIntervalMs": 16.80000000000291,
+        "maximumFrameIntervalMs": 783.2999999999956
+      }
+    },
+    {
+      "label": "mobile emulation 390 × 844, touch, reduced motion",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior-low.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room-low.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse-low.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "mobile-intro": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 14,
+            "triangles": 88692,
+            "geometries": 24,
+            "textures": 9
+          }
+        },
+        "mobile-concourse": {
+          "state": {
+            "view": "concourse",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -64,
+              7.999999999999995,
+              38.000000000000014
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 10,
+            "triangles": 68456,
+            "geometries": 44,
+            "textures": 27
+          }
+        },
+        "mobile-walking": {
+          "state": {
+            "view": "waiting",
+            "mode": "walk",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              0,
+              1.68,
+              28.67460217166432
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 11,
+            "triangles": 64654,
+            "geometries": 44,
+            "textures": 27
+          }
+        },
+        "mobile-sources-200-percent-text": {
+          "state": {
+            "view": "waiting",
+            "mode": "walk",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              0,
+              1.68,
+              28.500464233283132
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 11,
+            "triangles": 64654,
+            "geometries": 44,
+            "textures": 27
+          }
+        }
+      },
+      "frameScheduling": {
+        "samples": 45,
+        "medianFrameIntervalMs": 16.699999999999818,
+        "p95FrameIntervalMs": 16.700000000000728,
+        "maximumFrameIntervalMs": 16.800000000000182
+      }
+    },
+    {
+      "label": "intentional model failure and retry",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb",
+          "status": 503
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "recovered-after-model-failure": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 1,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 16,
+            "triangles": 156184,
+            "geometries": 25,
+            "textures": 10
+          }
+        }
+      }
+    },
+    {
+      "label": "intentional HDR environment failure and retry",
+      "errors": [
+        "Could not load http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr: fetch for \"http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr\" responded with 503: Service Unavailable"
+      ],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Error: Could not load http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr: fetch for \"http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr\" responded with 503: Service Unavailable\n    at Object.onError (http://127.0.0.1:59306/exhibition/penn-station-1935/dist/app.js:3812:68447)\n    at http://127.0.0.1:59306/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js:40:132890",
+        "Error: Could not load http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr: fetch for \"http://127.0.0.1:59306/exhibition/penn-station-1935/assets/sky.hdr\" responded with 503: Service Unavailable\n    at Object.onError (http://127.0.0.1:59306/exhibition/penn-station-1935/dist/app.js:3812:68447)\n    at http://127.0.0.1:59306/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js:40:132890"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 503
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "recovered-after-environment-failure": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 1,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 16,
+            "triangles": 156184,
+            "geometries": 25,
+            "textures": 10
+          }
+        }
+      }
+    },
+    {
+      "label": "forced unavailable WebGL context",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "graphics-unavailable-fallback": {
+          "state": {
+            "view": "exterior",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "3D graphics are unavailable. Enable browser graphics acceleration and try again. Sources & accuracy remains available.",
+            "progress": 0,
+            "renderer": "",
+            "revision": 0,
+            "instant": false
+          },
+          "camera": null,
+          "metrics": null
+        }
+      }
+    }
+  ],
+  "browser": "141.0.7390.37",
+  "passed": true
+}

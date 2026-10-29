@@ -1,0 +1,387 @@
+{
+  "revision": 1,
+  "units": "metres",
+  "axes": "X east, Y up, Z south (glTF)",
+  "status": "Phase 1 architectural study; not a surveyed replica or a photoreal completed reconstruction",
+  "dimensions": {
+    "nominalFootprint": [
+      238.9632,
+      131.064
+    ],
+    "waitingRoomClear": [
+      31.3944,
+      84.42960000000001,
+      45.72
+    ],
+    "exteriorDoricColumnHeight": 10.668000000000001,
+    "exteriorDoricColumnDiameter": 1.3716000000000002,
+    "interiorColumn": {
+      "pedestal": 2.8448,
+      "base": 0.9906,
+      "shaft": 14.630400000000002,
+      "capital": 2.5146,
+      "totalAboveFloor": 20.980400000000003,
+      "entablatureHeight": 4.0894
+    },
+    "lowerWallArchRadius": 5.8674
+  },
+  "assets": [
+    {
+      "file": "model-exterior.glb",
+      "zone": "exterior"
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "zone": "waiting"
+    },
+    {
+      "file": "model-concourse.glb",
+      "zone": "concourse"
+    }
+  ],
+  "cameraPresets": {
+    "exterior": {
+      "position": [
+        180,
+        42,
+        125
+      ],
+      "target": [
+        35,
+        16,
+        0
+      ]
+    },
+    "waiting": {
+      "position": [
+        0,
+        2.0,
+        34
+      ],
+      "target": [
+        0,
+        22,
+        -18
+      ]
+    },
+    "concourse": {
+      "position": [
+        -73,
+        2.0,
+        38
+      ],
+      "target": [
+        -73,
+        18,
+        -18
+      ]
+    }
+  },
+  "walkable": [
+    {
+      "label": "Main waiting hall",
+      "bounds": [
+        -12.4,
+        12.4,
+        -40,
+        40
+      ],
+      "floor": 0
+    },
+    {
+      "label": "Central arcade",
+      "bounds": [
+        15,
+        126,
+        -5.4,
+        5.4
+      ],
+      "floor": 0
+    },
+    {
+      "label": "Axial concourse passage",
+      "bounds": [
+        -45,
+        -12,
+        -5.4,
+        5.4
+      ],
+      "floor": 0
+    },
+    {
+      "label": "Concourse",
+      "bounds": [
+        -100,
+        -45,
+        -46,
+        46
+      ],
+      "floor": 0
+    },
+    {
+      "label": "East sidewalk",
+      "bounds": [
+        120,
+        129,
+        -69,
+        69
+      ],
+      "floor": 0
+    }
+  ],
+  "obstacles": [
+    {
+      "bounds": [
+        -83.85,
+        -74.15,
+        -40.85,
+        -35.15
+      ],
+      "label": "Platform stairwell"
+    },
+    {
+      "bounds": [
+        -83.85,
+        -74.15,
+        -21.85,
+        -16.15
+      ],
+      "label": "Platform stairwell"
+    },
+    {
+      "bounds": [
+        -83.85,
+        -74.15,
+        -2.85,
+        2.85
+      ],
+      "label": "Platform stairwell"
+    },
+    {
+      "bounds": [
+        -83.85,
+        -74.15,
+        16.15,
+        21.85
+      ],
+      "label": "Platform stairwell"
+    },
+    {
+      "bounds": [
+        -83.85,
+        -74.15,
+        35.15,
+        40.85
+      ],
+      "label": "Platform stairwell"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        -33.9,
+        -32.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        -11.9,
+        -10.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        10.1,
+        11.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        32.1,
+        33.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        -33.9,
+        -32.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        -11.9,
+        -10.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        10.1,
+        11.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        32.1,
+        33.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -35.4,
+        -30.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -25.4,
+        -20.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -7.4,
+        -2.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        2.6,
+        7.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        20.6,
+        25.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        30.6,
+        35.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -35.4,
+        -30.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -25.4,
+        -20.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -7.4,
+        -2.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        2.6,
+        7.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        20.6,
+        25.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        30.6,
+        35.4
+      ],
+      "label": "Waiting room bench"
+    }
+  ],
+  "verified": [
+    "277 by103ft clear waiting room;150ft floor-to-roof",
+    "Eight colossal interior columns, four per long side",
+    "Three semicircular high windows per long wall, one per end",
+    "Doric exterior columns35ft high and4ft6in diameter",
+    "Eighth Avenue predominantly pilasters",
+    "225 by45ft arcade",
+    "Main room east of concourse and west of entrance arcade"
+  ],
+  "reconstructed": [
+    "Three groin-vault bays interpreted from plans and interior photographs",
+    "Coffer positions and depth",
+    "Corinthian capital leaves abstracted from plate308",
+    "Interior moulding profiles and ashlar joints",
+    "Benches and lamp positions",
+    "Concourse truss subdivisions and roof curvature",
+    "Simplified platform well placement; no complete track-level reconstruction",
+    "Unverified low-rise context massing"
+  ],
+  "uncertain": [
+    "Published outside footprint conflicts784x430ft versus788ft9in x430ft6in",
+    "Exact room/street floor elevations and stair riser counts",
+    "Exact1935 alterations to ticketing and furnishings",
+    "Concourse glazing pane arrangement and structural member sections",
+    "Block-by-block Manhattan context survey and historic vehicles remain future phase",
+    "Granite/travertine PBR maps are original procedural approximations, not sampled historic materials",
+    "No baked global illumination or archival colour calibration in revision1"
+  ]
+}
