@@ -83,4 +83,10 @@ Primary plans/photos guided the geometry and independent defect review; Archive 
 
 The railway follows opening-era evidence rather than a complete1935 electrical/switch/tunnel survey. PBR maps interpret material families without calibrated samples from the demolished station. Sparse distant context, static reflection probes, atlas filtering and simplified fixtures remain visible limitations. High-detail draw/triangle counts are not reliable distance LOD or occlusion-performance certification.
 
-No current Phase3 CI success, deployed-site loading, native-WebGPU hardware pass, physical mobile benchmark, Safari/Firefox coverage or assistive-technology user study is asserted by this local record. Publication, CI and live-deployment verification must be recorded separately against the actual committed revision. The pull request must remain unmerged without the owner’s authorization.
+Native-WebGPU parity, physical-phone performance, Safari/Firefox coverage and assistive-technology user studies remain unverified. The pull request remains unmerged pending owner authorization.
+
+## Published implementation verification
+
+GitHub Pages successfully built implementation `73ee71740c82ce1598de22d4f48aeee406fb6e41`; all eight [reported GitHub checks](../authoring/penn-station-1935/review/phase3/ci-validation.json) completed successfully for that exact revision. The published browser bundle SHA256 matches the locally tested bundle byte-for-byte. The [publication receipt](../authoring/penn-station-1935/review/phase3/publication.json) and [live browser report](../authoring/penn-station-1935/review/phase3/live-validation.json) retain the revision and actual results.
+
+The live Chrome check rendered exterior, waiting room and concourse with a persistent six-zone world, decoded compressed geometry/material/light/reflection assets, and no uncaught page errors or failed required resources. External services were blocked. The [preview](https://stavreskimario.github.io/penn-station-1935/?preview=phase3) is served by the existing feature-branch Pages configuration. PR11 remains open and draft. This subsequent evidence-only commit changes these records, not the production bundle or model files.
