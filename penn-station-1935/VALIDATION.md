@@ -9,7 +9,7 @@ Checked 30 October 2026. This iteration improves the roof, interiors and desktop
 - Repaired raw waiting-room source: `4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945`.
 - Current editable scene: `48e1a7c53b883b68b709e61e37d38f1a66288682466d3969a41579454d61406d`.
 
-Matching publication, CI and live-browser verification are recorded in [PR11](https://github.com/stavreskimario/stavreskimario.github.io/pull/11). The live check compares the actual served bundle and decoded models with these local identities.
+Implementation `03f2cc9e6ac03a0c7c9c168aa4dbd4ea2d5e215a` passed all eight GitHub checks and its [Pages deployment](https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40967933621). The [actual live-browser receipt](../authoring/penn-station-1935/review/phase4/final-publication.json) matches the served bundle and all six decoded models with the local identities, retains all six zone identities through the exterior and interiors, and records advancing render frames with no page or resource errors. Publication was checked in Chrome156 on Apple M5 Max Metal. [PR11](https://github.com/stavreskimario/stavreskimario.github.io/pull/11) remains draft and unmerged.
 
 ## Architecture and historical evidence
 
@@ -63,7 +63,7 @@ Engineering Journal and Crystal Palace were removed in commit `1519918`. The [re
 
 Model, unique texture and lighting transfer is **149,469,306 bytes** across both variants. The internal custom-stage allowance is 160,000,000 bytes; the separate complete legacy-root site must remain below 1 GB. [Final staging measurements](../authoring/penn-station-1935/review/phase4/final-public-staging.json) record the custom artifact and conservative legacy-root upper bound. Historical source scenes remain recoverable through verified immutable Git references and persistent backups; HDR archival is lossless.
 
-The PR stays draft and unmerged. Live publication is checked separately from local rendering; the matching result belongs to the PR validation record.
+The PR stays draft and unmerged. The live publication receipt above is separate from local rendering; a documentation-only follow-up preserves it without changing the tested runtime assets.
 
 ## Remaining visual work
 

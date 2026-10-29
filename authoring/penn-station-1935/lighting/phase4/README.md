@@ -1,9 +1,9 @@
-# Phase4 lighting source archive
+# Phase 4 lighting source archive
 
-Six calibrated illumination atlases: 8192px waiting vault, 4096px masonry and colossal order, and 2048px exterior, concourse and platform; each128 Metal Cycles samples with six diffuse bounces. The dedicated order atlas retains its4096px desktop AO. Per-zone records retain actual input hashes, UV coverage, device and timing. Directional sunlight remains dynamic.
+Six calibrated illumination atlases use 8192px for the waiting-room vault, 4096px for masonry and colossal order, and 2048px for exterior, concourse and platform. The order uses 512 Metal Cycles samples; other atlases use 128. All use six diffuse bounces. Desktop order AO remains 4096px. Each record retains actual source hashes, UV coverage, device and timing. Directional sun stays dynamic.
 
-Original and denoised HDR bytes are losslessly gzip archived; decompress with Python gzip or a standard archive utility. Decoded SHA256 and archive receipts are retained. Final PNGs are the exact pixel sources of lossless runtime WebP maps. Low derivatives remain512px. No HDR is a historical photograph or calibrated1935 exposure.
+Original and denoised HDR bytes are losslessly gzip archived. Decompress with Python gzip or a standard archive utility; decoded SHA256 receipts preserve exact original bytes. Final PNGs are the pixel sources for lossless runtime WebP. Low derivatives remain 512px. No HDR is a historical photograph or calibrated1935 exposure.
 
-The source snapshots distinguish the v3-all ceiling/exterior run from the later order/masonry split. All final runs include the broad v3 prism court as an occluder. Imported raw architecture hashes remain in each report. No raw GLBs are duplicated here; editable geometry is in the current phase4 Blender file.
+Source snapshots preserve development history. The final delivery-records.json identifies all six repaired-leaf runs, including the broad revision3 prism court and recorded architecture/railway/context inputs. Canonical lighting helpers are retained in source/lighting-order-source; earlier source snapshots are development evidence. Raw GLBs are not duplicated here; editable architecture is in the current Phase4 Blender scene.
 
-Mapped-browser acceptance and transfer measurements are recorded separately in the release validation report.
+Mapped browser acceptance and transfer measurements are recorded separately in the release validation report.
