@@ -17,7 +17,168 @@ const { createHash } = require('node:crypto');
 const root = path.resolve(__dirname, '../penn-station-1935/assets');
 const output = process.env.PENN_ASSET_REPORT || '/private/tmp/penn-phase3-asset-validation.json';
 
-(async () => {
+const repositoryRoot = path.resolve(__dirname, '..');
+const phase4DenoisedDirectory = 'authoring/penn-station-1935/lighting/phase4/denoised';
+const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+
+function denoiseEntries(zone, file, record) {
+  assert.equal(record.zone, zone, `${file}: top-level zone matches its filename`);
+  if (record.schemaVersion === 1) return [{ zone, report: file }];
+  assert([2, 3].includes(record.schemaVersion), `${zone}: supported denoise provenance schema`);
+  assert.equal(zone, 'waiting-room', 'Only the waiting-room has a split-atlas index');
+  assert(Array.isArray(record.atlases), `${zone}: split index contains its child reports`);
+  const expected = (record.schemaVersion === 3 ? ['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'] : ['waiting-room-vault', 'waiting-room-masonry'])
+    .map(child => ({ zone: child, report: `lighting-${child}-denoise.json` }));
+  const descriptors = record.atlases.map(atlas => ({ zone: atlas.zone, report: atlas.report }));
+  const byZone = (a, b) => a.zone.localeCompare(b.zone);
+  assert.deepEqual(descriptors.slice().sort(byZone), expected.sort(byZone),
+    'The waiting-room index references exactly one of each local atlas required by its schema');
+  return descriptors;
+}
+
+function denoisePolicy(record, baseZone) {
+  const zone = record.zone;
+  const legacyDirectory = `authoring/penn-station-1935/lighting/phase3/${zone === 'platform' ? 'platform-corrected' : 'denoised'}`;
+  const authoringDirectory = record.authoringDirectory || legacyDirectory;
+  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory), `${zone}: supported local authoring directory`);
+  const fresh = authoringDirectory === phase4DenoisedDirectory;
+  if (zone !== baseZone) {
+    assert.equal(baseZone, 'waiting-room', 'Only waiting-room children use atlas-specific zones');
+    assert(['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'].includes(zone));
+    assert(fresh, `${zone}: split-atlas provenance must identify the new authored source directory`);
+  }
+  const fullDimensions = zone === 'waiting-room-vault' ? [8192, 6144]
+    : ['waiting-room-masonry', 'waiting-room-order'].includes(zone) ? [4096] : [2048];
+  return { authoringDirectory, fresh, fullDimensions,
+    inputTransfer: fresh || zone === 'platform' ? 'linear' : 'srgb' };
+}
+
+function checkDenoiseStatistics(record, expectedTransfer) {
+  const zone = record.zone;
+  assert.equal(record.schemaVersion, 1, `${zone}: individual atlas uses schema1`);
+  assert.equal(record.source, `lighting-${zone}-sky.hdr`);
+  assert(/^[a-f0-9]{64}$/.test(record.sourceSha256));
+  assert.equal(record.inputTransfer, expectedTransfer, `${zone}: source transfer matches its actual authoring generation`);
+  assert(Number.isFinite(record.radianceScale) && record.radianceScale > 0);
+  for (const statistics of [record.sourceStored, record.originalLinear, record.denoisedLinear, record.retainedHdr.decodedLinear]) {
+    for (const value of [statistics.mean, statistics.minimum, statistics.maximum]) assert(Number.isFinite(value), `${zone}: finite radiance statistics`);
+    assert(statistics.minimum <= statistics.mean && statistics.mean <= statistics.maximum);
+    assert(statistics.mean > 0 && statistics.maximum > 0, `${zone}: daylight atlas contains positive radiance, not an empty black bake`);
+  }
+  assert(Number.isFinite(record.relativeMeanChange));
+  const control = record.constant018Test;
+  assert.equal(control.before, .18);
+  assert.equal(control.passed, true, `${zone}: linear0.18 transfer control passed`);
+  assert(Number.isFinite(control.after) && Number.isFinite(control.maximumError));
+  assert(control.maximumError >= 0 && control.maximumError <= .0002);
+  assert(Math.abs(control.after - .18) <= .0002);
+}
+
+async function retainedHdr(record, directory) {
+  const zone = record.zone;
+  assert.equal(record.retainedHdr.file, `lighting-${zone}-sky-denoised-linear.hdr`);
+  assert(/^[a-f0-9]{64}$/.test(record.retainedHdr.sha256));
+  if (record.retainedHdr.archiveFile !== undefined)
+    assert.equal(record.retainedHdr.archiveFile, record.retainedHdr.file + '.gz', `${zone}: expected lossless HDR archive name`);
+  let archiveFile = record.retainedHdr.archiveFile || record.retainedHdr.file;
+  let bytes;
+  try { bytes = await fs.readFile(path.join(directory, archiveFile)); }
+  catch (error) {
+    if (error.code !== 'ENOENT' || record.retainedHdr.archiveFile) throw error;
+    archiveFile = record.retainedHdr.file + '.gz';
+    bytes = await fs.readFile(path.join(directory, archiveFile));
+  }
+  const decoded = archiveFile.endsWith('.gz') ? gunzipSync(bytes) : bytes;
+  assert(decoded.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), `${zone}: retained file is actual HDR radiance`);
+  assert.equal(hash(decoded), record.retainedHdr.sha256, `${zone}: retained HDR bytes match the original reported SHA after decompression`);
+  const resolution = decoded.subarray(0, 4096).toString('ascii').match(/\n[+-]Y\s+(\d+)\s+[+-]X\s+(\d+)/);
+  assert(resolution, `${zone}: retained HDR has its original resolution header`);
+  return { bytes: decoded, archiveFile, archiveBytes: bytes.length, width: Number(resolution[2]), height: Number(resolution[1]) };
+}
+
+function checkBakeStatistics(bake, record, retained) {
+  const zone = record.zone;
+  assert.equal(bake.zone, zone, `${zone}: raw bake report uses the actual atlas zone`);
+  assert(Number.isInteger(bake.resolution) && bake.resolution >= 2048, `${zone}: finite source bake resolution`);
+  assert.equal(retained.width, bake.resolution); assert.equal(retained.height, bake.resolution);
+  assert(bake.resolution >= record.full.width, `${zone}: delivered derivative does not exceed retained source resolution`);
+  assert(Number.isFinite(bake.atlasSurfaceArea) && bake.atlasSurfaceArea >= .01 && bake.atlasSurfaceArea <= 1.001,
+    `${zone}: UV packing has non-collapsed coverage (at least1percent), without overlapping the atlas area`);
+  for (const kind of ['ambientOcclusion', 'illumination']) {
+    const stats = bake[kind];
+    assert(stats && [stats.minimum, stats.mean, stats.maximum].every(Number.isFinite), `${zone}: finite ${kind} bake statistics`);
+    assert(stats.minimum <= stats.mean && stats.mean <= stats.maximum);
+    assert(stats.mean > 0 && stats.maximum > 0, `${zone}: ${kind} bake is not empty`);
+    assert(Number.isInteger(stats.coveredPixels) && stats.coveredPixels > 0 && stats.coveredPixels <= bake.resolution ** 2,
+      `${zone}: ${kind} bake covers actual source pixels`);
+  }
+}
+
+async function verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions }) {
+  const zone = record.zone; const derivative = record[variant];
+  const suffix = variant === 'low' ? '-low' : '';
+  assert.equal(derivative.png, `lighting-${zone}-sky${suffix}.png`);
+  assert.equal(derivative.webp, `lighting-${zone}-sky${suffix}.webp`);
+  const dimensions = variant === 'low' ? [512] : fullDimensions;
+  assert(dimensions.includes(derivative.width), `${zone}/${variant}: expected delivered atlas dimension`);
+  assert.equal(derivative.height, derivative.width);
+  assert(Number.isInteger(derivative.clippedRGBSamples) && derivative.clippedRGBSamples >= 0);
+  assert(illumination.has(derivative.webp), `${zone}: model references the delivered denoised derivative`);
+  const delivered = await sharp(path.join(assetsDirectory, derivative.webp)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const source = await sharp(path.join(sourceDirectory, derivative.png)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  for (const image of [delivered, source]) {
+    assert.equal(image.info.width, derivative.width); assert.equal(image.info.height, derivative.height);
+  }
+  assert(delivered.data.equals(source.data), `${zone}/${variant}: delivered lossless WebP pixels match the denoised PNG`);
+  return { variant, file: derivative.webp, width: derivative.width, height: derivative.height, clippedRGBSamples: derivative.clippedRGBSamples };
+}
+
+async function validateDenoising({ assetsDirectory, illumination, repositoryDirectory = repositoryRoot, requireCurrentCore = false }) {
+  const atlases = []; const groups = []; const verifiedIllumination = new Set();
+  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform']) {
+    const indexFile = `lighting-${baseZone}-denoise.json`;
+    const indexBytes = await fs.readFile(path.join(assetsDirectory, indexFile));
+    const index = JSON.parse(indexBytes);
+    if (requireCurrentCore && baseZone === 'waiting-room') assert.equal(index.schemaVersion, 3, 'Current architecture separates vault, masonry and detailed colossal order lighting');
+    const entries = denoiseEntries(baseZone, indexFile, index);
+    groups.push({ zone: baseZone, file: indexFile, schemaVersion: index.schemaVersion, recordSha256: hash(indexBytes), atlases: entries });
+    for (const entry of entries) {
+      const recordBytes = entry.report === indexFile ? indexBytes : await fs.readFile(path.join(assetsDirectory, entry.report));
+      const record = JSON.parse(recordBytes);
+      assert.equal(record.zone, entry.zone, `${entry.report}: atlas zone matches its descriptor`);
+      const policy = denoisePolicy(record, baseZone);
+      if (requireCurrentCore && baseZone !== 'platform') assert(policy.fresh, `${record.zone}: current architecture uses fresh linear source bakes`);
+      checkDenoiseStatistics(record, policy.inputTransfer);
+      const sourceDirectory = path.resolve(repositoryDirectory, policy.authoringDirectory);
+      const retained = await retainedHdr(record, sourceDirectory);
+      const bakeFile = `lighting-${record.zone}.json`;
+      const bakeBytes = await fs.readFile(path.join(assetsDirectory, bakeFile));
+      const bake = JSON.parse(bakeBytes);
+      checkBakeStatistics(bake, record, retained);
+      const derivatives = [];
+      for (const variant of ['full', 'low']) {
+        const derivative = await verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions: policy.fullDimensions });
+        assert(!verifiedIllumination.has(derivative.file), `${derivative.file}: illumination derivative has one provenance record`);
+        verifiedIllumination.add(derivative.file); derivatives.push(derivative);
+      }
+      atlases.push({ file: entry.report, baseZone, zone: record.zone, authoringDirectory: policy.authoringDirectory,
+        recordSha256: hash(recordBytes), inputTransfer: record.inputTransfer, sourceSha256: record.sourceSha256,
+        originalLinear: record.originalLinear, denoisedLinear: record.denoisedLinear, relativeMeanChange: record.relativeMeanChange,
+        constant018Test: record.constant018Test, retainedHdr: record.retainedHdr, retainedArchive: retained.archiveFile,
+        retainedArchiveBytes: retained.archiveBytes, retainedDecodedBytes: retained.bytes.length,
+        retainedWidth: retained.width, retainedHeight: retained.height,
+        bakeReport: bakeFile, bakeReportSha256: hash(bakeBytes), atlasSurfaceArea: bake.atlasSurfaceArea,
+        derivatives, limitations: record.limitations });
+    }
+  }
+  assert.deepEqual([...verifiedIllumination].sort(), [...illumination].sort(),
+    'Every delivered illumination map has exactly one pixel-verified atlas provenance record');
+  return { atlases, groups };
+}
+
+module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, validateDenoising };
+
+if (require.main === module) (async () => {
   await MeshoptDecoder.ready;
   const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
   const manifest = JSON.parse(await fs.readFile(path.join(root, 'scene-manifest.json'), 'utf8'));
@@ -69,6 +230,13 @@ const output = process.env.PENN_ASSET_REPORT || '/private/tmp/penn-phase3-asset-
       assert(material.getExtras().sky_illumination_scale >= 1, 'HDR radiance scaling is preserved');
       assert(material.getOcclusionTexture(), `${material.getName()}: AO was exported`);
       const channel = material.getOcclusionTextureInfo().getTexCoord(); channels.add(channel);
+      if (sky === 'lighting-waiting-room-order-sky.webp') {
+        const image = Buffer.from(material.getOcclusionTexture().getImage());
+        assert.equal(image.subarray(0, 12).toString('hex'), 'ab4b5458203230bb0d0a1a0a', 'Order AO retains compressed KTX2 delivery');
+        const expectedSize = record.file.includes('-low.') ? 512 : 4096;
+        assert.equal(image.readUInt32LE(20), expectedSize, 'Detailed order AO retains its reviewed atlas width');
+        assert.equal(image.readUInt32LE(24), expectedSize, 'Detailed order AO retains its reviewed atlas height');
+      }
       for (const mesh of document.getRoot().listMeshes()) for (const primitive of mesh.listPrimitives()) {
         if (primitive.getMaterial() === material) assert(primitive.getAttribute(`TEXCOORD_${channel}`), 'Atlas channel exists after optimisation');
       }
@@ -140,53 +308,8 @@ const output = process.env.PENN_ASSET_REPORT || '/private/tmp/penn-phase3-asset-
     const key = severity + ':' + notice.code;
     report.validatorNoticesBySeverity[key] = (report.validatorNoticesBySeverity[key] || 0) + 1;
   }
-  const denoisedSources = path.resolve(__dirname, '../authoring/penn-station-1935/lighting/phase3/denoised');
-  report.denoising = [];
-  for (const zone of ['exterior', 'waiting-room', 'concourse', 'platform']) {
-    const zoneSources = zone === 'platform' ? path.join(path.dirname(denoisedSources), 'platform-corrected') : denoisedSources;
-    const file = `lighting-${zone}-denoise.json`;
-    const recordBytes = await fs.readFile(path.join(root, file));
-    const record = JSON.parse(recordBytes);
-    assert.equal(record.schemaVersion, 1, `${zone}: supported denoise provenance schema`);
-    assert.equal(record.zone, zone);
-    assert.equal(record.source, `lighting-${zone}-sky.hdr`);
-    assert(/^[a-f0-9]{64}$/.test(record.sourceSha256));
-    assert.equal(record.inputTransfer, zone === 'platform' ? 'linear' : 'srgb', `${zone}: source transfer matches the recorded authoring pipeline`);
-    assert(Number.isFinite(record.radianceScale) && record.radianceScale > 0);
-    for (const statistics of [record.sourceStored, record.originalLinear, record.denoisedLinear, record.retainedHdr.decodedLinear]) {
-      for (const value of [statistics.mean, statistics.minimum, statistics.maximum]) assert(Number.isFinite(value), `${zone}: finite radiance statistics`);
-      assert(statistics.minimum <= statistics.mean && statistics.mean <= statistics.maximum);
-    }
-    assert(Number.isFinite(record.relativeMeanChange));
-    const control = record.constant018Test;
-    assert.equal(control.before, .18);
-    assert.equal(control.passed, true, `${zone}: linear0.18 transfer control passed`);
-    assert(Number.isFinite(control.after) && Number.isFinite(control.maximumError));
-    // Match the documented authoring calibration limit, without adding a new visual threshold.
-    assert(control.maximumError >= 0 && control.maximumError <= .0002);
-    assert(Math.abs(control.after - .18) <= .0002);
-    assert.equal(record.retainedHdr.file, `lighting-${zone}-sky-denoised-linear.hdr`);
-    const retained = await fs.readFile(path.join(zoneSources, record.retainedHdr.file));
-    assert(retained.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'));
-    assert.equal(createHash('sha256').update(retained).digest('hex'), record.retainedHdr.sha256);
-    const derivatives = [];
-    for (const [variant, suffix, dimension] of [['full', '', 2048], ['low', '-low', 512]]) {
-      const derivative = record[variant];
-      assert.equal(derivative.png, `lighting-${zone}-sky${suffix}.png`);
-      assert.equal(derivative.webp, `lighting-${zone}-sky${suffix}.webp`);
-      assert.equal(derivative.width, dimension); assert.equal(derivative.height, dimension);
-      assert(Number.isInteger(derivative.clippedRGBSamples) && derivative.clippedRGBSamples >= 0);
-      assert(illumination.has(derivative.webp), `${zone}: model references the delivered denoised derivative`);
-      const delivered = await sharp(path.join(root, derivative.webp)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-      const source = await sharp(path.join(zoneSources, derivative.png)).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-      assert.equal(delivered.info.width, dimension); assert.equal(delivered.info.height, dimension);
-      assert(delivered.data.equals(source.data), `${zone}/${variant}: delivered lossless WebP pixels match the denoised PNG`);
-      derivatives.push({ variant, file: derivative.webp, width: dimension, height: dimension, clippedRGBSamples: derivative.clippedRGBSamples });
-    }
-    report.denoising.push({ file, zone, authoringDirectory: path.relative(path.resolve(__dirname, '..'), zoneSources), recordSha256: createHash('sha256').update(recordBytes).digest('hex'), inputTransfer: record.inputTransfer,
-      sourceSha256: record.sourceSha256, originalLinear: record.originalLinear, denoisedLinear: record.denoisedLinear,
-      relativeMeanChange: record.relativeMeanChange, constant018Test: control, retainedHdr: record.retainedHdr, derivatives, limitations: record.limitations });
-  }
+  const denoising = await validateDenoising({ assetsDirectory: root, illumination, requireCurrentCore: manifest.architecturalDetailRevision >= 4 });
+  report.denoising = denoising.atlases; report.denoisingGroups = denoising.groups;
   await fs.writeFile(path.join(path.dirname(output), 'denoise-summary.json'), JSON.stringify({ created: report.created, records: report.denoising }, null, 2) + '\n');
   report.uniqueSharedTextures = shared.size; report.decodedGlbBytes = decoded;
   report.modelTextureAndLightingTransferBytes = transfer;

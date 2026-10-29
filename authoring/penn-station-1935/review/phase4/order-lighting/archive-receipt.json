@@ -1,0 +1,122 @@
+{
+  "scope": "Causal diagnostic and accepted geometry-preserving UV preparation; correction browser acceptance pending",
+  "publicMaterialOnly": true,
+  "normalisation": "Local repo/work absolute prefixes in JSON replaced with repo/ and work/. Input content hashes and measured values preserved. Proof scripts use explicit paths/environment variables.",
+  "images": "Only same-run baseline and flat-white no-atlas diagnostic retained; other variants remain referenced by their captured report.",
+  "browser": "156.0.8078.48",
+  "camera": {
+    "position": [
+      8,
+      3.732800000000001,
+      37
+    ],
+    "quaternion": [
+      0.14068191942738867,
+      0.09051058880350103,
+      -0.012916300639636422,
+      0.9858243251403649
+    ],
+    "fov": 50
+  },
+  "fixedExposure": 4.153373611617231,
+  "frozenHelperSha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c",
+  "inputRawWaitingSha256": "d2f2f8361a941d3b25f3bb3d4bd32a1c02b09100ec00ab04b7550946bc8e7025",
+  "finalAppearanceAcceptance": "PENDING: new order/masonry bakes and actual mapped browser comparison",
+  "retainedFiles": [
+    {
+      "path": "INTEGRATION.md",
+      "bytes": 1995,
+      "sha256": "78606457b23cd29794c3c788d31078e3f2dd9dd85cedf83b9cdb72d6db814c3d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7002,
+      "sha256": "3a3ebe0fd0f5bc3e387f4af5a171114ef6ac874d3deacf31b2f4d724fbe50028"
+    },
+    {
+      "path": "images/baseline.png",
+      "bytes": 1356242,
+      "sha256": "21c446e37f1d4e792cba741cef1b16e5fa042c34c261d86b04c838ae5813c0e2"
+    },
+    {
+      "path": "images/white-control.png",
+      "bytes": 124880,
+      "sha256": "4e6025589b0b442a79613047a28456338f707c728cc7d2717f26340a732c25b4"
+    },
+    {
+      "path": "proof/analyse-ray-samples.py",
+      "bytes": 1541,
+      "sha256": "8fd85358692b81b1ca2bd3bc753e9e424574b9d684c4af13ebef44625c4ead7a"
+    },
+    {
+      "path": "proof/browser-atlas-controls.cjs",
+      "bytes": 10166,
+      "sha256": "b273a9f542fbb7ae4daff69503c0588d4627d578c99fa529b9d7f0282482a46a"
+    },
+    {
+      "path": "proof/browser-facing-controls.cjs",
+      "bytes": 9829,
+      "sha256": "1cdff9c34d033e86c5f77179707b8753714b63465aba285d44ab33ea8d139b61"
+    },
+    {
+      "path": "proof/browser-isolation.cjs",
+      "bytes": 9556,
+      "sha256": "f2931bf465ca94653cbab0b48f76ee9da5955136b604b2ec5ebb1a3a095ddfd2"
+    },
+    {
+      "path": "proof/browser-ray-samples.cjs",
+      "bytes": 10802,
+      "sha256": "6d7df6e769f866b1f69d7420152a5d05c84380436d42f186ab90c60cb05151fa"
+    },
+    {
+      "path": "proof/inspect-original-atlas.py",
+      "bytes": 1913,
+      "sha256": "45a28462a938c53db21932bbb3fe811aef69136fa644f6e4cbe3901c6d634c28"
+    },
+    {
+      "path": "proof/prepare-order-proof.py",
+      "bytes": 2487,
+      "sha256": "7fb5b0648e9d52041f1ab4c5b2b877b7b07bb3f3cb4fba680535593b1d7a22d1"
+    },
+    {
+      "path": "reports/atlas-controls.json",
+      "bytes": 20032,
+      "sha256": "55b553bbdc4e8a36cd861301ec8288b80654293841f922268527cf1144b1e5cf"
+    },
+    {
+      "path": "reports/atlas-density.json",
+      "bytes": 1214,
+      "sha256": "287ec895ed40fea90135069d98c0ed2531383293b5892372c309f1a401ee7e04"
+    },
+    {
+      "path": "reports/capital-ray-uv-samples.json",
+      "bytes": 41063,
+      "sha256": "6d4e84a61c809acbe4f5dc83b6bedd66cdefda8f0f47fa36afab71ae830061ac"
+    },
+    {
+      "path": "reports/face-controls.json",
+      "bytes": 18388,
+      "sha256": "425b336d3b8636618094d8c51315b97aa1848b2beb4fbbe2bc605f54cbffb7dc"
+    },
+    {
+      "path": "reports/order-uv-proof.json",
+      "bytes": 4608,
+      "sha256": "15c9764784fd2422586bd01a22e8bf3062f3f3a7e53a810acfe83604bdd57d64"
+    },
+    {
+      "path": "reports/rejected-first-pack.json",
+      "bytes": 4394,
+      "sha256": "ea967e33da2816d8a14b07e4ddc8d7817c8346f79131dd903bc22c4830bd0116"
+    },
+    {
+      "path": "reports/shader-isolation.json",
+      "bytes": 26270,
+      "sha256": "152bd526c7a6484e17e9a0dce9fb52198da605429a77fe5e56dfdd40761aec78"
+    },
+    {
+      "path": "source/order_lighting_uv.py",
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    }
+  ]
+}

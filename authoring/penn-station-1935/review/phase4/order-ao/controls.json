@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "controls": [
+    "real-CLI-2K-resize",
+    "4K-original-bytes-restored",
+    "shared-order-one-atlas",
+    "all-other-binary-views-exact",
+    "other-colour-remains-2K",
+    "normal-preserved",
+    "UV-sampler-material-bindings-preserved",
+    "canonical-4K-AO-verbatim-before-UASTC",
+    "verbatim-repeat",
+    "unmarked-noop",
+    "2K-source-rejected",
+    "shared-colour-image-rejected"
+  ],
+  "proof": {
+    "created": "2026-10-29T10:03:38.676Z",
+    "status": "passed",
+    "helperSha256": "f802cec0324921f9f7be9b9f15f73a3cf80a1709d1ab78a700cd24706af201d0",
+    "selection": "lighting-waiting-room-order-sky.png",
+    "source": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/source-4k.glb",
+      "sha256": "dcb58fd05a60da3dd06395ab2860711e0237a71bc0ca3052aec02f410c3c01e3"
+    },
+    "input": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/sized-2k.glb",
+      "sha256": "0c65e9e2dbf997cfcf978a601f0be92505f5bd9cb40077734e1757d760f1dc5a"
+    },
+    "output": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/restored.glb",
+      "sha256": "ae9bbb7caada25ff27a632955a9867b4c31d00f8cb222d26376b1c573c0e0284"
+    },
+    "materials": [
+      {
+        "material": "OrderCapitalFixture",
+        "imageIndex": 0,
+        "bufferView": 0,
+        "beforeSize": [
+          2048,
+          2048
+        ],
+        "restoredSize": [
+          4096,
+          4096
+        ],
+        "sourceImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "beforeImageSha256": "3cb4e22e78aea36fad49d49ae742afea61bbb08e870504a0f89faca40cb7b217",
+        "sourceBytes": 2037702,
+        "beforeBytes": 803729
+      },
+      {
+        "material": "OrderPilasterFixture",
+        "imageIndex": 0,
+        "bufferView": 0,
+        "beforeSize": [
+          2048,
+          2048
+        ],
+        "restoredSize": [
+          4096,
+          4096
+        ],
+        "sourceImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "beforeImageSha256": "3cb4e22e78aea36fad49d49ae742afea61bbb08e870504a0f89faca40cb7b217",
+        "sourceBytes": 2037702,
+        "beforeBytes": 803729
+      }
+    ],
+    "restoredImages": 1,
+    "imageCount": 4,
+    "textureCount": 4,
+    "unchangedBinaryViews": 5,
+    "unchangedBinaryViewsSha256": "38983c1327375c333738cfd4cabeeb9dddfabb2aa5e974caf763ad22d880b76c",
+    "beforeBytes": 1698828,
+    "afterBytes": 2932800,
+    "verbatimInput": false,
+    "geometryUVNormalMaterialBindingsUnchanged": true,
+    "otherImagesUnchanged": true
+  }
+}

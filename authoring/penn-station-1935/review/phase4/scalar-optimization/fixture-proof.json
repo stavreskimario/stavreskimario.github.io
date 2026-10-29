@@ -1,0 +1,1229 @@
+{
+  "created": "2026-10-29T09:55:18.769Z",
+  "helperSha256": "d604e306d8471bef25e2226daff7476c9b34e623f124b0c4f653bc5aedc417dd",
+  "toolLockSha256": "a4559e2631142b4459080ee7601f2d7e07640a186c245c5b0879ff90a97ca1c3",
+  "node": "v24.22.1",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/scalar-constant-final-controls/fixture-before.glb",
+  "inputSha256": "29a5c20d5efdba0ac7985538a9b262e64a7ab995ca01cbf46e57c30ac02b026e",
+  "policy": {
+    "resolution": "unchanged",
+    "ao": "original red values copied into RGB carrier only when not already grayscale",
+    "roughness": "green values preserved with unused R/B fixed at255 only for named stone with metallicFactor exactly zero; already-canonical images retained",
+    "metal": "all factors unchanged; nonzero-metal MR images unchanged",
+    "prune": "unreferenced textures only; single-colour textures retained",
+    "prefixes": [
+      "MilfordGranite",
+      "InteriorGranite",
+      "Travertine",
+      "PublicFloorMarble",
+      "TennesseeMarble",
+      "BotticinoMarble",
+      "BedfordLimestone",
+      "IndianaLimestoneContext",
+      "HotelBuffBrick",
+      "CitySidewalkStone",
+      "FarleyGranite"
+    ]
+  },
+  "inventory": [
+    {
+      "name": "Packed A",
+      "mimeType": "image/png",
+      "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+      "slots": [
+        "occlusionTexture",
+        "metallicRoughnessTexture",
+        "clearcoatRoughnessTexture",
+        "transmissionTexture"
+      ]
+    },
+    {
+      "name": "Packed B",
+      "mimeType": "image/png",
+      "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+      "slots": [
+        "baseColorTexture",
+        "normalTexture",
+        "occlusionTexture",
+        "metallicRoughnessTexture"
+      ]
+    },
+    {
+      "name": "Constant flat normal (must remain)",
+      "mimeType": "image/png",
+      "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+      "slots": [
+        "normalTexture",
+        "clearcoatNormalTexture"
+      ]
+    },
+    {
+      "name": "Unmodified base colour",
+      "mimeType": "image/png",
+      "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+      "slots": [
+        "baseColorTexture"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "occlusionTexture",
+      "channel": "R",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+      "metallicFactor": 0
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "occlusionTexture",
+      "channel": "R",
+      "sourceSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0"
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+      "metallicFactor": 0
+    },
+    {
+      "material": "PaintedStructuralIronControl",
+      "slot": "occlusionTexture",
+      "channel": "R",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "slot": "occlusionTexture",
+      "channel": "R",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "occlusionTexture",
+      "channel": "R",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    }
+  ],
+  "skippedMR": [
+    {
+      "material": "PaintedStructuralIronControl",
+      "metallicFactor": 0.82,
+      "reason": "nonzero metallic factor",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "metallicFactor": 0.1,
+      "reason": "nonzero metallic factor",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "metallicFactor": 0,
+      "reason": "outside reviewed stone families",
+      "sourceSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc"
+    }
+  ],
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/scalar-constant-final-controls/fixture-after.glb",
+  "outputSha256": "f5288afbdae307751a28eea9f7364c0b5786764734d253ff40e9872fc589ffa9",
+  "beforeBytes": 47316,
+  "afterBytes": 51196,
+  "beforeTextureCount": 4,
+  "afterTextureCount": 7,
+  "verbatimInput": false,
+  "uniqueScalarCarriers": 3,
+  "newScalarImages": 3,
+  "geometry": {
+    "beforeAccessorSha256": "9a1f686ad217ced012c0a93b38fefd10d7f0f0c2845d0b2e44634a9b3ce637bd",
+    "afterAccessorSha256": "9a1f686ad217ced012c0a93b38fefd10d7f0f0c2845d0b2e44634a9b3ce637bd",
+    "accessorCount": 5
+  },
+  "materialSceneMetadata": {
+    "beforeSha256": "5ce7586c0ecae8b12dc1442de815a2299c95aa8cdd99e4ee7b172612ae599ce2",
+    "afterSha256": "5ce7586c0ecae8b12dc1442de815a2299c95aa8cdd99e4ee7b172612ae599ce2"
+  },
+  "roleProofs": [
+    {
+      "before": {
+        "key": "0:pbrMetallicRoughness.baseColorTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "0:pbrMetallicRoughness.baseColorTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "0:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.11,
+                0.23
+              ],
+              "rotation": 0.31,
+              "scale": [
+                2.4,
+                3.7
+              ]
+            }
+          }
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 33648
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "0:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.11,
+                0.23
+              ],
+              "rotation": 0.31,
+              "scale": [
+                2.4,
+                3.7
+              ]
+            }
+          }
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 33648
+        },
+        "imageSha256": "1b80f7c0fb759e8a633c18aaa90f3697c98a7ba3590b6cc4886676d0172095c7",
+        "pixels": "1cfe2fe3072bd0967fc77d25d3cf79cdfb22c2606559b864563c5ee36df7925f",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "f47a8ec3e9aff2318d896942282ad4fe37d6391c82914f54a5da8a37de1300c6",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "0:normalTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "0:normalTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "0:occlusionTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.81,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.08,
+                0.29
+              ],
+              "rotation": -0.12,
+              "scale": [
+                0.7,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "magFilter": 9728,
+          "minFilter": 9986,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "0:occlusionTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.81,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.08,
+                0.29
+              ],
+              "rotation": -0.12,
+              "scale": [
+                0.7,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "magFilter": 9728,
+          "minFilter": 9986,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "47c45bab6076a0b946b3bcc9483ec82ec3ca7d29dac3eaf493bd68f9c152c4d0",
+        "pixels": "02166d80ba1e059aca91325a2abc18d609b2ebfe5f5487a9ec613d6f14442f70",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1"
+      },
+      "sampledChannelsPreserved": "R"
+    },
+    {
+      "before": {
+        "key": "0:extensions.KHR_materials_clearcoat.clearcoatRoughnessTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "extensions.KHR_materials_clearcoat.clearcoatRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "0:extensions.KHR_materials_clearcoat.clearcoatRoughnessTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "extensions.KHR_materials_clearcoat.clearcoatRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "0:extensions.KHR_materials_clearcoat.clearcoatNormalTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "extensions.KHR_materials_clearcoat.clearcoatNormalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "0:extensions.KHR_materials_clearcoat.clearcoatNormalTexture",
+        "material": "MilfordGraniteFixture",
+        "slot": "extensions.KHR_materials_clearcoat.clearcoatNormalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "1:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "1b80f7c0fb759e8a633c18aaa90f3697c98a7ba3590b6cc4886676d0172095c7",
+        "pixels": "1cfe2fe3072bd0967fc77d25d3cf79cdfb22c2606559b864563c5ee36df7925f",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "f47a8ec3e9aff2318d896942282ad4fe37d6391c82914f54a5da8a37de1300c6",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "1:normalTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "1:normalTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:occlusionTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "64bc4898a2dc155203495841a34232b5c4ff6c4d4038c693eedf5686b9a069e0",
+        "pixels": "932d6bab61a85987d667f00a50c22a7e8e64a3b977b99696a09e7c3feb0c54df",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "1:occlusionTexture",
+        "material": "InteriorGraniteFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "2e9c5d1ef087de45d5297c2b98a27c018fdf2c662594eb263db3314eadcbc835",
+        "pixels": "dfe9194b0af5146469eeff34602fbaf35267eb3e7825d6ffea9a1c645e29b89f",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0",
+        "greenSha256": "f64ed3e7b706e50feb5351b85856a466be00a703bc1a692da4aabff31f2f75d0"
+      },
+      "sampledChannelsPreserved": "R"
+    },
+    {
+      "before": {
+        "key": "2:pbrMetallicRoughness.baseColorTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "2:pbrMetallicRoughness.baseColorTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "2:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:normalTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "2:normalTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:occlusionTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "2:occlusionTexture",
+        "material": "PaintedStructuralIronControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "47c45bab6076a0b946b3bcc9483ec82ec3ca7d29dac3eaf493bd68f9c152c4d0",
+        "pixels": "02166d80ba1e059aca91325a2abc18d609b2ebfe5f5487a9ec613d6f14442f70",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1"
+      },
+      "sampledChannelsPreserved": "R"
+    },
+    {
+      "before": {
+        "key": "3:pbrMetallicRoughness.baseColorTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "3:pbrMetallicRoughness.baseColorTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "3:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:normalTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "3:normalTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:occlusionTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "3:occlusionTexture",
+        "material": "MilfordGraniteNonzeroMetalControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "47c45bab6076a0b946b3bcc9483ec82ec3ca7d29dac3eaf493bd68f9c152c4d0",
+        "pixels": "02166d80ba1e059aca91325a2abc18d609b2ebfe5f5487a9ec613d6f14442f70",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1"
+      },
+      "sampledChannelsPreserved": "R"
+    },
+    {
+      "before": {
+        "key": "4:pbrMetallicRoughness.baseColorTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "4:pbrMetallicRoughness.baseColorTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "66ba71dd790c156da1c2bc97df7af6e5332f19478ec4e93824cd7ebdbbe3cd1f",
+        "pixels": "dccfe61dca5d7f603ddfbc9881bed5b60932d9b19fe8e0730c98f53c6f185f2a",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "30db61eefda31d3f251645872e5958af5b8e63f9bd6822fd7a6e1645cea5c361",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "4:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "4:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "4:normalTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "4:normalTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.025
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fe6c0dc8a0a16ea95ead6c3e3f1bf7741ba1951523a4adf72bbf6ad7ce403481",
+        "pixels": "7d3637f853b2bd5a74fcb24776369cb407f4588675dcc5a32165bf6994a32c9b",
+        "width": 1,
+        "height": 1,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "4:occlusionTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "4:occlusionTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "strength": 0.81
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "47c45bab6076a0b946b3bcc9483ec82ec3ca7d29dac3eaf493bd68f9c152c4d0",
+        "pixels": "02166d80ba1e059aca91325a2abc18d609b2ebfe5f5487a9ec613d6f14442f70",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1"
+      },
+      "sampledChannelsPreserved": "R"
+    },
+    {
+      "before": {
+        "key": "4:extensions.KHR_materials_transmission.transmissionTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "extensions.KHR_materials_transmission.transmissionTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "after": {
+        "key": "4:extensions.KHR_materials_transmission.transmissionTexture",
+        "material": "UnreviewedNonmetalControl",
+        "slot": "extensions.KHR_materials_transmission.transmissionTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f4b2ada4cea7be2409f4a017a3399edb06b16886b206a654ee7d98fe854df8bc",
+        "pixels": "05a5fd2c6a3fc93c3fa5633d2cfa5aef3f325f593c374d1d65b873f3411f244b",
+        "width": 64,
+        "height": 64,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "cc3f9dda2f7be579a5dc784d7f01c318700b58b608f93ba74fe798c435ea32a1",
+        "greenSha256": "d856b96e078a2ebd5ef7d3c3c15d65cec0a6c56e098eeea969efba5a938c9617"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    }
+  ],
+  "status": "passed"
+}

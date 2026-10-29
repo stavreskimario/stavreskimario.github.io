@@ -19,9 +19,21 @@ const required = ['exterior', 'waiting-room', 'concourse', 'context', 'platform'
 if (metrics.assets.some(asset => asset.file === 'model-passengers.glb')) required.push('model-passengers.glb', 'model-passengers-low.glb');
 const files = new Map();
 for (const zone of ['exterior', 'waiting-room', 'concourse', 'platform']) {
-  const report = JSON.parse(await readFile(path.join(source, `lighting-${zone}-denoise.json`), 'utf8'));
-  if (report.zone !== zone || report.schemaVersion !== 1 || !report.constant018Test?.passed || report.constant018Test.maximumError > .0002 || !Number.isFinite(report.denoisedLinear?.mean)) throw new Error(`${zone}: missing calibrated denoising record`);
-  if (report.full?.webp !== `lighting-${zone}-sky.webp` || report.low?.webp !== `lighting-${zone}-sky-low.webp`) throw new Error(`${zone}: inconsistent denoised derivatives`);
+  const base = JSON.parse(await readFile(path.join(source, `lighting-${zone}-denoise.json`), 'utf8'));
+  if (base.zone !== zone) throw new Error(`${zone}: wrong denoising record`);
+  const records = [];
+  if ([2, 3].includes(base.schemaVersion)) {
+    const expected = base.schemaVersion === 3 ? ['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'] : ['waiting-room-vault', 'waiting-room-masonry'];
+    if (zone !== 'waiting-room' || base.atlases?.length !== expected.length || new Set(base.atlases.map(a => a.zone)).size !== expected.length) throw new Error('Unexpected split lighting contract');
+    for (const atlas of base.atlases) {
+      if (!expected.includes(atlas.zone) || atlas.report !== `lighting-${atlas.zone}-denoise.json`) throw new Error('Invalid atlas record path');
+      records.push([atlas.zone, JSON.parse(await readFile(path.join(source, atlas.report), 'utf8'))]);
+    }
+  } else records.push([zone, base]);
+  for (const [name, report] of records) {
+    if (report.zone !== name || report.schemaVersion !== 1 || !report.constant018Test?.passed || report.constant018Test.maximumError > .0002 || !Number.isFinite(report.denoisedLinear?.mean)) throw new Error(`${name}: missing calibrated denoising record`);
+    if (report.full?.webp !== `lighting-${name}-sky.webp` || report.low?.webp !== `lighting-${name}-sky-low.webp`) throw new Error(`${name}: inconsistent denoised derivatives`);
+  }
 }
 for (const name of required) {
   const bytes = await readFile(path.join(source, name));
@@ -79,6 +91,7 @@ for (const [file, bytes] of files) await writeFile(path.join(out, file), bytes);
 await writeFile(path.join(out, 'scene-manifest.json'), manifestBytes);
 for (const name of required) { try { await unlink(path.join(out, name)); } catch (error) { if (error.code !== 'ENOENT') throw error; } }
 for (const file of await readdir(path.join(out, 'textures'))) if (/^[a-f0-9]{20}\.ktx2$/.test(file) && !files.has(`textures/${file}`)) await unlink(path.join(out, 'textures', file));
+for (const file of await readdir(out)) if (/^lighting-[a-z-]+-sky(?:-low)?\.webp$/.test(file) && !files.has(file)) await unlink(path.join(out, file));
 for (const file of await readdir(source)) if (/^lighting-[a-z-]+\.json$/.test(file)) await copyFile(path.join(source, file), path.join(out, file));
 await writeFile(path.join(out, 'asset-metrics.json'), JSON.stringify(metrics, null, 2) + '\n');
 console.log(`Promoted ${required.length} verified GLBs, ${metrics.sharedTextureFiles} shared KTX2 files and their lighting (${(metrics.modelTextureAndLightingBytes / 1e6).toFixed(2)} MB).`);

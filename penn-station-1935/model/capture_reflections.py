@@ -14,6 +14,7 @@ import bpy
 import numpy as np
 from mathutils import Vector
 from material_library import apply_materials, prepare_surface_uvs
+from render_device import configure_device
 
 parser = argparse.ArgumentParser()
 for zone in ("exterior", "waiting", "concourse", "platform", "context", "trains"):
@@ -22,7 +23,8 @@ parser.add_argument("--materials", type=Path, required=True)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--width", type=int, default=1024)
 parser.add_argument("--samples", type=int, default=64)
-parser.add_argument("--threads", type=int, default=4)
+parser.add_argument("--threads", type=int, default=8)
+parser.add_argument("--device", choices=("AUTO", "CPU", "METAL"), default="CPU")
 parser.add_argument("--only", choices=("waiting-room", "concourse", "platform", "exterior"))
 parser.add_argument("--platform-probe", default="-65,-10.1,-0.341442588", help="World X,Y-up,Z-south")
 parser.add_argument("--exterior-probe", default="142,12,0", help="Representative elevated Seventh Avenue position; world X,Y-up,Z-south. Captured only with --only exterior.")
@@ -51,7 +53,7 @@ for zone, height in frames.items():
 prepare_surface_uvs(list(scene.objects))
 surface_report = apply_materials(bpy.data.materials, args.materials)
 scene.render.engine = "CYCLES"
-scene.cycles.device = "CPU"
+device = configure_device(scene, args.device)
 scene.cycles.samples = args.samples
 scene.cycles.diffuse_bounces = 6
 scene.cycles.glossy_bounces = 4
@@ -85,6 +87,7 @@ scene.render.resolution_y = args.width // 2
 scene.render.resolution_percentage = 100
 scene.render.image_settings.file_format = "HDR"
 scene.render.image_settings.color_mode = "RGB"
+scene.render.dither_intensity = 0
 scene.view_settings.view_transform = "Standard"
 scene.view_settings.look = "None"
 scene.view_settings.exposure = 0
@@ -107,6 +110,7 @@ for name, position in probes.items():
     packed = gzip.compress(data, compresslevel=9, mtime=0)
     (args.out / (filename.name + ".gz")).write_bytes(packed)
     mobile = bpy.data.images.load(str(filename), check_existing=False)
+    mobile.colorspace_settings.name = "Non-Color"
     mobile.scale(512, 256)
     mobile.file_format = "HDR"
     mobile.filepath_raw = str(args.out / f"reflection-{name}-low.hdr")
@@ -117,12 +121,20 @@ for name, position in probes.items():
     values = np.empty(len(mobile.pixels), dtype=np.float32)
     mobile.pixels.foreach_get(values)
     assert np.isfinite(values).all(), "Non-finite captured radiance"
+    roundtrip = bpy.data.images.load(mobile.filepath_raw, check_existing=False)
+    roundtrip.colorspace_settings.name = "Non-Color"
+    decoded = np.empty(len(roundtrip.pixels), dtype=np.float32)
+    roundtrip.pixels.foreach_get(decoded)
+    relative_error = float(np.abs(decoded.reshape(-1,4)[:,:3] - values.reshape(-1,4)[:,:3]).mean() / max(float(values.reshape(-1,4)[:,:3].mean()), 1e-8))
+    if relative_error > .02:
+        raise RuntimeError("HDR derivative radiance roundtrip exceeded2percent: " + str(relative_error))
     outputs.append({"zone": name, "worldPosition": position, "fullFile": filename.name + ".gz",
                     "fullBytes": len(packed), "decodedSha256": hashlib.sha256(data).hexdigest(),
                     "lowFile": Path(mobile.filepath_raw).name + ".gz", "lowBytes": len(mobile_packed),
+                    "lowHdrRoundtripRelativeError": relative_error,
                     "maximumRadiance": float(values.reshape(-1, 4)[:, :3].max())})
-report = {"engine": bpy.app.version_string + " Cycles", "createdInputs": inputs,
-          "width": args.width, "samples": args.samples, "surfaces": surface_report,
+report = {"engine": bpy.app.version_string + " Cycles", "device": device, "createdInputs": inputs,
+          "width": args.width, "samples": args.samples, "hdrDitherIntensity": 0, "surfaces": surface_report,
           "probeOrientation": "Centre east(+X); increasing U turns toward south(+Z in Three)",
           "lighting": "Neutral dome and fixed afternoon reference sun; interpretation, not a dated historic exposure",
           "limitation": "Static room-centre approximation; no parallax correction, moving-passenger capture or time-specific indirect relighting",

@@ -23,6 +23,7 @@ p.add_argument('--out',type=Path,required=True)
 p.add_argument('--zone',required=True)
 p.add_argument('--radiance-scale',type=float,default=1,help='Existing runtime normalization; HDR remains unnormalized. PNG overshoots are reported.')
 p.add_argument('--threads',type=int,default=4)
+p.add_argument('--full-size',type=int,help='Optional delivered atlas dimension; resize linear radiance, retain source-resolution HDR')
 a=p.parse_args();started=time.monotonic()
 if not a.zone or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in a.zone):raise ValueError('Invalid zone name')
 if a.out.resolve()==a.input.parent.resolve():raise ValueError('Use a separate output directory to preserve source originals')
@@ -61,7 +62,12 @@ def write_display(stem,rgb):
  if not np.array_equal(np.asarray(Image.open(webp).convert('RGB')),encoded):raise RuntimeError('LosslessWebP pixel verification failed')
  return {'png':png.name,'webp':webp.name,'clippedRGBSamples':int((normalized>1).sum()),'width':rgb.shape[1],'height':rgb.shape[0]}
 
-stem=f'lighting-{a.zone}-sky';hdr=a.out/(stem+'-denoised-linear.hdr');write_hdr(hdr,filtered);full=write_display(stem,filtered)
+stem=f'lighting-{a.zone}-sky';hdr=a.out/(stem+'-denoised-linear.hdr');write_hdr(hdr,filtered)
+if a.full_size and (a.full_size < 512 or a.full_size > max(w,h)):raise ValueError('Full derivative must be between512 and the source dimension')
+full_pixels=filtered
+if a.full_size and (w!=a.full_size or h!=a.full_size):
+ full_pixels=np.maximum(np.stack([np.asarray(Image.fromarray(filtered[:,:,k],mode='F').resize((a.full_size,a.full_size),Image.Resampling.LANCZOS)) for k in range(3)],axis=2),0)
+full=write_display(stem,full_pixels)
 small=np.stack([np.asarray(Image.fromarray(filtered[:,:,k],mode='F').resize((512,512),Image.Resampling.LANCZOS)) for k in range(3)],axis=2);low=write_display(stem+'-low',np.maximum(small,0))
 roundtrip=bpy.data.images.load(str(hdr),check_existing=False);roundtrip.colorspace_settings.name='Non-Color';v=np.empty(len(roundtrip.pixels),np.float32);roundtrip.pixels.foreach_get(v);retained=v.reshape(h,w,4)[:,:,:3]
 report={'schemaVersion':1,'zone':a.zone,'source':a.input.name,'sourceSha256':hashlib.sha256(a.input.read_bytes()).hexdigest(),'inputTransfer':a.input_transfer,'inputScale':a.input_scale,'radianceScale':a.radiance_scale,'method':'Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes','encoding':'Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform','sourceStored':stats(stored),'originalLinear':stats(decoded),'denoisedLinear':stats(filtered),'relativeMeanChange':float(filtered.mean()/max(float(decoded.mean()),1e-20)-1),'negativeOutputSamplesClamped':negative,'constant018Test':{'before':.18,'after':float(constant_filtered.mean()),'maximumError':constant_error,'passed':True,'uniformInputProtection':'OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested'},'retainedHdr':{'file':hdr.name,'sha256':hashlib.sha256(hdr.read_bytes()).hexdigest(),'decodedLinear':stats(retained),'meanQuantizationError':float(np.abs(retained-filtered).mean())},'full':full,'low':low,'limitations':'Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.','elapsedSeconds':time.monotonic()-started}

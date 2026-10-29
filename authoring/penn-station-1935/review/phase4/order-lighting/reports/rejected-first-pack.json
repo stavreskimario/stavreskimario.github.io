@@ -1,0 +1,141 @@
+{
+  "source": "work/phase4-core-final/model-waiting-room.glb",
+  "sourceSha256": "d2f2f8361a941d3b25f3bb3d4bd32a1c02b09100ec00ab04b7550946bc8e7025",
+  "sourceHelperSha256": "cebb1c7c507477417fb1f56f178b9abdd3113719fc08c42fbd078eea2d02a491",
+  "selection": {
+    "frame": "raw waiting-room Blender/Main0",
+    "orderTopMetres": 20.980400000000003,
+    "centresXY": [
+      [
+        -14.2,
+        -42.216
+      ],
+      [
+        -14.2,
+        -14.072
+      ],
+      [
+        -14.2,
+        14.072
+      ],
+      [
+        -14.2,
+        42.216
+      ],
+      [
+        14.2,
+        -42.216
+      ],
+      [
+        14.2,
+        -14.072
+      ],
+      [
+        14.2,
+        14.072
+      ],
+      [
+        14.2,
+        42.216
+      ]
+    ],
+    "selection": "whole connected stone components inside the eight authored plinth/shaft/capital envelopes; imposts/walls excluded",
+    "objects": [
+      {
+        "sourceObject": "02 Main waiting room \u2014 Travertine",
+        "selectedPolygons": 538528,
+        "polygonsByOrder": {
+          "0": 67316,
+          "1": 67316,
+          "2": 67316,
+          "3": 67316,
+          "4": 67316,
+          "5": 67316,
+          "6": 67316,
+          "7": 67316
+        }
+      },
+      {
+        "sourceObject": "02 Main waiting room \u2014 InteriorGranite",
+        "selectedPolygons": 20704,
+        "polygonsByOrder": {
+          "0": 2588,
+          "1": 2588,
+          "2": 2588,
+          "3": 2588,
+          "4": 2588,
+          "5": 2588,
+          "6": 2588,
+          "7": 2588
+        }
+      }
+    ],
+    "polygonsByOrder": {
+      "0": 69904,
+      "1": 69904,
+      "2": 69904,
+      "3": 69904,
+      "4": 69904,
+      "5": 69904,
+      "6": 69904,
+      "7": 69904
+    }
+  },
+  "originalSignature": {
+    "corners": 3886092,
+    "positionsSha256": "b28b0ac2f54e886f538618a6b46f056249a3ff1f0c065c4989dbcad5e1019181",
+    "normalsSha256": "b344bbc5ade8ade23ae663b553106a567145a9661d8f865f4353eef7d61b500e",
+    "uv0Sha256": "3c216f6a48ddb7a2360e8cbd6c1c47838e1232c387edc13fe2fdc2ea3f60b6cf",
+    "combinedSha256": "7ac4887986e9ec2252e696929a6e909e75fd182a517ed32d4f2f9399596d87d6"
+  },
+  "partitionSignature": {
+    "corners": 3886092,
+    "positionsSha256": "b28b0ac2f54e886f538618a6b46f056249a3ff1f0c065c4989dbcad5e1019181",
+    "normalsSha256": "b344bbc5ade8ade23ae663b553106a567145a9661d8f865f4353eef7d61b500e",
+    "uv0Sha256": "3c216f6a48ddb7a2360e8cbd6c1c47838e1232c387edc13fe2fdc2ea3f60b6cf",
+    "combinedSha256": "7ac4887986e9ec2252e696929a6e909e75fd182a517ed32d4f2f9399596d87d6"
+  },
+  "unwrapBefore": {
+    "corners": 1677696,
+    "positionsSha256": "af17746f8b52b2e09d2dc51693441b28aced6b97c5375eb6b27d9c6c0b678a73",
+    "normalsSha256": "315ad62edb54cc0d1a21746e902144c0ea43bf4b02bdb77e66476991f356bc06",
+    "uv0Sha256": "b397fc68c01ae106a4d255139d873e07cec432ab364a1df4553056b8b6a7903c",
+    "combinedSha256": "851ee8dd70297e08a01eeb494d30012ee2a4ec1d62bf7e11a1f10fce6ae876f1"
+  },
+  "unwrapAfter": {
+    "corners": 1677696,
+    "positionsSha256": "af17746f8b52b2e09d2dc51693441b28aced6b97c5375eb6b27d9c6c0b678a73",
+    "normalsSha256": "315ad62edb54cc0d1a21746e902144c0ea43bf4b02bdb77e66476991f356bc06",
+    "uv0Sha256": "b397fc68c01ae106a4d255139d873e07cec432ab364a1df4553056b8b6a7903c",
+    "combinedSha256": "851ee8dd70297e08a01eeb494d30012ee2a4ec1d62bf7e11a1f10fce6ae876f1"
+  },
+  "metrics": {
+    "resolution": 4096,
+    "uvLayer": "BakedLightingUV",
+    "uv0Unchanged": true,
+    "shaftCylindricalPolygons": 20704,
+    "projectionAngleDegrees": 89,
+    "marginPixels": 4,
+    "atlasSurfaceArea": 835.5833129882812,
+    "worldAreaM2": 1946.126867799771,
+    "meanTexelsPerMetre": 2683.918061254433,
+    "interpretedLeafWidthMetres": 0.8,
+    "leafWidthTexels": 2147.1344490035463,
+    "authoredLeafReturnDepthMetres": 0.055,
+    "leafReturnTexels": 147.6154933689938,
+    "aoAt2048": {
+      "meanTexelsPerMetre": 1341.9590306272164,
+      "leafWidthTexels": 1073.5672245017731,
+      "leafReturnTexels": 73.8077466844969
+    },
+    "trianglePixelAreaPercentiles": {
+      "0": 0.08391425013542175,
+      "5": 0.4269405007362366,
+      "50": 3.0210033655166626,
+      "95": 68.99227142333984,
+      "100": 4818336.0
+    }
+  },
+  "elapsedSeconds": 36.946617207999225,
+  "validationStatus": "REJECTED: custom coordinates were not packed into one tile; retained diagnostic only; never baked or delivered"
+}
