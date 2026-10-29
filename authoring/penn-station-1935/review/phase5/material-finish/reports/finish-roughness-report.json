@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "method": "Linear Non-Color; clip robust p1/p99 then affine candidate range; round to nearest 8-bit value",
+  "qualification": "CC0 grain reused for a bounded finish interpretation; no calibrated historic roughness samples",
+  "roughnessFactor": 1,
+  "geometryNormalsUV0AndColourChanged": false,
+  "generatorSha256": "bf966891256ad26367b1b68655bf7905155078e37bbdfd220cae34de31c60937",
+  "sources": {
+    "Granite005A": {
+      "file": "authoring/penn-station-1935/materials/Granite005A/Granite005A_2K-JPG_Roughness.jpg",
+      "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f",
+      "transfer": "Non-Color / linear scalar",
+      "mean": 0.033373241798550494,
+      "minimum": 0.0,
+      "maximum": 0.3058823529411765,
+      "standardDeviation": 0.029110754670203333,
+      "percentiles": {
+        "0": 0.0,
+        "1": 0.0,
+        "5": 0.00392156862745098,
+        "50": 0.023529411764705882,
+        "95": 0.09411764705882353,
+        "99": 0.1411764705882353,
+        "100": 0.3058823529411765
+      }
+    },
+    "Travertine009": {
+      "file": "authoring/penn-station-1935/materials/Travertine009/Travertine009_2K-JPG_Roughness.jpg",
+      "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc",
+      "transfer": "Non-Color / linear scalar",
+      "mean": 0.03697130259345558,
+      "minimum": 0.0,
+      "maximum": 0.09411764705882353,
+      "standardDeviation": 0.011637528283594501,
+      "percentiles": {
+        "0": 0.0,
+        "1": 0.011764705882352941,
+        "5": 0.0196078431372549,
+        "50": 0.03529411764705882,
+        "95": 0.054901960784313725,
+        "99": 0.06274509803921569,
+        "100": 0.09411764705882353
+      }
+    },
+    "Marble018": {
+      "file": "authoring/penn-station-1935/materials/Marble018/Marble018_2K-JPG_Roughness.jpg",
+      "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235",
+      "transfer": "Non-Color / linear scalar",
+      "mean": 0.36856840545055936,
+      "minimum": 0.12549019607843137,
+      "maximum": 0.6,
+      "standardDeviation": 0.04129474099225784,
+      "percentiles": {
+        "0": 0.12549019607843137,
+        "1": 0.2196078431372549,
+        "5": 0.2901960784313726,
+        "50": 0.37254901960784315,
+        "95": 0.4235294117647059,
+        "99": 0.4470588235294118,
+        "100": 0.6
+      }
+    }
+  },
+  "candidates": [
+    {
+      "materialProfile": "InteriorGranite-A",
+      "source": "Granite005A",
+      "range": [
+        0.18,
+        0.32
+      ],
+      "inputClipPercentiles": [
+        0.0,
+        0.1411764705882353
+      ],
+      "previousRoughnessFactor": 0.5,
+      "previousEffectiveMean": 0.016686620899275247,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "InteriorGranite-A-roughness.png",
+        "sha256": "2a01f0622276962389e053a6507397fc9db8af8d355bd48487a3d28c8fdf8d27",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.21352229398839614,
+        "minimum": 0.1803921568627451,
+        "maximum": 0.3215686274509804,
+        "standardDeviation": 0.028020695689164266,
+        "percentiles": {
+          "0": 0.1803921568627451,
+          "1": 0.1803921568627451,
+          "5": 0.1843137254901961,
+          "50": 0.20392156862745098,
+          "95": 0.27450980392156865,
+          "99": 0.3215686274509804,
+          "100": 0.3215686274509804
+        }
+      },
+      "low": {
+        "file": "InteriorGranite-A-roughness-low.png",
+        "sha256": "256a251f418266de6674d6fdb062a7b02864fde994326cbd1c2352774ca4c20f",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "materialProfile": "InteriorGranite-B",
+      "source": "Granite005A",
+      "range": [
+        0.3,
+        0.48
+      ],
+      "inputClipPercentiles": [
+        0.0,
+        0.1411764705882353
+      ],
+      "previousRoughnessFactor": 0.5,
+      "previousEffectiveMean": 0.016686620899275247,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "InteriorGranite-B-roughness.png",
+        "sha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.34223909939036673,
+        "minimum": 0.2980392156862745,
+        "maximum": 0.47843137254901963,
+        "standardDeviation": 0.03570291581649791,
+        "percentiles": {
+          "0": 0.2980392156862745,
+          "1": 0.2980392156862745,
+          "5": 0.3058823529411765,
+          "50": 0.32941176470588235,
+          "95": 0.4196078431372549,
+          "99": 0.47843137254901963,
+          "100": 0.47843137254901963
+        }
+      },
+      "low": {
+        "file": "InteriorGranite-B-roughness-low.png",
+        "sha256": "721e053a2963c77985f75547e75096a00f3b7059c55efb9935b271e1ed4a8574",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "materialProfile": "MilfordGranite-A",
+      "source": "Granite005A",
+      "range": [
+        0.45,
+        0.65
+      ],
+      "inputClipPercentiles": [
+        0.0,
+        0.1411764705882353
+      ],
+      "previousRoughnessFactor": 0.88,
+      "previousEffectiveMean": 0.029368452782724434,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "MilfordGranite-A-roughness.png",
+        "sha256": "e9b589f48202fd43bfa30eae9432be3db12050aea434217d97c82029385241fe",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.49701964340957944,
+        "minimum": 0.45098039215686275,
+        "maximum": 0.6509803921568628,
+        "standardDeviation": 0.03973030007310153,
+        "percentiles": {
+          "0": 0.45098039215686275,
+          "1": 0.45098039215686275,
+          "5": 0.4549019607843137,
+          "50": 0.4823529411764706,
+          "95": 0.5843137254901961,
+          "99": 0.6509803921568628,
+          "100": 0.6509803921568628
+        }
+      },
+      "low": {
+        "file": "MilfordGranite-A-roughness-low.png",
+        "sha256": "4b8b81e4306bcf96b2937b741d2bc2a5de80075ca037cfd02fbd70b4010a3ced",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "materialProfile": "MilfordGranite-B",
+      "source": "Granite005A",
+      "range": [
+        0.55,
+        0.78
+      ],
+      "inputClipPercentiles": [
+        0.0,
+        0.1411764705882353
+      ],
+      "previousRoughnessFactor": 0.88,
+      "previousEffectiveMean": 0.029368452782724434,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "MilfordGranite-B-roughness.png",
+        "sha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.604103965385287,
+        "minimum": 0.5490196078431373,
+        "maximum": 0.7803921568627451,
+        "standardDeviation": 0.04555061079839782,
+        "percentiles": {
+          "0": 0.5490196078431373,
+          "1": 0.5490196078431373,
+          "5": 0.5568627450980392,
+          "50": 0.5882352941176471,
+          "95": 0.7019607843137254,
+          "99": 0.7803921568627451,
+          "100": 0.7803921568627451
+        }
+      },
+      "low": {
+        "file": "MilfordGranite-B-roughness-low.png",
+        "sha256": "5ff06d0cd4cf1e76190ec5b41aa44022ebe9fbe1eb9e3ce8ceee8d9409f22bc8",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "materialProfile": "Travertine-A",
+      "source": "Travertine009",
+      "range": [
+        0.45,
+        0.65
+      ],
+      "inputClipPercentiles": [
+        0.011764705882352941,
+        0.06274509803921569
+      ],
+      "previousRoughnessFactor": 0.95,
+      "previousEffectiveMean": 0.0351227374637828,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "Travertine-A-roughness.png",
+        "sha256": "3b971726ac2bf917b15e18cb21d911729964dab7fb2e528db4b4619b1bc51ebe",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.548533697689281,
+        "minimum": 0.45098039215686275,
+        "maximum": 0.6509803921568628,
+        "standardDeviation": 0.044459957831602254,
+        "percentiles": {
+          "0": 0.45098039215686275,
+          "1": 0.45098039215686275,
+          "5": 0.4823529411764706,
+          "50": 0.5411764705882353,
+          "95": 0.6196078431372549,
+          "99": 0.6509803921568628,
+          "100": 0.6509803921568628
+        }
+      },
+      "low": {
+        "file": "Travertine-A-roughness-low.png",
+        "sha256": "4ecfa4425309e00db618e710da504a5f05576972e1925bf7627b57c5ca3a0f51",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "materialProfile": "Travertine-B",
+      "source": "Travertine009",
+      "range": [
+        0.6,
+        0.78
+      ],
+      "inputClipPercentiles": [
+        0.011764705882352941,
+        0.06274509803921569
+      ],
+      "previousRoughnessFactor": 0.95,
+      "previousEffectiveMean": 0.0351227374637828,
+      "roughnessFactor": 1,
+      "full": {
+        "file": "Travertine-B-roughness.png",
+        "sha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mean": 0.6892055604972087,
+        "minimum": 0.6,
+        "maximum": 0.7803921568627451,
+        "standardDeviation": 0.039822843319515466,
+        "percentiles": {
+          "0": 0.6,
+          "1": 0.6,
+          "5": 0.6274509803921569,
+          "50": 0.6823529411764706,
+          "95": 0.7529411764705882,
+          "99": 0.7803921568627451,
+          "100": 0.7803921568627451
+        }
+      },
+      "low": {
+        "file": "Travertine-B-roughness-low.png",
+        "sha256": "9e8a219f9ad8ff92ee9a48e6cfe0dbd026467dfae360b82a9b370d4cf0e75fcb",
+        "dimensions": [
+          512,
+          512
+        ]
+      }
+    }
+  ]
+}

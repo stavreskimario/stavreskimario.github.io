@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "glbSha256": "e3cbbaff65d1dc5794983105ce67c9c9662d54bc360f39e11622c39db03c4498",
+  "bytes": 235428,
+  "meshNodes": 4,
+  "sharedMeshes": 2,
+  "textures": 0,
+  "materials": [
+    "OpalCandelabraGlass",
+    "AgedBronze"
+  ],
+  "lights": 0,
+  "geometry": [
+    {
+      "mesh": "Sphere",
+      "material": "OpalCandelabraGlass",
+      "triangles": 3680,
+      "positionWeldPrecisionMetres": 0.000001,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.03402748046612696
+    },
+    {
+      "mesh": "Round moulded wall rosette",
+      "material": "AgedBronze",
+      "triangles": 7232,
+      "positionWeldPrecisionMetres": 0.000001,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.03943264079602211
+    }
+  ],
+  "bounds": [
+    {
+      "name": "Photographed bracket globes.001",
+      "mesh": "Sphere",
+      "minimum": [
+        -15.434999853372574,
+        8.320000380277634,
+        27.643999099731445
+      ],
+      "maximum": [
+        -15.11499971151352,
+        8.640000380575657,
+        28.64399915933609
+      ]
+    },
+    {
+      "name": "Photographed bracket metalwork.001",
+      "mesh": "Round moulded wall rosette",
+      "minimum": [
+        -15.654999732971191,
+        8.382000386714935,
+        27.648999094963074
+      ],
+      "maximum": [
+        -15.119999706745148,
+        9.12000036239624,
+        28.638999104499817
+      ]
+    },
+    {
+      "name": "Photographed bracket globes.002",
+      "mesh": "Sphere",
+      "minimum": [
+        15.114999681789772,
+        8.320000380277634,
+        27.64399907334745
+      ],
+      "maximum": [
+        15.43499988309632,
+        8.640000380575657,
+        28.6439991329521
+      ]
+    },
+    {
+      "name": "Photographed bracket metalwork.002",
+      "mesh": "Round moulded wall rosette",
+      "minimum": [
+        15.119999677021404,
+        8.382000386714935,
+        27.64899912818373
+      ],
+      "maximum": [
+        15.654999747833063,
+        9.12000036239624,
+        28.63899913772047
+      ]
+    }
+  ],
+  "datum": "Raw GLTF Main0 coordinates; app chunk lowering remains separate",
+  "instancedTriangles": 21824
+}

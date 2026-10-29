@@ -13,9 +13,9 @@ REVISION = 3
 # geometry; the separately reviewed colour derivatives are applied downstream.
 NORMAL_APPEARANCE_REVISION = 4
 SURFACES = [
-    (("MilfordGranite",), "Granite005A", 1.0, .045, .88),
-    (("InteriorGranite",), "Granite005A", 1.0, .025, .50),
-    (("Travertine",), "Travertine009", 1.5, .035, .95),
+    (("MilfordGranite",), "Granite005A", 1.0, .045, 1.0),
+    (("InteriorGranite",), "Granite005A", 1.0, .025, 1.0),
+    (("Travertine",), "Travertine009", 1.5, .035, 1.0),
     (("PublicFloorMarble", "TennesseeMarble"), "Marble018", 1.8, .018, .48),
     (("BotticinoMarble",), "Marble018", 1.25, .025, .58),
     (("BedfordLimestoneConcourse",), "BedfordLimestoneConcourse", 1.5, .15, 1.0),
@@ -115,6 +115,12 @@ def apply_materials(materials, library):
         identity, tile_metres, normal_strength, roughness_factor = profile
         for suffix, slot in [("Color", "Base Color"), ("Roughness", "Roughness"), ("NormalGL", "Normal")]:
             filename = library / identity / f"{identity}_2K-JPG_{suffix}.jpg"
+            finish = next((prefix for prefix in ("InteriorGranite", "MilfordGranite", "Travertine") if material.name.startswith(prefix)), None)
+            if suffix == "Roughness" and finish:
+                filename = library / "phase5" / f"{finish}-roughness.png"
+                if not filename.is_file():
+                    raise FileNotFoundError("Reviewed linear finish map is missing: " + str(filename))
+                material["surface_roughness_profile"] = finish + " bounded B interpretation; not a measured historical finish"
             if identity == "BedfordLimestoneConcourse":
                 filename = appearance_root / f"{identity}-{suffix}.png"
                 pbr.inputs["Base Color"].default_value = (1, 1, 1, 1)
@@ -151,5 +157,5 @@ def apply_materials(materials, library):
                        "normalStrength": normal_strength, "roughnessFactor": roughness_factor,
                        "appearanceRevision": 4 if appearance_root.exists() else 3,
                        "colourProfile": next((profile for prefix, profile in colour_profiles if material.name.startswith(prefix)), None),
-                       "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification" if material.name.startswith("InteriorGranite") else None})
+                       "interiorShaftFinish": "Bounded 0.30–0.48 response interpreted from primary photographs; no measured polish/roughness specification" if material.name.startswith("InteriorGranite") else None})
     return report

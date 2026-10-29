@@ -11,6 +11,7 @@ import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 from coffer_geometry import tessellate_profile
+from surface_finish_normals import clamp_backfacing_corner_normals
 
 ROOT = Path(__file__).resolve().parent.parent
 parser=argparse.ArgumentParser(description=__doc__)
@@ -1298,7 +1299,9 @@ def coffer_cell(name,cx,yy,hw,hh,surface):
     obj=mesh(name,verts,triangles,PALE)
     for face in obj.data.polygons:face.use_smooth=True
     obj.data.normals_split_custom_set_from_vertices(normals)
+    clamp_backfacing_corner_normals(obj.data)
     obj['coffer_curvature_revision']=4
+    obj['coffer_shading_normal_revision']=5
     obj['coffer_profile_status']='Existing interpreted10ft projected module and five relief bands retained; curved tessellation replaces warped planar polygons'
     return obj
 
@@ -1455,21 +1458,26 @@ ACCESS_CENTRES=[-z for z in [68.764528,54.791453,40.818378,27.149065,13.327870,-
 MAIN_STAIR_HOLES=[(STAIR_HEAD_X-6.4,STAIR_HEAD_X,y-1.65,y+1.65) for y in ACCESS_CENTRES]
 LOWER_SHIFT=.70
 EXIT_STAIR_HOLES=[(STAIR_HEAD_X-10.5-LOWER_SHIFT,STAIR_HEAD_X-6.0-LOWER_SHIFT,y-1.65,y+1.65) for y in ACCESS_CENTRES]
-def floor_with_voids(name,bounds,holes,level,thickness=.30,material=None):
+def floor_with_voids(name,bounds,holes,level,thickness=.30,material=None,finish_regions=()):
     x0,x1,y0,y1=bounds
-    xs=sorted({x0,x1,*[max(x0,min(x1,h[k])) for h in holes for k in [0,1]]})
-    ys=sorted({y0,y1,*[max(y0,min(y1,h[k])) for h in holes for k in [2,3]]})
+    cuts=list(holes)+[region[0] for region in finish_regions]
+    xs=sorted({x0,x1,*[max(x0,min(x1,h[k])) for h in cuts for k in [0,1]]})
+    ys=sorted({y0,y1,*[max(y0,min(y1,h[k])) for h in cuts for k in [2,3]]})
     objects=[]
     for a,b in zip(xs,xs[1:]):
         for c,d in zip(ys,ys[1:]):
             if b-a<.001 or d-c<.001:continue
             xx,yy=(a+b)/2,(c+d)/2
             if any(h[0]<=xx<=h[1] and h[2]<=yy<=h[3] for h in holes):continue
-            objects.append(box(name,(xx,yy,level-thickness/2),(b-a,d-c,thickness),material or FLOOR,.000001))
+            # The finish owns the visible top. The concrete remains below
+            # its bedding surface instead of occupying the same raster plane.
+            finish=max([depth for region,depth in finish_regions if region[0]<=xx<=region[1] and region[2]<=yy<=region[3]],default=0)
+            objects.append(box(name,(xx,yy,level-(thickness+finish)/2),(b-a,d-c,thickness-finish),material or FLOOR,.000001))
     return objects
 CONCOURSE_DETAILS.configure_visible_court_floor()
 MAIN_CONCOURSE_VOIDS=MAIN_STAIR_HOLES+CONCOURSE_DETAILS.fields
-CON_MAIN_FLOORS=floor_with_voids("Main concourse concrete bearing and circulation slab around real stair and prism cutouts",(WEST,CX+CW/2,-CON_FLOOR_L/2,CON_FLOOR_L/2),MAIN_CONCOURSE_VOIDS,0,.44,CONCOURSE_DETAILS.opaque_concrete)
+CONCOURSE_FINISH_REGIONS=[((-44.4,-HALL_ROOM_W/2,-7.75,7.75),.20),((-41.5,-18.5,8.5,45.5),.22),((-41.5,-18.5,-45.5,-8.5),.22)]
+CON_MAIN_FLOORS=floor_with_voids("Main concourse concrete bearing and circulation slab around real stair and prism cutouts",(WEST,CX+CW/2,-CON_FLOOR_L/2,CON_FLOOR_L/2),MAIN_CONCOURSE_VOIDS,0,.44,CONCOURSE_DETAILS.opaque_concrete,CONCOURSE_FINISH_REGIONS)
 CONCOURSE_DETAILS.prism_fields()
 floor_with_voids("Exit concourse linked circulation floor",(STAIR_HEAD_X-13,STAIR_HEAD_X-5.5,-CON_FLOOR_L/2,CON_FLOOR_L/2),EXIT_STAIR_HOLES,EXIT_LEVEL)
 for xx in np.arange(CX-CW/2,CX+CW/2,2):
@@ -1480,11 +1488,11 @@ for xx in np.arange(CX-CW/2,CX+CW/2,2):
 
 # Western subsidiary hall between waiting room and concourse.
 for sy in [-1,1]:
-    box("Subsidiary waiting room floor",(-30,sy*27,-.11),(23,37,.22),FLOOR)
+    CON_MAIN_FLOORS.append(box("Subsidiary waiting room floor",(-30,sy*27,-.11),(23,37,.22),FLOOR))
     box("Subsidiary room wall",(-30,sy*45.4,6),(23,1,12),GRANITE)
     box("Subsidiary room roof",(-30,sy*27,12),(23,38,.6),GRANITE)
     box("Subsidiary room inner wall",(-30,sy*8.2,6),(23,1,12),LIMESTONE)
-floor_with_voids("Axial passage with authentic centre-stair opening",(-44.4,-HALL_ROOM_W/2,-7.75,7.75),MAIN_STAIR_HOLES,0,.20)
+CON_MAIN_FLOORS.extend(floor_with_voids("Axial passage with authentic centre-stair opening",(-44.4,-HALL_ROOM_W/2,-7.75,7.75),MAIN_STAIR_HOLES,0,.20))
 for sy in [-1,1]: box("Passage entablature",(-30,sy*8,11),(28,1,.8),LIMESTONE)
 
 def ew_roof(y):

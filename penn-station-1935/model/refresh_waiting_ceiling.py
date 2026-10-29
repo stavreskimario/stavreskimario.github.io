@@ -9,6 +9,7 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 from coffer_geometry import tessellate_profile
+from surface_finish_normals import clamp_backfacing_corner_normals
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--scene',type=Path,required=True)
@@ -29,6 +30,7 @@ assert len(old)==1
 old_vertices=len(old[0].data.vertices);old_faces=len(old[0].data.polygons)
 bpy.data.objects.remove(old[0],do_unlink=True)
 ns={'bpy':bpy,'math':math,'Vector':Vector,'tessellate_profile':tessellate_profile,
+    'clamp_backfacing_corner_normals':clamp_backfacing_corner_normals,
     'PALE':bpy.data.materials['PaleVaultPlaster'],'COL':hall,'ASSETS':args.out,
     'spring':30.35,'rise':143*.3048-30.35,'a':(108+8/12)*.3048/2,'b':277*.3048/6}
 exec(compile(ast.Module(body=nodes,type_ignores=[]),str(args.source),'exec'),ns)

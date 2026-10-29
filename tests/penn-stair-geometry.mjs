@@ -4,7 +4,8 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseGlb, decodeView } from '../penn-station-1935/model/meshopt_patch_io.mjs';
+import { parseGlb } from '../penn-station-1935/model/meshopt_patch_io.mjs';
+import { decodedTriangles } from './helpers/penn-decoded-geometry.mjs';
 const repo = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const root = process.env.PENN_GEOMETRY_ASSETS || path.join(repo, 'penn-station-1935/assets');
 const reportPath = process.env.PENN_STAIR_GEOMETRY_REPORT;
@@ -28,36 +29,15 @@ function triangleSupport(triangles, x, z) {
 }
 for (const suffix of ['', '-low']) {
   const name = `model-concourse${suffix}.glb`; const model = await modelFor(name);
-  const cache = new Map();
-  const accessor = index => {
-    const a = model.json.accessors[index]; const view = model.json.bufferViews[a.bufferView];
-    if (!cache.has(a.bufferView)) cache.set(a.bufferView, decodeView(model, a.bufferView));
-    const bytes = cache.get(a.bufferView); const data = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
-    const sizes = { 5120: 1, 5121: 1, 5122: 2, 5123: 2, 5125: 4, 5126: 4 };
-    const components = { SCALAR: 1, VEC2: 2, VEC3: 3, VEC4: 4 }[a.type];
-    const get = { 5120: 'getInt8', 5121: 'getUint8', 5122: 'getInt16', 5123: 'getUint16', 5125: 'getUint32', 5126: 'getFloat32' }[a.componentType];
-    const normalizer = a.normalized ? { 5120: 127, 5121: 255, 5122: 32767, 5123: 65535 }[a.componentType] : 1;
-    const stride = view.byteStride || components * sizes[a.componentType];
-    return i => Array.from({ length: components }, (_, j) => data[get]((a.byteOffset || 0) + i * stride + j * sizes[a.componentType], true) / normalizer);
-  };
   const triangles = [];
-  for (const node of model.json.nodes) {
-    if (node.mesh === undefined || node.rotation || node.matrix) continue;
-    const scale = node.scale || [1, 1, 1]; const translation = node.translation || [0, 0, 0];
-    for (const p of model.json.meshes[node.mesh].primitives) {
-      const material = model.json.materials[p.material]?.name;
-      if (!['PublicFloorMarble', 'Travertine'].includes(material)) continue;
-      const pos = accessor(p.attributes.POSITION); const index = accessor(p.indices);
-      for (let i = 0; i < model.json.accessors[p.indices].count; i += 3) {
-        const triangle = [0, 1, 2].map(j => pos(index(i + j)[0]).map((v, k) => v * scale[k] + translation[k]));
-        if (triangle.some(v => v[1] < -.08 || v[1] > .03)) continue;
-        if (Math.max(...triangle.map(v => v[0])) < head - .1 || Math.min(...triangle.map(v => v[0])) > head + .2) continue;
-        const [a, b, c] = triangle;
-        const up = (b[2] - a[2]) * (c[0] - a[0]) - (b[0] - a[0]) * (c[2] - a[2]);
-        if (up <= 1e-9) continue;
-        triangles.push(triangle);
-      }
-    }
+  const materials = new Set(['ConcourseOpaqueCirculationConcrete', 'PublicFloorMarble', 'Travertine']);
+  for (const { triangle } of decodedTriangles(model, materials)) {
+    if (triangle.some(v => v[1] < -.08 || v[1] > .03)) continue;
+    if (Math.max(...triangle.map(v => v[0])) < head - .1 || Math.min(...triangle.map(v => v[0])) > head + .2) continue;
+    const [a, b, c] = triangle;
+    const up = (b[2] - a[2]) * (c[0] - a[0]) - (b[0] - a[0]) * (c[2] - a[2]);
+    if (up <= 1e-9) continue;
+    triangles.push(triangle);
   }
   const variant = { name, sampledTriangles: triangles.length, tested: 0, unsupported: [], minimumSupportedHeight: Infinity, stairs: [] };
   for (const z of centres) {

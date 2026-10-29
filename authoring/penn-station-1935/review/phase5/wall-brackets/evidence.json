@@ -1,0 +1,90 @@
+{
+  "created": "2026-10-30",
+  "baselineCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+  "baselineBuildSourceSha256": "3c8b56257dab3126b352f9494ca6810627a1c96d75b10c56efd21ba5511092c8",
+  "photograph": {
+    "sourceId": "S23",
+    "item": "https://www.loc.gov/item/2016815386/",
+    "download": "https://cdn.loc.gov/master/pnp/det/4a20000/4a23000/4a23700/4a23713u.tif",
+    "identifier": "LC-DIG-det-4a23713; negative071928",
+    "originalSize": [
+      5076,
+      4061
+    ],
+    "sha256": "b11e92e022cd1aec75b78c3164f35bc2e7772a336f4d31029e2f2ed9665f5d9d",
+    "rights": "LOC no known restrictions on publication, as recorded in existingS23; pre1931US publication corroborated by copyright registration1911J151601 inS27",
+    "dateLimit": "Opening-era photograph, not independent proof of complete1935fixture inventory",
+    "crops": [
+      {
+        "file": "wall-bracket-original-crop.png",
+        "sha256": "0ff3c0e6a4aed9e92377fafb1430f8ec1c80f599b8d8a0c1b75820b88d1ce4f0",
+        "cropXYWH": [
+          200,
+          1870,
+          720,
+          620
+        ],
+        "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+      },
+      {
+        "file": "opposite-wall-bracket-original-crop.png",
+        "sha256": "dcc458505ffdcfc6aa09a386c1a8414b571d07dd6f9588fffe19e108d30948a8",
+        "cropXYWH": [
+          4420,
+          1730,
+          550,
+          820
+        ],
+        "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+      }
+    ]
+  },
+  "engineering": {
+    "sourceId": "S10",
+    "title": "Station Construction, Road, Track, Yard Equipment, Electric Traction, and Locomotives",
+    "author": "George Gibbs",
+    "publication": "Transactions ASCE69 (1910), paper1165",
+    "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002223",
+    "volume": "https://archive.org/details/transactionsofam69amer",
+    "download": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+    "localPdfSha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+    "lightingPrintedPage": 269,
+    "lightingOneBasedPdfPage": 461,
+    "clockPrintedPage": 267,
+    "clockOneBasedPdfPage": 459,
+    "pageReview": "Both original scanned pages rendered and visually checked against OCR. Primary website fetch403did not replace local authenticated volume with a secondary summary."
+  },
+  "form": "Twin downward globes and stepped upper cups on curved metal arms, round moulded wall rosette, short central stem and finial",
+  "scope": {
+    "fixtureCount": 2,
+    "rule": "Only the two clearly visible foreground long-wall fixtures; no unseen symmetric duplicates",
+    "inventory1935": "Not established"
+  },
+  "placementMainLocalBlender": [
+    {
+      "wall": "west",
+      "wallX": -15.655,
+      "bayY": -28.144,
+      "rosetteZ": 8.6,
+      "inwardNormal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "wall": "east",
+      "wallX": 15.655,
+      "bayY": -28.144,
+      "rosetteZ": 8.6,
+      "inwardNormal": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "placementStatus": "Existing southern outer-bay panels identify the architectural location; exact heights, offsets and dimensions are provisional photographic reconstruction, not a survey. Actual support is checked separately before integration.",
+  "worldDatum": "MainlocalZ0; appchunk applies-4.2672m. Appending into lowered canonicalBlender needs the same lowering exactly once.",
+  "appearanceLimits": "Dark decorative metal and diffuse pale globes are visible; exact alloy, polish, glass chemistry, colour, photometry and minor casting profiles are unmeasured. Reuse existingAgedBronze/OpalCandelabraGlass as interpretations; no individual live point lights."
+}
