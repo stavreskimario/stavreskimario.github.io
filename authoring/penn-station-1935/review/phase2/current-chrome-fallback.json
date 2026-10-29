@@ -1,0 +1,212 @@
+{
+  "created": "2026-10-29T03:40:34.134Z",
+  "deploymentPrefix": "/exhibition/",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "rendererNote": "Software ANGLE/SwiftShader is requested for deterministic availability. Frame intervals describe browser scheduling, not a hardware performance claim.",
+  "checks": [
+    "Current installed browser starts, decodes and renders the authored exterior with requested renderer/fallback"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/three.webgpu-K62HXD2J.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/911a361e2370f842c598.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/7a0eea2b54cb58d7296d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13ccf7ecaf95c5e9de8a.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/772eced7e742a43d978e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3335d12c85f0a74be102.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky.webp",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2 · compatibility",
+            "revision": 0,
+            "pose": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 38,
+            "triangles": 0,
+            "geometries": 57,
+            "textures": 29
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "browser": "156.0.8078.48",
+  "passed": true
+}

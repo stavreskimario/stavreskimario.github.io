@@ -1,0 +1,59 @@
+{
+  "revision": 2,
+  "references": [
+    {
+      "id": "Granite005A",
+      "material": "MilfordGranite",
+      "source": "https://ambientcg.com/view?id=Granite005A",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Granite005A_2K-JPG.zip",
+      "interpretation": "Modern material reference, not a scan or calibrated sample of Pennsylvania Station; grain scale and colour remain interpreted",
+      "maps": [
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_Color.jpg",
+          "bytes": 8537509,
+          "sha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c"
+        },
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_Roughness.jpg",
+          "bytes": 2301486,
+          "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f"
+        },
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_NormalGL.jpg",
+          "bytes": 1742147,
+          "sha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b"
+        }
+      ]
+    },
+    {
+      "id": "Travertine009",
+      "material": "Travertine",
+      "source": "https://ambientcg.com/view?id=Travertine009",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Travertine009_2K-JPG.zip",
+      "interpretation": "Modern material reference, not a scan or calibrated sample of Pennsylvania Station; grain scale and colour remain interpreted",
+      "maps": [
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_Color.jpg",
+          "bytes": 3798875,
+          "sha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc"
+        },
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_Roughness.jpg",
+          "bytes": 1135101,
+          "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc"
+        },
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_NormalGL.jpg",
+          "bytes": 1312711,
+          "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22"
+        }
+      ]
+    }
+  ],
+  "runtime": "Shared content-addressed KTX2/UASTC maps; 2K desktop and 512px mobile derivatives; Blender UV-scaled, normal strength .25",
+  "lighting": "Blender Cycles 64-sample neutral dome, 6 diffuse bounces, 2K atlas, 2m AO; no directional sun or surrounding city occluders baked. Bounded radiance encoded via Standard/sRGB 8-bit PNG, lossless WebP transport (2K/512px), decoded to linear in browser. Original HDR/AO PNG authoring files preserved outside runtime."
+}

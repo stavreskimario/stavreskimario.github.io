@@ -1,10 +1,15 @@
 """Optional Blender geometry-review render; does not modify the delivered assets."""
 from pathlib import Path
+import argparse
 import bpy
 from mathutils import Vector
 
 ROOT=Path(__file__).resolve().parent.parent
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'model'/'penn-station-study.blend'))
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--blend',type=Path,default=ROOT.parent/'authoring'/'penn-station-1935'/'penn-station-phase2.blend')
+parser.add_argument('--out',type=Path,default=Path('/private/tmp/penn-waiting-geometry-review.png'))
+args=parser.parse_args()
+bpy.ops.wm.open_mainfile(filepath=str(args.blend.resolve()))
 scene=bpy.context.scene
 for col in bpy.data.collections:
     if col.name.startswith(('01 ','03 ')):
@@ -26,8 +31,9 @@ light.rotation_euler=(.5,-.6,-.8)
 camera_data=bpy.data.cameras.new('Review camera')
 camera=bpy.data.objects.new('Review camera',camera_data)
 scene.collection.objects.link(camera)
-camera.location=(0,-36,2.1)
-camera.rotation_euler=(Vector((0,23,24))-camera.location).to_track_quat('-Z','Y').to_euler()
+main=scene.get('main_floor_world',0)
+camera.location=(-2,-38,main+5.9672)
+camera.rotation_euler=(Vector((0,20,main+17.2672))-camera.location).to_track_quat('-Z','Y').to_euler()
 camera_data.lens=24
 scene.camera=camera
 scene.render.engine='CYCLES'
@@ -38,5 +44,5 @@ scene.render.resolution_y=960
 scene.render.resolution_percentage=100
 scene.view_settings.view_transform='AgX'
 scene.render.image_settings.file_format='PNG'
-scene.render.filepath='/private/tmp/penn-waiting-geometry-review.png'
+scene.render.filepath=str(args.out.resolve())
 bpy.ops.render.render(write_still=True)

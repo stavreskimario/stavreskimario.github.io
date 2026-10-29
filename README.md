@@ -9,7 +9,7 @@ A collection of small apps built with Codex. Live at **[stavreskimario.github.io
 | Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
 | Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](engineering-journal/) |
-| Pennsylvania Station | Evidence-led Blender and Three.js architectural study with exterior, waiting room and concourse exploration; an explicitly phased reconstruction. | [Pennsylvania Station](penn-station-1935/) |
+| Pennsylvania Station | Detailed Blender reconstruction with connected street-to-hall walking, glass concourse, baked lighting, period trains and neighbouring landmarks; an explicitly phased reconstruction. | [Pennsylvania Station](penn-station-1935/) |
 
 ## Engineering Journal
 

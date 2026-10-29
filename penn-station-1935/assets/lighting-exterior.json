@@ -1,0 +1,25 @@
+{
+  "zone": "exterior",
+  "source": "model-exterior.glb",
+  "resolution": 2048,
+  "samples": 64,
+  "engine": "4.3.0 Cycles CPU",
+  "atlasSurfaceArea": 0.7209832072257996,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked; adjacent city occluders not included",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.572221040725708,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7935646772384644,
+    "mean": 0.28808867931365967,
+    "coveredPixels": 3705984
+  },
+  "elapsedSeconds": 323.13324983400526,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-exterior.glb"
+}

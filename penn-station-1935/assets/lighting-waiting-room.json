@@ -1,0 +1,25 @@
+{
+  "zone": "waiting-room",
+  "source": "model-waiting-room.glb",
+  "resolution": 2048,
+  "samples": 64,
+  "engine": "4.3.0 Cycles CPU",
+  "atlasSurfaceArea": 0.3150366246700287,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked; adjacent city occluders not included",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.306037575006485,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7607121467590332,
+    "mean": 0.11958149075508118,
+    "coveredPixels": 3143230
+  },
+  "elapsedSeconds": 182.9584497079486,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-waiting-room.glb"
+}
