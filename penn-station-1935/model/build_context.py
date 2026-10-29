@@ -283,6 +283,8 @@ def instance(master,name,at,rotation=0,scale=None):
     obj.location=at;obj.rotation_euler.z=rotation
     if scale:obj.scale=scale
     obj['keep_instance']=True
+    if 'bearing_top_local' in master:
+        obj['bearing_top_local']=master['bearing_top_local']
     return obj
 
 
@@ -608,6 +610,7 @@ def corinthian_kit(name,height=53*FT):
         polyline('Capital corner volute',points,.037,STONE,10)
     bpy.context.view_layer.update();batch(col,name)
     masters=list(col.objects);move_to_masters(col)
+    for obj in masters:obj['bearing_top_local']=height
     return masters
 
 
@@ -623,10 +626,11 @@ def ionic_kit(name,height=14.1):
             for i in range(45):
                 t=i/44;a=t*math.pi*3.1
                 radius=.34*(1-t)+.025
-                points.append((side*.54+side*radius*math.cos(a),front*.57,height-.18+radius*math.sin(a)))
+                points.append((side*.54+side*radius*math.cos(a),front*.57,height-.24+radius*math.sin(a)))
             polyline('Ionic carved spiral volute',points,.043,STONE,12)
     bpy.context.view_layer.update();batch(col,name)
     masters=list(col.objects);move_to_masters(col)
+    for obj in masters:obj['bearing_top_local']=height+.13
     return masters
 
 
@@ -753,7 +757,9 @@ def hotel_pennsylvania():
     court=40*FT
     upper_length=4*wing+3*court
     outer_east=wall_x0+upper_length
-    ionic=ionic_kit('20 Hotel original Ionic portico order master',13.6)
+    # The order's estimated height closes at the actual architrave bearing;
+    # its abacus top is .13m above the nominal kit height.
+    ionic=ionic_kit('20 Hotel original Ionic portico order master',14.15-.13)
     standard_window=window_kit('21 Hotel timber sash master',1.22,1.77,False,STONE)
     tall_base_window=window_kit('22 Hotel tall lower sash master',1.8,6.1,False,STONE)
     col=collection('23 Hotel Pennsylvania 1919 primary-plan exterior')
@@ -830,7 +836,11 @@ def hotel_pennsylvania():
     cornice_segment('Hotel base Seventh Avenue entablature',(wall_x0,mid),north-south,base=15.1,mat=STONE,scale=.9)
     # Six full Ionic columns are retained; the much later column-cutting alteration is absent.
     column_x=wall_x0-3.7
-    for y in np.linspace(mid-10,mid+10,6):place_kit(ionic,'Hotel original six-column Ionic portico',(column_x,float(y),.25),-math.pi/2)
+    box('Hotel paved entrance setback forecourt',((lot_x0+wall_x0)/2,mid,-.075),
+        (wall_x0-lot_x0,north-south,.15),SIDEWALK)
+    # Seat the complete moulded base on the authored forecourt datum. The old
+    # quarter-metre placement had no supporting plinth and visibly floated.
+    for y in np.linspace(mid-10,mid+10,6):place_kit(ionic,'Hotel original six-column Ionic portico',(column_x,float(y),0),-math.pi/2)
     box('Hotel portico architrave',(column_x+1.5,mid,14.50),(5.2,24.5,.70),STONE)
     cornice_segment('Hotel portico projecting cornice',(column_x+1.4,mid),25.0,base=14.9,mat=STONE,scale=1.1)
     for y in np.linspace(mid-8,mid+8,5):
@@ -862,11 +872,53 @@ def render_architecture_review():
         bpy.ops.render.render(write_still=True)
 
 
+def audit_column_contacts():
+    """Ray-test the complete foot support and the actual entablature bearing."""
+    from mathutils.bvhtree import BVHTree
+    bpy.context.view_layer.update()
+    floors = [obj for obj in bpy.context.scene.objects if obj.type == 'MESH' and
+              any(word in obj.name.lower() for word in ('sidewalk', 'forecourt', 'colonnade floor', 'stair tread'))]
+    vertices, faces = [], []
+    for obj in floors:
+        offset = len(vertices)
+        vertices.extend(tuple(obj.matrix_world @ v.co) for v in obj.data.vertices)
+        faces.extend(tuple(offset + index for index in face.vertices) for face in obj.data.polygons)
+    ground = BVHTree.FromPolygons(vertices, faces)
+    checks = []
+    for prefix, beam_name, radius, expected in [
+        ('Hotel original six-column Ionic portico', 'Hotel portico architrave', .7, 6),
+        ('Farley 53ft Corinthian column', 'Farley colonnade entablature', 1.0, 20),
+    ]:
+        columns = [obj for obj in bpy.context.scene.objects if obj.type == 'MESH' and obj.name.startswith(prefix)]
+        assert len(columns) == expected, f'{prefix}: expected{expected}, found{len(columns)}'
+        beam = bpy.data.objects.get(beam_name)
+        underside = min((beam.matrix_world @ v.co).z for v in beam.data.vertices)
+        for obj in columns:
+            points = [obj.matrix_world @ v.co for v in obj.data.vertices]
+            base, top = min(v.z for v in points), max(v.z for v in points)
+            gaps = []
+            for dx, dy in [(0,0),(-radius,0),(radius,0),(0,-radius),(0,radius)]:
+                origin = Vector((obj.location.x + dx, obj.location.y + dy, base + .01))
+                hit = ground.ray_cast(origin, Vector((0,0,-1)), 1)
+                assert hit[0] is not None, f'{obj.name}: missing floor beneath base footprint'
+                gaps.append(base - hit[0].z)
+            bearing = (obj.matrix_world @ Vector((0,0,obj['bearing_top_local']))).z
+            bearing_gap = underside - bearing
+            assert max(abs(value) for value in gaps) < .002, f'{obj.name}: unsupported foot {gaps}'
+            assert -.3 < bearing_gap < .002, f'{obj.name}: disconnected upper bearing {bearing_gap}'
+            checks.append({'column': obj.name, 'baseWorld': base, 'footGaps': gaps, 'bearingTopWorld':bearing,
+                           'ornamentTopWorld':top, 'upperBearingGap': bearing_gap})
+    report = {'scope':'26 existing landmark columns, five foot samples per column and entablature bearings',
+              'columns':len(checks), 'footSamples':len(checks)*5, 'checks':checks, 'passed':True}
+    (OUT/'context-column-contacts.json').write_text(json.dumps(report,indent=2)+'\n')
+
+
 if __name__=='__main__':
     ledger={'phase':'Historical urban context extension, not a surveyed 1935 streetscape','units':'metres','axes':'glTF X east, Y up, Z south','buildingDatum':'Station nominal facades are not street property lines','streetWidthsWorking':{'avenue':AVENUE,'crossStreet':CROSS_STREET},'sourceStationSetbacksFeet':{'seventh':19,'eighth':7,'north':13,'south':13},'genericVehicles':{'types':['rounded closed sedan','taxi-type saloon'],'count':len(vehicle_placements),'status':'Original modelled period interpretations; no authenticated make, livery or positions'},'streetFurniture':'Generic cast-iron swan-neck products; exact site inventory and placements unverified','buildings':[]}
     if not args.vehicles_only:
         ledger['buildings'].append(farley_post_office())
         ledger['buildings'].append(hotel_pennsylvania())
+        audit_column_contacts()
     (OUT/'context-manifest.json').write_text(json.dumps(ledger,indent=2)+'\n')
     export_context()
     if args.render:

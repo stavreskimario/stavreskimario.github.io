@@ -1,25 +1,183 @@
 {
   "zone": "exterior",
   "source": "model-exterior.glb",
+  "sourceSha256": "5ff73a639078fc06efb941a0141fd212261394acfbdee595545979cef702a193",
   "resolution": 2048,
   "samples": 64,
   "engine": "4.3.0 Cycles CPU",
-  "atlasSurfaceArea": 0.7209832072257996,
-  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked; adjacent city occluders not included",
+  "atlasSurfaceArea": 0.5483226776123047,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
+  "registeredOccluders": [
+    {
+      "zone": "waiting-room",
+      "source": "model-waiting-room.glb",
+      "sha256": "66be79cd8c14b01213b8b4399e1035e3f6974f7a6b36d547c25004e7a2754286",
+      "heightOffset": -4.2672,
+      "objects": 27
+    },
+    {
+      "zone": "concourse",
+      "source": "model-concourse.glb",
+      "sha256": "7e87da6a1ac77ec4915343da289bc4f04b004cd032cbfdf267d94e5c7f4db0bf",
+      "heightOffset": -4.2672,
+      "objects": 81
+    },
+    {
+      "zone": "platform",
+      "source": "model-platform.glb",
+      "sha256": "d294eba796a3f7627ed71e37511bff97d14733ef7445d8880b7187d63fc581b0",
+      "heightOffset": -4.2672,
+      "objects": 66804
+    },
+    {
+      "zone": "context",
+      "source": "model-context.glb",
+      "sha256": "5d3722673b834eaf875342064230c197bf51647986f59e042038b03c970ff425",
+      "heightOffset": 0,
+      "objects": 10736
+    },
+    {
+      "zone": "trains",
+      "source": "model-trains.glb",
+      "sha256": "c5b8dec8a70fca2febe27938de9b784dc91abf51ee0d3084b154e54469ba4385",
+      "heightOffset": -13.154025,
+      "objects": 66
+    }
+  ],
+  "unbakedPrimaryMeshes": 6,
+  "surfaceProfiles": [
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.055,
+      "roughnessFactor": 0.58
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source → Standard/sRGB PNG → lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1,
   "ambientOcclusion": {
-    "minimum": 0.0,
-    "maximum": 1.0,
-    "mean": 0.572221040725708,
+    "minimum": 0,
+    "maximum": 1,
+    "mean": 0.387440949678421,
     "coveredPixels": 4194304
   },
   "illumination": {
-    "minimum": 0.0,
-    "maximum": 0.7935646772384644,
-    "mean": 0.28808867931365967,
-    "coveredPixels": 3705984
+    "minimum": 0,
+    "maximum": 0.7843304872512817,
+    "mean": 0.07173919677734375,
+    "coveredPixels": 4194304
   },
-  "elapsedSeconds": 323.13324983400526,
+  "elapsedSeconds": 697.3499770409544,
   "architectureUv": "UVMap",
   "bakedUv": "BakedLightingUV",
-  "artifact": "model-exterior.glb"
+  "artifact": "model-exterior.glb",
+  "device": {
+    "requested": "CPU",
+    "backend": "CPU",
+    "devices": [
+      "CPU"
+    ]
+  },
+  "aoPathSamples": 64,
+  "aoNodeSamples": 24,
+  "settingsNote": "These two bakes had already started on CPU with64 outer AO samples before the independent AO sample setting and AUTO/Metal support were introduced. Diffuse illumination uses64 samples in every zone."
 }

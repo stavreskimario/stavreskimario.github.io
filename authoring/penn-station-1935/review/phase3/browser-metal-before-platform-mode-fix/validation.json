@@ -1,0 +1,4668 @@
+{
+  "created": "2026-10-29T05:45:19.590Z",
+  "deploymentPrefix": "/exhibition/",
+  "section": "full",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "requestedAngle": "metal",
+  "rendererNote": "ANGLE/metal requested; the actual driver is recorded per graphics context. Frame intervals describe browser scheduling, not a general hardware performance claim.",
+  "checks": [
+    "Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths",
+    "Four actual exterior-corner orbit views preserve the complete station; screenshots support visual face/roof/contact inspection",
+    "Core and railway floors retain calibrated baked illumination, ambient occlusion and atlas channels; local HDR reflections, context and period rolling stock decode locally",
+    "Exterior, waiting-room and concourse viewpoints render; drag orbit changes camera position",
+    "Hotel Pennsylvania and General Post Office controls reach distinct, correctly oriented neighbourhood viewpoints",
+    "WASD follows the real waiting-room end stair to street-level eye height and stops at the manifest-defined closed end door"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-platform.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-trains.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f8f598c89017c5e01dd7.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3335d12c85f0a74be102.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4278ac4780ea6e5ef44e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/b64c55705256a5018846.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/6243410b98d8c80a38ed.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/547e3573b92e90adcd24.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-platform.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-platform-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-concourse.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-waiting-room.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-concourse-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky.webp",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "driver": {
+        "api": "WebGL2",
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 116,
+            "triangles": 4985254,
+            "geometries": 113,
+            "textures": 44,
+            "exposure": 1.0389965546239468
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-southeast": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              326.4696215848662,
+              136.09609831651434,
+              254.37628910495488
+            ],
+            "quaternion": [
+              -0.16392082555875356,
+              0.33763675403433363,
+              0.059835769523651224,
+              0.9249600347900486
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 210,
+            "triangles": 8125538,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.03994135427201
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-northeast": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              326.46960418636957,
+              136.09609831651431,
+              -264.3763037595045
+            ],
+            "quaternion": [
+              -0.059835764025893745,
+              0.924960046114082,
+              0.16392082756559148,
+              0.3376367230120036
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 210,
+            "triangles": 8125538,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.03994135427201
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-northwest": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -167.84863772084861,
+              136.09609831651431,
+              -202.26267759726798
+            ],
+            "quaternion": [
+              0.07980569094521668,
+              0.875648431644601,
+              0.1551818547998038,
+              -0.4503215160216083
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 200,
+            "triangles": 7996650,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.03994135427201
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-southwest": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -167.8486244888217,
+              136.09609831651431,
+              192.26269610069906
+            ],
+            "quaternion": [
+              -0.15518185747641494,
+              -0.45032148665314564,
+              -0.0798056857405565,
+              0.8756484467479799
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 206,
+            "triangles": 8015802,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.03994135427201
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-waiting": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 3,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 146,
+            "triangles": 6549978,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 3.9939702353551585
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-concourse": {
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 4,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 148,
+            "triangles": 7122514,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.717944079781272
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-hotel": {
+          "state": {
+            "view": "exterior",
+            "framing": "hotel",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 6,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              140,
+              5.9999999999999964,
+              65.00000000000003
+            ],
+            "quaternion": [
+              0.12043345465801152,
+              -0.2214327225883731,
+              0.02756892721267185,
+              0.9673175727849563
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 42,
+            "triangles": 2224444,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.2145295038071071
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-farley": {
+          "state": {
+            "view": "exterior",
+            "framing": "farley",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 7,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -130,
+              8.000000000000009,
+              71
+            ],
+            "quaternion": [
+              0.052976827836534165,
+              0.21754839714491386,
+              -0.011826128861932201,
+              0.9745390157855139
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 104,
+            "triangles": 5744262,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.127211290746519
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-waiting-end-landing": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "walk",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 8,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              0,
+              1.677300542836074,
+              47.023586456693316
+            ],
+            "quaternion": [
+              0.07777655644170531,
+              0,
+              0,
+              0.9969708156551376
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 154,
+            "triangles": 6575802,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 3.727876487260624
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 1862,
+            "lastCandidates": 8,
+            "maximumCandidates": 11,
+            "buildMilliseconds": 1.300000011920929,
+            "floorWorld": -0.0026994571615155394
+          }
+        }
+      },
+      "cornerInspection": [
+        {
+          "corner": "southeast",
+          "position": [
+            326.4696215848662,
+            136.09609831651434,
+            254.37628910495488
+          ],
+          "screenshot": "desktop-corner-southeast.png"
+        },
+        {
+          "corner": "northeast",
+          "position": [
+            326.46960418636957,
+            136.09609831651431,
+            -264.3763037595045
+          ],
+          "screenshot": "desktop-corner-northeast.png"
+        },
+        {
+          "corner": "northwest",
+          "position": [
+            -167.84863772084861,
+            136.09609831651431,
+            -202.26267759726798
+          ],
+          "screenshot": "desktop-corner-northwest.png"
+        },
+        {
+          "corner": "southwest",
+          "position": [
+            -167.8486244888217,
+            136.09609831651431,
+            192.26269610069906
+          ],
+          "screenshot": "desktop-corner-southwest.png"
+        }
+      ],
+      "bakedLighting": [
+        {
+          "file": "model-trains.glb",
+          "materials": 14,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "reflectionMaterials": 14,
+          "reflectionFile": "reflection-platform.hdr.gz",
+          "atlasChannels": []
+        },
+        {
+          "file": "model-platform.glb",
+          "materials": 11,
+          "bakedMaterials": 3,
+          "occlusionMaterials": 3,
+          "reflectionMaterials": 11,
+          "reflectionFile": "reflection-platform.hdr.gz",
+          "atlasChannels": [
+            0
+          ]
+        },
+        {
+          "file": "model-context.glb",
+          "materials": 26,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "reflectionMaterials": 0,
+          "reflectionFile": null,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-exterior.glb",
+          "materials": 11,
+          "bakedMaterials": 4,
+          "occlusionMaterials": 4,
+          "reflectionMaterials": 0,
+          "reflectionFile": null,
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-concourse.glb",
+          "materials": 9,
+          "bakedMaterials": 5,
+          "occlusionMaterials": 5,
+          "reflectionMaterials": 9,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-waiting-room.glb",
+          "materials": 15,
+          "bakedMaterials": 9,
+          "occlusionMaterials": 9,
+          "reflectionMaterials": 15,
+          "reflectionFile": "reflection-waiting-room.hdr.gz",
+          "atlasChannels": [
+            1,
+            0
+          ]
+        }
+      ],
+      "walking": {
+        "before": [
+          0,
+          -2.5872,
+          25
+        ],
+        "afterForward": [
+          0,
+          -2.5841752776211186,
+          24.562665844766283
+        ],
+        "endStair": {
+          "side": "south",
+          "bounds": [
+            -2.7432000000000003,
+            2.7432000000000003,
+            31.546800000000005,
+            42.214800000000004
+          ],
+          "landingBounds": [
+            -16.5608,
+            16.5608,
+            42.214800000000004,
+            47.9044
+          ],
+          "bridgeBounds": [
+            -2.7432000000000003,
+            2.7432000000000003,
+            47.9044,
+            65.532
+          ],
+          "bottomWorld": -4.2672,
+          "topWorld": 0,
+          "startFloorWorld": -4.2672,
+          "endFloorWorld": 0,
+          "roomSideDoorPlaneZ": 47.324400000000004,
+          "innerEndWallPlaneZ": 47.4044,
+          "steps": 28,
+          "riser": 0.1524,
+          "tread": 0.38100000000000006,
+          "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+        },
+        "ascentSamples": [
+          {
+            "position": [
+              0,
+              -2.5841740699639186,
+              24.565708107202735
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584174007506151,
+              24.58907974644461
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173961897604,
+              24.621465102749248
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841739290007872,
+              24.66029660056145
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417390325819,
+              24.708281603777582
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738847151383,
+              24.760779005192607
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173871269247,
+              24.816570357747505
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173861401549,
+              24.87506609833368
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738533350895,
+              24.943636082123913
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.582651949627905,
+              25.00954299925217
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583055153576282,
+              25.08125579737631
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5833350898428056,
+              25.150262881791807
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5835550807045258,
+              25.22495706325026
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583718191782025,
+              25.301635287616357
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5838364878490125,
+              25.378217672782768
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583922718809651,
+              25.45445187451955
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5839875793616054,
+              25.53250841677301
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584034688702237,
+              25.609405600795196
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584070628297316,
+              25.68884451688077
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584098650490022,
+              25.773678224931732
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841176663106173,
+              25.852199675280694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841326209213014,
+              25.93598396789152
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841432103126047,
+              26.016681741677193
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584150831630736,
+              26.09470035070277
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584157016301382,
+              26.180338108007195
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584161201479808,
+              26.2587762910772
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584164597736166,
+              26.34479987616657
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841669581318825,
+              26.42601877937852
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841687059513205,
+              26.506859213009417
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841700842828765,
+              26.593267579133343
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584171052246874,
+              26.67578947907777
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584171766478959,
+              26.757886542987148
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841722860954692,
+              26.83805184205649
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172701739431,
+              26.92474788476458
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172987577819,
+              27.005507214193436
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173211253643,
+              27.090793102996393
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.582619453652769,
+              27.174116160174545
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5830230108555785,
+              27.257466431218283
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5833202590122806,
+              27.34034036348409
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583531547650004,
+              27.419237907851834
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5837050999829576,
+              27.50664264704495
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5838255434392092,
+              27.589066491494453
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583913168190282,
+              27.66950323264858
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5839822278130393,
+              27.754946605193254
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5840329909390967,
+              27.840398878073117
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584068992309534,
+              27.92236002860762
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584096350981869,
+              28.006326385656592
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584115739667454,
+              28.086299082391186
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841314368177297,
+              28.17377401373105
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584142387123004,
+              28.25675387158652
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584150550992377,
+              28.340236724474234
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584156626305735,
+              28.42422214240872
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584161070361119,
+              28.50720993783821
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841643153005736,
+              28.588699755994497
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841668239866644,
+              28.67369079724252
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841686246955273,
+              28.75618342458693
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584169983538483,
+              28.840177078825626
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584170982657116,
+              28.923671740898122
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841717185779967,
+              29.006667246670798
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172264416207,
+              29.0896634398707
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841726713593682,
+              29.17316019899136
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841729711015198,
+              29.256157470126265
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841731945707043,
+              29.339655147441682
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841733591714156,
+              29.422653191421873
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841734825168525,
+              29.506651518183574
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841735732092492,
+              29.590150110608175
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173640010554,
+              29.673148925635534
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841736898134693,
+              29.75664791671056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173726686246,
+              29.84014706294947
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417375384563,
+              29.923146344274137
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841737741978266,
+              30.007145729377108
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841737886211265,
+              30.087145230299512
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173800184542,
+              30.173644776159982
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738084021038,
+              30.257144405628527
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738144861717,
+              30.3406440918236
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173818967514,
+              30.42364382747935
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417382229136,
+              30.50664360383822
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173824769414,
+              30.59014341329207
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738265946743,
+              30.673143253026538
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173827948484,
+              30.756143116994433
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738289629768,
+              30.840143000826274
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738297050725,
+              30.92314290366722
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173830258333,
+              31.0066428207949
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173830665848,
+              31.089642751187952
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173830960258,
+              31.170142693439683
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738311946045,
+              31.25664264146622
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173831360288,
+              31.33964259929438
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173831483811,
+              31.42314256323252
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738315747946,
+              31.50614253274074
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5449277637221317,
+              31.59064250685734
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.517454464845966,
+              31.6701424858226
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.495269195531244,
+              31.75664246674031
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.480319798273472,
+              31.835142451833175
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.4696997895994404,
+              31.922642437940333
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.4234590353221286,
+              32.00264242711638
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.386204513379583,
+              32.089642417404015
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.3599065867151836,
+              32.17314240931122
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.3403364370889403,
+              32.25714240253927
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.2858266745647713,
+              32.340142396642705
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.2451875716817726,
+              32.423642391715596
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.2150994419900787,
+              32.50714238783513
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.1930520816367953,
+              32.58964238438458
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.176755269971913,
+              32.671642381354495
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.1248001472447866,
+              32.75664237880884
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.0878962238242442,
+              32.838142376794735
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.0593655346440114,
+              32.92314237497009
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.03888650179181,
+              33.00564237346849
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.9825380866043978,
+              33.09014237205042
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.9418139567723767,
+              33.1726423709752
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.911239692075208,
+              33.256142369994706
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.888487216472408,
+              33.34014236927117
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.8717579673459217,
+              33.42364236855282
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.8202613512115131,
+              33.50764236805222
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7843585260959118,
+              33.58614236754515
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7561093884942645,
+              33.66864236714642
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7340362434238996,
+              33.756142366791416
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.679134435328976,
+              33.83964236674316
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.6372953111342232,
+              33.92364236626096
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.6066902419060511,
+              34.00664236617612
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5838729979052681,
+              34.09014236594282
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5670664989181606,
+              34.17314236591577
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5159526086756978,
+              34.25614236561308
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.477260019010029,
+              34.341142365506045
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.4496315712033168,
+              34.42314236559722
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.4288502142394202,
+              34.50614236534327
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.414527153485878,
+              34.590642365457484
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.3650531103404453,
+              34.66914236534659
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.3253182688109282,
+              34.753642365180745
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.295561337866956,
+              34.839642365379206
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.2742714345249295,
+              34.92314236528677
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.2199415490305812,
+              35.006142365080315
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1796446525052395,
+              35.08914236517611
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1494477095938112,
+              35.17314236521568
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1272447550827245,
+              35.25664236513923
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1108907233474035,
+              35.33964236524425
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.0580265567274192,
+              35.4236423649937
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.0193567348744765,
+              35.50664236510275
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9905269108310395,
+              35.590142365034495
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9692917253472941,
+              35.673142365146425
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9143316977460022,
+              35.7571423651998
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8743367563796798,
+              35.83964236519461
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8443099411002482,
+              35.92314236513056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8227672611417106,
+              36.0036423649481
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8062147153234894,
+              36.08664236506412
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.7513219600285983,
+              36.17414236506131
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.7132269770435213,
+              36.25664236505905
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.685512201122285,
+              36.33714236517639
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.6633430072016517,
+              36.42414236505548
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.6098630759807593,
+              36.50614236493491
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5690424080683049,
+              36.59014236499333
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5394915744068064,
+              36.67214236517117
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5170348855208483,
+              36.756142364931904
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5006079518500794,
+              36.83914236505041
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.4492510430499824,
+              36.923142365109406
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.4112961104969787,
+              37.0071423651685
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.3835323044341741,
+              37.090142364989255
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.36315293867008486,
+              37.17214236516771
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.34919993644581554,
+              37.25664236504819
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.297012655532583,
+              37.340142364988324
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.25997268472992585,
+              37.41964236516693
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.2302096273501911,
+              37.50564236510713
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.20880613443266866,
+              37.589642365166576
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.15394084895910784,
+              37.67364236492802
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.11380722062774969,
+              37.75664236504712
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.08373262461541499,
+              37.84064236510663
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.06218972504972234,
+              37.92164236504695
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.045331857086891365,
+              38.00714236516609
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.0055861159072126965,
+              38.08764236498722
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.044304304154884566,
+              38.169642365165984
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.07417633713266517,
+              38.25514236498713
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.09613414294962522,
+              38.340642365106305
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.1505180306227218,
+              38.42364236492746
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.19106328913685336,
+              38.507142365165855
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.22092771278114015,
+              38.59014236498702
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.24261876017193312,
+              38.67114236492739
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.25959255758367167,
+              38.75664236504659
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.3122211046462673,
+              38.84014236498697
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.34937117265394946,
+              38.91914236504656
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.3797377300935175,
+              39.00614236492734
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.4005096890989317,
+              39.08664236504654
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.45544746930556346,
+              39.172642364986935
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.4952377495572796,
+              39.25414236504653
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5259999020070141,
+              39.33914236504653
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5478503771607057,
+              39.420642365106126
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5649127112854744,
+              39.50664236504652
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6172517319906702,
+              39.58964236516572
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6542513766352063,
+              39.668142365106114
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6850139672755853,
+              39.7561423649273
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.7055555634892207,
+              39.83564236510611
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.7215975802007323,
+              39.9216423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.7728957230772437,
+              40.00614236492729
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.8090006920507588,
+              40.08614236492729
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.837230385738368,
+              40.170142364986894
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.8586227023532698,
+              40.256642365046496
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9130812774439239,
+              40.3381423651061
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9549717055719879,
+              40.42264236498689
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9858748320296893,
+              40.507142365165706
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.0082091412510787,
+              40.58964236516571
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.0245446737430455,
+              40.670642365106104
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.0769703812308724,
+              40.75614236492729
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.1145399424511164,
+              40.8391423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.142261413619368,
+              40.9216423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.1633933610490388,
+              41.0066423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.2191211613015283,
+              41.090142364986896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.2582435279934248,
+              41.168642364927294
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.2906137870084735,
+              41.25614236492729
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.3131952245181233,
+              41.3391423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.3296836323835395,
+              41.420642365106104
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.382137714457799,
+              41.50614236492729
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.419921731417099,
+              41.58964236516571
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.4467389721350363,
+              41.6691423650465
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.468501060809488,
+              41.756142364927285
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.520366704664717,
+              41.83914236504649
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.5611108307984503,
+              41.922642364986885
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.5911217345944415,
+              42.00564236510609
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.613150529188907,
+              42.087642364986884
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6302310865579015,
+              42.17364236492728
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.642199729443922,
+              42.25514236498689
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6513595538640142,
+              42.33914236504649
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6578159449022163,
+              42.41864236492728
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6630809000449902,
+              42.50614236492728
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6667726909810268,
+              42.589642365165695
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6694919536657502,
+              42.67264236498688
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.671508851843143,
+              42.755642365106084
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.673012526201636,
+              42.83914236504648
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6741429047631042,
+              42.92414236504648
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6749500516938116,
+              43.00614236492727
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6755603006310849,
+              43.08964236516569
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6760121129924381,
+              43.17314236510608
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6763431827560313,
+              43.255642365106084
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6765917384557376,
+              43.33914236504648
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6767767063543777,
+              43.42314236510608
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6769120092654952,
+              43.506142364927264
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6770128827363648,
+              43.58964236516568
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6770871831152236,
+              43.672642364986864
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6771422922812271,
+              43.75564236510607
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6771833782620496,
+              43.83914236504646
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772137972483958,
+              43.92264236498686
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772363186708326,
+              44.00614236492725
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772529929434183,
+              44.089642365165666
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677265274713438,
+              44.17264236498685
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677274431240495,
+              44.25614236492724
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772811058167876,
+              44.33814236510606
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772859697061486,
+              44.41814236510606
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772899075286425,
+              44.505642365106056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772926687330503,
+              44.58914236504645
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772947130566247,
+              44.67264236498684
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677296226620367,
+              44.756142364927236
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772973472234056,
+              44.83964236516565
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772981339159114,
+              44.91814236510605
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677298787995153,
+              45.006142364927236
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772992412576104,
+              45.08914236504644
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772995791820242,
+              45.172642364986835
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772998280870333,
+              45.25564236510604
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773000146068646,
+              45.339642365165645
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773001510450052,
+              45.42264236498683
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773002527648324,
+              45.50614236492722
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300327688613,
+              45.58914236504643
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773003835471427,
+              45.67264236498682
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773004244780068,
+              45.755142364986824
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773004539364647,
+              45.834642365165635
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773004781919265,
+              45.92314236510603
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773004948032466,
+              46.005642365106034
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005069529288,
+              46.08664236504643
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300516460365,
+              46.17214236516564
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005233088143,
+              46.255642365106034
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300528353177,
+              46.33864236492722
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005321139414,
+              46.422142365165634
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300534898313,
+              46.50564236510603
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005369491978,
+              46.58864236492721
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005384308644,
+              46.66914236504642
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300539592772,
+              46.75414236504642
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005404483854,
+              46.83914236504642
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300541040017,
+              46.91814236510603
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005415093407,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005418508722,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005421190321,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005423038998,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005424434038,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005425454501,
+              47.00214236516563
+            ],
+            "pose": 8,
+            "loading": false
+          }
+        ],
+        "landingStopSamples": [
+          [
+            0,
+            1.677300541040017,
+            46.91814236510603
+          ],
+          [
+            0,
+            1.6773005418508722,
+            47.00214236516563
+          ],
+          [
+            0,
+            1.6773005423038998,
+            47.00214236516563
+          ],
+          [
+            0,
+            1.6773005425454501,
+            47.00214236516563
+          ]
+        ]
+      }
+    }
+  ],
+  "manifestRevision": 3,
+  "browser": "156.0.8078.48",
+  "passed": false,
+  "failure": "page.waitForFunction: Timeout 120000ms exceeded.\n    at platformWalking (/private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:348:18)\n    at async /private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:533:5",
+  "failureState": {
+    "state": {
+      "view": "waiting",
+      "framing": "",
+      "mode": "walk",
+      "light": "afternoon",
+      "quality": "balanced",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 9,
+      "instant": false
+    },
+    "camera": {
+      "position": [
+        0,
+        -2.5872,
+        25
+      ],
+      "quaternion": [
+        0.07777655644170531,
+        0,
+        0,
+        0.9969708156551376
+      ],
+      "fov": 50
+    },
+    "navigation": {
+      "sourceMeshes": 105,
+      "excludedMeshes": 75,
+      "excludedInstances": 76894,
+      "structuralInstances": 0,
+      "colliders": 30,
+      "cells": 2236,
+      "queries": 1880,
+      "lastCandidates": 8,
+      "maximumCandidates": 11,
+      "buildMilliseconds": 1.300000011920929,
+      "floorWorld": -0.0026994571615155394
+    },
+    "scene": {
+      "id": "73cae20f-f446-4629-b4d9-e051f13e6793",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "6065e8cd-cdd6-438b-a0d5-f52e8ddf9d18",
+          "visible": true,
+          "meshes": 11
+        },
+        {
+          "name": "waiting",
+          "id": "21b3dc7e-6ded-42c6-97fb-bbd828740d4d",
+          "visible": true,
+          "meshes": 15
+        },
+        {
+          "name": "concourse",
+          "id": "95b3af5b-ffa0-48b9-9274-3b88c074594f",
+          "visible": true,
+          "meshes": 9
+        },
+        {
+          "name": "context",
+          "id": "46eae483-ad30-44b6-8489-d39f7928f551",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "4efeaefd-218a-42c6-b92b-8a112d89681b",
+          "visible": true,
+          "meshes": 17
+        },
+        {
+          "name": "trains",
+          "id": "ac00e92b-bb1a-4112-a9d5-a53c5daa5b45",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    }
+  }
+}

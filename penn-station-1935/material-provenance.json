@@ -1,5 +1,5 @@
 {
-  "revision": 2,
+  "revision": 3,
   "references": [
     {
       "id": "Granite005A",
@@ -52,8 +52,36 @@
           "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22"
         }
       ]
+    },
+    {
+      "id": "Marble018",
+      "material": "PublicFloorMarble / BotticinoMarble",
+      "source": "https://ambientcg.com/view?id=Marble018",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Marble018_2K-JPG.zip",
+      "interpretation": "Modern beige-marble appearance interpretation. Gibbs specifies marble public floors without certifying their variety, and Botticino ticket-booth exteriors. This asset is not a station sample or a verified Botticino/Tennessee scan.",
+      "maps": [
+        {
+          "file": "Marble018/Marble018_2K-JPG_Color.jpg",
+          "bytes": 3945678,
+          "sha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06"
+        },
+        {
+          "file": "Marble018/Marble018_2K-JPG_Roughness.jpg",
+          "bytes": 2097792,
+          "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235"
+        },
+        {
+          "file": "Marble018/Marble018_2K-JPG_NormalGL.jpg",
+          "bytes": 1288531,
+          "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357"
+        }
+      ]
     }
   ],
-  "runtime": "Shared content-addressed KTX2/UASTC maps; 2K desktop and 512px mobile derivatives; Blender UV-scaled, normal strength .25",
-  "lighting": "Blender Cycles 64-sample neutral dome, 6 diffuse bounces, 2K atlas, 2m AO; no directional sun or surrounding city occluders baked. Bounded radiance encoded via Standard/sRGB 8-bit PNG, lossless WebP transport (2K/512px), decoded to linear in browser. Original HDR/AO PNG authoring files preserved outside runtime."
+  "runtime": "Shared content-addressed KTX2/UASTC; 2K desktop /512px mobile. Physical grain-scale interpretations and reduced normal/roughness strengths are defined in model/material_library.py.",
+  "lighting": "Blender Cycles neutral dome, six diffuse bounces and separate 2m AO; registered complete station, railway, context and rolling-stock occluders are included. Directional sun remains dynamic. Lighting-only outgoing radiance uses explicit Linear Rec.709 to Standard/sRGB PNG encoding, per-atlas HDR normalization and pixel-identical lossless WebP transport; browser restores scale and multiplies by pi for Three.js irradiance. Fine ironwork is excluded from the masonry atlas. Original HDR/AO authoring files and measured unit-hemisphere/browser calibration are retained outside runtime. Exact sample counts/resolutions and source hashes are recorded per delivered bake.",
+  "reflections": "Three static room-centre HDR panoramas plus one elevated Seventh Avenue environment are captured from the assembled authored station under a neutral dome and afternoon reference sun. The old modern field HDR is archived. No parallax correction, moving-passenger reflections or time-specific indirect relighting; neither original material colours nor sun/exposure settings are historically calibrated. Source hashes/positions are in the runtime capture reports.",
+  "denoising": "Color-only OpenImageDenoise on explicitly recovered linear radiance; runtime sRGB is encoded once and pixel-verified lossless WebP is used. All four source/report hashes, mean changes, uniform transfer controls and clipping counts are retained in lighting-*-denoise.json. Filtering may soften tiny atlas features; mapped production views are separately reviewed."
 }

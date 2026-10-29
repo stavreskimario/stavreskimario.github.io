@@ -1,4 +1,4 @@
-"""Pennsylvania Station: evidence-led architectural study, model revision 2.
+"""Pennsylvania Station: evidence-led architectural reconstruction, revision 3.
 
 Run with Blender 4.3's official bpy distribution (see README).
 The browser never creates the architectural geometry. Units are metres.
@@ -9,6 +9,7 @@ import argparse, json, math, random, sys
 import bpy
 import numpy as np
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 
 ROOT = Path(__file__).resolve().parent.parent
 parser=argparse.ArgumentParser(description=__doc__)
@@ -17,6 +18,7 @@ parser.add_argument("--hall-only",action="store_true")
 parser.add_argument("--only",choices=['exterior','waiting','concourse','platform','core'],help="Re-export one review asset or the three architectural core chunks")
 parser.add_argument("--no-context",action="store_true",help="Omit superseded unverified surrounding-building massing")
 parser.add_argument("--preserve-platform",action="store_true",help="Preserve an existing representative platform GLB during a concourse-only correction")
+parser.add_argument("--legacy-platform",action="store_true",help="Include the superseded Phase2 representative bay instead of the separately authored railway")
 ARGS=parser.parse_args()
 ASSETS = ARGS.out.resolve() if ARGS.out else ROOT / "assets"
 ASSETS.mkdir(exist_ok=True,parents=True)
@@ -24,12 +26,24 @@ MODEL_DIR=ASSETS if ARGS.out else ROOT.parent/"authoring"/ROOT.name
 MODEL_DIR.mkdir(parents=True,exist_ok=True)
 FT = .3048
 L, W = 784 * FT, 430 * FT
-HALL_W, HALL_L, HALL_H = 103 * FT, 277 * FT, 150 * FT
+HALL_W, HALL_L, HALL_H = 103 * FT, 277 * FT, 143 * FT
+REPORTED_ROOM_HEIGHT=150*FT
 HALL_ROOM_W=(108+8/12)*FT
 HALL_ROOM_L=(314+4/12)*FT
 HALL_SHELL_W=119*FT
 HALL_SHELL_L=325*FT
 STREET_DROP=14*FT
+WING_PARAPET=65*FT
+WING_ROOF=63*FT
+END_STAIR_TOP=HALL_L/2
+END_STAIR_FOOT=END_STAIR_TOP-35*FT
+END_STAIR_WIDTH=18*FT
+COURT_X0=43.0
+COURT_LENGTH=(152+8.5/12)*FT
+COURT_X1=COURT_X0+COURT_LENGTH
+COURT_INNER=8.8
+COURT_WIDTH=(115+6/12)*FT
+COURT_OUTER=COURT_INNER+COURT_WIDTH
 INTERIOR_PEDESTAL=(9+4/12)*FT
 INTERIOR_BASE=(3+3/12)*FT
 INTERIOR_SHAFT=48*FT
@@ -43,6 +57,50 @@ bpy.ops.object.delete(use_global=False)
 for collection in list(bpy.data.collections):
     if collection.name != "Collection": bpy.data.collections.remove(collection)
 COL = None
+CONTACTS=[]
+
+def contact(name,part,support,where="bottom",points=None,source="Primary architectural order/support relationship"):
+    """Audit actual member vertices against the supporting mesh before batching."""
+    CONTACTS.append(dict(name=name,part=part,support=support,where=where,points=points,source=source))
+
+def contact_audit():
+    bpy.context.view_layer.update()
+    cache={};records=[]
+    def support_geometry(obj):
+        if obj.name not in cache:
+            vertices=[obj.matrix_world@v.co for v in obj.data.vertices]
+            cache[obj.name]=BVHTree.FromPolygons(vertices,[tuple(p.vertices) for p in obj.data.polygons],epsilon=.0005)
+        return cache[obj.name]
+    for rec in CONTACTS:
+        targets=rec['support']() if callable(rec['support']) else rec['support']
+        if not isinstance(targets,(list,tuple,set)):targets=[targets]
+        targets=[obj for obj in targets if obj and obj.type=='MESH']
+        part=rec['part']
+        if rec['points'] is not None:
+            points=[Vector(p) for p in rec['points']]
+        else:
+            vertices=[part.matrix_world@v.co for v in part.data.vertices]
+            z=(max if rec['where']=='top' else min)(v.z for v in vertices)
+            points=[v for v in vertices if abs(v.z-z)<.0005]
+            for face in part.data.polygons:
+                corners=[vertices[i] for i in face.vertices]
+                if all(abs(v.z-z)<.0005 for v in corners):points.append(sum(corners,Vector())/len(corners))
+        distances=[]
+        for point in points:
+            nearest=[]
+            for obj in targets:
+                hit,normal,index,distance=support_geometry(obj).find_nearest(point)
+                if hit is None:continue
+                # Inside an actual convex supporting solid is also contact.
+                if (obj.get('convex_support') or obj.get('closed_support')) and normal.dot(point-hit)<=0:distance=0
+                nearest.append(distance)
+            distances.append(min(nearest) if nearest else 999)
+        best=min(distances) if distances else 999
+        records.append({'name':rec['name'],'minimumGap':best,'maximumSampleGap':max(distances) if distances else 999,'samples':len(points),'touches':best<=.025,'source':rec['source']})
+    report={'revision':3,'units':'metres','method':'Member vertices/endpoints against actual supporting meshes before batching; signed containment uses outward normals of closed support solids.','contacts':records,'failures':[r for r in records if not r['touches']]}
+    (ASSETS/'architecture-contact-audit.json').write_text(json.dumps(report,indent=2))
+    print('CONTACT AUDIT',len(records),'checks',len(report['failures']),'failures',flush=True)
+    return report
 
 def collection(name):
     global COL
@@ -113,10 +171,13 @@ INTERIOR_GRANITE=GRANITE.copy()
 INTERIOR_GRANITE.name="InteriorGranite"
 INTERIOR_GRANITE["source_identity"]="Granite colossal columns from PRR description; exact mineral colour remains uncalibrated"
 LIMESTONE = stone("Travertine", (.62, .60, .55), 11)
-FLOOR = stone("TennesseeMarble", (.49, .46, .40), 12)
+FLOOR = stone("PublicFloorMarble", (.49, .46, .40), 12)
+BOTTICINO=FLOOR.copy();BOTTICINO.name="BotticinoMarble"
 PALE = mat("PaleVaultPlaster", (.67, .665, .64), .84)
 SHADOW = mat("CofferRecess", (.48, .475, .45), .9)
 IRON = mat("PaintedStructuralIron", (.105, .12, .12), .55, 0)
+MONEL=mat("MonelRoof",(.29,.31,.31),.58,.85)
+ROOF_TILE=mat("FlatRoofTile",(.32,.31,.29),.78)
 BRONZE = mat("AgedBronze", (.19, .14, .085), .47, .65)
 GLASS = mat("HistoricGlass", (.84, .89, .89), .14, 0)
 gp = GLASS.node_tree.nodes.get("Principled BSDF")
@@ -163,9 +224,12 @@ def box(name, center, scale, material, bevel=0):
             normal=(Vector(verts[f[1]])-Vector(verts[f[0]])).cross(Vector(verts[f[2]])-Vector(verts[f[0]]))
             outward=sum((Vector(verts[k])-Vector(center) for k in f),Vector())
             if normal.dot(outward)<0:faces[i]=tuple(reversed(f))
-        return mesh(name,verts,faces,material)
+        obj=mesh(name,verts,faces,material);obj['convex_support']=True
+        return obj
     verts=[(x+sx*a,y+sy*b,z+sz*c) for sx,sy,sz in [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),(-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]]
-    return mesh(name,verts,[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],material)
+    obj=mesh(name,verts,[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],material)
+    obj['convex_support']=True
+    return obj
 
 def mesh(name, verts, faces, material):
     data = bpy.data.meshes.new(name)
@@ -239,10 +303,19 @@ def ionic_order(name,at,axis='Y'):
     """Plate310's30ft base-to-capital order; scroll geometry from plate308."""
     x,y,z=at
     total=30*FT
+    pedestal=box(name+' supporting pedestal',(x,y,z-1.5*FT),(1.30,1.30,3*FT),LIMESTONE,.025)
+    contact(name+' pedestal to floor or landing',pedestal,lambda:[HALL_FLOOR,*END_LANDING_SLABS])
     shaft=lathe(name+" moulded base and shaft",[(0,.56),(.10,.59),(.19,.53),(.30,.57),(.43,.48),(.58,.46),(1.4,.455),(4.0,.43),(7.7,.39),(8.15,.38),(8.27,.45)],LIMESTONE,72,24)
     shaft.location=at
-    box(name+" echinus",(x,y,z+8.38),(1.16,1.0,.22),LIMESTONE,.035)
-    box(name+" abacus",(x,y,z+total-.10),(1.54,1.14,.20),LIMESTONE,.025)
+    contact(name+' shaft to pedestal',shaft,pedestal)
+    echinus=box(name+" echinus",(x,y,z+8.38),(1.16,1.0,.22),LIMESTONE,.035)
+    bolster=box(name+" continuous capital bolster",(x,y,z+8.69),(1.02,.84,.46),LIMESTONE,.035)
+    neck=box(name+" abacus bedding",(x,y,z+8.94),(1.20,.96,.08),LIMESTONE,.018)
+    abacus=box(name+" abacus",(x,y,z+total-.10),(1.54,1.14,.20),LIMESTONE,.025)
+    contact(name+' shaft to echinus',shaft,echinus,'top')
+    contact(name+' capital bolster to echinus',bolster,echinus)
+    contact(name+' bedding to bolster',neck,bolster)
+    contact(name+' abacus to bedding',abacus,neck)
     for sign in [-1,1]:
         for face in [-1,1]:
             points=[]
@@ -254,7 +327,7 @@ def ionic_order(name,at,axis='Y'):
                 zz=z+8.68+r*math.sin(angle)
                 points.append((x+u,y+face*.43,zz) if axis=='Y' else (x+face*.43,y+u,zz))
             tube_path(name+" carved Ionic volute",points,.045,LIMESTONE,10)
-    return total
+    return abacus
 
 def carved_abacus(name,center):
     """Concave Corinthian abacus with a small bevel, as visible in plate308."""
@@ -276,6 +349,31 @@ def carved_abacus(name,center):
             faces.append((ring*n+i,ring*n+j,(ring+1)*n+j,(ring+1)*n+i))
     faces.extend([tuple(range(n-1,-1,-1)),tuple(3*n+i for i in range(n))])
     return mesh(name,verts,faces,LIMESTONE)
+
+def moulded_square(name,center,profile,material=LIMESTONE):
+    """Continuous stone profile: every course shares its actual bearing rim."""
+    verts=[];faces=[]
+    for z,width in profile:
+        half=width/2;r=.025
+        outline=[(-half+r,-half),(half-r,-half),(half,-half+r),(half,half-r),(half-r,half),(-half+r,half),(-half,half-r),(-half,-half+r)]
+        verts.extend((center[0]+x,center[1]+y,center[2]+z) for x,y in outline)
+    for j in range(len(profile)-1):
+        faces.extend((j*8+k,j*8+(k+1)%8,(j+1)*8+(k+1)%8,(j+1)*8+k) for k in range(8))
+    faces.extend([tuple(range(7,-1,-1)),tuple((len(profile)-1)*8+k for k in range(8))])
+    obj=mesh(name,verts,faces,material);obj['closed_support']=True
+    return obj
+
+def colossal_impost(x,y):
+    low=(4+2.5/12)*FT;mid=(3+11.5/12)*FT;high=(5+3/12)*FT
+    profile=[(0,3.10),(.16,3.10),(.22,3.28),(.42,3.28),(.48,3.18),(.90,3.18),(1.05,3.42),(low,3.42),(low+.10,3.35),(low+mid-.10,3.35),(low+mid,3.65),(low+mid+.17,3.65),(low+mid+.30,3.95),(low+mid+.52,3.95),(low+mid+.66,4.18),(low+mid+.85,4.18),(low+mid+1.00,4.65),(low+mid+1.25,4.65),(low+mid+1.36,5.10),(low+mid+high,5.10)]
+    obj=moulded_square('Plate310 continuous colossal impost',(x,y,INTERIOR_ORDER_TOP),profile)
+    # The section shows modillions/dentils beneath the projecting cornice.
+    for face in range(4):
+        for u in np.arange(-1.75,1.76,.34):
+            px,py=(float(u),1.93) if face==0 else (1.93,float(u)) if face==1 else (float(u),-1.93) if face==2 else (-1.93,float(u))
+            d=box('Colossal impost dentil',(x+px,y+py,INTERIOR_ORDER_TOP+low+mid+.43),(.22,.22,.25),LIMESTONE,.02)
+            contact('Impost dentil attached',d,obj)
+    return obj
 
 def corinthian_scrolls(center):
     for k in range(8):
@@ -325,9 +423,14 @@ def mural_field(center,axis='X'):
     x,y,z=center;w,h=MURAL_WIDTH/2,MURAL_HEIGHT/2
     vertices=[(x,y-w,z-h),(x,y+w,z-h),(x,y+w,z+h),(x,y-w,z+h)] if axis=='X' else [(x-w,y,z-h),(x+w,y,z-h),(x+w,y,z+h),(x-w,y,z+h)]
     material=mat("GuerinMuralField"+str(MURAL_ID),(.545,.55,.53),.9)
+    north_map=ROOT/'assets/mural-north-archival.png'
+    if MURAL_ID==6 and north_map.exists():
+        image=bpy.data.images.load(str(north_map),check_existing=True);image.pack()
+        texture=material.node_tree.nodes.new('ShaderNodeTexImage');texture.image=image
+        material.node_tree.links.new(texture.outputs['Color'],material.node_tree.nodes.get('Principled BSDF').inputs['Base Color'])
     obj=mesh("Guérin70x25ft historical mural field",vertices,[(0,1,2,3)],material)
     for i,uv in enumerate([(0,0),(1,0),(1,1),(0,1)]):obj.data.uv_layers.active.data[i].uv=uv
-    obj['artwork_status']='Authenticperspectivemapidentified; neutralfieldpendingcompletePDreproduction, notgenericartwork'
+    obj['artwork_status']='North map recovered mechanically from LOC det.4a23713; photographic monochrome, original colour unverified' if MURAL_ID==6 and north_map.exists() else 'Neutral field: no authenticated full reproduction assigned'
     return obj
 
 def lathe(name, profile, material, segments=32, flutes=0):
@@ -356,24 +459,37 @@ def copy_obj(o,name,at):
 def capital_leaf(center, angle, rank):
     """A curved, lobed acanthus interpretation; not a scanned carving."""
     verts=[];faces=[]
-    rows,cols=16,8
+    rows,cols=20,10
     radial=Vector((math.cos(angle),math.sin(angle),0))
     tangent=Vector((-math.sin(angle),math.cos(angle),0))
     for iy in range(rows+1):
         t=iy/rows
-        width=.43*max(0,math.sin(math.pi*t))**.7*(1+.18*math.cos(8*math.pi*t))
-        radius=.80+.35*t+.24*t**4
-        z=.12+rank*.85+1.35*t-.28*t**8
+        width=.035+.43*max(0,math.sin(math.pi*t))**.7*(1+.20*math.cos(10*math.pi*t))
+        z=.10+rank*.76+1.44*t-.25*t**8
+        bell_z=[0,.22,.8,1.8,2.25,INTERIOR_CAPITAL]
+        bell_r=[.81,.84,1.04,1.23,1.38,1.38]
+        radius=float(np.interp(z,bell_z,bell_r))-.025+.13*math.sin(math.pi*t)+.25*t**5
         for ix in range(cols+1):
             s=-1+2*ix/cols
-            ridge=.10*(1-s*s)*math.sin(math.pi*t)
+            ridge=.085*(1-s*s)*math.sin(math.pi*t)+.018*math.cos(s*math.pi*4)*math.sin(math.pi*t)
             p=Vector(center)+radial*(radius+ridge)+tangent*(s*width)+Vector((0,0,z))
             verts.append(tuple(p))
     for iy in range(rows):
         for ix in range(cols):
             k=iy*(cols+1)+ix
             faces.append((k,k+1,k+cols+2,k+cols+1))
-    leaf=mesh("Curved lobed acanthus leaf",verts,faces,LIMESTONE)
+    # Return the leaf edges into the bell, so the carving is physically rooted.
+    front_count=len(verts)
+    verts.extend(tuple(Vector(p)-radial*.055) for p in list(verts))
+    faces.extend(tuple(i+front_count for i in reversed(f)) for f in list(faces))
+    for iy in range(rows):
+        for ix in [0,cols]:
+            a=iy*(cols+1)+ix;b=(iy+1)*(cols+1)+ix
+            faces.append((a,b,b+front_count,a+front_count))
+    for iy in [0,rows]:
+        for ix in range(cols):
+            a=iy*(cols+1)+ix;faces.append((a,a+1,a+1+front_count,a+front_count))
+    leaf=mesh("Rooted carved acanthus leaf",verts,faces,LIMESTONE)
     for p in leaf.data.polygons:p.use_smooth=True
     return leaf
 
@@ -392,12 +508,21 @@ def arch(name, center, radius, depth, material, axis="X", start=0, end=math.pi, 
     return mesh(name,verts,faces,material)
 
 def lunette(name, center, radius, material, axis="X", grid=True):
-    verts=[center]
-    for i in range(65):
-        a=i*math.pi/64
-        q=(0,math.cos(a)*radius,math.sin(a)*radius) if axis=="X" else (math.cos(a)*radius,0,math.sin(a)*radius)
-        verts.append(tuple(center[k]+q[k] for k in range(3)))
-    mesh(name,verts,[(0,i+1,i+2) for i in range(64)],material)
+    # One physical6mm sheet, with front/back interfaces. A zero-thickness
+    # transmissive face can leave Cycles rays inside glass and produce bands.
+    verts=[];faces=[];thickness=.006
+    for layer in [1,-1]:
+        shifted=list(center);shifted[0 if axis=='X' else 1]+=layer*thickness/2
+        verts.append(tuple(shifted))
+        for i in range(65):
+            a=i*math.pi/64
+            q=(0,math.cos(a)*radius,math.sin(a)*radius) if axis=="X" else (math.cos(a)*radius,0,math.sin(a)*radius)
+            verts.append(tuple(shifted[k]+q[k] for k in range(3)))
+    for i in range(64):
+        faces.extend([(0,i+1,i+2),(66,66+i+2,66+i+1),(i+1,66+i+1,66+i+2,i+2)])
+    faces.append((1,65,131,67))
+    if axis=='Y':faces=[tuple(reversed(f)) for f in faces]
+    sheet=mesh(name,verts,faces,material);sheet['physical_glazing_thickness']=thickness
     arch(name+" molded archivolt",center,radius,.55,LIMESTONE if material==LIGHT_GLASS else GRANITE,axis,width=.52)
     if grid:
         for p in range(-9,10):
@@ -449,9 +574,71 @@ def geometry_node_row(name, source, points):
     return row
 
 def cornice(name,center,length,axis="Y",height=13.2,material=GRANITE):
+    # Preserve the overall envelope while removing the former15mm air gap
+    # between the third and fourth moulding courses.
+    level=height-.20
+    previous=None
     for i,(w,h) in enumerate([(1.25,.40),(1.70,.28),(1.90,.18),(2.1,.23),(1.6,.24)]):
+        h*=1.20/1.33
         dims=(w,length,h) if axis=="Y" else (length,w,h)
-        box(name+str(i),(center[0],center[1],height+i*.22),dims,material)
+        course=box(name+str(i),(center[0],center[1],level+h/2),dims,material)
+        if previous:contact(name+f' course{i} bearing',course,previous)
+        previous=course;level+=h
+
+def stone_cheek(name,p0,p1,width=.50,upstand=.78):
+    p0,p1=Vector(p0),Vector(p1)
+    direction=Vector((p1.x-p0.x,p1.y-p0.y,0)).normalized()
+    n=Vector((-direction.y,direction.x,0))*width/2
+    vertices=[]
+    for p in [p0,p1]:
+        vertices.extend([tuple(Vector((p.x,p.y,0))-n),tuple(Vector((p.x,p.y,0))+n),tuple(p-n+Vector((0,0,upstand))),tuple(p+n+Vector((0,0,upstand)))])
+    obj=mesh(name,vertices,[(0,4,5,1),(0,2,6,4),(1,5,7,3),(2,3,7,6),(0,1,3,2),(4,6,7,5)],LIMESTONE)
+    obj['closed_support']=True
+    cap=section_beam(name+' continuous stone coping',p0+Vector((0,0,upstand)),p1+Vector((0,0,upstand)),[(-width*.58,-.075),(width*.58,-.075),(width*.58,.075),(-width*.58,.075)],LIMESTONE)
+    contact(name+' coping bedding',cap,obj)
+    return obj
+
+def pierced_wall(name,normal_at,u0,u1,z0,z1,thickness,axis,holes,material):
+    """Masonry cells stop at openings; reveals have actual depth, not decals."""
+    us=sorted({u0,u1,*[max(u0,min(u1,h[k])) for h in holes for k in [0,1]]})
+    zs=sorted({z0,z1,*[max(z0,min(z1,h[k])) for h in holes for k in [2,3]]})
+    vertices=[];faces=[]
+    for a,b in zip(us,us[1:]):
+        for c,d in zip(zs,zs[1:]):
+            if b-a<.001 or d-c<.001:continue
+            u,z=(a+b)/2,(c+d)/2
+            if any(h[0]<u<h[1] and h[2]<z<h[3] for h in holes):continue
+            offset=len(vertices)
+            for su,sn,sz in [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),(-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]:
+                v=u+su*(b-a)/2;n=normal_at+sn*thickness/2;h=z+sz*(d-c)/2
+                vertices.append((n,v,h) if axis=='X' else (v,n,h))
+            for face in [(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]:
+                face=face if axis=='Y' else tuple(reversed(face))
+                faces.append(tuple(offset+k for k in face))
+    return mesh(name,vertices,faces,material)
+
+def recessed_sash(name,center,width,height,axis,sign,material=GRANITE):
+    x,y,z=center
+    front=Vector(center);normal=Vector((sign,0,0)) if axis=='X' else Vector((0,sign,0))
+    pane=front-normal*.24
+    dims=(.035,width,height) if axis=='X' else (width,.035,height)
+    glazing=box(name+' recessed opaque room backing',tuple(pane),dims,WINDOW)
+    for side in [-1,1]:
+        p=front.copy();p[1 if axis=='X' else 0]+=side*(width/2+.075)
+        dims=(.22,.15,height+.30) if axis=='X' else (.15,.22,height+.30)
+        box(name+' deep stone jamb',tuple(p),dims,material,.018)
+    for side in [-1,1]:
+        p=front+normal*.035;p.z+=side*(height/2+.08)
+        dims=(.36,width+.30,.16) if axis=='X' else (width+.30,.36,.16)
+        box(name+' projecting sill or lintel',tuple(p),dims,material,.018)
+    for fraction in [-.5,0,.5]:
+        p=pane+normal*.028;p.z+=fraction*height
+        dims=(.06,width,.055) if axis=='X' else (width,.06,.055)
+        box(name+' sash cross rail',tuple(p),dims,IRON,.009)
+    p=pane+normal*.028
+    dims=(.06,.05,height) if axis=='X' else (.05,.06,height)
+    box(name+' sash central meeting rail',tuple(p),dims,IRON,.008)
+    return glazing
 
 def export(name,col):
     bpy.ops.object.select_all(action="DESELECT")
@@ -464,6 +651,9 @@ def export(name,col):
 def batch_static(col):
     """Batch static surfaces by material; preserve editable Geometry Nodes rows."""
     global COL
+    # Batching reads matrix_world. Single-zone review/export helpers must also
+    # flush recently assigned placements and the Main-to-Street translation.
+    bpy.context.view_layer.update()
     COL=col
     groups={}
     for o in list(col.objects):
@@ -500,8 +690,9 @@ print("Building exterior architectural meshes",flush=True)
 EXTERIOR=collection("01 Exterior and context")
 # Foundation rings leave room floors and stair/track voids unobstructed.
 foundation_holes=[(-105.15,-40.85,-48.8,48.8),(-19.6,19.6,-49.6,49.6),(-40.85,-19.6,-7.75,7.75),(19.6,L/2,-7.75,7.75)]
-xs=[-L/2,-105.15,-40.85,-19.6,19.6,101.3,L/2]
-ys=[-W/2,-48.8,-7.75,7.75,48.8,W/2]
+for sign in [-1,1]:foundation_holes.append((COURT_X0,COURT_X1,min(sign*COURT_INNER,sign*COURT_OUTER),max(sign*COURT_INNER,sign*COURT_OUTER)))
+xs=sorted([-L/2,-105.15,-40.85,-19.6,19.6,COURT_X0,COURT_X1,101.3,L/2])
+ys=sorted([-W/2,-48.8,-COURT_OUTER,-COURT_INNER,-7.75,7.75,COURT_INNER,COURT_OUTER,48.8,W/2])
 for x0,x1 in zip(xs,xs[1:]):
     for y0,y1 in zip(ys,ys[1:]):
         cx,cy=(x0+x1)/2,(y0+y1)/2
@@ -519,28 +710,30 @@ for sx in ([] if ARGS.no_context else [-1,1]):
 
 # Street-front shell only: courts and passenger interiors are not filled solids.
 for sy in [-1,1]:
-    box("Long perimeter wall",(0,sy*(W/2-1),6.9),(L,1.4,13.8),GRANITE)
-    cornice("Long street cornice",(0,sy*(W/2-.7)),L,axis="X")
+    gate=END_STAIR_WIDTH/2+.50
+    windows=[]
     for xx in np.linspace(-113,113,52):
-        # Rusticated horizontal courses and ashlar end joints are true geometry.
-        for z in [1.1,3.4,6.3,10.0]:
-            box("Long facade inset window",(float(xx),sy*(W/2+.015),z+1),(1.3,.05,1.75),WINDOW)
-    # Side colonnades occupy central 230 feet, between the carriage courts.
-    for xx in np.linspace(-35.05,35.05,17):
-        pass
+        for level in [2.1,4.4,7.3,11.0]:
+            if abs(xx)<gate+.65 and level<8:continue
+            windows.append((float(xx),level,1.3,1.75))
+    holes=[(x-w/2,x+w/2,z-h/2,z+h/2) for x,z,w,h in windows]+[(-gate,gate,0,8.0)]
+    pierced_wall('Long street facade with recessed openings',sy*(W/2-1),-L/2,L/2,0,13.8,1.4,'Y',holes,GRANITE)
+    cornice('Long street cornice',(0,sy*(W/2-.7)),L,axis='X')
+    for x,z,w,h in windows:recessed_sash('Long facade window',(x,sy*(W/2-.30),z),w,h,'Y',sy)
 
 for sx in [-1,1]:
-    # Avenue walls behind porticos.
-    for y0,width in [(-42,41),(42,41),(-10,9),(10,9)]:
-        box("Avenue wall bay",(sx*(L/2-4.5),y0,6.6),(2.1,width,13.2),GRANITE)
-    cornice("Avenue entablature",(sx*(L/2-1),0),W)
-    # Repeated tall rectangular fenestration.
-    for yy in np.linspace(-59,59,29):
-        if abs(yy)<5: continue
-        box("Avenue dark window",(sx*(L/2-3.38),float(yy),6.8),(.07,1.7,5.0),WINDOW)
-        for z in [4.2,9.35]:
-            box("Avenue window stone sill",(sx*(L/2-3.1),float(yy),z),(.5,2.15,.23),GRANITE)
-        box("Avenue upper window",(sx*(L/2-3.38),float(yy),11.3),(.07,1.7,1.8),WINDOW)
+    # Side colonnade bays retain their source-study arrangement. Behind the
+    # double-row centre and carriage porticos the rear wall is set farther back.
+    for y0,width in [(-34.25,37.5),(34.25,37.5),(-10,9),(10,9)]:
+        center=sx*(L/2-(8.3 if abs(y0)==10 else 4.5))
+        windows=[]
+        for yy in np.linspace(-59,59,29):
+            if y0-width/2+.9<=yy<=y0+width/2-.9 and abs(yy)>=5:
+                windows.extend([(float(yy),6.8,1.7,5.0),(float(yy),11.3,1.7,1.8)])
+        holes=[(y-w/2,y+w/2,z-h/2,z+h/2) for y,z,w,h in windows]
+        pierced_wall('Avenue masonry with actual window reveals',center,y0-width/2,y0+width/2,0,13.2,2.1,'X',holes,GRANITE)
+        for y,z,w,h in windows:recessed_sash('Avenue recessed window',(center+sx*1.05,y,z),w,h,'X',sx)
+    cornice('Avenue entablature',(sx*(L/2-1),0),W)
 
 # Exterior Doric order: 35 ft column including base/capital, 4 ft 6 in dia.
 profile=[(0,.80),(.18,.82),(.35,.76),(.45,.686),(2.0,.680),(5.0,.645),(8.8,.586),(9.5,.565),(9.75,.59),(9.85,.72),(10.05,.82),(10.18,.91),(10.34,.91),(10.44,.83),(10.668,.83)]
@@ -551,16 +744,16 @@ eastpoints=[]
 # Elevation plate301: central hexastyle entrance and side colonnades,
 # extra rear row belongs only to central portico and carriage gateways.
 for yy in [-10.0,-6,-2,2,6,10]:
-    eastpoints.extend([(L/2-.86,yy,.3),(L/2-4.6,yy,.3)])
+    eastpoints.extend([(L/2-.86,yy,0),(L/2-4.6,yy,0)])
 for sy in [-1,1]:
     for yy in [18,22,26,30,34,38,42,46,50]:
-        eastpoints.append((L/2-.86,sy*yy,.3))
+        eastpoints.append((L/2-.86,sy*yy,0))
     for yy in [55,59,63]:
-        eastpoints.extend([(L/2-.86,sy*yy,.3),(L/2-4.6,sy*yy,.3)])
+        eastpoints.extend([(L/2-.86,sy*yy,0),(L/2-4.6,sy*yy,.3)])
 geometry_node_row("Seventh Avenue Doric colonnade",doric,eastpoints)
 sidepoints=[]
 for sy in [-1,1]:
-    sidepoints.extend([(float(xx),sy*(W/2-.86),.3) for xx in np.linspace(-35.05,35.05,17)])
+    sidepoints.extend([(float(xx),sy*(W/2-.86),0) for xx in np.linspace(-35.05,35.05,17)])
 geometry_node_row("230ft side colonnades",doric,sidepoints)
 # Eighth Avenue is primarily pilasters, not a copy of Seventh Avenue.
 for yy in np.linspace(-62,62,32):
@@ -568,7 +761,7 @@ for yy in np.linspace(-62,62,32):
     box("Eighth Avenue Doric pilaster",(-L/2+.7,float(yy),5.65),(1.35,1.35,10.7),GRANITE)
     box("Eighth pilaster capital",(-L/2+.5,float(yy),10.65),(1.7,1.7,.52),GRANITE)
 for yy in [-6.7,-2.23,2.23,6.7]:
-    copy_obj(doric,"Eighth central portico column",(-L/2+.86,yy,.3))
+    copy_obj(doric,"Eighth central portico column",(-L/2+.86,yy,0))
 
 # Frieze, dentils and roof balustrade along the Seventh Avenue face.
 for yy in np.arange(-65,65,.86):
@@ -589,8 +782,11 @@ for y0 in [-59,59]:
     verts=[(L/2+.2,y0-6,14.0),(L/2+.2,y0+6,14.0),(L/2+.2,y0,16.3)]
     mesh("Carriage entrance pediment",verts,[(0,1,2)],GRANITE)
 text("Pedestrian entrance legend","PENNSYLVANIA STATION",(L/2+.45,0,13.4),.76,BLACK)
-box("Flat central clock attic",(L/2-2.6,0,17.2),(5.8,6.7,6.0),GRANITE)
-cornice("Clock attic crowning cornice",(L/2-2.6,0),7.2,height=20.0)
+# Plate301: the clock attic spans the six-column central portico and its
+# flanking piers; the clock itself occupies only the middle of this wide mass.
+CLOCK_ATTIC_WIDTH=30.2
+box("Flat central clock attic",(L/2-2.6,0,(14.05+75*FT)/2),(5.8,CLOCK_ATTIC_WIDTH,75*FT-14.05),GRANITE)
+cornice("Clock attic crowning cornice",(L/2-2.6,0),CLOCK_ATTIC_WIDTH+.5,height=75*FT-1.0)
 # The seven-foot dial is centred61ft above the pavement in the PRR description.
 clockz=61*FT
 beam("Clock bronze bezel",(L/2+.31,0,clockz),(L/2+.56,0,clockz),3.5*FT,BRONZE,64)
@@ -605,7 +801,7 @@ beam("Clock hour hand",(L/2+.69,0,clockz),(L/2+.69,.52,clockz-.26),.034,BLACK)
 # Arcade: 225 by45ft. Axis is E–W; flanking carriage drives remain open.
 for sy in [-1,1]:
     box("Arcade shop wall",(67,sy*7.2,5.7),(68.58,1,11.4),GRANITE)
-    box("Arcade shop roof",(67,sy*17.8,10.9),(68.58,20,1.2),GRANITE)
+    box("Arcade shop lower ceiling",(67,sy*8.0,10.9),(68.58,1.0,1.2),GRANITE)
 box("Arcade roof",(67,0,12),(68.58,14.7,1.0),GRANITE)
 for xx in np.arange(35,102,5.1):
     for sy in [-1,1]:
@@ -613,6 +809,113 @@ for xx in np.arange(35,102,5.1):
         box("Arcade pilaster",(float(xx)-2,sy*6.2,4.8),(.55,.6,9.6),GRANITE)
 box("Arcade paving",(67,0,-.10),(225*FT,14,.2),FLOOR)
 box("Seventh Avenue vestibule paving",((101.29+L/2)/2,0,-.10),(L/2-101.29,14,.2),FLOOR)
+for sy in [-1,1]:
+    inner=HALL_ROOM_L/2
+    box('Street-level pedestrian bridge over carriage drive',(0,sy*(inner+W/2)/2,-.16),(END_STAIR_WIDTH,W/2-inner,.32),FLOOR,.015)
+    for sign in [-1,1]:
+        steel_i('Pedestrian bridge longitudinal girder',(sign*(END_STAIR_WIDTH/2-.22),sy*inner,-.36),(sign*(END_STAIR_WIDTH/2-.22),sy*W/2,-.36),.20,.68,.032,.022)
+
+# The lower bodies are four-storey buildings around actual open courts, not
+# a roofless perimeter screen. Their recessed roofs are distinct from the
+# lower Doric entablature/balustrade in front (ASCE188; Bain elevated view).
+wing_roofs=[]
+def wing_roof(name,x0,x1,y0,y1):
+    slab=box(name+' self-glazed tile roof',((x0+x1)/2,(y0+y1)/2,WING_ROOF-.14),(x1-x0,y1-y0,.28),ROOF_TILE,.018)
+    wing_roofs.append(slab)
+    return slab
+for sign in [-1,1]:
+    wing_roof('North/south street wing',-L/2,L/2,min(sign*HALL_SHELL_L/2,sign*(W/2-2.0)),max(sign*HALL_SHELL_L/2,sign*(W/2-2.0)))
+    terrace=box('North/south colonnade roof terrace',(0,sign*(W/2-1.60),13.90),(L-11.10,3.20,.30),ROOF_TILE,.018)
+    # Recessed attic wall is visible behind the lower colonnade and coping.
+    attic_holes=[(float(x)-.675,float(x)+.675,16.6-.825,16.6+.825) for x in np.arange(-113,114,4.5)]
+    attic= pierced_wall('North/south recessed attic wall',sign*(W/2-2.6),-L/2,L/2,13.8,WING_ROOF,1.2,'Y',attic_holes,GRANITE)
+    contact('North/south attic wall on terrace',attic,terrace)
+    cornice('North/south attic roof coping',(0,sign*(W/2-2.6)),L,axis='X',height=WING_PARAPET-1.0)
+    for xx in np.arange(-113,114,4.5):
+        recessed_sash('North/south attic sash',(float(xx),sign*(W/2-2.0),16.6),1.35,1.65,'Y',sign)
+    for xa,xb in [(-L/2,-HALL_SHELL_W/2),(HALL_SHELL_W/2,L/2)]:
+        box('Inner office-wing wall to roof',((xa+xb)/2,sign*(HALL_SHELL_L/2+.30),WING_ROOF/2),(xb-xa,.60,WING_ROOF),LIMESTONE,.02)
+    beam_support=box('Doric side architrave and frieze',(0,sign*(W/2-2.0),(10.668+13.01)/2),(L-11.0,4.0,13.01-10.668),GRANITE,.015)
+    for point in [p for p in sidepoints if p[1]*sign>0]:
+        basepts=[(point[0]+v.co.x,point[1]+v.co.y,v.co.z) for v in doric.data.vertices if v.co.z<.001]
+        cappts=[(point[0]+v.co.x,point[1]+v.co.y,v.co.z) for v in doric.data.vertices if abs(v.co.z-10.668)<.001]
+        contact('Side Doric foot '+str(point),None,lambda:[o for o in EXTERIOR.objects if o.type=='MESH' and ('foundation' in o.name.lower() or 'paving' in o.name.lower())],points=basepts)
+        contact('Side Doric capital bearing '+str(point),None,beam_support,points=cappts)
+
+for sign in [-1,1]:
+    x0,x1=(101.29,L/2-3.45) if sign>0 else (-L/2+3.45,-105.1437)
+    wing_roof('Seventh/Eighth Avenue office wing',x0,x1,-HALL_SHELL_L/2,HALL_SHELL_L/2)
+    terrace=box('Avenue colonnade roof terrace',(sign*(L/2-2.775),0,13.90),(5.55,W,.30),ROOF_TILE,.018)
+    cx=sign*(L/2-4.5)
+    attic_holes=[(float(y)-.75,float(y)+.75,16.7-.825,16.7+.825) for y in np.arange(-61,62,4.4)]
+    pierced_wall('Avenue recessed attic masonry',cx,-W/2,W/2,13.2,WING_ROOF,2.1,'X',attic_holes,GRANITE)
+    cornice('Avenue attic roof coping',(cx,0),W,height=WING_PARAPET-1.0)
+    for yy in np.arange(-61,62,4.4):
+        recessed_sash('Avenue attic sash',(cx+sign*1.05,float(yy),16.7),1.50,1.65,'X',sign)
+    beam_support=box('Avenue Doric architrave and frieze',(sign*(L/2-2.5),0,(10.668+13.01)/2),(6.0,W,13.01-10.668),GRANITE,.015)
+    pts=eastpoints if sign>0 else [(-L/2+.86,y,0) for y in [-6.7,-2.23,2.23,6.7]]
+    for point in pts:
+        basepts=[(point[0]+v.co.x,point[1]+v.co.y,v.co.z) for v in doric.data.vertices if v.co.z<.001]
+        cappts=[(point[0]+v.co.x,point[1]+v.co.y,v.co.z) for v in doric.data.vertices if abs(v.co.z-10.668)<.001]
+        contact('Avenue Doric foot '+str(point),None,lambda:[o for o in EXTERIOR.objects if o.type=='MESH' and ('foundation' in o.name.lower() or 'paving' in o.name.lower())],points=basepts)
+        contact('Avenue Doric capital bearing '+str(point),None,beam_support,points=cappts)
+
+COURT_X0=43.0
+COURT_LENGTH=(152+8.5/12)*FT
+COURT_X1=COURT_X0+COURT_LENGTH
+COURT_INNER=8.8
+COURT_WIDTH=(115+6/12)*FT
+COURT_OUTER=COURT_INNER+COURT_WIDTH
+wing_roof('Dining/lunch and arcade vestibule',HALL_SHELL_W/2,COURT_X0,-HALL_SHELL_L/2,HALL_SHELL_L/2)
+wing_roof('Arcade office spine',COURT_X0,COURT_X1,-COURT_INNER,COURT_INNER)
+wing_roof('Eastern court vestibule band',COURT_X1,101.29,-HALL_SHELL_L/2,HALL_SHELL_L/2)
+wing_roof('Western subsidiary accommodation',-40.8563,-HALL_SHELL_W/2,-HALL_SHELL_L/2,HALL_SHELL_L/2)
+
+def courtyard_sash(name,center,axis):
+    x,y,z=center
+    dims=(.055,1.35,1.65) if axis=='X' else (1.35,.055,1.65)
+    box(name+' dark glazing',center,dims,WINDOW)
+    for sign in [-1,1]:
+        at=(x,y+sign*.73,z) if axis=='X' else (x+sign*.73,y,z)
+        dimensions=(.10,.10,1.85) if axis=='X' else (.10,.10,1.85)
+        box(name+' stone jamb',at,dimensions,LIMESTONE,.015)
+    for dz in [-.91,.91,0]:
+        dims=(.12,1.55,.10) if axis=='X' else (1.55,.12,.10)
+        box(name+' sill and sash transom',(x,y,z+dz),dims,LIMESTONE,.012)
+
+for sign in [-1,1]:
+    ya,yb=sorted([sign*COURT_INNER,sign*COURT_OUTER])
+    wing_roof('Carriage-drive court edge',COURT_X0,COURT_X1,min(sign*COURT_OUTER,sign*HALL_SHELL_L/2),max(sign*COURT_OUTER,sign*HALL_SHELL_L/2))
+    for xx,face in [(COURT_X0,1),(COURT_X1,-1)]:
+        box('Eastern court east/west enclosing wall',(xx-face*.30,(ya+yb)/2,WING_ROOF/2),(.60,yb-ya,WING_ROOF),LIMESTONE,.02)
+        for y in np.arange(ya+2.2,yb-1.0,4.1):
+            for z in [2.7,7.1,11.5,15.9]:courtyard_sash('Four-storey court sash',(xx+face*.035,float(y),z),'X')
+    for yy,face in [(ya,1),(yb,-1)]:
+        box('Eastern court north/south enclosing wall',((COURT_X0+COURT_X1)/2,yy-face*.30,WING_ROOF/2),(COURT_LENGTH,.60,WING_ROOF),LIMESTONE,.02)
+        for x in np.arange(COURT_X0+2.2,COURT_X1-1.0,4.1):
+            for z in [2.7,7.1,11.5,15.9]:courtyard_sash('Four-storey court sash',(float(x),yy+face*.035,z),'Y')
+    # Gibbs240: these are OPEN courts above street-level glazed train sheds.
+    # The high office roof ring must not be bridged by an invented high roof.
+    mx=(COURT_X0+COURT_X1)/2;my=(ya+yb)/2
+    ml=(91+7.5/12)*FT;mw=(20+4/12)*FT
+    eave=.15;ridge=1.50;monitor_top=2.25
+    outer=[(COURT_X0,ya,eave),(COURT_X1,ya,eave),(COURT_X1,yb,eave),(COURT_X0,yb,eave)]
+    inner=[(mx-ml/2,my-mw/2,ridge),(mx+ml/2,my-mw/2,ridge),(mx+ml/2,my+mw/2,ridge),(mx-ml/2,my+mw/2,ridge)]
+    mesh('Street-level hipped eastern train-shed glass',outer+inner,[(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],GLASS)
+    for i in range(4):
+        j=(i+1)%4
+        steel_i('Eastern shed eave/gutter',outer[i],outer[j],.13,.24,.022,.014)
+        steel_i('Eastern shed monitor curb',inner[i],inner[j],.12,.22,.020,.014)
+        steel_i('Eastern shed hip',outer[i],inner[i],.13,.25,.022,.014)
+        p,q=inner[i],inner[j]
+        mesh('Eastern shed monitor vertical glazing',[p,q,(q[0],q[1],monitor_top),(p[0],p[1],monitor_top)],[(0,1,2,3)],GLASS)
+    box('Eastern shed monitor Monel cap',(mx,my,monitor_top+.035),(ml+.15,mw+.15,.07),MONEL,.012)
+    for xx in np.linspace(COURT_X0,COURT_X1,18):
+        # Secondary glazing rafters follow the actual hipped surfaces.
+        for side in [-1,1]:
+            y0=my+side*COURT_WIDTH/2;y1=my+side*mw/2
+            targetx=max(mx-ml/2,min(mx+ml/2,float(xx)))
+            steel_i('Eastern train-shed glazing rafter',(float(xx),y0,eave),(targetx,y1,ridge),.065,.13,.016,.010)
 
 # Massive main-room volume: actual windows and interior are separate asset.
 hall_exterior_before=set(EXTERIOR.objects)
@@ -623,32 +926,41 @@ for sx in [-1,1]:
     sidecenter=(HALL_SHELL_W+HALL_ROOM_W)/4
     portal_half=39.5*FT/2
     for sy in [-1,1]:
-        part=HALL_SHELL_L/2-portal_half
-        box("Waiting exterior side shell with axial portal",(sx*sidecenter,sy*(HALL_SHELL_L/2+portal_half)/2,15.5),(wall,part,31.0),GRANITE)
+        # End walls own the corner return. Stop here rather than retaining a
+        # second coplanar external face through their full2.06m thickness.
+        end_return=48.50-2.06/2
+        part=end_return-portal_half
+        box("Waiting exterior side shell with axial portal",(sx*sidecenter,sy*(end_return+portal_half)/2,15.5),(wall,part,31.0),GRANITE)
     box("Waiting exterior axial portal header",(sx*sidecenter,0,20.8),(wall,portal_half*2,20.4),GRANITE)
     for yy in [-44.6,-14.07,14.07,44.6]:
-        box("Waiting exterior great pier",(sx*((112+10/12)*FT/2),yy,25.7),(1.88,4.9,38.0),GRANITE)
-    box("Waiting exterior clerestory spandrel",(sx*sidecenter,0,28.3),(wall,HALL_SHELL_L,3.2),GRANITE)
+        box("Waiting exterior great pier",(sx*((112+10/12)*FT/2),yy,25.7),(1.98,4.9,38.0),GRANITE)
+    # Lower shell already supplies this masonry band. A second coincident
+    # spandrel face produces black self-intersection ribbons under the glazing.
     cornice("Great hall exterior cornice",(sx*17.6,0),HALL_SHELL_L,height=45.0)
     for yy in [-28.14,0,28.14]:
-        lunette("Exterior thermal window",(sx*(HALL_SHELL_W/2+.02),yy,31.0),10.16,GLASS)
+        arch("Exterior thermal-window stone archivolt",(sx*(HALL_SHELL_W/2+.02),yy,31.0),10.16,.55,GRANITE,width=.52)
     # Upper spandrel wall above windows. Individual strips avoid black box mass.
-    for yy in np.arange(-HALL_SHELL_L/2,HALL_SHELL_L/2,1.5):
+    for ya in np.arange(-end_return,end_return,1.5):
+        yb=min(end_return,float(ya)+1.5);yy=(float(ya)+yb)/2
         nearest=min([-28.14,0,28.14],key=lambda t:abs(t-yy))
         d=abs(float(yy)-nearest)
         lower=31+math.sqrt(max(0,10.16**2-d*d)) if d<10.16 else 31
         if lower<46.0:
-            box("Granite thermal-window upper spandrel",(sx*sidecenter,float(yy),(lower+46.0)/2),(wall,1.52,46.0-lower),GRANITE)
+            box("Granite thermal-window upper spandrel",(sx*sidecenter,float(yy),(lower+46.0)/2),(wall,yb-float(ya),46.0-lower),GRANITE)
 for sy in [-1,1]:
-    box("Waiting end exterior continuous masonry shell",(0,sy*48.50,15.5),(HALL_SHELL_W,2.06,31),GRANITE)
-    box("Waiting end exterior lintel",(0,sy*48.50,28.2),(HALL_SHELL_W,2.06,3.0),GRANITE)
+    for xa,xb in [(-HALL_SHELL_W/2,-2.50),(2.50,HALL_SHELL_W/2)]:
+        box("Waiting end exterior masonry with bridge portal",((xa+xb)/2,sy*48.50,15.5),(xb-xa,2.06,31),GRANITE)
+    header=STREET_DROP+10.25
+    box('Waiting end exterior portal header',(0,sy*48.50,(31+header)/2),(5.0,2.06,31-header),GRANITE)
+    # The continuous end masonry already contains the window-sill band.
     for xx in [-15,15]: box("Waiting end exterior pier",(xx,sy*47.1,22),(6,2.8,43),GRANITE)
-    lunette("Waiting end thermal window",(0,sy*(HALL_SHELL_L/2+.02),31),10.16,GLASS,axis="Y")
+    arch("Waiting end exterior stone archivolt",(0,sy*(HALL_SHELL_L/2+.02),31),10.16,.55,GRANITE,axis="Y",width=.52)
     cornice("Waiting end cornice",(0,sy*48.50),HALL_SHELL_W+1.1,axis="X",height=45.0)
-    for xx in np.arange(-HALL_SHELL_W/2,HALL_SHELL_W/2,1.5):
+    for xa in np.arange(-HALL_SHELL_W/2,HALL_SHELL_W/2,1.5):
+        xb=min(HALL_SHELL_W/2,float(xa)+1.5);xx=(float(xa)+xb)/2
         lower=31+math.sqrt(max(0,10.16**2-float(xx)**2)) if abs(xx)<10.16 else 31
         if lower<46.0:
-            box("Waiting end upper masonry spandrel",(float(xx),sy*48.50,(lower+46.0)/2),(1.52,2.06,46.0-lower),GRANITE)
+            box("Waiting end upper masonry spandrel",(float(xx),sy*48.50,(lower+46.0)/2),(xb-float(xa),2.06,46.0-lower),GRANITE)
 # Pitched lead roof; three transverse ridges follow triple vaulted volume.
 for j in [-1,0,1]:
     y=j*28.14
@@ -660,7 +972,12 @@ for j in [-1,0,1]:
     lo=max(-HALL_SHELL_L/2,lo-2 if j==-1 else lo)
     hi=min(HALL_SHELL_L/2,hi+2 if j==1 else hi)
     verts=[(-half,lo,roofbase),(-half,hi,roofbase),(-half,y,167*FT),(half,lo,roofbase),(half,hi,roofbase),(half,y,167*FT)]
-    mesh("Lead roof transverse gabled bay",verts,[(0,2,1),(3,4,5),(0,3,5,2),(2,5,4,1)],IRON)
+    mesh("Monel roof transverse gabled bay",verts,[(0,3,5,2),(2,5,4,1)],MONEL)
+    for sign in [-1,1]:
+        x=sign*HALL_SHELL_W/2
+        mesh('Granite gable tympanum',[(x,lo,roofbase),(x,hi,roofbase),(x,y,167*FT)],[(0,1,2)],GRANITE)
+        for start,end in [((x,lo,roofbase),(x,y,167*FT)),((x,y,167*FT),(x,hi,roofbase))]:
+            section_beam('Continuous sloping gable stone coping',start,end,[(-.32,-.22),(.32,-.22),(.32,.22),(-.32,.22)],GRANITE)
 for obj in set(EXTERIOR.objects)-hall_exterior_before:
     obj.location.z-=STREET_DROP
 
@@ -698,7 +1015,13 @@ for xx in ([] if ARGS.no_context else [-111,-70,-30,30,70,111]):
 # ---------- Waiting room: monumental fluted order and intersecting vaults ----------
 print("Building waiting room architectural meshes",flush=True)
 HALL=collection("02 Main waiting room")
-box("Waiting room clear floor",(0,0,-.20),(HALL_W,HALL_L,.4),FLOOR)
+HALL_FLOOR=box("Waiting room clear floor",(0,0,-.20),(HALL_W,HALL_L,.4),FLOOR)
+END_LANDING_SLABS=[]
+IMPOSTS={}
+UPPER_PIERS={}
+for sx in [-1,1]:
+    for ya,yb in [(-HALL_ROOM_L/2,-7.75),(7.75,HALL_ROOM_L/2)]:
+        box('Wall-to-wall floor strip beyond clear dimension',(sx*(HALL_W+HALL_ROOM_W)/4,(ya+yb)/2,-.20),((HALL_ROOM_W-HALL_W)/2,yb-ya,.40),FLOOR,.000001)
 # Floor grout and larger dark border in genuine dimensions.
 for y in np.arange(-HALL_L/2,HALL_L/2,2.15):
     box("Marble transverse joint",(0,float(y),.003),(HALL_W,.025,.008),SHADOW)
@@ -711,7 +1034,8 @@ for sx in [-1,1]:
 for sx in [-1,1]:
     # Continuous masonry backing behind the recessed order, with axial entry.
     for sy in [-1,1]:
-        box("Waiting room continuous side backing",(sx*17.20,sy*25.7,15.5),(1.27,38.6,31.0),LIMESTONE)
+        part=HALL_ROOM_L/2-6.4
+        box("Waiting room continuous side backing",(sx*17.20,sy*(HALL_ROOM_L/2+6.4)/2,15.5),(1.27,part,31.0),LIMESTONE)
     box("Waiting axial portal header",(sx*17.20,0,20.8),(1.27,12.8,20.4),LIMESTONE)
     for yy in [-42.216,-14.072,14.072,42.216]:
         box("Great pier",(sx*16.0,yy,14.3),(1.1,6.0,28.6),LIMESTONE)
@@ -732,17 +1056,33 @@ for sx in [-1,1]:
                     box("Panel vertical moulded rebate",(sx*(16.20+inset*.5),yy+sign*halfwidth,20),(.24,.14,halfheight*2),LIMESTONE,.025)
         # Central east-west circulation passage: true opening at the axial bay.
         if yy != 0:
-            box("Ticket window wall",(sx*16.08,yy,6.4),(.85,19.2,12.8),LIMESTONE)
+            telephone=(sx==-1 and yy<0)
+            office_holes=[(yy+dy-.825,yy+dy+.825,.15 if telephone else 1.15,3.15) for dy in [-7.4,-4.9,-2.4,.1,2.6,5.1,7.6]]
+            pierced_wall('Ticket/parcel office structural screen',sx*16.08,yy-9.6,yy+9.6,0,12.8,.85,'X',office_holes,LIMESTONE)
+            office_front=pierced_wall('Botticino office front with actual grille openings',sx*15.60,yy-9.6,yy+9.6,0,3.65,.12,'X',office_holes,BOTTICINO)
             for dy in [-7.4,-4.9,-2.4,.1,2.6,5.1,7.6]:
-                box("Ticket grille opening",(sx*15.62,yy+dy,2.15),(.08,1.65,2.0),BRONZE)
+                if telephone:
+                    box('Telephone booth dark interior',(sx*16.18,yy+dy,1.65),(.045,1.65,3.0),BLACK)
+                    box('Clear-panel telephone booth door',(sx*15.55,yy+dy,1.65),(.045,1.45,2.85),LIGHT_GLASS)
+                    for side in [-1,1]:box('Botticino telephone booth partition',(sx*15.56,yy+dy+side*.86,1.65),(.16,.12,3.16),BOTTICINO,.02)
+                    flatbar('Telephone booth bronze pull',(sx*15.49,yy+dy+.53,1.12),(sx*15.49,yy+dy+.53,1.47),.035,.035,BRONZE)
+                    continue
+                box('Unmodelled ticket-office dark interior',(sx*16.18,yy+dy,2.15),(.045,1.65,2.0),BLACK)
+                box('Botticino ticket counter ledge',(sx*15.48,yy+dy,1.10),(.48,1.84,.12),BOTTICINO,.035)
                 for dz in [1.3,2.1,2.8]:
-                    box("Ticket grille crossbar",(sx*15.56,yy+dy,dz),(.08,1.7,.045),IRON)
+                    box("Ticket grille crossbar",(sx*15.55,yy+dy,dz),(.055,1.7,.045),BRONZE)
                 for p in [-.6,-.3,0,.3,.6]:
-                    box("Ticket grille upright",(sx*15.54,yy+dy+p,2.15),(.08,.025,1.8),IRON)
-            text("Ticket bureau lettering","T I C K E T S",(sx*15.53,yy,3.65),.38,BLACK,
+                    box("Ticket grille upright",(sx*15.55,yy+dy+p,2.15),(.055,.025,2.0),BRONZE)
+                for sign in [-1,1]:box('Botticino grille opening jamb',(sx*15.56,yy+dy+sign*.86,2.15),(.16,.12,2.16),BOTTICINO,.02)
+            office_label='T I C K E T S' if (sx==1 and yy<0) or (sx==-1 and yy>0) else 'P A R C E L S' if sx==1 else 'T E L E P H O N E S'
+            text("Opening-era office lettering",office_label,(sx*15.51,yy,3.68),.32,BLACK,
                 (math.pi/2,0,math.pi/2 if sx>0 else -math.pi/2))
-        for ystep in [yy-4.75,yy+4.75]:
-            ionic_order("Side screen Ionic order",(sx*15.1,ystep,3*FT),axis='X')
+        order_tops=[]
+        order_spacing=5.3 if yy==0 else 9.5
+        for ystep in [yy-order_spacing,yy+order_spacing]:
+            order_tops.append(ionic_order("Side screen Ionic order",(sx*15.1,ystep,3*FT),axis='X'))
+        lintel=box('Side Ionic screen continuous trabeation',(sx*15.1,yy,33*FT+.26),(1.55,2*order_spacing+1.6,.52),LIMESTONE,.025)
+        for abacus in order_tops:contact('Side Ionic abacus to trabeation',abacus,lintel,'top')
         thermal_window("Main room Diocletian window",(sx*16.45,yy,31.0))
         # Horizontal stone window sill.
         box("Thermal window sill",(sx*15.6,yy,31.05),(1.0,20.9,.46),LIMESTONE)
@@ -755,8 +1095,10 @@ for sx in [-1,1]:
     # Section302 has individual projecting imposts above the colossal columns;
     # a continuous lower band would cut across and obscure the mural fields.
     for yy in [-42.216,-14.072,14.072,42.216]:
-        box("Individual colossal-order architrave and frieze",(sx*14.8,yy,INTERIOR_ORDER_TOP+1.5),(2.0,4.8,3.0),LIMESTONE)
-        cornice("Individual colossal-order impost cornice",(sx*14.8,yy),4.8,height=INTERIOR_ORDER_TOP+INTERIOR_ENTABLATURE-1.0,material=LIMESTONE)
+        IMPOSTS[(sx,yy)]=colossal_impost(sx*14.2,yy)
+        pier=box('Attic pilaster from impost to vault spring',(sx*15.0,yy,(INTERIOR_ORDER_TOP+INTERIOR_ENTABLATURE+HALL_H)/2),(3.10,4.80,HALL_H-INTERIOR_ORDER_TOP-INTERIOR_ENTABLATURE),LIMESTONE,.018)
+        UPPER_PIERS[(sx,yy)]=pier
+        contact('Upper vault pier bears on colossal impost',pier,IMPOSTS[(sx,yy)])
 
 # Interior colossal Corinthian order: eight columns. Capitals are disclosed abstractions.
 corinth=lathe("Fluted Corinthian shaft master",[(0,1.18),(.18,1.28),(.50,1.13),(.8,1.03),(INTERIOR_BASE,1.0),(4.2,.98),(9,.93),(14.4,.86),(INTERIOR_BASE+INTERIOR_SHAFT,.81)],INTERIOR_GRANITE,144,24)
@@ -764,18 +1106,25 @@ corinth.location=(0,0,-100)
 corinth.hide_render=True
 for sx in [-1,1]:
     for yy in [-42.216,-14.072,14.072,42.216]:
-        copy_obj(corinth,"Colossal fluted interior column",(sx*14.2,yy,INTERIOR_PEDESTAL))
-        box("Colossal column plinth",(sx*14.2,yy,INTERIOR_PEDESTAL/2),(3.3,3.3,INTERIOR_PEDESTAL),LIMESTONE,.06)
+        shaft=copy_obj(corinth,"Colossal fluted interior column",(sx*14.2,yy,INTERIOR_PEDESTAL))
+        pedestal=moulded_square('Colossal pedestal with continuous plinth and cap',(sx*14.2,yy,0),[(0,3.30),(.15,3.30),(.24,3.14),(.36,3.14),(.44,3.00),(INTERIOR_PEDESTAL-.35,3.00),(INTERIOR_PEDESTAL-.23,3.25),(INTERIOR_PEDESTAL,3.25)])
+        contact('Colossal pedestal on Main floor',pedestal,HALL_FLOOR)
+        contact('Colossal shaft on pedestal',shaft,pedestal)
         # Capital core and two ranks of curved, abstracted acanthus leaves.
         cap_start=INTERIOR_PEDESTAL+INTERIOR_BASE+INTERIOR_SHAFT
         cap=lathe("Corinthian capital bell",[(0,.81),(.22,.84),(.8,1.04),(1.8,1.23),(2.25,1.38),(INTERIOR_CAPITAL,1.38)],LIMESTONE,32)
         cap.location=(sx*14.2,yy,cap_start)
-        carved_abacus("Concave Corinthian abacus",(sx*14.2,yy,INTERIOR_ORDER_TOP-.14))
+        cap['closed_support']=True
+        abacus=carved_abacus("Concave Corinthian abacus",(sx*14.2,yy,INTERIOR_ORDER_TOP-.14))
+        contact('Colossal capital on shaft',cap,shaft)
+        contact('Colossal abacus on bell',abacus,cap)
+        contact('Colossal impost on capital',IMPOSTS[(sx,yy)],abacus)
         corinthian_scrolls((sx*14.2,yy,cap_start))
         for rank in [0,1]:
             for k in range(8):
                 a=(k+rank*.5)*math.pi/4
-                capital_leaf((sx*14.2,yy,cap_start),a,rank)
+                leaf=capital_leaf((sx*14.2,yy,cap_start),a,rank)
+                contact('Corinthian leaf root to bell',leaf,cap)
 
 # Individual shallow ashlar faces give the wall joints true depth and arrises.
 # Course cadence is inferred from the photographs; no survey of every block exists.
@@ -796,40 +1145,69 @@ for sx in [-1,1]:
         for z in np.arange(3,26,1.55):
             box("Pier ashlar joint",(sx*15.40,yy,float(z)),(.016,5.8,.025),SHADOW)
 
-# End walls: lower colonnade screen and high single semicircular thermal window.
+# Street-level north/south bridges and their central stairs (plates300/302).
+# The277ft clear versus314ft4 room hierarchy leaves an18ft8 end portico.
 for sy in [-1,1]:
-    # The end screen fronts a round-headed glazed doorway in the photograph.
-    for xx in [-9.1,9.1]:
-        box("Waiting end masonry backing",(xx,sy*44.8,15.5),(13.2,1.2,31.0),LIMESTONE)
-    box("Waiting end portal upper backing",(0,sy*44.8,20.7),(5,1.2,20.6),LIMESTONE)
-    portal_y=sy*44.11
-    box("End portal bronze glazed doors",(0,portal_y,3.8),(4.7,.10,7.6),LIGHT_GLASS,.0)
-    lunette("End portal round-headed transom",(0,portal_y,7.6),2.35,LIGHT_GLASS,axis='Y',grid=False)
-    for xx in [-2.35,-1.2,0,1.2,2.35]:
-        flatbar("End door bronze upright",(xx,portal_y,0),(xx,portal_y,7.6),.06,.06,BRONZE)
-    for zz in [0,2.4,5,7.6]:
-        flatbar("End door bronze transom",(-2.35,portal_y,zz),(2.35,portal_y,zz),.06,.06,BRONZE)
-    for x in [-14.2,14.2]:
-        box("Hall end pier",(x,sy*43.6,15),(3.1,2.4,30),LIMESTONE)
-    for x in [-9.5,-6.7,-3.9,3.9,6.7,9.5]:
-        box("End Ionic order pedestal",(x,sy*42.6,1.5*FT),(1.3,1.3,3*FT),LIMESTONE,.025)
-        ionic_order("End screen Ionic order",(x,sy*42.6,3*FT))
-    screen_top=33*FT
-    box("End screen architrave",(0,sy*42.9,screen_top+.16),(25.5,1.4,.32),LIMESTONE,.025)
-    box("End screen frieze",(0,sy*42.9,screen_top+.78),(25.5,1.18,.92),LIMESTONE,.018)
-    box("End screen cornice",(0,sy*42.9,screen_top+1.45),(25.9,1.65,.42),LIMESTONE,.025)
-    box("End blind wall above screen",(0,sy*43.5,21.65),(28.5,1.7,17.5),LIMESTONE)
-    mural_field((0,sy*42.60,20.0),axis='Y')
+    lo,hi=HALL_L/2,HALL_ROOM_L/2
+    base=box('Main floor beneath end entrance landing',(0,sy*(lo+hi)/2,-.12),(HALL_ROOM_W,hi-lo,.24),FLOOR,.000001)
+    landing=box('Raised end bridge landing',(0,sy*(lo+hi)/2,STREET_DROP-.16),(HALL_ROOM_W,hi-lo,.32),FLOOR,.015)
+    END_LANDING_SLABS.append(landing)
+    retaining=[]
+    # Actual openings under the two flanks, as seen in the Detroit photograph.
     for sign in [-1,1]:
-        box("End mural moulded horizontal frame",(0,sy*42.45,20+sign*(MURAL_HEIGHT/2+.2)),(MURAL_WIDTH+.4,.25,.18),LIMESTONE,.025)
-        box("End mural moulded vertical frame",(sign*(MURAL_WIDTH/2+.2),sy*42.45,20),(.18,.25,MURAL_HEIGHT+.4),LIMESTONE,.025)
-    thermal_window("End Diocletian window",(0,sy*42.52,31.0),axis="Y")
-    box("End lunette sill",(0,sy*42.5,31.0),(21,1,.44),LIMESTONE)
-    cornice("End great cornice",(0,sy*42.3),HALL_W,axis="X",height=INTERIOR_ORDER_TOP+INTERIOR_ENTABLATURE-1.0,material=LIMESTONE)
-    # Upper end spandrels hugging the lunette shape.
-    for x in np.arange(-15.5,16,1):
+        x0,x1=sorted([sign*END_STAIR_WIDTH/2,sign*HALL_ROOM_W/2])
+        doorway=sign*9.6;doorw=2.1;doorh=3.0
+        segments=[(x0,doorway-doorw/2),(doorway+doorw/2,x1)]
+        for xa,xb in segments:
+            if xb>xa:retaining.append(box('End landing masonry supporting pier',((xa+xb)/2,sy*(lo+.28),STREET_DROP/2),(xb-xa,.56,STREET_DROP),LIMESTONE,.02))
+        retaining.append(box('End landing door lintel',(doorway,sy*(lo+.28),(doorh+STREET_DROP)/2),(doorw,.56,STREET_DROP-doorh),LIMESTONE,.02))
+    girder=steel_i('End bridge structural bearing girder',(-HALL_W/2,sy*(lo+.45),STREET_DROP-.34),(HALL_W/2,sy*(lo+.45),STREET_DROP-.34),.24,.60,.035,.022)
+    contact('End landing deck to masonry piers',landing,retaining)
+    contact('End landing girder bearing',girder,retaining)
+    # Broad central flight is plan-derived; final run/riser registration is qualified.
+    steps=28
+    for k in range(steps):
+        y=sy*(END_STAIR_FOOT+(k+.5)*(END_STAIR_TOP-END_STAIR_FOOT)/steps)
+        h=(k+1)*STREET_DROP/steps
+        tread=box('North/south bridge stair solid tread',(0,y,h/2),(END_STAIR_WIDTH,(END_STAIR_TOP-END_STAIR_FOOT)/steps+.004,h),LIMESTONE,.012)
+        contact('End stair foundation contact',tread,HALL_FLOOR)
+    for sign in [-1,1]:
+        cheek=stone_cheek('End stair attached stone parapet',(sign*(END_STAIR_WIDTH/2+.23),sy*END_STAIR_FOOT,0),(sign*(END_STAIR_WIDTH/2+.23),sy*END_STAIR_TOP,STREET_DROP),.46,.72)
+        contact('End stair parapet foundation',cheek,HALL_FLOOR)
+    # Six equally spaced Ionic orders stand on the raised continuous deck.
+    order_y=sy*(lo+.80)
+    tops=[]
+    for x in [-9.5,-5.7,-1.9,1.9,5.7,9.5]:
+        tops.append(ionic_order('Raised end screen Ionic order',(x,order_y,STREET_DROP+3*FT)))
+    screen_top=STREET_DROP+33*FT
+    architrave=box('End screen architrave',(0,order_y,screen_top+.16),(25.5,1.4,.32),LIMESTONE,.025)
+    frieze=box('End screen frieze',(0,order_y,screen_top+.78),(25.5,1.18,.92),LIMESTONE,.018)
+    crown=box('End screen cornice',(0,order_y,screen_top+1.45),(25.9,1.65,.42),LIMESTONE,.025)
+    for obj in tops:contact('Raised Ionic order carries trabeation',obj,architrave,'top')
+    contact('End screen frieze bearing',frieze,architrave)
+    contact('End screen cornice bearing',crown,frieze)
+    # End room plane remains distinct from the shorter clear central hall.
+    endwall=sy*(HALL_ROOM_L/2+.15)
+    for xx in [-9.1,9.1]:box('Waiting end masonry backing',(xx,endwall,15.5),(13.2,1.30,31.0),LIMESTONE)
+    header_start=STREET_DROP+10.25
+    box('Waiting end portal upper backing',(0,endwall,(header_start+31)/2),(5,1.30,31-header_start),LIMESTONE)
+    portal_y=endwall-sy*.68
+    box('Raised end portal bronze glazed doors',(0,portal_y,STREET_DROP+3.8),(4.7,.10,7.6),LIGHT_GLASS)
+    lunette('Raised end portal round-headed transom',(0,portal_y,STREET_DROP+7.6),2.35,LIGHT_GLASS,axis='Y',grid=False)
+    for xx in [-2.35,-1.2,0,1.2,2.35]:flatbar('End door bronze upright',(xx,portal_y,STREET_DROP),(xx,portal_y,STREET_DROP+7.6),.06,.06,BRONZE)
+    for zz in [0,2.4,5,7.6]:flatbar('End door bronze transom',(-2.35,portal_y,STREET_DROP+zz),(2.35,portal_y,STREET_DROP+zz),.06,.06,BRONZE)
+    # The two end-wall flanks and portal header already close this entire
+    # elevation. A second backing here would duplicate their interior faces.
+    mural_y=endwall-sy*.67
+    mural_field((0,mural_y,20.0),axis='Y')
+    for sign in [-1,1]:
+        box('End mural moulded horizontal frame',(0,mural_y-sy*.03,20+sign*(MURAL_HEIGHT/2+.2)),(MURAL_WIDTH+.4,.25,.18),LIMESTONE,.025)
+        box('End mural moulded vertical frame',(sign*(MURAL_WIDTH/2+.2),mural_y-sy*.03,20),(.18,.25,MURAL_HEIGHT+.4),LIMESTONE,.025)
+    thermal_window('End Diocletian window',(0,sy*(HALL_ROOM_L/2-.05),31.0),axis='Y')
+    box('End lunette sill',(0,endwall-sy*.55,31.0),(21,1,.44),LIMESTONE)
+    for x in np.arange(-HALL_ROOM_W/2,HALL_ROOM_W/2,1):
         lower=31+math.sqrt(max(0,10.16**2-float(x)**2)) if abs(x)<10.16 else 31
-        if lower<HALL_H: box("End upper spandrel",(float(x),sy*43.0,(lower+HALL_H)/2),(1.03,1.7,HALL_H-lower),LIMESTONE)
+        if lower<HALL_H:box('End upper spandrel',(float(x),endwall,(lower+HALL_H)/2),(1.03,1.30,HALL_H-lower),LIMESTONE)
 
 spring=30.35
 rise=HALL_H-spring
@@ -843,33 +1221,53 @@ def vault_surface(x,y,cy,depth=0):
     dy=(vault_z(x,min(b,y+e))-vault_z(x,max(-b,y-e)))/(min(b,y+e)-max(-b,y-e))
     normal=Vector((-dx,-dy,1)).normalized()
     return tuple(Vector((x,cy+y,vault_z(x,y)))-normal*depth)
+def coffer_cell(name,cx,yy,hw,hh,surface):
+    outer=[(-1,-1),(-1,-1),(1,-1),(1,-1),(1,1),(1,1),(-1,1),(-1,1)]
+    octagon=[(-1,-.66),(-.66,-1),(.66,-1),(1,-.66),(1,.66),(.66,1),(-.66,1),(-1,.66)]
+    verts=[];faces=[]
+    for layer,(shrink,depth) in enumerate([(1,.36),(.91,.36),(.84,.29),(.77,.065),(.72,0)]):
+        outline=outer if layer==0 else octagon
+        verts.extend(surface(cx+u*hw*shrink,yy+v*hh*shrink,depth) for u,v in outline)
+    for layer in range(4):
+        for k in range(8):
+            n=(k+1)%8
+            face=(layer*8+k,layer*8+n,(layer+1)*8+n,(layer+1)*8+k)
+            if layer==0 and outer[k]==outer[n]:face=(layer*8+k,(layer+1)*8+n,(layer+1)*8+k)
+            faces.append(tuple(reversed(face)))
+    center_index=len(verts);verts.append(surface(cx,yy,0))
+    faces.extend((center_index,32+(k+1)%8,32+k) for k in range(8))
+    return mesh(name,verts,faces,PALE)
+
+# Gibbs255 explicitly states10ft coffers. The projected module is about10ft;
+# field count and the warped edge pockets remain reconstructed from photographs.
+grid_x=max(1,round(2*a/(10*FT)));grid_y=max(1,round(2*b/(10*FT)))
 for j in [-1,0,1]:
     cy=j*HALL_L/3
-    # Section302 and photograph306 show octagonal pockets in square framing.
-    # Five actual moulding levels form each pocket; there is no dark decal plane.
-    grid=13
-    for iy in range(grid):
-        for ix in range(grid):
-            cx=-a+(ix+.5)*2*a/grid;yy=-b+(iy+.5)*2*b/grid
-            hw,hh=a/grid,b/grid
-            outer=[(-1,-1),(-1,-1),(1,-1),(1,-1),(1,1),(1,1),(-1,1),(-1,1)]
-            octagon=[(-1,-.66),(-.66,-1),(.66,-1),(1,-.66),(1,.66),(.66,1),(-.66,1),(-1,.66)]
-            verts=[];faces=[]
-            for layer,(shrink,depth) in enumerate([(1,.36),(.91,.36),(.84,.29),(.77,.065),(.72,0)]):
-                outline=outer if layer==0 else octagon
-                verts.extend(vault_surface(cx+u*hw*shrink,yy+v*hh*shrink,cy,depth) for u,v in outline)
-            for layer in range(4):
-                for k in range(8):
-                    n=(k+1)%8
-                    face=(layer*8+k,layer*8+n,(layer+1)*8+n,(layer+1)*8+k)
-                    if layer==0 and outer[k]==outer[n]:face=(layer*8+k,(layer+1)*8+n,(layer+1)*8+k)
-                    faces.append(tuple(reversed(face)))
-            center_index=len(verts);verts.append(vault_surface(cx,yy,cy))
-            faces.extend((center_index,32+(k+1)%8,32+k) for k in range(8))
-            mesh("Octagonal coffer with stepped bevel and deep returns",verts,faces,PALE)
-    # Transverse arch ribs are modelled with the same vault section.
-    for sy in [-1,1]:
-        arch("Vault transverse molded rib",(0,cy+sy*b,spring-.3),a,.8,LIMESTONE,axis="Y",width=.45,rise=rise)
+    for iy in range(grid_y):
+        for ix in range(grid_x):
+            cx=-a+(ix+.5)*2*a/grid_x;yy=-b+(iy+.5)*2*b/grid_y
+            coffer_cell('Ten-foot-module octagonal plaster coffer',cx,yy,a/grid_x,b/grid_y,lambda x,y,d,cy=cy:vault_surface(x,y,cy,d))
+# Four actual boundary ribs; shared bay lines are not duplicated.
+for y in [-HALL_L/2,-HALL_L/6,HALL_L/6,HALL_L/2]:
+    rib=arch('Continuous transverse vault bearing rib',(0,y,spring-.3),a,.8,LIMESTONE,axis='Y',width=.45,rise=rise)
+    yy=min([-42.216,-14.072,14.072,42.216],key=lambda c:abs(c-y))
+    for sx in [-1,1]:contact('Vault rib spring on upper pier',None,UPPER_PIERS[(sx,yy)],points=[(sx*a,y,spring-.3)],source='Architects plates302/310: projecting impost, upper pilaster and vault haunch')
+
+# The reported314ft4 room includes the raised end porticos beyond the277ft
+# central hall. Matching barrel strips close the ceiling over those porticos.
+def barrel_surface(x,y,depth=0):
+    z=spring+rise*math.sqrt(max(0,1-(x/a)**2))
+    e=.015;xm=max(-a,x-e);xp=min(a,x+e)
+    slope=rise*(math.sqrt(max(0,1-(xp/a)**2))-math.sqrt(max(0,1-(xm/a)**2)))/(xp-xm)
+    normal=Vector((-slope,0,1)).normalized()
+    return tuple(Vector((x,y,z))-normal*depth)
+for sy in [-1,1]:
+    begin=HALL_L/2;length=(HALL_ROOM_L-HALL_L)/2
+    for iy in range(2):
+        cy=sy*(begin+(iy+.5)*length/2)
+        for ix in range(grid_x):
+            cx=-a+(ix+.5)*2*a/grid_x
+            coffer_cell('End-portico octagonal barrel coffer',cx,cy,a/grid_x,length/4,barrel_surface)
 
 # Period screen benches, lamps and clocks: positions approximate, documented.
 for sx in [-1,1]:
@@ -893,10 +1291,15 @@ for sx in [-1,1]:
 
 # The one-storey main stair descends from street arcade to the main floor.
 # Width39ft6 is published;28risers are an explicit reconstruction of14ft drop.
+main_stair_base=box('Main stair structural foundation slab',((16.5+24.9)/2,0,-.15),(24.9-16.5,39.5*FT+.95,.30),FLOOR,.000001)
 for k in range(28):
     x=16.5+(k+.5)*.30
     top=(k+1)*.1524
-    box("Main stair solid tread",(x,0,top/2),(.304,39.5*FT,top),LIMESTONE,.012)
+    step=box("Main stair solid tread",(x,0,top/2),(.304,39.5*FT,top),LIMESTONE,.012)
+    contact('Grand stair solid tread foundation',step,main_stair_base)
+for sign in [-1,1]:
+    cheek=stone_cheek('Grand stair joined stone parapet',(16.5,sign*(39.5*FT/2+.23),0),(24.9,sign*(39.5*FT/2+.23),STREET_DROP),.46,.80)
+    contact('Grand stair parapet foundation',cheek,main_stair_base)
 box("Main stair lower threshold floor",((16.5+HALL_W/2)/2,0,-.10),(16.5-HALL_W/2,39.5*FT,.20),FLOOR,.000001)
 box("West axial threshold floor",(-(HALL_ROOM_W+HALL_W)/4,0,-.10),((HALL_ROOM_W-HALL_W)/2,15.5,.20),FLOOR,.000001)
 box("Street-level loggia landing",((24.9+32.71)/2,0,STREET_DROP-.10),(32.71-24.9,15.5,.20),FLOOR,.015)
@@ -907,6 +1310,7 @@ CONCOURSE=collection("03 Glass and iron concourse")
 CX=-73
 CW=(210+11/12)*FT
 CL=320*FT
+CON_FLOOR_L=475*FT
 WEST=CX-CW/2
 EW_SPANS=[(85+10/12)*FT,(95+4/12)*FT,(85+10/12)*FT]
 Y_BOUND=[-sum(EW_SPANS)/2]
@@ -921,12 +1325,13 @@ CROWN=((417+6.375/12)-320)*FT
 # ASCEplateLXX original elevations, registered to theE320 main-floor datum.
 EW_SPRING=CROWN-((417+6.375/12)-(367+3/12))*FT
 NS_SPRING=CROWN-((417+6.375/12)-(356+5/12))*FT
-GLAZING_VALLEY=((393+6/12)-320)*FT
+BRANCH_JUNCTION=((393+6/12)-320)*FT
+GLAZING_VALLEY=((401+9/12)-320)*FT
 EXIT_LEVEL=-(27.5-17)*FT
 TOR_LEVEL=((290+10.125/12)-320)*FT
 PLATFORM_LEVEL=TOR_LEVEL+(3+10/12)*FT
 STAIR_HEAD_X=CX+CW/2-1.4
-ACCESS_CENTRES=[float(y) for y in np.linspace(-44,44,9)]
+ACCESS_CENTRES=[-z for z in [68.764528,54.791453,40.818378,27.149065,13.327870,-.341443,-13.555112,-27.224425,-40.321460]]
 MAIN_STAIR_HOLES=[(STAIR_HEAD_X-6.4,STAIR_HEAD_X+.12,y-1.65,y+1.65) for y in ACCESS_CENTRES]
 LOWER_SHIFT=.70
 EXIT_STAIR_HOLES=[(STAIR_HEAD_X-10.5-LOWER_SHIFT,STAIR_HEAD_X-6.0-LOWER_SHIFT,y-1.65,y+1.65) for y in ACCESS_CENTRES]
@@ -934,16 +1339,18 @@ def floor_with_voids(name,bounds,holes,level,thickness=.30):
     x0,x1,y0,y1=bounds
     xs=sorted({x0,x1,*[max(x0,min(x1,h[k])) for h in holes for k in [0,1]]})
     ys=sorted({y0,y1,*[max(y0,min(y1,h[k])) for h in holes for k in [2,3]]})
+    objects=[]
     for a,b in zip(xs,xs[1:]):
         for c,d in zip(ys,ys[1:]):
             if b-a<.001 or d-c<.001:continue
             xx,yy=(a+b)/2,(c+d)/2
             if any(h[0]<=xx<=h[1] and h[2]<=yy<=h[3] for h in holes):continue
-            box(name,(xx,yy,level-thickness/2),(b-a,d-c,thickness),FLOOR,.000001)
-floor_with_voids("Main concourse floor with real stair cutouts",(WEST,CX+CW/2,-CL/2,CL/2),MAIN_STAIR_HOLES,0,.44)
-floor_with_voids("Exit concourse linked circulation floor",(STAIR_HEAD_X-13,STAIR_HEAD_X-5.5,-CL/2,CL/2),EXIT_STAIR_HOLES,EXIT_LEVEL)
+            objects.append(box(name,(xx,yy,level-thickness/2),(b-a,d-c,thickness),FLOOR,.000001))
+    return objects
+CON_MAIN_FLOORS=floor_with_voids("Main concourse floor with real stair cutouts",(WEST,CX+CW/2,-CON_FLOOR_L/2,CON_FLOOR_L/2),MAIN_STAIR_HOLES,0,.44)
+floor_with_voids("Exit concourse linked circulation floor",(STAIR_HEAD_X-13,STAIR_HEAD_X-5.5,-CON_FLOOR_L/2,CON_FLOOR_L/2),EXIT_STAIR_HOLES,EXIT_LEVEL)
 for xx in np.arange(CX-CW/2,CX+CW/2,2):
-    ys=sorted({-CL/2,CL/2,*[h[k] for h in MAIN_STAIR_HOLES if h[0]-.02<=xx<=h[1]+.02 for k in [2,3]]})
+    ys=sorted({-CON_FLOOR_L/2,CON_FLOOR_L/2,*[h[k] for h in MAIN_STAIR_HOLES if h[0]-.02<=xx<=h[1]+.02 for k in [2,3]]})
     for ya,yb in zip(ys,ys[1:]):
         if any(h[0]-.02<=xx<=h[1]+.02 and h[2]<=(ya+yb)/2<=h[3] for h in MAIN_STAIR_HOLES):continue
         box("Concourse floor joint",(float(xx),(ya+yb)/2,.008),(.025,yb-ya,.015),SHADOW)
@@ -972,7 +1379,7 @@ def ns_roof(x):
 def roofpoint(x,y):
     ew=ew_roof(y)
     # LXX separates the springing line of the exposed cantilever arch from
-    # the much higher gutter/roof valley, explicitly labelled E393ft6in.
+    # the gutter node E401ft9in,8ft3in above branch junction E393ft6in.
     ew=max(ew,GLAZING_VALLEY)
     if x<X_WEST_INNER:
         ew=19.7+(ew-19.7)*(x-WEST)/(X_WEST_INNER-WEST)
@@ -996,7 +1403,7 @@ def sweep_i(name,points,plane,width=.16,depth=.24):
         faces.extend((i*m+k,i*m+(k+1)%m,(i+1)*m+(k+1)%m,(i+1)*m+k) for k in range(m))
     return mesh(name,verts,faces,IRON)
 
-def lattice_arch(name,points,plane):
+def lattice_arch(name,points,plane,anchors=None,roof_chord=True):
     n=Vector(plane).normalized();upper=[];lower=[]
     for i,p in enumerate(points):
         tangent=(Vector(points[min(i+1,len(points)-1)])-Vector(points[max(0,i-1)])).normalized()
@@ -1010,6 +1417,7 @@ def lattice_arch(name,points,plane):
         upper_offset=(1-bearing)*depth/2-bearing*.13
         upper.append(Vector(p)+outward*upper_offset)
         lower.append(Vector(p)+outward*(upper_offset-depth))
+        if roof_chord:upper[-1].z=max(upper[-1].z,roofpoint(p[0],p[1])-.10)
     for sign in [-1,1]:
         offset=n*sign*FT
         up=[tuple(p+offset) for p in upper];lo=[tuple(p+offset) for p in lower]
@@ -1021,23 +1429,39 @@ def lattice_arch(name,points,plane):
     for i in range(0,len(points),4):
         flatbar(name+" cross-web diaphragm",upper[i]-n*FT,upper[i]+n*FT,.12,.035)
         flatbar(name+" cross-web diaphragm",lower[i]-n*FT,lower[i]+n*FT,.12,.035)
+    if anchors:
+        for end,index in [('start',0),('end',-1)]:
+            x,y=anchors[0 if index==0 else 1]
+            for chord,path in [('upper',upper),('lower',lower)]:
+                support=bearing_collar(x,y,path[index].z)
+                for side in [-1,1]:
+                    point=path[index]+n*side*FT
+                    contact(name+' '+chord+' '+end+' web'+str(side),None,support,points=[tuple(point)],source='ASCE198–199 riveted cap/upper-column branch connection; plateLXIX/LXX and LOC Gottscho bearing photograph')
 
 PIER_HEIGHTS={}
 PIER_OBJECTS={}
+PIER_MAJOR={}
+BEARING_COLLARS={}
 def lattice_pier(x,y,height,major=True):
     key=(round(x,3),round(y,3))
     if PIER_HEIGHTS.get(key,0)>=height-.01:return
-    if key in PIER_OBJECTS:bpy.data.batch_remove(ids=PIER_OBJECTS[key])
+    if key in PIER_OBJECTS:
+        old=PIER_OBJECTS[key]
+        CONTACTS[:]=[r for r in CONTACTS if r['part'] not in old]
+        bpy.data.batch_remove(ids=old)
+    major=major or PIER_MAJOR.get(key,False)
+    PIER_MAJOR[key]=major
     PIER_HEIGHTS[key]=height
     before=set(COL.objects)
     width=3*FT if major else .62
     half=width/2
     leg=8*.0254 if major else .14
     thickness=.019
+    legs=[]
     for sx in [-1,1]:
         for sy in [-1,1]:
             profile=[(0,0),(sx*leg,0),(sx*leg,sy*thickness),(sx*thickness,sy*thickness),(sx*thickness,sy*leg),(0,sy*leg)]
-            section_beam("Built-up pier eight-inch angle",(x-sx*half,y-sy*half,.15),(x-sx*half,y-sy*half,height),profile)
+            legs.append(section_beam("Built-up pier eight-inch angle",(x-sx*half,y-sy*half,.15),(x-sx*half,y-sy*half,height),profile))
     levels=max(2,int(height/.85))
     for i in range(levels):
         z0=.25+(height-.5)*i/levels;z1=.25+(height-.5)*(i+1)/levels
@@ -1050,13 +1474,25 @@ def lattice_pier(x,y,height,major=True):
         for sign in [-1,1]:
             box("Pier ten-foot diaphragm collar",(x,y+sign*half,float(z)),(width+.10,.085,.10),IRON)
             box("Pier ten-foot diaphragm collar",(x+sign*half,y,float(z)),(.085,width+.10,.10),IRON)
-    box("Riveted pier base plate",(x,y,.08),(width+.3,width+.3,.16),IRON)
-    box("Riveted pier bearing cap plate",(x,y,height),(max(width+.3,1.10),max(width+.3,1.10),.12),IRON)
+    base=box("Riveted pier base plate",(x,y,.08),(width+.3,width+.3,.16),IRON)
+    cap=box("Riveted pier bearing cap plate",(x,y,height),(max(width+.3,1.10),max(width+.3,1.10),.12),IRON)
+    # Resolve against the final replacement assembly after any height upgrade.
+    contact('Lattice pier base on Main floor',base,CON_MAIN_FLOORS)
+    for legobj in legs:
+        contact('Pier angle on base plate',legobj,base)
+        contact('Pier angle into bearing cap',legobj,cap,'top')
     for sx in [-1,1]:
         for sy in [-1,1]:
             bolt=lathe("Pier foundation bolt",[(0,.045),(.05,.045)],IRON,6)
             bolt.location=(x+sx*(half+.065),y+sy*(half+.065),.16)
     PIER_OBJECTS[key]=set(COL.objects)-before
+
+def bearing_collar(x,y,z):
+    key=(round(x,3),round(y,3),round(z,3))
+    if key not in BEARING_COLLARS:
+        collar=box('Riveted arch/pier joint collar',(x,y,z),(1.15,1.15,.56),IRON,.008)
+        BEARING_COLLARS[key]=collar
+    return BEARING_COLLARS[key]
 
 MAIN_PIERS=[]
 for xx in [CROSS_LEFT,CROSS_RIGHT]:
@@ -1064,18 +1500,18 @@ for xx in [CROSS_LEFT,CROSS_RIGHT]:
         lattice_pier(xx,yy,EW_SPRING)
         MAIN_PIERS.append((xx,yy))
 for xx in [X_WEST_INNER,X_WEST_MIDDLE,X_EAST_INNER]:
-    for yy in Y_BOUND:lattice_pier(xx,yy,EW_SPRING,False)
+    for yy in Y_BOUND:lattice_pier(xx,yy,GLAZING_VALLEY,False)
 for yy in [-CL/2,CL/2]:
     for xx in [X_WEST_INNER,X_WEST_MIDDLE,CROSS_LEFT,CROSS_LEFT+27.5*FT,CROSS_LEFT+70.5*FT,CROSS_RIGHT,X_EAST_INNER]:
-        lattice_pier(xx,yy,NS_SPRING,False)
+        lattice_pier(xx,yy,max(GLAZING_VALLEY,roofpoint(xx,yy)),False)
 
 for xx in [X_WEST_INNER,X_WEST_MIDDLE,CROSS_LEFT,CROSS_RIGHT,X_EAST_INNER]:
     for lo,hi in zip(Y_BOUND,Y_BOUND[1:]):
         pts=[(xx,lo+(hi-lo)*i/48,ew_roof(lo+(hi-lo)*i/48)) for i in range(49)]
-        lattice_arch("E–W barrel primary arch",pts,(1,0,0))
+        lattice_arch("E–W barrel primary arch",pts,(1,0,0),((xx,lo),(xx,hi)))
 for yy in [-CL/2,*Y_BOUND,CL/2]:
     pts=[(CROSS_LEFT+(CROSS_RIGHT-CROSS_LEFT)*i/48,yy,ns_roof(CROSS_LEFT+(CROSS_RIGHT-CROSS_LEFT)*i/48)) for i in range(49)]
-    lattice_arch("N–S crossing-barrel primary arch",pts,(0,1,0))
+    lattice_arch("N–S crossing-barrel primary arch",pts,(0,1,0),((CROSS_LEFT,yy),(CROSS_RIGHT,yy)))
 
 # The diagonal groin ribs are derived from the two intersecting barrel surfaces.
 for lo,hi in zip(Y_BOUND,Y_BOUND[1:]):
@@ -1088,16 +1524,26 @@ for lo,hi in zip(Y_BOUND,Y_BOUND[1:]):
                 dx=rx*math.sqrt(max(0,1-((z-NS_SPRING)/(CROWN-NS_SPRING))**2))
                 dy=ry*math.sqrt(max(0,1-((z-EW_SPRING)/(CROWN-EW_SPRING))**2))
                 pts.append((CROSS_CENTER+sx*dx,cy+sy*dy,z))
+            # The branch begins on the actual corner pier, not an offset point
+            # on two incompatible ideal ellipses.
+            pts[0]=(CROSS_LEFT if sx<0 else CROSS_RIGHT,lo if sy<0 else hi,EW_SPRING)
             normal=Vector((sy*ry,-sx*rx,0)).normalized()
-            lattice_arch("Intersecting vault diagonal hip rib",pts,normal)
+            lattice_arch("Intersecting vault diagonal hip rib",pts,normal,((pts[0][0],pts[0][1]),(CROSS_CENTER,cy)),roof_chord=False)
 
 # Twelve-inch I-beam purlins, subordinate gutter ribs, and fine T glazing bars.
+ROOF_PURLINS=[]
 for yy in np.linspace(-CL/2,CL/2,45):
     pts=[(WEST+CW*i/48,float(yy),roofpoint(WEST+CW*i/48,float(yy))) for i in range(49)]
-    sweep_i("Twelve-inch steel roof purlin",pts,(0,1,0),.13,12*.0254)
+    ROOF_PURLINS.append(sweep_i("Twelve-inch steel roof purlin",pts,(0,1,0),.13,12*.0254))
+EDGE_GUTTERS=[]
+for xx in [WEST,CX+CW/2]:
+    pts=[(xx,-CL/2+CL*i/140,roofpoint(xx,-CL/2+CL*i/140)) for i in range(141)]
+    EDGE_GUTTERS.append(sweep_i('Continuous concourse perimeter gutter girder',pts,(1,0,0),.22,.38))
 for xx in np.linspace(WEST,CX+CW/2,73):
     pts=[(float(xx),-CL/2+CL*i/96,roofpoint(float(xx),-CL/2+CL*i/96)+.025) for i in range(97)]
     tube_path("Bent T-section glazing frame",pts,.028,IRON,4)
+    for end,index in [('north',0),('south',-1)]:
+        contact('Bent glazing frame '+end+' end',None,ROOF_PURLINS[0 if index==0 else -1],points=[pts[index]],source='ASCE199–200 bent T glazing frames riveted to roof framing')
 verts=[];faces=[]
 nx,ny=88,140
 for iy in range(ny+1):
@@ -1134,12 +1580,20 @@ def lower_arcade(name,p0,p1):
         for i in range(32):
             flatbar(name+" double lattice",a[i],b[i+1],.055,.016)
             flatbar(name+" double lattice",b[i],a[i+1],.055,.016)
+    for endpoint,index in [(p0,0),(p1,-1)]:
+        collar=bearing_collar(endpoint.x,endpoint.y,LOWER_SPRING)
+        for path in [up,lo]:
+            for side in [-1,1]:contact(name+' spring bearing',None,collar,points=[tuple(path[index]+normal*side*.20)],source='LOC Gottscho LC-DIG-gsc-5a18544 lower ornamental arch on square plated pier joint')
     # Horizontal double-lattice struts bind the upper lengths of the piers.
     top=LOWER_SPRING+rise+.75
     for sign in [-1,1]:
         offset=normal*sign*.20
         a=p0+offset+Vector((0,0,top));b=p1+offset+Vector((0,0,top))
-        steel_i(name+" horizontal upper strut",a,b,.11,.24,.022,.014)
+        for dz in [-.32,.32]:
+            steel_i(name+" double-lattice strut chord",a+Vector((0,0,dz)),b+Vector((0,0,dz)),.11,.16,.022,.014)
+            for endpoint in [p0,p1]:
+                collar=bearing_collar(endpoint.x,endpoint.y,top+dz)
+                contact(name+' upper strut bearing',None,collar,points=[tuple(endpoint+offset+Vector((0,0,top+dz)))],source='ASCE199 two-web lattice struts binding upper column lengths')
         for i in range(12):
             c=a+(b-a)*i/12;d=a+(b-a)*(i+1)/12
             flatbar(name+" strut lattice",c+Vector((0,0,-.32)),d+Vector((0,0,.32)),.055,.016)
@@ -1179,7 +1633,7 @@ for sign in [-1,1]:
         lower_arcade("North/south lower ornamental arcade",(lo,y,0),(hi,y,0))
         cloister_cell("North/south Guastavino cloister",(lo,y,0),(hi,y,0),(hi,outer,0),(lo,outer,0))
     for xx in NORTH_ARCADE_X:
-        lattice_pier(xx,y,LOWER_SPRING,False)
+        lattice_pier(xx,y,max(GLAZING_VALLEY,roofpoint(xx,y)),False)
     # These opaque backs represent the documented adjoining accommodation;
     # unverified1935 shop-front subdivisions are deliberately not invented.
     box("North/south lower adjoining-building enclosure",(CX,outer,LOWER_SPRING/2),(CW+.20,.45,LOWER_SPRING),LIMESTONE,.02)
@@ -1205,7 +1659,7 @@ for xx in [X_WEST_INNER,X_EAST_INNER]:
         flatbar("East/west court glazing upright",(xx,float(y0),NS_SPRING),(xx,float(y0),h0),.045,.035)
 
 # Glazing troughs are carried by the column branches, whose upper lengths
-# continue above the ornamental arcades to the labelled E393ft6 valley tier.
+# continue above the ornamental arcades to the E401ft9 gutter node above the E393ft6 branch tier.
 for xx in [X_WEST_INNER,X_WEST_MIDDLE,CROSS_LEFT,CROSS_RIGHT,X_EAST_INNER]:
     for yy in Y_BOUND:
         half=.4572 if xx in [CROSS_LEFT,CROSS_RIGHT] else .31
@@ -1241,8 +1695,23 @@ for i,yy in enumerate(ACCESS_CENTRES):
         for x in np.arange(STAIR_HEAD_X-6.4,STAIR_HEAD_X,.45):
             beam("Main floor stair-well fence upright",(float(x),y,0),(float(x),y,1.15),.022,BRONZE)
         flatbar("Stair-well top rail",(STAIR_HEAD_X-6.4,y,1.15),(STAIR_HEAD_X,y,1.15),.06,.055,BRONZE)
-    box("Period platform-access signboard",(STAIR_HEAD_X+.4,yy,3.1),(.16,2.7,.65),BLACK)
-    text("Platform-access sign lettering","TRAINS",(STAIR_HEAD_X+.49,yy,2.92),.30,WHITE)
+    # Gibbs266: paired16ft cast-iron indicator posts, not floating boards.
+    for side in [-1,1]:
+        px=STAIR_HEAD_X+.40;py=yy+side*1.95
+        indicator=lathe('Sixteen-foot cast-iron gate indicator',[(0,.28),(.12,.31),(.24,.23),(.48,.14),(3.05,.105),(3.2,.14),(4.15,.12),(4.45,.15),(16*FT,.11)],IRON,24,12)
+        indicator.location=(px,py,0);indicator['closed_support']=True
+        contact('Gate indicator post foundation',indicator,CON_MAIN_FLOORS,source='Gibbs266: castiron16ft indicators, two at each gate')
+        cards=box('Four-sided destination-card cabinet',(px,py,3.57),(.62,.62,.78),IRON,.035)
+        times=box('Four-sided time-tape cabinet',(px,py,4.27),(.55,.55,.48),IRON,.025)
+        contact('Destination cabinet on cast post',cards,indicator)
+        contact('Time cabinet on cast post',times,indicator)
+        track=2*i+1 if side<0 else 2*i+2
+        for face in range(4):
+            dx,dy=[(.311,0),(0,.311),(-.311,0),(0,-.311)][face]
+            dims=(.018,.47,.54) if face%2==0 else (.47,.018,.54)
+            box('Unassigned historical destination-card field',(px+dx,py+dy,3.57),dims,WHITE)
+            rotation=(math.pi/2,0,math.pi/2 if face==0 else -math.pi/2) if face%2==0 else (math.pi/2,0,0 if face==1 else math.pi)
+            text('Plan-derived track indicator number',str(track),(px+dx,py+dy,4.20),.25,WHITE,rotation)
 
 # One source-anchored representative track/platform section, rather than a
 # fabricated complete21-track assignment. Its position registers to stairZ11.
@@ -1291,12 +1760,17 @@ for sign in [-1,1]:
                 bolt.location=(float(x)+dx,ry+dy,TOR_LEVEL-.14605)
 
 # ---------- Scene metadata and portable delivery ----------
+if not ARGS.legacy_platform:
+    bpy.data.batch_remove(ids=list(PLATFORM.objects))
+    PLATFORM.name='04 Railway supplied by separate authored asset'
+print('Checking structural attachment controls',flush=True)
+CONTACT_REPORT=contact_audit()
 bpy.context.scene.unit_settings.system="METRIC"
 bpy.context.scene.unit_settings.scale_length=1
 bpy.context.scene.world.color=(.65,.7,.8)
 for o in bpy.data.objects:
     if o.type=="MESH":
-        o["reconstruction_revision"]=2
+        o["reconstruction_revision"]=3
         # Keep materials readable from the inside where a historic shell is thin.
         for m in o.data.materials:
             m.use_backface_culling=False
@@ -1306,14 +1780,14 @@ print("Batching static surfaces by material",flush=True)
 bpy.context.view_layer.update()
 for name,col,zone in [("model-exterior.glb",EXTERIOR,'exterior'),("model-waiting-room.glb",HALL,'waiting'),("model-concourse.glb",CONCOURSE,'concourse'),("model-platform.glb",PLATFORM,'platform')]:
     batch_static(col)
-    if not (ARGS.preserve_platform and zone=='platform') and (not ARGS.hall_only or col==HALL) and (not ARGS.only or ARGS.only==zone or (ARGS.only=='core' and zone!='platform') or (ARGS.only=='concourse' and zone=='platform')):
+    if not ((ARGS.preserve_platform or not ARGS.legacy_platform) and zone=='platform') and (not ARGS.hall_only or col==HALL) and (not ARGS.only or ARGS.only==zone or (ARGS.only=='core' and zone!='platform') or (ARGS.only=='concourse' and zone=='platform')):
         export(name,col)
         print("EXPORTED",name,(ASSETS/name).stat().st_size,flush=True)
 orphan_meshes=[data for data in bpy.data.meshes if data.users==0]
 if orphan_meshes:bpy.data.batch_remove(ids=orphan_meshes)
 print("Saving editable Blender source",flush=True)
 bpy.context.preferences.filepaths.save_version=0
-blend_name="penn-station-study.blend" if ARGS.out else "penn-station-phase2.blend"
+blend_name="penn-station-study.blend" if ARGS.out else "penn-station-phase3.blend"
 # Exported room chunks deliberately retain their local Main=0 contract. The
 # editable source opens as the same coherent common world used by the viewer.
 for col in [HALL,CONCOURSE,PLATFORM]:
@@ -1350,5 +1824,49 @@ for stair in manifest['accessStairs']:
     z=stair['centerZ']
     manifest['walkable'].append({'label':'Lower platform-access doglegs','bounds':[STAIR_HEAD_X-11.9,STAIR_HEAD_X-5.1,z-1.85,z+1.85],'floor':PLATFORM_LEVEL-STREET_DROP,'surface':'Stairs and receivinglandings; use actualfloor raycast'})
 manifest['walkable'].append({'label':'Representative linked platform','bounds':manifest['representativePlatform']['bounds'],'floor':PLATFORM_LEVEL-STREET_DROP})
+def finalise_phase3_manifest(data,legacy_platform=False,contacts=None):
+    ft=.3048;drop=14*ft;clear_w=103*ft;clear_l=277*ft;room_w=(108+8/12)*ft;room_l=(314+4/12)*ft
+    data['revision']=3
+    data['waitingRoomHeightStatus']="The model adopts the143ft highest finished-ceiling datum explicitly stated by Francis and O'Brien ASCE1910p194, with167ft roof unchanged. Gibbs in the same volume also states150ft from floor to ceiling; the conflicting narrative remains documented rather than declared resolved."
+    data['dimensions']['waitingRoomClear'][2]=143*ft
+    data['dimensions']['reportedGeneralRoomHeight']=150*ft
+    data['dimensions']['waitingRoomEndPorticoDepth']=(room_l-clear_l)/2
+    data['dimensions']['concourse']['passengerFloorNS']=475*ft
+    data['dimensions']['concourse']['branchJunctionAboveMain']=(393.5-320)*ft
+    data['dimensions']['concourse']['gutterTopAboveMain']=(401.75-320)*ft
+    data['dimensions']['wingRoofAboveStreet']=63*ft
+    data['dimensions']['wingParapetAboveStreet']=65*ft
+    data['dimensions']['easternCourtRoof']={'plan':[float((152+8.5/12)*ft),115.5*ft],'longAxis':'East–west','eaveAboveStreet':.15,'ridgeAboveStreet':1.50,'monitorAboveStreet':2.25,'levelStatus':'Street-level roof role documented; minor rise and exact registration reconstructed from engineering description and Bain view'}
+    data['chunkOffsets']['railway']=[0,-drop,0]
+    data['walkingSpawnsWorld']={'waiting':[0,1.68-drop,26.0],'endBridgeNorth':[0,1.68,-45.2],'endBridgeSouth':[0,1.68,45.2]}
+    for surface in data['walkable']:
+        if surface['label'] in ['Main concourse','Exit concourse']:surface['bounds'][2:]=[-475*ft/2,475*ft/2]
+    stair_top=clear_l/2;stair_foot=stair_top-35*ft;halfwidth=9*ft
+    data['endEntranceStairs']=[]
+    for sign in [-1,1]:
+        b=sorted([sign*stair_foot,sign*stair_top]);landing=sorted([sign*stair_top,sign*room_l/2]);bridge=sorted([sign*room_l/2,sign*430*ft/2])
+        data['walkable'].extend([{'label':'North/south raised-end stair','bounds':[-halfwidth,halfwidth,*b],'floor':-drop,'surface':'Stair; use actual floor intersections'},{'label':'North/south Ionic landing','bounds':[-room_w/2,room_w/2,*landing],'floor':0},{'label':'North/south street-level pedestrian bridge','bounds':[-halfwidth,halfwidth,*bridge],'floor':0}])
+        data['endEntranceStairs'].append({'side':'north' if sign<0 else 'south','bounds':[-halfwidth,halfwidth,*b],'landingBounds':[-room_w/2,room_w/2,*landing],'bridgeBounds':[-halfwidth,halfwidth,*bridge],'bottomWorld':-drop,'topWorld':0,'startFloorWorld':-drop,'endFloorWorld':0,'roomSideDoorPlaneZ':sign*(room_l/2-.58),'innerEndWallPlaneZ':sign*(room_l/2-.50),'steps':28,'riser':drop/28,'tread':35*ft/28,'basis':'35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy'})
+    data['waitingEndStairs']=data['endEntranceStairs']
+    data['waitingRoomBounds']={'roomWallExtent':[-room_w/2,room_w/2,-room_l/2,room_l/2],'clearFloor':[-clear_w/2,clear_w/2,-clear_l/2,clear_l/2],'innerEndWallPlaneZ':[-room_l/2+.50,room_l/2-.50],'roomSideDoorPlaneZ':[-room_l/2+.58,room_l/2-.58],'endDoorsStatus':'Closed glazing and door leaves; no automatic opening is claimed'}
+    data['dimensions']['seventhAvenueClockAtticWidth']=30.2
+    for sign in [-1,1]:
+        a,b=sorted([sign*clear_w/2,sign*room_w/2])
+        data['walkable'].append({'label':'Waiting-room wall-to-wall floor strip','bounds':[a,b,-room_l/2,room_l/2],'floor':-drop})
+    if not legacy_platform:
+        data['assets']=[a for a in data['assets'] if a['zone']!='platform']
+        data['assets'].append({'file':'model-railway.glb','zone':'railway','externalAuthoring':True})
+        data['walkable']=[a for a in data['walkable'] if a['label']!='Representative linked platform']
+        data['representativePlatform']['deprecatedPhase2']=True
+        data['representativePlatform']['runtimeStatus']='Replaced by model-railway.glb and railway-manifest.json; not exported by this build'
+    data['historicalMural']={'material':'GuerinMuralField6','location':'North end only','source':'LOC det.4a23713','status':'Mechanical monochrome photographic recovery; original colour and official title unverified. Other five fields stay neutral.'}
+    data['glazing']={'thermalPaneCount':8,'physicalThickness':.006,'exteriorDuplicateSheets':False,'thicknessStatus':'Reconstructed glass thickness, not an authenticated surviving pane measurement'}
+    data['contactAudit']={'file':'architecture-contact-audit.json','checks':len(contacts['contacts']) if contacts else None,'failures':len(contacts['failures']) if contacts else None,'scope':'Registered visible architectural bearing chains; assembled floor/railway intersections checked separately'}
+    data['reconstructed'].extend(['Street wings closed with source-based solid roof ring, recessed attic bodies and genuine eastern open courts above street-level train-shed glazing','Single physical thermal glass sheets with reconstructed6mm thickness; stone reveals exist on both sides','Raised north/south Ionic landings and central stairs traced from plate300; lowerfloor and ceiling extend to reported room planes','Botticino ticket/parcel fronts and telephone booth bays follow opening-era plan labels;1935 changes not certified','Paired16ft cast-iron gate indicator posts replace floating boards; timetable cards remain unassigned'])
+    data['uncertain'].extend(['Francis143ft highest-ceiling datum adopted; Gibbs150ft ceiling narrative remains conflicting','Exact coffer count and360mm relief remain interpreted; nominal10ft module is documented by Gibbs255','Eastern street-level skylight pitch and exact room/roof registration are inferred, distinct from documented152ft8½x115ft6 plan dimensions','Detailed truss profiles and joint locations follow structural roles and primary photographs, not a full fabrication survey','Concourse perimeter backing remains unfinished: documented two-level gridded fenestration is not yet reconstructed','Concourse opaque floor-grid material is interpreted; Gibbs marble-floor list does not specifically identify this floor, and documented glass-prism vault-light fields remain unmodelled'])
+    data['uncertain']=[text.replace('UpperwindowE421.25controlpassesclockcentres;exactglazingsilloffsetremainsphotographicwith31mlocalapproximation','Upper-window E421.25 control crosses circular base features; their identity and exact sill offset remain unverified; glazing uses31m local approximation') for text in data['uncertain']]
+    return data
+
+manifest=finalise_phase3_manifest(manifest,ARGS.legacy_platform,CONTACT_REPORT)
 (ASSETS/"scene-manifest.json").write_text(json.dumps(manifest,indent=2))
 print("Blender authoring complete",flush=True)

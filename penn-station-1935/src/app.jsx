@@ -7,25 +7,29 @@ import { OrbitControls } from '@react-three/drei/core/OrbitControls.js';
 import { Html } from '@react-three/drei/web/Html.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
 import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js';
 import { MeshoptDecoder } from 'meshoptimizer';
 import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
+import { configureBakedDiffuse } from './lighting.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
+const TRAIN_POSITION = [0, -13.154025, 8.690045261];
+const PLATFORM_FLOOR = -11.985625;
 
 const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (/^(model-|lighting-|scene-manifest)/.test(name)) url.searchParams.set('revision', '2');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '3');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
 const views = {
   exterior: { title: 'Seventh Avenue', caption: 'The monumental eastern entrance · nominal 784 × 430 ft envelope', eye: [145, 8, 88], target: [108, 12, -5], walk: [124, 1.68, 0], look: [0, 1.68, 0] },
-  waiting: { title: 'The main waiting room', caption: '277 × 103 ft clear hall · 14 ft below the street datum', eye: [8, 8 + MAIN_FLOOR, 37], target: [-2, 24 + MAIN_FLOOR, -17], walk: [0, 1.68 + MAIN_FLOOR, 31], look: [0, 10 + MAIN_FLOOR, -28] },
+  waiting: { title: 'The main waiting room', caption: '277 × 103 ft clear hall · 14 ft below the street datum', eye: [8, 8 + MAIN_FLOOR, 37], target: [-2, 24 + MAIN_FLOOR, -17], walk: [0, 1.68 + MAIN_FLOOR, 25], look: [0, 10 + MAIN_FLOOR, -28] },
   concourse: { title: 'The train concourse', caption: 'Intersecting glass vaults · reconstructed from the original engineering account', eye: [-64, 8 + MAIN_FLOOR, 38], target: [-76, 20 + MAIN_FLOOR, -15], walk: [-67, 1.68 + MAIN_FLOOR, 33], look: [-75, 10 + MAIN_FLOOR, -25] },
 };
 const framing = {
@@ -33,7 +37,7 @@ const framing = {
   concourse: { eye: [-47, -2.4, -36], target: [-82, 12, 8], fov: 62 },
   hotel: { eye: [140, 6, 65], target: [183, 31, -24], title: 'Across Seventh Avenue', caption: 'Hotel Pennsylvania · four bedroom wings and three courts, informed by the 1919 plan' },
   farley: { eye: [-130, 8, 71], target: [-169, 18, -12], title: 'Across Eighth Avenue', caption: 'The General Post Office · twenty Corinthian columns and the monumental stair' },
-  platform: { eye: [-14, -9.785625, 13], target: [-44, -10.2, 7.2662], title: 'A platform section', caption: 'Early GG1 and P70 interpretations · representative bay, not the complete track layout' },
+  platform: { eye: [-14, PLATFORM_FLOOR + 2.2, 15.7], target: [-38, -10.2, TRAIN_POSITION[2]], walk: [-14, PLATFORM_FLOOR + 1.68, 13.327870361], look: [-65, PLATFORM_FLOOR + 1.68, 13.327870361], title: 'Track 10 · Platform 5', caption: 'Twenty-one tracks and eleven platforms · opening-era plan with interpreted GG1 and P70 stock' },
 };
 let state = { view: 'exterior', framing: '', mode: 'orbit', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
 const listeners = new Set();
@@ -42,16 +46,150 @@ const subscribe = fn => { listeners.add(fn); return () => listeners.delete(fn); 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let debugCamera;
 let debugRenderer;
+let debugBuilding;
+let debugNavigation;
 let returnFocus;
 let tourTimer;
 let audio;
 let soundNodes;
 let preferWebGL = false;
 let modelManifest = { obstacles: [] };
+let manifestPromise;
 const modelCache = new Map();
 const modelReports = new Map();
 const irradianceCache = new Map();
+const reflectionCache = new Map();
 THREE.Cache.enabled = true;
+
+async function loadManifest() {
+  if (!manifestPromise) {
+    manifestPromise = (async () => {
+      const response = await fetch(assetURL('scene-manifest.json'));
+      if (!response.ok) throw new Error('The architectural navigation data could not be loaded. Please try again.');
+      modelManifest = await response.json();
+      return modelManifest;
+    })().catch(error => { manifestPromise = undefined; throw error; });
+  }
+  return manifestPromise;
+}
+
+// Navigation indexes static structure once per loaded world. An InstancedMesh
+// raycast otherwise loops through its entire batch, even for a half-metre ray.
+// The railway alone has over 66,000 fitting instances that cannot stop a person.
+const COLLISION_CELL = 6;
+function decorativeCollisionMaterial(material) {
+  return !material || material.transmission > 0 || material.transparent || /^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(material.name);
+}
+
+function buildCollisionIndex(model) {
+  const started = performance.now();
+  const index = { cells: new Map(), records: [], stats: { sourceMeshes: 0, excludedMeshes: 0, excludedInstances: 0, structuralInstances: 0, colliders: 0, cells: 0, queries: 0, lastCandidates: 0, maximumCandidates: 0, buildMilliseconds: 0 } };
+  const instance = new THREE.Matrix4();
+  const world = new THREE.Matrix4();
+  const add = (object, bounds) => {
+    const record = { object, bounds };
+    index.records.push(record);
+    for (let x = Math.floor(bounds.min.x / COLLISION_CELL); x <= Math.floor(bounds.max.x / COLLISION_CELL); x++) {
+      for (let z = Math.floor(bounds.min.z / COLLISION_CELL); z <= Math.floor(bounds.max.z / COLLISION_CELL); z++) {
+        const key = `${x}:${z}`;
+        if (!index.cells.has(key)) index.cells.set(key, []);
+        index.cells.get(key).push(record);
+      }
+    }
+  };
+  model?.updateMatrixWorld(true);
+  model?.traverse(object => {
+    if (!object.isMesh || !object.visible) return;
+    index.stats.sourceMeshes++;
+    let zone = object;
+    while (zone.parent && zone.parent !== model) zone = zone.parent;
+    const materials = Array.isArray(object.material) ? object.material : [object.material];
+    if (zone.name === 'context' || zone.name === 'trains' || materials.every(decorativeCollisionMaterial)) {
+      index.stats.excludedMeshes++;
+      index.stats.excludedInstances += object.isInstancedMesh ? object.count : 0;
+      return;
+    }
+    const geometry = object.geometry;
+    if (!geometry.boundingBox) geometry.computeBoundingBox();
+    if (!geometry.boundingBox || geometry.boundingBox.isEmpty()) return;
+    if (!geometry.boundsTree) computeBoundsTree.call(geometry, { maxLeafTris: 12 });
+    if (!object.isInstancedMesh) {
+      add(object, geometry.boundingBox.clone().applyMatrix4(object.matrixWorld));
+      return;
+    }
+    // Keep physical columns and other substantial repeated structure. Each
+    // shares its geometry/BVH but has a static collision-only world transform;
+    // nearby rays never invoke InstancedMesh.raycast across the whole batch.
+    for (let i = 0; i < object.count; i++) {
+      object.getMatrixAt(i, instance); world.multiplyMatrices(object.matrixWorld, instance);
+      const bounds = geometry.boundingBox.clone().applyMatrix4(world);
+      if (Math.max(bounds.max.x - bounds.min.x, bounds.max.y - bounds.min.y, bounds.max.z - bounds.min.z) < .12) {
+        index.stats.excludedInstances++; continue;
+      }
+      const collider = new THREE.Mesh(geometry, object.material);
+      collider.matrixAutoUpdate = false; collider.matrixWorld.copy(world);
+      add(collider, bounds); index.stats.structuralInstances++;
+    }
+  });
+  index.stats.colliders = index.records.length;
+  index.stats.cells = index.cells.size;
+  index.stats.buildMilliseconds = performance.now() - started;
+  return index;
+}
+
+function nearbyCollisionObjects(index, origin, direction, distance) {
+  if (!index) return [];
+  const endX = origin.x + direction.x * distance;
+  const endY = origin.y + direction.y * distance;
+  const endZ = origin.z + direction.z * distance;
+  const minY = Math.min(origin.y, endY) - .001;
+  const maxY = Math.max(origin.y, endY) + .001;
+  const found = new Set();
+  for (let x = Math.floor(Math.min(origin.x, endX) / COLLISION_CELL); x <= Math.floor(Math.max(origin.x, endX) / COLLISION_CELL); x++) {
+    for (let z = Math.floor(Math.min(origin.z, endZ) / COLLISION_CELL); z <= Math.floor(Math.max(origin.z, endZ) / COLLISION_CELL); z++) {
+      for (const record of index.cells.get(`${x}:${z}`) || []) {
+        if (record.bounds.max.y >= minY && record.bounds.min.y <= maxY) found.add(record.object);
+      }
+    }
+  }
+  index.stats.queries++;
+  index.stats.lastCandidates = found.size;
+  index.stats.maximumCandidates = Math.max(index.stats.maximumCandidates, found.size);
+  return [...found];
+}
+
+function insidePlatform(point, polygon) {
+  let inside = false;
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    const a = polygon[i], b = polygon[j];
+    if ((a[1] > point.z) !== (b[1] > point.z) && point.x < (b[0] - a[0]) * (point.z - a[1]) / (b[1] - a[1]) + a[0]) inside = !inside;
+  }
+  return inside;
+}
+
+async function loadReflection(zone, quality) {
+  const room = zone === 'waiting' ? 'waiting-room' : zone === 'concourse' ? 'concourse' : ['platform', 'trains'].includes(zone) ? 'platform' : null;
+  if (!room) return null;
+  const filename = `reflection-${room}${quality === 'low' ? '-low' : ''}.hdr.gz`;
+  if (!reflectionCache.has(filename)) {
+    const pending = (async () => {
+      const response = await fetch(assetURL(filename));
+      if (!response.ok) throw new Error('The station reflections could not be loaded. Please try again.');
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      const decoded = bytes[0] === 0x1f && bytes[1] === 0x8b ? gunzipSync(bytes) : bytes;
+      const image = new HDRLoader().parse(decoded.buffer.slice(decoded.byteOffset, decoded.byteOffset + decoded.byteLength));
+      const texture = new THREE.DataTexture(image.data, image.width, image.height, THREE.RGBAFormat, image.type);
+      texture.colorSpace = THREE.LinearSRGBColorSpace;
+      texture.mapping = THREE.EquirectangularReflectionMapping;
+      texture.minFilter = texture.magFilter = THREE.LinearFilter;
+      texture.generateMipmaps = false; texture.flipY = true; texture.needsUpdate = true;
+      texture.userData.sourceFile = filename;
+      return texture;
+    })().catch(error => { reflectionCache.delete(filename); throw error; });
+    reflectionCache.set(filename, pending);
+  }
+  return reflectionCache.get(filename);
+}
 
 async function loadIrradiance(file, channel) {
   const key = `${file}:${channel}`;
@@ -73,11 +211,7 @@ async function loadModel(view, quality, renderer, progress) {
   const file = `model-${view === 'waiting' ? 'waiting-room' : view}${quality === 'low' ? '-low' : ''}.glb`;
   if (modelCache.has(file)) { progress(100); return modelCache.get(file); }
   const pending = (async () => {
-    if (!modelManifest.dimensions) {
-      const metadata = await fetch(assetURL('scene-manifest.json'));
-      if (!metadata.ok) throw new Error('The architectural navigation data could not be loaded. Please try again.');
-      modelManifest = await metadata.json();
-    }
+    await loadManifest();
     const response = await fetch(assetURL(file + '.gz'));
     if (!response.ok) throw new Error(`The ${(views[view]?.title || view).toLowerCase()} could not be loaded (${response.status}).`);
     const total = Number(response.headers.get('Content-Length'));
@@ -102,6 +236,7 @@ async function loadModel(view, quality, renderer, progress) {
     let gltf;
     try { gltf = await loader.parseAsync(decoded.buffer.slice(decoded.byteOffset, decoded.byteOffset + decoded.byteLength), assets.href); } finally { ktx.dispose(); }
     if (failedResources.length) throw new Error('Some station materials could not be loaded. Please check your connection and try again.');
+    const reflection = await loadReflection(view, quality);
     const lightingTasks = []; const assigned = new Set();
     gltf.scene.traverse(object => {
       if (!object.isMesh) return;
@@ -115,7 +250,8 @@ async function loadModel(view, quality, renderer, progress) {
       object.castShadow = !materials.every(material => material.transmission > 0 || material.transparent);
       for (const material of materials) {
         if (assigned.has(material)) continue; assigned.add(material);
-        if (material.aoMap) material.aoMapIntensity = .55;
+        if (material.aoMap) material.aoMapIntensity = .25;
+        if (reflection) { material.envMap = reflection; material.envMapIntensity = 1; }
         for (const slot of ['map', 'normalMap', 'roughnessMap']) if (material[slot]) material[slot].anisotropy = quality === 'low' ? 2 : 8;
         if (material.userData?.sky_illumination) {
           const file = quality === 'low' ? material.userData.sky_illumination.replace('-sky.webp', '-sky-low.webp') : material.userData.sky_illumination;
@@ -123,14 +259,15 @@ async function loadModel(view, quality, renderer, progress) {
           // slot is the authoritative atlas channel, rather than a fixed UV1.
           const channel = material.aoMap?.channel ?? 1;
           lightingTasks.push(loadIrradiance(file, channel).then(texture => {
-            material.lightMap = texture; material.lightMapIntensity = 1.0;
+            material.lightMap = texture;
+            configureBakedDiffuse(material, renderer, material.userData.sky_illumination_scale ?? 1);
             material.needsUpdate = true;
           }));
         }
       }
     });
     await Promise.all(lightingTasks);
-    modelReports.set(file, { file, materials: assigned.size, bakedMaterials: [...assigned].filter(material => material.lightMap).length, occlusionMaterials: [...assigned].filter(material => material.aoMap).length, atlasChannels: [...new Set([...assigned].filter(material => material.lightMap).map(material => material.lightMap.channel))] });
+    modelReports.set(file, { file, materials: assigned.size, bakedMaterials: [...assigned].filter(material => material.lightMap).length, occlusionMaterials: [...assigned].filter(material => material.aoMap).length, reflectionMaterials: [...assigned].filter(material => material.envMap).length, reflectionFile: reflection?.userData.sourceFile || null, atlasChannels: [...new Set([...assigned].filter(material => material.lightMap).map(material => material.lightMap.channel))] });
     // Keep the renderable scene, allowing the parser's raw buffers and temporary
     // dependency caches to be collected after decoding.
     progress(100); return { scene: gltf.scene };
@@ -178,11 +315,12 @@ function Building({ current, onModel }) {
   const [models, setModels] = useState([]);
   const group = useRef();
   const { invalidate, gl } = useThree();
-  const selection = current.mode === 'walk' ? 'world' : current.view;
   useEffect(() => {
     let active = true; setModels([]);
     update({ loading: true, error: '', progress: 0 });
-    const zones = selection === 'world' ? ['exterior', 'waiting', 'concourse', 'context', 'platform', 'trains'] : selection === 'exterior' ? ['exterior', 'context'] : selection === 'concourse' ? ['concourse', 'platform', 'trains'] : ['waiting'];
+    // Every viewpoint shares one persistent building. Chunks are transport
+    // units, never separate rooms to remove when the camera moves outside.
+    const zones = ['exterior', 'waiting', 'concourse', 'context', 'platform', 'trains'];
     const progress = new Map(zones.map(zone => [zone, 0]));
     Promise.all(zones.map(async zone => {
       const gltf = await loadModel(zone, current.quality, gl, percent => {
@@ -194,37 +332,77 @@ function Building({ current, onModel }) {
       if (!active) return;
       setModels(loaded); invalidate();
     }).catch(error => { if (active) update({ loading: false, error: error.message }); });
-    return () => { active = false; onModel(null); };
-  }, [selection, current.quality === 'low', current.revision]);
+    return () => { active = false; debugBuilding = null; onModel(null); };
+  }, [current.quality === 'low', current.revision]);
   useLayoutEffect(() => {
     if (!models.length || !group.current) return;
-    group.current.updateMatrixWorld(true); onModel(group.current);
+    group.current.updateMatrixWorld(true); debugBuilding = group.current; onModel(group.current);
     update({ loading: false, progress: 100 }); invalidate();
   }, [models]);
-  // In walking mode the connected scene remains present through portals and
-  // glazing. Individual mesh/instance bounds provide frustum culling; switching
-  // the location label must never make the neighbouring architecture disappear.
-  return <group ref={group}>{models.map(({ zone, object }) => <group key={zone} name={zone} position={[0, ['waiting', 'concourse', 'platform'].includes(zone) ? MAIN_FLOOR : zone === 'trains' ? MAIN_FLOOR - 8.886825 : 0, zone === 'trains' ? 7.2662 : 0]}><primitive object={object} /></group>)}</group>;
+  // Keep the entire station present through portals and glazing in every mode.
+  // Mesh bounds provide frustum culling without removing neighbouring rooms.
+  return <group ref={group}>{models.map(({ zone, object }) => <group key={zone} name={zone} position={zone === 'trains' ? TRAIN_POSITION : [0, ['waiting', 'concourse', 'platform'].includes(zone) ? MAIN_FLOOR : 0, 0]}><primitive object={object} /></group>)}</group>;
 }
 
 function Lighting({ current }) {
-  const { gl, invalidate } = useThree();
+  const { gl, invalidate, camera } = useThree();
   const presets = {
     morning: { position: [130, 65, 70], color: '#ffe4c4', sky: '#becbd2', intensity: 3.2, exposure: 1.06 },
     afternoon: { position: [95, 125, -65], color: '#fff4df', sky: '#c7d2d7', intensity: 3.8, exposure: 1.04 },
     evening: { position: [-130, 35, 80], color: '#ffd4a8', sky: '#b6b9c3', intensity: 2.3, exposure: 1.18 },
   };
   const p = presets[current.light];
-  useEffect(() => { gl.toneMappingExposure = p.exposure; invalidate(); }, [p.exposure, gl]);
-  const interior = current.view !== 'exterior';
+  const regions = useMemo(() => {
+    const dimensions = modelManifest.dimensions || {};
+    const wall = dimensions.waitingRoomWallExtent || [33.1216, 95.8088];
+    const named = label => modelManifest.walkable?.find(area => area.label === label)?.bounds;
+    const platforms = modelManifest.railway?.platforms || [];
+    return {
+      waiting: [-wall[0] / 2, wall[0] / 2, -wall[1] / 2, wall[1] / 2],
+      waitingTop: MAIN_FLOOR + (dimensions.waitingRoomClear?.[2] || 43.5864),
+      concourse: named('Main concourse') || [-105.1437, -40.8563, -72.39, 72.39],
+      concourseTop: MAIN_FLOOR + (dimensions.concourse?.roofCrownAboveMain || 29.727525),
+      passage: named('Axial concourse passage') || [-44.4, -16.5608, -7.75, 7.75],
+      exitFloor: modelManifest.levels?.exitWorld ?? -7.4676,
+      railway: platforms.length ? [Math.min(...platforms.map(item => item.bounds[0])), Math.max(...platforms.map(item => item.bounds[1])), Math.min(...platforms.map(item => item.bounds[2])), Math.max(...platforms.map(item => item.bounds[3]))] : [-293, 202, -75, 75],
+    };
+  }, [modelManifest]);
+  // These are the actual authored glower centres, .324m below their mounts.
+  // Four broad downward cones approximate local practical light on moving or
+  // unbaked stock. Their energy is an appearance interpretation, not a claim
+  // about original Nernst candlepower. The cone never reaches above its source.
+  const practicals = useMemo(() => [-54.5, -48.404].flatMap((x, column) => [13.327870361, -.341442588].map((z, row) => {
+    const target = new THREE.Object3D(); target.position.set(x, PLATFORM_FLOOR, z);
+    return { id: `${column}:${row}`, position: [x, -8.0916, z], target, primaryShadow: column === row };
+  })), []);
+  useEffect(() => { invalidate(); }, [p.exposure, gl]);
+  useFrame((_, delta) => {
+    const interval = (value, low, high, fade = 2) => THREE.MathUtils.smoothstep(value, low - fade, low + fade) * (1 - THREE.MathUtils.smoothstep(value, high - fade, high + fade));
+    const horizontal = bounds => interval(camera.position.x, bounds[0], bounds[1]) * interval(camera.position.z, bounds[2], bounds[3]);
+    const volume = (bounds, low, high) => horizontal(bounds) * interval(camera.position.y, low, high, 1);
+    const waiting = volume(regions.waiting, MAIN_FLOOR - .5, regions.waitingTop);
+    const concourse = volume(regions.concourse, regions.exitFloor - .5, regions.concourseTop);
+    const passage = volume(regions.passage, MAIN_FLOOR - .5, MAIN_FLOOR + 12);
+    const passageGain = THREE.MathUtils.lerp(1.5, 4, THREE.MathUtils.smoothstep(camera.position.x, regions.passage[0], regions.passage[1]));
+    const outside = Math.max(0, 1 - Math.max(waiting, concourse, passage));
+    const upperGain = (waiting * 4 + concourse * 1.5 + passage * passageGain + outside) / Math.max(.0001, waiting + concourse + passage + outside);
+    const platform = horizontal(regions.railway) * (1 - THREE.MathUtils.smoothstep(camera.position.y, PLATFORM_FLOOR + 2.5, regions.exitFloor + 1.68));
+    const desired = p.exposure * THREE.MathUtils.lerp(upperGain, 4, platform);
+    const next = THREE.MathUtils.damp(gl.toneMappingExposure, desired, 3.2, Math.min(delta, 1));
+    if (Math.abs(next - gl.toneMappingExposure) > .0005 || Math.abs(desired - next) > .01) {
+      gl.toneMappingExposure = next; invalidate();
+    }
+  });
   return <>
     <color attach="background" args={[p.sky]} />
     <fog attach="fog" args={[p.sky, 220, 620]} />
-    <Environment files={assetURL('sky.hdr')} background={false} environmentIntensity={interior ? 0.22 : 0.75} />
-    <hemisphereLight args={['#e5edf2', '#726a60', interior ? 0.18 : 1.25]} />
-    <directionalLight position={p.position} color={p.color} intensity={p.intensity * (interior ? 0.65 : 1)} castShadow={current.shadows && current.quality !== 'low'} shadow-mapSize={[current.quality === 'high' ? 4096 : 2048, current.quality === 'high' ? 4096 : 2048]} shadow-camera-left={-160} shadow-camera-right={160} shadow-camera-top={110} shadow-camera-bottom={-110} shadow-camera-near={0.5} shadow-camera-far={400} shadow-normalBias={0.08} shadow-bias={-0.0001} />
-    {interior && <directionalLight position={[0, 28, 0]} intensity={0.08} color="#f6e8d3" />}
-    {[-90, -65, -40, -15].map(x => <pointLight key={x} position={[x, MAIN_FLOOR - 5.2, 11]} intensity={110} distance={24} decay={2} color="#ffe8c6" />)}
+    <Environment files={assetURL('sky.hdr')} background={false} environmentIntensity={0.75} />
+    <hemisphereLight args={['#e5edf2', '#726a60', 0.05]} />
+    <directionalLight position={p.position} color={p.color} intensity={p.intensity} castShadow={current.shadows && current.quality !== 'low'} shadow-mapSize={[current.quality === 'high' ? 4096 : 2048, current.quality === 'high' ? 4096 : 2048]} shadow-camera-left={-160} shadow-camera-right={160} shadow-camera-top={110} shadow-camera-bottom={-110} shadow-camera-near={0.5} shadow-camera-far={400} shadow-normalBias={0.015} shadow-bias={-0.00002} />
+    {practicals.map(practical => <React.Fragment key={practical.id}>
+      <primitive object={practical.target} />
+      <spotLight position={practical.position} target={practical.target} color="#ffe9cf" intensity={60} distance={26} decay={2} angle={1.47} penumbra={.25} castShadow={current.shadows && current.quality !== 'low' && (current.quality === 'high' || practical.primaryShadow)} shadow-mapSize={[1024, 1024]} shadow-camera-near={.1} shadow-camera-far={26} shadow-bias={-.00005} shadow-normalBias={.012} />
+    </React.Fragment>)}
   </>;
 }
 
@@ -237,22 +415,16 @@ function Navigation({ current, model }) {
   const yaw = useRef(0); const pitch = useRef(0);
   const pointer = useRef(null);
   const ray = useRef(new THREE.Raycaster());
-  const meshes = useRef([]);
+  const collision = useRef(null);
   const feet = useRef(0);
   const appliedPose = useRef('');
   const config = { ...views[current.view], ...(framing[current.framing] || {}) };
   useEffect(() => {
-    meshes.current = [];
-    model?.traverse(object => {
-      if (!object.isMesh) return;
-      let zone = object;
-      while (zone.parent && zone.parent !== model) zone = zone.parent;
-      if (zone.name === 'context' || zone.name === 'trains') return;
-      const materials = Array.isArray(object.material) ? object.material : [object.material];
-      if (materials.every(material => material.transmission > 0 || material.transparent)) return;
-      meshes.current.push(object);
-    });
+    collision.current = model ? buildCollisionIndex(model) : null;
+    debugNavigation = collision.current?.stats || null;
+    if (debugNavigation) debugNavigation.floorWorld = feet.current;
     ray.current.firstHitOnly = true;
+    return () => { collision.current = null; debugNavigation = null; };
   }, [model]);
   useLayoutEffect(() => {
     appliedPose.current = '';
@@ -322,7 +494,7 @@ function Navigation({ current, model }) {
       appliedPose.current = poseToken; debugCamera = camera; invalidate();
     }
     syncWalkingMap(camera);
-    if (current.mode !== 'walk' || current.loading || document.hidden || document.querySelector('dialog[open]')) return;
+    if (current.mode !== 'walk' || state.mode !== 'walk' || current.loading || document.hidden || document.querySelector('dialog[open]')) return;
     const now = performance.now();
     const k = keys.current; const dt = Math.min((now - stepTime.current) / 1000, 0.25); stepTime.current = now;
     const forward = Number(k.has('KeyW') || k.has('ArrowUp')) - Number(k.has('KeyS') || k.has('ArrowDown'));
@@ -337,15 +509,24 @@ function Navigation({ current, model }) {
     const normalMatrix = new THREE.Matrix3();
     const down = new THREE.Vector3(0, -1, 0);
     const inRectangle = (point, bounds) => point.x >= bounds[0] && point.x <= bounds[1] && point.z >= bounds[2] && point.z <= bounds[3];
-    const permitted = point => (modelManifest.walkable || []).some(area => inRectangle(point, area.bounds)) || inRectangle(point, [119.48, 159, -70, 70]);
+    const permitted = point => (modelManifest.walkable || []).some(area => inRectangle(point, area.bounds)) || (modelManifest.railway?.platforms || []).some(platform => Math.abs(platform.floorWorld - feet.current) < .6 && insidePlatform(point, platform.polygonXZ)) || inRectangle(point, [119.48, 159, -70, 70]);
+    const hitsAt = (origin, direction, distance) => {
+      ray.current.set(origin, direction); ray.current.near = 0; ray.current.far = distance;
+      return ray.current.intersectObjects(nearbyCollisionObjects(collision.current, origin, direction, distance), false);
+    };
     const groundAt = (point, floor = feet.current) => {
       const origin = point.clone(); origin.y = floor + .25;
-      ray.current.set(origin, down); ray.current.near = 0; ray.current.far = .65;
-      for (const hit of ray.current.intersectObjects(meshes.current, false)) {
+      for (const hit of hitsAt(origin, down, .65)) {
         const normal = hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld));
         // A real tread's rounded/chamfered edge remains a stepping surface.
         // Rise/drop limits below reject ledges; vertical walls still have y=0.
-        if (normal.y > .5) return hit.point.y;
+        // Support comes from the actual horizontal surface. Double-sided
+        // imported floor faces may have either winding; a downward ray and
+        // the rise/drop limits still distinguish floors from walls/voids.
+        const supportNormal = Math.abs(normal.y);
+        // Low-LOD quantization can steepen a centimetre-scale floor bevel.
+        // A nearly level seam still supports a foot; vertical walls do not.
+        if (supportNormal > .5 || (supportNormal > .05 && Math.abs(hit.point.y - floor) < .035)) return hit.point.y;
       }
       // The street surface belongs to the separately instanced neighbourhood.
       // Analytic navigation uses the same authored street/sidewalk datum.
@@ -360,8 +541,7 @@ function Navigation({ current, model }) {
       let blocked = false;
       for (const height of [.35, .55, 1.0, 1.6]) {
         const origin = camera.position.clone(); origin.y = feet.current + height;
-        ray.current.set(origin, direction); ray.current.near = 0; ray.current.far = Math.abs(movement[axis]) + .32;
-        if (ray.current.intersectObjects(meshes.current, false).length) { blocked = true; break; }
+        if (hitsAt(origin, direction, Math.abs(movement[axis]) + .32).length) { blocked = true; break; }
       }
       if (blocked) continue;
       const ground = groundAt(candidate);
@@ -373,6 +553,7 @@ function Navigation({ current, model }) {
       camera.position[axis] = candidate[axis]; feet.current = ground;
     }
     camera.position.y = THREE.MathUtils.damp(camera.position.y, feet.current + 1.68, 18, dt);
+    if (debugNavigation) debugNavigation.floorWorld = feet.current;
     const zone = camera.position.x > 18 ? 'exterior' : camera.position.x < -38 ? 'concourse' : 'waiting';
     if (zone !== state.view) update({ view: zone });
     invalidate();
@@ -441,7 +622,7 @@ function showAnnotation(h) {
 function stopTour() { clearTimeout(tourTimer); if (state.tour) update({ tour: false }); }
 function go(view, instant = true) {
   if (!views[view]) return;
-  update({ view, framing: '', entered: true, instant, mode: 'orbit', pose: state.pose + 1, loading: view !== state.view || state.mode === 'walk' ? true : state.loading });
+  update({ view, framing: '', entered: true, instant, mode: 'orbit', pose: state.pose + 1 });
   if ($('#comparison')) $('#comparison').hidden = true;
   document.querySelectorAll('button[data-command="compare"]').forEach(button => button.setAttribute('aria-pressed', 'false'));
 }
@@ -525,9 +706,9 @@ document.addEventListener('click', async event => {
   if (['enter', 'view', 'mode', 'reset'].includes(command)) stopTour();
   if (command === 'enter') { update({ entered: true }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
   if (command === 'view') go(value, instant);
-  if (command === 'focus' && ['hotel', 'farley', 'platform'].includes(value)) { stopTour(); const view = value === 'platform' ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: 'orbit', pose: state.pose + 1, loading: view !== state.view || state.mode === 'walk' ? true : state.loading }); }
+  if (command === 'focus' && ['hotel', 'farley', 'platform'].includes(value)) { stopTour(); const view = value === 'platform' ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: 'orbit', pose: state.pose + 1 }); }
   if (command === 'reference' && framing[state.view]) update({ framing: state.view, mode: 'orbit', fov: framing[state.view].fov, pose: state.pose + 1 });
-  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: '', entered: true, instant, loading: value !== state.mode ? true : state.loading }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
+  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: state.framing === 'platform' ? 'platform' : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
   if (command === 'light' && ['morning', 'afternoon', 'evening'].includes(value)) update({ light: value });
   if (command === 'annotations') update({ annotations: !state.annotations });
   if (command === 'tour') state.tour ? stopTour() : startTour();
@@ -563,9 +744,16 @@ const pad = document.createElement('div'); pad.className = 'walk-pad'; pad.setAt
 });
 $('#viewport')?.append(pad);
 const neighbourhood = document.createElement('div'); neighbourhood.className = 'map-places';
-[['hotel', 'Across Seventh · Hotel Pennsylvania'], ['farley', 'Across Eighth · General Post Office'], ['platform', 'Below the concourse · Platform section']].forEach(([value, text]) => {
+[['hotel', 'Across Seventh · Hotel Pennsylvania'], ['farley', 'Across Eighth · General Post Office'], ['platform', 'Below the concourse · Platform 5']].forEach(([value, text]) => {
   const button = document.createElement('button'); button.type = 'button'; button.dataset.command = 'focus'; button.dataset.value = value; button.textContent = text; neighbourhood.append(button);
 });
 $('.map-body')?.append(neighbourhood);
-window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })) });
+function sceneReport() {
+  if (!debugBuilding) return null;
+  return { id: debugBuilding.uuid, zones: debugBuilding.children.map(zone => {
+    let meshes = 0; zone.traverse(object => { if (object.isMesh) meshes++; });
+    return { name: zone.name, id: zone.children[0]?.uuid, visible: zone.visible, meshes };
+  }) };
+}
+window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
 syncUI(); createRoot($('#scene-root')).render(<Viewer />);

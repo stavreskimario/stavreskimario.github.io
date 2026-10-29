@@ -1,0 +1,36 @@
+{
+  "completed": "2026-10-29T06:10:20.744Z",
+  "passed": true,
+  "runtimeBundleSha256": "951f905ad7146c4899a9ddd9621f6e4cc89fbefd1f1af906ec036466edb07ca7",
+  "ui": {
+    "report": "browser-metal/validation.json",
+    "groups": 13,
+    "passed": true,
+    "processExitCode": 0
+  },
+  "route": {
+    "report": "route-metal/penn-route-validation.json",
+    "legs": 7,
+    "passed": true,
+    "processExitCode": 0,
+    "maximumCandidates": 10
+  },
+  "runnerLifecycle": {
+    "cleanupAwaited": true,
+    "stdoutStderrFlushed": true,
+    "normalExitVerified": true,
+    "intentionalMissingBrowserExitCodes": {
+      "ui": 1,
+      "route": 1
+    },
+    "failureEvidence": "Intentional missing-executable startup failures exercised in scratch only; final passing reports above were not overwritten."
+  },
+  "driver": {
+    "api": "WebGL2",
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "scope": "Installed Chrome156 headless on observed AppleM5Max Metal; desktop and touch/mobile emulation. No real-phone or production-CDN performance claim.",
+  "priorAttempts": "Preserved in browser-metal-before-* and route-metal-before-* directories. Earlier completed-check runners needed teardown termination; the final reruns above exited normally after the CLI lifecycle fix."
+}

@@ -1,0 +1,74 @@
+START installed Chrome; local project-prefix server is ready
+BROWSER 156.0.8078.48
+OPEN desktop
+DOCUMENT desktop; waiting for app bootstrap
+BOOTSTRAP desktop
+READY waiting: exterior
+DRIVER desktop: {"api":"WebGL2","vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+OPEN mobile emulation 390 × 844, touch, reduced motion
+DOCUMENT mobile emulation 390 × 844, touch, reduced motion; waiting for app bootstrap
+BOOTSTRAP mobile emulation 390 × 844, touch, reduced motion
+READY waiting: exterior
+DRIVER mobile emulation 390 × 844, touch, reduced motion: {"api":"WebGL2","vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+OPEN intentional model failure and retry
+DOCUMENT intentional model failure and retry; waiting for app bootstrap
+BOOTSTRAP intentional model failure and retry
+READY waiting: exterior
+DRIVER intentional model failure and retry: {"api":"WebGL2","vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+READY rendered: exterior
+OPEN intentional HDR environment failure and retry
+DOCUMENT intentional HDR environment failure and retry; waiting for app bootstrap
+BOOTSTRAP intentional HDR environment failure and retry
+READY waiting: exterior
+DRIVER intentional HDR environment failure and retry: {"api":"WebGL2","vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+READY rendered: exterior
+OPEN forced unavailable WebGL context
+DOCUMENT forced unavailable WebGL context; waiting for app bootstrap
+BOOTSTRAP forced unavailable WebGL context
+PASS 13 integration groups; screenshots and measured rendering statistics: /private/tmp/penn-station-pages-20261029/authoring/penn-station-1935/review/phase3/browser-metal

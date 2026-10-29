@@ -8,11 +8,13 @@
  * selects the artifact directory. The server deliberately mounts the whole
  * repository under /exhibition/ to catch root-relative GitHub Pages paths.
  * These are desktop and mobile-emulation checks, not measurements on a phone.
+ * PENN_ANGLE=metal requests the local Mac driver; default remains SwiftShader.
  */
 const assert = require('node:assert/strict');
 const http = require('node:http');
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 
 const root = path.resolve(__dirname, '..');
@@ -23,6 +25,8 @@ const timeout = Number(process.env.PENN_TIMEOUT_MS) || 90000;
 const MAIN_FLOOR = -4.2672;
 const HUMAN_EYE = 1.68;
 const WAITING_EYE = MAIN_FLOOR + HUMAN_EYE;
+const angle = process.env.PENN_ANGLE || 'swiftshader';
+assert(['swiftshader', 'metal'].includes(angle), 'PENN_ANGLE must be swiftshader or metal');
 const section = process.env.PENN_SECTION || 'full';
 assert(['full', 'mobile-recovery'].includes(section), 'PENN_SECTION must be full or mobile-recovery');
 const mime = {
@@ -37,10 +41,24 @@ const report = {
   created: new Date().toISOString(), deploymentPrefix: prefix,
   section,
   scope: 'Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.',
-  rendererNote: 'Software ANGLE/SwiftShader is requested for deterministic availability. Frame intervals describe browser scheduling, not a hardware performance claim.',
+  requestedAngle: angle,
+  rendererNote: `ANGLE/${angle} requested; the actual driver is recorded per graphics context. Frame intervals describe browser scheduling, not a general hardware performance claim.`,
   checks: [], contexts: [],
 };
 const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
+const insidePolygon = (point, polygon) => {
+  let inside = false;
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    const a = polygon[i], b = polygon[j];
+    if ((a[1] > point[2]) !== (b[1] > point[2]) && point[0] < (b[0] - a[0]) * (point[2] - a[1]) / (b[1] - a[1]) + a[0]) inside = !inside;
+  }
+  return inside;
+};
+
+async function finishCli(code) {
+  await Promise.all([process.stdout, process.stderr].map(stream => new Promise(resolve => stream.write('', resolve))));
+  process.exit(code);
+}
 
 (async () => {
   await fs.mkdir(output, { recursive: true });
@@ -63,14 +81,18 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
-  let browser;
+  let browser, activePage;
   const contexts = [];
+  const pageRecords = new WeakMap();
   try {
+    const manifest = JSON.parse(await fs.readFile(path.join(root, 'penn-station-1935/assets/scene-manifest.json'), 'utf8'));
+    report.manifestRevision = manifest.revision;
+    report.runtimeBundleSha256 = createHash('sha256').update(await fs.readFile(path.join(root, 'penn-station-1935/dist/app.js'))).digest('hex');
     console.log('START installed Chrome; local project-prefix server is ready');
     browser = await chromium.launch({
       executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
       headless: true,
-      args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--enable-webgl', '--ignore-gpu-blocklist', '--disable-dev-shm-usage'],
+      args: [`--use-angle=${angle}`, ...(angle === 'swiftshader' ? ['--enable-unsafe-swiftshader'] : []), '--enable-webgl', '--ignore-gpu-blocklist', '--disable-dev-shm-usage'],
     });
     report.browser = browser.version();
     console.log(`BROWSER ${report.browser}`);
@@ -86,6 +108,8 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
       const record = { label, errors: [], consoleErrors: [], requests: [], blockedExternal: [] };
       report.contexts.push(record);
       const page = await context.newPage();
+      activePage = page;
+      pageRecords.set(page, record);
       page.setDefaultTimeout(timeout);
       page.setDefaultNavigationTimeout(timeout);
       page.on('pageerror', error => record.errors.push(error.message));
@@ -114,7 +138,7 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
       }
       if (options.failHDR) {
         let failed = false;
-        await page.route('**/sky.hdr', route => {
+        await page.route(/\/sky\.hdr(?:\?.*)?$/, route => {
           if (!failed) { failed = true; return route.fulfill({ status: 503, body: 'Intentional environment recovery test' }); }
           return route.continue();
         });
@@ -156,17 +180,28 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
       assert(await canvas.isVisible(), 'WebGL canvas visible');
       const box = await canvas.boundingBox();
       assert(box && box.width > 300 && box.height > 300, 'Viewport has usable dimensions');
+      const record = pageRecords.get(page);
+      if (!record.driver) {
+        record.driver = await page.evaluate(() => {
+          if (window.pennStation.getState().renderer.startsWith('WebGPU')) return { api: 'WebGPU', webGLDriverNotApplicable: true };
+          const context = document.querySelector('#scene-root canvas').getContext('webgl2');
+          if (!context) return { api: 'WebGL', unavailable: true };
+          const extension = context.getExtension('WEBGL_debug_renderer_info');
+          return { api: 'WebGL2', vendor: context.getParameter(extension?.UNMASKED_VENDOR_WEBGL || context.VENDOR), renderer: context.getParameter(extension?.UNMASKED_RENDERER_WEBGL || context.RENDERER), version: context.getParameter(context.VERSION) };
+        });
+        if (angle === 'metal' && record.driver.api === 'WebGL2') assert.match(record.driver.renderer, /Metal/i, 'Requested Metal run actually uses the observed Metal driver');
+        console.log(`DRIVER ${record.label}: ${JSON.stringify(record.driver)}`);
+      }
       console.log(`READY rendered: ${view || 'current view'}`);
     }
 
-    async function choose(page, view, expectFetch = false) {
-      const suffix = view === 'waiting' ? 'waiting-room' : view;
-      const loaded = expectFetch ? page.waitForResponse(response => new URL(response.url()).pathname.includes(`/model-${suffix}`) && response.status() === 200) : null;
+    async function choose(page, view) {
+      const before = await page.evaluate(() => window.pennStation.getScene());
       await page.locator(`.viewpoints [data-command="view"][data-value="${view}"]`).click();
-      if (loaded) await loaded;
-      // Let the React effect replace the previous room before checking its state.
       await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       await ready(page, view);
+      const after = await page.evaluate(() => window.pennStation.getScene());
+      assert.deepEqual(after, before, 'A viewpoint changes the camera without unloading, hiding or replacing any station zone');
     }
 
     async function settings(page, open = true) {
@@ -174,9 +209,21 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     }
 
     async function snapshot(page, name, record) {
+      const exposure = await page.evaluate(() => window.pennStation.getMetrics()?.exposure);
+      if (Number.isFinite(exposure)) {
+        await page.evaluate(() => { delete window.__pennExposureSample; });
+        await page.waitForFunction(() => {
+          const value = window.pennStation.getMetrics()?.exposure;
+          const previous = window.__pennExposureSample;
+          const stable = previous && Math.abs(value - previous.value) < .01 ? previous.stable + 1 : 0;
+          window.__pennExposureSample = { value, stable };
+          if (stable >= 2) { delete window.__pennExposureSample; return true; }
+          return false;
+        }, null, { timeout: 30000 });
+      }
       const values = await page.evaluate(() => ({
         state: window.pennStation.getState(), camera: window.pennStation.getCamera(),
-        metrics: window.pennStation.getMetrics(), assets: window.pennStation.getAssets(),
+        metrics: window.pennStation.getMetrics(), assets: window.pennStation.getAssets(), scene: window.pennStation.getScene(), navigation: window.pennStation.getNavigation?.(),
       }));
       record.snapshots ||= {};
       record.snapshots[name] = values;
@@ -184,15 +231,176 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
       return values;
     }
 
+    async function exteriorCorners(page, record) {
+      if (process.env.PENN_CORNER_VIEWS === '0') return;
+      const world = await page.evaluate(() => window.pennStation.getScene());
+      await page.emulateMedia({ reducedMotion: 'reduce' });
+      await choose(page, 'exterior');
+      const target = [108, 12, -5]; // The actual public exterior orbit preset.
+      const [width, depth] = manifest.dimensions.nominalFootprint;
+      const canvas = page.locator('#scene-root canvas');
+      const bounds = await canvas.boundingBox();
+      async function rotate(theta, phi = 1.22) {
+        const eye = await page.evaluate(() => window.pennStation.getCamera().position);
+        const dx = eye[0] - target[0], dy = eye[1] - target[1], dz = eye[2] - target[2];
+        const currentTheta = Math.atan2(dx, dz);
+        const currentPhi = Math.atan2(Math.hypot(dx, dz), dy);
+        const thetaDelta = Math.atan2(Math.sin(currentTheta - theta), Math.cos(currentTheta - theta));
+        const x = bounds.x + bounds.width / 2, y = bounds.y + bounds.height / 2;
+        await page.mouse.move(x, y); await page.mouse.down();
+        await page.mouse.move(x + thetaDelta * bounds.height / (2 * Math.PI), y + (currentPhi - phi) * bounds.height / (2 * Math.PI), { steps: 4 });
+        await page.mouse.up();
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      }
+      await rotate(.7);
+      for (let i = 0; i < 6; i++) {
+        const eye = await page.evaluate(() => window.pennStation.getCamera().position);
+        if (Math.hypot(eye[0] - target[0], eye[2] - target[2]) >= 320) break;
+        // Drei's installed three-stdlib controls apply one5% dolly step per
+        // wheel event; a larger delta does not create a larger zoom change.
+        for (let scroll = 0; scroll < 5; scroll++) await page.mouse.wheel(0, 300);
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      }
+      record.cornerInspection = [];
+      for (const corner of [
+        { name: 'southeast', theta: .7, east: true, south: true },
+        { name: 'northeast', theta: Math.PI - .7, east: true, south: false },
+        { name: 'northwest', theta: -Math.PI + .95, east: false, south: false },
+        { name: 'southwest', theta: -.95, east: false, south: true },
+      ]) {
+        await rotate(corner.theta);
+        const shot = await snapshot(page, `desktop-corner-${corner.name}`, record);
+        const position = shot.camera.position;
+        assert(corner.east ? position[0] > width / 2 : position[0] < -width / 2, `${corner.name}: actual camera lies beyond the correct avenue facade`);
+        assert(corner.south ? position[2] > depth / 2 : position[2] < -depth / 2, `${corner.name}: actual camera lies beyond the correct street facade`);
+        assert.deepEqual(shot.scene, world, `${corner.name}: all station zones remain present during exterior inspection`);
+        record.cornerInspection.push({ corner: corner.name, position, screenshot: `desktop-corner-${corner.name}.png` });
+      }
+      await page.emulateMedia({ reducedMotion: 'no-preference' });
+      await choose(page, 'exterior');
+      report.checks.push('Four actual exterior-corner orbit views preserve the complete station; screenshots support visual face/roof/contact inspection');
+    }
+
+    async function waitingEndStair(page, record, walkBefore, afterForward) {
+      const stairs = manifest.waitingEndStairs || manifest.endEntranceStairs;
+      const south = stairs?.find(stair => stair.bounds[2] > 0);
+      assert(south, 'Final architectural manifest describes the south waiting-room end stair');
+      assert(Number.isFinite(south.roomSideDoorPlaneZ), 'Final manifest supplies the actual closed end-door plane');
+      assert(south.landingBounds[2] >= south.bounds[3] - .001, 'End stair and upper landing share their actual endpoint');
+      const before = await page.evaluate(() => ({ camera: window.pennStation.getCamera(), state: window.pennStation.getState(), scene: window.pennStation.getScene() }));
+      assert(before.camera.position[2] < south.bounds[2], 'Walking begins on the main floor before the real end flight');
+      await page.evaluate(() => {
+        window.__pennStairSamples = []; window.__pennStairSampling = true;
+        const sample = () => {
+          if (!window.__pennStairSampling) return;
+          const camera = window.pennStation.getCamera(), state = window.pennStation.getState();
+          if (camera && window.__pennStairSamples.length < 600) window.__pennStairSamples.push({ position: camera.position, pose: state.pose, loading: state.loading });
+          requestAnimationFrame(sample);
+        };
+        requestAnimationFrame(sample);
+      });
+      const stops = []; let samples = [];
+      await page.keyboard.down('ShiftLeft'); await page.keyboard.down('KeyS');
+      try {
+        await page.waitForFunction(({ plane, eye }) => {
+          const camera = window.pennStation.getCamera();
+          return camera.position[2] > plane - .65 && Math.abs(camera.position[1] - eye) < .08;
+        }, { plane: south.roomSideDoorPlaneZ, eye: south.topWorld + HUMAN_EYE }, { timeout: 120000 });
+        for (let i = 0; i < 4; i++) {
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          stops.push(await page.evaluate(() => window.pennStation.getCamera().position));
+        }
+      } finally {
+        await page.keyboard.up('KeyS'); await page.keyboard.up('ShiftLeft');
+        samples = await page.evaluate(() => { window.__pennStairSampling = false; const samples = window.__pennStairSamples; delete window.__pennStairSamples; delete window.__pennStairSampling; return samples; });
+        record.walking = { before: walkBefore, afterForward, endStair: south, ascentSamples: samples, landingStopSamples: stops };
+      }
+      const atDoor = stops.at(-1);
+      assert(atDoor[0] > south.bounds[0] && atDoor[0] < south.bounds[1], 'Continuous ascent stays on the central end flight');
+      assert(atDoor[2] >= south.landingBounds[2] && atDoor[2] <= south.landingBounds[3], 'Measured stop lies on the actual raised landing');
+      assert(atDoor[2] > south.roomSideDoorPlaneZ - .65 && atDoor[2] < south.roomSideDoorPlaneZ - .20, 'The real closed-door structure keeps human clearance at the end of the landing');
+      assert(Math.abs(atDoor[1] - (south.topWorld + HUMAN_EYE)) < .08, 'Climbing reaches human eye height above street-level floor');
+      assert(distance(stops.at(-2), atDoor) < .08, 'Movement settles against the actual end-door blocker');
+      const rising = samples.filter(sample => sample.position[2] >= south.bounds[2] && sample.position[2] <= south.bounds[3]);
+      assert(rising.length >= 3, 'Actual rendered movement samples cover the stair flight');
+      assert(new Set(rising.map(sample => Math.round(sample.position[1] * 10))).size >= 3, 'Several intermediate eye heights establish an ascent rather than a preset jump');
+      for (let i = 0; i < samples.length; i++) {
+        assert.equal(samples[i].pose, before.state.pose, 'End-stair ascent does not reset the camera pose');
+        assert.equal(samples[i].loading, false, 'End-stair ascent does not replace station geometry');
+        if (i) assert(Math.abs(samples[i].position[1] - samples[i - 1].position[1]) < .8, 'Stair rise remains gradual between rendered samples');
+      }
+      for (const sample of rising) {
+        const fraction = Math.max(0, Math.min(1, (sample.position[2] - south.bounds[2]) / (south.bounds[3] - south.bounds[2])));
+        const expected = south.bottomWorld + (south.topWorld - south.bottomWorld) * fraction + HUMAN_EYE;
+        assert(Math.abs(sample.position[1] - expected) < .5, 'Eye follows the real end-flight tread profile');
+      }
+      assert.deepEqual(await page.evaluate(() => window.pennStation.getScene()), before.scene, 'Climbing preserves the same complete world');
+      record.walking = { before: walkBefore, afterForward, endStair: south, ascentSamples: samples, landingStopSamples: stops };
+      await snapshot(page, 'desktop-waiting-end-landing', record);
+      report.checks.push('WASD follows the real waiting-room end stair to street-level eye height and stops at the manifest-defined closed end door');
+    }
+
+    async function platformWalking(page, record) {
+      const platform = manifest.railway?.platforms.find(item => item.number === 5);
+      assert(platform?.polygonXZ?.length >= 3 && Number.isFinite(platform.floorWorld), 'Canonical railway metadata supplies the real Platform5 walking polygon and floor');
+      const world = await page.evaluate(() => window.pennStation.getScene());
+      await settings(page, false);
+      if (!await page.locator('#map-control').evaluate(el => el.open)) await page.locator('#map-control > summary').click();
+      await page.locator('.map-body [data-command="focus"][data-value="platform"]').click();
+      await ready(page, 'concourse');
+      await page.locator('#map-control > summary').click();
+      await settings(page);
+      await page.locator('[data-command="mode"][data-value="walk"]').click();
+      await settings(page, false);
+      await page.waitForFunction(eye => {
+        const state = window.pennStation.getState(), camera = window.pennStation.getCamera();
+        return state.mode === 'walk' && !state.loading && Math.abs(camera.position[1] - eye) < .03;
+      }, platform.floorWorld + HUMAN_EYE);
+      const before = await page.evaluate(() => ({ camera: window.pennStation.getCamera(), navigation: window.pennStation.getNavigation?.() }));
+      assert(insidePolygon(before.camera.position, platform.polygonXZ), 'Platform viewpoint begins walking on its actual outline');
+      assert(before.navigation, 'Read-only collision-index diagnostics are available');
+      assert(before.navigation.excludedInstances >= 60000, 'Tens of thousands of railway fittings are excluded before collision traversal');
+      await page.locator('#scene-root canvas').focus();
+      await page.keyboard.down('KeyW');
+      try { await page.waitForFunction(x => window.pennStation.getCamera().position[0] < x - .4, before.camera.position[0], { timeout: 30000 }); }
+      finally { await page.keyboard.up('KeyW'); }
+      const edge = Math.min(...platform.polygonXZ.map(point => point[1]));
+      await page.keyboard.down('KeyD');
+      const edgeSamples = [];
+      try {
+        await page.waitForFunction(z => window.pennStation.getCamera().position[2] < z + .55, edge, { timeout: 30000 });
+        for (let i = 0; i < 5; i++) {
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          edgeSamples.push(await page.evaluate(() => window.pennStation.getCamera().position));
+        }
+      } finally { await page.keyboard.up('KeyD'); }
+      const after = await page.evaluate(() => ({ camera: window.pennStation.getCamera(), navigation: window.pennStation.getNavigation() }));
+      assert(insidePolygon(after.camera.position, platform.polygonXZ), 'Actual platform-edge collision keeps the walking position inside the source outline');
+      assert(after.camera.position[2] >= edge + .15 && after.camera.position[2] <= edge + .55, 'Human footprint stops before stepping off the platform into the track');
+      assert(Math.abs(after.camera.position[1] - (platform.floorWorld + HUMAN_EYE)) < .03, 'Platform walking stays at the rail-derived floor height');
+      assert(distance(edgeSamples.at(-2), edgeSamples.at(-1)) < .08, 'Walking settles at the platform edge while the movement key remains held');
+      assert(after.navigation.queries > before.navigation.queries, 'Successful platform movement uses real collision queries');
+      assert(after.navigation.lastCandidates <= 32 && after.navigation.maximumCandidates < 512, 'Short movement rays test local structure rather than a whole fitting population');
+      assert.deepEqual(await page.evaluate(() => window.pennStation.getScene()), world, 'Below-ground walking retains every station zone');
+      record.platformWalking = { before, after, edgeSamples, edge, platform };
+      await snapshot(page, 'desktop-platform-walking', record);
+      report.checks.push('Real Platform5 walking, source-polygon edge/drop protection, persistent world and bounded local collision candidates with over60000 fitting instances excluded');
+      await choose(page, 'waiting');
+    }
+
     async function bakedLighting(page, suffix = '') {
       const assets = await page.evaluate(() => window.pennStation.getAssets());
-      for (const zone of ['exterior', 'waiting-room', 'concourse']) {
+      for (const zone of ['exterior', 'waiting-room', 'concourse', 'platform']) {
         const filename = `model-${zone}${suffix}.glb`;
         const asset = assets.find(item => item.file === filename);
         assert(asset, `${filename}: decoded architectural asset is reported`);
         assert(asset.bakedMaterials > 0, `${filename}: actual materials carry a decoded illumination light map`);
         assert(asset.occlusionMaterials > 0, `${filename}: actual materials carry a baked occlusion map`);
         assert(asset.atlasChannels.length > 0 && asset.atlasChannels.every(channel => Number.isInteger(channel) && channel >= 0 && channel <= 3), `${filename}: light maps retain valid exported atlas UV channels`);
+        if (zone !== 'exterior') {
+          assert(asset.reflectionMaterials > 0, `${filename}: actual materials use a local room reflection capture`);
+          assert(asset.reflectionFile.endsWith(`${suffix}.hdr.gz`), `${filename}: reflection quality follows the selected graphics setting`);
+        }
       }
       return assets;
     }
@@ -243,6 +451,10 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     const p = desktop.page;
     await ready(p, 'exterior');
     const initial = await snapshot(p, 'desktop-intro', desktop.record);
+    for (const zone of ['exterior', 'waiting', 'concourse', 'context', 'platform', 'trains']) {
+      const active = initial.scene.zones.find(item => item.name === zone);
+      assert(active?.visible && active.meshes > 0, `Opening exterior contains the actual visible ${zone} zone`);
+    }
     if (process.env.PENN_SMOKE === '1') {
       clean(desktop.record);
       report.checks.push('Current installed browser starts, decodes and renders the authored exterior with requested renderer/fallback');
@@ -260,18 +472,21 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     assert(await p.locator('#intro').isHidden());
     assert(await p.locator('#scene-root canvas').evaluate(el => el === document.activeElement), 'Enter Station focuses the interactive canvas');
     report.checks.push('Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths');
+    await exteriorCorners(p, desktop.record);
 
     for (const view of ['waiting', 'concourse']) {
       await choose(p, view, true);
       await snapshot(p, `desktop-${view}`, desktop.record);
     }
+    assert(desktop.record.snapshots['desktop-waiting'].metrics.exposure > initial.metrics.exposure * 2.5, 'Photographic exposure adapts after the camera enters the actual waiting-room volume');
+    assert(desktop.record.snapshots['desktop-concourse'].metrics.exposure > initial.metrics.exposure * 1.2 && desktop.record.snapshots['desktop-concourse'].metrics.exposure < desktop.record.snapshots['desktop-waiting'].metrics.exposure * .8, 'The actual concourse camera receives its own settled exposure rather than inheriting the waiting-room gain');
     desktop.record.bakedLighting = await bakedLighting(p);
     assert(desktop.record.requests.some(r => /\/lighting-[^/]+-sky\.webp$/.test(r.path) && r.status === 200), 'Local architectural illumination WebP atlases load in addition to the HDR environment');
-    assert(desktop.record.requests.some(r => r.path.endsWith('/model-platform.glb.gz') && r.status === 200), 'The separate representative platform geometry loads with the concourse');
+    assert(desktop.record.requests.some(r => r.path.endsWith('/model-platform.glb.gz') && r.status === 200), 'The complete railway loads in the same world as the station');
     assert(desktop.record.requests.some(r => r.path.endsWith('/model-trains.glb.gz') && r.status === 200), 'The authored electric locomotive and passenger coaches load with the concourse');
     const platformAsset = desktop.record.bakedLighting.find(asset => asset.file === 'model-platform.glb');
-    assert(platformAsset && platformAsset.bakedMaterials === 0, 'The separate platform uses unbaked PBR materials');
-    report.checks.push('Core materials retain baked WebP illumination, ambient occlusion and exported atlas channels; context, unbaked platform and period rolling stock decode locally');
+    assert(platformAsset && platformAsset.bakedMaterials > 0, 'Platform floors use baked light beneath the assembled station');
+    report.checks.push('Core and railway floors retain calibrated baked illumination, ambient occlusion and atlas channels; local HDR reflections, context and period rolling stock decode locally');
     await choose(p, 'exterior');
     const orbitBefore = await p.evaluate(() => window.pennStation.getCamera().position);
     const canvasBounds = await p.locator('#scene-root canvas').boundingBox();
@@ -321,23 +536,8 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     await p.locator('#map-control > summary').click();
     await p.locator('#scene-root canvas').focus();
     assert(Math.abs(walked[1] - WAITING_EYE) < .03, 'Walking keeps human eye height above the waiting-room floor 14 ft below the street');
-    // Walk backwards toward the nearest chamber boundary. Record the actual stop;
-    // this verifies the room envelope, not every staircase or obstacle in the site.
-    await p.keyboard.down('ShiftLeft'); await p.keyboard.down('KeyS');
-    const stops = [];
-    try {
-      await p.waitForFunction(() => window.pennStation.getCamera().position[2] > 41.4, null, { timeout: 90000 });
-      for (let i = 0; i < 4; i++) {
-        await p.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-        stops.push(await p.evaluate(() => window.pennStation.getCamera().position));
-      }
-    } finally { await p.keyboard.up('KeyS'); await p.keyboard.up('ShiftLeft'); }
-    const atWall = stops.at(-1);
-    desktop.record.walking = { before: walkBefore, afterForward: walked, boundarySamples: stops };
-    assert(atWall[0] >= -14.401 && atWall[0] <= 14.401 && atWall[2] >= -42.201 && atWall[2] <= 42.201, 'Walking stays inside the waiting-room chamber bounds');
-    assert(atWall[2] > 41.4, 'The stop occurs at the actual south chamber boundary');
-    assert(stops.length >= 2 && distance(stops.at(-2), atWall) < 0.08, 'Movement settles against a wall or chamber boundary');
-    report.checks.push('WASD movement, fixed eye height and measured stop at waiting-room wall/envelope');
+    await waitingEndStair(p, desktop.record, walkBefore, walked);
+    await platformWalking(p, desktop.record);
 
     await settings(p);
     await p.locator('[data-command="mode"][data-value="orbit"]').click();
@@ -418,10 +618,10 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     await snapshot(m, 'mobile-intro', mobile.record);
     await m.locator('[data-command="enter"]').tap();
     const waitButton = m.locator('.viewpoints [data-value="waiting"]');
-    const mobileWaitingLoad = m.waitForResponse(response => new URL(response.url()).pathname.endsWith('/model-waiting-room-low.glb.gz') && response.status() === 200);
+    const mobileWorld = await m.evaluate(() => window.pennStation.getScene());
     await waitButton.focus(); await m.keyboard.press('Enter');
-    await mobileWaitingLoad;
     await ready(m, 'waiting');
+    assert.deepEqual(await m.evaluate(() => window.pennStation.getScene()), mobileWorld, 'Mobile keyboard viewpoint retains the complete station');
     assert.equal(await m.evaluate(() => window.pennStation.getState().instant), true, 'Reduced-motion/keyboard view changes are immediate');
     await m.waitForFunction(() => document.getAnimations().every(animation => animation.playState !== 'running'));
     await choose(m, 'concourse', true);
@@ -509,6 +709,15 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     console.log(`PASS ${report.checks.length} integration groups; screenshots and measured rendering statistics: ${output}`);
   } catch (error) {
     report.passed = false; report.failure = error.stack || String(error);
+    if (activePage) {
+      try {
+        report.failureState = await Promise.race([
+          activePage.evaluate(() => ({ state: window.pennStation?.getState(), camera: window.pennStation?.getCamera(), navigation: window.pennStation?.getNavigation?.(), scene: window.pennStation?.getScene?.() })),
+          new Promise(resolve => setTimeout(() => resolve({ unavailable: 'Browser did not answer within three seconds' }), 3000)),
+        ]);
+      } catch {}
+      try { await activePage.screenshot({ path: path.join(output, 'failure.png'), animations: 'disabled', timeout: 10000 }); } catch {}
+    }
     console.error(error.stack || error);
     process.exitCode = 1;
   } finally {
@@ -517,4 +726,7 @@ const distance = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
     await browser?.close();
     await new Promise(resolve => server.close(resolve));
   }
-})();
+})().then(
+  () => finishCli(process.exitCode || 0),
+  error => { console.error(error.stack || error); return finishCli(1); },
+);

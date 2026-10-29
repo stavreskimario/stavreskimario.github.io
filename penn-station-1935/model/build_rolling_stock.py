@@ -292,9 +292,13 @@ DRIVER=steel_wheel_kit('01 GG1 57inch spoked driver master',GG1_DRIVER/2,12)
 SMALL_WHEEL=steel_wheel_kit('02 36inch pilot and coach wheel master',36*.0254/2,10)
 
 
-def axle(kit,x,radius,name,transverse=.83):
+def axle(kit,x,radius,name,transverse=.785):
+    # Interpreted wheelset fit: full treads cover the1.4351m running gauge and
+    # the inward flanges clear the actual authored railhead below its crown.
     kit_instances(kit,name+' left',(x,transverse,radius))
-    kit_instances(kit,name+' right',(x,-transverse,radius))
+    # A half-turn mirrors the transverse wheel profile: both flanges face
+    # inward toward the track centre rather than one flange facing outward.
+    kit_instances(kit,name+' right',(x,-transverse,radius),math.pi)
     beam(name+' axle',(x,-transverse,radius),(x,transverse,radius),.075,IRON,16)
 
 
@@ -545,7 +549,10 @@ def coach_prototype():
             box('Vestibule side door',(x,side*1.472,2.29),(.78,.055,2.18),TUSCAN)
             box('Vestibule door glazing',(x,side*1.512,2.78),(.54,.03,.87),COACH_GLASS)
             beam('Vestibule door handle',(x+.28,side*1.54,2.10),(x+.28,side*1.54,2.36),.015,STEEL)
-            for i in range(4):box('Coach vestibule access step',(x,side*(1.14+i*.10),.30+i*.22),(.87,.50,.13),IRON)
+            # The high-platform display state retracts the outer steps within
+            # the body envelope. Extended low-platform steps would penetrate
+            # Penn's documented5ft3 centre-to-edge clearance by about9cm.
+            for i in range(4):box('Coach vestibule access step — retracted high-platform state',(x,side*min(1.14+i*.10,1.30),.30+i*.22),(.87,.50,.13),IRON)
         end=direction*11.81
         for i in range(7):
             xx=end+direction*i*.027

@@ -28,21 +28,22 @@ const destination = process.env.PENN_LIVE_REPORT || '/private/tmp/penn-live-vali
       if (item.status >= 400) report.failures.push(item);
     });
     await page.route('**/*', route => route.request().url().startsWith(site + '/') || /^(blob:|data:)/.test(route.request().url()) ? route.continue() : route.abort());
-    const url = new URL(base); url.searchParams.set('preview', process.env.PENN_COMMIT || 'phase2');
+    const url = new URL(base); url.searchParams.set('preview', process.env.PENN_COMMIT || 'phase3');
     await page.goto(url.href, { waitUntil: 'domcontentloaded', timeout: 90000 });
-    assert.match(await page.locator('.phase-label').textContent(), /phase 2/i);
+    assert.match(await page.locator('.phase-label').textContent(), /phase 3/i);
+    let world;
     for (const view of ['exterior', 'waiting', 'concourse']) {
       if (view !== 'exterior') {
-        const file = `/model-${view === 'waiting' ? 'waiting-room' : view}.glb.gz`;
-        const receipt = page.waitForResponse(response => new URL(response.url()).pathname.endsWith(file) && response.status() === 200);
-        await page.locator(`.viewpoints [data-value="${view}"]`).click(); await receipt;
+        await page.locator(`.viewpoints [data-value="${view}"]`).click();
       }
       await page.waitForFunction(wanted => {
         if (!window.pennStation) return false;
         const state = window.pennStation.getState(), metrics = window.pennStation.getMetrics();
         return state.view === wanted && !state.loading && !state.error && metrics?.triangles > 1000 && metrics.calls > 0;
       }, view);
-      const snapshot = await page.evaluate(() => ({ state: window.pennStation.getState(), metrics: window.pennStation.getMetrics() }));
+      const snapshot = await page.evaluate(() => ({ state: window.pennStation.getState(), metrics: window.pennStation.getMetrics(), scene:window.pennStation.getScene() }));
+      if (!world) world = snapshot.scene;
+      else assert.deepEqual(snapshot.scene,world,'Published viewpoints retain the same complete scene');
       report.views.push(snapshot);
       console.log('Live view rendered:', view, snapshot.metrics.triangles);
     }
@@ -54,7 +55,7 @@ const destination = process.env.PENN_LIVE_REPORT || '/private/tmp/penn-live-vali
     }
     assert.deepEqual(report.errors, []); assert.deepEqual(report.failures, []);
     report.passed = true;
-    console.log('PASS published Phase 2 bundle, six zones and local compressed assets');
+    console.log('PASS published Phase 3 bundle, persistent station and local compressed assets');
   } catch (error) { report.passed = false; report.error = String(error); throw error; }
   finally { await fs.writeFile(destination, JSON.stringify(report, null, 2) + '\n'); await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

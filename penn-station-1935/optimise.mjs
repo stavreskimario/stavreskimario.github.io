@@ -18,7 +18,7 @@ await mkdir(scratch, { recursive: true });
 await mkdir(out, { recursive: true });
 let metrics = { pipeline: 'Blender 4.3 → glTF Transform 4.2.1 → Meshopt + KTX2/UASTC', assets: [] };
 const requestedZones = process.argv.slice(2);
-if (requestedZones.some(zone => !['exterior', 'waiting-room', 'concourse', 'context', 'platform', 'trains'].includes(zone))) throw new Error('Unknown model zone');
+if (requestedZones.some(zone => !['exterior', 'waiting-room', 'concourse', 'context', 'platform', 'trains', 'passengers'].includes(zone))) throw new Error('Unknown model zone');
 if (requestedZones.length) { try { metrics = JSON.parse(await readFile(path.join(out, 'asset-metrics.json'), 'utf8')); } catch {} }
 function metadata(buffer) {
   if (buffer.toString('ascii', 0, 4) !== 'glTF') throw new Error('Expected glTF 2.0 binary');

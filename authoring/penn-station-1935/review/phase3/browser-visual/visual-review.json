@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "created": "2026-10-29T05:45:53.542Z",
+  "scope": "Actual production app/assets at1280x900 desktop,balancedquality,reducedmotion; no scratch code/map overrides; observed Metal driver,not mobilehardwareperformance",
+  "views": [
+    {
+      "name": "waiting-room",
+      "file": "waiting-room.png",
+      "state": {
+        "view": "waiting",
+        "framing": "",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": true
+      },
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 146,
+        "triangles": 6549978,
+        "geometries": 113,
+        "textures": 45,
+        "exposure": 4.150686032163105
+      },
+      "driver": {
+        "renderer": "WebKit WebGL",
+        "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "unmaskedVendor": "Google Inc. (Apple)"
+      },
+      "originalScratchFile": "/private/tmp/penn-phase3-browser-final/waiting-room.png"
+    },
+    {
+      "name": "concourse",
+      "file": "concourse.png",
+      "state": {
+        "view": "concourse",
+        "framing": "",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 2,
+        "instant": true
+      },
+      "camera": {
+        "position": [
+          -64,
+          3.7327999999999957,
+          38.000000000000014
+        ],
+        "quaternion": [
+          0.10778367340324127,
+          0.1104452884527139,
+          -0.012049430351643943,
+          0.9879470275447471
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 148,
+        "triangles": 7122514,
+        "geometries": 114,
+        "textures": 49,
+        "exposure": 1.569101149197767
+      },
+      "driver": {
+        "renderer": "WebKit WebGL",
+        "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "unmaskedVendor": "Google Inc. (Apple)"
+      },
+      "originalScratchFile": "/private/tmp/penn-phase3-browser-final/concourse.png"
+    },
+    {
+      "name": "exterior",
+      "file": "exterior.png",
+      "state": {
+        "view": "exterior",
+        "framing": "",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 4,
+        "instant": true
+      },
+      "camera": {
+        "position": [
+          145,
+          8.000000000000002,
+          88
+        ],
+        "quaternion": [
+          0.019613231515716492,
+          0.18815900475112515,
+          -0.003758297779044665,
+          0.9819355301028582
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 160,
+        "triangles": 7315234,
+        "geometries": 114,
+        "textures": 49,
+        "exposure": 1.049327710002693
+      },
+      "driver": {
+        "renderer": "WebKit WebGL",
+        "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "unmaskedVendor": "Google Inc. (Apple)"
+      },
+      "originalScratchFile": "/private/tmp/penn-phase3-browser-final/exterior.png"
+    },
+    {
+      "name": "platform",
+      "file": "platform.png",
+      "state": {
+        "view": "concourse",
+        "framing": "platform",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          -14.000000000000004,
+          -9.785625000000001,
+          15.700000000000003
+        ],
+        "quaternion": [
+          -0.006629527667645987,
+          0.5998265102441258,
+          0.004970166398698731,
+          0.8000871855099461
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 174,
+        "triangles": 7215974,
+        "geometries": 114,
+        "textures": 49,
+        "exposure": 4.150656177373227
+      },
+      "driver": {
+        "renderer": "WebKit WebGL",
+        "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "unmaskedVendor": "Google Inc. (Apple)"
+      },
+      "originalScratchFile": "/private/tmp/penn-phase3-platform-final60/platform.png"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "platformFailedRequests": [],
+  "interiorExteriorRequestNotes": [
+    {
+      "url": "http://127.0.0.1:62181/exhibition/penn-station-1935/assets/model-context.glb.gz?revision=3",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "appearanceReview": {
+    "waitingConcourse": "Denoising resolves granular illumination; settled interior exposure reveals stone/plaster. Residual historical-detail omissions remain in research ledger.",
+    "platform": "Practical intensity60 reduces the far stair/coach pool; locomotive remains appropriately dark but stripes and coach are visible. Finaltrainfit included.",
+    "platformExposure": 4.150656177373227,
+    "poolDisplayLuminanceComparison": {
+      "roiXY": [
+        410,
+        490,
+        600,
+        620
+      ],
+      "oldIntensity140Mean": 103.96953180566715,
+      "finalIntensity60Mean": 82.59616536841405,
+      "oldNearWhiteRGB250Pixels": 4,
+      "finalNearWhiteRGB250Pixels": 0,
+      "pixelCount": 24700,
+      "note": "Fixed screenshot ROI diagnostic,not physical luminance or historic candlepower"
+    }
+  }
+}

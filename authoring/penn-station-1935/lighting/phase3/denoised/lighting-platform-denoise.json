@@ -1,0 +1,61 @@
+{
+  "zone": "platform",
+  "source": "lighting-platform-sky.hdr",
+  "sourceSha256": "3663758f4fc99738cd7abbb73141554cc6983a9d0c43d5b2272648198dd13d43",
+  "inputTransfer": "srgb",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.3570171594619751,
+    "minimum": 0.0,
+    "maximum": 0.8828125
+  },
+  "originalLinear": {
+    "mean": 0.2528435289859772,
+    "minimum": 0.0,
+    "maximum": 0.7538285851478577
+  },
+  "denoisedLinear": {
+    "mean": 0.2528460919857025,
+    "minimum": 0.0,
+    "maximum": 1.0042312145233154
+  },
+  "relativeMeanChange": 1.0136702867757919e-05,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-sky-denoised-linear.hdr",
+    "sha256": "7f0a4f37c795e96915f9f4b3f9535d420957dddb1c1c6c744c87c027239e6a99",
+    "decodedLinear": {
+      "mean": 0.25215592980384827,
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "meanQuantizationError": 0.0006902559543959796
+  },
+  "full": {
+    "png": "lighting-platform-sky.png",
+    "webp": "lighting-platform-sky.webp",
+    "clippedRGBSamples": 1,
+    "width": 2048,
+    "height": 2048
+  },
+  "low": {
+    "png": "lighting-platform-sky-low.png",
+    "webp": "lighting-platform-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 6.450087250035722,
+  "schemaVersion": 1
+}
