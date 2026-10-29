@@ -10,6 +10,7 @@ import bpy
 import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
+from coffer_geometry import tessellate_profile
 
 ROOT = Path(__file__).resolve().parent.parent
 parser=argparse.ArgumentParser(description=__doc__)
@@ -179,6 +180,8 @@ IRON = mat("PaintedStructuralIron", (.105, .12, .12), .55, 0)
 MONEL=mat("MonelRoof",(.29,.31,.31),.58,.85)
 ROOF_TILE=mat("FlatRoofTile",(.32,.31,.29),.78)
 BRONZE = mat("AgedBronze", (.19, .14, .085), .47, .65)
+OPAL_GLASS=mat('OpalCandelabraGlass',(.78,.77,.72),.24,0)
+OPAL_GLASS['optical_interpretation']='Milky opal lamp globes identified photographically; exact IOR, transmission, finish and practical-light output are not measured historic samples'
 GLASS = mat("HistoricGlass", (.84, .89, .89), .14, 0)
 gp = GLASS.node_tree.nodes.get("Principled BSDF")
 gp.inputs["Transmission Weight"].default_value=.86
@@ -283,7 +286,7 @@ def steel_i(name,a,b,width=.22,depth=.42,flange=.035,web=.024):
 def flatbar(name,a,b,width=.07,thick=.018,material=IRON):
     return section_beam(name,a,b,[(-width/2,-thick/2),(width/2,-thick/2),(width/2,thick/2),(-width/2,thick/2)],material)
 
-def tube_path(name,points,radius,material,segments=8):
+def tube_path(name,points,radius,material,segments=8,closed=False):
     verts=[];faces=[]
     for i,p in enumerate(points):
         tangent=Vector(points[min(i+1,len(points)-1)])-Vector(points[max(0,i-1)])
@@ -295,7 +298,10 @@ def tube_path(name,points,radius,material,segments=8):
         for k in range(segments):
             j=(k+1)%segments
             faces.append((i*segments+k,i*segments+j,(i+1)*segments+j,(i+1)*segments+k))
+    if closed:
+        faces.extend([tuple(range(segments-1,-1,-1)),tuple((len(points)-1)*segments+k for k in range(segments))])
     obj=mesh(name,verts,faces,material)
+    if closed:obj['closed_support']=True
     for p in obj.data.polygons:p.use_smooth=True
     return obj
 
@@ -334,8 +340,10 @@ def carved_abacus(name,center):
     verts=[];faces=[]
     outline=[]
     for side in range(4):
-        for k in range(9):
-            t=k/8
+        # Sample the same concave outline more finely; exclude duplicated
+        # corner endpoints that formerly generated zero-area side faces.
+        for k in range(24):
+            t=k/24
             along=-1.5+3*t
             depth=1.5-.18*math.sin(math.pi*t)
             p=(along,-depth) if side==0 else (depth,along) if side==1 else (-along,depth) if side==2 else (-depth,-along)
@@ -459,7 +467,9 @@ def copy_obj(o,name,at):
 def capital_leaf(center, angle, rank):
     """A curved, lobed acanthus interpretation; not a scanned carving."""
     verts=[];faces=[]
-    rows,cols=20,10
+    # Preserve the existing interpreted leaf profile/lobe count while sampling
+    # its curves sufficiently for close views and their cast shadows.
+    rows,cols=40,20
     radial=Vector((math.cos(angle),math.sin(angle),0))
     tangent=Vector((-math.sin(angle),math.cos(angle),0))
     for iy in range(rows+1):
@@ -485,15 +495,17 @@ def capital_leaf(center, angle, rank):
     for iy in range(rows):
         for ix in [0,cols]:
             a=iy*(cols+1)+ix;b=(iy+1)*(cols+1)+ix
-            faces.append((a,b,b+front_count,a+front_count))
+            edge=(a,b,b+front_count,a+front_count)
+            faces.append(tuple(reversed(edge)) if ix==cols else edge)
     for iy in [0,rows]:
         for ix in range(cols):
-            a=iy*(cols+1)+ix;faces.append((a,a+1,a+1+front_count,a+front_count))
+            a=iy*(cols+1)+ix;edge=(a,a+1,a+1+front_count,a+front_count)
+            faces.append(tuple(reversed(edge)) if iy==0 else edge)
     leaf=mesh("Rooted carved acanthus leaf",verts,faces,LIMESTONE)
     for p in leaf.data.polygons:p.use_smooth=True
     return leaf
 
-def arch(name, center, radius, depth, material, axis="X", start=0, end=math.pi, width=.35, steps=48, rise=None):
+def arch(name, center, radius, depth, material, axis="X", start=0, end=math.pi, width=.35, steps=144, rise=None):
     verts=[]
     for j in range(steps+1):
         a=start+(end-start)*j/steps
@@ -505,6 +517,9 @@ def arch(name, center, radius, depth, material, axis="X", start=0, end=math.pi, 
     for j in range(steps):
         a=j*4;b=a+4
         faces.extend([(a,b,b+1,a+1),(a+2,a+3,b+3,b+2),(a,a+2,b+2,b),(a+1,b+1,b+3,a+3)])
+    # Exchanging the X/Y parameterization reverses handedness. Retain the
+    # established axis-X winding, and correct axis-Y shells only.
+    if axis=="Y":faces=[tuple(reversed(face)) for face in faces]
     return mesh(name,verts,faces,material)
 
 def lunette(name, center, radius, material, axis="X", grid=True):
@@ -657,12 +672,14 @@ def batch_static(col):
     COL=col
     groups={}
     for o in list(col.objects):
-        if o.type!="MESH" or o.hide_render or o.modifiers: continue
+        if o.type!="MESH" or o.hide_render or o.modifiers or o.get('preserve_linked_geometry'): continue
         materials=tuple(o.data.materials)
         groups.setdefault(materials,[]).append(o)
     for materials,objects in groups.items():
         material=materials[0] if materials else None
         verts=[];faces=[];smooth=[];uvs=[];material_indices=[]
+        carry_custom=any(o.data.has_custom_normals for o in objects)
+        corner_normals=[]
         for o in objects:
             offset=len(verts)
             matrix=o.matrix_world
@@ -673,12 +690,16 @@ def batch_static(col):
                 material_indices.append(poly.material_index)
                 uv_layer=o.data.uv_layers.active
                 uvs.extend(tuple(uv_layer.data[i].uv) if uv_layer else (0,0) for i in poly.loop_indices)
+                if carry_custom:
+                    transform=matrix.to_3x3().inverted().transposed()
+                    corner_normals.extend(tuple((transform@o.data.corner_normals[i].vector).normalized()) for i in poly.loop_indices)
         joined=mesh(col.name+" — "+(material.name if material else "default"),verts,faces,material)
         for extra in materials[1:]:joined.data.materials.append(extra)
         for i,p in enumerate(joined.data.polygons):
             p.use_smooth=smooth[i]
             p.material_index=material_indices[i]
         for i,uv in enumerate(uvs): joined.data.uv_layers.active.data[i].uv=uv
+        if carry_custom:joined.data.normals_split_custom_set(corner_normals)
         if hasattr(bpy.data,"batch_remove"):
             bpy.data.batch_remove(ids=objects)
         else:
@@ -789,8 +810,15 @@ box("Flat central clock attic",(L/2-2.6,0,(14.05+75*FT)/2),(5.8,CLOCK_ATTIC_WIDT
 cornice("Clock attic crowning cornice",(L/2-2.6,0),CLOCK_ATTIC_WIDTH+.5,height=75*FT-1.0)
 # The seven-foot dial is centred61ft above the pavement in the PRR description.
 clockz=61*FT
-beam("Clock bronze bezel",(L/2+.31,0,clockz),(L/2+.56,0,clockz),3.5*FT,BRONZE,64)
-beam("Clock stone face",(L/2+.57,0,clockz),(L/2+.60,0,clockz),3.25*FT,WHITE,64)
+beam("Clock bronze bezel",(L/2+.31,0,clockz),(L/2+.56,0,clockz),3.5*FT,BRONZE,128)
+beam("Clock stone face",(L/2+.57,0,clockz),(L/2+.60,0,clockz),3.25*FT,WHITE,128)
+# Preserve the declared6ft/7ft source conflict rather than changing diameter
+# silently. Minute index proportions and fixed hand time remain interpreted.
+for k in range(60):
+    if k%5==0:continue # Existing twelve hour marks already occupy these positions.
+    angle=math.pi/2-k*math.pi/30
+    r0=.88 if k%5 else .79
+    beam("Exterior clock minute index",(L/2+.635,r0*math.cos(angle),clockz+r0*math.sin(angle)),(L/2+.635,.94*math.cos(angle),clockz+.94*math.sin(angle)),.009 if k%5 else .014,BLACK,8)
 for k in range(12):
     angle=math.pi/2-k*math.pi/6
     r0=.78;r1=.90
@@ -961,16 +989,16 @@ for sy in [-1,1]:
         lower=31+math.sqrt(max(0,10.16**2-float(xx)**2)) if abs(xx)<10.16 else 31
         if lower<46.0:
             box("Waiting end upper masonry spandrel",(float(xx),sy*48.50,(lower+46.0)/2),(xb-float(xa),2.06,46.0-lower),GRANITE)
-# Pitched lead roof; three transverse ridges follow triple vaulted volume.
+# Monel pitched roof; three transverse ridges follow the triple vaulted volume.
 for j in [-1,0,1]:
-    y=j*28.14
-    lo=y-14.1-(5.3 if j==-1 else 0)
-    hi=y+14.1+(5.3 if j==1 else 0)
+    y=j*HALL_L/3
+    lo=-HALL_SHELL_L/2 if j==-1 else -HALL_L/6 if j==0 else HALL_L/6
+    hi=HALL_SHELL_L/2 if j==1 else HALL_L/6 if j==0 else -HALL_L/6
     # Three transverse gables, visible as three peaks from Seventh Avenue.
     roofbase=46.0
     half=HALL_SHELL_W/2+.8
-    lo=max(-HALL_SHELL_L/2,lo-2 if j==-1 else lo)
-    hi=min(HALL_SHELL_L/2,hi+2 if j==1 else hi)
+    # Shared bay boundaries meet exactly. Rounded28.14/14.1 values formerly
+    # overlapped the valley strips by60mm and produced double roof surfaces.
     verts=[(-half,lo,roofbase),(-half,hi,roofbase),(-half,y,167*FT),(half,lo,roofbase),(half,hi,roofbase),(half,y,167*FT)]
     mesh("Monel roof transverse gabled bay",verts,[(0,3,5,2),(2,5,4,1)],MONEL)
     for sign in [-1,1]:
@@ -1058,7 +1086,9 @@ for sx in [-1,1]:
         if yy != 0:
             telephone=(sx==-1 and yy<0)
             office_holes=[(yy+dy-.825,yy+dy+.825,.15 if telephone else 1.15,3.15) for dy in [-7.4,-4.9,-2.4,.1,2.6,5.1,7.6]]
-            pierced_wall('Ticket/parcel office structural screen',sx*16.08,yy-9.6,yy+9.6,0,12.8,.85,'X',office_holes,LIMESTONE)
+            if not telephone:
+                office_holes.extend((yy+dy-.60,yy+dy+.60,.22,.64) for dy in [-7.4,-4.9,-2.4,.1,2.6,5.1,7.6])
+            office_screen=pierced_wall('Ticket/parcel office structural screen',sx*16.08,yy-9.6,yy+9.6,0,12.8,.85,'X',office_holes,LIMESTONE)
             office_front=pierced_wall('Botticino office front with actual grille openings',sx*15.60,yy-9.6,yy+9.6,0,3.65,.12,'X',office_holes,BOTTICINO)
             for dy in [-7.4,-4.9,-2.4,.1,2.6,5.1,7.6]:
                 if telephone:
@@ -1066,14 +1096,29 @@ for sx in [-1,1]:
                     box('Clear-panel telephone booth door',(sx*15.55,yy+dy,1.65),(.045,1.45,2.85),LIGHT_GLASS)
                     for side in [-1,1]:box('Botticino telephone booth partition',(sx*15.56,yy+dy+side*.86,1.65),(.16,.12,3.16),BOTTICINO,.02)
                     flatbar('Telephone booth bronze pull',(sx*15.49,yy+dy+.53,1.12),(sx*15.49,yy+dy+.53,1.47),.035,.035,BRONZE)
+                    for side in [-1,1]:
+                        box('Telephone clear-panel bronze door stile',(sx*15.52,yy+dy+side*.69,1.65),(.045,.045,2.85),BRONZE,.005)
+                    for z in [.23,2.73,3.06]:
+                        box('Telephone clear-panel bronze door rail',(sx*15.52,yy+dy,z),(.045,1.42,.045),BRONZE,.005)
                     continue
                 box('Unmodelled ticket-office dark interior',(sx*16.18,yy+dy,2.15),(.045,1.65,2.0),BLACK)
                 box('Botticino ticket counter ledge',(sx*15.48,yy+dy,1.10),(.48,1.84,.12),BOTTICINO,.035)
-                for dz in [1.3,2.1,2.8]:
-                    box("Ticket grille crossbar",(sx*15.55,yy+dy,dz),(.055,1.7,.045),BRONZE)
-                for p in [-.6,-.3,0,.3,.6]:
-                    box("Ticket grille upright",(sx*15.55,yy+dy+p,2.15),(.055,.025,2.0),BRONZE)
+                for dz in [1.3,1.65,2.0,2.35,2.70,3.08]:
+                    box("Ticket grille crossbar",(sx*15.55,yy+dy,dz),(.035,1.65,.025),BRONZE)
+                for p in np.linspace(-.72,.72,13):
+                    box("Ticket grille upright",(sx*15.55,yy+dy+float(p),2.15),(.035,.018,2.0),BRONZE)
+                # S23 shows recessed fine base vents under the counters. These
+                # are actual holes in both stone layers, not painted decals.
+                box('Booth base vent recessed backing',(sx*16.05,yy+dy,.43),(.025,1.20,.42),BLACK)
+                for offset in np.linspace(-.54,.54,10):
+                    box('Booth base vent vertical',(sx*15.56,yy+dy+float(offset),.43),(.025,.015,.42),BRONZE)
+                for z in [.25,.37,.49,.61]:
+                    box('Booth base vent horizontal',(sx*15.56,yy+dy,z),(.025,1.20,.015),BRONZE)
                 for sign in [-1,1]:box('Botticino grille opening jamb',(sx*15.56,yy+dy+sign*.86,2.15),(.16,.12,2.16),BOTTICINO,.02)
+            for z,height in [(.12,.12),(3.48,.10),(3.61,.10)]:
+                box('Botticino office continuous moulded course',(sx*15.53,yy,z),(.20,19.2,height),BOTTICINO,.012)
+            frieze=box('Botticino supported office lettering frieze',(sx*15.586,yy,3.875),(.14,19.2,.55),BOTTICINO,.008)
+            contact('Office lettering frieze into structural screen',frieze,office_screen,source='LOC det.4a23713 office-front frieze; minor profile dimensions reconstructed')
             office_label='T I C K E T S' if (sx==1 and yy<0) or (sx==-1 and yy>0) else 'P A R C E L S' if sx==1 else 'T E L E P H O N E S'
             text("Opening-era office lettering",office_label,(sx*15.51,yy,3.68),.32,BLACK,
                 (math.pi/2,0,-math.pi/2 if sx>0 else math.pi/2))
@@ -1112,7 +1157,7 @@ for sx in [-1,1]:
         contact('Colossal shaft on pedestal',shaft,pedestal)
         # Capital core and two ranks of curved, abstracted acanthus leaves.
         cap_start=INTERIOR_PEDESTAL+INTERIOR_BASE+INTERIOR_SHAFT
-        cap=lathe("Corinthian capital bell",[(0,.81),(.22,.84),(.8,1.04),(1.8,1.23),(2.25,1.38),(INTERIOR_CAPITAL,1.38)],LIMESTONE,32)
+        cap=lathe("Corinthian capital bell",[(0,.81),(.22,.84),(.8,1.04),(1.8,1.23),(2.25,1.38),(INTERIOR_CAPITAL,1.38)],LIMESTONE,96)
         cap.location=(sx*14.2,yy,cap_start)
         cap['closed_support']=True
         abacus=carved_abacus("Concave Corinthian abacus",(sx*14.2,yy,INTERIOR_ORDER_TOP-.14))
@@ -1216,30 +1261,35 @@ b=HALL_L/6
 def vault_z(x,y):
     return spring+rise*max(math.sqrt(max(0,1-(x/a)**2)),math.sqrt(max(0,1-(y/b)**2)))
 def vault_surface(x,y,cy,depth=0):
-    e=.015
-    dx=(vault_z(min(a,x+e),y)-vault_z(max(-a,x-e),y))/(min(a,x+e)-max(-a,x-e))
-    dy=(vault_z(x,min(b,y+e))-vault_z(x,max(-b,y-e)))/(min(b,y+e)-max(-b,y-e))
-    normal=Vector((-dx,-dy,1)).normalized()
-    return tuple(Vector((x,cy+y,vault_z(x,y)))-normal*depth)
+    # The interpreted relief depth is vertical. A normal-offset mapping folds
+    # where the two barrel normals meet at a groin, producing overlaps/slivers.
+    # This graph preserves shared XY boundaries and the143ft finished crown.
+    return (x,cy+y,vault_z(x,y)-depth)
 def coffer_cell(name,cx,yy,hw,hh,surface):
     outer=[(-1,-1),(-1,-1),(1,-1),(1,-1),(1,1),(1,1),(-1,1),(-1,1)]
     octagon=[(-1,-.66),(-.66,-1),(.66,-1),(1,-.66),(1,.66),(.66,1),(-.66,1),(-1,.66)]
     verts=[];faces=[]
     for layer,(shrink,depth) in enumerate([(1,.36),(.91,.36),(.84,.29),(.77,.065),(.72,0)]):
         outline=outer if layer==0 else octagon
-        verts.extend(surface(cx+u*hw*shrink,yy+v*hh*shrink,depth) for u,v in outline)
+        verts.extend((cx+u*hw*shrink,yy+v*hh*shrink,depth) for u,v in outline)
     for layer in range(4):
         for k in range(8):
             n=(k+1)%8
             face=(layer*8+k,layer*8+n,(layer+1)*8+n,(layer+1)*8+k)
             if layer==0 and outer[k]==outer[n]:face=(layer*8+k,(layer+1)*8+n,(layer+1)*8+k)
             faces.append(tuple(reversed(face)))
-    center_index=len(verts);verts.append(surface(cx,yy,0))
+    center_index=len(verts);verts.append((cx,yy,0))
     faces.extend((center_index,32+(k+1)%8,32+k) for k in range(8))
-    return mesh(name,verts,faces,PALE)
+    verts,triangles,normals=tessellate_profile(verts,faces,surface)
+    obj=mesh(name,verts,triangles,PALE)
+    for face in obj.data.polygons:face.use_smooth=True
+    obj.data.normals_split_custom_set_from_vertices(normals)
+    obj['coffer_curvature_revision']=4
+    obj['coffer_profile_status']='Existing interpreted10ft projected module and five relief bands retained; curved tessellation replaces warped planar polygons'
+    return obj
 
 # Gibbs255 explicitly states10ft coffers. The projected module is about10ft;
-# field count and the warped edge pockets remain reconstructed from photographs.
+# field count and edge-pocket arrangement remain reconstructed from photographs.
 grid_x=max(1,round(2*a/(10*FT)));grid_y=max(1,round(2*b/(10*FT)))
 for j in [-1,0,1]:
     cy=j*HALL_L/3
@@ -1257,10 +1307,7 @@ for y in [-HALL_L/2,-HALL_L/6,HALL_L/6,HALL_L/2]:
 # central hall. Matching barrel strips close the ceiling over those porticos.
 def barrel_surface(x,y,depth=0):
     z=spring+rise*math.sqrt(max(0,1-(x/a)**2))
-    e=.015;xm=max(-a,x-e);xp=min(a,x+e)
-    slope=rise*(math.sqrt(max(0,1-(xp/a)**2))-math.sqrt(max(0,1-(xm/a)**2)))/(xp-xm)
-    normal=Vector((-slope,0,1)).normalized()
-    return tuple(Vector((x,y,z))-normal*depth)
+    return (x,y,z-depth)
 for sy in [-1,1]:
     begin=HALL_L/2;length=(HALL_ROOM_L-HALL_L)/2
     for iy in range(2):
@@ -1273,21 +1320,76 @@ for sy in [-1,1]:
 for sx in [-1,1]:
     for yy in [-33,-23,-5,5,23,33]:
         xx=sx*10.7
-        box("Waiting bench seat",(xx,yy,.53),(1.15,4.2,.15),WOOD,.03)
-        box("Waiting bench back",(xx+sx*.46,yy,.97),(.14,4.2,.75),WOOD,.025)
-        for dy in [-1.65,1.65]:
-            box("Cast iron bench leg",(xx,yy+dy,.24),(.82,.12,.48),IRON)
-            box("Bench arm",(xx,yy+dy,.83),(.90,.1,.10),IRON)
+        # Preserve the existing reconstructed row positions. Individual wood
+        # slats and supported metal frames replace the former solid boxes;
+        # minor profiles/counts are interpretations of the period photographs.
+        for u in np.linspace(-.26,.26,5):
+            z=.49+.025*(float(u)/.30)**2
+            box('Waiting bench individual seat plank',(xx+sx*float(u),yy,z-.035),(.118,4.2,.07),WOOD,.008)
+        for dy in np.linspace(-1.96,1.96,29):
+            verts=[(xx+sx*(.25+.11*t+dx),yy+float(dy)+ddy,.57+.61*t) for t in [0,1] for dx,ddy in [(-.025,-.047),(.025,-.047),(.025,.047),(-.025,.047)]]
+            faces=[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]
+            if sx<0:faces=[tuple(reversed(face)) for face in faces]
+            mesh('Waiting bench individual leaning back slat',verts,faces,WOOD)
+        for u,z in [(.255,.60),(.366,1.20)]:
+            box('Waiting bench continuous back rail',(xx+sx*u,yy,z),(.075,4.2,.10),WOOD,.012)
+        for dy in [-1.80,0,1.80]:
+            for side in [-1,1]:
+                points=[(xx+sx*side*.28,yy+dy,.035),(xx+sx*side*.25,yy+dy,.13),(xx+sx*side*.18,yy+dy,.29),(xx+sx*side*.17,yy+dy,.47)]
+                tube_path('Waiting bench curved iron support',points,.031,IRON,12)
+                box('Waiting bench grounded iron foot',(xx+sx*side*.28,yy+dy,.025),(.15,.22,.05),IRON,.008)
+            beam('Waiting bench under-seat cross stay',(xx-.27,yy+dy,.43),(xx+.27,yy+dy,.43),.025,IRON,12)
+            arm=[(xx-sx*.25,yy+dy,.49),(xx-sx*.25,yy+dy,.65),(xx-sx*.13,yy+dy,.78),(xx+sx*.15,yy+dy,.82),(xx+sx*.33,yy+dy,1.00)]
+            tube_path('Waiting bench supported curved arm',arm,.026,IRON,12)
+def waiting_candelabrum(xx,yy):
+    """S23/plate306: raised central globe over four lower curved branches.
+
+    Hierarchy and visible forms follow the photograph; small profile sizes,
+    exact finish and placement remain reconstructed rather than surveyed.
+    """
+    pedestal=moulded_square('Candelabrum moulded stone pedestal',(xx,yy,0),
+        [(0,1.40),(.08,1.40),(.14,1.32),(.24,1.22),(1.28,1.22),(1.36,1.35),(1.50,1.35)])
+    profile=[(0,.27),(.06,.31),(.15,.31),(.21,.28),(.30,.22),(.44,.16),(.60,.125),
+        (3.25,.11),(3.42,.15),(3.52,.21),(3.62,.19),(3.72,.13),(4.36,.11),(4.45,.15),(4.52,.17)]
+    standard=lathe('Candelabrum fluted cast bronze standard',profile,BRONZE,96,16)
+    standard.location=(xx,yy,1.5)
+    standard['closed_support']=True
+    contact('Candelabrum bronze foot on stone pedestal',standard,pedestal,
+        source='S23/plate306: candelabrum on continuous stone pedestal; exact small profiles reconstructed')
+    for k in range(4):
+        angle=math.pi/4+k*math.pi/2;points=[]
+        for j in range(17):
+            t=j/16;r=.14+.21*t;z=1.75-.215*t
+            points.append((xx+r*math.cos(angle),yy+r*math.sin(angle),z))
+        foot=tube_path('Candelabrum curved bronze foot',points,.035,BRONZE,16,closed=True)
+        contact('Candelabrum curved foot bearing',foot,pedestal)
+    def globe(name,x,y,z,radius):
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=48,ring_count=24,radius=radius,location=(x,y,z))
+        obj=move(bpy.context.object);obj.name=name;obj.data.materials.append(OPAL_GLASS)
+        for face in obj.data.polygons:face.use_smooth=True
+        return obj
+    for k in range(4):
+        angle=k*math.pi/2;points=[]
+        for j in range(33):
+            t=j/32;r=.10+.54*math.sin(math.pi*t/2);z=5.12+.28*t-.22*math.sin(math.pi*t)
+            points.append((xx+r*math.cos(angle),yy+r*math.sin(angle),z))
+        branch=tube_path('Candelabrum swept lower branch',points,.045,BRONZE,16,closed=True)
+        contact('Candelabrum branch rooted in standard',branch,standard,points=[points[0]])
+        x=xx+.64*math.cos(angle);y=yy+.64*math.sin(angle)
+        cup=lathe('Candelabrum lower globe cup',[(0,.095),(.045,.115),(.09,.15),(.13,.155)],BRONZE,64)
+        cup.location=(x,y,5.36)
+        cup['closed_support']=True
+        contact('Candelabrum lower cup on branch',cup,branch)
+        shade=globe('Candelabrum lower opal globe',x,y,5.69,.225)
+        contact('Candelabrum lower opal globe mounted in cup',shade,cup)
+    cup=lathe('Candelabrum raised central cup',[(0,.10),(.045,.14),(.09,.18),(.13,.19)],BRONZE,64)
+    cup.location=(xx,yy,5.89)
+    cup['closed_support']=True
+    contact('Candelabrum raised cup on standard',cup,standard)
+    shade=globe('Candelabrum raised central opal globe',xx,yy,6.2855,.29)
+    contact('Candelabrum raised globe mounted in cup',shade,cup)
 for sx in [-1,1]:
-    for yy in [-33,-11,11,33]:
-        xx=sx*6.4
-        box("Lamp marble pedestal",(xx,yy,.75),(1.35,1.35,1.5),LIMESTONE,.04)
-        lamp=lathe("Bronze waiting room standard",[(0,.28),(.25,.34),(.5,.18),(3.8,.10),(4.05,.28)],BRONZE,24)
-        lamp.location=(xx,yy,1.5)
-        for dx,dy in [(0,0),(.55,0),(-.55,0),(0,.55),(0,-.55)]:
-            beam("Lamp arm",(xx,yy,5.15),(xx+dx,yy+dy,5.5),.055,BRONZE)
-            bpy.ops.mesh.primitive_uv_sphere_add(segments=12,ring_count=8,radius=.22 if dx or dy else .29,location=(xx+dx,yy+dy,5.7))
-            o=move(bpy.context.object);o.name="Opal lamp globe";o.data.materials.append(WHITE)
+    for yy in [-33,-11,11,33]:waiting_candelabrum(sx*6.4,yy)
 
 # The one-storey main stair descends from street arcade to the main floor.
 # Width39ft6 is published;28risers are an explicit reconstruction of14ft drop.
@@ -1307,6 +1409,8 @@ box("Street-level loggia landing",((24.9+32.71)/2,0,STREET_DROP-.10),(32.71-24.9
 # ---------- Train concourse: steel, glass, intersecting roof bays ----------
 print("Building concourse structural meshes",flush=True)
 CONCOURSE=collection("03 Glass and iron concourse")
+from concourse_details import ConcourseDetails
+CONCOURSE_DETAILS=ConcourseDetails(globals())
 CX=-73
 CW=(210+11/12)*FT
 CL=320*FT
@@ -1337,7 +1441,7 @@ ACCESS_CENTRES=[-z for z in [68.764528,54.791453,40.818378,27.149065,13.327870,-
 MAIN_STAIR_HOLES=[(STAIR_HEAD_X-6.4,STAIR_HEAD_X,y-1.65,y+1.65) for y in ACCESS_CENTRES]
 LOWER_SHIFT=.70
 EXIT_STAIR_HOLES=[(STAIR_HEAD_X-10.5-LOWER_SHIFT,STAIR_HEAD_X-6.0-LOWER_SHIFT,y-1.65,y+1.65) for y in ACCESS_CENTRES]
-def floor_with_voids(name,bounds,holes,level,thickness=.30):
+def floor_with_voids(name,bounds,holes,level,thickness=.30,material=None):
     x0,x1,y0,y1=bounds
     xs=sorted({x0,x1,*[max(x0,min(x1,h[k])) for h in holes for k in [0,1]]})
     ys=sorted({y0,y1,*[max(y0,min(y1,h[k])) for h in holes for k in [2,3]]})
@@ -1347,14 +1451,17 @@ def floor_with_voids(name,bounds,holes,level,thickness=.30):
             if b-a<.001 or d-c<.001:continue
             xx,yy=(a+b)/2,(c+d)/2
             if any(h[0]<=xx<=h[1] and h[2]<=yy<=h[3] for h in holes):continue
-            objects.append(box(name,(xx,yy,level-thickness/2),(b-a,d-c,thickness),FLOOR,.000001))
+            objects.append(box(name,(xx,yy,level-thickness/2),(b-a,d-c,thickness),material or FLOOR,.000001))
     return objects
-CON_MAIN_FLOORS=floor_with_voids("Main concourse floor with real stair cutouts",(WEST,CX+CW/2,-CON_FLOOR_L/2,CON_FLOOR_L/2),MAIN_STAIR_HOLES,0,.44)
+CONCOURSE_DETAILS.configure_visible_court_floor()
+MAIN_CONCOURSE_VOIDS=MAIN_STAIR_HOLES+CONCOURSE_DETAILS.fields
+CON_MAIN_FLOORS=floor_with_voids("Main concourse concrete bearing and circulation slab around real stair and prism cutouts",(WEST,CX+CW/2,-CON_FLOOR_L/2,CON_FLOOR_L/2),MAIN_CONCOURSE_VOIDS,0,.44,CONCOURSE_DETAILS.opaque_concrete)
+CONCOURSE_DETAILS.prism_fields()
 floor_with_voids("Exit concourse linked circulation floor",(STAIR_HEAD_X-13,STAIR_HEAD_X-5.5,-CON_FLOOR_L/2,CON_FLOOR_L/2),EXIT_STAIR_HOLES,EXIT_LEVEL)
 for xx in np.arange(CX-CW/2,CX+CW/2,2):
-    ys=sorted({-CON_FLOOR_L/2,CON_FLOOR_L/2,*[h[k] for h in MAIN_STAIR_HOLES if h[0]-.02<=xx<=h[1]+.02 for k in [2,3]]})
+    ys=sorted({-CON_FLOOR_L/2,CON_FLOOR_L/2,*[h[k] for h in MAIN_CONCOURSE_VOIDS if h[0]-.02<=xx<=h[1]+.02 for k in [2,3]]})
     for ya,yb in zip(ys,ys[1:]):
-        if any(h[0]-.02<=xx<=h[1]+.02 and h[2]<=(ya+yb)/2<=h[3] for h in MAIN_STAIR_HOLES):continue
+        if any(h[0]-.02<=xx<=h[1]+.02 and h[2]<=(ya+yb)/2<=h[3] for h in MAIN_CONCOURSE_VOIDS):continue
         box("Concourse floor joint",(float(xx),(ya+yb)/2,.008),(.025,yb-ya,.015),SHADOW)
 
 # Western subsidiary hall between waiting room and concourse.
@@ -1636,20 +1743,20 @@ for sign in [-1,1]:
         cloister_cell("North/south Guastavino cloister",(lo,y,0),(hi,y,0),(hi,outer,0),(lo,outer,0))
     for xx in NORTH_ARCADE_X:
         lattice_pier(xx,y,max(GLAZING_VALLEY,roofpoint(xx,y)),False)
-    # These opaque backs represent the documented adjoining accommodation;
-    # unverified1935 shop-front subdivisions are deliberately not invented.
-    box("North/south lower adjoining-building enclosure",(CX,outer,LOWER_SPRING/2),(CW+.20,.45,LOWER_SPRING),LIMESTONE,.02)
-box("West lower adjoining-building enclosure",(WEST,0,(LOWER_SPRING+15*FT)/2),(.45,CL,LOWER_SPRING+15*FT),LIMESTONE,.02)
+CONCOURSE_DETAILS.perimeter(WEST_ARCADE_Y,NORTH_ARCADE_X,LOWER_SPRING)
 for yy in [-CL/2,CL/2]:
     for x0 in np.arange(WEST,CX+CW/2-.8,.85):
         x1=min(CX+CW/2,float(x0)+.85)
         h0,h1=roofpoint(float(x0),yy),roofpoint(x1,yy)
-        if min(h0,h1)>NS_SPRING+.05:
-            mesh("North/south court curtain-wall glazing",[(float(x0),yy,NS_SPRING),(x1,yy,NS_SPRING),(x1,yy,h1),(float(x0),yy,h0)],[(0,1,2,3)],GLASS)
+        base=LOWER_SPRING
+        if min(h0,h1)>base+.05:
+            face=(0,1,2,3) if yy>0 else (3,2,1,0)
+            mesh("North/south court curtain-wall glazing",[(float(x0),yy,base),(x1,yy,base),(x1,yy,h1),(float(x0),yy,h0)],[face],GLASS)
     for xx in np.arange(WEST,CX+CW/2,.85):
         h=roofpoint(float(xx),yy)
-        flatbar("North/south glazing upright",(float(xx),yy,NS_SPRING),(float(xx),yy,h),.045,.035)
-    for z in np.arange(NS_SPRING,CROWN,1.25):
+        if h>LOWER_SPRING:
+            flatbar("North/south glazing upright",(float(xx),yy,LOWER_SPRING),(float(xx),yy,h),.045,.035)
+    for z in np.arange(LOWER_SPRING,CROWN,1.25):
         for xx in np.arange(WEST,CX+CW/2-.8,.85):
             if min(roofpoint(float(xx),yy),roofpoint(float(xx+.85),yy))>=z:
                 flatbar("North/south glazing transom",(float(xx),yy,float(z)),(float(xx+.85),yy,float(z)),.04,.025)
@@ -1657,8 +1764,11 @@ for xx in [X_WEST_INNER,X_EAST_INNER]:
     for y0 in np.arange(-CL/2,CL/2-.8,.85):
         y1=min(CL/2,float(y0)+.85)
         h0,h1=roofpoint(xx,float(y0)),roofpoint(xx,y1)
-        mesh("East/west upper court glazing",[(xx,float(y0),NS_SPRING),(xx,y1,NS_SPRING),(xx,y1,h1),(xx,float(y0),h0)],[(0,1,2,3)],GLASS)
-        flatbar("East/west court glazing upright",(xx,float(y0),NS_SPRING),(xx,float(y0),h0),.045,.035)
+        base=max(CONCOURSE_DETAILS.clerestory_base,CONCOURSE_DETAILS.east_top) if xx==X_EAST_INNER else CONCOURSE_DETAILS.clerestory_base
+        if min(h0,h1)<=base+.01:continue
+        face=(0,1,2,3) if xx==X_WEST_INNER else (3,2,1,0)
+        mesh("East/west upper court glazing",[(xx,float(y0),base),(xx,y1,base),(xx,y1,h1),(xx,float(y0),h0)],[face],GLASS)
+        flatbar("East/west court glazing upright",(xx,float(y0),base),(xx,float(y0),h0),.045,.035)
 
 # Glazing troughs are carried by the column branches, whose upper lengths
 # continue above the ornamental arcades to the E401ft9 gutter node above the E393ft6 branch tier.
@@ -1719,8 +1829,10 @@ for i,yy in enumerate(ACCESS_CENTRES):
             dx,dy=[(.311,0),(0,.311),(-.311,0),(0,-.311)][face]
             dims=(.018,.47,.54) if face%2==0 else (.47,.018,.54)
             box('Unassigned historical destination-card field',(px+dx,py+dy,3.57),dims,WHITE)
-            rotation=(math.pi/2,0,math.pi/2 if face==0 else -math.pi/2) if face%2==0 else (math.pi/2,0,0 if face==1 else math.pi)
+            rotation=(math.pi/2,0,math.pi/2 if face==0 else -math.pi/2) if face%2==0 else (math.pi/2,0,math.pi if face==1 else 0)
             text('Plan-derived track indicator number',str(track),(px+dx,py+dy,4.20),.25,WHITE,rotation)
+
+CONCOURSE_DETAIL_REPORT=CONCOURSE_DETAILS.audit(ASSETS/'concourse-detail-audit.json')
 
 # One source-anchored representative track/platform section, rather than a
 # fabricated complete21-track assignment. Its position registers to stairZ11.
@@ -1837,6 +1949,17 @@ manifest['walkable'].append({'label':'Representative linked platform','bounds':m
 def finalise_phase3_manifest(data,legacy_platform=False,contacts=None):
     ft=.3048;drop=14*ft;clear_w=103*ft;clear_l=277*ft;room_w=(108+8/12)*ft;room_l=(314+4/12)*ft
     data['revision']=3
+    data['architecturalDetailRevision']=4
+    data['ceilingGeometry']={'coffers':341,'nominalProjectedModuleFeet':10,
+        'reliefVerticalDepthsMetres':[.36,.36,.29,.065,0],
+        'method':'Constrained curved triangulation with matching edge samples; continuous vertical relief avoids folded normal-offset groin pockets',
+        'qualifications':'Exact field count, relief depth and fine moulding profiles remain photographic reconstructions; no new decorative motif or surveyed coffer inventory is claimed'}
+    data['architecturalFinish']={'archSegments':144,'axisYArchWindingCorrected':True,
+        'capitalLeafSampling':[40,20],'capitalBellSegments':96,'abacusSamplesPerSide':24,
+        'candelabra':{'count':8,'source':'S23 and plate306','form':'Raised central globe above four lower curved branches, fluted standard on continuous stone pedestal',
+            'globeSegments':[48,24],'centralTopMain':6.5755,'outerTopMain':5.915,
+            'qualification':'Exact small profiles, dimensions, bronze finish and positions are reconstructed, not surveyed or photometrically calibrated'},
+        'roofValleys':'Three gabled bays share exact hall-derived valley boundaries; no overlapping rounded strips'}
     data['waitingRoomHeightStatus']="The model adopts the143ft highest finished-ceiling datum explicitly stated by Francis and O'Brien ASCE1910p194, with167ft roof unchanged. Gibbs in the same volume also states150ft from floor to ceiling; the conflicting narrative remains documented rather than declared resolved."
     data['dimensions']['waitingRoomClear'][2]=143*ft
     data['dimensions']['reportedGeneralRoomHeight']=150*ft
@@ -1875,6 +1998,12 @@ def finalise_phase3_manifest(data,legacy_platform=False,contacts=None):
     data['reconstructed'].extend(['Street wings closed with source-based solid roof ring, recessed attic bodies and genuine eastern open courts above street-level train-shed glazing','Single physical thermal glass sheets with reconstructed6mm thickness; stone reveals exist on both sides','Raised north/south Ionic landings and central stairs traced from plate300; lowerfloor and ceiling extend to reported room planes','Botticino ticket/parcel fronts and telephone booth bays follow opening-era plan labels;1935 changes not certified','Paired16ft cast-iron gate indicator posts replace floating boards; timetable cards remain unassigned'])
     data['uncertain'].extend(['Francis143ft highest-ceiling datum adopted; Gibbs150ft ceiling narrative remains conflicting','Exact coffer count and360mm relief remain interpreted; nominal10ft module is documented by Gibbs255','Eastern street-level skylight pitch and exact room/roof registration are inferred, distinct from documented152ft8½x115ft6 plan dimensions','Detailed truss profiles and joint locations follow structural roles and primary photographs, not a full fabrication survey','Concourse perimeter backing remains unfinished: documented two-level gridded fenestration is not yet reconstructed','Concourse opaque floor-grid material is interpreted; Gibbs marble-floor list does not specifically identify this floor, and documented glass-prism vault-light fields remain unmodelled'])
     data['uncertain']=[text.replace('UpperwindowE421.25controlpassesclockcentres;exactglazingsilloffsetremainsphotographicwith31mlocalapproximation','Upper-window E421.25 control crosses circular base features; their identity and exact sill offset remain unverified; glazing uses31m local approximation') for text in data['uncertain']]
+    data['concourseDetails']=CONCOURSE_DETAIL_REPORT
+    data['concourseDetails']['floorCoverageRevision']=3
+    data['concourseDetails']['bodyHeadSeparationStatus']='West and north/south rectangular grid bodies are separated from high arched lights by opaque masonry;1936 west photograph corroborates this vocabulary. The remaining elevations and minor dimensions are reconstructed.'
+    data['furnishingFinish']={'revision':4,'ticketOffice':'Photograph-led finer bronze grilles, real base-vent holes and supported Botticino lettering friezes; exact bar counts and profiles reconstructed','benches':{'count':12,'seatPlanksEach':5,'backSlatsEach':29,'supportedFramesEach':3,'placementStatus':'Existing reconstructed row locations retained; minor profiles and seating inventory not independently certified for1935'},'exteriorClock':'Smoother bezel/dial and60minuteindices; previous case/dial extent retained. Gibbs6ft/PRR7ft exterior description conflict remains unresolved; fixed hand time is interpreted.','interiorClockLimit':'No15ft waiting-room clock or duplicated circular clocks added at an unverified position.','muralLimit':'North mural remains the source-faithful728x260 photographic rectification from the original5076x4061 LOC scan; interpolation is not claimed as newly recovered detail. Other five fields stay neutral.'}
+    data['uncertain']=[item for item in data['uncertain'] if not item.startswith(('Concourse perimeter backing remains unfinished:','Concourse opaque floor-grid material is interpreted;'))]
+    data['uncertain'].extend(['Concourse window dimensions, sash counts, reveals, lower office frontage and minor profiles are photographic reconstructions, not a complete fabrication survey','Broad visible central open-court square-prism flooring is reconstructed from documented construction and photograph/plan registration; precise extent,pitch,module and underside mould profile remain inferred, with concrete circulation/bearing zones retained','Concourse opaque floor material remains interpreted; the marble-room list does not specifically identify the concourse','Finer booth/bench profiles and exact furnishing inventory by1935 remain unverified; interior clock placement is not invented'])
     return data
 
 manifest=finalise_phase3_manifest(manifest,ARGS.legacy_platform,CONTACT_REPORT)

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "material": "BedfordLimestoneConcourse",
+  "authorship": "Original deterministic seeded isotropic stone-grain appearance; no photographs, scans or third-party image sampling",
+  "historicalQualification": "Bedford limestone material identity follows the existing source ledger. This micro-surface, exact colour/roughness and normal response are authored appearance interpretations, not an authenticated historic surface sample.",
+  "sourceScriptSha256": "4f50de29ef8f90a5abd3839a5c725fa70bdeac913d71098f1a36fd5fb7e9857f",
+  "seed": 19351008,
+  "size": [
+    2048,
+    2048
+  ],
+  "seamless": "Periodic Fourier-filtered random field; central-difference periodic height derivatives",
+  "tileMetres": 1.5,
+  "colour": {
+    "space": "sRGB encoded; statistics below are decoded linear",
+    "targetMeanLinear": [
+      0.56,
+      0.55,
+      0.49
+    ],
+    "mean": [
+      0.5600000001067859,
+      0.5500000006126536,
+      0.4900000006884227
+    ],
+    "minimum": [
+      0.5394794890121072,
+      0.5271151257058131,
+      0.467783796112159
+    ],
+    "maximum": [
+      0.5840784178911641,
+      0.5711248294648731,
+      0.5088813208549338
+    ],
+    "standardDeviation": [
+      0.008307682829482218,
+      0.00830584085654176,
+      0.008283013215642836
+    ]
+  },
+  "roughness": {
+    "space": "Non-Color linear",
+    "targetMean": 0.65,
+    "mean": [
+      0.6499999999999996
+    ],
+    "minimum": [
+      0.6235294117647059
+    ],
+    "maximum": [
+      0.6784313725490196
+    ],
+    "standardDeviation": [
+      0.011061387594631301
+    ]
+  },
+  "normal": {
+    "space": "Non-Color; OpenGL +Y tangent normal",
+    "heightRmsMetres": 5.7890335671276456e-05,
+    "recommendedStrength": 0.15,
+    "unscaledMeanAngularDeviationDegrees": 1.7322801735770228,
+    "unscaledMaximumAngularDeviationDegrees": 7.267233345160486,
+    "decodedVectorLengthMean": 1.000577194870878
+  },
+  "application": {
+    "baseColorFactor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughnessFactor": 1,
+    "metallicFactor": 0,
+    "normalStrength": 0.15,
+    "uvScale": "ArchitecturalUV stores0.28UV/m before material preparation; use UV/(0.28*1.5) for a1.5m tile. Do not apply the colour(.56,.55,.49) a second time.",
+    "textures": {
+      "colour": "BedfordLimestoneConcourse-Color.png",
+      "roughness": "BedfordLimestoneConcourse-Roughness.png",
+      "normal": "BedfordLimestoneConcourse-NormalGL.png"
+    }
+  },
+  "files": [
+    {
+      "role": "colour",
+      "file": "BedfordLimestoneConcourse-Color.png",
+      "bytes": 1627960,
+      "sha256": "cd42e7dd2cd70cfcbb0628962fdd8522daa57299718b140c492645e15dcc6d5a"
+    },
+    {
+      "role": "roughness",
+      "file": "BedfordLimestoneConcourse-Roughness.png",
+      "bytes": 1375067,
+      "sha256": "10a506f7925250947afa5ef0137f86839656927e2de4ea19df5bb4d1299cb715"
+    },
+    {
+      "role": "normal",
+      "file": "BedfordLimestoneConcourse-NormalGL.png",
+      "bytes": 4519322,
+      "sha256": "0e1659e0d1616d0dd9a07481574addcdd36f4fcabb4b903fcffe35b847124995"
+    }
+  ]
+}

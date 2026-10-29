@@ -1,0 +1,53 @@
+{
+  "scope": "Canonical source and editable architecture reconciliation; no runtime asset or lighting/baking code changed.",
+  "canonicalSource": {
+    "build_station.py": {
+      "sha256": "010b42068b71bb6a152de0b5b582516e3d970f487c7f1ccd5781a128cf7071eb",
+      "frozenV3Sha256": "010b42068b71bb6a152de0b5b582516e3d970f487c7f1ccd5781a128cf7071eb",
+      "archiveSha256": "010b42068b71bb6a152de0b5b582516e3d970f487c7f1ccd5781a128cf7071eb",
+      "bytes": 127777
+    },
+    "concourse_details.py": {
+      "sha256": "2f627c7ec8fd6f4ffdc109af6480ecd0b8298af127913aaac0032741c626ef5c",
+      "frozenV3Sha256": "9385396393b7cad5633b0d2867a6c0fc744f40712a161a98211b4e11f4d5f10b",
+      "archiveSha256": "2f627c7ec8fd6f4ffdc109af6480ecd0b8298af127913aaac0032741c626ef5c",
+      "bytes": 25528
+    },
+    "coffer_geometry.py": {
+      "sha256": "a77c9aa5c25010bf43cbf8a883f656249398c29d6eae3f89ff75813d306392fa",
+      "frozenV3Sha256": "a77c9aa5c25010bf43cbf8a883f656249398c29d6eae3f89ff75813d306392fa",
+      "archiveSha256": "a77c9aa5c25010bf43cbf8a883f656249398c29d6eae3f89ff75813d306392fa",
+      "bytes": 4482
+    }
+  },
+  "consistency": {
+    "buildStationByteIdenticalToFrozenV3": true,
+    "cofferGeometryByteIdenticalToFrozenV3": true,
+    "concourseExecutableAstIdenticalToFrozenV3": true,
+    "concourseOnlyDifference": "Opening module documentation clarifies broad visible central-court coverage and inferred exact panel boundaries; executable source unchanged."
+  },
+  "editableScene": {
+    "file": "authoring/penn-station-1935/penn-station-phase4.blend",
+    "sha256": "3420eed9418f2dd3ee6aa67de368a4bbc1230a9133581e68e6ed9b2db5d904b0",
+    "bytes": 56548268,
+    "byteIdenticalToV3Ready": true
+  },
+  "sceneManifest": {
+    "file": "authoring/penn-station-1935/scene-manifest-phase4-architecture.json",
+    "sha256": "a4a7e17b20f7a1be898330c05d208daf9aee5130008b7db8de28c4144698cf9f",
+    "bytes": 313145,
+    "byteIdenticalToV3Ready": true
+  },
+  "preservedV2": {
+    "sourceReview": "../../architecture/",
+    "editableSceneSha256": "b036cfa82a3d7ab6d43e455f44b9a4c599b7586105ed9ac205c3bb448f690a19",
+    "manifestSha256": "4001cde2ba903748e732d86e1ac595f08c51bdac662ea5d78b059875ae242c1f",
+    "qualification": "V2 source, manifests, raw identifiers and reviews remain archived. Current authoring scene/manifest are replaced with v3. The preserved local v2 scene remains in the immutable phase4-core-final input."
+  },
+  "finalRawGeometry": {
+    "sha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
+    "actualTriangleAudit": "floor-v3-actual-ray-audit.json",
+    "materialReferencePatch": "floor-material-separation.json"
+  },
+  "historicalQualification": "Construction type and broad square-grid flooring are primary-documented. Exact 45.6\u00d779.2 m envelope, panel edges, 0.12 m pitch, 1.2 m module and underside mould profile remain reconstruction decisions; no exact historical panel survey or complete station-wide system is claimed."
+}

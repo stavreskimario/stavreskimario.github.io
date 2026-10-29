@@ -434,6 +434,19 @@
       "usedFor": "Period evidence identifying pleated trousers and suspenders as current styles",
       "rights": "Link-only research; no page image bundled or redistribution claim made.",
       "caution": "Does not establish a universal dress code or measured permissible tie width."
+    },
+    {
+      "id": "S36",
+      "title": "Concourse, Penn. [Pennsylvania] Station, New York, N.Y.",
+      "author": "Detroit Publishing Company / Library of Congress",
+      "year": "Catalogued 1905–1915; opening-era photograph",
+      "kind": "Primary original glass-negative photograph",
+      "url": "https://www.loc.gov/item/2016815390/",
+      "digitalId": "LC-DIG-det-4a23718",
+      "negative": "071935",
+      "usedFor": "East ticket/baggage wall and authentic functional sign wording; lower gridded openings, arched lights and opaque spandrels; square floor-light fields.",
+      "rights": "LOC item-specific advisory: No known restrictions on publication. Pre-1931 Detroit Publishing photograph; source overview archived with credit and SHA256.",
+      "caution": "The image is not dated 1935. Metric bay/sash dimensions, exact minor mouldings, inferred elevations, prism pitch/panel module and precise field limits are reconstructed, not survey-certified."
     }
   ],
   "localImages": [
@@ -580,7 +593,42 @@
     "ceilingHeightConflict": "S9 p. 194 says 143 ft to highest ceiling; S10 table p. 252 and construction account p. 257 say 150 ft, explicitly floor to ceiling on p. 257. Finished intrados registration remains unresolved",
     "easternRoofCourts": "S10 p. 240 and S25 show open courts above low train-shed skylights near street level, with four-storey inner walls exposed. Solid upper wing and arcade roofs are distinct from these low glass covers",
     "ceilingModelChoice": "Phase 3 adopts 143 ft highest ceiling with 167 ft roof, while retaining Gibbs’s explicit contrary 150 ft floor-to-ceiling statement as unresolved.",
-    "concourseFloorLimit": "Gibbs p. 256 does not include concourse in its marble-floor room list; square glass-prism vault lights beneath concourse flooring are explicitly documented. Current opaque floor grid is an interpretation."
+    "concourseFloorLimit": "Gibbs p. 256 does not include the concourse in its marble-floor list. Square interior glass-prism vault lights without lead rings are documented. Floor coverage revision 3 reconstructs the broad visible central open court from registered plan/photo evidence; exact panel edges, pitch and module remain inferred, and opaque circulation finish remains interpreted.",
+    "concourseFinishRevision4": {
+      "source": "S36; S10 pp. 243, 254–256; S3 dated 1936 view",
+      "ledger": "model/concourse-detail-evidence.md",
+      "qualification": "34 registered sash bays and a broad visible central-court square-prism floor retain explicit source uncertainty. Original north mural sampling remains native rather than generatively enlarged.",
+      "primarySashBays": {
+        "west": 11,
+        "north": 7,
+        "south": 7,
+        "east": 9,
+        "qualification": "Registered to existing structural bays and photographic vocabulary; not a complete recovered fabrication schedule. The 1 ft 6 in edge strips remain masonry."
+      },
+      "prismFields": {
+        "floorCoverageRevision": 3,
+        "boundingFieldWorldXZ": [
+          -95.4,
+          -49.8,
+          -39.6,
+          39.6
+        ],
+        "grossBoundingAreaM2": 3611.52,
+        "netPanelAreaM2": 3582.72,
+        "retainedConcreteBearingCells": 20,
+        "retainedConcreteBearingCellAreaM2": 28.8,
+        "supportedPierPads": 6,
+        "sharedPanels": 2488,
+        "squareGlassPerPanel": 100,
+        "squareGlassTotal": 248800,
+        "panelModuleM": 1.2,
+        "prismPitchM": 0.12,
+        "largeOpaqueSlabMaterial": "ConcourseOpaqueCirculationConcrete",
+        "repeatedWebMaterial": "ConcourseReinforcedVaultLightConcrete",
+        "qualification": "Gibbs Fig. 2 registers court/cloisters/stair heads and LOC 071935 shows broad grid flooring. Exact panel edges, pitch, module, thickness and underside profile remain inferred. Reasoned complete visible central open-court grid, retaining concrete circulation/bearing zones; not the entire 155,000 sq ft station/surroundings system.",
+        "geometryProof": "../authoring/penn-station-1935/review/phase4/concourse-details/floor-v3/floor-v3-actual-ray-audit.json"
+      }
+    }
   },
   "clockEvidence": {
     "source": "S10 printed p. 267, Clock System",

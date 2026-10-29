@@ -461,6 +461,9 @@ for side in [-1,1]:
 
 
 def export_context():
+    from pavement_geometry import repair_paving_tops
+    paving_audit = repair_paving_tops(list(bpy.context.scene.objects), OUT/'pavement-contact-audit.json')
+    print('PAVING_REPAIR', json.dumps(paving_audit), flush=True)
     bpy.context.scene.unit_settings.system='METRIC'
     bpy.context.scene.unit_settings.scale_length=1
     bpy.context.preferences.filepaths.save_version=0
