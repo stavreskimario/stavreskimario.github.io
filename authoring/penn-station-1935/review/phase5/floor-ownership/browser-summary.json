@@ -1,0 +1,94 @@
+{
+  "scope": "Scratch current app with new full/fallback concourse routes only; other production assets unchanged. No visibility controls used, all six zones loaded. No FPS benchmark.",
+  "routedModels": {
+    "model-concourse.glb.gz": "841d11409c3a5034e398a9410cfa575c8e3873ec71da8c24cda4f587b32c4ebe",
+    "model-concourse-low.glb.gz": "38645bd69029ff995309242d3b38a6e3c0680dbf5a69ad779593478c0e3a3e19"
+  },
+  "browser": "156.0.8078.74",
+  "pageErrors": [],
+  "captures": [
+    {
+      "name": "axial-overlap",
+      "camera": {
+        "position": [
+          -43,
+          -2.5872,
+          2.130000000000001
+        ],
+        "quaternion": [
+          -0.1888424684301106,
+          -0.44836211363916295,
+          -0.09752156434770702,
+          0.8682162643359206
+        ],
+        "fov": 50
+      },
+      "returnedCameraDifferenceM": 0,
+      "renderedFrameIncrement": 9,
+      "samples": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "topHeights": {
+            "PublicFloorMarble": -4.268240311256523,
+            "ConcourseOpaqueCirculationConcrete": -4.467199809265137
+          },
+          "verticalSeparationM": 0.19895949800861334
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "topHeights": {
+            "PublicFloorMarble": -4.268240311256523,
+            "ConcourseOpaqueCirculationConcrete": -4.48719979019165
+          },
+          "verticalSeparationM": 0.21895947893512702
+        }
+      ],
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase5-repaired-floor-browser/repaired-floor-axial-overlap.png",
+      "returnedScreenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase5-repaired-floor-browser/repaired-floor-axial-overlap-returned.png"
+    },
+    {
+      "name": "subsidiary-overlap",
+      "camera": {
+        "position": [
+          -41.13,
+          -2.587200000000001,
+          25
+        ],
+        "quaternion": [
+          -0.15671786802140902,
+          -0.10951683487764707,
+          -0.017488588195678112,
+          0.9813968218840574
+        ],
+        "fov": 50
+      },
+      "returnedCameraDifferenceM": 0.0,
+      "renderedFrameIncrement": 13,
+      "samples": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "topHeights": {
+            "PublicFloorMarble": -4.268240311256523,
+            "ConcourseOpaqueCirculationConcrete": -4.467199809265137
+          },
+          "verticalSeparationM": 0.19895949800861334
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "topHeights": {
+            "PublicFloorMarble": -4.268240311256523,
+            "ConcourseOpaqueCirculationConcrete": -4.48719979019165
+          },
+          "verticalSeparationM": 0.21895947893512702
+        }
+      ],
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase5-repaired-floor-browser/repaired-floor-subsidiary-overlap.png",
+      "returnedScreenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase5-repaired-floor-browser/repaired-floor-subsidiary-overlap-returned.png"
+    }
+  ],
+  "visualAssessment": "Axial jagged gray patch is absent with actual repaired geometry, without hiding floors; concrete remains as a buried bearing layer. The subsidiary camera partly intersects its adjacent wall, so its narrow floor/ray proof is retained without treating the view as an exhibition screenshot."
+}

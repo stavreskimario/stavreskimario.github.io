@@ -37,6 +37,12 @@ def signature(obj):
         loops = np.empty(len(obj.data.loops), dtype=np.int32)
         obj.data.loops.foreach_get('vertex_index', loops)
         h.update(vertices.tobytes()); h.update(loops.tobytes())
+        normals = np.empty(len(obj.data.corner_normals)*3,dtype=np.float32)
+        obj.data.corner_normals.foreach_get('vector',normals)
+        h.update(normals.tobytes())
+        for layer in obj.data.uv_layers:
+            uv = np.empty(len(layer.data)*2,dtype=np.float32)
+            layer.data.foreach_get('uv',uv);h.update(uv.tobytes())
         h.update('|'.join(m.name if m else '' for m in obj.data.materials).encode())
     return h.hexdigest()
 
