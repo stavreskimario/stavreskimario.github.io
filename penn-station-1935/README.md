@@ -6,7 +6,7 @@ An evidence-led architectural exhibition for Mario’s GitHub Pages collection. 
 
 ## Visit
 
-Serve the repository as static files and open `penn-station-1935/`. The committed `dist/` bundle and local assets work directly on GitHub Pages, including under a project path. Publishing requires the feature-branch PR to be merged through the existing review workflow. An open PR is not a deployment.
+Serve the repository as static files and open `penn-station-1935/`. The committed `dist/` bundle and local assets work directly on GitHub Pages, including under a project path. Review changes through the feature-branch PR. The observed publishing source and verified live deployment are recorded in [VALIDATION.md](VALIDATION.md); an open PR alone is not proof of deployment.
 
 - **Enter Station** clears the introduction. Orbit by dragging; scroll/pinch to approach; right-drag or two fingers to pan.
 - Three viewpoints load the exterior, waiting room and concourse separately. They transfer between spaces; a fully connected circulation route and accurate changes in floor level remain future work.

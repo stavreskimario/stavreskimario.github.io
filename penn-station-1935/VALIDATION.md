@@ -6,7 +6,7 @@ The deliverable is an explorable architectural study. It passes the functional c
 
 `uv run --no-project --python 3.11 python scripts/validate.py` passes for all five registered apps. Relative HTML assets/links, JavaScript syntax, manifest entries and `.nojekyll` are valid. `git diff --check` passes. The existing app/shared files were preserved.
 
-The affected repository checks also pass locally: the existing catalogue validates182 articles; all nine engineering-feed unit tests pass, including public-site staging for all five apps and its hidden-file/100MB limits; and `tests/engineering-journal.cjs` passes the existing reader's interaction, storage, keyboard, narrow-layout, enlarged-text and collection-link regressions. Authoring tools remain outside the served app directories.
+The affected repository checks also pass locally: the existing catalogue validates 182 articles; all nine engineering-feed unit tests pass, including public-site staging for all five apps and its hidden-file/100MB limits; and `tests/engineering-journal.cjs` passes the existing reader's interaction, storage, keyboard, narrow-layout, enlarged-text and collection-link regressions. Authoring tools remain outside the served app directories.
 
 The browser runner passed **nine integration groups** in Chromium Headless Shell **141.0.7390.37**, with software ANGLE/SwiftShader. The entire site was served under `/exhibition/`, with external requests blocked. Thus core rendering does not require an external script/asset CDN; shared Google Fonts use their normal fallback when blocked. Full evidence is in [review/browser-validation.json](review/browser-validation.json).
 
@@ -57,4 +57,6 @@ The archival comparison is an opening-era photograph from the architects’ mono
 
 No physical phone, Safari, Firefox, assistive-technology user study or calibrated architectural survey was completed. Optional WebGPU remains experimental; WebGL2 is the tested main path. Audio is synthesized room tone, not a historic recording. Seamless inter-room circulation, accurate stair levels, full platforms/trains, authenticated surrounding parcels, baked GI and final photorealism remain later phases.
 
-The feature branch and pull request do not publish the application. GitHub Pages remains on `main`; no publishing settings changed and the PR must not be merged without the owner’s authorisation. Live asset/deployment verification must follow an authorised merge.
+The PR remains a draft and unmerged. On 29 October, a read-only settings check showed that GitHub Pages was configured to publish `feature/penn-station-1935-reconstruction`, rather than `main`. GitHub completed that branch's deployment. The [live application](https://stavreskimario.github.io/penn-station-1935/) was then checked in Chrome156.0.8078.48: exterior, waiting-room and concourse assets loaded and rendered, with no page errors or failed app resources. See [review/live-validation.json](review/live-validation.json).
+
+No Pages-setting mutation or merge was performed by this task. Under the observed setting, subsequent feature-branch pushes update the public site. Any merge still requires the owner's explicit authorisation; the intended publishing branch should be confirmed when the owner changes the review/publication workflow.
