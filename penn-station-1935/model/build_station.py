@@ -490,7 +490,21 @@ def capital_leaf(center, angle, rank):
             faces.append((k,k+1,k+cols+2,k+cols+1))
     # Return the leaf edges into the bell, so the carving is physically rooted.
     front_count=len(verts)
-    verts.extend(tuple(Vector(p)-radial*.055) for p in list(verts))
+    # The visible front remains unchanged. A fixed radial extrusion intersects
+    # the front where its tip curls down. Return behind the radial/vertical
+    # profile normal, clipping its radial component at the curl so the hidden
+    # shell never grows beyond the authored radial silhouette. The55mm return
+    # is an appearance interpretation, not a documented carving thickness.
+    front=list(verts)
+    for iy in range(rows+1):
+        for ix in range(cols+1):
+            lo=max(0,iy-1)*(cols+1)+ix
+            hi=min(rows,iy+1)*(cols+1)+ix
+            tangent_profile=Vector(front[hi])-Vector(front[lo])
+            dr=tangent_profile.dot(radial)
+            normal=radial*max(0,tangent_profile.z)+Vector((0,0,-dr))
+            normal.normalize()
+            verts.append(tuple(Vector(front[iy*(cols+1)+ix])-normal*.055))
     faces.extend(tuple(i+front_count for i in reversed(f)) for f in list(faces))
     for iy in range(rows):
         for ix in [0,cols]:
