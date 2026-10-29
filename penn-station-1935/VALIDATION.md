@@ -6,6 +6,8 @@ The deliverable is an explorable architectural study. It passes the functional c
 
 `uv run --no-project --python 3.11 python scripts/validate.py` passes for all five registered apps. Relative HTML assets/links, JavaScript syntax, manifest entries and `.nojekyll` are valid. `git diff --check` passes. The existing app/shared files were preserved.
 
+The affected repository checks also pass locally: the existing catalogue validates182 articles; all nine engineering-feed unit tests pass, including public-site staging for all five apps and its hidden-file/100MB limits; and `tests/engineering-journal.cjs` passes the existing reader's interaction, storage, keyboard, narrow-layout, enlarged-text and collection-link regressions. Authoring tools remain outside the served app directories.
+
 The browser runner passed **nine integration groups** in Chromium Headless Shell **141.0.7390.37**, with software ANGLE/SwiftShader. The entire site was served under `/exhibition/`, with external requests blocked. Thus core rendering does not require an external script/asset CDN; shared Google Fonts use their normal fallback when blocked. Full evidence is in [review/browser-validation.json](review/browser-validation.json).
 
 | Check | Result |
