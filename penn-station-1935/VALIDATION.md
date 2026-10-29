@@ -1,47 +1,70 @@
-# Phase 4 maintenance checkpoint validation
+# Phase 4 visual checkpoint validation
 
-Checked 29 October 2026. This is a tested navigation, physical repair and material checkpoint. It is **not** the completed photographic reconstruction or the larger ceiling/interior visual pass. The previous release record is preserved in [the Phase 3 archive](../authoring/penn-station-1935/review/phase3/VALIDATION.md).
+Checked 30 October 2026. This iteration improves the roof, interiors and desktop rendering. It does not certify final photographic fidelity or a 1:1 replica. The earlier maintenance results remain in [their implementation commit](https://github.com/stavreskimario/stavreskimario.github.io/blob/b86a59177e65461f5eb71c0593cab5b53fd4e5f6/penn-station-1935/VALIDATION.md).
 
-Browser bundle SHA256: `84633c64d9a7562e6e871ecb340237ca35903e0bf193ae5a6d18037333adca95`.
+## Exact identity
 
-## Changed behavior
+- Browser bundle SHA256: `67be7080829be131857745192d7f08af499b43396f601ee3240c2e70d220e1e4`.
+- World manifest SHA256: `2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c`.
+- Repaired raw waiting-room source: `4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945`.
+- Current editable scene: `48e1a7c53b883b68b709e61e37d38f1a66288682466d3969a41579454d61406d`.
+
+Matching publication, CI and live-browser verification are recorded in [PR11](https://github.com/stavreskimario/stavreskimario.github.io/pull/11). The live check compares the actual served bundle and decoded models with these local identities.
+
+## Architecture and historical evidence
 
 | Before | After | Why |
 | --- | --- | --- |
-| Orbit mainly rotates around a target | WASD/arrows translate the eye and target together; Q/E change height; Shift increases speed | Explore the connected station freely while retaining mouse orbit |
-| Four office labels read backward from the hall | Original glyphs rigidly rotate toward passengers | Correct TELEPHONES, TICKETS and PARCELS without inventing new wording |
-| An approximately118mm floor-to-tread slot and gate posts obstruct the train approach | Nine floor openings meet their first treads; complete paired indicators stand on supported stair flanks | Make the physical route traversable without noclip or smaller body clearance |
-| A single toe ray rejects a quantized stair-nosing bevel | Bounded finite-foot contact checks actual nearby horizontal tread geometry | Traverse a tiny real bevel while keeping void, body and step guards |
-| Strong colour variation and bump dominate the stone | Four linear-light colour derivatives and restrained normal strengths | Calmer interpreted granite, travertine and marble; original maps and geometry retained |
+| Warped coffer faces and inward arch bands | Continuous curved relief, corrected winding and dedicated ceiling lighting | Remove known roof defects and retain useful detail |
+| Carving receives too few lighting texels; leaf backs intersect their fronts | Separate 4K order atlas/AO and closed repaired returns | Resolve sampling and false self-occlusion |
+| Incomplete concourse windows and prism fields | Sash bodies, arched heads/spandrels, ticket frontage and broad square-prism court | Restore documented construction with inferred dimensions qualified |
+| Coarse furnishings and exaggerated grain | Refined booths, benches, five-globe lamps and restrained stone maps | Improve supported detail and material response |
+| Repeated shadow and glass-back rendering | Cached static shadows and front faces for closed prisms | Reduce frame cost while retaining transmission and six loaded zones |
+| Distant paving and roof interference | Feature-detected reversed depth in WebGL | Remove verified precision artifacts in the matched aerial view |
 
-## Desktop navigation and interface
+The [leaf-shell audit](../authoring/penn-station-1935/review/phase4/leaf-shell/README.md) verifies 128 closed shells: zero nonadjacent intersections, consistent winding and positive volume. All 110,208 visible front vertices remain exact; only hidden returns change. Unrelated geometry, normals and surface UVs retain their recorded identity. The 55mm return is interpreted.
 
-Installed Chrome156 on observed Apple M5 Max Metal. These are measured desktop checks, not universal hardware certification.
+The broad court contains 2,488 linked panels and 248,800 square glass units, with 3,582.72m² active panel area and 20 retained concrete cells around six pier bases. Raw audits pass glass/web/bearing support, empty-under-glass, boundaries, stairs and passage checks; the whole-core audit records 2,490 contacts with zero failures. These source checks do not replace final browser walking.
 
-- **13 integration groups pass** against the bundle above: persistent six-zone world, four exterior corners, interior/neighbourhood/platform views, walking, lighting/FOV/shadows, modal focus/Escape, archive framing, guided-tour cancellation, existing fallback layout and model/HDR/graphics recovery. [Report and screenshots](../authoring/penn-station-1935/review/phase4/browser-metal/validation.json).
-- **Full desktop train round trip passes**:17 real-keyboard legs and4,935 camera samples from the waiting room through the concourse, main stair, exit landing and both doglegs to Platform5, then back. No camera setters, platform shortcut or pose reset. All six scene IDs remain constant; the platform eye height is approximately−10.3061m and the final hall eye approximately−2.5842m. Five bounded contacts use actual geometry10mm from a tread bevel. [Report](../authoring/penn-station-1935/review/phase4/train-route-metal/report.json).
-- **10 finite-foot controls and27 authored flight registrations pass**: real bevel support, missing central ray/void, absent tread, wrong-height ledge, too-distant support, non-stair region, outside-flight sample, excessive rise/drop and underside rejection. The20mm search never substitutes a floor plane. Existing body radius,240mm rise and350mm drop limits remain.
-- WASD flight, QE/Shift, camera/target coherence, deceleration, native-field/dialog/blur guards and persistent world were also tested. Completed390px held-touch checks remain evidence of the existing fallback; the user deferred further mobile optimization and physical-phone certification.
-- The existing seven-leg exterior–hall–concourse–grand-stair regression passed on the earlier maintenance candidate before the final bounded stair-contact helper. Its exact older bundle hash remains in [that report](../authoring/penn-station-1935/review/phase4/hall-route-metal/penn-route-validation.json); it is not represented as an exact-final-bundle test.
+The [photograph comparison](../authoring/penn-station-1935/review/phase4/architecture/historical-limitations-review.md) separates primary evidence from reconstruction. Exact panel edges/pitch, minor profiles, capital carving and coffer arrangement remain inferred. The 143ft/150ft ceiling conflict remains explicit. The north mural retains its native 728×260 monochrome recovery; five other fields remain neutral. No unverified clock placement or generic passenger crowd is claimed as complete.
 
-## Geometry, materials and delivery
+## Assets and lighting
 
--12 full/fallback GLBs decode with **zero glTF validation errors**,56 shared KTX2 textures and208 existing compressed-format/tangent warnings. [Full asset report](../authoring/penn-station-1935/review/phase4/assets.json).
-- Model, unique texture and lighting transfer totals **91,681,299bytes** across both variants. Whole-site custom staging remains below100,000,000bytes; its exact final count is in [public-staging.json](../authoring/penn-station-1935/review/phase4/public-staging.json). Relative project-prefix loading and blocked external services were exercised. Existing legacy root Pages settings are retained; this checkpoint does not change publishing source.
--2,754 decoded upward-triangle support samples pass across all nine repaired stair heads and both delivered geometry variants. Original inputs correctly fail675/1,377 samples per variant. Physical repair receipts preserve unmodified compressed payloads, UVs, normals, indices and lighting metadata. Gate relocation converts only two POSITION views to Float32 to avoid clipping their outer frames; unrelated coordinates change by at most2.565micrometres. Exact post placement remains reconstructed. [Repair evidence](../authoring/penn-station-1935/review/phase4/STAIR_HEAD_REPAIR.md).
-- Four office labels were corrected in full and fallback geometry and the editable Blender source. A real walking camera confirms legible TELEPHONES. [Evidence](../authoring/penn-station-1935/review/phase4/signs/).
-- Nine original CC0 map hashes remain unchanged. Stone colour and normal-strength changes preserve geometry BIN/UVs, roughness, metal, AO, base-colour factors and lightmap references. Actual Metal before/after views and decoded KTX image checks are retained. [Material evidence](../authoring/penn-station-1935/review/phase4/material-finish/).
-- Phase3 illumination and reflection captures are intentionally retained, with their original source hashes. They predate the new palettes and small geometry repairs. No new GI or reflection bake is claimed here.
-- Source syntax, five-app manifest/link validation and whole-site staging pass. The authoring-only sharp dependency is pinned to patched0.35.5; npm audit reports zero advisories after that update. Browser rendering-library versions remain unchanged.
+[Final asset validation](../authoring/penn-station-1935/review/phase4/final-assets.json) passes all 12 full/fallback GLBs with **zero glTF errors**, 70 shared KTX2 textures and 256 retained warnings. Exact notices, decoded bounds and hashes are preserved.
 
-## Visual acceptance and remaining work
+| Atlas | Resolution | Metal samples |
+| --- | --- | --- |
+| Waiting-room vault | 8192² | 128 |
+| Waiting-room masonry | 4096² | 128 |
+| Colossal order | 4096², including desktop AO | 512 |
+| Exterior, concourse, platform | 2048² each | 128 |
 
-The checkpoint improves movement, the physical train route, office signs and stone appearance. It does **not** meet final photorealism acceptance. The user specifically identified the visibly defective waiting-room ceiling: blurred/coarsely mapped illumination, dark inward-facing arch bands and coarse capital/coffer detail remain. Corrected arch faces, dedicated higher-resolution ceiling/masonry bakes and close-up review are the next visual work, alongside authenticated concourse windows/prism fields, refined fixtures and further reflection captures.
+All six atlases include final registered occluders and six diffuse bounces. Positive-radiance checks, explicit linear transfer, per-atlas 0.18 controls and PNG/WebP pixel identity pass. Full original/denoised HDR bytes remain losslessly gzip archived with decoded SHA checks. [Denoising evidence](../authoring/penn-station-1935/review/phase4/final-denoise-summary.json) retains statistics and clipping.
 
-A restart removed the earlier temporary, uncommitted larger visual pass. Its models, bakes and prior test results are not included or claimed as delivered. Saved Phase3 sources were restored into a persistent project folder; this record describes the rebuilt checkpoint only.
+Four repaired-source HDR captures use 2048×1024 at 64 Metal samples, with 512×256 low captures, Non-Color resizing and zero dither. They approximate static architectural reflections; no positional parallax, time-specific indirect relighting or calibrated historical weather is claimed. Newly repackaged architectural models use 16-bit position/UV and 12-bit normals; unchanged rolling stock retains earlier compressed data. [Scalar](../authoring/penn-station-1935/review/phase4/scalar-optimization/README.md) and [order-AO](../authoring/penn-station-1935/review/phase4/order-ao/README.md) controls preserve sampled values, original 4K AO bytes and unrelated geometry/bindings.
 
-The143/150ft ceiling-source conflict, interpreted minor profiles/material colours, five neutral mural fields, incomplete sculpture/furnishings, unverified later-period railway operations and realistic passengers remain explicit. The fuller Manhattan streetscape stays last. Mobile optimization is deferred at the user's request. Native-WebGPU parity and physical-phone performance are not certified.
+## Desktop rendering and interaction
 
-Chrome sometimes labels completed HTTP200 responses as cancelled. A controlled trace through the app's natural readers found complete expected byte lengths and matching SHA256 for all12 such responses, no AbortSignal, all six decoded models and no page errors. The cancellation flags remain in the [diagnostic record](../authoring/penn-station-1935/review/phase4/network-read-hashes.json); reporting uncertainty is not hidden or presented as a missing-asset fix.
+The [production capture](../authoring/penn-station-1935/review/phase4/final-production/README.md) serves the unchanged bundle under a relative project prefix in Chrome156 on observed Apple M5 Max Metal. Six zone identities persist across four views, recording approximately 60.1–60.4 render updates/second at a 1920×1224 balanced buffer. A real 3.42m walk records approximately 60.2. These short windows do not certify all devices. Material checks confirm prism front faces with transmission 0.90 intact, 4K order maps and 8K ceiling illumination. The [visual assessment](../authoring/penn-station-1935/review/phase4/final-production/ASSESSMENT.md) records remaining defects.
 
-Publication is checked against the matching commit separately. The pull request remains draft and must not be merged without owner authorization.
+The [causal performance investigation](../authoring/penn-station-1935/review/phase4/render-performance/README.md) measures the preceding candidate: cached shadows plus prism front faces improve 40.6 to 59.3 render submissions/second and approximately 49.93M to 20.13M submitted triangles/frame. Refraction resolution and all six loaded zones remain intact. GPU queries and render submission rate are reported separately; offline authoring jobs were stopped for quiet measurements.
+
+Six [shadow-cache groups](../authoring/penn-station-1935/review/phase4/shadow-cache/README.md) pass camera reuse, light changes, on/off, actual 4096↔2048 target resizing, stable practical maps and recovery after an injected model failure. Projection matrices refresh explicitly; the automatic/cached controls share their projection and initial image. Experimental WebGPU retains its existing path.
+
+The [depth comparison](../authoring/penn-station-1935/review/phase4/depth-precision/RESULT.md) removes Hotel paving bands and roof striping at the same camera. An unsuitable cross-browser UUID assertion is documented; camera values and zone names/counts match. Production verifies reversed depth on this driver; unsupported drivers keep normal depth.
+
+The [final navigation sequence](../authoring/penn-station-1935/review/phase4/final-navigation/final-visual-2/README.md) passes on the exact frozen asset and bundle hashes: 17 real-keyboard train legs and 4,936 samples without shortcuts or arrival corrections; both prism crossings and the disabled-glass aperture control; WASD, Q/E, Shift, damping, field/dialog/blur and existing touch guards. The first flight attempt sent input before the selected pose committed; its failed receipt is preserved. Only that case was rerun after actual rendered-frame/camera readiness, with unchanged movement assertions and no production edits.
+
+All 13 [final interface/recovery groups](../authoring/penn-station-1935/review/phase4/final-ui/README.md) pass against the same bundle. These include relative-prefix asset loading, persistent zones, views/walking, controls, native dialog/tour behavior, existing touch fallback and intentional model/HDR/graphics failure and retry. Full evidence retains expected injected failures and actual driver observations.
+
+## Site, size and publication
+
+Engineering Journal and Crystal Palace were removed in commit `1519918`. The [removal check](../docs/SITE_APP_REMOVAL_VALIDATION.json) verifies three retained cards/entrypoints, removed paths returning 404 and no page exceptions. Journal collection/scheduling is removed; shared staging is now scripts/site-publishing/stage.py. The three-app validator and six shared publishing tests pass; Pages settings are unchanged.
+
+Model, unique texture and lighting transfer is **149,469,306 bytes** across both variants. The internal custom-stage allowance is 160,000,000 bytes; the separate complete legacy-root site must remain below 1 GB. [Final staging measurements](../authoring/penn-station-1935/review/phase4/final-public-staging.json) record the custom artifact and conservative legacy-root upper bound. Historical source scenes remain recoverable through verified immutable Git references and persistent backups; HDR archival is lossless.
+
+The PR stays draft and unmerged. Live publication is checked separately from local rendering; the matching result belongs to the PR validation record.
+
+## Remaining visual work
+
+Plaster mottling, some shaft highlight specks and one residual dark curl sample remain. Distant prism grids can show moiré; platform ends and the fuller Manhattan setting are unfinished. Fine ornament, some furnishings/signage, five murals, realistic period passengers and exact late-1930s operations remain open. Further mobile optimization is deferred; basic fallback checks do not certify physical-phone performance. This checkpoint advances the reconstruction without closing the final photographic target.

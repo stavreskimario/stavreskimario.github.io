@@ -1,183 +1,56 @@
 {
   "zone": "waiting-room",
-  "source": "model-waiting-room.glb",
-  "sourceSha256": "66be79cd8c14b01213b8b4399e1035e3f6974f7a6b36d547c25004e7a2754286",
-  "resolution": 2048,
-  "samples": 64,
-  "engine": "4.3.0 Cycles CPU",
-  "atlasSurfaceArea": 0.3518076539039612,
-  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
-  "registeredOccluders": [
+  "schemaVersion": 3,
+  "purpose": "Separate high-resolution ceiling, masonry and carved-order atlases",
+  "sources": [
     {
-      "zone": "exterior",
-      "source": "model-exterior.glb",
-      "sha256": "5ff73a639078fc06efb941a0141fd212261394acfbdee595545979cef702a193",
-      "heightOffset": 4.2672,
-      "objects": 14
+      "file": "model-waiting-room-vault.glb",
+      "sha256": "078507f593e555758ee3d0ecdd41b71b18a87e37bb83ec590c795e2ec625795c",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
     },
     {
-      "zone": "concourse",
-      "source": "model-concourse.glb",
-      "sha256": "7e87da6a1ac77ec4915343da289bc4f04b004cd032cbfdf267d94e5c7f4db0bf",
-      "heightOffset": 0,
-      "objects": 81
+      "file": "model-waiting-room-masonry.glb",
+      "sha256": "58b7548bd92d5932d6f8779ce41ae1eac43cdf0266fa2baff8a2e7c830dd4c29",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
     },
     {
-      "zone": "platform",
-      "source": "model-platform.glb",
-      "sha256": "d294eba796a3f7627ed71e37511bff97d14733ef7445d8880b7187d63fc581b0",
-      "heightOffset": 0,
-      "objects": 66804
-    },
-    {
-      "zone": "context",
-      "source": "model-context.glb",
-      "sha256": "5d3722673b834eaf875342064230c197bf51647986f59e042038b03c970ff425",
-      "heightOffset": 4.2672,
-      "objects": 10736
-    },
-    {
-      "zone": "trains",
-      "source": "model-trains.glb",
-      "sha256": "c5b8dec8a70fca2febe27938de9b784dc91abf51ee0d3084b154e54469ba4385",
-      "heightOffset": -8.886825000000002,
-      "objects": 66
+      "file": "model-waiting-room-order.glb",
+      "sha256": "bc31a622f6715369e57b7e6c5e512faccaa933d344d175ed455bcfd5f04195c0",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
     }
   ],
-  "unbakedPrimaryMeshes": 9,
-  "surfaceProfiles": [
-    {
-      "material": "BotticinoMarble",
-      "asset": "Marble018",
-      "tileMetres": 1.25,
-      "normalStrength": 0.055,
-      "roughnessFactor": 0.58
-    },
-    {
-      "material": "InteriorGranite",
-      "asset": "Granite005A",
-      "tileMetres": 1,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
-    },
-    {
-      "material": "MilfordGranite",
-      "asset": "Granite005A",
-      "tileMetres": 1,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
-    },
-    {
-      "material": "MilfordGranite.001",
-      "asset": "Granite005A",
-      "tileMetres": 1,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
-    },
-    {
-      "material": "PublicFloorMarble",
-      "asset": "Marble018",
-      "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
-    },
-    {
-      "material": "PublicFloorMarble.001",
-      "asset": "Marble018",
-      "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
-    },
-    {
-      "material": "PublicFloorMarble.002",
-      "asset": "Marble018",
-      "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
-    },
-    {
-      "material": "Travertine",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "Travertine.001",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "Travertine.002",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "TravertineAshlar-1",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "TravertineAshlar-2",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "TravertineAshlar0",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "TravertineAshlar1",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    },
-    {
-      "material": "TravertineAshlar2",
-      "asset": "Travertine009",
-      "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
-    }
-  ],
-  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source → Standard/sRGB PNG → lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
-  "radianceScale": 1,
-  "ambientOcclusion": {
-    "minimum": 0,
-    "maximum": 1,
-    "mean": 0.243763267993927,
-    "coveredPixels": 4194304
-  },
-  "illumination": {
-    "minimum": 0,
-    "maximum": 0.673591136932373,
-    "mean": 0.012887644581496716,
-    "coveredPixels": 4194304
-  },
-  "elapsedSeconds": 620.6675064580049,
-  "architectureUv": "UVMap",
-  "bakedUv": "BakedLightingUV",
-  "artifact": "model-waiting-room.glb",
-  "device": {
-    "requested": "CPU",
-    "backend": "CPU",
-    "devices": [
-      "CPU"
+  "unchangedPrimitiveBuffersAndAtlasBindings": true,
+  "bounds": {
+    "min": [
+      -18.139999389648438,
+      -0.4000000059604645,
+      -49.02939987182617
+    ],
+    "max": [
+      32.709999084472656,
+      43.58639907836914,
+      49.02939987182617
     ]
   },
-  "aoPathSamples": 64,
-  "aoNodeSamples": 24,
-  "settingsNote": "These two bakes had already started on CPU with64 outer AO samples before the independent AO sample setting and AUTO/Metal support were introduced. Diffuse illumination uses64 samples in every zone."
+  "atlases": [
+    {
+      "zone": "waiting-room-vault",
+      "report": "lighting-waiting-room-vault.json",
+      "resolution": 8192,
+      "samples": 128
+    },
+    {
+      "zone": "waiting-room-masonry",
+      "report": "lighting-waiting-room-masonry.json",
+      "resolution": 4096,
+      "samples": 128
+    },
+    {
+      "zone": "waiting-room-order",
+      "report": "lighting-waiting-room-order.json",
+      "resolution": 4096,
+      "samples": 512
+    }
+  ],
+  "outputSha256": "941d10553254b86c51e05f4ec0b8031ea00a85ba5caa31f1f363911214d7b709"
 }

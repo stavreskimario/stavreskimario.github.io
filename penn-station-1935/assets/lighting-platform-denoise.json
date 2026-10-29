@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "zone": "platform",
   "source": "lighting-platform-sky.hdr",
-  "sourceSha256": "b02a611d5c1d2eaf3921ea293fe4be2b4110b16e1cab75370d8c4b4605b9771b",
+  "sourceSha256": "2757d4bd04fd769c6063b57a2bdbcc5dafba294e13963a8a9c4423391117979f",
   "inputTransfer": "linear",
   "inputScale": 1,
   "radianceScale": 1.0,
   "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
   "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
   "sourceStored": {
-    "mean": 0.25997987389564514,
+    "mean": 0.14294135570526123,
     "minimum": 0.0,
     "maximum": 0.7578125
   },
   "originalLinear": {
-    "mean": 0.25997987389564514,
+    "mean": 0.14294135570526123,
     "minimum": 0.0,
     "maximum": 0.7578125
   },
   "denoisedLinear": {
-    "mean": 0.25994929671287537,
+    "mean": 0.1429094523191452,
     "minimum": 0.0,
-    "maximum": 1.0390487909317017
+    "maximum": 0.9208479523658752
   },
-  "relativeMeanChange": -0.00011761365336326879,
+  "relativeMeanChange": -0.000223192133295691,
   "negativeOutputSamplesClamped": 0,
   "constant018Test": {
     "before": 0.18,
@@ -34,18 +34,19 @@
   },
   "retainedHdr": {
     "file": "lighting-platform-sky-denoised-linear.hdr",
-    "sha256": "1c9cb0ff0b0b6a82769e55100e15fc593af9b627972bca0b4d6b0b1ceecaca91",
+    "sha256": "2f06f5f60c56a538011727cc6bc8371e8a45512dd4424efba60f05e56580dcbb",
     "decodedLinear": {
-      "mean": 0.258939653635025,
+      "mean": 0.14237873256206512,
       "minimum": 0.0,
-      "maximum": 1.03125
+      "maximum": 0.91796875
     },
-    "meanQuantizationError": 0.0010097749764099717
+    "meanQuantizationError": 0.0005308468244038522,
+    "archiveFile": "lighting-platform-sky-denoised-linear.hdr.gz"
   },
   "full": {
     "png": "lighting-platform-sky.png",
     "webp": "lighting-platform-sky.webp",
-    "clippedRGBSamples": 1,
+    "clippedRGBSamples": 0,
     "width": 2048,
     "height": 2048
   },
@@ -57,5 +58,7 @@
     "height": 512
   },
   "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
-  "elapsedSeconds": 3.672759916051291
+  "elapsedSeconds": 3.292946125002345,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase4/denoised",
+  "sourceArchiveFile": "../originals/lighting-platform-sky.hdr.gz"
 }

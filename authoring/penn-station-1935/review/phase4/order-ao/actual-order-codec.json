@@ -1,0 +1,29 @@
+{
+  "created": "2026-10-29T10:31:03.266Z",
+  "status": "passed",
+  "purpose": "Decode the existing actual4K AO UASTC output; no re-encoding or resizing",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-scalars.glb",
+    "sha256": "d75d6c0efec5e93fa0da93d2b52804b1a1094bc6cfc5b9fd845eb6f9054afc79",
+    "imageSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf"
+  },
+  "encoded": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-textured.glb",
+    "sha256": "ca3100e5ae4903282ceaac79d078ac2efc95075298b8cd99d52f817eff20f792",
+    "imageSha256": "33d2293c6da77c9772d7bdb9ffdf3b1261c4c3cb9a98dd3f688095fa1620a764",
+    "imageBytes": 10853101
+  },
+  "dimensions": [
+    4096,
+    4096
+  ],
+  "scalarChannel": "R",
+  "values": "raw8-bit values; no gamma conversion",
+  "errorAgainstOriginal": {
+    "mean": 0.22469985485076904,
+    "p95": 1,
+    "p99": 3,
+    "max": 16
+  },
+  "mipLevels": 13
+}

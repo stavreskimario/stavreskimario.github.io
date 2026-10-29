@@ -80,14 +80,14 @@
       ]
     }
   ],
-  "runtime": "Shared content-addressed KTX2/UASTC; 2K desktop/512px mobile. Appearance revision4 changes only interpreted colour and normal strength, keeping architectural UV revision3 and the existing roughness, metallic and AO data.",
-  "lighting": "Blender Cycles neutral dome, six diffuse bounces and separate 2m AO; registered complete station, railway, context and rolling-stock occluders are included. Directional sun remains dynamic. Lighting-only outgoing radiance uses explicit Linear Rec.709 to Standard/sRGB PNG encoding, per-atlas HDR normalization and pixel-identical lossless WebP transport; browser restores scale and multiplies by pi for Three.js irradiance. Fine ironwork is excluded from the masonry atlas. Original HDR/AO authoring files and measured unit-hemisphere/browser calibration are retained outside runtime. Exact sample counts/resolutions and source hashes are recorded per delivered bake.",
-  "reflections": "Three static room-centre HDR panoramas plus one elevated Seventh Avenue environment are captured from the assembled authored station under a neutral dome and afternoon reference sun. The old modern field HDR is archived. No parallax correction, moving-passenger reflections or time-specific indirect relighting; neither original material colours nor sun/exposure settings are historically calibrated. Source hashes/positions are in the runtime capture reports.",
-  "denoising": "Color-only OpenImageDenoise on explicitly recovered linear radiance; runtime sRGB is encoded once and pixel-verified lossless WebP is used. All four source/report hashes, mean changes, uniform transfer controls and clipping counts are retained in lighting-*-denoise.json. Filtering may soften tiny atlas features; mapped production views are separately reviewed.",
+  "runtime": "Shared content-addressed KTX2/UASTC surfaces, with retained 2K desktop and 512px fallback derivatives. Architectural UV revision 3 and physical grain scale are retained. Four interpreted colour profiles, separate authored Bedford maps, restrained normal strength and material-specific roughness/optics are applied by the appearance library. Runtime encoding and sampled-channel preservation are documented in the asset reports; original CC0 source files remain unchanged. Desktop is the focus of this iteration; additional mobile optimization is deferred.",
+  "lighting": "Completed Phase4 neutral-dome Cycles illumination uses8192px for the waiting-room vault,4096px for masonry and colossal order, and2048px for exterior/concourse/platform. The repaired order uses512 Metal samples; other atlases128, with six diffuse bounces. The order retains4096px desktop AO. All final inputs include the broad revision3 prism court and repaired leaf source; each report records actual source/occluder hashes. Fine ironwork and repeated tiny concrete webs remain outside the large masonry atlas. Directional sun stays dynamic. Explicit linear-radiance transfer and pixel-identical lossless WebP preserve the normalized atlas; the browser restores scale and irradiance. Completed settings do not establish final photographic fidelity or calibrated historic colours.",
+  "reflections": "Four completed repaired-source static captures use2048x1024 HDR,64 Metal samples, plus512x256 low derivatives. Non-Color resizing and zero dither preserve linear radiance. assets/reflection-probes.json and reflection-exterior-probe.json retain source hashes, positions and decoded transport identity. Static probes have no positional parallax, moving-passenger reflections or time-specific indirect relighting. Sky, colours, sun and exposure are not historically calibrated.",
+  "denoising": "Color-only OpenImageDenoise filters explicitly linear radiance; runtime sRGB is encoded once and transported as lossless WebP. Original and denoised full-resolution HDR are losslessly gzip archived under authoring/penn-station-1935/lighting/phase4, with decoded SHA verification. Each atlas records its0.18 control, radiance statistics and clipping. Filtering can soften fine features; mapped browser review remains separately required.",
   "architecturalUvRevision": 3,
   "appearance": {
     "revision": 4,
-    "scope": "Interpreted base-colour derivatives and reduced normal-strength scalars on existing material families. Geometry, physical grain scale, normal-map pixels, roughness/metallic/AO maps and lightmap/probe files are retained.",
+    "scope": "Four interpreted colour derivatives and reduced normal strengths retain the original nine ambientCG maps and architectural UV revision3. The broader visual pass also introduces separately authored seamless Bedford maps, an interpreted InteriorGranite roughness factor 0.50 and distinct milky opal-glass response; global illumination and static probes are freshly rebuilt rather than retained from the maintenance checkpoint.",
     "calibratedHistoricSamples": false,
     "method": "Decode sRGB to linear; normalize each source channel by its spatial mean; apply contrast about that mean and multiply by the target linear palette; clip to0..1; resize in linear light; encode sRGB once.",
     "sourceMapsVerified": 9,
@@ -175,7 +175,144 @@
       "TennesseeMarble": 0.018,
       "BotticinoMarble": 0.025
     },
-    "baseColourFactors": "Existing glTF baseColorFactor values are retained; the application report records each factor times the decoded UASTC map mean.",
-    "lightingLimitation": "This narrow appearance change retains the Phase3 indirect-illumination solution and static probes. It does not rebake the effects of revised albedo on secondary bounce light or restore the lost split-atlas/reflection work."
+    "baseColourFactors": "Original material-family factors are accounted for in the colour-derivative application reports. The authored Bedford maps already contain their target mean linear colour and use a unit baseColorFactor, avoiding double tinting.",
+    "lightingLimitation": "The maintenance checkpoint retained Phase3 lighting. The completed visual pass rebuilds all six illumination atlases and four static probes with recorded final geometry/material inputs. Transfer validation and mapped visual acceptance are separate; historic colour, polish, lamp photometry and weather remain uncalibrated.",
+    "roughnessFactors": {
+      "InteriorGranite": 0.5
+    },
+    "interiorGraniteFinish": "The smoother shaft response is interpreted from primary photographs; 0.50 is a material multiplier on the existing modern roughness map, not a measured historic polish specification.",
+    "nativeApplicationHelper": "model/material_library.py"
+  },
+  "authoredSurfaces": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "script": "model/prepare_bedford_surface.py",
+      "provenance": "../authoring/penn-station-1935/materials/phase4/bedford-surface-provenance.json",
+      "authorship": "Original deterministic seeded isotropic stone-grain appearance; no photographs, scans or third-party image sampling",
+      "historicalQualification": "Bedford limestone material identity follows the existing source ledger. This micro-surface, exact colour/roughness and normal response are authored appearance interpretations, not an authenticated historic surface sample.",
+      "sourceScriptSha256": "4f50de29ef8f90a5abd3839a5c725fa70bdeac913d71098f1a36fd5fb7e9857f",
+      "seed": 19351008,
+      "size": [
+        2048,
+        2048
+      ],
+      "tileMetres": 1.5,
+      "seamless": "Periodic Fourier-filtered random field; central-difference periodic height derivatives",
+      "application": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 1,
+        "metallicFactor": 0,
+        "normalStrength": 0.15,
+        "uvScale": "ArchitecturalUV stores0.28UV/m before material preparation; use UV/(0.28*1.5) for a1.5m tile. Do not apply the colour(.56,.55,.49) a second time.",
+        "textures": {
+          "colour": "BedfordLimestoneConcourse-Color.png",
+          "roughness": "BedfordLimestoneConcourse-Roughness.png",
+          "normal": "BedfordLimestoneConcourse-NormalGL.png"
+        }
+      },
+      "files": [
+        {
+          "role": "colour",
+          "file": "BedfordLimestoneConcourse-Color.png",
+          "bytes": 1627960,
+          "sha256": "cd42e7dd2cd70cfcbb0628962fdd8522daa57299718b140c492645e15dcc6d5a"
+        },
+        {
+          "role": "roughness",
+          "file": "BedfordLimestoneConcourse-Roughness.png",
+          "bytes": 1375067,
+          "sha256": "10a506f7925250947afa5ef0137f86839656927e2de4ea19df5bb4d1299cb715"
+        },
+        {
+          "role": "normal",
+          "file": "BedfordLimestoneConcourse-NormalGL.png",
+          "bytes": 4519322,
+          "sha256": "0e1659e0d1616d0dd9a07481574addcdd36f4fcabb4b903fcffe35b847124995"
+        }
+      ]
+    }
+  ],
+  "fixtureOptics": {
+    "OpalCandelabraGlass": {
+      "scope": "Separate from clock/sign white materials, allowing an interpreted milky five-globe candelabrum finish without recolouring clock faces or lettering.",
+      "baseColourLinear": [
+        0.94,
+        0.93,
+        0.89,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.3,
+      "transmission": 0.18,
+      "ior": 1.5,
+      "historicalQualification": "Photograph-led appearance interpretation; no calibrated surviving opal-glass sample or lamp photometry."
+    }
+  },
+  "visualPassSettings": {
+    "qualification": "Requested final visual-pass settings; some refreshed jobs can still be running when this catalog is written. Exact output hashes, observed controls, completion and delivered-browser checks must come from their own reports.",
+    "geometry": "Broad visible central-court floor coverage revision 3; precise extent, pitch and module remain inferred.",
+    "globalIllumination": {
+      "device": "METAL",
+      "samples": 128,
+      "diffuseBounces": 6,
+      "atlasSizes": {
+        "waitingVault": 8192,
+        "waitingMasonry": 4096,
+        "exterior": 2048,
+        "concourse": 2048,
+        "platform": 2048,
+        "waitingOrder": 4096
+      },
+      "waitingRoomIndexSchemaVersion": 3,
+      "desktopOrderAO": {
+        "resolution": 4096,
+        "retention": "Retain full 4K desktop order AO through optimization; it is separate from dedicated order illumination and exempt from 2K general surface-map resizing."
+      }
+    },
+    "staticProbes": {
+      "device": "METAL",
+      "samples": 64,
+      "fullResolution": [
+        2048,
+        1024
+      ],
+      "lowResolution": [
+        512,
+        256
+      ],
+      "lowDataHandling": "Non-Color; zero dither",
+      "radianceControl": 0.18,
+      "transport": "Full HDR retained; lossless gzip room-probe transport with decoded SHA256 identity in per-probe reports"
+    },
+    "archiveDestinations": {
+      "originals": "../authoring/penn-station-1935/lighting/phase4/originals/",
+      "denoised": "../authoring/penn-station-1935/lighting/phase4/denoised/"
+    },
+    "mobile": "Existing 512px surface/GI and 512\u00d7256 probe derivatives are retained as fallback; further mobile optimization is deferred in this desktop-first iteration."
+  },
+  "muralPreservation": {
+    "asset": "assets/mural-north-archival.png",
+    "nativeRectifiedSize": [
+      728,
+      260
+    ],
+    "sha256": "3fe44b7afcbd89a26bb1db1cdc1108bd525643ae4f556378340168b7afc49076",
+    "originalTiffSize": [
+      5076,
+      4061
+    ],
+    "originalTiffSha256": "b11e92e022cd1aec75b78c3164f35bc2e7772a336f4d31029e2f2ed9665f5d9d",
+    "provenance": "../authoring/penn-station-1935/references/phase3/mural-north-provenance.json",
+    "limitation": "Original TIFF was rechecked unchanged. Mechanical monochrome rectification only; no inferred colour, upscaling represented as recovered detail, painting or new mural image. Other five fields remain neutral."
+  },
+  "renderingPolicy": {
+    "staticShadows": "Cached for camera motion; refreshed for model, lighting, shadow and quality changes. WebGL-only helper; experimental WebGPU retains its prior path.",
+    "closedPrismGlass": "Front faces for the closed square-prism units retain full transmission and refraction resolution; thin glazing stays double-sided.",
+    "limits": "High-frequency distant prism grids can alias. This checkpoint does not certify final photographic fidelity or all hardware."
   }
 }

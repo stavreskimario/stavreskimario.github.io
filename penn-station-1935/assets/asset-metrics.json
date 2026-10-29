@@ -2,492 +2,6 @@
   "pipeline": "Blender 4.3 → glTF Transform 4.2.1 → Meshopt + KTX2/UASTC",
   "assets": [
     {
-      "file": "model-context.glb",
-      "rawBytes": 26203828,
-      "bytes": 2204224,
-      "externalTextures": [
-        {
-          "uri": "textures/3f048a6c06cf38b8262f.ktx2",
-          "bytes": 794564
-        },
-        {
-          "uri": "textures/f20a20acf02f7ce2462f.ktx2",
-          "bytes": 862627
-        },
-        {
-          "uri": "textures/a39f7640085f37632425.ktx2",
-          "bytes": 842348
-        },
-        {
-          "uri": "textures/de511a781294895dfd20.ktx2",
-          "bytes": 863637
-        },
-        {
-          "uri": "textures/69568bc9b65cd706ace5.ktx2",
-          "bytes": 839153
-        },
-        {
-          "uri": "textures/ebad7b61f035b595fc1f.ktx2",
-          "bytes": 862446
-        },
-        {
-          "uri": "textures/4d7a733aa9e3a117b76b.ktx2",
-          "bytes": 607982
-        },
-        {
-          "uri": "textures/90e6455c8ad02ae0eefb.ktx2",
-          "bytes": 892516
-        },
-        {
-          "uri": "textures/ef7fd884a3d0c11e51a5.ktx2",
-          "bytes": 863104
-        }
-      ],
-      "nodes": 37,
-      "meshes": 37,
-      "materials": 20,
-      "textures": 9,
-      "extensionsUsed": [
-        "EXT_mesh_gpu_instancing",
-        "EXT_meshopt_compression",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-context.glb.gz",
-      "transportBytes": 493263
-    },
-    {
-      "file": "model-context-low.glb",
-      "rawBytes": 26203828,
-      "bytes": 1750700,
-      "externalTextures": [
-        {
-          "uri": "textures/e25abc85a6ecd814ea97.ktx2",
-          "bytes": 175605
-        },
-        {
-          "uri": "textures/33721d1aecd74f3fd521.ktx2",
-          "bytes": 181881
-        },
-        {
-          "uri": "textures/f3c33e9e13a60222a23d.ktx2",
-          "bytes": 202002
-        },
-        {
-          "uri": "textures/8b602c339be41e7e043a.ktx2",
-          "bytes": 182660
-        },
-        {
-          "uri": "textures/a88cd37c93251ba8c26e.ktx2",
-          "bytes": 198781
-        },
-        {
-          "uri": "textures/d3af65ba7e33b704f9c1.ktx2",
-          "bytes": 182371
-        },
-        {
-          "uri": "textures/acc04afd2689712b1b12.ktx2",
-          "bytes": 160408
-        },
-        {
-          "uri": "textures/beeae21668c73f74ea5d.ktx2",
-          "bytes": 243248
-        },
-        {
-          "uri": "textures/46d8c3d4cc2d1185893e.ktx2",
-          "bytes": 181791
-        }
-      ],
-      "nodes": 37,
-      "meshes": 37,
-      "materials": 20,
-      "textures": 9,
-      "extensionsUsed": [
-        "EXT_mesh_gpu_instancing",
-        "EXT_meshopt_compression",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-context-low.glb.gz",
-      "transportBytes": 654827
-    },
-    {
-      "file": "model-waiting-room.glb",
-      "rawBytes": 77314144,
-      "bytes": 10288128,
-      "externalTextures": [
-        {
-          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
-          "bytes": 11104
-        },
-        {
-          "uri": "textures/456394f60a7a3aaf94f3.ktx2",
-          "bytes": 2351043
-        },
-        {
-          "uri": "textures/4278ac4780ea6e5ef44e.ktx2",
-          "bytes": 3965279
-        },
-        {
-          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
-          "bytes": 3746211
-        },
-        {
-          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
-          "bytes": 4296
-        },
-        {
-          "uri": "textures/b64c55705256a5018846.ktx2",
-          "bytes": 4085128
-        },
-        {
-          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
-          "bytes": 2381311
-        },
-        {
-          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
-          "bytes": 1755
-        },
-        {
-          "uri": "textures/3335d12c85f0a74be102.ktx2",
-          "bytes": 5435228
-        },
-        {
-          "uri": "textures/13c4f61beb144394cd73.ktx2",
-          "bytes": 3556449
-        },
-        {
-          "uri": "textures/06c5a58877219e6fe72d.ktx2",
-          "bytes": 3608355
-        },
-        {
-          "uri": "textures/8714963ae3c33593ef07.ktx2",
-          "bytes": 159620
-        }
-      ],
-      "nodes": 7,
-      "meshes": 7,
-      "materials": 15,
-      "textures": 12,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-waiting-room.glb.gz",
-      "transportBytes": 4483819
-    },
-    {
-      "file": "model-waiting-room-low.glb",
-      "rawBytes": 77314144,
-      "bytes": 8104264,
-      "externalTextures": [
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/d2248ef2f2e4d38a4cba.ktx2",
-          "bytes": 228250
-        },
-        {
-          "uri": "textures/65f3f8cab0e6fe45414c.ktx2",
-          "bytes": 268609
-        },
-        {
-          "uri": "textures/64fbedc702550bebf27f.ktx2",
-          "bytes": 250215
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/84ca1fa3bf5561015fe0.ktx2",
-          "bytes": 274454
-        },
-        {
-          "uri": "textures/17a7c7833754aad20681.ktx2",
-          "bytes": 160504
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/1ed31ea622d96e47544c.ktx2",
-          "bytes": 335846
-        },
-        {
-          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
-          "bytes": 224682
-        },
-        {
-          "uri": "textures/c323c1d2c64ba6b7d38b.ktx2",
-          "bytes": 265023
-        },
-        {
-          "uri": "textures/aff700fa69f448c57670.ktx2",
-          "bytes": 79775
-        }
-      ],
-      "nodes": 7,
-      "meshes": 7,
-      "materials": 15,
-      "textures": 12,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-waiting-room-low.glb.gz",
-      "transportBytes": 4129383
-    },
-    {
-      "file": "model-exterior.glb",
-      "rawBytes": 74137536,
-      "bytes": 8690384,
-      "externalTextures": [
-        {
-          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
-          "bytes": 1755
-        },
-        {
-          "uri": "textures/f8f598c89017c5e01dd7.ktx2",
-          "bytes": 1993886
-        },
-        {
-          "uri": "textures/3335d12c85f0a74be102.ktx2",
-          "bytes": 5435228
-        },
-        {
-          "uri": "textures/13c4f61beb144394cd73.ktx2",
-          "bytes": 3556449
-        },
-        {
-          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
-          "bytes": 11104
-        },
-        {
-          "uri": "textures/4278ac4780ea6e5ef44e.ktx2",
-          "bytes": 3965279
-        },
-        {
-          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
-          "bytes": 3746211
-        },
-        {
-          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
-          "bytes": 4296
-        },
-        {
-          "uri": "textures/b64c55705256a5018846.ktx2",
-          "bytes": 4085128
-        },
-        {
-          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
-          "bytes": 2381311
-        }
-      ],
-      "nodes": 8,
-      "meshes": 8,
-      "materials": 11,
-      "textures": 10,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-exterior.glb.gz",
-      "transportBytes": 2586035
-    },
-    {
-      "file": "model-exterior-low.glb",
-      "rawBytes": 74137536,
-      "bytes": 7805648,
-      "externalTextures": [
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/baee09410e2cb08cbb5b.ktx2",
-          "bytes": 199958
-        },
-        {
-          "uri": "textures/1ed31ea622d96e47544c.ktx2",
-          "bytes": 335846
-        },
-        {
-          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
-          "bytes": 224682
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/65f3f8cab0e6fe45414c.ktx2",
-          "bytes": 268609
-        },
-        {
-          "uri": "textures/64fbedc702550bebf27f.ktx2",
-          "bytes": 250215
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/84ca1fa3bf5561015fe0.ktx2",
-          "bytes": 274454
-        },
-        {
-          "uri": "textures/17a7c7833754aad20681.ktx2",
-          "bytes": 160504
-        }
-      ],
-      "nodes": 8,
-      "meshes": 8,
-      "materials": 11,
-      "textures": 10,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-exterior-low.glb.gz",
-      "transportBytes": 2668214
-    },
-    {
-      "file": "model-concourse.glb",
-      "rawBytes": 93106000,
-      "bytes": 11313380,
-      "externalTextures": [
-        {
-          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
-          "bytes": 11104
-        },
-        {
-          "uri": "textures/547e3573b92e90adcd24.ktx2",
-          "bytes": 1895977
-        },
-        {
-          "uri": "textures/4278ac4780ea6e5ef44e.ktx2",
-          "bytes": 3965279
-        },
-        {
-          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
-          "bytes": 3746211
-        },
-        {
-          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
-          "bytes": 1755
-        },
-        {
-          "uri": "textures/3335d12c85f0a74be102.ktx2",
-          "bytes": 5435228
-        },
-        {
-          "uri": "textures/13c4f61beb144394cd73.ktx2",
-          "bytes": 3556449
-        },
-        {
-          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
-          "bytes": 4296
-        },
-        {
-          "uri": "textures/b64c55705256a5018846.ktx2",
-          "bytes": 4085128
-        },
-        {
-          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
-          "bytes": 2381311
-        }
-      ],
-      "nodes": 5,
-      "meshes": 5,
-      "materials": 9,
-      "textures": 10,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 4651564
-    },
-    {
-      "file": "model-concourse-low.glb",
-      "rawBytes": 93106000,
-      "bytes": 10429716,
-      "externalTextures": [
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/bade582caf96478449a8.ktx2",
-          "bytes": 168221
-        },
-        {
-          "uri": "textures/65f3f8cab0e6fe45414c.ktx2",
-          "bytes": 268609
-        },
-        {
-          "uri": "textures/64fbedc702550bebf27f.ktx2",
-          "bytes": 250215
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/1ed31ea622d96e47544c.ktx2",
-          "bytes": 335846
-        },
-        {
-          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
-          "bytes": 224682
-        },
-        {
-          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
-          "bytes": 681
-        },
-        {
-          "uri": "textures/84ca1fa3bf5561015fe0.ktx2",
-          "bytes": 274454
-        },
-        {
-          "uri": "textures/17a7c7833754aad20681.ktx2",
-          "bytes": 160504
-        }
-      ],
-      "nodes": 5,
-      "meshes": 5,
-      "materials": 9,
-      "textures": 10,
-      "extensionsUsed": [
-        "EXT_meshopt_compression",
-        "KHR_materials_ior",
-        "KHR_materials_transmission",
-        "KHR_mesh_quantization",
-        "KHR_texture_basisu"
-      ],
-      "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 4586904
-    },
-    {
       "file": "model-trains.glb",
       "rawBytes": 7011560,
       "bytes": 667464,
@@ -558,13 +72,557 @@
       "transportBytes": 157720
     },
     {
-      "file": "model-platform.glb",
-      "rawBytes": 19904596,
-      "bytes": 1051624,
+      "file": "model-context.glb",
+      "rawBytes": 26204888,
+      "bytes": 2197204,
       "externalTextures": [
         {
-          "uri": "textures/225e6d23dc7049ed4904.ktx2",
-          "bytes": 1771894
+          "uri": "textures/0fd52d7b147ba7546220.ktx2",
+          "bytes": 541708
+        },
+        {
+          "uri": "textures/3f048a6c06cf38b8262f.ktx2",
+          "bytes": 794564
+        },
+        {
+          "uri": "textures/f20a20acf02f7ce2462f.ktx2",
+          "bytes": 862627
+        },
+        {
+          "uri": "textures/d2d09e30602bc72361bc.ktx2",
+          "bytes": 541669
+        },
+        {
+          "uri": "textures/a39f7640085f37632425.ktx2",
+          "bytes": 842348
+        },
+        {
+          "uri": "textures/de511a781294895dfd20.ktx2",
+          "bytes": 863637
+        },
+        {
+          "uri": "textures/6c6853f06bb64da5e12d.ktx2",
+          "bytes": 541497
+        },
+        {
+          "uri": "textures/69568bc9b65cd706ace5.ktx2",
+          "bytes": 839153
+        },
+        {
+          "uri": "textures/ebad7b61f035b595fc1f.ktx2",
+          "bytes": 862446
+        },
+        {
+          "uri": "textures/4d7a733aa9e3a117b76b.ktx2",
+          "bytes": 607982
+        },
+        {
+          "uri": "textures/90e6455c8ad02ae0eefb.ktx2",
+          "bytes": 892516
+        },
+        {
+          "uri": "textures/ef7fd884a3d0c11e51a5.ktx2",
+          "bytes": 863104
+        }
+      ],
+      "nodes": 37,
+      "meshes": 37,
+      "materials": 20,
+      "textures": 12,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-context.glb.gz",
+      "transportBytes": 504344
+    },
+    {
+      "file": "model-context-low.glb",
+      "rawBytes": 26204888,
+      "bytes": 1756120,
+      "externalTextures": [
+        {
+          "uri": "textures/f5a25519c2acf1a00d26.ktx2",
+          "bytes": 135059
+        },
+        {
+          "uri": "textures/e25abc85a6ecd814ea97.ktx2",
+          "bytes": 175605
+        },
+        {
+          "uri": "textures/33721d1aecd74f3fd521.ktx2",
+          "bytes": 181881
+        },
+        {
+          "uri": "textures/4c2542fdf90a8274dacf.ktx2",
+          "bytes": 134936
+        },
+        {
+          "uri": "textures/f3c33e9e13a60222a23d.ktx2",
+          "bytes": 202002
+        },
+        {
+          "uri": "textures/8b602c339be41e7e043a.ktx2",
+          "bytes": 182660
+        },
+        {
+          "uri": "textures/567b85d17aa8c6ce6ac5.ktx2",
+          "bytes": 134773
+        },
+        {
+          "uri": "textures/a88cd37c93251ba8c26e.ktx2",
+          "bytes": 198781
+        },
+        {
+          "uri": "textures/d3af65ba7e33b704f9c1.ktx2",
+          "bytes": 182371
+        },
+        {
+          "uri": "textures/acc04afd2689712b1b12.ktx2",
+          "bytes": 160408
+        },
+        {
+          "uri": "textures/beeae21668c73f74ea5d.ktx2",
+          "bytes": 243248
+        },
+        {
+          "uri": "textures/46d8c3d4cc2d1185893e.ktx2",
+          "bytes": 181791
+        }
+      ],
+      "nodes": 37,
+      "meshes": 37,
+      "materials": 20,
+      "textures": 12,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-context-low.glb.gz",
+      "transportBytes": 684590
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "rawBytes": 153329464,
+      "bytes": 15793472,
+      "externalTextures": [
+        {
+          "uri": "textures/63eed54d00a46de365de.ktx2",
+          "bytes": 2027922
+        },
+        {
+          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
+          "bytes": 11104
+        },
+        {
+          "uri": "textures/4741dad316808fb38922.ktx2",
+          "bytes": 1793501
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
+          "bytes": 4296
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
+          "bytes": 2381311
+        },
+        {
+          "uri": "textures/8714963ae3c33593ef07.ktx2",
+          "bytes": 159620
+        },
+        {
+          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
+          "bytes": 1755
+        },
+        {
+          "uri": "textures/08b0fe03227cf7eec1cc.ktx2",
+          "bytes": 10905637
+        },
+        {
+          "uri": "textures/e0cadb7862053a61b888.ktx2",
+          "bytes": 5398821
+        },
+        {
+          "uri": "textures/13c4f61beb144394cd73.ktx2",
+          "bytes": 3556449
+        }
+      ],
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 15,
+      "textures": 13,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-waiting-room.glb.gz",
+      "transportBytes": 8135250
+    },
+    {
+      "file": "model-waiting-room-low.glb",
+      "rawBytes": 153329464,
+      "bytes": 11610716,
+      "externalTextures": [
+        {
+          "uri": "textures/0b3fdeff4c401ceb3b51.ktx2",
+          "bytes": 172354
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/70fc08770b468139d643.ktx2",
+          "bytes": 188215
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/17a7c7833754aad20681.ktx2",
+          "bytes": 160504
+        },
+        {
+          "uri": "textures/aff700fa69f448c57670.ktx2",
+          "bytes": 79775
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/9f2869150d52f4a87d42.ktx2",
+          "bytes": 244932
+        },
+        {
+          "uri": "textures/a80e1021c4333a711be4.ktx2",
+          "bytes": 334014
+        },
+        {
+          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
+          "bytes": 224682
+        }
+      ],
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 15,
+      "textures": 13,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-waiting-room-low.glb.gz",
+      "transportBytes": 7100965
+    },
+    {
+      "file": "model-exterior.glb",
+      "rawBytes": 76524624,
+      "bytes": 8839360,
+      "externalTextures": [
+        {
+          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
+          "bytes": 1755
+        },
+        {
+          "uri": "textures/7004a2a65ab65ac2eede.ktx2",
+          "bytes": 1555732
+        },
+        {
+          "uri": "textures/f20239dbf2c1e548d747.ktx2",
+          "bytes": 5419396
+        },
+        {
+          "uri": "textures/13c4f61beb144394cd73.ktx2",
+          "bytes": 3556449
+        },
+        {
+          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
+          "bytes": 11104
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
+          "bytes": 4296
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
+          "bytes": 2381311
+        }
+      ],
+      "nodes": 8,
+      "meshes": 8,
+      "materials": 11,
+      "textures": 10,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-exterior.glb.gz",
+      "transportBytes": 2711432
+    },
+    {
+      "file": "model-exterior-low.glb",
+      "rawBytes": 76524624,
+      "bytes": 7969360,
+      "externalTextures": [
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/7d5bebcc1c714cbc5b55.ktx2",
+          "bytes": 184899
+        },
+        {
+          "uri": "textures/54a913be94c788baff0c.ktx2",
+          "bytes": 336065
+        },
+        {
+          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
+          "bytes": 224682
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/17a7c7833754aad20681.ktx2",
+          "bytes": 160504
+        }
+      ],
+      "nodes": 8,
+      "meshes": 8,
+      "materials": 11,
+      "textures": 10,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-exterior-low.glb.gz",
+      "transportBytes": 2805285
+    },
+    {
+      "file": "model-concourse.glb",
+      "rawBytes": 115542312,
+      "bytes": 10293000,
+      "externalTextures": [
+        {
+          "uri": "textures/9af10c675e67054369ce.ktx2",
+          "bytes": 1499779
+        },
+        {
+          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
+          "bytes": 11104
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
+          "bytes": 1755
+        },
+        {
+          "uri": "textures/f20239dbf2c1e548d747.ktx2",
+          "bytes": 5419396
+        },
+        {
+          "uri": "textures/13c4f61beb144394cd73.ktx2",
+          "bytes": 3556449
+        },
+        {
+          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
+          "bytes": 4296
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/79410fc7f29b67cf4e8c.ktx2",
+          "bytes": 2381311
+        },
+        {
+          "uri": "textures/7be11436c1b7fe0e5ab7.ktx2",
+          "bytes": 3761640
+        },
+        {
+          "uri": "textures/1e3025f04821ca80c83a.ktx2",
+          "bytes": 2104923
+        },
+        {
+          "uri": "textures/54c4b6193c2de4abdc13.ktx2",
+          "bytes": 2816144
+        }
+      ],
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 16,
+      "textures": 13,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-concourse.glb.gz",
+      "transportBytes": 4129641
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "rawBytes": 115542312,
+      "bytes": 9529644,
+      "externalTextures": [
+        {
+          "uri": "textures/c8ffb212f6d77c7a9102.ktx2",
+          "bytes": 173916
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/54a913be94c788baff0c.ktx2",
+          "bytes": 336065
+        },
+        {
+          "uri": "textures/045483ffdbb9fca9da9d.ktx2",
+          "bytes": 224682
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/17a7c7833754aad20681.ktx2",
+          "bytes": 160504
+        },
+        {
+          "uri": "textures/e3a546949c1022529068.ktx2",
+          "bytes": 217523
+        },
+        {
+          "uri": "textures/f4f79aec04acf833312f.ktx2",
+          "bytes": 191191
+        },
+        {
+          "uri": "textures/801a4f1dcf698acb12ca.ktx2",
+          "bytes": 163319
+        }
+      ],
+      "nodes": 9,
+      "meshes": 9,
+      "materials": 16,
+      "textures": 13,
+      "extensionsUsed": [
+        "EXT_mesh_gpu_instancing",
+        "EXT_meshopt_compression",
+        "KHR_materials_ior",
+        "KHR_materials_transmission",
+        "KHR_mesh_quantization",
+        "KHR_texture_basisu"
+      ],
+      "transportFile": "model-concourse-low.glb.gz",
+      "transportBytes": 4107504
+    },
+    {
+      "file": "model-platform.glb",
+      "rawBytes": 19225016,
+      "bytes": 1062664,
+      "externalTextures": [
+        {
+          "uri": "textures/1171d79307cd9bf10880.ktx2",
+          "bytes": 1231718
         }
       ],
       "nodes": 14,
@@ -579,16 +637,16 @@
         "KHR_texture_basisu"
       ],
       "transportFile": "model-platform.glb.gz",
-      "transportBytes": 150634
+      "transportBytes": 161587
     },
     {
       "file": "model-platform-low.glb",
-      "rawBytes": 19904596,
-      "bytes": 857484,
+      "rawBytes": 19225016,
+      "bytes": 875592,
       "externalTextures": [
         {
-          "uri": "textures/6bc4fdb70718c3b76905.ktx2",
-          "bytes": 127277
+          "uri": "textures/6507df0100f8376d9e57.ktx2",
+          "bytes": 99292
         }
       ],
       "nodes": 14,
@@ -603,10 +661,10 @@
         "KHR_texture_basisu"
       ],
       "transportFile": "model-platform-low.glb.gz",
-      "transportBytes": 176480
+      "transportBytes": 188633
     }
   ],
-  "sharedTextureFiles": 56,
-  "modelTextureAndLightingBytes": 91681299,
-  "navigationBytes": 293010
+  "sharedTextureFiles": 70,
+  "modelTextureAndLightingBytes": 149469306,
+  "navigationBytes": 567295
 }

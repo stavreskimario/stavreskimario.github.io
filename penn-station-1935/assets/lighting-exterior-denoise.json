@@ -1,28 +1,29 @@
 {
+  "schemaVersion": 1,
   "zone": "exterior",
   "source": "lighting-exterior-sky.hdr",
-  "sourceSha256": "a4a74239965205d01c7de03b4a598e8b55e3c76e19cfe4fe1678fa5bbe696e2e",
-  "inputTransfer": "srgb",
+  "sourceSha256": "9c2ae9f461543b44562aa7fc562b7fc7054452dd8e43ea1e290ce1f846b2724d",
+  "inputTransfer": "linear",
   "inputScale": 1,
   "radianceScale": 1.0,
   "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
   "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
   "sourceStored": {
-    "mean": 0.14850254356861115,
+    "mean": 0.028071539476513863,
     "minimum": 0.0,
-    "maximum": 0.8984375
+    "maximum": 0.765625
   },
   "originalLinear": {
-    "mean": 0.0717393159866333,
+    "mean": 0.028071539476513863,
     "minimum": 0.0,
-    "maximum": 0.784324049949646
+    "maximum": 0.765625
   },
   "denoisedLinear": {
-    "mean": 0.07217348366975784,
+    "mean": 0.028282910585403442,
     "minimum": 0.0,
-    "maximum": 1.183816909790039
+    "maximum": 1.518797516822815
   },
-  "relativeMeanChange": 0.0060520187173995765,
+  "relativeMeanChange": 0.007529729855622058,
   "negativeOutputSamplesClamped": 0,
   "constant018Test": {
     "before": 0.18,
@@ -33,18 +34,19 @@
   },
   "retainedHdr": {
     "file": "lighting-exterior-sky-denoised-linear.hdr",
-    "sha256": "49d06cd08c868d71839dfeeedb4854048383fde23922ad2ffe3673529e42c249",
+    "sha256": "90fb0d2b69d93f464e163d45d35498aebf5ce5f7fb8fa3c645911a87615c9303",
     "decodedLinear": {
-      "mean": 0.0719425156712532,
+      "mean": 0.028192924335598946,
       "minimum": 0.0,
-      "maximum": 1.1796875
+      "maximum": 1.515625
     },
-    "meanQuantizationError": 0.00023093329218681902
+    "meanQuantizationError": 9.002660954138264e-05,
+    "archiveFile": "lighting-exterior-sky-denoised-linear.hdr.gz"
   },
   "full": {
     "png": "lighting-exterior-sky.png",
     "webp": "lighting-exterior-sky.webp",
-    "clippedRGBSamples": 31,
+    "clippedRGBSamples": 94,
     "width": 2048,
     "height": 2048
   },
@@ -56,6 +58,7 @@
     "height": 512
   },
   "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
-  "elapsedSeconds": 6.853295416047331,
-  "schemaVersion": 1
+  "elapsedSeconds": 3.447487582998292,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase4/denoised",
+  "sourceArchiveFile": "../originals/lighting-exterior-sky.hdr.gz"
 }

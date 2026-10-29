@@ -25,6 +25,8 @@ The large masonry atlas gave the shafts about 6.38 texels/metre; a bounded capit
 - [rejected-first-pack.json](reports/rejected-first-pack.json): retained failed preparation evidence. Its custom coordinates were not packed into one tile. It was rejected before baking or delivery; the accepted helper selects the active tile explicitly and rejects invalid bounds/coverage.
 - [archive-receipt.json](archive-receipt.json): retained-file hashes and explicit pending acceptance. Local path prefixes in JSON are normalized to `repo/` and `work/`; measured values and original content hashes remain intact.
 
+The [actual exported order audit](reports/exported-order-audit.json) also passes before optimization: all eight orders contain 69,904 triangles, positions/normals match the accepted preparation exactly, both material UV0 sets match the existing grain-scale preparation exactly, and every lighting triangle has positive UV area. Both AO bindings use channel 1, with embedded 4K pixels matching the original bake PNG. This confirms export integrity; it does not replace the pending mapped-browser comparison.
+
 ## Accepted helper and reproduction
 
 The frozen [order_lighting_uv.py](source/order_lighting_uv.py) is SHA256 `f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c`. The raw waiting-room input is SHA256 `d2f2f8361a941d3b25f3bb3d4bd32a1c02b09100ec00ab04b7550946bc8e7025`. Floor revision 3 changes the concourse; the tested waiting-room architecture is unchanged.

@@ -1,49 +1,46 @@
 {
   "zone": "platform",
+  "frameZone": "platform",
+  "surfaceGroup": "all",
+  "uvMarginPixels": 3.0,
+  "uvMarginMethod": "FRACTION",
   "source": "model-platform.glb",
   "sourceSha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
   "resolution": 2048,
-  "samples": 64,
+  "samples": 128,
   "aoPathSamples": 4,
   "aoNodeSamples": 24,
   "engine": "4.3.0 Cycles METAL",
   "device": {
-    "requested": "AUTO",
+    "requested": "METAL",
     "backend": "METAL",
     "devices": [
       "Apple M5 Max (GPU - 32 cores)"
     ]
   },
-  "atlasSurfaceArea": 0.8741489052772522,
+  "atlasSurfaceArea": 0.4616069197654724,
   "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
   "registeredOccluders": [
     {
       "zone": "exterior",
       "source": "model-exterior.glb",
-      "sha256": "5ff73a639078fc06efb941a0141fd212261394acfbdee595545979cef702a193",
+      "sha256": "de8b76b4a83aa184d9934472a6a6fa94c1a6616cba926dd335573c65c57a6bb5",
       "heightOffset": 4.2672,
       "objects": 14
     },
     {
       "zone": "waiting-room",
       "source": "model-waiting-room.glb",
-      "sha256": "66be79cd8c14b01213b8b4399e1035e3f6974f7a6b36d547c25004e7a2754286",
+      "sha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945",
       "heightOffset": 0.0,
       "objects": 27
     },
     {
       "zone": "concourse",
       "source": "model-concourse.glb",
-      "sha256": "7e87da6a1ac77ec4915343da289bc4f04b004cd032cbfdf267d94e5c7f4db0bf",
+      "sha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
       "heightOffset": 0.0,
-      "objects": 81
-    },
-    {
-      "zone": "context",
-      "source": "model-context.glb",
-      "sha256": "5d3722673b834eaf875342064230c197bf51647986f59e042038b03c970ff425",
-      "heightOffset": 4.2672,
-      "objects": 10736
+      "objects": 5062
     },
     {
       "zone": "trains",
@@ -51,114 +48,176 @@
       "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
       "heightOffset": -8.886825000000002,
       "objects": 66
+    },
+    {
+      "zone": "context",
+      "source": "model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "heightOffset": 4.2672,
+      "objects": 10736
     }
   ],
   "unbakedPrimaryMeshes": 66212,
   "surfaceProfiles": [
     {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
       "material": "BotticinoMarble",
       "asset": "Marble018",
       "tileMetres": 1.25,
-      "normalStrength": 0.055,
-      "roughnessFactor": 0.58
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
     },
     {
       "material": "InteriorGranite",
       "asset": "Granite005A",
       "tileMetres": 1.0,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.5,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification"
     },
     {
       "material": "MilfordGranite",
       "asset": "Granite005A",
       "tileMetres": 1.0,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
     },
     {
       "material": "MilfordGranite.001",
       "asset": "Granite005A",
       "tileMetres": 1.0,
-      "normalStrength": 0.14,
-      "roughnessFactor": 0.88
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
     },
     {
       "material": "PublicFloorMarble",
       "asset": "Marble018",
       "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
     },
     {
       "material": "PublicFloorMarble.001",
       "asset": "Marble018",
       "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
     },
     {
       "material": "PublicFloorMarble.002",
       "asset": "Marble018",
       "tileMetres": 1.8,
-      "normalStrength": 0.045,
-      "roughnessFactor": 0.48
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
     },
     {
       "material": "Travertine",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "Travertine.001",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "Travertine.002",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "TravertineAshlar-1",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "TravertineAshlar-2",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "TravertineAshlar0",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "TravertineAshlar1",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     },
     {
       "material": "TravertineAshlar2",
       "asset": "Travertine009",
       "tileMetres": 1.5,
-      "normalStrength": 0.12,
-      "roughnessFactor": 0.95
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
     }
   ],
   "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
@@ -167,17 +226,19 @@
   "ambientOcclusion": {
     "minimum": 0.0,
     "maximum": 1.0,
-    "mean": 0.6859079003334045,
+    "mean": 0.3953494727611542,
     "coveredPixels": 4194304
   },
   "illumination": {
     "minimum": 0.0,
     "maximum": 0.7600002884864807,
-    "mean": 0.28840529918670654,
-    "coveredPixels": 3795346
+    "mean": 0.2645888030529022,
+    "coveredPixels": 2274537
   },
-  "elapsedSeconds": 108.16325558297103,
+  "elapsedSeconds": 103.83767070899921,
   "architectureUv": "UVMap",
   "bakedUv": "BakedLightingUV",
-  "artifact": "model-platform.glb"
+  "artifact": "model-platform.glb",
+  "orderSeparation": null,
+  "orderUv": null
 }

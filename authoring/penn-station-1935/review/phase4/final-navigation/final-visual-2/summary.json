@@ -1,0 +1,97 @@
+{
+  "created": "2026-10-29T22:31:38.115Z",
+  "status": "passed",
+  "runtimeBundleSha256": "67be7080829be131857745192d7f08af499b43396f601ee3240c2e70d220e1e4",
+  "sceneManifestSha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c",
+  "assetTreeSha256": "047f21d6391483af5d9b2b65f0a47bfe98ccc3ec28d5f8b8a85eeb6b248f02a3",
+  "distTreeSha256": "61c3bfd630de0496135f796011281fc0a54cd9adb4f5d50a67e2a42d466772fe",
+  "allFrozenRuntimeBytesUnchanged": true,
+  "cases": [
+    {
+      "name": "train-full",
+      "status": "passed",
+      "checks": [
+        "Continuous real-keyboard waiting-room–concourse–exit–both dogleg flights–Platform5 route and reverse in full geometry, with no platform shortcut or pose reset"
+      ],
+      "contexts": [
+        {
+          "label": "continuous waiting-room to Platform 5 route · full geometry",
+          "legs": 17,
+          "samples": 4936,
+          "arrivalCorrections": 0,
+          "glassSupports": 0,
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "errors": [],
+          "requestsFailed": []
+        }
+      ]
+    },
+    {
+      "name": "prism-positive",
+      "status": "passed",
+      "checks": [
+        "Real desktop keyboard walking across the north and south prism/concrete court with upward glass support, ignored window glazing and unchanged human floor height"
+      ],
+      "contexts": [
+        {
+          "label": "desktop walking across the prism court",
+          "legs": 6,
+          "samples": 3776,
+          "arrivalCorrections": 0,
+          "glassSupports": 5192,
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "errors": [],
+          "requestsFailed": []
+        }
+      ]
+    },
+    {
+      "name": "prism-negative",
+      "status": "passed",
+      "checks": [
+        "Negative control: disabling only structural-glass recognition blocks projected travel over actual pane voids"
+      ],
+      "contexts": [
+        {
+          "label": "desktop walking across the prism court",
+          "legs": 0,
+          "arrivalCorrections": 0,
+          "glassSupports": 0,
+          "heldProjectedProgress": 0,
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "errors": [],
+          "requestsFailed": []
+        }
+      ]
+    },
+    {
+      "name": "flight-guards",
+      "status": "passed",
+      "checks": [
+        "Desktop WASD flight, camera/target coherence, QE height, Shift, deceleration, native-field/dialog and blur guards, persistent world",
+        "390 px held-button flight with all six labelled movement buttons"
+      ],
+      "contexts": [
+        {
+          "label": "desktop flight",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "errors": [],
+          "requestsFailed": []
+        },
+        {
+          "label": "390 px touch flight",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "errors": [],
+          "requestsFailed": []
+        }
+      ]
+    }
+  ],
+  "scope": "Actual installed Chrome Metal; full17-leg train roundtrip, optimized prism controls, existing flight guards. Mobile optimization remains deferred.",
+  "initialFlightAttempt": {
+    "status": "failed",
+    "reason": "W was sent before the selected pose commit, whose existing reset cleared held input",
+    "preservedReceipt": "first-flight-before-pose-commit/report.json",
+    "resolution": "Test-only readiness wait for actual exterior pose and advanced rendered frame; movement/focus/guard assertions unchanged; only flight rerun"
+  }
+}

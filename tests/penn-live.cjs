@@ -4,6 +4,8 @@
  */
 const assert = require('node:assert/strict');
 const fs = require('node:fs/promises');
+const path = require('node:path');
+const { createHash } = require('node:crypto');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.PENN_LIVE_URL || 'https://stavreskimario.github.io/penn-station-1935/';
 const destination = process.env.PENN_LIVE_REPORT || '/private/tmp/penn-live-validation.json';
@@ -11,26 +13,29 @@ const destination = process.env.PENN_LIVE_REPORT || '/private/tmp/penn-live-vali
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
+    headless: true, args: [`--use-angle=${process.env.PENN_ANGLE || 'metal'}`, ...(process.env.PENN_ANGLE === 'swiftshader' ? ['--enable-unsafe-swiftshader'] : [])],
   });
   const report = { url: base, checkedAt: new Date().toISOString(), commit: process.env.PENN_COMMIT || null,
-    browser: browser.version(), scope: 'Published Pages site; desktop software rendering, external services blocked.',
+    browser: browser.version(), scope: 'Published Pages site; installed desktop Chrome, external services blocked. Driver recorded explicitly.',
     errors: [], failures: [], resources: [], views: [] };
   try {
     const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
     page.setDefaultTimeout(90000);
     const site = new URL(base).origin;
+    const expectedBundle = createHash('sha256').update(await fs.readFile(path.resolve(__dirname, '../penn-station-1935/dist/app.js'))).digest('hex');
+    let loadedBundle;
     page.on('pageerror', error => report.errors.push(error.message));
     page.on('response', response => {
       if (!response.url().startsWith(base)) return;
       const item = { path: new URL(response.url()).pathname, status: response.status() };
       report.resources.push(item);
+      if (item.path.endsWith('/dist/app.js')) loadedBundle = response.body().then(bytes => createHash('sha256').update(bytes).digest('hex'));
       if (item.status >= 400) report.failures.push(item);
     });
     await page.route('**/*', route => route.request().url().startsWith(site + '/') || /^(blob:|data:)/.test(route.request().url()) ? route.continue() : route.abort());
     const url = new URL(base); url.searchParams.set('preview', process.env.PENN_COMMIT || 'phase3');
     await page.goto(url.href, { waitUntil: 'domcontentloaded', timeout: 90000 });
-    assert.match(await page.locator('.phase-label').textContent(), /phase 3/i);
+    assert.match(await page.locator('.phase-label').textContent(), new RegExp(`phase ${process.env.PENN_EXPECTED_PHASE || '4'}`, 'i'));
     let world;
     for (const view of ['exterior', 'waiting', 'concourse']) {
       if (view !== 'exterior') {
@@ -54,8 +59,15 @@ const destination = process.env.PENN_LIVE_REPORT || '/private/tmp/penn-live-vali
       if (['exterior', 'waiting-room', 'concourse'].includes(zone)) assert(asset.bakedMaterials > 0 && asset.occlusionMaterials > 0, `${zone}: illumination and AO loaded`);
     }
     assert.deepEqual(report.errors, []); assert.deepEqual(report.failures, []);
+    report.runtimeBundleSha256 = await loadedBundle;
+    assert.equal(report.runtimeBundleSha256, expectedBundle, 'The actual loaded live bundle matches the tested local artifact');
+    report.driver = await page.evaluate(() => {
+      const gl = document.querySelector('#scene-root canvas').getContext('webgl2');
+      const ext = gl.getExtension('WEBGL_debug_renderer_info');
+      return gl.getParameter(ext?.UNMASKED_RENDERER_WEBGL || gl.RENDERER);
+    });
     report.passed = true;
-    console.log('PASS published Phase 3 bundle, persistent station and local compressed assets');
+    console.log('PASS published bundle hash, persistent station and local compressed assets');
   } catch (error) { report.passed = false; report.error = String(error); throw error; }
   finally { await fs.writeFile(destination, JSON.stringify(report, null, 2) + '\n'); await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

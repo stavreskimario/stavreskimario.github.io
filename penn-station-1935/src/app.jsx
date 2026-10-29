@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { getMaterialReport, sampleVisuals } from './visual-review.mjs';
 import { Environment } from '@react-three/drei/core/Environment.js';
 import { useEnvironment } from '@react-three/drei/core/useEnvironment.js';
 import { OrbitControls } from '@react-three/drei/core/OrbitControls.js';
@@ -309,12 +310,12 @@ async function makeRenderer(props) {
       renderer.pennBackend = renderer.backend?.isWebGPUBackend ? 'WebGPU · experimental' : 'WebGL 2 · compatibility';
     } catch {
       renderer?.dispose(); preferWebGL = true;
-      renderer = new THREE.WebGLRenderer({ ...props, canvas: document.createElement('canvas'), antialias: true, alpha: false });
+      renderer = new THREE.WebGLRenderer({ ...props, canvas: document.createElement('canvas'), antialias: true, alpha: false, reversedDepthBuffer: true });
       queueMicrotask(() => update({ revision: state.revision + 1, loading: true, error: '', renderer: 'WebGL 2 · compatibility' }));
     }
   }
   if (!renderer) {
-    renderer = new THREE.WebGLRenderer({ ...props, antialias: true, alpha: false, powerPreference: 'high-performance' });
+    renderer = new THREE.WebGLRenderer({ ...props, antialias: true, alpha: false, powerPreference: 'high-performance', reversedDepthBuffer: true });
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.pennBackend = 'WebGL 2';
   }
@@ -838,5 +839,5 @@ function sceneReport() {
     return { name: zone.name, id: zone.children[0]?.uuid, visible: zone.visible, meshes };
   }) };
 }
-window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure, renderFrame: debugRenderer.info.render.frame, pixelRatio: debugRenderer.getPixelRatio(), canvasPixels: [debugRenderer.domElement.width, debugRenderer.domElement.height] } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
+window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure, renderFrame: debugRenderer.info.render.frame, pixelRatio: debugRenderer.getPixelRatio(), canvasPixels: [debugRenderer.domElement.width, debugRenderer.domElement.height], reversedDepth: Boolean(debugRenderer.capabilities?.reversedDepthBuffer) } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getMaterialReport: () => getMaterialReport(debugBuilding), sampleVisuals: (points, options) => sampleVisuals(debugBuilding, debugCamera, debugRenderer, points, options), getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
 syncUI(); createRoot($('#scene-root')).render(<Viewer />);

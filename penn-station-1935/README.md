@@ -1,134 +1,42 @@
-# Pennsylvania Station — Phase 4 checkpoint
+# Pennsylvania Station — Phase 4
 
-An evidence-led architectural exhibition for Mario’s GitHub Pages collection. This checkpoint adds translating WASD flight, repairs office lettering and the physical train-stair approach, and reduces excessive stone colour variation and bump. It retains the connected exterior/interior world, registered railway and calibrated Phase 3 lighting. All architectural, urban and rolling-stock geometry is authored in Blender; the browser loads exported assets.
+An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. This iteration rebuilds the waiting-room roof and ceiling, refines supported interiors and materials, and reduces desktop rendering cost. Exterior, waiting room, concourse, streets and railway share one continuously loaded world.
 
-**This remains a phased reconstruction, not the completed photorealistic replica requested in the brief.** The target is 1935–1940. Opening-era drawings establish much of the station; later evidence qualifies alterations and vehicle types. Ornament, exact material colour, complete neighbourhood parcels and operational details retain specific uncertainties. No 1:1 or fully verified 1935 claim is made.
+The final photographic target remains in progress. This is a phased reconstruction aimed at 1935–1940, anchored in original drawings, engineering records and photographs; later alterations and minor profiles remain qualified. It is not a certified 1:1 replica. See the [research register](RESEARCH.md), [source catalog](sources.json) and [model ledger](model/README.md).
 
-## Visit and explore
+## This iteration
 
-Serve the repository as static files and open `penn-station-1935/`. The committed bundle and relative assets work on GitHub Pages, including under a project path, without a backend or a visitor build step. Deployment evidence belongs in [VALIDATION.md](VALIDATION.md); an open pull request alone does not establish a live deployment.
+| Before | After | Why |
+| --- | --- | --- |
+| Warped coffers, inward dark ribs and overlapping roof valleys | Continuous curved relief, corrected arch faces and shared roof boundaries | Repair the known roof geometry defects |
+| Capital carving receives too little lighting coverage; hidden leaf returns intersect | Dedicated 4K order maps and 128 repaired closed shells | Preserve visible detail and remove false self-occlusion |
+| Concourse windows/floor fields are incomplete | Separate sash bodies and arched heads, ticket frontage and broad square-prism court | Restore documented construction with inferred dimensions recorded |
+| Coarse booths, benches and lamps | Refined grilles/vents, slatted benches and photographed five-globe standards | Improve supported interior details |
+| Repeated static shadow and glass-back rendering | Cached shadows and front faces for closed prisms | Improve responsiveness while retaining transmission and all six zones |
+| Distant Hotel pavement bands and roof striping | Feature-detected reversed depth in WebGL | Remove verified depth-precision artifacts |
 
-- **Enter Station** clears the introduction. In Orbit, WASD or the arrow keys fly in the viewing direction; Q lowers the camera and E raises it. Shift moves faster. The camera and its orbit target travel together. Drag to turn, scroll or pinch to approach, and right-drag or use two fingers to pan. Narrow windows and touch devices offer held direction and height buttons. Dialogs, form fields and the guided tour suspend flight; blur and hidden tabs clear held movement.
-- All six architectural and railway chunks load behind one progress cover. Exterior, waiting-room and concourse controls move the camera through the same persistent world. The navigation map adds Hotel Pennsylvania across Seventh Avenue, the General Post Office across Eighth Avenue, and a platform viewpoint.
-- **Environment → Walk** uses a 1.68 m eye height, smooth WASD/arrow movement, drag to look, collision checks and actual floor/step intersections. Held direction buttons support touch and keyboard input. The central street-level arcade, reconstructed main stair, waiting room and axial concourse passage form a connected route.
-- The working street-to-main-floor drop is 14 ft. Nine nonuniform east stair heads, exit landings, lower flights and waiting-room end stairs are modelled. The opening-era railway reconstruction now contains 21 tracks and 11 asymmetric platform envelopes. The switch throats are truncated, and a verified 1935 track inventory remains outstanding. An unnumbered early-production GG1 and two P70 coaches occupy a registered track; no timetable or train assignment is invented.
-- Environment controls offer three daylight interpretations, FOV, shadows, quality, annotations and opt-in synthesized atmosphere. The guided tour advances through the principal viewpoints; choosing a view or pressing Escape stops it. Preferences last for the visit.
-- **Archive view** presents opening-era photographs and approximate interior framing controls. The cameras are not calibrated matches, and the photographs are not verified 1935 records. **Sources & accuracy** separates evidence, interpretation and outstanding work.
+Stone uses the original nine CC0 granite/travertine/marble maps, interpreted colour profiles and restrained normal strengths. Separately authored seamless Bedford grain and opal lamp glass remain material interpretations. The authenticated north mural retains its native 728×260 monochrome crop; the other five fields remain neutral. No invented clock placement or generic passenger crowd is presented as completed work.
 
-## Geometry, materials and lighting
+The prism court contains 2,488 linked panels and 248,800 square units, with solid bearing cells and opaque circulation retained. Original photographs and Gibbs document the construction; exact field edges, pitch, module and small mouldings remain inferred. The [interior ledger](model/concourse-detail-evidence.md) records those limits.
 
-This is a recovery checkpoint. A machine/environment restart removed the temporary, uncommitted work for a larger Phase 4 visual pass. The saved Phase 3 sources and published assets were restored into a persistent project folder. New tests and evidence apply to this rebuilt checkpoint; earlier uncommitted improvements and test results are not presented as delivered. Higher-resolution ceiling illumination, corrected arch normals with new bakes, concourse perimeter windows and prism floors, refined candelabra, larger mural recovery and new reflection captures still require reconstruction and review. The fuller Manhattan streetscape remains last.
+## Explore
 
-The stack is React 19, React Three Fiber 9, Drei and Three.js, with Blender 4.3 authoring. Geometry Nodes retain the repetitive Doric colonnades in the editable station scene. The waiting room has relief coffers, dimensioned colossal and smaller orders, recessed mural fields and articulated windows. The concourse uses intersecting vaults, lattice piers, paired arch webs and glazing members interpreted from the engineers’ published drawings. See the [core model ledger](model/README.md) for dimensions and reconstruction limits.
+Open this folder on a static server or GitHub Pages and choose **Enter Station**. In Orbit, drag to turn, use **WASD/arrows** to translate, **Q/E** for height and **Shift** for speed. In **Environment → Walk**, movement uses human eye height, body collision and real floor/tread support. Viewpoints, the map and tour move through the same loaded station. Native fields, dialogs and blur guard camera input.
 
-The separate [context source and ledger](model/context-research.md) reconstruct Hotel Pennsylvania’s four south-facing upper wings, limestone base and buff-brick storeys, and Farley’s twenty-column front and raised stair approach. Exact parcel registration, Farley’s working envelope and its western annex remain qualified. Streetlights and rounded 1930s-style cars are generic period interpretations, with no asserted brand or documented placement. The [rolling-stock ledger](model/rolling-stock-research.md) records the original July 1935 GG1 drawing, museum P70 evidence and remaining coach-drawing uncertainties. No specific locomotive identity, train assignment or timetable is invented.
+Daylight, FOV, shadows, quality, annotations, archive comparisons and opt-in synthesized ambience remain available. Historical camera matches are approximate. Existing touch/low-quality fallbacks remain; further mobile optimization is deferred in this desktop-focused iteration.
 
-Granite, travertine and marble use modern CC0 **ambientCG Granite005A, Travertine009 and Marble018** roughness and OpenGL normal maps, with four deterministic colour derivatives prepared in linear light. Phase 4 reduces colour variation and normal strength while retaining metre-scaled UVs, roughness, AO, geometry and lighting. These palettes are appearance interpretations, not scans or calibrated samples from the station. Their original hashes, compressed-image checks and before/after Metal screenshots are retained in the authoring archive. Waiting/subwaiting rooms, the arcade and vestibules have documented marble floors without a verified variety; ticket-booth exteriors are documented as Botticino. The concourse finish remains an interpretation, and its documented glass-prism vault-light flooring is an unfinished architectural layer. Credits and source hashes are in [ASSET_RIGHTS.md](ASSET_RIGHTS.md) and [material-provenance.json](material-provenance.json).
+## Rendering and authoring
 
-The exterior, waiting room, concourse and platform floors receive Cycles neutral-sky illumination with six diffuse bounces and a separate ambient-occlusion atlas. Registered neighbouring chunks participate in light transport. Fine ironwork remains outside the masonry atlas, improving its useful coverage. Directional sunlight stays dynamic.
+Blender 4.3 authors the geometry, including Geometry Nodes for repeated Doric components. React, React Three Fiber, Drei and Three.js render glTF 2.0 with Meshopt, shared KTX2 surfaces and progressive loading. WebGL 2 is the default; optional WebGPU and visual parity remain experimental. The site requires no backend or visitor build step.
 
-The lighting pipeline corrects two Phase 2 errors: Non-Color images bypassed the intended sRGB encoding, and outgoing diffuse radiance was being used directly where Three.js expects irradiance. Linear Rec.709 bake pixels now pass through Standard/sRGB encoding; a per-atlas scale preserves radiance above one. Lossless WebP retains the encoded RGB pixels. The browser decodes sRGB, restores that scale and multiplies by π. A shader adjustment prevents unoccluded environment diffuse from being added again to the baked materials, while preserving specular reflections. [The calibration test](../tests/penn-lighting.cjs) checks the actual Blender transfer image and browser pixels against a unit-hemisphere Lambert reference.
+Illumination uses 8192px vault, 4096px masonry/order and 2048px exterior/concourse/platform atlases, with six diffuse bounces. The order uses 512 Metal samples; other atlases 128. Desktop order AO stays 4K. Static HDR captures use 2048×1024 at 64 samples. Explicit linear transfer, lossless WebP and decoded HDR archive hashes preserve the source radiance. These static approximations have no positional parallax or time-specific indirect relighting. Historic colour, polish and photometry are not calibrated.
 
-Separate HDR panoramas captured inside the assembled waiting room, concourse and platform supply architectural reflections. A fourth elevated Seventh Avenue capture supplies the exterior environment. They approximate static local radiance, with no positional parallax correction, moving-passenger reflections or time-specific rebaking. The former modern field environment is retained only in the authoring archive. Thin clear glass, material colours, exposure and sun presets remain physically informed interpretations, not a calibrated historical photograph. Native WebGPU does not use the WebGL lighting shader adjustment; its visual parity remains experimental.
-
-The north Guérin mural uses a rectified grayscale Library of Congress photograph with documented provenance. Five other mural fields remain neutral; original colours and complete artwork are unverified. The [interior evidence ledger](model/interior-evidence.md) records furnishings, lighting and signage anchors. Rejected procedural passengers are excluded from the released scene; a scanned replacement must pass both visual and period-dress review before population.
-
-## Runtime delivery
-
-Six chunks cover exterior, waiting room, concourse, neighbourhood, platform and trains, each with full and mobile GLBs. The twelve Meshopt GLBs are delivered as `.glb.gz` files and decompressed in the browser, without backend services or special response headers. GZip transport preserves decoded geometry and materials. Deduplication, material batching and `EXT_mesh_gpu_instancing` reduce repeated-object overhead. KTX2/UASTC surface and AO textures use shared content-hashed relative URIs, with desktop maps capped at 2K and mobile derivatives at 512 px. Runtime illumination uses lossless WebP atlases; full and mobile HDR reflections are delivered separately. Mobile geometry variants use bounded simplification. Frustum culling and rendering on demand are enabled. These quality variants do not constitute a complete distance-LOD or occlusion system.
-
-WebGL 2 is the default. `?renderer=webgpu` opts into the available Three.js WebGPU path with a WebGL fallback. Experimental WebGPU and physical mobile performance are not certified. Transfer sizes, screenshots, browser checks and observed limitations must be taken from the actual delivered [validation record](VALIDATION.md), rather than inferred from compression settings.
-
-Editable `.blend` files and original material maps live under repository-root `authoring/penn-station-1935/`, outside the GitHub Pages staging tree. Runtime assets and the local Basis decoder remain in this application’s `assets/` directory. The viewer requires no external script CDN or analytics; the collection’s shared Google Fonts are optional external font requests.
-
-## Reproduce
-
-Use a persistent project/work directory for authoring and review outputs. Temporary folders may be removed on restart. The maintenance checkpoint starts from the frozen Phase 3 delivery at `ad79b6a`, applies the scoped `repair_stair_heads.mjs`, `repair_gate_clearance.mjs` and `repair_office_signs.mjs` repairs, then applies `apply_surface_finish.mjs`. Their receipts and preserved source hashes are retained under `authoring/penn-station-1935/review/phase4/`. The office repair intentionally rejects any input except the original full/fallback waiting-room GLBs, preventing a second rotation. The corresponding Python scripts update editable source scenes in the order stair heads → office signs → gate clearance, preserving each input.
-
-The new source manifest records all27 actual flight endpoints for bounded foot contact. The repaired floor openings terminate at the first tread. Existing baked lighting, AO, normal-map pixels, roughness and static probe files remain unchanged. For the four interpreted colour maps, use the [material reproduction instructions](../authoring/penn-station-1935/materials/phase4/README.md). The full original Phase 3 authoring pipeline follows below; regenerating it alone does not recreate the downstream checkpoint repairs/palettes.
-
-Run commands from the repository root. Install pinned authoring dependencies outside the site tree, with install scripts disabled:
-
-```sh
-mkdir -p /tmp/penn-tools
-cp penn-station-1935/package.json penn-station-1935/package-lock.json /tmp/penn-tools/
-npm --prefix /tmp/penn-tools ci --ignore-scripts
-PENN_TOOLS=/tmp/penn-tools node penn-station-1935/build.mjs
-```
-
-Use `uv` and the official Blender Python module. Each `--out` directory is a scratch export, preserving the delivered assets during authoring:
-
-```sh
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/build_station.py --out /tmp/penn-core --no-context
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/build_context.py --out /tmp/penn-context
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/build_rolling_stock.py --out /tmp/penn-trains
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/build_railway.py --out /tmp/penn-railway
-
-mkdir -p /tmp/penn-raw /tmp/penn-baked
-cp /tmp/penn-core/model-exterior.glb /tmp/penn-core/model-waiting-room.glb /tmp/penn-core/model-concourse.glb /tmp/penn-raw/
-cp /tmp/penn-railway/model-railway.glb /tmp/penn-raw/model-platform.glb
-cp /tmp/penn-context/context-neighbourhood.glb /tmp/penn-raw/model-context.glb
-cp /tmp/penn-trains/model-trains.glb /tmp/penn-raw/model-trains.glb
-for penn_zone in exterior waiting-room concourse platform; do
-  set --
-  for penn_neighbour in exterior waiting-room concourse platform context trains; do
-    if [ "$penn_neighbour" != "$penn_zone" ]; then
-      set -- "$@" --occluder "$penn_neighbour=/tmp/penn-raw/model-$penn_neighbour.glb"
-    fi
-  done
-  uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/bake_lighting.py "/tmp/penn-raw/model-$penn_zone.glb" --out /tmp/penn-baked --zone "$penn_zone" --resolution 2048 --samples 64 --materials authoring/penn-station-1935/materials "$@"
-done
-cp /tmp/penn-context/context-neighbourhood.glb /tmp/penn-baked/model-context.glb
-cp /tmp/penn-trains/model-trains.glb /tmp/penn-baked/model-trains.glb
-for penn_zone in exterior waiting-room concourse platform; do
-  uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' --with pillow==13.0.0 python penn-station-1935/model/denoise_lighting.py "/tmp/penn-baked/lighting-$penn_zone-sky.hdr" --input-transfer linear --out /tmp/penn-denoised --zone "$penn_zone" --radiance-scale 1
-done
-cp /tmp/penn-denoised/lighting-*.png /tmp/penn-baked/
-set -- --exterior /tmp/penn-raw/model-exterior.glb --waiting /tmp/penn-raw/model-waiting-room.glb --concourse /tmp/penn-raw/model-concourse.glb --platform /tmp/penn-raw/model-platform.glb --context /tmp/penn-raw/model-context.glb --trains /tmp/penn-raw/model-trains.glb --materials authoring/penn-station-1935/materials --width 1024 --samples 64
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/capture_reflections.py "$@" --out /tmp/penn-reflections
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/capture_reflections.py "$@" --only exterior --out /tmp/penn-exterior-reflection
-```
-
-Use each bake report's `radianceScale` if it exceeds one. Fresh bakes retain linear HDR values. The first Phase 3 retained HDRs unexpectedly stored sRGB numeric values; those archived inputs require `--input-transfer srgb`. The delivered post-processing reports record that recovery explicitly. The current writer uses a separate Non-Color float buffer, and its 0.18-radiance round trip is checked by the calibration script.
-
-Set `KTX_BIN` to the binary directory of official Khronos KTX-Software 4.4.2 for the local platform. Produce runtime derivatives in a review folder:
-
-```sh
-PENN_TOOLS=/tmp/penn-tools PENN_RAW_DIR=/tmp/penn-baked PENN_ASSET_OUT=/tmp/penn-runtime PENN_ASSET_WORK=/tmp/penn-asset-work node penn-station-1935/optimise.mjs exterior waiting-room concourse context platform trains
-cp /tmp/penn-baked/lighting-*.json /tmp/penn-runtime/
-cp /tmp/penn-denoised/lighting-*-denoise.json /tmp/penn-runtime/
-cp /tmp/penn-reflections/reflection-*.hdr.gz /tmp/penn-reflections/reflection-probes.json /tmp/penn-runtime/
-cp /tmp/penn-exterior-reflection/reflection-exterior.hdr /tmp/penn-runtime/sky.hdr
-cp /tmp/penn-exterior-reflection/reflection-exterior-probe.json /tmp/penn-runtime/
-node penn-station-1935/assemble-world.mjs /tmp/penn-core/scene-manifest.json /tmp/penn-railway/railway-manifest.json /tmp/penn-runtime/scene-manifest.json
-```
-
-The world assembler preserves the core stair registration and merges the railway polygons, floor datums and rolling-stock track placement. These actual polygons drive walking permissions; broad rectangles would incorrectly enable walking over platform taper voids.
-
-The optimizer converts and copies the illumination WebPs, verifies Meshopt/BasisU declarations and writes `asset-metrics.json`; its texture subdirectory must accompany the GLBs. After reviewing dimensions, materials and images, promote the scratch set:
-
-```sh
-node penn-station-1935/promote-assets.mjs /tmp/penn-runtime
-```
-
-Promotion verifies all twelve models, calibrated light-map metadata, shared texture hashes, the three room captures, the captured exterior environment, the complete world manifest and a byte-identical GZip round trip. It writes `.glb.gz` models and their textures/light maps/probes, replacing the old environment with the reviewed station capture. Existing photographs and decoder files remain. Original GLBs stay in the review directory; retain reviewed `.blend` files, original maps, HDR bakes and AO PNGs under `authoring/penn-station-1935/`. Optimization and compression do not certify historical accuracy.
+Current editable sources, original maps, retained HDRs and reviews are public under repository-root authoring/penn-station-1935/. Superseded scenes remain recoverable through immutable Git references; older HDR compression is lossless. Exclusion from custom staging does not make authoring private under legacy root Pages. See [asset rights](ASSET_RIGHTS.md) and [authoring instructions](model/README.md).
 
 ## Validation and remaining work
 
-```sh
-uv run --no-project python scripts/validate.py
-PENN_TOOLS=/tmp/penn-tools node tests/penn-assets.cjs
-uv run --no-project --python 3.11 --with bpy==4.3.0 --with 'numpy<2' python penn-station-1935/model/calibrate_diffuse.py --out /tmp/penn-calibration
-PENN_TOOLS=/tmp/penn-tools PENN_CALIBRATION=/tmp/penn-calibration node tests/penn-lighting.cjs
-PLAYWRIGHT_MODULE=/tmp/penn-tools/node_modules/playwright node tests/penn-station.cjs
-PENN_TOOLS=/tmp/penn-tools node tests/penn-stair-contact.cjs
-PLAYWRIGHT_MODULE=/tmp/penn-tools/node_modules/playwright PENN_NAV_SECTION=train PENN_TRAIN_VARIANT=full node tests/penn-navigation.cjs
-PENN_TOOLS=/tmp/penn-tools node tests/penn-stair-contact.cjs
-PLAYWRIGHT_MODULE=/tmp/penn-tools/node_modules/playwright node tests/penn-navigation.cjs
-```
+[VALIDATION.md](VALIDATION.md) identifies exact bundle/assets, source audits, actual browser screenshots, navigation and recovery checks, measured rendering and publication evidence. On the tested Chrome/Apple M5 Max, four production views measured approximately 60 render updates/second; this is not a universal hardware guarantee.
 
-The browser runners mount the site under a project prefix, check decoded assets and lighting metadata, exercise viewpoints, walking, quality, dialogs, touch emulation and recovery from failed assets, and save screenshots outside the repository. `CHROME_PATH` selects a local browser executable. Desktop and mobile emulation are distinct from measurements on physical devices. Record the actual results in [VALIDATION.md](VALIDATION.md) after each delivered build.
+Runtime models, unique textures and lighting total 149,469,306 bytes across both geometry variants. The internal whole-site staging allowance is 160MB; the complete legacy-root public site also stays below its separate 1 GB limit. Hosting settings are unchanged. Engineering Journal and Crystal Palace were removed from the collection with their journal-specific collection/scheduling support.
 
-Further work includes five mural reproductions and verified colours, surveyed sculpture and ornamental profiles, later-period furnishings and operational signs, photorealistic passengers, complete railway switchwork and peripheral passenger spaces, station wire-height and coach-drawing reconciliation, photographic material/light calibration, and performance on physical hardware. The fuller Manhattan streetscape is deliberately deferred until the station has received these improvements. The final photographic and historical acceptance target remains the user’s brief; this preview does not yet meet it.
-
-The focused navigation regression checks free flight and a continuous real-keyboard route from the waiting room through the concourse and both stair flights to Platform 5, then back using the full geometry with desktop keyboard input. `PENN_TRAIN_VARIANT=low` optionally checks the mobile geometry separately; this is not physical-phone validation. Touch flight is checked separately at 390 px. It never uses the platform camera shortcut. A passing claim must refer to an actual final report in the validation record; the presence of the test does not establish that the route has passed.
+Plaster mottling, some shaft specks, a residual dark curl sample and distant prism-grid moire remain visible. Fine ornament, some furnishing/sign details, five murals, realistic period passengers, exact late-1930s operations and fuller Manhattan surroundings remain future work. This iteration improves the reconstruction without declaring the final photographic target achieved. The PR remains unmerged pending owner authorization.

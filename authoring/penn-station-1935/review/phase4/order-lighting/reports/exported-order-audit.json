@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "scope": "Actual exported dedicated order GLB vs accepted UV proof, before optimization; browser-mapped acceptance still pending",
+  "proofGlbSha256": "d50fa86fc42d490c2a965651088b5c40a44ce658ae0847c69021e66d9d096a72",
+  "bakedGlbSha256": "7b9ed63995a7c414bdde4b647d47d090c845ce2bf22775231b5a0cc9397bddf8",
+  "materials": {
+    "InteriorGranite": {
+      "triangles": 20704,
+      "verticesExpanded": 62112,
+      "positionsNormalsExactlyMatchProof": true,
+      "uv0MatchesExistingMaterialGrainScale": true,
+      "uv0Scale": 3.571428571428571,
+      "uv0MaximumFloat32ExportRoundtripDelta": 0.0,
+      "cornerRecordsSha256": "7eb4653d43a9958dcb1d753ff827f4103e93a07aca881dcef16e3c735dcff7d1",
+      "positionBounds": [
+        [
+          -15.469049453735352,
+          2.8447999954223633,
+          -43.485050201416016
+        ],
+        [
+          15.469049453735352,
+          18.465801239013672,
+          43.485050201416016
+        ]
+      ],
+      "atlasArea": 0.18144293129444122,
+      "uvBounds": [
+        0.0009765612194314599,
+        0.9990234375
+      ],
+      "zeroAreaLightingTriangles": 0,
+      "trianglePixelAreaPercentiles": {
+        "0": 0.4876542091369629,
+        "5": 4.611793518066406,
+        "50": 25.381385803222656,
+        "95": 428.29730224609375,
+        "100": 1087.64208984375
+      },
+      "aoTexCoord": 1,
+      "aoImageSize": [
+        4096,
+        4096
+      ],
+      "embeddedAOPixelsMatchOriginalPNG": true,
+      "embeddedAOBytesSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf"
+    },
+    "Travertine": {
+      "triangles": 538528,
+      "verticesExpanded": 1615584,
+      "positionsNormalsExactlyMatchProof": true,
+      "uv0MatchesExistingMaterialGrainScale": true,
+      "uv0Scale": 2.380952380952381,
+      "uv0MaximumFloat32ExportRoundtripDelta": 0.0,
+      "cornerRecordsSha256": "dc0d3a5036522fc96fa1c4c22ef8ea5125d21311b62379953784c71566cff8ee",
+      "positionBounds": [
+        [
+          -15.850000381469727,
+          0.0,
+          -43.86600112915039
+        ],
+        [
+          15.850000381469727,
+          20.98040008544922,
+          43.86600112915039
+        ]
+      ],
+      "atlasArea": 0.25785139203071594,
+      "uvBounds": [
+        0.0009765624417923391,
+        0.9990234375
+      ],
+      "zeroAreaLightingTriangles": 0,
+      "trianglePixelAreaPercentiles": {
+        "0": 0.06553524732589722,
+        "5": 0.32520386576652527,
+        "50": 2.4492117166519165,
+        "95": 5.649918723106384,
+        "100": 20310.599609375
+      },
+      "aoTexCoord": 1,
+      "aoImageSize": [
+        4096,
+        4096
+      ],
+      "embeddedAOPixelsMatchOriginalPNG": true,
+      "embeddedAOBytesSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf"
+    }
+  },
+  "orders": {
+    "0": {
+      "centreWorldXZ": [
+        -14.2,
+        42.216
+      ],
+      "triangles": 69904
+    },
+    "1": {
+      "centreWorldXZ": [
+        -14.2,
+        14.072
+      ],
+      "triangles": 69904
+    },
+    "2": {
+      "centreWorldXZ": [
+        -14.2,
+        -14.072
+      ],
+      "triangles": 69904
+    },
+    "3": {
+      "centreWorldXZ": [
+        -14.2,
+        -42.216
+      ],
+      "triangles": 69904
+    },
+    "4": {
+      "centreWorldXZ": [
+        14.2,
+        42.216
+      ],
+      "triangles": 69904
+    },
+    "5": {
+      "centreWorldXZ": [
+        14.2,
+        14.072
+      ],
+      "triangles": 69904
+    },
+    "6": {
+      "centreWorldXZ": [
+        14.2,
+        -14.072
+      ],
+      "triangles": 69904
+    },
+    "7": {
+      "centreWorldXZ": [
+        14.2,
+        -42.216
+      ],
+      "triangles": 69904
+    }
+  },
+  "atlasArea": 0.43929432332515717,
+  "zeroAreaLightingTriangles": 0,
+  "allEightOrdersExactlyMatchSelection": true
+}

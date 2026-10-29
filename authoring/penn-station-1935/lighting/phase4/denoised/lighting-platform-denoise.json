@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "zone": "platform",
+  "source": "lighting-platform-sky.hdr",
+  "sourceSha256": "2757d4bd04fd769c6063b57a2bdbcc5dafba294e13963a8a9c4423391117979f",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.14294135570526123,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "originalLinear": {
+    "mean": 0.14294135570526123,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "denoisedLinear": {
+    "mean": 0.1429094523191452,
+    "minimum": 0.0,
+    "maximum": 0.9208479523658752
+  },
+  "relativeMeanChange": -0.000223192133295691,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-sky-denoised-linear.hdr",
+    "sha256": "2f06f5f60c56a538011727cc6bc8371e8a45512dd4424efba60f05e56580dcbb",
+    "decodedLinear": {
+      "mean": 0.14237873256206512,
+      "minimum": 0.0,
+      "maximum": 0.91796875
+    },
+    "meanQuantizationError": 0.0005308468244038522,
+    "archiveFile": "lighting-platform-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-platform-sky.png",
+    "webp": "lighting-platform-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 2048,
+    "height": 2048
+  },
+  "low": {
+    "png": "lighting-platform-sky-low.png",
+    "webp": "lighting-platform-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 3.292946125002345,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase4/denoised",
+  "sourceArchiveFile": "../originals/lighting-platform-sky.hdr.gz"
+}
