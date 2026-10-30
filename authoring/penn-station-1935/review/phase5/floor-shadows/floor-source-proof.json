@@ -1,0 +1,91 @@
+{
+  "scope": "Remove competing Main-level finish/concrete faces in the editable scene.\n\nExisting marble extents and thicknesses are the authority. No survey claim,\nfloor extension, hole filler, visual depth offset or navigation plane is added.",
+  "inputSha256": "48e1a7c53b883b68b709e61e37d38f1a66288682466d3969a41579454d61406d",
+  "sourceMainWorld": -4.2672,
+  "finishRegions": [
+    {
+      "name": "Axial passage marble",
+      "bounds": [
+        -44.4,
+        -16.5608,
+        -7.75,
+        7.75
+      ],
+      "bottom": -4.4672
+    },
+    {
+      "name": "North subsidiary marble",
+      "bounds": [
+        -41.5,
+        -18.5,
+        8.5,
+        45.5
+      ],
+      "bottom": -4.4872
+    },
+    {
+      "name": "South subsidiary marble",
+      "bounds": [
+        -41.5,
+        -18.5,
+        -45.5,
+        -8.5
+      ],
+      "bottom": -4.4872
+    }
+  ],
+  "sourceRayProbes": [
+    {
+      "x": -43,
+      "y": 2.13,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.467199802398682
+    },
+    {
+      "x": -43,
+      "y": -2.13,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.467199802398682
+    },
+    {
+      "x": -41.13,
+      "y": 25,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.487199783325195
+    },
+    {
+      "x": -41.13,
+      "y": -25,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.487199783325195
+    },
+    {
+      "x": -41.13,
+      "y": 43.13,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.487199783325195
+    },
+    {
+      "x": -41.13,
+      "y": -43.13,
+      "marbleHeight": -4.267199993133545,
+      "concreteBefore": -4.267199993133545,
+      "concreteAfter": -4.487199783325195
+    }
+  ],
+  "originalPolygons": 16874,
+  "repairedPolygons": 2770,
+  "sourceFootprintArea": 5534.71216657578,
+  "repairedFootprintArea": 5534.712141843989,
+  "partitionSnapMetres": 1e-05,
+  "outerBoundsMaximumErrorMetres": 0.0,
+  "unrelatedObjectsUnchanged": 5104,
+  "moduleFrame": "glTF Y-up, Main floor=0, same frame as existing concourse transport chunk",
+  "sourceBlendSha256": "9a7f31f73ff636bd88dd8520e31b023b5d5130faa0c98a0f906556b58d003019",
+  "moduleSha256": "4c686c3dc2006215a3f10bc1c93f4d6c125b118ebccdf98dab16cfea29892564"
+}

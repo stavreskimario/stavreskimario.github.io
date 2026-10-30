@@ -1,0 +1,2096 @@
+{
+  "scope": "Opening request trace against frozen local bundle/assets, separate from final integrated visual acceptance.",
+  "bundleSha256": "5cdcb754721b6410cefab1fd12368d5fe05dd29cc4be382f08fedb26a8a2dc87",
+  "requests": [
+    {
+      "id": 1,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/",
+      "type": "document",
+      "startedMs": 8,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 17,
+      "result": "finished"
+    },
+    {
+      "id": 2,
+      "url": "http://127.0.0.1:58986/exhibition/shared/theme.css?v=1",
+      "type": "stylesheet",
+      "startedMs": 18,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 21,
+      "result": "finished"
+    },
+    {
+      "id": 3,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/styles.css?v=1",
+      "type": "stylesheet",
+      "startedMs": 18,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 24,
+      "result": "finished"
+    },
+    {
+      "id": 4,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+      "type": "script",
+      "startedMs": 18,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 42,
+      "result": "finished"
+    },
+    {
+      "id": 5,
+      "url": "http://127.0.0.1:58986/exhibition/shared/ui.js?v=1",
+      "type": "script",
+      "startedMs": 19,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 24,
+      "result": "finished"
+    },
+    {
+      "id": 6,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+      "type": "script",
+      "startedMs": 42,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 48,
+      "result": "finished"
+    },
+    {
+      "id": 7,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "type": "fetch",
+      "startedMs": 158,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 163,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 8,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/scene-manifest.json?revision=4",
+      "type": "fetch",
+      "startedMs": 464,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 471,
+      "result": "finished"
+    },
+    {
+      "id": 9,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-exterior.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 583,
+      "result": "finished"
+    },
+    {
+      "id": 10,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 724,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 11,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 661,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 12,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-context.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 473,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 583,
+      "result": "finished"
+    },
+    {
+      "id": 13,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-platform.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 473,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 580,
+      "result": "finished"
+    },
+    {
+      "id": 14,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-trains.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 473,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 563,
+      "result": "finished"
+    },
+    {
+      "id": 15,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+      "type": "fetch",
+      "startedMs": 492,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 730,
+      "result": "finished"
+    },
+    {
+      "id": 16,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "type": "fetch",
+      "startedMs": 493,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 733,
+      "result": "finished"
+    },
+    {
+      "id": 17,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+      "type": "fetch",
+      "startedMs": 493,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 732,
+      "result": "finished"
+    },
+    {
+      "id": 18,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "type": "fetch",
+      "startedMs": 493,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 733,
+      "result": "finished"
+    },
+    {
+      "id": 19,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/225e6d23dc7049ed4904.ktx2",
+      "type": "fetch",
+      "startedMs": 504,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 737,
+      "result": "finished"
+    },
+    {
+      "id": 20,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 752,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 21,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 740,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 22,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 737,
+      "result": "finished"
+    },
+    {
+      "id": 23,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/f8f598c89017c5e01dd7.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 738,
+      "result": "finished"
+    },
+    {
+      "id": 24,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 744,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 25,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 756,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 26,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 749,
+      "result": "finished"
+    },
+    {
+      "id": 27,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 759,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 28,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "type": "fetch",
+      "startedMs": 563,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 763,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 29,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "type": "fetch",
+      "startedMs": 563,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 765,
+      "result": "finished"
+    },
+    {
+      "id": 30,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "type": "fetch",
+      "startedMs": 577,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 768,
+      "result": "finished"
+    },
+    {
+      "id": 31,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "type": "fetch",
+      "startedMs": 577,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 770,
+      "result": "finished"
+    },
+    {
+      "id": 32,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+      "type": "fetch",
+      "startedMs": 578,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 770,
+      "result": "finished"
+    },
+    {
+      "id": 33,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+      "type": "fetch",
+      "startedMs": 578,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 771,
+      "result": "finished"
+    },
+    {
+      "id": 34,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "type": "fetch",
+      "startedMs": 579,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 772,
+      "result": "finished"
+    },
+    {
+      "id": 35,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "type": "fetch",
+      "startedMs": 579,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 774,
+      "result": "finished"
+    },
+    {
+      "id": 36,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "type": "fetch",
+      "startedMs": 579,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 775,
+      "result": "finished"
+    },
+    {
+      "id": 37,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "type": "fetch",
+      "startedMs": 579,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 775,
+      "result": "finished"
+    },
+    {
+      "id": 38,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "type": "fetch",
+      "startedMs": 579,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 776,
+      "result": "finished"
+    },
+    {
+      "id": 39,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/547e3573b92e90adcd24.ktx2",
+      "type": "fetch",
+      "startedMs": 661,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 779,
+      "result": "finished"
+    },
+    {
+      "id": 40,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 781,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 41,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 792,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 42,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 781,
+      "result": "finished"
+    },
+    {
+      "id": 43,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 788,
+      "result": "failed",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "id": 44,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+      "type": "fetch",
+      "startedMs": 732,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 782,
+      "result": "finished"
+    },
+    {
+      "id": 45,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "type": "fetch",
+      "startedMs": 732,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 782,
+      "result": "finished"
+    },
+    {
+      "id": 46,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-platform.hdr.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 866,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 870,
+      "result": "finished"
+    },
+    {
+      "id": 47,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/lighting-platform-sky.webp?revision=4",
+      "type": "image",
+      "startedMs": 951,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1001,
+      "result": "finished"
+    },
+    {
+      "id": 48,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-concourse.hdr.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 1163,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1360,
+      "result": "finished"
+    },
+    {
+      "id": 49,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-waiting-room.hdr.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 1163,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1168,
+      "result": "finished"
+    },
+    {
+      "id": 50,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/lighting-exterior-sky.webp?revision=4",
+      "type": "image",
+      "startedMs": 1164,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1357,
+      "result": "finished"
+    },
+    {
+      "id": 51,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/lighting-waiting-room-sky.webp?revision=4",
+      "type": "image",
+      "startedMs": 1357,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1361,
+      "result": "finished"
+    },
+    {
+      "id": 52,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/lighting-concourse-sky.webp?revision=4",
+      "type": "image",
+      "startedMs": 1548,
+      "phase": "opening",
+      "status": 200,
+      "finishedMs": 1553,
+      "result": "finished"
+    }
+  ],
+  "cdpFailures": [
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 136176
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3896,
+              "columnNumber": 2248
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 68379
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 68358
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 68351
+            },
+            {
+              "functionName": "cN",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 52088
+            },
+            {
+              "functionName": "uN",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 52261
+            },
+            {
+              "functionName": "Ms",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3811,
+              "columnNumber": 68552
+            },
+            {
+              "functionName": "Vc",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3929,
+              "columnNumber": 6394
+            },
+            {
+              "functionName": "M3",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3929,
+              "columnNumber": 9038
+            },
+            {
+              "functionName": "N",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 21452
+            },
+            {
+              "functionName": "Fv",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 37366
+            },
+            {
+              "functionName": "GM",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 47986
+            },
+            {
+              "functionName": "b1",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 83817
+            },
+            {
+              "functionName": "qO",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 82852
+            },
+            {
+              "functionName": "fE",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 82681
+            },
+            {
+              "functionName": "f1",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 79253
+            },
+            {
+              "functionName": "j",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 15,
+              "columnNumber": 8619
+            },
+            {
+              "functionName": "nC",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 8,
+              "columnNumber": 40979
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.12",
+      "timestamp": 1654.805698,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 151410
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.16",
+      "timestamp": 1655.229101,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 151410
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.15",
+      "timestamp": 1655.304535,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.26",
+      "timestamp": 1655.381397,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.29",
+      "timestamp": 1655.384842,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.25",
+      "timestamp": 1655.391946,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.30",
+      "timestamp": 1655.397393,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.32",
+      "timestamp": 1655.400735,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.33",
+      "timestamp": 1655.405436,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.45",
+      "timestamp": 1655.422604,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.48",
+      "timestamp": 1655.429057,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "initiator": {
+        "type": "script",
+        "stack": {
+          "callFrames": [
+            {
+              "functionName": "window.fetch",
+              "scriptId": "4",
+              "url": "",
+              "lineNumber": 1,
+              "columnNumber": 1422
+            },
+            {
+              "functionName": "load",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+              "lineNumber": 39,
+              "columnNumber": 131504
+            },
+            {
+              "functionName": "load",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3971,
+              "columnNumber": 786
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31856
+            },
+            {
+              "functionName": "",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/dist/app.js?v=3",
+              "lineNumber": 3966,
+              "columnNumber": 31737
+            }
+          ]
+        }
+      },
+      "type": "Fetch",
+      "requestId": "15069.46",
+      "timestamp": 1655.43225,
+      "errorText": "net::ERR_ABORTED",
+      "canceled": true
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "ready": {
+    "state": {
+      "view": "exterior",
+      "framing": "",
+      "mode": "orbit",
+      "light": "afternoon",
+      "quality": "balanced",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 0,
+      "instant": false
+    },
+    "models": [
+      {
+        "file": "model-trains.glb",
+        "materials": 14,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "reflectionMaterials": 14,
+        "reflectionFile": "reflection-platform.hdr.gz",
+        "atlasChannels": []
+      },
+      {
+        "file": "model-context.glb",
+        "materials": 26,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "reflectionMaterials": 0,
+        "reflectionFile": null,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-platform.glb",
+        "materials": 11,
+        "bakedMaterials": 3,
+        "occlusionMaterials": 3,
+        "reflectionMaterials": 11,
+        "reflectionFile": "reflection-platform.hdr.gz",
+        "atlasChannels": [
+          0
+        ]
+      },
+      {
+        "file": "model-exterior.glb",
+        "materials": 11,
+        "bakedMaterials": 4,
+        "occlusionMaterials": 4,
+        "reflectionMaterials": 0,
+        "reflectionFile": null,
+        "atlasChannels": [
+          1,
+          0
+        ]
+      },
+      {
+        "file": "model-waiting-room.glb",
+        "materials": 15,
+        "bakedMaterials": 9,
+        "occlusionMaterials": 9,
+        "reflectionMaterials": 15,
+        "reflectionFile": "reflection-waiting-room.hdr.gz",
+        "atlasChannels": [
+          1,
+          0
+        ]
+      },
+      {
+        "file": "model-concourse.glb",
+        "materials": 9,
+        "bakedMaterials": 5,
+        "occlusionMaterials": 5,
+        "reflectionMaterials": 9,
+        "reflectionFile": "reflection-concourse.hdr.gz",
+        "atlasChannels": [
+          1,
+          0
+        ]
+      }
+    ],
+    "scene": {
+      "id": "28de2305-04f6-4f9c-b1eb-9abaa0048113",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "6d831f14-e206-409e-8209-0317109d0947",
+          "visible": true,
+          "meshes": 11
+        },
+        {
+          "name": "waiting",
+          "id": "300c9df2-46ec-4b1c-b284-be00b34c6bbf",
+          "visible": true,
+          "meshes": 15
+        },
+        {
+          "name": "concourse",
+          "id": "0b97fb07-67e5-4641-b9f1-fcb28b61e53d",
+          "visible": true,
+          "meshes": 9
+        },
+        {
+          "name": "context",
+          "id": "2311a06b-0f7c-44e8-b7a3-f91a473a125c",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "62abac2d-1279-4409-97e0-d24a6e7084ca",
+          "visible": true,
+          "meshes": 17
+        },
+        {
+          "name": "trains",
+          "id": "bd27734d-ca49-46d1-b0a7-8866d8c2936c",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    }
+  },
+  "browserFetchProof": [
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 705246,
+      "complete": true,
+      "sha256": "14c981583f6bf81ab8f28bf2a9ff70e247101cd914084cc2637cd80fc367b619",
+      "expectedBytes": 705246,
+      "expectedSha256": "14c981583f6bf81ab8f28bf2a9ff70e247101cd914084cc2637cd80fc367b619",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/scene-manifest.json?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "expectedBytes": 285646,
+      "expectedSha256": "664469c96f2d8bf4b82f8b885122121fc3a948cce944b7456fb0963fae54c322",
+      "matchesSource": false
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-exterior.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 2586035,
+      "complete": true,
+      "sha256": "246e44fb75a1af88978492923850caf3d4df5716fb859e0e5c5eeb5f1bea10b0",
+      "expectedBytes": 2586035,
+      "expectedSha256": "246e44fb75a1af88978492923850caf3d4df5716fb859e0e5c5eeb5f1bea10b0",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 4483819,
+      "complete": true,
+      "sha256": "a19ad08b7c404d3cbfc3ad354eb2cdc92ac1d3df9d68e9838b935c3cbcbf493e",
+      "expectedBytes": 4483819,
+      "expectedSha256": "a19ad08b7c404d3cbfc3ad354eb2cdc92ac1d3df9d68e9838b935c3cbcbf493e",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 4651564,
+      "complete": true,
+      "sha256": "c62b8630e7a65ecedb99bd6990755988ef7defeb888330641f41e33b923bbd08",
+      "expectedBytes": 4651564,
+      "expectedSha256": "c62b8630e7a65ecedb99bd6990755988ef7defeb888330641f41e33b923bbd08",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-context.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 493263,
+      "complete": true,
+      "sha256": "41574bb9422c9ebed739cade30fa5b6c0e38003faa034a6bad22399e3893d501",
+      "expectedBytes": 493263,
+      "expectedSha256": "41574bb9422c9ebed739cade30fa5b6c0e38003faa034a6bad22399e3893d501",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-platform.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 150634,
+      "complete": true,
+      "sha256": "609e4c2b33ff3c9c19aa315424ae2adf6a44000f938f9efbf3e9249e49776454",
+      "expectedBytes": 150634,
+      "expectedSha256": "609e4c2b33ff3c9c19aa315424ae2adf6a44000f938f9efbf3e9249e49776454",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-trains.glb.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 123231,
+      "complete": true,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "expectedBytes": 123231,
+      "expectedSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 297484,
+      "complete": true,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829",
+      "expectedBytes": 297484,
+      "expectedSha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 532453,
+      "complete": true,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf",
+      "expectedBytes": 532453,
+      "expectedSha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 429110,
+      "complete": true,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1",
+      "expectedBytes": 429110,
+      "expectedSha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 533240,
+      "complete": true,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce",
+      "expectedBytes": 533240,
+      "expectedSha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/225e6d23dc7049ed4904.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1771894,
+      "complete": true,
+      "sha256": "225e6d23dc7049ed490438e7623f88800f5f7a6da65195979feb8022a9a3165c",
+      "expectedBytes": 1771894,
+      "expectedSha256": "225e6d23dc7049ed490438e7623f88800f5f7a6da65195979feb8022a9a3165c",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 5419454,
+      "complete": true,
+      "sha256": "9a2a57aafe53d16676d31a2fb36aa3a015dd6d877bb70b19c7eebf74000a9f1c",
+      "expectedBytes": 5419454,
+      "expectedSha256": "9a2a57aafe53d16676d31a2fb36aa3a015dd6d877bb70b19c7eebf74000a9f1c",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 3556449,
+      "complete": true,
+      "sha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b",
+      "expectedBytes": 3556449,
+      "expectedSha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1755,
+      "complete": true,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892",
+      "expectedBytes": 1755,
+      "expectedSha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/f8f598c89017c5e01dd7.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1993886,
+      "complete": true,
+      "sha256": "f8f598c89017c5e01dd7fd173584dcb416aa344c5c5ca5ce2401a792cef5060e",
+      "expectedBytes": 1993886,
+      "expectedSha256": "f8f598c89017c5e01dd7fd173584dcb416aa344c5c5ca5ce2401a792cef5060e",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 3849018,
+      "complete": true,
+      "sha256": "4210287e358bb2da10ee349f0c96584be6dbaafb98946db905dcf46f2703d3b1",
+      "expectedBytes": 3849018,
+      "expectedSha256": "4210287e358bb2da10ee349f0c96584be6dbaafb98946db905dcf46f2703d3b1",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 3746211,
+      "complete": true,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db",
+      "expectedBytes": 3746211,
+      "expectedSha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 11104,
+      "complete": true,
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e",
+      "expectedBytes": 11104,
+      "expectedSha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 3934923,
+      "complete": true,
+      "sha256": "cfa5d8f301774c078a0cc207057c45a2591a3f74972d7daadd95aeb9bffde1e0",
+      "expectedBytes": 3934923,
+      "expectedSha256": "cfa5d8f301774c078a0cc207057c45a2591a3f74972d7daadd95aeb9bffde1e0",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 2381311,
+      "complete": true,
+      "sha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344",
+      "expectedBytes": 2381311,
+      "expectedSha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 4296,
+      "complete": true,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360",
+      "expectedBytes": 4296,
+      "expectedSha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 794564,
+      "complete": true,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f",
+      "expectedBytes": 794564,
+      "expectedSha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 862627,
+      "complete": true,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88",
+      "expectedBytes": 862627,
+      "expectedSha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 842348,
+      "complete": true,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85",
+      "expectedBytes": 842348,
+      "expectedSha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 863637,
+      "complete": true,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6",
+      "expectedBytes": 863637,
+      "expectedSha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 839153,
+      "complete": true,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016",
+      "expectedBytes": 839153,
+      "expectedSha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 862446,
+      "complete": true,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c",
+      "expectedBytes": 862446,
+      "expectedSha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 892516,
+      "complete": true,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd",
+      "expectedBytes": 892516,
+      "expectedSha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 863104,
+      "complete": true,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b",
+      "expectedBytes": 863104,
+      "expectedSha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 607982,
+      "complete": true,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23",
+      "expectedBytes": 607982,
+      "expectedSha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/547e3573b92e90adcd24.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1895977,
+      "complete": true,
+      "sha256": "547e3573b92e90adcd2496b43f6aa5a1558512237657be4c541a7628a1b5dc6e",
+      "expectedBytes": 1895977,
+      "expectedSha256": "547e3573b92e90adcd2496b43f6aa5a1558512237657be4c541a7628a1b5dc6e",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 2351043,
+      "complete": true,
+      "sha256": "456394f60a7a3aaf94f396ec1aa20ddfb711b6b2780bb53fdf76e27837c2d0b7",
+      "expectedBytes": 2351043,
+      "expectedSha256": "456394f60a7a3aaf94f396ec1aa20ddfb711b6b2780bb53fdf76e27837c2d0b7",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 5398915,
+      "complete": true,
+      "sha256": "0739d50563d34373af6ad5eda8e945b7c1d56c71f7e54ed89d4f16c80a0c0543",
+      "expectedBytes": 5398915,
+      "expectedSha256": "0739d50563d34373af6ad5eda8e945b7c1d56c71f7e54ed89d4f16c80a0c0543",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 159620,
+      "complete": true,
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd",
+      "expectedBytes": 159620,
+      "expectedSha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 3608355,
+      "complete": true,
+      "sha256": "06c5a58877219e6fe72d8d0faa1cc02bb9c313fb484b2205d3a9cf5aa59713c4",
+      "expectedBytes": 3608355,
+      "expectedSha256": "06c5a58877219e6fe72d8d0faa1cc02bb9c313fb484b2205d3a9cf5aa59713c4",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 57529,
+      "complete": true,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "expectedBytes": 57529,
+      "expectedSha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 527333,
+      "complete": true,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "expectedBytes": 527333,
+      "expectedSha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-platform.hdr.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 932268,
+      "complete": true,
+      "sha256": "3a695c565b18102e96ff6061c92da225deecb2a204785e40f2d53416248a3142",
+      "expectedBytes": 932268,
+      "expectedSha256": "3a695c565b18102e96ff6061c92da225deecb2a204785e40f2d53416248a3142",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-concourse.hdr.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1325665,
+      "complete": true,
+      "sha256": "60d40fee2999a98441779a1ec782f462066effba76d684e58cfa2f12e640ce1a",
+      "expectedBytes": 1325665,
+      "expectedSha256": "60d40fee2999a98441779a1ec782f462066effba76d684e58cfa2f12e640ce1a",
+      "matchesSource": true
+    },
+    {
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/reflection-waiting-room.hdr.gz?revision=4",
+      "abortEvents": 0,
+      "status": 200,
+      "bytes": 1324589,
+      "complete": true,
+      "sha256": "8f1e0b851f399cade8b44704a02cf7bfc7ebebeea5b373a47db88b80eaa9862c",
+      "expectedBytes": 1324589,
+      "expectedSha256": "8f1e0b851f399cade8b44704a02cf7bfc7ebebeea5b373a47db88b80eaa9862c",
+      "matchesSource": true
+    }
+  ],
+  "failuresAtReady": [
+    {
+      "id": 7,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "type": "fetch",
+      "startedMs": 158,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 163,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 10,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 724,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 11,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 661,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 20,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 752,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 21,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 740,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 24,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 744,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 25,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 756,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 27,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 759,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 28,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "type": "fetch",
+      "startedMs": 563,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 763,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 40,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 781,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 41,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 792,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 43,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 788,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    }
+  ],
+  "unresolvedAtReady": [
+    {
+      "id": 7,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "type": "fetch",
+      "startedMs": 158,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 163,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 10,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 724,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 11,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "type": "fetch",
+      "startedMs": 472,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 661,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 20,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 752,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 21,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 740,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 24,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 744,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 25,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 756,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 27,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "type": "fetch",
+      "startedMs": 562,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 759,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 28,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "type": "fetch",
+      "startedMs": 563,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 763,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 40,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 781,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 41,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 792,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    },
+    {
+      "id": 43,
+      "url": "http://127.0.0.1:58986/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "type": "fetch",
+      "startedMs": 725,
+      "phase": "opening",
+      "status": 200,
+      "failedMs": 788,
+      "result": "failed",
+      "error": "net::ERR_ABORTED",
+      "successfulSameUri": []
+    }
+  ],
+  "noMissingRequiredResources": false
+}

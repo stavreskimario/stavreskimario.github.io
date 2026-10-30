@@ -1,0 +1,77 @@
+{
+  "scope": "Only upward rectangular asphalt/sidewalk tops; street footprint, heights, buried slabs and inventory retained",
+  "candidateTops": 20,
+  "changedObjects": 1,
+  "replacedFaces": 2,
+  "originalTopArea": 36055.27486964408,
+  "uniqueTopArea": 35163.4058612613,
+  "removedDuplicateArea": 891.8690083827823,
+  "remainingCoplanarOverlapArea": 0,
+  "maximumAffineUvError": 1.4210854715202004e-14,
+  "changes": [
+    {
+      "object": "06 Period pavement \u2014 widths provisional pending registere.001",
+      "polygon": 13,
+      "material": "PeriodAsphaltRoadSurface",
+      "height": -0.15,
+      "original": [
+        -220.0,
+        220.0,
+        -84.7343978881836,
+        -72.54239654541016
+      ],
+      "replacement": [
+        [
+          -220.0,
+          -145.9991912841797,
+          -84.7343978881836,
+          -72.54239654541016
+        ],
+        [
+          -127.71119689941406,
+          131.36880493164062,
+          -84.7343978881836,
+          -72.54239654541016
+        ],
+        [
+          149.65679931640625,
+          220.0,
+          -84.7343978881836,
+          -72.54239654541016
+        ]
+      ]
+    },
+    {
+      "object": "06 Period pavement \u2014 widths provisional pending registere.001",
+      "polygon": 19,
+      "material": "PeriodAsphaltRoadSurface",
+      "height": -0.15,
+      "original": [
+        -220.0,
+        220.0,
+        72.54239654541016,
+        84.7343978881836
+      ],
+      "replacement": [
+        [
+          -220.0,
+          -145.9991912841797,
+          72.54239654541016,
+          84.7343978881836
+        ],
+        [
+          -127.71119689941406,
+          131.36880493164062,
+          72.54239654541016,
+          84.7343978881836
+        ],
+        [
+          149.65679931640625,
+          220.0,
+          72.54239654541016,
+          84.7343978881836
+        ]
+      ]
+    }
+  ]
+}

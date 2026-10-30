@@ -1,0 +1,62 @@
+{
+  "scope": "Actual final raw glTF triangles before lighting/compression; verifies broad glass fields, retained opaque cells/base footprints, boundaries and unchanged source stair levels. Browser walking remains a separate test.",
+  "modelSha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
+  "coverage": {
+    "revision": 3,
+    "boundingFieldBlenderXY": [
+      -95.4,
+      -49.8,
+      -39.6,
+      39.6
+    ],
+    "boundingFieldWorldXZ": [
+      -95.4,
+      -49.8,
+      -39.6,
+      39.6
+    ],
+    "grossBoundingAreaM2": 3611.520000000001,
+    "netPanelAreaM2": 3582.72,
+    "retainedConcreteBearingCellAreaM2": 28.799999999999997,
+    "gridPanelsBeforeBearingExclusions": 2508,
+    "activePanelCount": 2488,
+    "bearingPadsIntersectingField": [
+      1,
+      2,
+      5,
+      6,
+      13,
+      14
+    ],
+    "concreteCellSupportMethod": "Only active panel rectangles are slab holes. Every omitted pad cell remains full-thickness concrete Main slab and is included in the pier support targets.",
+    "registration": "Inside existing west cloister/front line, north/south inner court boundaries and east stair zone; surrounding cloister/perimeter and stair circulation retained.",
+    "primaryPlan": "Gibbs Fig2, printed243, original PDF page427. Plan registers the concourse and access heads, but supplies no exact glass-panel schedule.",
+    "primaryPhoto": "LOC071935 shows broad continuous square-grid flooring; exact outer panel limits cannot be surveyed from this single perspective.",
+    "extentStatus": "Reasoned complete visible central open-court grid, with explicit extent/pitch uncertainty; not a claim that the entire155000sqft station/surroundings vault-light system is reconstructed.",
+    "repeatedWebMaterial": "ConcourseReinforcedVaultLightConcrete",
+    "opaqueSlabMaterial": "ConcourseOpaqueCirculationConcrete"
+  },
+  "counts": {
+    "glass": 7464,
+    "web": 2488,
+    "opaqueUnderGlass": 7464,
+    "bearingCells": 180,
+    "pierFootprints": 54,
+    "fieldBoundaries": 840,
+    "stairs": 81,
+    "axialPassage": 186
+  },
+  "errors": {
+    "glass": [],
+    "web": [],
+    "opaqueUnderGlass": [],
+    "bearingCells": [],
+    "pierFootprints": [],
+    "fieldBoundaries": [],
+    "stairs": [],
+    "axialPassage": []
+  },
+  "sampleResultSha256": "44143c1c9400651957fe5ebc495ef34f0fe4be568bd2d8860f6ff7039e9fda25",
+  "retainedNavigationMetadataEqualToV2": true,
+  "passed": true
+}

@@ -1,0 +1,127 @@
+{
+  "scope": "Source-only arrivals preparation and recoverable raw-source archival. No new arrival geometry, real fixture relocation or lighting bake has been promoted. No fresh browser/FPS/mobile acceptance claimed.",
+  "runtimeIdentities": {
+    "penn-station-1935/dist/app.js": "0300d554eec34cd2dfe6fd8cfc53d84ec8abdf2d94d09d9706e69a456efcbd27",
+    "penn-station-1935/assets/scene-manifest.json": "fdb502f1b0226f59f9102f9cea88493cd771b5d08323e074a7b9a19d0191de65",
+    "authoring/penn-station-1935/penn-station-phase5.blend": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+    "penn-station-1935/assets/model-concourse-low.glb.gz": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+    "penn-station-1935/assets/model-concourse.glb.gz": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+    "penn-station-1935/assets/model-context-low.glb.gz": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+    "penn-station-1935/assets/model-context.glb.gz": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+    "penn-station-1935/assets/model-exterior-low.glb.gz": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+    "penn-station-1935/assets/model-exterior.glb.gz": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+    "penn-station-1935/assets/model-platform-low.glb.gz": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+    "penn-station-1935/assets/model-platform.glb.gz": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+    "penn-station-1935/assets/model-trains-low.glb.gz": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+    "penn-station-1935/assets/model-trains.glb.gz": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+    "penn-station-1935/assets/model-waiting-room-low.glb.gz": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+    "penn-station-1935/assets/model-waiting-room.glb.gz": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277"
+  },
+  "assetValidation": {
+    "created": "2026-10-30T06:27:02.465Z",
+    "glbs": 12,
+    "errors": 0,
+    "uniqueSharedTextures": 75,
+    "modelTextureAndLightingTransferBytes": 174008834,
+    "illuminationRecords": 8,
+    "validatorNotices": {
+      "information:UNSUPPORTED_EXTENSION": 32,
+      "warning:VALUE_NOT_IN_LIST": 140,
+      "information:URI_GLB": 140,
+      "warning:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE": 50,
+      "information:UNUSED_OBJECT": 518,
+      "warning:IMAGE_UNRECOGNIZED_FORMAT": 140
+    }
+  },
+  "denoiseControls": {
+    "created": "2026-10-30T06:03:43.874Z",
+    "groups": 13,
+    "checks": [
+      "Four exact archived checkpoint records validate retained HDR hashes, 0.18 controls and bake coverage against regenerated lossless full/fallback derivatives; no current runtime dependency",
+      "Schema2 resolves exactly the two local atlas children; missing/duplicate/wrong-zone/traversal references and ambiguous source directories are rejected",
+      "Schema3 requires the dedicated local order atlas, rejecting missing-order and traversal substitutions",
+      "Only the exact Phase5 vault source directory is accepted, with linear transfer and an 8K full atlas; other zones, traversal/alias paths and a 6K derivative are rejected",
+      "Optional referenced access atlas validates exact Phase6 raw/denoised directories, linear input,2048/512 lossless pixels, raw+retained decoded HDR hashes and byte-identical raw/runtime bake reports",
+      "Unreferenced access records do not change legacy validation; a half-referenced atlas or missing matching access report is rejected",
+      "Access traversal/alias paths,wrong zones or transfer,missing archive fields,corrupted raw/retained HDR hashes and unequal bake-report bytes are rejected",
+      "Access source resolution cannot exceed2048; undersized full/low derivatives and changed same-size source pixels are rejected",
+      "Separate Phase7 circulation2048/512 source/derivatives pass alongside unchanged Phase6 access provenance; reject path aliases, wrong family/source transfer, raw/archive/report corruption, half references and mismatched records",
+      "Separate Phase8 arrivals4096/512 provenance coexists with Phase6 access and Phase7 circulation; rejects path/family/transfer substitutions, raw/report corruption, undersized sources/derivatives and half references",
+      "Failed0.18 controls,incorrect source transfer,empty radiance/AO and the observed collapsed UV-atlas failure are rejected",
+      "Explicit and implicit .hdr.gz archival preserves original HDR bytes; a wrong decoded SHA is rejected",
+      "Same-size changed PNG pixels and unsupported derivative dimensions are rejected"
+    ],
+    "arrivalsControl": {
+      "synthetic": true,
+      "sourceSha256": "d7ffc28e90420bde39be886df7cfb4f74a615a9662f46c59b2b007b43d730e14",
+      "retainedSha256": "a78a3db5d34f391da76daf92d2cef731381690742fc01af92a881612606ce43d",
+      "bakeReportSha256": "09a3d819ba57d87cd9f3d6ba334054533fbe5e7bc693d55f9552756fa7c1f0eb",
+      "jointAtlasCount": 7
+    }
+  },
+  "fixtureCodecControls": {
+    "status": "SOURCE ONLY, no real recipe or asset relocation performed",
+    "files": {
+      "penn-station-1935/model/gltf_hierarchy.mjs": "adef6ab232c0b036a148ff81c8e40b2ebb5252630fc93eaeeb0604d813f0c835",
+      "penn-station-1935/model/relocate_platform_fixtures.mjs": "263c9d052d6f166abc9d9b5fc482583592612310cf1a00cb3281ab34797273a1",
+      "tests/penn-fixture-relocation.mjs": "54014732188fa3311830616716676c31122b0d3fc69a6c53009543e4c05b0d52",
+      "tests/penn-gltf-hierarchy.mjs": "1aac9236e41621d6493165ec95c5784998bfca663c99e357453bd7f14801cf57",
+      "tests/helpers/penn-decoded-geometry.mjs": "bd85df19cb8151236bcbb75cfcbfb5d8a8c40865e10e58745809d837f10a4030"
+    },
+    "controls": 21,
+    "geometryHierarchyControls": "PASS",
+    "existingDecodedGeometryControls": "PASS",
+    "assetProofs": [
+      {
+        "label": "Nonidentity parent/node rotations and unequal dequantizing scales",
+        "errors": null,
+        "warnings": null,
+        "independentWorldDeltaError": 3.903114102482233e-06,
+        "trianglesCompared": 160
+      },
+      {
+        "label": "Actual full payload, synthetic delta only (not source candidate)",
+        "errors": null,
+        "warnings": null,
+        "independentWorldDeltaError": 3.819462660703143e-06,
+        "trianglesCompared": 935400
+      },
+      {
+        "label": "Actual low payload, synthetic delta only (not source candidate)",
+        "errors": null,
+        "warnings": null,
+        "independentWorldDeltaError": 3.819462660703143e-06,
+        "trianglesCompared": 875030
+      },
+      {
+        "label": "glTF validator Nonidentity parent/node rotations and unequal dequantizing scales",
+        "errors": 0,
+        "warnings": 0,
+        "independentWorldDeltaError": null,
+        "trianglesCompared": null
+      },
+      {
+        "label": "glTF validator Actual full payload, synthetic delta only (not source candidate)",
+        "errors": 0,
+        "warnings": 2,
+        "independentWorldDeltaError": null,
+        "trianglesCompared": null
+      },
+      {
+        "label": "glTF validator Actual low payload, synthetic delta only (not source candidate)",
+        "errors": 0,
+        "warnings": 2,
+        "independentWorldDeltaError": null,
+        "trianglesCompared": null
+      }
+    ],
+    "concurrentChangesPreserved": [
+      "tests/penn-assets.cjs belongs to parent; untouched"
+    ]
+  },
+  "sharedSiteChecks": {
+    "apps": 3,
+    "siteStagingTests": 7,
+    "diffCheck": "pass"
+  }
+}

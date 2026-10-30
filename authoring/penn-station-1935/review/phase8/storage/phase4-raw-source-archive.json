@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "scope": "Three current raw lighting inputs archived reversibly to make room for arrivals authoring. These are current source provenance, not obsolete atlases.",
+  "archivedBytes": 102088771,
+  "classification": "These are current raw provenance inputs, not obsolete atlases. Current runtime/final-validator consumes Phase4 retained denoised HDR+PNG and bake metadata; raw originals are restoration inputs, with sourceSha256 referenced by active records.",
+  "preserved": [
+    "All active Phase4 denoised .hdr.gz, full/low PNGs and JSON records",
+    "All Phase4 originals AO PNGs and bake JSON reports",
+    "All Phase6/7 raw+denoised artifacts and future exact Phase8 raw+denoised artifacts",
+    "Current canonical model and current source helpers"
+  ],
+  "runtimePayloadChanged": false,
+  "entries": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-vault-sky.hdr.gz",
+      "bytes": 71345318,
+      "sha256": "a6986bacbb47347984dbae0fbcc283eeade88d7d1c433759c824a0bd77634bf3",
+      "gitCommit": "e46e91561865ae5425d6861e421a0710de8c8f40",
+      "gitBlob": "f8dc15c0e1649a965e0932c8df46a3f253c1cec2",
+      "worktreeBlobMatches": true,
+      "decodedBytes": 88642196,
+      "decodedSha256": "4b87c59c6178400f82a757e2074b58f8884d25c00cc448696e690c57c2af1232",
+      "activeSourceRecord": "penn-station-1935/assets/lighting-waiting-room-vault-denoise.json",
+      "activeSourceSha256": "4b87c59c6178400f82a757e2074b58f8884d25c00cc448696e690c57c2af1232",
+      "sourceArchiveFile": "../originals/lighting-waiting-room-vault-sky.hdr.gz",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 8192 +X 8192",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/e46e91561865ae5425d6861e421a0710de8c8f40/authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-vault-sky.hdr.gz",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/archived-phase4-raw/lighting-waiting-room-vault-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-order-sky.hdr.gz",
+      "bytes": 26658432,
+      "sha256": "286f9a5edb6ec65b4119c56bb628716461ecfae328b8926ce3c9301bbfd92ff9",
+      "gitCommit": "e46e91561865ae5425d6861e421a0710de8c8f40",
+      "gitBlob": "df61cead2fbcb832829d2476921b94d8856b420b",
+      "worktreeBlobMatches": true,
+      "decodedBytes": 31639702,
+      "decodedSha256": "8f689111c1fe132ea95cada209627fb9454808e11f678b0f30b15647f2ebccd1",
+      "activeSourceRecord": "penn-station-1935/assets/lighting-waiting-room-order-denoise.json",
+      "activeSourceSha256": "8f689111c1fe132ea95cada209627fb9454808e11f678b0f30b15647f2ebccd1",
+      "sourceArchiveFile": "../originals/lighting-waiting-room-order-sky.hdr.gz",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 4096 +X 4096",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/e46e91561865ae5425d6861e421a0710de8c8f40/authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-order-sky.hdr.gz",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/archived-phase4-raw/lighting-waiting-room-order-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-concourse-sky.hdr.gz",
+      "bytes": 4085021,
+      "sha256": "8e240cee8ba28421ce1b508c04412ae888a806ab9d1104641756cb178812ebe3",
+      "gitCommit": "e46e91561865ae5425d6861e421a0710de8c8f40",
+      "gitBlob": "4ef3568efa33ce9c2a3157e85644245b3336293d",
+      "worktreeBlobMatches": true,
+      "decodedBytes": 5115600,
+      "decodedSha256": "2238c45bedbc7ba994080f64bd38eadd9badc693e2fbfba14afc570f0c1f1502",
+      "activeSourceRecord": "penn-station-1935/assets/lighting-concourse-denoise.json",
+      "activeSourceSha256": "2238c45bedbc7ba994080f64bd38eadd9badc693e2fbfba14afc570f0c1f1502",
+      "sourceArchiveFile": "../originals/lighting-concourse-sky.hdr.gz",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 2048 +X 2048",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/e46e91561865ae5425d6861e421a0710de8c8f40/authoring/penn-station-1935/lighting/phase4/originals/lighting-concourse-sky.hdr.gz",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/archived-phase4-raw/lighting-concourse-sky.hdr.gz",
+      "backupVerified": true
+    }
+  ]
+}

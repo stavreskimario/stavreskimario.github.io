@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "status": "ACCEPTED CANONICAL SOURCE PROMOTION; finalbrowserroute/publicationseparate",
+  "promotedAtUTC": "2026-10-30T07:28:18.994400+00:00",
+  "approval": {
+    "by": "Parentimplementationagent after inspectingnativebrowsergallery",
+    "scope": "Boundedfirst-eightordinaryarrivals source replacement only",
+    "basis": "I inspected the native browser gallery and approve the c96f\u2026 canonical source replacement for this bounded first-eight section."
+  },
+  "canonicalRepositoryPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+  "oldSource": {
+    "sha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+    "bytes": 72399076,
+    "externalBackupWorkRelativePath": "before-local-overlay/penn-station-phase5.blend",
+    "backupSha256After": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+    "immutableGitRecovery": {
+      "commit": "f53091b456a5aed99150914b696771c5865c48b9",
+      "blob": "b8e0a50e5886b0b60943ad659e5d1426f3653220",
+      "repositoryPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+      "decodedSha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+      "decodedBytes": 72399076
+    }
+  },
+  "newSource": {
+    "sha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "bytes": 75486342,
+    "frozenCandidateWorkRelativePath": "candidate-eight-v1/arrivals-eight-review.blend",
+    "candidateSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "canonicalSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "computedGitBlobSha1": "82edecce76e4711d979f874640314ee801377ea3",
+    "immutableCommit": null,
+    "commitStatus": "Workingtreeaccepted; parentcommit/push/publicationnotperformedbythisreceipt",
+    "canonicalFilenamePreserved": true
+  },
+  "byteDelta": 3087266,
+  "sourceEvidence": {
+    "archiveSourceProof": "frozen-candidate-source-proof.json.gz",
+    "uncompressedProofSha256": "715435918224899607c4241bc41b80afc7c5141a1d243f8b6724a00de2035146",
+    "unrelatedObjectSignaturesExact": 7230,
+    "retainedMarbleCornersExact": 1152,
+    "retainedPositionsNormalsEveryUvExact": true
+  },
+  "standaloneReplay": {
+    "helperRepositoryPath": "penn-station-1935/model/repair_arrivals_access.py",
+    "helperSha256": "115d16ae2a6fe9d2217ab443c27dfeb7a3d7bacac7982360ee1f5c7337b440cf",
+    "receipt": "cli-replay-proof.json",
+    "receiptSha256": "993d5e11a6b1a9d44b87fbb5c2d86fda24393beea38d2ea1fa8d8583a0962bc9",
+    "rawGeometryByteExact": [
+      {
+        "file": "old-exit-owned.glb",
+        "frozenSha256": "48f9fcd749628a535061ad75b98ecfa27ddae53d79d83aa9c82efd2164b3882a",
+        "replaySha256": "48f9fcd749628a535061ad75b98ecfa27ddae53d79d83aa9c82efd2164b3882a",
+        "byteExact": true,
+        "bytes": 108976
+      },
+      {
+        "file": "arrivals-module.glb",
+        "frozenSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+        "replaySha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+        "byteExact": true,
+        "bytes": 15438492
+      },
+      {
+        "file": "retained-concourse-occluder.glb",
+        "frozenSha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+        "replaySha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+        "byteExact": true,
+        "bytes": 59854884
+      },
+      {
+        "file": "retained-protected.glb",
+        "frozenSha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+        "replaySha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+        "byteExact": true,
+        "bytes": 59854884
+      }
+    ],
+    "fixtureGroupsPartsModelsExact": true,
+    "structuralSourceRecordsExact": true,
+    "replayBlendSha256": "5a0ba9c38ef7605faf7076e43756f46c6dcc9e9b44234a0ad152bc0e8b5c99dc",
+    "qualification": "Replayrawgeometryandfixturecoordinatesareexact; savedBlendcontainer/path/generator-bearingproofmetadataarenotbyte-identical. Promotedcanonicalisexactfrozen c96container."
+  },
+  "separateRailwayFixtures": {
+    "recipe": "frozen-candidate-fixture-relocation-recipe.json",
+    "sha256": "4e3b6005e3d7364b0a7d1dd41004e159218d9559d31b97dd9aa3dc548a4e1525",
+    "selectedInstanceIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "retainedInstanceIds": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "scope": "CorecanonicalcontainsnewExitarchitecture. Separateauthoring/runtime railwayfixtureasset islinkedthroughthisrecipe; thecorefilealoneisnotclaimedtocontainthe22railwayfixtures."
+  },
+  "archivePreservation": {
+    "manifestSha256Before": "fe441bc065d78fc602149669bce9fe6dabb71fa633e6a220ab0036fd6c1329a7",
+    "existingFileCount": 19,
+    "existingPayloadHashesUnchanged": true,
+    "existingPayloadHashMapSha256": "a9c1008fdee68067aa30a2f67d77ef41ccfd05c2085a091649cf92484445210c",
+    "manifestChange": "Appendonlythetwofinalhistoryreceiptentries; frozen evidencefilesarenotrewritten."
+  },
+  "restoration": {
+    "scope": "SOURCEFILEONLY; a wholeapplicationrollbackrequiresmatchingruntime/manifest/lightingcheckpoint.",
+    "runFrom": "repositoryroot",
+    "oldGitObject": "f53091b456a5aed99150914b696771c5865c48b9:authoring/penn-station-1935/penn-station-phase5.blend",
+    "newExactContainer": "canonicalfile and frozenexternalcandidate, SHA256c96fb372\u2026; futureimmutablecommit mustbeaddedonlyafterparentactuallycommits.",
+    "instructions": "canonical-history.md"
+  },
+  "writesByThisTask": [
+    "authoring/penn-station-1935/penn-station-phase5.blend",
+    "authoring/penn-station-1935/review/phase8/arrivals/canonical-history.json",
+    "authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md",
+    "authoring/penn-station-1935/review/phase8/arrivals/archive-manifest.json"
+  ],
+  "notPerformed": [
+    "No app/lighting/runtime/dist/index/otherdocs edits",
+    "No frozen archivepayload rewrite",
+    "No finalbrowserrouteorpublicationapproval",
+    "No commit/push",
+    "NoGPU/browser/bake"
+  ]
+}

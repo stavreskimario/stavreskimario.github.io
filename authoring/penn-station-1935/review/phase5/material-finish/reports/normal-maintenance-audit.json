@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Only rare PaleVaultPlaster corner normals bounded to their real triangle hemisphere; no positions/topology/UV0 change",
+  "inputScene": "/Users/stavreskimario/Desktop/penn-station-reconstruction/authoring/penn-station-1935/penn-station-phase4.blend",
+  "inputSceneSha256": "48e1a7c53b883b68b709e61e37d38f1a66288682466d3969a41579454d61406d",
+  "outputScene": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/normal-source/penn-station-phase5-materials.blend",
+  "outputSceneSha256": "95313af1a834ec3f6d4f400859687fdb29c780517bedb4e5c9a8be09ae6e7b61",
+  "outputRaw": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/normal-source/model-waiting-room.glb",
+  "outputRawSha256": "43cdf1cf76c6c7c3222d1a4e3c31fa6a604e2705e5f09133cbd8cc8ef2cead0b",
+  "unchangedCofferGeometryTopologyUv0Sha256": "ec5fe4b9fd6a9d25ab2066d31616eabf40e61bf7ceb1ae6fc009ccbd8fb824e2",
+  "unrelatedSceneSha256": "c33e9f75f14d839e63af8ddd5fabc513222afd62a1f59f66c096e241113c1d00",
+  "unrelatedObjects": 5104,
+  "normalAudit": {
+    "changedCorners": 300,
+    "totalCorners": 452496,
+    "minimumDotBefore": -0.5671385526657104,
+    "minimumDotAfter": 0.2485426962375641,
+    "oppositeCornersBefore": 78,
+    "oppositeCornersAfter": 0,
+    "minimumDotBound": 0.25,
+    "normalSha256Before": "2244cdf039cfaf6e630946ac878aad744554e1766e27bca0f20db39e8a1082cb",
+    "normalSha256After": "63f575a73d9eb8b165193528ad48cad2f15cfc273bff595e3ded983a0e1160ff"
+  },
+  "sourceFiles": {
+    "build_station.py": "5b75612f7e64c6556cd480a6e84d5aff2aa994e44f25cb48300519c9951ef0b7",
+    "surface_finish_normals.py": "8488d7b5c05e32d4dcc26b7711a6d1bd3fe609a21ab76b646bf03631e88dbb12",
+    "bake_lighting.py": "d81aa3f3fca7a942cccf37bd27ceb09a5242780f9854ac1a210248bca4b7f41a"
+  }
+}

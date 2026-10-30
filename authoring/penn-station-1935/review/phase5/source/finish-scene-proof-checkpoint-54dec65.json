@@ -1,0 +1,79 @@
+{
+  "scope": "Append the verified bracket pair and bounded finish to the repaired source.\n\nThe input already contains the scoped coffer-normal and floor-ownership repair.\nExisting geometry, transforms, UVs and corner normals must remain unchanged.\nThe new roughness images are packed and use portable authoring-relative paths.",
+  "inputSha256": "c781f60ec9790c467672d9b439bd12e2d1d4224f3013fa583ae26656052e3ae9",
+  "bracketModuleBlendSha256": "a146fb3599115fc33a17bc70d17977ace20dee1aacef1f15c57c9c833b0186b5",
+  "originalObjectsGeometryExact": 5105,
+  "newMeshObjects": 4,
+  "newAnchorObjects": 2,
+  "newObjectNames": [
+    "Photo-supported west wall bracket",
+    "Photographed bracket metalwork.001",
+    "Photographed bracket globes.001",
+    "Photo-supported east wall bracket",
+    "Photographed bracket metalwork.002",
+    "Photographed bracket globes.002"
+  ],
+  "newFixtureCount": 2,
+  "newLiveLights": 0,
+  "bracketMainWorldOffset": -4.2672,
+  "finishBindings": [
+    {
+      "material": "InteriorGranite",
+      "profile": "InteriorGranite",
+      "sourceSha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "MilfordGranite",
+      "profile": "MilfordGranite",
+      "sourceSha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "Travertine",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "TravertineAshlar0",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "TravertineAshlar1",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    },
+    {
+      "material": "TravertineAshlar2",
+      "profile": "Travertine",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "roughnessFactor": 1,
+      "packed": true
+    }
+  ],
+  "outputSha256": "d1e0160b7c5db2845f8a4b868acfd4e5a662d015aa26fad539fd0d7886dea5e2",
+  "outputBytes": 72494405
+}

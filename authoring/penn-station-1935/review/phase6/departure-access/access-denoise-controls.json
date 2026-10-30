@@ -1,0 +1,570 @@
+{
+  "created": "2026-10-30T03:52:44.742Z",
+  "scope": "Focused validator controls; not final model/browser acceptance",
+  "testSourceSha256": "7d593d5e8496ba04db21b69b76f4a701561aea408d89ca8e897c91cfc89db7fa",
+  "tooling": {
+    "node": "v24.22.1",
+    "sharp": "0.35.5",
+    "libvips": "8.18.7",
+    "webp": "1.6.0"
+  },
+  "checks": [
+    "Four exact archived checkpoint records validate retained HDR hashes, 0.18 controls and bake coverage against regenerated lossless full/fallback derivatives; no current runtime dependency",
+    "Schema2 resolves exactly the two local atlas children; missing/duplicate/wrong-zone/traversal references and ambiguous source directories are rejected",
+    "Schema3 requires the dedicated local order atlas, rejecting missing-order and traversal substitutions",
+    "Only the exact Phase5 vault source directory is accepted, with linear transfer and an 8K full atlas; other zones, traversal/alias paths and a 6K derivative are rejected",
+    "Optional referenced access atlas validates exact Phase6 raw/denoised directories, linear input,2048/512 lossless pixels, raw+retained decoded HDR hashes and byte-identical raw/runtime bake reports",
+    "Unreferenced access records do not change legacy validation; a half-referenced atlas or missing matching access report is rejected",
+    "Access traversal/alias paths,wrong zones or transfer,missing archive fields,corrupted raw/retained HDR hashes and unequal bake-report bytes are rejected",
+    "Access source resolution cannot exceed2048; undersized full/low derivatives and changed same-size source pixels are rejected",
+    "Failed0.18 controls,incorrect source transfer,empty radiance/AO and the observed collapsed UV-atlas failure are rejected",
+    "Explicit and implicit .hdr.gz archival preserves original HDR bytes; a wrong decoded SHA is rejected",
+    "Same-size changed PNG pixels and unsupported derivative dimensions are rejected"
+  ],
+  "legacyCompatibility": {
+    "sourceCommit": "b86a59177e65461f5eb71c0593cab5b53fd4e5f6",
+    "fixtureRecords": [
+      {
+        "file": "lighting-exterior.json",
+        "sourcePath": "penn-station-1935/assets/lighting-exterior.json",
+        "bytes": 5028,
+        "sha256": "c9802f0a9268ac5d437a312d21b13f7673dca09fd694f0fcb084161dafa03d03",
+        "gitBlob": "dc4779c606dfa99928de5001134be3ad4190f5f9"
+      },
+      {
+        "file": "lighting-exterior-denoise.json",
+        "sourcePath": "penn-station-1935/assets/lighting-exterior-denoise.json",
+        "bytes": 2103,
+        "sha256": "7d8b840493d0a486571a7bae2e0142c579bd3f7756fd673deb7c4d25c85ce8c4",
+        "gitBlob": "b2f7605f8c37c7acb1b2b7059f9b76b2f4ca4e20"
+      },
+      {
+        "file": "lighting-waiting-room.json",
+        "sourcePath": "penn-station-1935/assets/lighting-waiting-room.json",
+        "bytes": 5032,
+        "sha256": "a9c0c2a9e0a8a13e8b77c061405ec50e32099798f970d6c670a96900a23e0d3e",
+        "gitBlob": "eaf09c64fd998d913cd55ab4bf1acdee291efe90"
+      },
+      {
+        "file": "lighting-waiting-room-denoise.json",
+        "sourcePath": "penn-station-1935/assets/lighting-waiting-room-denoise.json",
+        "bytes": 2130,
+        "sha256": "c13d00f84cc19a6dc89c696a5740e3521d8842ee2fb30eefe1a56c3ef46c85c1",
+        "gitBlob": "94e96d8bef4a76128314f2e074b7a182894aeadb"
+      },
+      {
+        "file": "lighting-concourse.json",
+        "sourcePath": "penn-station-1935/assets/lighting-concourse.json",
+        "bytes": 4867,
+        "sha256": "3e9d696f56accfd785a257c7c5095a5d64626f6da3d7cd16d49dc299008f750d",
+        "gitBlob": "4525b58e3b8d55f5c51b293eb2bbaa0c50ee4ebd"
+      },
+      {
+        "file": "lighting-concourse-denoise.json",
+        "sourcePath": "penn-station-1935/assets/lighting-concourse-denoise.json",
+        "bytes": 2118,
+        "sha256": "c8e85287c4176bb093a356958689910d02282b431c0e4b9650af8a9d29a94a06",
+        "gitBlob": "3fdc3a2cd6a66e1e78e923c35732740f6e809685"
+      },
+      {
+        "file": "lighting-platform.json",
+        "sourcePath": "penn-station-1935/assets/lighting-platform.json",
+        "bytes": 4961,
+        "sha256": "90c00465874d4147672ae42e780d4115ed23fb433794b620c9f605745ae7923d",
+        "gitBlob": "ab74ef11ae508d38f5b8fa37f3f01ac6bb746646"
+      },
+      {
+        "file": "lighting-platform-denoise.json",
+        "sourcePath": "penn-station-1935/assets/lighting-platform-denoise.json",
+        "bytes": 2096,
+        "sha256": "d83732d8bf93bd9df696f4e2aafc40e487cee558468220869fe07658f9c214a6",
+        "gitBlob": "b67a6045b1ebdc7626b669bd17e220dcc2657621"
+      }
+    ],
+    "retainedSourcePngs": [
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky.png",
+        "bytes": 3169580,
+        "sha256": "d2050d5bd9d755739cbfa8bfa521109f032a8660b4ed8f162262bb78b975b410"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-low.png",
+        "bytes": 344000,
+        "sha256": "bdae224ad21b125ecccfb04ada7598862daab34ce7b61c1d00d3e2b98878ccc3"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky.png",
+        "bytes": 2645805,
+        "sha256": "e39bf877c47602509a4e65baf16b3a9a27bac2cf1baa0a98dabb296ce15f7130"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-low.png",
+        "bytes": 321873,
+        "sha256": "61352df4ca196dee35d9034f2abc1abe30f22ab32c4c3525f547514db352019f"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky.png",
+        "bytes": 2618584,
+        "sha256": "68bce01135d591766482d10099f243f7c9b42baa77d427ab650cadbff9b6e9ee"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-low.png",
+        "bytes": 268246,
+        "sha256": "eccafc5a2b1e274eaafc0d766082eaa8cdb2cc0d4288d2022403d27599b3ad3f"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.png",
+        "bytes": 1324186,
+        "sha256": "ab1874833c6af3d5231b3d3a52ef74c20994bf179e47784aa19971ba3b4ccfc8"
+      },
+      {
+        "file": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky-low.png",
+        "bytes": 116186,
+        "sha256": "9bd4ed3a80bfc8441839e15696aae19990ebc6fc0cc80c8266588f06cb4dc2ac"
+      }
+    ],
+    "derivativeTreatment": "Temporary lossless WebPs regenerated from retained Phase3 PNGs; missing historical HDR archives are restored only in the temporary source tree from SHA-verified immutable local Git blobs. These are not the earlier actual runtime WebP files. Earlier delivered-runtime proof and final model/browser acceptance are separate.",
+    "restoredArchivedHdrs": [
+      {
+        "zone": "exterior",
+        "sourcePath": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-denoised-linear.hdr.gz",
+        "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+        "gitBlob": "04006b129e53b3c3d4bb48798b03cc243516781f",
+        "archiveSha256": "a29e83316d0bb030a4c405d24ee6af31547bcc82af9232993c2aeba2d664a2ab",
+        "retainedDecodedSha256": "49d06cd08c868d71839dfeeedb4854048383fde23922ad2ffe3673529e42c249"
+      },
+      {
+        "zone": "waiting-room",
+        "sourcePath": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-denoised-linear.hdr.gz",
+        "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+        "gitBlob": "c8843ed449847dce8637cf2a4345b15beb45d463",
+        "archiveSha256": "635348bcd53bea286862523a3889bbb34ad63ffbd161a115ea23a76069d5ebdd",
+        "retainedDecodedSha256": "13d435f0dc4693e075a4100ea412074edc24d09656d6ff5b0e13702062e56001"
+      },
+      {
+        "zone": "concourse",
+        "sourcePath": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-denoised-linear.hdr.gz",
+        "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+        "gitBlob": "64ccefd8ca0d95553c41ad022feb4ab887208f50",
+        "archiveSha256": "9c4e91b806f08eb13e1a672926bed154d56bac46040df0b6e92a771180e5ec70",
+        "retainedDecodedSha256": "002356a5be490378ee7582c95f821438dbc65e436c138a465bb2111f4b712fd5"
+      }
+    ],
+    "regeneratedDerivatives": [
+      {
+        "zone": "exterior",
+        "variant": "full",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky.png",
+        "sourceSha256": "d2050d5bd9d755739cbfa8bfa521109f032a8660b4ed8f162262bb78b975b410",
+        "regeneratedWebp": "lighting-exterior-sky.webp",
+        "regeneratedSha256": "ebe31fd868a3bc5d0e945cda4d52d92bd8056922420203b7f427087875028c80",
+        "decodedPixelSha256": "27aaa5067f8ec7722c574ec38fee1f483a12ddb90f78d2be01d044af0da2c1ec",
+        "width": 2048,
+        "height": 2048
+      },
+      {
+        "zone": "exterior",
+        "variant": "low",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-low.png",
+        "sourceSha256": "bdae224ad21b125ecccfb04ada7598862daab34ce7b61c1d00d3e2b98878ccc3",
+        "regeneratedWebp": "lighting-exterior-sky-low.webp",
+        "regeneratedSha256": "5b9d42a7a4b54793231850eb6039f4fb1e4f4c843afe24e7e8b8d168e8c30f44",
+        "decodedPixelSha256": "70fb22e53df2b63da698ec6c6bc9649f8d6c59481178bf2201cbf93d2c2c1123",
+        "width": 512,
+        "height": 512
+      },
+      {
+        "zone": "waiting-room",
+        "variant": "full",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky.png",
+        "sourceSha256": "e39bf877c47602509a4e65baf16b3a9a27bac2cf1baa0a98dabb296ce15f7130",
+        "regeneratedWebp": "lighting-waiting-room-sky.webp",
+        "regeneratedSha256": "869b10b747b167fe564f1120775d01f2cc90605c9240f38558e4de8a474d35a2",
+        "decodedPixelSha256": "8fc90adf2511fc03a280c12f30cd5ffb69e2b306150b2c451f0f5cffc0473773",
+        "width": 2048,
+        "height": 2048
+      },
+      {
+        "zone": "waiting-room",
+        "variant": "low",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-low.png",
+        "sourceSha256": "61352df4ca196dee35d9034f2abc1abe30f22ab32c4c3525f547514db352019f",
+        "regeneratedWebp": "lighting-waiting-room-sky-low.webp",
+        "regeneratedSha256": "174ad2f4db8d6dab06e5fa156fc542a7a51277271868e705d5d871f62820b635",
+        "decodedPixelSha256": "525bd9f53dd0c7b02b92410d45ee2416f0ee36af3c7005cdc10564c89351bcf3",
+        "width": 512,
+        "height": 512
+      },
+      {
+        "zone": "concourse",
+        "variant": "full",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky.png",
+        "sourceSha256": "68bce01135d591766482d10099f243f7c9b42baa77d427ab650cadbff9b6e9ee",
+        "regeneratedWebp": "lighting-concourse-sky.webp",
+        "regeneratedSha256": "83fab9a377428e1d243dee9287e24f61d0130407ddb6e5a979487c6cd3cd0386",
+        "decodedPixelSha256": "fd4973c2f4863b96ab2ee9533a677d91d8ad077545e254e7f0d6311b3025e23e",
+        "width": 2048,
+        "height": 2048
+      },
+      {
+        "zone": "concourse",
+        "variant": "low",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-low.png",
+        "sourceSha256": "eccafc5a2b1e274eaafc0d766082eaa8cdb2cc0d4288d2022403d27599b3ad3f",
+        "regeneratedWebp": "lighting-concourse-sky-low.webp",
+        "regeneratedSha256": "62c0e32bb5b84cbb152181854c8eda8dc61ab1c976f7294f2ecf679a0fd9c027",
+        "decodedPixelSha256": "c36784b660a122efdd612f868f1233e31268c9c8f788b4dfb27adcdaa17a2b77",
+        "width": 512,
+        "height": 512
+      },
+      {
+        "zone": "platform",
+        "variant": "full",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.png",
+        "sourceSha256": "ab1874833c6af3d5231b3d3a52ef74c20994bf179e47784aa19971ba3b4ccfc8",
+        "regeneratedWebp": "lighting-platform-sky.webp",
+        "regeneratedSha256": "e1c1c3a171307d0cfa16c70b9a7a830c81a291b3ca06ff040c83b3b63804cf5c",
+        "decodedPixelSha256": "3d692eaa3dbb143794a6cda87010c838bf9d20b295d431d69adcd4d4d5ff943e",
+        "width": 2048,
+        "height": 2048
+      },
+      {
+        "zone": "platform",
+        "variant": "low",
+        "sourcePng": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky-low.png",
+        "sourceSha256": "9bd4ed3a80bfc8441839e15696aae19990ebc6fc0cc80c8266588f06cb4dc2ac",
+        "regeneratedWebp": "lighting-platform-sky-low.webp",
+        "regeneratedSha256": "43223ebc3d7e1c7e875fe5512df738ac2f1ef94c5946b9a1b89409c5a38f6f81",
+        "decodedPixelSha256": "c98f4b76485099712bc45d76c418b68e9882922fc4c20913bb4119003c11bd92",
+        "width": 512,
+        "height": 512
+      }
+    ],
+    "validatedAtlases": [
+      {
+        "file": "lighting-exterior-denoise.json",
+        "baseZone": "exterior",
+        "zone": "exterior",
+        "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+        "recordSha256": "7d8b840493d0a486571a7bae2e0142c579bd3f7756fd673deb7c4d25c85ce8c4",
+        "inputTransfer": "srgb",
+        "sourceSha256": "a4a74239965205d01c7de03b4a598e8b55e3c76e19cfe4fe1678fa5bbe696e2e",
+        "originalLinear": {
+          "mean": 0.0717393159866333,
+          "minimum": 0,
+          "maximum": 0.784324049949646
+        },
+        "denoisedLinear": {
+          "mean": 0.07217348366975784,
+          "minimum": 0,
+          "maximum": 1.183816909790039
+        },
+        "relativeMeanChange": 0.0060520187173995765,
+        "constant018Test": {
+          "before": 0.18,
+          "after": 0.18000005185604095,
+          "maximumError": 0,
+          "passed": true,
+          "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+        },
+        "retainedHdr": {
+          "file": "lighting-exterior-sky-denoised-linear.hdr",
+          "sha256": "49d06cd08c868d71839dfeeedb4854048383fde23922ad2ffe3673529e42c249",
+          "decodedLinear": {
+            "mean": 0.0719425156712532,
+            "minimum": 0,
+            "maximum": 1.1796875
+          },
+          "meanQuantizationError": 0.00023093329218681902
+        },
+        "retainedArchive": "lighting-exterior-sky-denoised-linear.hdr.gz",
+        "retainedArchiveBytes": 9951074,
+        "retainedDecodedBytes": 16916531,
+        "retainedWidth": 2048,
+        "retainedHeight": 2048,
+        "bakeReport": "lighting-exterior.json",
+        "bakeReportSha256": "c9802f0a9268ac5d437a312d21b13f7673dca09fd694f0fcb084161dafa03d03",
+        "atlasSurfaceArea": 0.5483226776123047,
+        "derivatives": [
+          {
+            "variant": "full",
+            "file": "lighting-exterior-sky.webp",
+            "width": 2048,
+            "height": 2048,
+            "clippedRGBSamples": 31
+          },
+          {
+            "variant": "low",
+            "file": "lighting-exterior-sky-low.webp",
+            "width": 512,
+            "height": 512,
+            "clippedRGBSamples": 0
+          }
+        ],
+        "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+      },
+      {
+        "file": "lighting-waiting-room-denoise.json",
+        "baseZone": "waiting-room",
+        "zone": "waiting-room",
+        "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+        "recordSha256": "c13d00f84cc19a6dc89c696a5740e3521d8842ee2fb30eefe1a56c3ef46c85c1",
+        "inputTransfer": "srgb",
+        "sourceSha256": "d3cf7fb7c01ca50e8d0fa2e2a26aa6aeebf09d87b6ef14f1e3b5c50eb627d108",
+        "originalLinear": {
+          "mean": 0.012887709774076939,
+          "minimum": 0,
+          "maximum": 0.6735773086547852
+        },
+        "denoisedLinear": {
+          "mean": 0.012967550195753574,
+          "minimum": 0,
+          "maximum": 1.0037989616394043
+        },
+        "relativeMeanChange": 0.006195082219901504,
+        "constant018Test": {
+          "before": 0.18,
+          "after": 0.18000005185604095,
+          "maximumError": 0,
+          "passed": true,
+          "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+        },
+        "retainedHdr": {
+          "file": "lighting-waiting-room-sky-denoised-linear.hdr",
+          "sha256": "13d435f0dc4693e075a4100ea412074edc24d09656d6ff5b0e13702062e56001",
+          "decodedLinear": {
+            "mean": 0.012928016483783722,
+            "minimum": 0,
+            "maximum": 1
+          },
+          "meanQuantizationError": 0.00003953167833969928
+        },
+        "retainedArchive": "lighting-waiting-room-sky-denoised-linear.hdr.gz",
+        "retainedArchiveBytes": 8509510,
+        "retainedDecodedBytes": 16916531,
+        "retainedWidth": 2048,
+        "retainedHeight": 2048,
+        "bakeReport": "lighting-waiting-room.json",
+        "bakeReportSha256": "a9c0c2a9e0a8a13e8b77c061405ec50e32099798f970d6c670a96900a23e0d3e",
+        "atlasSurfaceArea": 0.3518076539039612,
+        "derivatives": [
+          {
+            "variant": "full",
+            "file": "lighting-waiting-room-sky.webp",
+            "width": 2048,
+            "height": 2048,
+            "clippedRGBSamples": 1
+          },
+          {
+            "variant": "low",
+            "file": "lighting-waiting-room-sky-low.webp",
+            "width": 512,
+            "height": 512,
+            "clippedRGBSamples": 0
+          }
+        ],
+        "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+      },
+      {
+        "file": "lighting-concourse-denoise.json",
+        "baseZone": "concourse",
+        "zone": "concourse",
+        "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+        "recordSha256": "c8e85287c4176bb093a356958689910d02282b431c0e4b9650af8a9d29a94a06",
+        "inputTransfer": "srgb",
+        "sourceSha256": "845e25622de75f648d7f935f5f1fb2c77526a962130a88d1d40215e143ce20bd",
+        "originalLinear": {
+          "mean": 0.050909530371427536,
+          "minimum": 0,
+          "maximum": 0.6877774000167847
+        },
+        "denoisedLinear": {
+          "mean": 0.05091196671128273,
+          "minimum": 0,
+          "maximum": 0.6950743198394775
+        },
+        "relativeMeanChange": 0.000047856262617607115,
+        "constant018Test": {
+          "before": 0.18,
+          "after": 0.18000005185604095,
+          "maximumError": 0,
+          "passed": true,
+          "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+        },
+        "retainedHdr": {
+          "file": "lighting-concourse-sky-denoised-linear.hdr",
+          "sha256": "002356a5be490378ee7582c95f821438dbc65e436c138a465bb2111f4b712fd5",
+          "decodedLinear": {
+            "mean": 0.050752878189086914,
+            "minimum": 0,
+            "maximum": 0.69140625
+          },
+          "meanQuantizationError": 0.00015907170018181205
+        },
+        "retainedArchive": "lighting-concourse-sky-denoised-linear.hdr.gz",
+        "retainedArchiveBytes": 8967757,
+        "retainedDecodedBytes": 16916531,
+        "retainedWidth": 2048,
+        "retainedHeight": 2048,
+        "bakeReport": "lighting-concourse.json",
+        "bakeReportSha256": "3e9d696f56accfd785a257c7c5095a5d64626f6da3d7cd16d49dc299008f750d",
+        "atlasSurfaceArea": 0.7127137184143066,
+        "derivatives": [
+          {
+            "variant": "full",
+            "file": "lighting-concourse-sky.webp",
+            "width": 2048,
+            "height": 2048,
+            "clippedRGBSamples": 0
+          },
+          {
+            "variant": "low",
+            "file": "lighting-concourse-sky-low.webp",
+            "width": 512,
+            "height": 512,
+            "clippedRGBSamples": 0
+          }
+        ],
+        "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+      },
+      {
+        "file": "lighting-platform-denoise.json",
+        "baseZone": "platform",
+        "zone": "platform",
+        "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/platform-corrected",
+        "recordSha256": "d83732d8bf93bd9df696f4e2aafc40e487cee558468220869fe07658f9c214a6",
+        "inputTransfer": "linear",
+        "sourceSha256": "b02a611d5c1d2eaf3921ea293fe4be2b4110b16e1cab75370d8c4b4605b9771b",
+        "originalLinear": {
+          "mean": 0.25997987389564514,
+          "minimum": 0,
+          "maximum": 0.7578125
+        },
+        "denoisedLinear": {
+          "mean": 0.25994929671287537,
+          "minimum": 0,
+          "maximum": 1.0390487909317017
+        },
+        "relativeMeanChange": -0.00011761365336326879,
+        "constant018Test": {
+          "before": 0.18,
+          "after": 0.18000005185604095,
+          "maximumError": 0,
+          "passed": true,
+          "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+        },
+        "retainedHdr": {
+          "file": "lighting-platform-sky-denoised-linear.hdr",
+          "sha256": "1c9cb0ff0b0b6a82769e55100e15fc593af9b627972bca0b4d6b0b1ceecaca91",
+          "decodedLinear": {
+            "mean": 0.258939653635025,
+            "minimum": 0,
+            "maximum": 1.03125
+          },
+          "meanQuantizationError": 0.0010097749764099717
+        },
+        "retainedArchive": "lighting-platform-sky-denoised-linear.hdr",
+        "retainedArchiveBytes": 16916531,
+        "retainedDecodedBytes": 16916531,
+        "retainedWidth": 2048,
+        "retainedHeight": 2048,
+        "bakeReport": "lighting-platform.json",
+        "bakeReportSha256": "90c00465874d4147672ae42e780d4115ed23fb433794b620c9f605745ae7923d",
+        "atlasSurfaceArea": 0.8741489052772522,
+        "derivatives": [
+          {
+            "variant": "full",
+            "file": "lighting-platform-sky.webp",
+            "width": 2048,
+            "height": 2048,
+            "clippedRGBSamples": 1
+          },
+          {
+            "variant": "low",
+            "file": "lighting-platform-sky-low.webp",
+            "width": 512,
+            "height": 512,
+            "clippedRGBSamples": 0
+          }
+        ],
+        "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+      }
+    ]
+  },
+  "accessControl": {
+    "synthetic": true,
+    "rawSourceSha256": "7251b0092602a9bc53bad254aa7bbb7b24639eae18bc155f95e55d2d10b2b9b3",
+    "retainedHdrSha256": "4b4b98633f08a355254c224082e5926e4a67e3be135b278d5faa7dfd9f7d94b2",
+    "bakeReportSha256": "3ea6381d1179fd4cc589fff4534e46c78ff5df1e0a84b5cc99baeebd0e7d8d89",
+    "validatedAtlas": {
+      "file": "lighting-concourse-access-denoise.json",
+      "baseZone": "concourse-access",
+      "zone": "concourse-access",
+      "authoringDirectory": "authoring/penn-station-1935/lighting/phase6/denoised",
+      "recordSha256": "bf264210fd173255bc9f5ad4e97e58237efe45e4a1206c78d35f5f6af5baf730",
+      "inputTransfer": "linear",
+      "sourceSha256": "7251b0092602a9bc53bad254aa7bbb7b24639eae18bc155f95e55d2d10b2b9b3",
+      "originalLinear": {
+        "mean": 0.125,
+        "minimum": 0.125,
+        "maximum": 0.125
+      },
+      "denoisedLinear": {
+        "mean": 0.125,
+        "minimum": 0.125,
+        "maximum": 0.125
+      },
+      "relativeMeanChange": 0,
+      "constant018Test": {
+        "before": 0.18,
+        "after": 0.18000005185604095,
+        "maximumError": 0,
+        "passed": true,
+        "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+      },
+      "retainedHdr": {
+        "file": "lighting-concourse-access-sky-denoised-linear.hdr",
+        "archiveFile": "lighting-concourse-access-sky-denoised-linear.hdr.gz",
+        "sha256": "4b4b98633f08a355254c224082e5926e4a67e3be135b278d5faa7dfd9f7d94b2",
+        "decodedLinear": {
+          "mean": 0.125,
+          "minimum": 0.125,
+          "maximum": 0.125
+        }
+      },
+      "retainedArchive": "lighting-concourse-access-sky-denoised-linear.hdr.gz",
+      "retainedArchiveBytes": 1265,
+      "retainedDecodedBytes": 286802,
+      "retainedWidth": 2048,
+      "retainedHeight": 2048,
+      "bakeReport": "lighting-concourse-access.json",
+      "bakeReportSha256": "3ea6381d1179fd4cc589fff4534e46c78ff5df1e0a84b5cc99baeebd0e7d8d89",
+      "atlasSurfaceArea": 0.7127137184143066,
+      "rawSource": {
+        "authoringDirectory": "authoring/penn-station-1935/lighting/phase6/raw",
+        "archiveFile": "lighting-concourse-access-sky.hdr.gz",
+        "archiveBytes": 1261,
+        "decodedBytes": 286797,
+        "decodedSha256": "7251b0092602a9bc53bad254aa7bbb7b24639eae18bc155f95e55d2d10b2b9b3",
+        "bakeReportSha256": "3ea6381d1179fd4cc589fff4534e46c78ff5df1e0a84b5cc99baeebd0e7d8d89"
+      },
+      "derivatives": [
+        {
+          "variant": "full",
+          "file": "lighting-concourse-access-sky.webp",
+          "width": 2048,
+          "height": 2048,
+          "clippedRGBSamples": 0
+        },
+        {
+          "variant": "low",
+          "file": "lighting-concourse-access-sky-low.webp",
+          "width": 512,
+          "height": 512,
+          "clippedRGBSamples": 0
+        }
+      ],
+      "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+    }
+  }
+}

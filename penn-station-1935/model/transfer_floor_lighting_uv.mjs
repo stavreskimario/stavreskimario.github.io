@@ -1,0 +1,57 @@
+// Offline atlas correspondence; no textures are read and no shape is changed.
+import assert from 'node:assert/strict';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
+import {parseGlb} from './meshopt_patch_io.mjs';
+import {writeGlb} from '../asset_io.mjs';
+import {accessors,worldNodes,decodedTriangles} from '../../tests/helpers/penn-decoded-geometry.mjs';
+const req=createRequire(path.join(process.env.PENN_TOOLS||'/private/tmp/penn-station-tools','package.json'));
+const {Vector3,Triangle,BufferGeometry,BufferAttribute}=req('three'),{MeshBVH}=req('three-mesh-bvh');
+const name='ConcourseOpaqueCirculationConcrete',hash=b=>createHash('sha256').update(b).digest('hex'),v=p=>new Vector3(...p),bucket=n=>{const a=[Math.abs(n.x),Math.abs(n.y),Math.abs(n.z)],i=a.indexOf(Math.max(...a));return i*2+(n.getComponent(i)<0?1:0);};
+function lookup(source){
+ const read=accessors(source),faces=[];
+ for(const{index:ni,matrix}of worldNodes(source.json)){
+  const node=source.json.nodes[ni];if(node.mesh===undefined)continue;
+  for(const p of source.json.meshes[node.mesh].primitives){const material=source.json.materials[p.material];if(material.name!==name)continue;assert(!node.extensions?.EXT_mesh_gpu_instancing,'Floor atlas source is not instanced');
+   const channel=material.occlusionTexture?.extensions?.KHR_texture_transform?.texCoord??material.occlusionTexture?.texCoord??0;
+   assert(p.attributes[`TEXCOORD_${channel}`]!==undefined,'Original concrete must retain its atlas UV channel');
+   const pos=read(p.attributes.POSITION),uv=read(p.attributes[`TEXCOORD_${channel}`]),ix=read(p.indices),count=source.json.accessors[p.indices].count;
+   for(let k=0;k<count;k+=3){const ids=[0,1,2].map(i=>ix(k+i)[0]),points=ids.map(i=>v(pos(i)).applyMatrix4(matrix)),triangle=new Triangle(...points),normal=triangle.getNormal(new Vector3());if(triangle.getArea()<1e-12)continue;faces.push({triangle,normal,uv:ids.map(i=>uv(i)),id:faces.length});}
+  }
+ }
+ assert(faces.length,'Original concrete faces found');
+ function tree(items){const positions=new Float32Array(items.length*9);items.forEach((f,i)=>{f.triangle.a.toArray(positions,i*9);f.triangle.b.toArray(positions,i*9+3);f.triangle.c.toArray(positions,i*9+6);});const geometry=new BufferGeometry();geometry.setAttribute('position',new BufferAttribute(positions,3));return{items,bvh:new MeshBVH(geometry,{indirect:true,maxLeafTris:8})};}
+ return{faces,all:tree(faces),groups:Array.from({length:6},(_,i)=>{const list=faces.filter(f=>bucket(f.normal)===i);return list.length?tree(list):null;})};
+}
+export async function transferFloorLightingUV(sourcePath,modulePath,outPath,reportPath,{buriedCoverBounds=[[-44.4,-16.5608,-7.75,7.75],[-41.5,-18.5,-45.5,-8.5],[-41.5,-18.5,8.5,45.5]]}={}){
+ assert.notEqual(path.resolve(sourcePath),path.resolve(outPath));assert.notEqual(path.resolve(modulePath),path.resolve(outPath));
+ const sourceBytes=await readFile(sourcePath),moduleBytes=await readFile(modulePath),source=parseGlb(sourceBytes),target=parseGlb(moduleBytes),json=structuredClone(target.json),read=accessors(target),map=lookup(source);
+ assert.equal(target.json.buffers.length,1);assert(!target.json.extensionsUsed?.includes('EXT_meshopt_compression'),'Target is the reviewed raw Blender module');
+ const nodes=worldNodes(json).filter(({index})=>json.nodes[index].mesh!==undefined);assert.equal(nodes.length,1,'Bounded floor module has one mesh node');
+ const{index:ni,matrix}=nodes[0],mesh=json.meshes[json.nodes[ni].mesh];assert.equal(mesh.primitives.length,1);const primitive=mesh.primitives[0];assert.equal(json.materials[primitive.material].name,name);
+ assert.equal(primitive.mode??4,4);assert(!primitive.targets,'Floor module has no morph targets');const originalPrimitive=structuredClone(primitive),indexRead=read(primitive.indices),count=json.accessors[primitive.indices].count;assert.equal(count%3,0);
+ const ids=Array.from({length:count},(_,i)=>indexRead(i)[0]),position=read(primitive.attributes.POSITION),uvs=new Float32Array(count*2),records=[];
+ let exposed=0,buriedFallback=0,largestExposedGap=0,largestBuriedGap=0,cornerExtrapolations=0,verifiedExposedCorners=0,maxExposedCornerUVDifference=0;
+ for(let k=0;k<count;k+=3){const points=ids.slice(k,k+3).map(i=>v(position(i)).applyMatrix4(matrix)),triangle=new Triangle(...points),normal=triangle.getNormal(new Vector3()),centre=triangle.getMidpoint(new Vector3()),isExposedTop=normal.y>.98&&Math.max(...points.map(p=>p.y))>-.005;
+  const group=map.groups[bucket(normal)],limit=isExposedTop?.003:.225;let near=group?.bvh.closestPointToPoint(centre,{},0,limit);if(near?.distance>limit)near=null;let face=near&&group.items[near.faceIndex],distance=near?.distance;
+  let fallback=false;if(!face||face.normal.dot(normal)<.99){assert(!isExposedTop,'Exposed top has no aligned original face within3mm');assert(Math.max(...points.map(p=>p.y))<.005,'Only buried faces may change chart orientation');assert(buriedCoverBounds.some(b=>centre.x>=b[0]-.003&&centre.x<=b[1]+.003&&centre.z>=b[2]-.003&&centre.z<=b[3]+.003),'Nearest-chart fallback must lie under an existing marble cover');const candidate=map.all.bvh.closestPointToPoint(centre,{},0,.225);assert(candidate&&candidate.distance<=.225,'Buried nearest-chart gap exceeds225mm');face=map.all.items[candidate.faceIndex];distance=candidate.distance;fallback=true;}
+  if(isExposedTop){exposed++;const gap=Math.max(...points.map(p=>Math.abs(new Vector3().subVectors(p,face.triangle.a).dot(face.normal))));assert(gap<=.003001,'Exposed corner plane gap exceeds3mm');largestExposedGap=Math.max(largestExposedGap,gap);assert(face.normal.dot(normal)>=.99);}
+  else{largestBuriedGap=Math.max(largestBuriedGap,distance);if(fallback)buriedFallback++;}
+  const bary=[];
+  for(let corner=0;corner<3;corner++){const weights=face.triangle.getBarycoord(points[corner],new Vector3());assert(weights,'Nondegenerate original chart');bary.push(weights.toArray());if(Math.min(weights.x,weights.y,weights.z)<-1e-5)cornerExtrapolations++;
+   const uv=[0,1].map(i=>weights.x*face.uv[0][i]+weights.y*face.uv[1][i]+weights.z*face.uv[2][i]);assert(uv.every(Number.isFinite),'Finite transferred UVs');assert(uv.every(x=>x>=-.001&&x<=1.001),'Transferred UV leaves the atlas');if(isExposedTop){let best=Infinity;const point=points[corner];group.bvh.shapecast({intersectsBounds:box=>box.distanceToPoint(point)<=.0031,intersectsTriangle:(t,faceIndex)=>{if(t.closestPointToPoint(point,new Vector3()).distanceTo(point)>.0031)return false;const candidate=group.items[faceIndex];if(candidate.normal.dot(normal)<.99)return false;const b=candidate.triangle.getBarycoord(point,new Vector3());const expected=[0,1].map(j=>b.x*candidate.uv[0][j]+b.y*candidate.uv[1][j]+b.z*candidate.uv[2][j]);best=Math.min(best,Math.hypot(expected[0]-uv[0],expected[1]-uv[1]));return false;}});assert(best<=.0002,`Exposed triangle${k/3} corner${corner} crosses an original atlas chart (${best})`);verifiedExposedCorners++;maxExposedCornerUVDifference=Math.max(maxExposedCornerUVDifference,best);}uvs[(k+corner)*2]=uv[0];uvs[(k+corner)*2+1]=uv[1];}
+  records.push({triangle:k/3,sourceFace:face.id,exposedTop:isExposedTop,buriedFallback:fallback,centroidDistance:distance,barycentricCorners:bary});
+ }
+ let length=target.binary.length;const chunks=[target.binary],attributeHashes={};
+ const append=(bytes,targetType)=>{const start=length;chunks.push(bytes);length+=bytes.length;const pad=(4-length%4)%4;if(pad){chunks.push(Buffer.alloc(pad));length+=pad;}const index=json.bufferViews.length;json.bufferViews.push({buffer:0,byteOffset:start,byteLength:bytes.length,...(targetType?{target:targetType}:{})});return index;};
+ for(const[semantic,ai]of Object.entries(originalPrimitive.attributes)){assert.notEqual(semantic,'TEXCOORD_0','Target has no atlas UV to overwrite');const a=target.json.accessors[ai],view=target.json.bufferViews[a.bufferView];assert.equal(view.buffer,0);assert(!view.extensions&&!a.sparse);const components={SCALAR:1,VEC2:2,VEC3:3,VEC4:4}[a.type],size={5120:1,5121:1,5122:2,5123:2,5125:4,5126:4}[a.componentType],elementBytes=components*size,stride=view.byteStride||elementBytes,expanded=Buffer.alloc(count*elementBytes);ids.forEach((old,i)=>target.binary.copy(expanded,i*elementBytes,(view.byteOffset||0)+(a.byteOffset||0)+old*stride,(view.byteOffset||0)+(a.byteOffset||0)+old*stride+elementBytes));const next={...a,count,bufferView:append(expanded,34962),byteOffset:0};delete next.min;delete next.max;if(semantic==='POSITION'){assert.equal(a.componentType,5126);next.min=[0,1,2].map(j=>Math.min(...ids.map(i=>position(i)[j])));next.max=[0,1,2].map(j=>Math.max(...ids.map(i=>position(i)[j])));}primitive.attributes[semantic]=json.accessors.length;json.accessors.push(next);attributeHashes[semantic]=hash(expanded);}
+ const uvBytes=Buffer.from(uvs.buffer);primitive.attributes.TEXCOORD_0=json.accessors.length;json.accessors.push({bufferView:append(uvBytes,34962),componentType:5126,type:'VEC2',count});
+ const indices=Buffer.alloc(count*4);for(let i=0;i<count;i++)indices.writeUInt32LE(i,i*4);primitive.indices=json.accessors.length;json.accessors.push({bufferView:append(indices,34963),componentType:5125,type:'SCALAR',count});json.buffers[0].byteLength=length;
+ const output=writeGlb(json,Buffer.concat(chunks)),decoded=parseGlb(output),before=[...decodedTriangles(target,new Set([name]))].map(t=>t.triangle),after=[...decodedTriangles(decoded,new Set([name]))].map(t=>t.triangle);assert.deepEqual(after,before,'Every world-space triangle is exact');assert.deepEqual(json.nodes,target.json.nodes);assert.deepEqual(json.materials,target.json.materials);const outputRead=accessors(decoded);for(const[semantic,ai]of Object.entries(originalPrimitive.attributes))for(let i=0;i<count;i++)assert.deepEqual(outputRead(primitive.attributes[semantic])(i),read(ai)(ids[i]),`Round-trip ${semantic} corner bytes/values remain exact`);
+ const report={status:'passed',source:path.resolve(sourcePath),sourceSha256:hash(sourceBytes),module:path.resolve(modulePath),moduleSha256:hash(moduleBytes),output:path.resolve(outPath),outputSha256:hash(output),sourceFaces:map.faces.length,triangles:count/3,expandedCorners:count,oldVertexCount:target.json.accessors[originalPrimitive.attributes.POSITION].count,exposedTopTriangles:exposed,buriedOrientationFallbacks:buriedFallback,maxExposedPlaneGapMetres:largestExposedGap,maxBuriedNearestGapMetres:largestBuriedGap,limits:{exposedGapMetres:.003,normalDot:.99,buriedGapMetres:.225,buriedCoverBounds},cornerExtrapolations,verifiedExposedCorners,maxExposedCornerUVDifference,unchangedWorldTriangles:true,unchangedAttributeCornerHashes:attributeHashes,uvSha256:hash(uvBytes),newUV0Only:true,perTriangleSourceChart:true};
+ await mkdir(path.dirname(outPath),{recursive:true});await writeFile(outPath,output);await writeFile(reportPath,JSON.stringify(report,null,2)+'\n');await writeFile(reportPath.replace(/\.json$/,'.correspondence.json'),JSON.stringify(records)+'\n');return report;
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){const args={};for(let i=2;i<process.argv.length;i+=2)args[process.argv[i].slice(2)]=process.argv[i+1];for(const key of['source','module','out','report'])assert(args[key],`Missing ${key}`);console.log(JSON.stringify(await transferFloorLightingUV(args.source,args.module,args.out,args.report)));}

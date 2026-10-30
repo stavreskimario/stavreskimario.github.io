@@ -1,0 +1,354 @@
+{
+  "zone": "waiting-room-vault",
+  "frameZone": "waiting-room",
+  "surfaceGroup": "vault",
+  "uvMarginPixels": 8.0,
+  "uvMarginMethod": "FRACTION",
+  "source": "model-waiting-room.glb",
+  "sourceSha256": "43cdf1cf76c6c7c3222d1a4e3c31fa6a604e2705e5f09133cbd8cc8ef2cead0b",
+  "resolution": 8192,
+  "samples": 128,
+  "aoPathSamples": 4,
+  "aoNodeSamples": 24,
+  "engine": "4.3.0 Cycles METAL",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "atlasSurfaceArea": 0.2388327270746231,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
+  "registeredOccluders": [
+    {
+      "zone": "exterior",
+      "source": "model-exterior.glb",
+      "sha256": "de8b76b4a83aa184d9934472a6a6fa94c1a6616cba926dd335573c65c57a6bb5",
+      "heightOffset": 4.2672,
+      "objects": 14
+    },
+    {
+      "zone": "concourse",
+      "source": "model-concourse.glb",
+      "sha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
+      "heightOffset": 0.0,
+      "objects": 5062
+    },
+    {
+      "zone": "platform",
+      "source": "model-platform.glb",
+      "sha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
+      "heightOffset": 0.0,
+      "objects": 66804
+    },
+    {
+      "zone": "trains",
+      "source": "model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "heightOffset": -8.886825000000002,
+      "objects": 66
+    },
+    {
+      "zone": "context",
+      "source": "model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "heightOffset": 4.2672,
+      "objects": 10736
+    }
+  ],
+  "unbakedPrimaryMeshes": 9,
+  "surfaceProfiles": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1.0,
+  "retainedHdrTransfer": "linear; separate Non-Color float buffer set before pixel assignment",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.29611751437187195,
+    "coveredPixels": 67108864
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.1582227200269699,
+    "mean": 0.0341600701212883,
+    "coveredPixels": 27800473
+  },
+  "elapsedSeconds": 974.9051446250014,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-waiting-room-vault.glb",
+  "orderSeparation": {
+    "frame": "raw waiting-room Blender/Main0",
+    "orderTopMetres": 20.980400000000003,
+    "centresXY": [
+      [
+        -14.2,
+        -42.216
+      ],
+      [
+        -14.2,
+        -14.072
+      ],
+      [
+        -14.2,
+        14.072
+      ],
+      [
+        -14.2,
+        42.216
+      ],
+      [
+        14.2,
+        -42.216
+      ],
+      [
+        14.2,
+        -14.072
+      ],
+      [
+        14.2,
+        14.072
+      ],
+      [
+        14.2,
+        42.216
+      ]
+    ],
+    "selection": "whole connected stone components inside the eight authored plinth/shaft/capital envelopes; imposts/walls excluded",
+    "objects": [
+      {
+        "sourceObject": "02 Main waiting room \u2014 Travertine",
+        "selectedPolygons": 538528,
+        "polygonsByOrder": {
+          "0": 67316,
+          "1": 67316,
+          "2": 67316,
+          "3": 67316,
+          "4": 67316,
+          "5": 67316,
+          "6": 67316,
+          "7": 67316
+        }
+      },
+      {
+        "sourceObject": "02 Main waiting room \u2014 InteriorGranite",
+        "selectedPolygons": 20704,
+        "polygonsByOrder": {
+          "0": 2588,
+          "1": 2588,
+          "2": 2588,
+          "3": 2588,
+          "4": 2588,
+          "5": 2588,
+          "6": 2588,
+          "7": 2588
+        }
+      }
+    ],
+    "polygonsByOrder": {
+      "0": 69904,
+      "1": 69904,
+      "2": 69904,
+      "3": 69904,
+      "4": 69904,
+      "5": 69904,
+      "6": 69904,
+      "7": 69904
+    }
+  },
+  "orderUv": null,
+  "vaultNormalIntegrity": {
+    "method": "Welded UV workspace; exact CORNER-ID UV transfer onto untouched source mesh",
+    "cornerCount": 452496,
+    "cornerAssociationPreservedExactly": true,
+    "architecturalUv0PreservedExactly": true,
+    "weldCoincidentVertices": true,
+    "architecturalFaceCornerPositionsPreservedExactly": true,
+    "architecturalTopologyPreservedExactly": true,
+    "authoredSplitNormalsPreservedExactly": true,
+    "weldForUvPackingOnly": true,
+    "uvPackingVerticesAfterWeld": 75857,
+    "smartProjectAngleDegrees": 25,
+    "uvOwnership": {
+      "method": "Float64 convex separating-axis test of strict triangle interiors; shared edges excluded",
+      "uvDistanceTolerance": 1e-12,
+      "triangles": 150832,
+      "candidatePairs": 375849,
+      "overlappingTrianglePairs": 0,
+      "firstOverlappingPairs": [],
+      "zeroAreaTriangles": 0,
+      "minimumTriangleUvArea": 6.373969174688909e-08,
+      "elapsedSeconds": 1.0415675410004042
+    },
+    "weldToleranceMetres": 1e-05,
+    "verticesBefore": 155838,
+    "verticesAfter": 155838,
+    "triangles": 150832,
+    "maximumNormalStorageAngleDegrees": 0.0,
+    "meanNormalStorageAngleDegrees": 0.0,
+    "expectedNormalsSha256": "49299f09c010af4d884925f3d2ca889f399f9958c160fc63f7d131cdc8062e81",
+    "actualNormalsSha256": "49299f09c010af4d884925f3d2ca889f399f9958c160fc63f7d131cdc8062e81"
+  }
+}

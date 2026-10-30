@@ -1,0 +1,47 @@
+{
+  "scope": "Tiny two-mesh first-shadow-pass control with the exact current helper. Camera projection primed equally for each case; only shadow-camera depth synchronization differs. No station app edits or rebuilds.",
+  "browser": "156.0.8078.74",
+  "helperSha256": "5cf701bc528c9e93e69880663d9f9cd22ea60bb681591bf94fdbf23c14ce3ac8",
+  "threeRevision": "180",
+  "rows": [
+    {
+      "control": "forward",
+      "activeReverse": false,
+      "shadowReverseBeforeDraw": false,
+      "shadowReverseAfterDraw": false,
+      "maximumCachedMatrixMismatch": 0,
+      "changedPixelsAfterMatrixOnlyCorrection": 0,
+      "meanAbsoluteRgbError": 0,
+      "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "glError": 0,
+      "firstImage": "forward-first.png",
+      "matrix-correctedImage": "forward-matrix-corrected.png"
+    },
+    {
+      "control": "reversed-unprimed",
+      "activeReverse": true,
+      "shadowReverseBeforeDraw": false,
+      "shadowReverseAfterDraw": true,
+      "maximumCachedMatrixMismatch": 0.38285683339496085,
+      "changedPixelsAfterMatrixOnlyCorrection": 17620,
+      "meanAbsoluteRgbError": 7.697177886962891,
+      "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "glError": 0,
+      "firstImage": "reversed-unprimed-first.png",
+      "matrix-correctedImage": "reversed-unprimed-matrix-corrected.png"
+    },
+    {
+      "control": "reversed-primed",
+      "activeReverse": true,
+      "shadowReverseBeforeDraw": true,
+      "shadowReverseAfterDraw": true,
+      "maximumCachedMatrixMismatch": 0,
+      "changedPixelsAfterMatrixOnlyCorrection": 0,
+      "meanAbsoluteRgbError": 0,
+      "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "glError": 0,
+      "firstImage": "reversed-primed-first.png",
+      "matrix-correctedImage": "reversed-primed-matrix-corrected.png"
+    }
+  ]
+}

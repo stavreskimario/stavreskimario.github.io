@@ -1,0 +1,24 @@
+{
+  "scope": "Exactly one reviewed material-name alias normalized; every other JSON field and complete BIN unchanged. Original rejected bytes preserved.",
+  "input": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate/old-owned.glb",
+    "sha256": "38b9ce2c3349c5090335263c08efb3d30736611878ccb8a553639262e370ac90",
+    "bytes": 249296
+  },
+  "output": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate/old-owned-alias-normalized.glb",
+    "sha256": "9607ce50bd40fc95fd13a6c5949b3aaf3d1411ded4795f11336cc3ee3205a068",
+    "bytes": 249292
+  },
+  "changes": [
+    {
+      "material": 0,
+      "before": "REMOVAL_PaintedStructuralIron.001",
+      "after": "REMOVAL_PaintedStructuralIron",
+      "originalMaterialName": "PaintedStructuralIron"
+    }
+  ],
+  "binaryExact": true,
+  "binarySha256": "00c6d078de196f1f1784f4e14b728be7c36dfb1de6f8c3632c1789382b41d489",
+  "allNonAliasJsonExact": true
+}

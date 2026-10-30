@@ -1,0 +1,72 @@
+{
+  "scope": "Independent decoded geometry regression. Stair-head positions, lanes, sample spacing, tolerances and assertions are unchanged; authoritative concrete is now included and raw views/full node transforms are decoded.",
+  "cases": [
+    {
+      "case": "baseline",
+      "exit": 1,
+      "expectedExit": 1,
+      "overlapCounts": [
+        52,
+        52
+      ],
+      "voidCounts": [
+        4,
+        4
+      ],
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: model-concourse.glb.gz: 52/78 sampled positions have competing concrete/marble finishes\n\n52 !== 0\n\n    at file:///Users/stavreskimario/Desktop/penn-station-reconstruction/tests/penn-floor-ownership.mjs:54:10 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 52,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "case": "repaired",
+      "exit": 0,
+      "expectedExit": 0,
+      "overlapCounts": [
+        0,
+        0
+      ],
+      "voidCounts": [
+        4,
+        4
+      ],
+      "stderr": ""
+    }
+  ],
+  "oldDecoderFailureCounts": [
+    960,
+    960
+  ],
+  "updatedStairSupport": {
+    "baseline": [
+      {
+        "tested": 1377,
+        "unsupported": 0
+      },
+      {
+        "tested": 1377,
+        "unsupported": 0
+      }
+    ],
+    "repaired": [
+      {
+        "tested": 1377,
+        "unsupported": 0
+      },
+      {
+        "tested": 1377,
+        "unsupported": 0
+      }
+    ]
+  },
+  "qualification": "Earlier960/1377 failures came from omitting the current concrete floor material, not a new floor-repair regression. Browser walking remains separate.",
+  "staleDecoderEvidence": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase5-floor-runtime/stair-support-baseline.json",
+    "sha256": "2d0028a30da7f6fb317df8664f2dd17d0be416fe3170346473f5a8a2b35bc9c7",
+    "qualification": "Retained unchanged. Its960 failures per variant are decoder omissions, not evidence of a newly broken stair route."
+  },
+  "testSourceHashes": {
+    "tests/penn-stair-geometry.mjs": "cc29e913a0d613ac3a7e016d174dfa03b94c289ed6b159897046779e467dd32d",
+    "tests/penn-floor-ownership.mjs": "a6af13386c79a9c59e6e4f1f677e81c277f0264a96bc1af6b0b5f175d167249c",
+    "tests/helpers/penn-decoded-geometry.mjs": "5bdfeabad81d04a8f84950849742b3e63540fd9f598ab4255d194c1a27c10087",
+    "tests/penn-decoded-geometry-controls.mjs": "1d3f2837f5ccdeba2554bb5d8345f3add52e885846ccd9801006264f07b6df6b"
+  },
+  "decoderControls": "PASS: hand-computed raw/interleaved hierarchy, normalized signed extrema, nonindexed equivalence, mirrored winding, material filtering and composed instance translation."
+}

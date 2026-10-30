@@ -1,0 +1,240 @@
+{
+  "status": "PASS for qualified raw V4 departure routes; optimized-runtime browser acceptance pending",
+  "scope": "CPU actual-triangle support, upright-body and headroom checks; not a browser walking or historical certification.",
+  "candidate": "candidate-v4-final",
+  "recipeSha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+  "sources": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/departure-access-module.glb": {
+      "sha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+      "bytes": 13712952
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/retained-concourse-occluder.glb": {
+      "sha256": "b326e3e3f80e10c3b7fcad233b938de861cb3bb4ea35fc480e3929320712acf5",
+      "bytes": 55467716
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "bytes": 188633
+    }
+  },
+  "sourceBlendSha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+  "bodyAndSupport": {
+    "bodyRadius": 0.32,
+    "bodyVerticalAboveFoot": [
+      0.35,
+      1.85
+    ],
+    "eyeHeight": 1.68,
+    "footprintRadius": 0.25,
+    "routeStep": 0.04,
+    "sideLanes": [
+      -0.55,
+      0,
+      0.55
+    ],
+    "maximumStepUp": 0.24,
+    "maximumStepDown": 0.35,
+    "virtualIndicatorShift": 0
+  },
+  "checks": {
+    "routeCount": 18,
+    "passingRoutes": 18,
+    "approachCount": 9,
+    "passingApproaches": 9,
+    "seamSamples": 3690,
+    "passingSeamRows": 9,
+    "minimumRouteHeadroom": 1.961287796497345,
+    "endpointSamples": 148,
+    "supportedEndpointSamples": 148,
+    "blockedPeripheralCrossings": 9,
+    "acceptedAsWholeStationWalk": false,
+    "browserAcceptance": "Pending scheduled actual optimized-runtime keyboard tests",
+    "bodyRouteSamples": 51732,
+    "maximumActualStep": 0.17152094841003418,
+    "maximumNominalSupportDifference": 0.003225052642822135
+  },
+  "sampledOverheadMinimum": {
+    "clearance": 1.961287796497345,
+    "x": -43.34,
+    "z": 68.214528,
+    "floor": -2.401287794113159,
+    "hit": {
+      "y": -0.4399999976158142,
+      "distance": 1.6112877964973449,
+      "point": [
+        -43.34,
+        -0.4399999976158142,
+        68.214528
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "material": "ConcourseOpaqueCirculationConcreteAccessInfill",
+      "node": 378,
+      "primitive": 0,
+      "instance": 0,
+      "source": "new departure module"
+    }
+  },
+  "headroomQualification": "1.96129m includes the finite footprint at the Main slab lip before first landing. The first landing centre is2.13281m. Upright1.85m body passes; this is no building-code certification.",
+  "localApproaches": [
+    {
+      "workingPlatform": 3,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 305
+    },
+    {
+      "workingPlatform": 9,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 276
+    },
+    {
+      "workingPlatform": 1,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    },
+    {
+      "workingPlatform": 2,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    },
+    {
+      "workingPlatform": 4,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    },
+    {
+      "workingPlatform": 5,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    },
+    {
+      "workingPlatform": 6,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    },
+    {
+      "workingPlatform": 7,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 260
+    },
+    {
+      "workingPlatform": 8,
+      "pass": true,
+      "bodyHeight": 1.85,
+      "bodyRadius": 0.32,
+      "continuousSamples": 258
+    }
+  ],
+  "mainInfill": {
+    "samples": 3690,
+    "passingRows": 9,
+    "unsupportedSamples": 0,
+    "duplicateHorizontalTopOwners": 0,
+    "precision": "Authored/raw float32 departure module + retained raw concourse. Optimized full/low stair quantization not tested by this receipt."
+  },
+  "retainedPlatformEndpoints": {
+    "samples": 148,
+    "supported": 148,
+    "insetMetres": 0.3,
+    "variants": "Existing delivered full and low platform meshes; all11polygon endpoints/elevations remain exact in the manifest patch."
+  },
+  "negativeControls": {
+    "actualPier": {
+      "material": "PaintedStructuralIron",
+      "node": 4982,
+      "primitive": 0,
+      "instance": 0,
+      "source": "retained concourse",
+      "triangle": 643725,
+      "point": [
+        -48.78258485349395,
+        0.35,
+        -40.214599609375
+      ],
+      "floor": 0
+    },
+    "activeUpperVoidAtMainPlane": null,
+    "firstLandingRoofTooTallBody": {
+      "actualClearance": 2.132808335717186,
+      "rejectsHeight2_3": true
+    }
+  },
+  "approachCauseControls": [
+    {
+      "candidate": "V3, original indicators",
+      "P3": false,
+      "P9": true,
+      "qualification": "Continuous turn to the supported first tread; a rejected earlier pre-gate endpoint also blockedP9 but did not prove its gate inaccessible."
+    },
+    {
+      "candidate": "V3, indicator colliders omitted ONLY for cause diagnosis",
+      "P3": true,
+      "bodyRadius": 0.32,
+      "runtimeChange": false
+    },
+    {
+      "candidate": "V3, exact indicator triangles translated+.20m for cause diagnosis",
+      "all9": true,
+      "bodyRadius": 0.32,
+      "runtimeChange": false
+    },
+    {
+      "candidate": "V3, stricter comfort control",
+      "P3": false,
+      "P9": true,
+      "bodyRadius": 0.37,
+      "qualification": "P3 also fails at+.30m and with indicators omitted; preserved pier/guard geometry is the remaining limit. No further post drift selected."
+    },
+    {
+      "candidate": "ACTUAL frozenV4,+.20m indicator translation",
+      "all9": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "allRealCollidersRetained": true
+    }
+  ],
+  "historicalQualification": "Existing actual pier baseplates occupyX[-50.048698,-48.834301]; nominalX\u221250 stair envelopes intersect rows3/5/7/9. Gate moved east to\u221248.4 to preserve real current structural geometry. This unresolved~1.6m plan/frame discrepancy must remain visible in provenance.",
+  "provisionalArrivalState": "Provisional old arrival deck and22lamp supports intentionally retained pending separate arrival reconstruction; no departure landing joins it.",
+  "globalCirculationLimit": "All9tested cardinal Main-floor crossings of the retained transverse opaque wall toward peripheralP1/P2 remain blocked. LocalP1/P2head approach passes do not establish Main-court connectivity. No new doorway or full-station circulation claim.",
+  "notYetCertified": [
+    "Final optimized full/low departure precision and final asset hashes",
+    "Actual browser keyboard descent/ascent, including P3/P9 approaches",
+    "Whole-station or1935as-built historical accuracy",
+    "Separate arrival/Exit stair reconstruction"
+  ],
+  "polylines": "browser-route-polylines.json",
+  "manifest": {
+    "path": "../navigation-manifest-v4-final.json",
+    "sha256": "29d2ea781cf5b6996e23d839fa05239139dffa26af7d78a04bae3e3d78e376ef",
+    "controls": "../manifest-controls-candidate-v4-final.json",
+    "controlsPassed": 11,
+    "unrelatedFieldsExact": true,
+    "separateGateAndIndicatorX": [
+      -48.4,
+      -48.2
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "createdUtc": "2026-10-30T02:32:45.986372+00:00",
+  "status": "NOTDELIVERED roofcandidate; published9079583/79a730b retainpreviousroof",
+  "fullPayloadsRetainedInDesktopWork": true,
+  "noNewExperimentsBrowserOrBake": true,
+  "files": {
+    "README.md": {
+      "bytes": 6798,
+      "sha256": "eaa89c4aac9b5157fc2823e9e2ab1bc5a2bb7b76f9ada12782b60d93ea92e390"
+    },
+    "preview-sources.json": {
+      "bytes": 2348,
+      "sha256": "80d641fc66651624db13aa6c6a619c98671e42e01c6a46e03b28b8ca34c0181a"
+    },
+    "previews/corrected-capped-mip-standard.webp": {
+      "bytes": 409500,
+      "sha256": "89ff3cc64c4c7813c35b1e8ed483ecfa35aa6e3a5eee4a91c6a98588ebe627ec"
+    },
+    "previews/guided-standard.webp": {
+      "bytes": 457614,
+      "sha256": "3675141516b9f552fa5e6a016162c0e2ff94bf4384c523514f4d3e0c68cf6e9f"
+    },
+    "previews/pale-only-literal-gi.webp": {
+      "bytes": 479204,
+      "sha256": "a5e2827a479f73b1b0184bdcb184a058fae7f3c3a4473c5c4bba9b23dfa2da9b"
+    },
+    "reports/active-guide-controls.json": {
+      "bytes": 1731,
+      "sha256": "db3c467f8d83b5fd3a8ccf773c0ba6693b7232819f824d599821a48a4053bc60"
+    },
+    "reports/all-source-hidden-zero-correction.json": {
+      "bytes": 55388,
+      "sha256": "498b4ce4117ad88912dcd66b54de7399886b8d25dfc3cbbcb277aa7b3b543f43"
+    },
+    "reports/bake-helper-hashes.json": {
+      "bytes": 745,
+      "sha256": "fc9e32dde34e9a70342463adf93357db3feb16d0c3848a7b2ee3a9051acb8457"
+    },
+    "reports/bilateral-patch-proof.json": {
+      "bytes": 2964,
+      "sha256": "cf776d55dd923683c79d784ae0b1ccfdf10b0110574763b235feef9209ad63bb"
+    },
+    "reports/browser-comparisons-summary.json": {
+      "bytes": 131422,
+      "sha256": "ddb7d0224871d5251f010f5d248aef2b1d103b8a0d58a1aa2c480efea5c6ccac"
+    },
+    "reports/closest-visible-materials-summary.json": {
+      "bytes": 5567,
+      "sha256": "0e931b7104606991c3c4e3788cbc382e0edaef90f33ee6a6da588f49e1960731"
+    },
+    "reports/exact-source-transfer-addendum.json": {
+      "bytes": 1837,
+      "sha256": "81b519486163f61a7788dcde70e7a0228c444a3d9cf4570203aae174620f847e"
+    },
+    "reports/guide-mask.json": {
+      "bytes": 946,
+      "sha256": "a9270c757707b6e0c462e4ac6a742e0063835e0f1ba209760158bb1af2a6ba4c"
+    },
+    "reports/guided-denoise.json": {
+      "bytes": 4679,
+      "sha256": "8d0cc69e65cd6dde4d2f297407257701408970a0097ce60364e0e3137599e3df"
+    },
+    "reports/guided-mask-energy-and-patches.json": {
+      "bytes": 36818,
+      "sha256": "255f8f3e1b56dd19f95a2585cca68c7acec143b212a21ee4d7e1ad0fa3313572"
+    },
+    "reports/normal-guide.json": {
+      "bytes": 1540,
+      "sha256": "6e33fcce37bc2b8e288ceada196eee95bf8aaf6c52deb625f313a1429ece1593"
+    },
+    "reports/optimized-uv-ownership.json": {
+      "bytes": 361,
+      "sha256": "57e0b82a3847e64789f5ff781d2bad8d798dbba61a2217a5c9211a0165ae90fe"
+    },
+    "reports/optimizer-provenance.json": {
+      "bytes": 1046,
+      "sha256": "345db74cb3f173416b1c1aaf4bb220b8825bd3f008575e743fa0cb9f6e791c64"
+    },
+    "reports/pale-only-zero-classification-incomplete.json": {
+      "bytes": 32997,
+      "sha256": "f1c8f093034e46ed6a31ae4097bc0717c75bfa479fa21fd13c65b1dff3474ffc"
+    },
+    "reports/uv25-exact-transfer.json": {
+      "bytes": 2020,
+      "sha256": "73364de503b037ef5e3e48662cf1713cec857fb381a267a6ef0e18eae8d72556"
+    },
+    "reports/uv25-independent-review.json": {
+      "bytes": 2279,
+      "sha256": "ddf5181adc97ed76a0abdb10981ff125f57763088b7dabbef9fbdc0226d980bc"
+    },
+    "reports/vault-bake.json": {
+      "bytes": 9979,
+      "sha256": "711b892fdff08892e6777d51663014b1f99a456091ba055fe585ee4c5ed2b3d7"
+    },
+    "reports/vault-color-only-denoise.json": {
+      "bytes": 2182,
+      "sha256": "6910fcdbcab07f104fe3f28eaea8d169f4d20b9dc9b724a8777cfb7735139027"
+    },
+    "retained-work-payloads.json": {
+      "bytes": 3217,
+      "sha256": "d5215f4c334aedefb9a744cd05dbd7ee57900842358889ff2d0413929c49b4ca"
+    },
+    "source/all-source-occlusion-probe.mjs": {
+      "bytes": 8970,
+      "sha256": "c4c03b4cda695d4d67564bbe292148869cafc76c0c4fa9d5ea8ea362b475785f"
+    },
+    "source/bounded-vault-sampling-candidate.mjs": {
+      "bytes": 2179,
+      "sha256": "8824db3751b4c447bbf93dc7553c871110f901e4ed2884089185889dacbd4b10"
+    },
+    "source/full-material-classification.mjs": {
+      "bytes": 5042,
+      "sha256": "d7fde1df825df814818a1c92ec33abb58704035a7000ad0fe68d2ee258c3124f"
+    },
+    "source/guided-denoise.py": {
+      "bytes": 13524,
+      "sha256": "ab1ebcb371eabd39821a3df02f84cae78df6825c15f09cc358ef2bff1359c557"
+    },
+    "source/normal-guide.py": {
+      "bytes": 4655,
+      "sha256": "8f58ea326c571c07c7e445cf9b6d4c98f8dc5191f87a55af09cfd1f065515dc5"
+    },
+    "source/patch-bilateral-proof.py": {
+      "bytes": 8353,
+      "sha256": "ffd4d7a1fe399e63fd0332a37fdb30ec3a2a8476c3f95a97981655b6304bcb89"
+    },
+    "source/uv_ownership.py": {
+      "bytes": 3759,
+      "sha256": "713dbb93a767e75ee6e82815235f70c45d0c4f70f49569304c68cf08d72179af"
+    },
+    "source/vault_lighting_uv-used-for-bake.py": {
+      "bytes": 6224,
+      "sha256": "9b75530d1f906b691189fe17f564ed275069f4a272e44fa357e8e3978131fa42"
+    },
+    "source-report-origins.json": {
+      "bytes": 7722,
+      "sha256": "b2e83a157112c02a3c6bb395ce65f7ff9b015b1dc526ccb3ea87ed909e6bd229"
+    }
+  },
+  "payloadBytesExcludingThisReceipt": 1713610,
+  "fileCountExcludingThisReceipt": 33
+}

@@ -1,0 +1,51 @@
+{
+  "sourceInputFiles": [
+    {
+      "file": "assets/mural-north-archival.png",
+      "sha256": "3fe44b7afcbd89a26bb1db1cdc1108bd525643ae4f556378340168b7afc49076",
+      "bytes": 76559
+    },
+    {
+      "file": "model/build_station.py",
+      "sha256": "bd0db82b40dfb51e15820937c88c4b258fb0f8740d1b3116d46df14db9c77356",
+      "bytes": 127507
+    },
+    {
+      "file": "model/coffer_geometry.py",
+      "sha256": "a77c9aa5c25010bf43cbf8a883f656249398c29d6eae3f89ff75813d306392fa",
+      "bytes": 4482
+    },
+    {
+      "file": "model/concourse_details.py",
+      "sha256": "bb2d3fbb7694881b6bee2ebe657fdddc94ae9c058d9e1feab79e9559767b18a6",
+      "bytes": 21067
+    }
+  ],
+  "models": [
+    {
+      "file": "model-concourse.glb",
+      "bytes": 70064084,
+      "sha256": "8e242e07dffd7ebbb7b62d4b9fe0ca7acc9c05823c50a04832dcab5eeb1ebc8c"
+    },
+    {
+      "file": "model-exterior.glb",
+      "bytes": 45611512,
+      "sha256": "de8b76b4a83aa184d9934472a6a6fa94c1a6616cba926dd335573c65c57a6bb5"
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "bytes": 66208516,
+      "sha256": "d2f2f8361a941d3b25f3bb3d4bd32a1c02b09100ec00ab04b7550946bc8e7025"
+    }
+  ],
+  "editableScene": {
+    "file": "authoring/penn-station-1935/penn-station-phase4.blend",
+    "bytes": 55852827,
+    "sha256": "b036cfa82a3d7ab6d43e455f44b9a4c599b7586105ed9ac205c3bb448f690a19"
+  },
+  "coordinates": "Raw waiting/concourse GLBs are Main=0; editable scene is street=0 with Main=-4.2672m. Exterior GLB is already world registered.",
+  "geometryContactChecks": 2490,
+  "geometryContactFailures": 0,
+  "historicalQualification": "Architectural detailing remains an evidence-led reconstruction; coffer count/vertical relief, fine carving, small fixture profiles/placement and finish values are interpretations.143/150ft source conflict and five neutral mural fields remain explicit.",
+  "renderDiagnostic": "coffer-curved-neutral.png is an actual neutral Cycles geometry diagnostic, not the finished browser lighting or a historical comparison photograph."
+}

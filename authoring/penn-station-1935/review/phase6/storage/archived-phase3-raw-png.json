@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "status": "archived-in-immutable-history-and-verified-work-backup",
+  "date": "2026-10-30",
+  "scope": "Only eight superseded Phase3 raw sky PNGs removed from the active public tree; exact bytes remain in immutable Git history and SHA-verified persistent work backups. No active Phase4/Phase6, denoised legacy-fixture PNG, raw bake JSON/HDR or runtime payload changed.",
+  "reason": "Whole-site tree exceeded the1,000,000,000-byte cap after new Phase6 sources.",
+  "removedBytes": 18890332,
+  "treeBefore": {
+    "bytes": 1007294190,
+    "files": 1075,
+    "headroomTo1GB": -7294190
+  },
+  "consumerCheck": {
+    "currentValidator": "tests/penn-assets.cjs reads Phase3 denoised/platform-corrected PNG derivatives, Phase4/Phase5/Phase6 denoised PNGs, and bakeJSON/HDR provenance; it does not read these eight raw PNGs.",
+    "legacyFixtures": "All eight sourcePngs in tests/fixtures/penn-lighting-legacy/manifest.json refer to phase3/denoised or phase3/platform-corrected.",
+    "scopedSearch": "No phase3/raw PNG consumers found in tests, model scripts, authoring source README, appMarkdown or publishing docs."
+  },
+  "recovery": "Use immutableFileUrl, or git cat-file blob <gitBlob> into a chosen recovery file; verify its SHA256 and byte length. The persistent work folder also retains every original under persistentBackupRelativeToWork.",
+  "files": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky-low.png",
+      "bytes": 372605,
+      "sha256": "89534d9d6163c41a0f8899c071bce8b393fa0823948b1837232a1907991a5a19",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "b3337f7d191906390f7429d9f246e6f7b882f75b",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky-low.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/b3337f7d191906390f7429d9f246e6f7b882f75b",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky-low.png",
+      "persistentBackupSha256": "89534d9d6163c41a0f8899c071bce8b393fa0823948b1837232a1907991a5a19",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky.png",
+      "bytes": 7090851,
+      "sha256": "d36d45cdf1bcf53328143fafbf1a725db5fb93d2a4a50315f91337c7ba618d5f",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "7f1ce60ff531e6174ea042d20d21c6e5dee6617d",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/7f1ce60ff531e6174ea042d20d21c6e5dee6617d",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky.png",
+      "persistentBackupSha256": "d36d45cdf1bcf53328143fafbf1a725db5fb93d2a4a50315f91337c7ba618d5f",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky-low.png",
+      "bytes": 353911,
+      "sha256": "af4252cd7995d22d576f4f8947e9e8f4ed8360d951e5ff06c76047c2c05c4a3b",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "b98ef1f21a17f9680ed466889e16367dfc64b300",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky-low.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/b98ef1f21a17f9680ed466889e16367dfc64b300",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky-low.png",
+      "persistentBackupSha256": "af4252cd7995d22d576f4f8947e9e8f4ed8360d951e5ff06c76047c2c05c4a3b",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky.png",
+      "bytes": 4453305,
+      "sha256": "ea9b92faa2d1c163cf981b85318668e106787f164e7caadb2787a81830fc6117",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "0d642521b347685517a4aa53a19ac995140a5808",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/0d642521b347685517a4aa53a19ac995140a5808",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky.png",
+      "persistentBackupSha256": "ea9b92faa2d1c163cf981b85318668e106787f164e7caadb2787a81830fc6117",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky-low.png",
+      "bytes": 143312,
+      "sha256": "fdd5c7984edeb3ed058c1a474c9f948cfdfa34c1bf8ce28af4b42d0ad7f77ee5",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "fd47691266536f2a39c86316a723689c46d8ec80",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky-low.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/fd47691266536f2a39c86316a723689c46d8ec80",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky-low.png",
+      "persistentBackupSha256": "fdd5c7984edeb3ed058c1a474c9f948cfdfa34c1bf8ce28af4b42d0ad7f77ee5",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky.png",
+      "bytes": 2788293,
+      "sha256": "46fd0c1e4bd786dcefc0886001969350c9bf0544a10d062973463304c1d42922",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "e7c7c9c0dbc5fe62b5e5de46cdd8f4fb9b33392a",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/e7c7c9c0dbc5fe62b5e5de46cdd8f4fb9b33392a",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky.png",
+      "persistentBackupSha256": "46fd0c1e4bd786dcefc0886001969350c9bf0544a10d062973463304c1d42922",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky-low.png",
+      "bytes": 304108,
+      "sha256": "181351d893bfed1e7b589f7592c9ee80dd9d35e25b9057bbb9b2430e3fa201a0",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "256e1a73dc9df2ac850fc9aff96ccfab357755c0",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky-low.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/256e1a73dc9df2ac850fc9aff96ccfab357755c0",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky-low.png",
+      "persistentBackupSha256": "181351d893bfed1e7b589f7592c9ee80dd9d35e25b9057bbb9b2430e3fa201a0",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky.png",
+      "bytes": 3383947,
+      "sha256": "31b9546bcf89af0daccbc95e8db5469feb3cfb066d53efad6bc283ead52e5deb",
+      "gitCommit": "94f9808c69a7e92c85a95861a9a349ee873e6636",
+      "gitBlob": "ddeb51c2d9a4e45c6851cc6515e609fd3a22d3c0",
+      "verifiedAtCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+      "immutableFileUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/94f9808c69a7e92c85a95861a9a349ee873e6636/authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky.png",
+      "immutableBlobApiUrl": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/git/blobs/ddeb51c2d9a4e45c6851cc6515e609fd3a22d3c0",
+      "persistentBackupRelativeToWork": "phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky.png",
+      "persistentBackupSha256": "31b9546bcf89af0daccbc95e8db5469feb3cfb066d53efad6bc283ead52e5deb",
+      "backupVerified": true
+    }
+  ],
+  "treeAfter": {
+    "bytes": 988415270,
+    "files": 1069,
+    "headroomTo1GB": 11584730
+  }
+}

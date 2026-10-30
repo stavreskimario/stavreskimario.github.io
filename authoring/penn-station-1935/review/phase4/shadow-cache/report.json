@@ -1,0 +1,1692 @@
+{
+  "created": "2026-10-29T21:43:51.378Z",
+  "sourceAppSha256": "cfb4e1ecb462a2b704dc23e4046b458f615edc01aa3e66604651683f3871ec54",
+  "helperSha256": "5cf701bc528c9e93e69880663d9f9cd22ea60bb681591bf94fdbf23c14ce3ac8",
+  "scope": "Current production source compiled in scratch with read-only shadow draw/map instrumentation; real UI controls and camera inputs. No runtime assets or delivered bundle modified.",
+  "checks": [
+    "Static real camera movement reuses all maps while all six zones remain loaded",
+    "Morning/afternoon changes refresh actual shadow image without reallocating same-size target",
+    "Off/on refreshes existing maps",
+    "High↔balanced creates correct4096/2048 sun targets and retains unchanged1024 practical maps",
+    "Automatic comparison uses identical refreshed projection and shadow image, with additional depth draws during movement",
+    "Real one-shot model failure and Try again mount all6zones and rebuild populated shadow maps"
+  ],
+  "contexts": [
+    {
+      "label": "static cache and UI refreshes",
+      "errors": [],
+      "requestsFailed": [],
+      "initial": {
+        "draws": 297,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e9288474-00af-4484-a598-57a42b8056a0",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "afternoon": {
+        "hash": "b80c268634f62676e35136b4664a4de13802d598a3494362405d1d57bab857cf",
+        "width": 2048,
+        "height": 2048,
+        "nonwhite": 2643633
+      },
+      "afterMovement": {
+        "draws": 297,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e9288474-00af-4484-a598-57a42b8056a0",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "morning": {
+        "hash": "f1ede126dd9b0fc8d365b3177144bf419858375f35a5ef16189a8835c69fcd50",
+        "width": 2048,
+        "height": 2048,
+        "nonwhite": 2294597
+      },
+      "afterMorning": {
+        "draws": 594,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e9288474-00af-4484-a598-57a42b8056a0",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "off": {
+        "draws": 594,
+        "autoUpdate": false,
+        "needsUpdate": true,
+        "enabled": false,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": false,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e9288474-00af-4484-a598-57a42b8056a0",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "on": {
+        "draws": 891,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e9288474-00af-4484-a598-57a42b8056a0",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "high": {
+        "draws": 1380,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              4096,
+              4096
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "e84910b7-2bdc-4c25-9f51-f98a9948985b",
+              "width": 4096,
+              "height": 4096
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "76e7d849-fb6f-43dd-a9c1-ab4dd5cede76",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "c780c671-2680-4667-bd7c-68492400ad01",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "balanced": {
+        "draws": 1677,
+        "autoUpdate": false,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "fedb8a64-e8ce-4acb-aa36-4e66a6e43220",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "dae329e8-6734-43ee-b213-56dcdd49f8c1",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "76e7d849-fb6f-43dd-a9c1-ab4dd5cede76",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "c780c671-2680-4667-bd7c-68492400ad01",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "4fdec0e8-2748-486c-8f75-012c2d2316f3",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "automatic-shadow comparison with identical refreshed projection",
+      "errors": [],
+      "requestsFailed": [],
+      "initial": {
+        "draws": 297,
+        "autoUpdate": true,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "3137e949-c030-4fef-ab30-574caedc17e2",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "037d94e4-049f-4b5a-8b30-62f433fd1a1c",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "0990a414-e11e-4012-9959-7fe10db6a97e",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      "shadowImage": {
+        "hash": "b80c268634f62676e35136b4664a4de13802d598a3494362405d1d57bab857cf",
+        "width": 2048,
+        "height": 2048,
+        "nonwhite": 2643633
+      },
+      "afterMovement": {
+        "draws": 17820,
+        "autoUpdate": true,
+        "needsUpdate": false,
+        "enabled": true,
+        "lights": [
+          {
+            "type": "DirectionalLight",
+            "casts": true,
+            "mapSize": [
+              2048,
+              2048
+            ],
+            "projection": [
+              0.00625,
+              0,
+              0,
+              0,
+              0,
+              0.00909090909090909,
+              0,
+              0,
+              0,
+              0,
+              -0.0050062578222778474,
+              0,
+              0,
+              0,
+              -1.002503128911139,
+              1
+            ],
+            "map": {
+              "id": "3137e949-c030-4fef-ab30-574caedc17e2",
+              "width": 2048,
+              "height": 2048
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "037d94e4-049f-4b5a-8b30-62f433fd1a1c",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": false,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              2.1445069205095586,
+              0,
+              0,
+              0,
+              0,
+              -1.002002002002002,
+              -1,
+              0,
+              0,
+              -1.001001001001001,
+              0
+            ],
+            "map": null
+          },
+          {
+            "type": "SpotLight",
+            "casts": true,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "projection": [
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              0.1011390799807312,
+              0,
+              0,
+              0,
+              0,
+              -1.007722007722008,
+              -1,
+              0,
+              0,
+              -0.2007722007722008,
+              0
+            ],
+            "map": {
+              "id": "0990a414-e11e-4012-9959-7fe10db6a97e",
+              "width": 1024,
+              "height": 1024
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "one controlled model failure and retry",
+      "errors": [],
+      "requestsFailed": [
+        {
+          "url": "http://127.0.0.1:60023/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4-visual-1",
+          "status": 503
+        }
+      ],
+      "recovered": {
+        "state": {
+          "view": "exterior",
+          "framing": "",
+          "mode": "orbit",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": false,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 1,
+          "pose": 0,
+          "instant": false
+        },
+        "shadow": {
+          "draws": 297,
+          "autoUpdate": false,
+          "needsUpdate": false,
+          "enabled": true,
+          "lights": [
+            {
+              "type": "DirectionalLight",
+              "casts": true,
+              "mapSize": [
+                2048,
+                2048
+              ],
+              "projection": [
+                0.00625,
+                0,
+                0,
+                0,
+                0,
+                0.00909090909090909,
+                0,
+                0,
+                0,
+                0,
+                -0.0050062578222778474,
+                0,
+                0,
+                0,
+                -1.002503128911139,
+                1
+              ],
+              "map": {
+                "id": "92fb29f8-0c09-4612-b8dc-b704a2861734",
+                "width": 2048,
+                "height": 2048
+              }
+            },
+            {
+              "type": "SpotLight",
+              "casts": true,
+              "mapSize": [
+                1024,
+                1024
+              ],
+              "projection": [
+                0.1011390799807312,
+                0,
+                0,
+                0,
+                0,
+                0.1011390799807312,
+                0,
+                0,
+                0,
+                0,
+                -1.007722007722008,
+                -1,
+                0,
+                0,
+                -0.2007722007722008,
+                0
+              ],
+              "map": {
+                "id": "fbb9e07e-6dca-4090-a5ff-e2132bb86e3c",
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "type": "SpotLight",
+              "casts": false,
+              "mapSize": [
+                1024,
+                1024
+              ],
+              "projection": [
+                2.1445069205095586,
+                0,
+                0,
+                0,
+                0,
+                2.1445069205095586,
+                0,
+                0,
+                0,
+                0,
+                -1.002002002002002,
+                -1,
+                0,
+                0,
+                -1.001001001001001,
+                0
+              ],
+              "map": null
+            },
+            {
+              "type": "SpotLight",
+              "casts": false,
+              "mapSize": [
+                1024,
+                1024
+              ],
+              "projection": [
+                2.1445069205095586,
+                0,
+                0,
+                0,
+                0,
+                2.1445069205095586,
+                0,
+                0,
+                0,
+                0,
+                -1.002002002002002,
+                -1,
+                0,
+                0,
+                -1.001001001001001,
+                0
+              ],
+              "map": null
+            },
+            {
+              "type": "SpotLight",
+              "casts": true,
+              "mapSize": [
+                1024,
+                1024
+              ],
+              "projection": [
+                0.1011390799807312,
+                0,
+                0,
+                0,
+                0,
+                0.1011390799807312,
+                0,
+                0,
+                0,
+                0,
+                -1.007722007722008,
+                -1,
+                0,
+                0,
+                -0.2007722007722008,
+                0
+              ],
+              "map": {
+                "id": "0279fdbc-86f2-4227-a275-52fadcfcf19e",
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        "scene": {
+          "id": "cd32940e-cfc9-4a42-9609-e8bbb7276191",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "886bca19-0337-4bf6-9d93-62111d6a3f99",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "a952be97-bd8c-43f4-b132-ca1132944f7d",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "name": "concourse",
+              "id": "154ae196-8272-4bc8-b262-4038418371ad",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "name": "context",
+              "id": "fb70f88b-5500-41d2-9798-4ed4b28352bd",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "19248777-8b57-4547-a6e6-aee20e5ba64c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "5f6e7153-2820-433b-9704-e237ceaee8e7",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "shadowImage": {
+        "hash": "b80c268634f62676e35136b4664a4de13802d598a3494362405d1d57bab857cf",
+        "width": 2048,
+        "height": 2048,
+        "nonwhite": 2643633
+      }
+    }
+  ],
+  "instrumentedBundleSha256": "a3742324926ba7ac80ea0da9f3ee6fbe2df44434e8fc020c18544c98175525c0",
+  "browser": "156.0.8078.74",
+  "status": "passed"
+}

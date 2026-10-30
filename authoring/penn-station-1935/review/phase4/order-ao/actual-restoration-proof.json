@@ -1,0 +1,64 @@
+{
+  "created": "2026-10-29T10:09:43.481Z",
+  "status": "passed",
+  "helperSha256": "f802cec0324921f9f7be9b9f15f73a3cf80a1709d1ab78a700cd24706af201d0",
+  "selection": "lighting-waiting-room-order-sky.png",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-geometry.glb",
+    "sha256": "c353b3f0adcad54500de6e2f319e9779b68f8a4562c7f08dad2d37be69a36503"
+  },
+  "input": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-sized.glb",
+    "sha256": "2829030c550cb62face44ccd78b33685693425126c99d324c3893c49375e08f7"
+  },
+  "output": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-sized.glb",
+    "sha256": "d75d6c0efec5e93fa0da93d2b52804b1a1094bc6cfc5b9fd845eb6f9054afc79"
+  },
+  "materials": [
+    {
+      "material": "InteriorGranite",
+      "imageIndex": 10,
+      "bufferView": 10,
+      "beforeSize": [
+        2048,
+        2048
+      ],
+      "restoredSize": [
+        4096,
+        4096
+      ],
+      "sourceImageSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf",
+      "beforeImageSha256": "d2a23f83a5ac0d0a1ab858fd7219d8e0fc0d722022ae7b82169817b90791ea71",
+      "sourceBytes": 11168419,
+      "beforeBytes": 3488737
+    },
+    {
+      "material": "Travertine",
+      "imageIndex": 10,
+      "bufferView": 10,
+      "beforeSize": [
+        2048,
+        2048
+      ],
+      "restoredSize": [
+        4096,
+        4096
+      ],
+      "sourceImageSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf",
+      "beforeImageSha256": "d2a23f83a5ac0d0a1ab858fd7219d8e0fc0d722022ae7b82169817b90791ea71",
+      "sourceBytes": 11168419,
+      "beforeBytes": 3488737
+    }
+  ],
+  "restoredImages": 1,
+  "imageCount": 13,
+  "textureCount": 13,
+  "unchangedBinaryViews": 28,
+  "unchangedBinaryViewsSha256": "92fc8ad4a331a8f07cfb12a0e61f119e941f9e5c767e02fe684c6b9f779b1299",
+  "beforeBytes": 99670020,
+  "afterBytes": 107349664,
+  "verbatimInput": false,
+  "geometryUVNormalMaterialBindingsUnchanged": true,
+  "otherImagesUnchanged": true
+}

@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase5-floor-uv/source-model-concourse.glb.gz",
+  "sourceSha256": "0505d04338aacb21df6d47ed07cdd4dca6af976e22743eba5f93ac83f6d8c79c",
+  "module": "/Users/stavreskimario/Desktop/penn-station-work/phase5-source-final/concrete.glb",
+  "moduleSha256": "41673031b407b1fb86b48847a8b182d9f7dac0b4629b3781e47abf2b5722f96c",
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/phase5-floor-uv/concrete.glb",
+  "outputSha256": "c5a561dab9bda4b0b78caaab2876c7d09b6f42912d269df4f55bbb133dc0c8ba",
+  "sourceFaces": 6053,
+  "triangles": 5540,
+  "expandedCorners": 16620,
+  "oldVertexCount": 4471,
+  "exposedTopTriangles": 1788,
+  "buriedOrientationFallbacks": 178,
+  "maxExposedPlaneGapMetres": 0.001040311256523374,
+  "maxBuriedNearestGapMetres": 0.2189594788942486,
+  "limits": {
+    "exposedGapMetres": 0.003,
+    "normalDot": 0.99,
+    "buriedGapMetres": 0.225,
+    "buriedCoverBounds": [
+      [
+        -44.4,
+        -16.5608,
+        -7.75,
+        7.75
+      ],
+      [
+        -41.5,
+        -18.5,
+        -45.5,
+        -8.5
+      ],
+      [
+        -41.5,
+        -18.5,
+        8.5,
+        45.5
+      ]
+    ]
+  },
+  "cornerExtrapolations": 12830,
+  "verifiedExposedCorners": 5364,
+  "maxExposedCornerUVDifference": 1.9987025889052664e-15,
+  "unchangedWorldTriangles": true,
+  "unchangedAttributeCornerHashes": {
+    "POSITION": "047f07b66b301afac1f9bd6ad39a58ed73ef01060e55544fe23a309503b3fbb8",
+    "NORMAL": "626749a0b99b2a6a4e7fb9c81742eb80dd287d3102948d649a3f66368b67b335"
+  },
+  "uvSha256": "e36bb69436652cf09646793ae348b0c870939e3b4f73bb6c6ff89c45d0be4cc7",
+  "newUV0Only": true,
+  "perTriangleSourceChart": true
+}

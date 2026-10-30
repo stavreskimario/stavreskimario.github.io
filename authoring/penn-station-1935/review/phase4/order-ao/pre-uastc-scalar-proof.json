@@ -1,0 +1,568 @@
+{
+  "created": "2026-10-29T10:03:38.906Z",
+  "helperSha256": "d604e306d8471bef25e2226daff7476c9b34e623f124b0c4f653bc5aedc417dd",
+  "toolLockSha256": "a4559e2631142b4459080ee7601f2d7e07640a186c245c5b0879ff90a97ca1c3",
+  "node": "v24.22.1",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/restored.glb",
+  "inputSha256": "ae9bbb7caada25ff27a632955a9867b4c31d00f8cb222d26376b1c573c0e0284",
+  "policy": {
+    "resolution": "unchanged",
+    "ao": "original red values copied into RGB carrier only when not already grayscale",
+    "roughness": "green values preserved with unused R/B fixed at255 only for named stone with metallicFactor exactly zero; already-canonical images retained",
+    "metal": "all factors unchanged; nonzero-metal MR images unchanged",
+    "prune": "unreferenced textures only; single-colour textures retained",
+    "prefixes": [
+      "MilfordGranite",
+      "InteriorGranite",
+      "Travertine",
+      "PublicFloorMarble",
+      "TennesseeMarble",
+      "BotticinoMarble",
+      "BedfordLimestone",
+      "IndianaLimestoneContext",
+      "HotelBuffBrick",
+      "CitySidewalkStone",
+      "FarleyGranite"
+    ]
+  },
+  "inventory": [
+    {
+      "name": "Dedicated order AO",
+      "mimeType": "image/png",
+      "imageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+      "slots": [
+        "occlusionTexture"
+      ]
+    },
+    {
+      "name": "Other 4K colour",
+      "mimeType": "image/png",
+      "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+      "slots": [
+        "baseColorTexture"
+      ]
+    },
+    {
+      "name": "Unmarked AO",
+      "mimeType": "image/png",
+      "imageSha256": "c4cec7d4659239614b96df4c8360f8c70ea805da53f3daa5367b49bec3b85ff3",
+      "slots": [
+        "occlusionTexture"
+      ]
+    },
+    {
+      "name": "Constant normal",
+      "mimeType": "image/png",
+      "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+      "slots": [
+        "normalTexture"
+      ]
+    }
+  ],
+  "changes": [],
+  "skippedMR": [],
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/pre-uastc.glb",
+  "outputSha256": "ae9bbb7caada25ff27a632955a9867b4c31d00f8cb222d26376b1c573c0e0284",
+  "beforeBytes": 2932800,
+  "afterBytes": 2932800,
+  "beforeTextureCount": 4,
+  "afterTextureCount": 4,
+  "verbatimInput": true,
+  "uniqueScalarCarriers": 2,
+  "newScalarImages": 0,
+  "geometry": {
+    "beforeAccessorSha256": "cb6098e6d01e302bc8285892f6f841b744db826539d563694e30c6db6a4bdf4e",
+    "afterAccessorSha256": "cb6098e6d01e302bc8285892f6f841b744db826539d563694e30c6db6a4bdf4e",
+    "accessorCount": 4
+  },
+  "materialSceneMetadata": {
+    "beforeSha256": "c7dc73f1f57fc6af530a225db9e114209a875eacaf4a102c6951c464511afa0e",
+    "afterSha256": "c7dc73f1f57fc6af530a225db9e114209a875eacaf4a102c6951c464511afa0e"
+  },
+  "roleProofs": [
+    {
+      "before": {
+        "key": "0:pbrMetallicRoughness.baseColorTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "after": {
+        "key": "0:pbrMetallicRoughness.baseColorTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "0:normalTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "0:normalTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "0:occlusionTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "pixels": "2783ee568ff2445cd98c3b449e5151a35299eb27c6c4daaa6a205103611e58b1",
+        "width": 4096,
+        "height": 4096,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf",
+        "greenSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf"
+      },
+      "after": {
+        "key": "0:occlusionTexture",
+        "material": "OrderCapitalFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "pixels": "2783ee568ff2445cd98c3b449e5151a35299eb27c6c4daaa6a205103611e58b1",
+        "width": 4096,
+        "height": 4096,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf",
+        "greenSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "after": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:normalTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "1:normalTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:occlusionTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "pixels": "2783ee568ff2445cd98c3b449e5151a35299eb27c6c4daaa6a205103611e58b1",
+        "width": 4096,
+        "height": 4096,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf",
+        "greenSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf"
+      },
+      "after": {
+        "key": "1:occlusionTexture",
+        "material": "OrderPilasterFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+        "pixels": "2783ee568ff2445cd98c3b449e5151a35299eb27c6c4daaa6a205103611e58b1",
+        "width": 4096,
+        "height": 4096,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf",
+        "greenSha256": "845b94c7d519327297482e15453a922d4332eed20a05f8776981fea77cdab7bf"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:pbrMetallicRoughness.baseColorTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "after": {
+        "key": "2:pbrMetallicRoughness.baseColorTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "441081b54dc0a8cc81550e7396c8fe6d13be21aaf4566f24d8948e90530140de",
+        "pixels": "e0f9d81867dedaedcb5190f8b8795e3427ece520bf95be26ad56de4dcbc61237",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "2db3daa1790752d93698507f786e991d1bcd2fbab4c4112802c4e9f01b445795",
+        "greenSha256": "9b632f617b802c3bf67ba5465db9564a1fca7cc0cef216c072475bb285b7ca76"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:normalTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "after": {
+        "key": "2:normalTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "fdde795a55108592976ddb7a976152ae54fad3043c3d5496b7b158b33bde949a",
+        "pixels": "4d7a440d0ad38a60a5a568cb636e6c3bedbc6353132682433694123b300f522e",
+        "width": 1,
+        "height": 1,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+        "greenSha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:occlusionTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "c4cec7d4659239614b96df4c8360f8c70ea805da53f3daa5367b49bec3b85ff3",
+        "pixels": "11ffc271fec2b500c82c4acd7a663e553531b9264c3d872e227d8b14700bac03",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "361c0c7939ec734be2762f414d90bc4aaa1def0c0509fe2f3cc8787a6ebf5ecb",
+        "greenSha256": "361c0c7939ec734be2762f414d90bc4aaa1def0c0509fe2f3cc8787a6ebf5ecb"
+      },
+      "after": {
+        "key": "2:occlusionTexture",
+        "material": "UnmarkedStoneFixture",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1,
+          "strength": 0.72,
+          "extensions": {
+            "KHR_texture_transform": {
+              "offset": [
+                0.2,
+                0.1
+              ],
+              "scale": [
+                0.8,
+                0.9
+              ],
+              "texCoord": 1
+            }
+          }
+        },
+        "sampler": {
+          "minFilter": 9987,
+          "wrapS": 33071,
+          "wrapT": 10497
+        },
+        "imageSha256": "c4cec7d4659239614b96df4c8360f8c70ea805da53f3daa5367b49bec3b85ff3",
+        "pixels": "11ffc271fec2b500c82c4acd7a663e553531b9264c3d872e227d8b14700bac03",
+        "width": 64,
+        "height": 64,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "361c0c7939ec734be2762f414d90bc4aaa1def0c0509fe2f3cc8787a6ebf5ecb",
+        "greenSha256": "361c0c7939ec734be2762f414d90bc4aaa1def0c0509fe2f3cc8787a6ebf5ecb"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    }
+  ],
+  "status": "passed"
+}

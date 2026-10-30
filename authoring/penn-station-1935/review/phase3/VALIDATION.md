@@ -1,0 +1,92 @@
+# Phase 3 preview validation — 29 October 2026
+
+This record describes the **Phase 3 implementation and completed local evidence**. It does not certify the brief’s final photographic fidelity, a fully authenticated1935–1940 inventory or a1:1 surveyed replica. The [research register](RESEARCH.md), [geometry ledger](model/README.md), [railway ledger](model/railway-research.md), [context ledger](model/context-research.md) and [rolling-stock ledger](model/rolling-stock-research.md) distinguish primary anchors from reconstructed details.
+
+Evidence is retained in [Phase3 authoring review](../authoring/penn-station-1935/review/phase3/). The previous [Phase2 validation record](../authoring/penn-station-1935/review/phase2/VALIDATION.md) and [Phase1 evidence](../authoring/penn-station-1935/review/phase1/) remain available. Earlier publication and CI outcomes belong to those earlier revisions; they are not current Phase3 results.
+
+## Architecture and persistent world
+
+The exterior, main waiting room, concourse, railway, neighbouring context and rolling stock remain loaded together as one registered world. Preset buttons change the camera rather than replace the building with isolated room scenes. Solid upper-wing roofs close the office/arcade/subsidiary volumes. The two eastern courts remain open above their documented low street-level skylights. The broad Seventh Avenue clock attic, recessed facade openings, raised end entrances and connected structural bearings replace the earlier conspicuous enclosure/attachment defects.
+
+| Anchor or check | Implemented result and qualification |
+| --- | --- |
+| Whole-station envelope | Nominal784×430ft /238.9632×131.064m; conflicting period outside-edge dimensions remain documented. |
+| Waiting-room hierarchy |277×103ft clear floor;314ft4×108ft8 room;320×112ft10 frame;325×119ft external lantern. These are distinct datums. |
+| Finished ceiling and roof | The model adopts **143ft highest finished ceiling** from Francis & O’Brien. Gibbs explicitly states150ft floor-to-ceiling in the same engineering volume; that genuine source conflict remains. Roof167ft above Main /153ft above working street is separate. |
+| World levels | Street0; Main−4.2672m; provisional Exit−7.4676m; platform−11.985625m; rail−13.154025m. Local slopes, curb registration and the exit datum retain their qualifications. |
+| Editable/export contract | Saved core `.blend` is already world-aligned. Raw waiting/concourse/railway chunks retain Main0 and receive Y−4.2672m at runtime; exterior stays Street0. Manifest walking/stair metadata is in world coordinates. |
+| Main and end entrances |39ft6 east stair uses28 reconstructed six-inch risers. North/south raised Ionic landings and central flights follow primary plans/photos; approximately35×18ft stair footprints are raster-traced, with reconstructed riser counts and qualified longitudinal registration. Closed end-door planes are explicit in the manifest. |
+| Colossal order and windows | Eight granite Corinthian columns retain dimensioned pedestal/base/shaft/capital heights and individual imposts. Three five-light thermal windows per long wall plus one per end. Minor carved profiles, glass thickness and sill registration are interpreted. |
+| Concourse | Three E–W spans85ft10/95ft4/85ft10 intersect a98ft N–S barrel. Roof width320ft and departure-floor width475ft are distinguished. E393ft6 lower branch junction and E401ft9 gutter top are separate controls. |
+| Railway | Opening-era21-track/11-platform plan, asymmetric platform contours and nine unequally spaced east heads. Two southern heads lie outside the glazed court. Platform edges are3ft10 above rail; detailed1935 electrical/tunnel arrangements remain incomplete. |
+
+The [scoped bearing audit](../authoring/penn-station-1935/review/phase3/architecture-contact-audit.json) records **2,334 actual-mesh interface checks with zero recorded failures**. It tests registered bearing relationships at a25mm tolerance. It is not an exhaustive proof of every mesh contact, a historical completeness score or a structural engineering certification. Separate [railway contacts](../authoring/penn-station-1935/review/phase3/railway-contact-audit.json) and [context-column contacts](../authoring/penn-station-1935/review/phase3/context-column-contacts.json) retain their own scopes.
+
+The [assembled geometry ray audit](../authoring/penn-station-1935/review/phase3/assembled-route-contact-audit.json) passes1,059 east–west floor samples, nine main-to-exit flights, nine lower doglegs, both raised end stairs, nine corresponding platform landings and22 platform-light mounting contacts. Doorway sweeps found no blocker on the inspected axial route. These are source-geometry checks; runtime loading, permission bounds and keyboard collision require the separate browser route test below.
+
+Four elevated exterior corners and low/high interior source views were inspected. Exact [pixel-ray diagnosis](../authoring/penn-station-1935/review/phase3/visual-ray-diagnosis-final.json) and corrected source views confirm removal of origin-column placements and duplicate coplanar masonry/roof faces. Source stills use review lighting and are distinct from browser captures.
+
+## Train fit and clearance
+
+The final [train/structure audit](../authoring/penn-station-1935/review/phase3/train-clearance-audit.json) uses frozen raw geometry, exact world transforms, triangle intersections and upward clearance rays. It reports no train/core, train/platform or inward-flange/rail intersections. At1,576 sampled roof positions, minimum coach clearance is approximately2.0206m and minimum locomotive/pantograph clearance2.5318m to the inspected overhead structure.
+
+Final wheel centres are at transverse **±0.785m**. Modelled treads overlap the full60mm rail head, measured tread height error is0, and flanges face inward. These are geometric fit checks against the authored gauge/profile, not proof of a complete historical wheel or operating-clearance survey. The GG1/P70 body, minute underframe detail and1935 electrical operating configuration retain their own reconstruction qualifications.
+
+## Lighting, transfer and reflections
+
+All four zones—exterior, waiting room, concourse and platform—use2048px diffuse illumination with512px mobile derivatives and separate AO. The source Cycles bakes use64 diffuse samples and registered station, railway, context and rolling-stock occluders. Fine iron/props can occlude without receiving a masonry lighting atlas. Directional sun remains dynamic; glazing is not treated as an opaque blocker in the ordinary shadow pass. These settings are appearance interpretations, not a dated solar/weather reconstruction.
+
+The initial64-sample diffuse atlases were visibly noisy in the actual browser. Controlled Metal comparisons showed that disabling AO did not remove the mottling; removing the lightmap did, while flipping it produced wrong patch placement. SwiftShader reproduced the noise. The original atlas itself contained the speckles; this was not resolved by an exposure change or attributed solely to shadow acne.
+
+The accepted correction applies color-only OpenImageDenoise to **recovered linear radiance**, preserving geometry and AO. The first retained raw HDRs were found to contain display-encoded values: inverse-sRGB recovers the measured linear means. Runtime PNG/WebP units had been correct. Three active core atlases recover that legacy transfer; the final platform rebake supplies fresh linear HDR directly. The denoising helper explicitly handles the recorded input transfer, filters in linear space, retains genuinely linear RGBE HDR and encodes Standard/sRGB exactly once for PNG, followed by pixel-verified lossless WebP. Future HDR saving uses a separate Non-Color buffer; the original Linear Rec.709 buffer remains available for PNG. The [raw encoding note](../authoring/penn-station-1935/lighting/phase3/raw/ENCODING.md), [denoised originals/reports](../authoring/penn-station-1935/lighting/phase3/denoised/) and [aggregate record](../authoring/penn-station-1935/review/phase3/denoise-summary.json) retain the distinction.
+
+| Zone | Linear mean change after filtering | Full-size RGB samples clipped at scale1 | Mobile samples clipped |
+| --- | ---: | ---: | ---: |
+| Exterior |+0.6052% |31 |0 |
+| Waiting room |+0.6195% |1 |0 |
+| Concourse |+0.00479% |0 |0 |
+| Platform (corrected upward normals, fresh linear HDR) |-0.01176% |1 |0 |
+
+Each full atlas has12,582,912 RGB samples. Linear HDR retains values beyond1; PNG clipping is explicitly reported. The0.18 compositor/encoding reference remains0.18 before quantization. Exactly uniform inputs bypass the learned denoiser so it cannot introduce false structure; this reference checks transfer/encoding rather than certifying OIDN quality. Color-only atlas filtering can soften small shadow features near UV islands; the mapped browser result was inspected rather than accepting numerical statistics alone.
+
+Independent [CPU calibration](../authoring/penn-station-1935/review/phase3/calibration/browser-lighting-calibration.json) and [Metal calibration](../authoring/penn-station-1935/review/phase3/calibration-metal/browser-lighting-calibration.json) verify a unit-radiance hemisphere: Cycles lighting-only bake≈1, Three Lambert conversion factorπ, and a50% reference returns linear RGB128 rather than the unconverted41. The actual0.18 sRGB PNG test returns23 with the reference albedo; scale8 returns185. Specular-only probe contribution is retained without adding the baked diffuse hemisphere twice. The [HDR regression](../authoring/penn-station-1935/review/phase3/calibration-hdr/cycles-diffuse-calibration.json) retains0.1796875 from0.18, consistent with RGBE precision. These isolated32px/reference checks establish units, not historical appearance or hardware frame rate.
+
+Three room-specific HDR environments are captured from the assembled authored station. A separate exterior environment at world `[142,12,0]` replaces the modern field/forest reflection source with the authored Seventh Avenue frontage, Hotel Pennsylvania, street and cars under the same neutral dome/afternoon sun. The [exterior capture report](assets/reflection-exterior-probe.json) records all source hashes; the [room report](assets/reflection-probes.json) records room positions and derivatives. These are static representative probes without parallax correction, complete distant Manhattan or time-specific indirect relighting. Original modern CC0 sky and capture originals remain in the authoring archive.
+
+## Strict assets and transfer budget
+
+The [strict asset report](../authoring/penn-station-1935/review/phase3/penn-assets.json) validates revision3,21 tracks/11 platforms, all **12 full/mobile GLBs**,54 unique shared KTX2 textures, lighting/reflection files, expected dimensional anchors and GZip roundtrips. Result: **0 glTF errors and208 documented warnings**. The warnings comprise92 KTX2 MIME-list warnings,92 image-format-recognition warnings and24 generated-tangent warnings; unsupported-extension and other informational notices are retained separately. The browser’s actual decoders/rendering provide additional evidence for the extensions the base validator does not fully understand. Zero errors does not mean zero warnings or certify photorealism.
+
+The reported model/texture/lighting transfer set is **82,489,883 bytes**; decoded GLBs total57,510,100 bytes. This is not a whole-site staging total, peak GPU memory or a mobile download benchmark. Exact variants, shared texture identities and derivatives are in [asset metrics](assets/asset-metrics.json). Runtime geometry uses Meshopt and shared KTX2, wrapped in byte-identical GZip transport requiring no special server headers. All paths are relative and served without a backend. Authoring scenes, originals and review images remain outside custom public staging; all repository contents are public and legacy root Pages can expose authoring files.
+
+## Actual production-browser visual review
+
+The [final visual evidence](../authoring/penn-station-1935/review/phase3/browser-visual/visual-review.json) uses the production bundle/assets at1280×900, balanced quality and reduced motion, served under `/exhibition/`. Installed Chrome156.0.8078.48 reported **ANGLE Metal Renderer: Apple M5 Max**. No scratch code, diagnostic maps or post-edited scene images were substituted in these final captures. There were no page or console errors; the targeted final platform run also had no failed requests. The earlier interior/exterior capture records one aborted duplicate context request separately rather than suppressing it.
+
+Exposure was allowed to settle before capture: waiting≈4.1507, concourse≈1.5691, platform≈4.1507 and exterior≈1.0493. The severe granular illumination is removed, stone/plaster remain legible and the concourse roof retains its daylight structure. Exposure adaptation is a photographic presentation choice, not a measured historic exposure.
+
+The final platform practical intensity is60, reduced from140. In a fixed stair/coach image region, mean display luminance dropped104.0→82.6 and near-white RGB≥250 pixels4→0. These image measurements do not establish physical lux or original Nernst candlepower. The locomotive remains dark but body stripes and the coach are visible. The archive includes final [waiting room](../authoring/penn-station-1935/review/phase3/browser-visual/waiting-room.png), [concourse](../authoring/penn-station-1935/review/phase3/browser-visual/concourse.png), [exterior](../authoring/penn-station-1935/review/phase3/browser-visual/exterior.png) and [platform](../authoring/penn-station-1935/review/phase3/browser-visual/platform.png) screenshots and driver/exposure records. No physical-phone performance claim follows from desktop Metal or browser emulation.
+
+## Final desktop, mobile-emulation and continuous-route checks
+
+The [final UI suite](../authoring/penn-station-1935/review/phase3/browser-metal/validation.json) passes all **13 groups** in installed Chrome156.0.8078.48 on the observed Apple M5 Max Metal renderer. It checks persistent six-zone loading, four exterior corners, interior/landmark viewpoints, real end-stair ascent and door stop, Platform5 movement/edge protection, local collision selection, daylight/FOV/shadows/quality, archive framing, modal keyboard focus, guided tour,390px touch emulation,200% text, model/HDR retry and unavailable-graphics fallback.
+
+The [final real-keyboard route](../authoring/penn-station-1935/review/phase3/route-metal/penn-route-validation.json) passes all **seven legs**, with both directions of the28-riser grand stair, continuous hall/concourse travel and unchanged visible scene identities. Maximum local collision candidates were10 on the route and11 in the platform check;76,894 fitting/context instances were excluded from collision traversal. These are browser-control checks, not merely successful source rays. The route uses its reported reduced drawing dimensions/low quality; it is not a physical-phone performance benchmark.
+
+Both reports identify the same final production bundle SHA256: `951f905ad7146c4899a9ddd9621f6e4cc89fbefd1f1af906ec036466edb07ca7`. The [QA summary](../authoring/penn-station-1935/review/phase3/FINAL-QA.json) preserves the match. Earlier failed attempts are retained separately: they exposed platform framing reset, inward platform normals and a low-LOD14mm arcade bevel that quantization made steeper. Framing/navigation were corrected, actual platform winding was repaired and its lighting rebaked, and near-level bevel support receives a bounded35mm tolerance while rise/drop/edge limits remain. The full suites were rerun against the final build.
+
+The whole-site public staging check passes: **173 files / 87,728,438 bytes**, below the100,000,000-byte cap, with hidden files/symlinks rejected. Root validation passes five apps; the182-article catalogue, nine engineering-feed tests and existing Engineering Journal browser regression also pass. Eleven Blender/authoring Python sources parse successfully.
+
+## Remaining acceptance work and publication boundary
+
+Primary plans/photos guided the geometry and independent defect review; Archive view still uses approximate camera matching. The143/150ft ceiling conflict, exact minor profiles/step registration and floor gradients remain qualified. Lower concourse perimeter fenestration and glass-prism floor fields are unfinished; five Guérin images remain neutral, while only the north field has an authenticated monochrome recovery. Figurative sculpture, precise carving, complete adjoining interiors, period signage/furnishings and a fully dated1935–1940 streetscape/operation inventory are incomplete.
+
+The railway follows opening-era evidence rather than a complete1935 electrical/switch/tunnel survey. PBR maps interpret material families without calibrated samples from the demolished station. Sparse distant context, static reflection probes, atlas filtering and simplified fixtures remain visible limitations. High-detail draw/triangle counts are not reliable distance LOD or occlusion-performance certification.
+
+Native-WebGPU parity, physical-phone performance, Safari/Firefox coverage and assistive-technology user studies remain unverified. The pull request remains unmerged pending owner authorization.
+
+## Published implementation verification
+
+GitHub Pages successfully built implementation `73ee71740c82ce1598de22d4f48aeee406fb6e41`; all eight [reported GitHub checks](../authoring/penn-station-1935/review/phase3/ci-validation.json) completed successfully for that exact revision. The published browser bundle SHA256 matches the locally tested bundle byte-for-byte. The [publication receipt](../authoring/penn-station-1935/review/phase3/publication.json) and [live browser report](../authoring/penn-station-1935/review/phase3/live-validation.json) retain the revision and actual results.
+
+The live Chrome check rendered exterior, waiting room and concourse with a persistent six-zone world, decoded compressed geometry/material/light/reflection assets, and no uncaught page errors or failed required resources. External services were blocked. The [preview](https://stavreskimario.github.io/penn-station-1935/?preview=phase3) is served by the existing feature-branch Pages configuration. PR11 remains open and draft. This subsequent evidence-only commit changes these records, not the production bundle or model files.

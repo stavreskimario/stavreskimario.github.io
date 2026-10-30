@@ -1,0 +1,43 @@
+{
+  "scope": "Reproducible CLI replay from exact external input. All four raw GLBs byte-identical to accepted V2; Blender save filepath may change scene container bytes. No canonical/runtime edits.",
+  "helper": {
+    "path": "penn-station-1935/model/repair_concourse_circulation.py",
+    "sha256": "31d6291748c8c5efdbbb7f7a9a6ceecb18129689963bcdcc3a9771b5e56ccc26"
+  },
+  "sourceInputSha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d",
+  "departureRecipeSha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+  "outputs": [
+    {
+      "file": "old-owned.glb",
+      "sha256": "e0e78dc0df0f7e6c8d12bea02742823ef0e508807d83ccd4abcd2fb83f609e98",
+      "bytes": 228940,
+      "byteExact": true
+    },
+    {
+      "file": "new-geometry-module.glb",
+      "sha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13",
+      "bytes": 364084,
+      "byteExact": true
+    },
+    {
+      "file": "retained-protected.glb",
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322",
+      "bytes": 59596788,
+      "byteExact": true
+    },
+    {
+      "file": "retained-concourse-occluder.glb",
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322",
+      "bytes": 59596788,
+      "byteExact": true
+    }
+  ],
+  "sourceMeshPairCheck": {
+    "sourceCapTriangles": 704,
+    "candidatePairs": 0,
+    "positiveIntersections": 0,
+    "maximumIntersectionArea": 0,
+    "method": "Actual generated mesh cap triangles clipped in XY with shared vertical height. New L-prisms only; intentional rail/bearing joints excluded."
+  },
+  "sourceUnrelatedObjectsExact": 7137
+}

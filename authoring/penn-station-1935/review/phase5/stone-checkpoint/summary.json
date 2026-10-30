@@ -1,0 +1,539 @@
+{
+  "scope": "Independent stone and fixture checkpoint; existing Phase4 vault geometry/AO/GI retained exactly. Corrected roof remains pending.",
+  "status": "stone-checkpoint-validated; roof repair and mapped visual acceptance pending",
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "inputSha256": "570308ab4f0f5f609564bed7dd6fb32ee1fe7b4f388c0ed17b53b283e1758381",
+      "outputSha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634,
+      "decodedSha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035",
+      "decodedBytes": 8839992,
+      "finishBindings": [
+        {
+          "material": "MilfordGranite",
+          "uri": "textures/c7f8f448d11f12484907.ktx2",
+          "index": 10
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 11
+        }
+      ],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "inputSha256": "83779ef15f18ac98c7455cd34e1be52b9408c978028006b71dbf63ce07b622b8",
+      "outputSha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "bytes": 2805415,
+      "decodedSha256": "5c23cd5e58106529b463d2895babd5fd6e238631aeb58f0811db1edaeb114117",
+      "decodedBytes": 7969992,
+      "finishBindings": [
+        {
+          "material": "MilfordGranite",
+          "uri": "textures/9e395005f83383f2235b.ktx2",
+          "index": 10
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 11
+        }
+      ],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "inputSha256": "15ab0975b7376621227f67899efa843fe5adc547e92df4028715f84eff06977f",
+      "outputSha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157,
+      "decodedSha256": "cf0aad3568177a4fe4b1394541b5bccb9de35e1d8044cad84a693e8b9df8548c",
+      "decodedBytes": 16103268,
+      "finishBindings": [
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 13
+        },
+        {
+          "material": "InteriorGranite",
+          "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+          "index": 14
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 13
+        }
+      ],
+      "sourceBinaryExact": false,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 35,
+      "decodedMeshoptViews": 47
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "inputSha256": "73970ca45dd112baca9f22b1a06c5939cca58517f7b13fde1997d85bc79b902d",
+      "outputSha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "bytes": 7239871,
+      "decodedSha256": "7c1d20adcf6a695b5fbd0c4510724d367f55fb064418018257741d468c352925",
+      "decodedBytes": 11920512,
+      "finishBindings": [
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 13
+        },
+        {
+          "material": "InteriorGranite",
+          "uri": "textures/e6417bb84166b7f417ae.ktx2",
+          "index": 14
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 13
+        }
+      ],
+      "sourceBinaryExact": false,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 35,
+      "decodedMeshoptViews": 47
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "inputSha256": "17b8d29112d4ca46ee47d237e46b1293aaaa07c4fd5ee63ae1f3327467b1f1b7",
+      "outputSha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+      "bytes": 4268512,
+      "decodedSha256": "69747ba3addb8ea930a5f0f59481391402cbeda84d19161de64fb14ef080df76",
+      "decodedBytes": 11033920,
+      "finishBindings": [
+        {
+          "material": "MilfordGranite",
+          "uri": "textures/c7f8f448d11f12484907.ktx2",
+          "index": 13
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 14
+        }
+      ],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "inputSha256": "155fc3cf39cf54130845d24dffa96ba2c11c359b7fda4c5383f93ffb66421190",
+      "outputSha256": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+      "bytes": 4246967,
+      "decodedSha256": "f74f1a792be96c6008114016938363e6aedd5ccd65cbe35fe1c4be59e9a731de",
+      "decodedBytes": 10270564,
+      "finishBindings": [
+        {
+          "material": "MilfordGranite",
+          "uri": "textures/9e395005f83383f2235b.ktx2",
+          "index": 13
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 14
+        }
+      ],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52
+    },
+    {
+      "file": "model-context.glb.gz",
+      "inputSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "outputSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344,
+      "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe",
+      "decodedBytes": 2197204,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 187
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "inputSha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "outputSha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590,
+      "decodedSha256": "44f2d84fd77ffad1f61f4d924225b1369bc0cc435b64fe972b6cf004397a5018",
+      "decodedBytes": 1756120,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 186
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "inputSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "outputSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587,
+      "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1",
+      "decodedBytes": 1062664,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "inputSha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "outputSha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "bytes": 188633,
+      "decodedSha256": "794f9f942529c05fd3fcbc87943fde531c2e7fe5288c664eac7cd807269018c7",
+      "decodedBytes": 875592,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "inputSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "outputSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231,
+      "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979",
+      "decodedBytes": 667464,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "inputSha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "outputSha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720,
+      "decodedSha256": "041fdb85f1b5d6e6d8375e9d7f82eef0b6a5218468bd915a4328223cb315abb8",
+      "decodedBytes": 488976,
+      "finishBindings": [],
+      "sourceBinaryExact": true,
+      "originalBinaryPrefixExact": true,
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54
+    }
+  ],
+  "waiting": [
+    {
+      "file": "model-waiting-room.glb.gz",
+      "oldMeshes": 9,
+      "oldGeometryAndBinaryPrefixExact": true,
+      "vaultGeometryAOAndMaterialExact": true,
+      "fixtureParents": 2,
+      "fixtureMeshNodes": 4,
+      "fixtureTriangles": 28992,
+      "fixturePaletteExact": true,
+      "newLights": 0,
+      "bounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "moduleAttributesAndWorldTransformsExact": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "oldMeshes": 9,
+      "oldGeometryAndBinaryPrefixExact": true,
+      "vaultGeometryAOAndMaterialExact": true,
+      "fixtureParents": 2,
+      "fixtureMeshNodes": 4,
+      "fixtureTriangles": 28992,
+      "fixturePaletteExact": true,
+      "newLights": 0,
+      "bounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "moduleAttributesAndWorldTransformsExact": true
+    }
+  ],
+  "texturesCopied": [
+    {
+      "uri": "textures/c7f8f448d11f12484907.ktx2",
+      "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+      "bytes": 3716906,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/c7670262d7c33cc39671.ktx2",
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+      "bytes": 3106230,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/9e395005f83383f2235b.ktx2",
+      "sha256": "9e395005f83383f2235bfbb19228978d777f493e3b9c3b075007a338855951ca",
+      "bytes": 247153,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+      "sha256": "cd5b2e95d69b82d43084bca72583d8ad972adfd5af127c75fca22777a76d2933",
+      "bytes": 247116,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+      "bytes": 3734401,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/e6417bb84166b7f417ae.ktx2",
+      "sha256": "e6417bb84166b7f417ae930a66352deb8431d4f477fcbf5d1d25e9bdc4ec899e",
+      "bytes": 250305,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "retainedFiles": [
+    {
+      "file": "scene-manifest.json",
+      "sha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c",
+      "bytes": 567295
+    },
+    {
+      "file": "reflection-probes.json",
+      "sha256": "4cf46e385d0ab92b3ee6c5c80f75c83a3ff0df3fe648b3d89c45dff4a1167fdf",
+      "bytes": 7631
+    },
+    {
+      "file": "reflection-exterior-probe.json",
+      "sha256": "ca60792793b594c670712086170f6ea2f061d50af37b2148298c08d476661fa5",
+      "bytes": 6879
+    },
+    {
+      "file": "sky.hdr",
+      "sha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1",
+      "bytes": 2513408
+    },
+    {
+      "file": "reflection-waiting-room.hdr.gz",
+      "sha256": "2852344887b0f51174341b452c1fb2122787fd3924db60b910f71fbc527a4844",
+      "bytes": 4936342
+    },
+    {
+      "file": "reflection-waiting-room-low.hdr.gz",
+      "sha256": "bd831495338fe92e20e947c14d314c7f893ccdc7502362e964c4a7e2b701d0c7",
+      "bytes": 336231
+    },
+    {
+      "file": "reflection-concourse.hdr.gz",
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d",
+      "bytes": 5537345
+    },
+    {
+      "file": "reflection-concourse-low.hdr.gz",
+      "sha256": "a2358a4f16ff07ee16ddb5ebdb27dfad47235dc26b9397770026ce44cbb487f7",
+      "bytes": 366456
+    },
+    {
+      "file": "reflection-platform.hdr.gz",
+      "sha256": "5a3fc2b3dbe5c7390f2bbbbbf80858b377140d188f3c9df5f3520d371ffc00e0",
+      "bytes": 4785576
+    },
+    {
+      "file": "reflection-platform-low.hdr.gz",
+      "sha256": "aca64b1713e1d885070a96c8c7c68f6982dd83eca2bacbee26a5f399375884dc",
+      "bytes": 314101
+    },
+    {
+      "file": "lighting-exterior-sky.webp",
+      "sha256": "9fced6e69fc9d34c9e01ba0b6d5f48abe451aad85852fdb4836795550f64f6f3",
+      "bytes": 1276008
+    },
+    {
+      "file": "lighting-exterior-sky-low.webp",
+      "sha256": "da947a56b7a7955ebe063aea2c9c2d57427082f00f056affae60db2252a8599b",
+      "bytes": 162948
+    },
+    {
+      "file": "lighting-exterior.json",
+      "sha256": "7fc3052b04b615e00c479c17ea03b75c4ce366561b27ffd8b071508bcc80b8c0",
+      "bytes": 7098
+    },
+    {
+      "file": "lighting-exterior-denoise.json",
+      "sha256": "06d673974f61d7f7b8bbd6d0172b3fc46951d1adae9c9a6bf2ad8b8342b034d0",
+      "bytes": 2313
+    },
+    {
+      "file": "lighting-waiting-room-vault-sky.webp",
+      "sha256": "0f8063785603d0b5c7f08f537dbd6e7dabeb0d4eec835b75d979172b1176e86c",
+      "bytes": 14189900
+    },
+    {
+      "file": "lighting-waiting-room-vault-sky-low.webp",
+      "sha256": "8dead4d28a62c675f7739b89a97e2827854041931c22826acfc949522c18b8d0",
+      "bytes": 123206
+    },
+    {
+      "file": "lighting-waiting-room-vault.json",
+      "sha256": "c71fc7b9c7ed4cbb11281c4004278507ba33fe13e25c9b686ec615ac1f8c0eed",
+      "bytes": 8607
+    },
+    {
+      "file": "lighting-waiting-room-vault-denoise.json",
+      "sha256": "3a8ca6215811f19964c249c53f19d9497dbbf8becd06ce5eb417abe97841b768",
+      "bytes": 2413
+    },
+    {
+      "file": "lighting-waiting-room-masonry-sky.webp",
+      "sha256": "9db43579186eaedb86be3c1ea4c313c920cc5fe8f765c73fbcfa9f5396baefa0",
+      "bytes": 3033948
+    },
+    {
+      "file": "lighting-waiting-room-masonry-sky-low.webp",
+      "sha256": "ed6731701400cc258eee9e853eac3393af1b1c46f8eb5268b00450ddad60dc6c",
+      "bytes": 139780
+    },
+    {
+      "file": "lighting-waiting-room-masonry.json",
+      "sha256": "48d224a63c16f17ddb87ebf542646d2e12af77d3395e955cf2b512cdf2170f73",
+      "bytes": 8617
+    },
+    {
+      "file": "lighting-waiting-room-masonry-denoise.json",
+      "sha256": "30204346850f6d863dc9592eac15d00450ed3a31ab35d8307ddc30744b2b7734",
+      "bytes": 2420
+    },
+    {
+      "file": "lighting-waiting-room-order-sky.webp",
+      "sha256": "100bd6a739b62feaf40ff3f03dd2d2375cca60d345f1d3d4097c978868249df0",
+      "bytes": 5611270
+    },
+    {
+      "file": "lighting-waiting-room-order-sky-low.webp",
+      "sha256": "3b76810810698ca9e2a86849a8436c439abce795147aa1f21cf52901085f3350",
+      "bytes": 154876
+    },
+    {
+      "file": "lighting-waiting-room-order.json",
+      "sha256": "6de7caf8333f7fb96b3d7317600a43b2cec13816a191793072d1c9868d12f9c1",
+      "bytes": 9455
+    },
+    {
+      "file": "lighting-waiting-room-order-denoise.json",
+      "sha256": "824e9ca69bb9672d2b6ba8314d9984a4480d30e60a365f60b78fc0ff55b576b2",
+      "bytes": 2414
+    },
+    {
+      "file": "lighting-concourse-sky.webp",
+      "sha256": "b8c23d8c48c2d627e76384d1bdd8e67ce2165fb673028b88c96a6b26a487861e",
+      "bytes": 1170636
+    },
+    {
+      "file": "lighting-concourse-sky-low.webp",
+      "sha256": "4adb860ef1ba597f3a4d01cb97dcd5ec9e6f41c0a0f8565ee96ba0d0d25919b4",
+      "bytes": 139918
+    },
+    {
+      "file": "lighting-concourse.json",
+      "sha256": "e84bf935b1b674eeda00942846ad60a7d1ac05c38f6ab896d3ca0f106e47653f",
+      "bytes": 7105
+    },
+    {
+      "file": "lighting-concourse-denoise.json",
+      "sha256": "17dd298ff7a0226b60be06f461cdfc369e22ff0d51c0572a90a9f7afcb8b443f",
+      "bytes": 2330
+    },
+    {
+      "file": "lighting-platform-sky.webp",
+      "sha256": "98ba14e32f3bd6c3bcae69fa3941bc977bf66eb986c38a3daba725ef36c6a113",
+      "bytes": 783758
+    },
+    {
+      "file": "lighting-platform-sky-low.webp",
+      "sha256": "0823a46120496c2c29deb3a12b4e1d9ee0e09e8dbed91b0e9f8c95a49a44c76a",
+      "bytes": 62942
+    },
+    {
+      "file": "lighting-platform.json",
+      "sha256": "98f8a18885b8333a2bc79b6fff4dda6da9e20ba797fbc584e2516787d162ecf7",
+      "bytes": 7101
+    },
+    {
+      "file": "lighting-platform-denoise.json",
+      "sha256": "a3034ee27a7b088a1301c2fdd18f1628a3b19fd847d02946258362b8a923e029",
+      "bytes": 2313
+    },
+    {
+      "file": "lighting-waiting-room.json",
+      "sha256": "7ef630c95422b8cf67432bf89f51fbd658eb274e9dbc298a8283d6eb3f198c84",
+      "bytes": 1669
+    },
+    {
+      "file": "lighting-waiting-room-denoise.json",
+      "sha256": "c990d08d3b9425a690a6125ddb72f293d64c90a92d28a97c5649ac4bad235b24",
+      "bytes": 538
+    }
+  ],
+  "shadowCacheSha256": "5c5a941e2884ced09a101ad50cf5521dbc41f435b6e137244d91d345142e83ef",
+  "productionBundleSha256": "2a925da8a33ad307e0a9014641a74f08871f1446b2da43cffe5cb2e55c6aa581",
+  "textureReencodes": 0,
+  "errors": 0,
+  "warnings": 280,
+  "floorBinaryPreserved": true,
+  "metrics": {
+    "pipeline": "Blender 4.3 \u2192 glTF Transform 4.2.1 \u2192 Meshopt + KTX2/UASTC",
+    "sharedTextureFiles": 76,
+    "modelTextureAndLightingBytes": 161327896,
+    "navigationBytes": 567295,
+    "scope": "Independent stone and fixture checkpoint; existing Phase4 vault geometry/AO/GI retained exactly. Corrected roof remains pending."
+  }
+}

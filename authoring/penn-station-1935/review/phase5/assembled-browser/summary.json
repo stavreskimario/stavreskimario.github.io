@@ -1,0 +1,1602 @@
+{
+  "scope": "Actual assembled-candidate placement/material review. Camera/inspection-only scratch hook; all six zones and all geometry visible. Full candidate asset override versus frozen production baseline. Vault GI v2 pixels provisional; no pixel/shader hacks or FPS claims.",
+  "productionBundleSha256": "2c361aa0705b8f179848efb32a3a48f24f3b05f16a846ff2fb5a2f89d8b8deb7",
+  "scratchBundleSha256": "f627f7980758caa529ad17b198381212f62a40b3bc131a6df256b1a8331c394e",
+  "sourceHashes": {
+    "app.jsx": "168e4f75a046d27b4ef8fc12117069642c640ae81d2135a918cdf18d554d9b53",
+    "lighting.mjs": "a3c59ff015e2fa515bff53e81f1bd819b74b0902410fdaed4a5b34174e68690b",
+    "shadow-cache.mjs": "5c5a941e2884ced09a101ad50cf5521dbc41f435b6e137244d91d345142e83ef",
+    "stair-contact.mjs": "adbb3d1f068eb93e2a305c4a397550b3663ca1c9a9d88b704132d3007f75474d",
+    "visual-review.mjs": "cc8d4746357a9c5b789d033b3822d55069099b84beb6d3d1191fb408c9e53f6e"
+  },
+  "passed": true,
+  "errors": [],
+  "notes": [
+    "Placement/material integration acceptance only; provisional vault GI pixels are not accepted by this check.",
+    "All six zones visible, no hidden meshes, stable zone IDs within each context. Camera and inspection hooks only; no shader or pixel alterations.",
+    "Bronze reads very dark and opal muted in the close view under current production lighting. Palette matches the existing material, but this is not photorealism completion.",
+    "Default-distance exterior finish change is subtle: the bounded roughness response is more matte; facade silhouette, street and background scope are unchanged."
+  ],
+  "records": [
+    {
+      "variant": "baseline",
+      "name": "exterior-default",
+      "file": "baseline-exterior-default.png",
+      "eye": [
+        145,
+        8,
+        88
+      ],
+      "target": [
+        108,
+        12,
+        -5
+      ],
+      "fov": 50,
+      "camera": {
+        "position": [
+          145,
+          8.000000000000002,
+          88
+        ],
+        "quaternion": [
+          0.019613231515716492,
+          0.18815900475112515,
+          -0.003758297779044665,
+          0.9819355301028582
+        ],
+        "fov": 50
+      },
+      "exposure": 1.0396437350366434,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "0f0de2d8-65fd-433b-bf83-46ea3a15f94b",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "e7dc5d0c-6e7b-43c7-99da-a337bfe4e427",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "03c60a2b-dee5-4875-9327-1c4cbe5edcdf",
+            "visible": true,
+            "meshes": 15
+          },
+          {
+            "name": "concourse",
+            "id": "4d7df969-6c2f-4e87-a47d-b785e2551555",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "591a2d6b-8582-403b-b2a7-8421f56b5a21",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "abfc9fa5-41c3-4f70-b77b-b3340b236a65",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "3ee537ed-239e-475d-8295-5f0ff07e567f",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 0.8799999952316284,
+          "roughnessMap": {
+            "name": "textures-milfordgranite-roughness-Granite005A_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 0.949999988079071,
+          "roughnessMap": {
+            "name": "textures-travertine-roughness-Travertine009_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 0.5,
+          "roughnessMap": {
+            "name": "textures-milfordgranite-roughness-Granite005A_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": []
+    },
+    {
+      "variant": "baseline",
+      "name": "waiting-floor",
+      "file": "baseline-waiting-floor.png",
+      "eye": [
+        5,
+        -2.5872,
+        36
+      ],
+      "target": [
+        -2,
+        6,
+        -10
+      ],
+      "fov": 50,
+      "camera": {
+        "position": [
+          5.000000000000001,
+          -2.5871999999999975,
+          36
+        ],
+        "quaternion": [
+          0.09086385052034078,
+          0.07512209820822982,
+          -0.006873986542562864,
+          0.9930021043977817
+        ],
+        "fov": 50
+      },
+      "exposure": 4.1506521865366,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "0f0de2d8-65fd-433b-bf83-46ea3a15f94b",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "e7dc5d0c-6e7b-43c7-99da-a337bfe4e427",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "03c60a2b-dee5-4875-9327-1c4cbe5edcdf",
+            "visible": true,
+            "meshes": 15
+          },
+          {
+            "name": "concourse",
+            "id": "4d7df969-6c2f-4e87-a47d-b785e2551555",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "591a2d6b-8582-403b-b2a7-8421f56b5a21",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "abfc9fa5-41c3-4f70-b77b-b3340b236a65",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "3ee537ed-239e-475d-8295-5f0ff07e567f",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 0.8799999952316284,
+          "roughnessMap": {
+            "name": "textures-milfordgranite-roughness-Granite005A_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 0.949999988079071,
+          "roughnessMap": {
+            "name": "textures-travertine-roughness-Travertine009_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 0.5,
+          "roughnessMap": {
+            "name": "textures-milfordgranite-roughness-Granite005A_2K-JPG_Roughness",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": []
+    },
+    {
+      "variant": "candidate",
+      "name": "exterior-default",
+      "file": "candidate-exterior-default.png",
+      "eye": [
+        145,
+        8,
+        88
+      ],
+      "target": [
+        108,
+        12,
+        -5
+      ],
+      "fov": 50,
+      "camera": {
+        "position": [
+          145,
+          8.000000000000002,
+          88
+        ],
+        "quaternion": [
+          0.019613231515716492,
+          0.18815900475112515,
+          -0.003758297779044665,
+          0.9819355301028582
+        ],
+        "fov": 50
+      },
+      "exposure": 1.0395406765099793,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "d257a17f-91a5-4e29-85b5-54b3366fa060",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "0456f930-7d94-4d68-9acf-6939ba107295",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "82e692a6-3254-4b60-a75a-c7fab36f7682",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "65fdb195-2189-499b-885f-a5b4b7b96668",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "6aafdb28-89c9-4509-a336-8f23b34f58fd",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "394b0ffd-438f-4412-a656-bbb26a2a6b00",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "34c1c842-212d-4d70-ba71-16cf8e0249ed",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              -374.2584222058654,
+              524.0941324587006
+            ],
+            "max": [
+              -359.5823107364276,
+              531.2594651201753
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              -222.26428676354456,
+              527.0307708388276
+            ],
+            "max": [
+              -207.0948688968673,
+              535.0220285401383
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 1,
+          "profile": "MilfordGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7f8f448d11f12484907.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 1,
+          "profile": "Travertine bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7670262d7c33cc39671.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 1,
+          "profile": "InteriorGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/02474452a0e7a2da0cfb.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": []
+    },
+    {
+      "variant": "candidate",
+      "name": "waiting-floor",
+      "file": "candidate-waiting-floor.png",
+      "eye": [
+        5,
+        -2.5872,
+        36
+      ],
+      "target": [
+        -2,
+        6,
+        -10
+      ],
+      "fov": 50,
+      "camera": {
+        "position": [
+          5.000000000000001,
+          -2.5871999999999975,
+          36
+        ],
+        "quaternion": [
+          0.09086385052034078,
+          0.07512209820822982,
+          -0.006873986542562864,
+          0.9930021043977817
+        ],
+        "fov": 50
+      },
+      "exposure": 4.150681743978486,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "d257a17f-91a5-4e29-85b5-54b3366fa060",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "0456f930-7d94-4d68-9acf-6939ba107295",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "82e692a6-3254-4b60-a75a-c7fab36f7682",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "65fdb195-2189-499b-885f-a5b4b7b96668",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "6aafdb28-89c9-4509-a336-8f23b34f58fd",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "394b0ffd-438f-4412-a656-bbb26a2a6b00",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "34c1c842-212d-4d70-ba71-16cf8e0249ed",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              -942.1601536729968,
+              -8.152581197292347
+            ],
+            "max": [
+              -749.6602042041338,
+              103.77376058484528
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              2105.9438872190735,
+              -433.7125610870999
+            ],
+            "max": [
+              2406.219607098032,
+              -207.4585478080203
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 1,
+          "profile": "MilfordGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7f8f448d11f12484907.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 1,
+          "profile": "Travertine bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7670262d7c33cc39671.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 1,
+          "profile": "InteriorGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/02474452a0e7a2da0cfb.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": []
+    },
+    {
+      "variant": "candidate",
+      "name": "bracket-west",
+      "file": "candidate-bracket-west.png",
+      "eye": [
+        -12.5,
+        4.7,
+        29
+      ],
+      "target": [
+        -15.6,
+        4.4,
+        28.144
+      ],
+      "fov": 42,
+      "camera": {
+        "position": [
+          -12.5,
+          4.7,
+          29
+        ],
+        "quaternion": [
+          -0.03699071094559687,
+          0.6050809085366107,
+          0.028160818681996245,
+          0.7948054791704754
+        ],
+        "fov": 42
+      },
+      "exposure": 4.159620167347328,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "d257a17f-91a5-4e29-85b5-54b3366fa060",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "0456f930-7d94-4d68-9acf-6939ba107295",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "82e692a6-3254-4b60-a75a-c7fab36f7682",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "65fdb195-2189-499b-885f-a5b4b7b96668",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "6aafdb28-89c9-4509-a336-8f23b34f58fd",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "394b0ffd-438f-4412-a656-bbb26a2a6b00",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "34c1c842-212d-4d70-ba71-16cf8e0249ed",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              529.3715276488874,
+              276.00302725161504
+            ],
+            "max": [
+              975.3708772630362,
+              637.796729828505
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              324.002569245248,
+              316.96860738957605
+            ],
+            "max": [
+              372.93029754176143,
+              353.70061570719463
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 1,
+          "profile": "MilfordGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7f8f448d11f12484907.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 1,
+          "profile": "Travertine bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7670262d7c33cc39671.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 1,
+          "profile": "InteriorGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/02474452a0e7a2da0cfb.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": [],
+      "nativeCrop": "native-bracket-west-crop.png"
+    },
+    {
+      "variant": "candidate",
+      "name": "bracket-east",
+      "file": "candidate-bracket-east.png",
+      "eye": [
+        12.5,
+        4.7,
+        27.3
+      ],
+      "target": [
+        15.6,
+        4.4,
+        28.144
+      ],
+      "fov": 42,
+      "camera": {
+        "position": [
+          12.5,
+          4.7,
+          27.3
+        ],
+        "quaternion": [
+          -0.02825505989374628,
+          -0.7937132715904318,
+          -0.0369762050917037,
+          0.6065094016984655
+        ],
+        "fov": 42
+      },
+      "exposure": 4.159620167347328,
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "scene": {
+        "id": "d257a17f-91a5-4e29-85b5-54b3366fa060",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "0456f930-7d94-4d68-9acf-6939ba107295",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "82e692a6-3254-4b60-a75a-c7fab36f7682",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "65fdb195-2189-499b-885f-a5b4b7b96668",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "6aafdb28-89c9-4509-a336-8f23b34f58fd",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "394b0ffd-438f-4412-a656-bbb26a2a6b00",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "34c1c842-212d-4d70-ba71-16cf8e0249ed",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              329.3640426763619,
+              316.8968168820427
+            ],
+            "max": [
+              378.14870827018456,
+              353.5817182521483
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              529.1742806659594,
+              275.83985068641306
+            ],
+            "max": [
+              975.3471229630081,
+              637.8920517580935
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_—_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "materialProfiles": [
+        {
+          "name": "MilfordGranite",
+          "roughness": 1,
+          "profile": "MilfordGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7f8f448d11f12484907.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "Travertine",
+          "roughness": 1,
+          "profile": "Travertine bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/c7670262d7c33cc39671.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        },
+        {
+          "name": "InteriorGranite",
+          "roughness": 1,
+          "profile": "InteriorGranite bounded B interpretation",
+          "revision": 5,
+          "roughnessMap": {
+            "name": "textures/02474452a0e7a2da0cfb.ktx2",
+            "channel": 0,
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "hiddenMeshes": [],
+      "nativeCrop": "native-bracket-east-crop.png"
+    }
+  ],
+  "previews": [
+    {
+      "file": "bracket-west.webp",
+      "bytes": 13936,
+      "sha256": "f19a78e38972b46be1dc9f6b0bdcaadf3b17f53c943143c2183880b91f7c5d65",
+      "source": "native-bracket-west-crop.png"
+    },
+    {
+      "file": "bracket-east.webp",
+      "bytes": 13962,
+      "sha256": "aca1e50947a10ee64036c512c38259fa2060e89d3c9675c2887b83e4346f340b",
+      "source": "native-bracket-east-crop.png"
+    },
+    {
+      "file": "waiting-floor.webp",
+      "bytes": 90168,
+      "sha256": "570685740e24530d188b3d3abde5fa367cc822faa40c872b44152ae15d64e83a",
+      "source": "candidate-waiting-floor.png"
+    },
+    {
+      "file": "exterior-default.webp",
+      "bytes": 64458,
+      "sha256": "0b4a12003c8b040d1517ff3974698084dfa2404faafeece4fdd44eafdfdc2323",
+      "source": "candidate-exterior-default.png"
+    }
+  ],
+  "exteriorComparison": [
+    {
+      "variant": "baseline",
+      "eye": [
+        145,
+        8.000000000000002,
+        88
+      ],
+      "quaternion": [
+        0.019613231515716492,
+        0.18815900475112515,
+        -0.003758297779044665,
+        0.9819355301028582
+      ],
+      "fov": 50,
+      "exposure": 1.0396437350366434,
+      "file": "baseline-exterior-default.png"
+    },
+    {
+      "variant": "candidate",
+      "eye": [
+        145,
+        8.000000000000002,
+        88
+      ],
+      "quaternion": [
+        0.019613231515716492,
+        0.18815900475112515,
+        -0.003758297779044665,
+        0.9819355301028582
+      ],
+      "fov": 50,
+      "exposure": 1.0395406765099793,
+      "file": "candidate-exterior-default.png"
+    }
+  ]
+}

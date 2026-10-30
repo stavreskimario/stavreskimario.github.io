@@ -1,0 +1,237 @@
+{
+  "created": "2026-10-29T22:29:17.098Z",
+  "section": "flight",
+  "checks": [
+    "Desktop WASD flight, camera/target coherence, QE height, Shift, deceleration, native-field/dialog and blur guards, persistent world",
+    "390 px held-button flight with all six labelled movement buttons"
+  ],
+  "contexts": [
+    {
+      "label": "desktop flight",
+      "errors": [],
+      "requestsFailed": [],
+      "renderer": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)"
+      },
+      "viewCommitFrames": {
+        "before": 112,
+        "after": 116
+      },
+      "initial": {
+        "position": [
+          145,
+          8.000000000000002,
+          88
+        ],
+        "quaternion": [
+          0.019613231515716492,
+          0.18815900475112515,
+          -0.003758297779044665,
+          0.9819355301028582
+        ],
+        "fov": 50
+      },
+      "initialState": {
+        "view": "exterior",
+        "framing": "",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": true
+      },
+      "after": {
+        "position": [
+          142.62672124339204,
+          8.256570676390051,
+          82.03473177393144
+        ],
+        "quaternion": [
+          0.0196132315157165,
+          0.188159004751125,
+          -0.003758297779044663,
+          0.9819355301028582
+        ],
+        "fov": 50
+      },
+      "afterState": {
+        "view": "exterior",
+        "framing": "",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": true
+      },
+      "flight": {
+        "initial": {
+          "position": [
+            145,
+            8.000000000000002,
+            88
+          ],
+          "quaternion": [
+            0.019613231515716492,
+            0.18815900475112515,
+            -0.003758297779044665,
+            0.9819355301028582
+          ],
+          "fov": 50
+        },
+        "after": {
+          "position": [
+            142.62672124339204,
+            8.256570676390051,
+            82.03473177393144
+          ],
+          "quaternion": [
+            0.0196132315157165,
+            0.188159004751125,
+            -0.003758297779044663,
+            0.9819355301028582
+          ],
+          "fov": 50
+        },
+        "raised": {
+          "position": [
+            142.6262668157818,
+            14.775165698018556,
+            82.03358956399184
+          ],
+          "quaternion": [
+            0.01961323151571649,
+            0.1881590047511259,
+            -0.00375829777904468,
+            0.981935530102858
+          ],
+          "fov": 50
+        },
+        "lowered": {
+          "position": [
+            142.62626681510173,
+            8.280091272460156,
+            82.0335895622824
+          ],
+          "quaternion": [
+            0.019613231515716496,
+            0.1881590047511257,
+            -0.0037582977790446763,
+            0.981935530102858
+          ],
+          "fov": 50
+        },
+        "fastAfter": {
+          "position": [
+            156.7285779076444,
+            8.278712802347563,
+            76.42299267600201
+          ],
+          "quaternion": [
+            0.019613231515716496,
+            0.18815900475112587,
+            -0.00375829777904468,
+            0.981935530102858
+          ],
+          "fov": 50
+        },
+        "final": {
+          "position": [
+            156.46052559117743,
+            8.307839659040427,
+            75.74524776332595
+          ],
+          "quaternion": [
+            0.019613231515716496,
+            0.18815900475112587,
+            -0.00375829777904468,
+            0.981935530102858
+          ],
+          "fov": 51
+        }
+      }
+    },
+    {
+      "label": "390 px touch flight",
+      "errors": [],
+      "requestsFailed": [],
+      "renderer": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)"
+      },
+      "flight": {
+        "before": {
+          "position": [
+            145,
+            8.000000000000002,
+            88
+          ],
+          "quaternion": [
+            0.019613231515716492,
+            0.18815900475112515,
+            -0.003758297779044665,
+            0.9819355301028582
+          ],
+          "fov": 50
+        },
+        "after": {
+          "position": [
+            142.76901057279917,
+            8.241188046183881,
+            82.39237792622487
+          ],
+          "quaternion": [
+            0.0196132315157165,
+            0.18815900475112546,
+            -0.0037582977790446724,
+            0.981935530102858
+          ],
+          "fov": 50
+        }
+      }
+    }
+  ],
+  "scope": "Installed desktop Chrome and 390 px touch emulation; no physical-phone certification.",
+  "runtimeBundleSha256": "67be7080829be131857745192d7f08af499b43396f601ee3240c2e70d220e1e4",
+  "modelSha256": {
+    "model-exterior.glb.gz": "570308ab4f0f5f609564bed7dd6fb32ee1fe7b4f388c0ed17b53b283e1758381",
+    "model-exterior-low.glb.gz": "83779ef15f18ac98c7455cd34e1be52b9408c978028006b71dbf63ce07b622b8",
+    "model-waiting-room.glb.gz": "15ab0975b7376621227f67899efa843fe5adc547e92df4028715f84eff06977f",
+    "model-waiting-room-low.glb.gz": "73970ca45dd112baca9f22b1a06c5939cca58517f7b13fde1997d85bc79b902d",
+    "model-concourse.glb.gz": "0505d04338aacb21df6d47ed07cdd4dca6af976e22743eba5f93ac83f6d8c79c",
+    "model-concourse-low.glb.gz": "eeafebb05ee86f0f8a3f18a4b15120dce9696b2eb6cc7b1bfc73947a0cd08403",
+    "model-context.glb.gz": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+    "model-context-low.glb.gz": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+    "model-platform.glb.gz": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+    "model-platform-low.glb.gz": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+    "model-trains.glb.gz": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+    "model-trains-low.glb.gz": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+    "scene-manifest.json": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+  },
+  "requestedAngle": "metal",
+  "browser": "156.0.8078.74",
+  "status": "passed",
+  "nativeArtifactsPath": "/Users/stavreskimario/Desktop/penn-station-work/phase4-final-navigation-visual-2/flight-guards-committed"
+}

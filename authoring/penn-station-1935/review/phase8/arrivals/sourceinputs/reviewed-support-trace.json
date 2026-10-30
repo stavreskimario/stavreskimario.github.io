@@ -1,0 +1,1953 @@
+{
+  "schema": 1,
+  "date": "2026-10-30",
+  "scope": "Read-only external primary Fig3 lower-support and lift trace for first8 ordinary rows. No model/repository/runtime/bake writes. NoP9/LIRR geometry authorization.",
+  "source": {
+    "id": "S10",
+    "figure": "Fig3, printed244/PDF428 one-based",
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/../phase5-stair-evidence/gibbs-244-full-4000.png",
+    "bytes": 1467539,
+    "sha256": "aef3ef725d50500067a4760b46e2d5a83a06ec89016cd54cc9373206e1b48bd9",
+    "nativeSize": [
+      2462,
+      4000
+    ],
+    "orientation": {
+      "top": "west",
+      "bottom": "east",
+      "left": "south",
+      "right": "north"
+    }
+  },
+  "registration": {
+    "sourceFile": "../phase7-circulation/arrivals/plan-registration.json",
+    "affineExitToMain": [
+      [
+        0.9955096826790375,
+        0.003020469334815699,
+        50.12982651299837
+      ],
+      [
+        -0.0028056862616392154,
+        0.9957295682191468,
+        82.1250296822716
+      ]
+    ],
+    "rmsControlResidualPixels": 1.697971891846262,
+    "workingExitEdgesX": [
+      -73.2,
+      -54.912
+    ],
+    "printedWidthMetres": 18.288,
+    "minimumWorldPositionUncertaintyM": 1,
+    "warning": "Numerical coordinates are reproducible raster readings, not survey precision. Width derivesprinted60ft;X mapping ignores small affine skew within≥1m stated uncertainty."
+  },
+  "counts": {
+    "clearLiftSurroundPoints": 25,
+    "clearOtherPoints": 24,
+    "clearTotal": 49,
+    "faintHeld": 1,
+    "liftOutlines": 8
+  },
+  "rows": [
+    {
+      "rowOrdinal": 1,
+      "clearLiftSurroundSupportIds": [
+        "C012",
+        "C043"
+      ],
+      "note": "End-wall condition. Only two clear inner symbols on north side of first lift; no cloned southern pair.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          293,
+          1180,
+          317,
+          1219
+        ],
+        "nativeOutlineCentreUV": [
+          305,
+          1199.5
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.85061682242991,
+            -62.5177570093458
+          ],
+          "z": [
+            67.23259692481163,
+            69.21910143963831
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.332859813084113,
+          "northSouth": 1.9865045148266773
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 2,
+      "clearLiftSurroundSupportIds": [
+        "C008",
+        "C009",
+        "C039",
+        "C040"
+      ],
+      "note": "Four clear inner symbols plus separately listed outer-band supports; not equivalent to other rows.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          459,
+          1180,
+          481,
+          1218
+        ],
+        "nativeOutlineCentreUV": [
+          470,
+          1199
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.85061682242991,
+            -62.603214953271035
+          ],
+          "z": [
+            53.72499842892941,
+            55.546523182348174
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.247401869158878,
+          "northSouth": 1.821524753418764
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 3,
+      "clearLiftSurroundSupportIds": [
+        "C013",
+        "C036"
+      ],
+      "note": "Two clear inner symbols on south side. Faint east/north mark separately flagged; west/north location is blank beside transverse circulation. No invented fourth symbol.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          622,
+          1180,
+          646,
+          1218
+        ],
+        "nativeOutlineCentreUV": [
+          634,
+          1199
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.85061682242991,
+            -62.603214953271035
+          ],
+          "z": [
+            40.134785100900054,
+            42.121039712840386
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.247401869158878,
+          "northSouth": 1.986254611940332
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 4,
+      "clearLiftSurroundSupportIds": [
+        "C006",
+        "C011",
+        "C042"
+      ],
+      "note": "Three clear inner symbols. East/south position is blank; neighbouring transverse circulation/leader is not a column.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          795,
+          1181,
+          820,
+          1219
+        ],
+        "nativeOutlineCentreUV": [
+          807.5,
+          1200
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.76515887850468,
+            -62.5177570093458
+          ],
+          "z": [
+            25.8030375066373,
+            27.871657047838404
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.247401869158878,
+          "northSouth": 2.0686195412011052
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 5,
+      "clearLiftSurroundSupportIds": [
+        "C019",
+        "C016",
+        "C046",
+        "C044"
+      ],
+      "note": "Four clear inner symbols around lift; earlier four-point control retained.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          969,
+          1182,
+          993,
+          1219
+        ],
+        "nativeOutlineCentreUV": [
+          981,
+          1200.5
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.67970093457944,
+            -62.5177570093458
+          ],
+          "z": [
+            11.553904744521672,
+            13.539909453575643
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.1619439252336434,
+          "northSouth": 1.9860047090539705
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 6,
+      "clearLiftSurroundSupportIds": [
+        "C020",
+        "C026",
+        "C049",
+        "C050"
+      ],
+      "note": "Four clear inner symbols around lift. Caption letters below are excluded, not columns.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          1126,
+          1182,
+          1150,
+          1219
+        ],
+        "nativeOutlineCentreUV": [
+          1138,
+          1200.5
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.67970093457944,
+            -62.5177570093458
+          ],
+          "z": [
+            -1.377389149421405,
+            0.6086155596325745
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.1619439252336434,
+          "northSouth": 1.9860047090539794
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 7,
+      "clearLiftSurroundSupportIds": [
+        "C024",
+        "C022",
+        "C054",
+        "C055"
+      ],
+      "note": "Four clear inner symbols around lift. Caption/stroke fragments excluded.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          1281,
+          1184,
+          1306,
+          1220
+        ],
+        "nativeOutlineCentreUV": [
+          1293.5,
+          1202
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.50878504672897,
+            -62.432299065420565
+          ],
+          "z": [
+            -14.226568016990052,
+            -12.158448281561641
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.0764859813084087,
+          "northSouth": 2.068119735428411
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    },
+    {
+      "rowOrdinal": 8,
+      "clearLiftSurroundSupportIds": [
+        "C021",
+        "C053"
+      ],
+      "note": "Two clear inner symbols on south side. Northern transverse circulation symbol interrupts expected pattern; do not clone northern pair.",
+      "enclosure": {
+        "nativeInkBoundsUV": [
+          1454,
+          1184,
+          1480,
+          1220
+        ],
+        "nativeOutlineCentreUV": [
+          1467,
+          1202
+        ],
+        "workingBoundsXZ": {
+          "x": [
+            -65.50878504672897,
+            -62.432299065420565
+          ],
+          "z": [
+            -28.558065708366467,
+            -26.40758104367727
+          ]
+        },
+        "workingOuterInkSizeM": {
+          "eastWest": 3.0764859813084087,
+          "northSouth": 2.1504846646891984
+        },
+        "role": "Probable passenger-elevator enclosure/shaft outline",
+        "roleConfidence": "High contextual correspondence: one central rectangle per ordinary platform row, and Gibbs262 gives one passenger elevator per platform. Not individually labelled in Fig3.",
+        "faceWidthCertainty": "Raster outer-ink bounds, about±2px, row1±3px because connected to end wall. Not clear car dimensions, fabrication section or exact finished face.",
+        "verticalExtent": "Unresolved per individual row; Gibbs262 says eight lifts reachExit only and threeMain. Do not extend all shafts throughMain.",
+        "minimumWorldPositionUncertaintyM": 1
+      }
+    }
+  ],
+  "interRowGroups": [
+    {
+      "betweenRows": [
+        1,
+        2
+      ],
+      "ids": [
+        "C003",
+        "C015",
+        "C041",
+        "C074"
+      ],
+      "note": "Four clear symbols in outer and inner bands."
+    },
+    {
+      "betweenRows": [
+        2,
+        3
+      ],
+      "ids": [
+        "C002",
+        "C010",
+        "C037",
+        "C071"
+      ],
+      "note": "Four clear symbols in outer and inner bands."
+    },
+    {
+      "betweenRows": [
+        3,
+        4
+      ],
+      "ids": [
+        "C007",
+        "C038"
+      ],
+      "note": "Two clear inner symbols; no outer-band completion assumed."
+    },
+    {
+      "betweenRows": [
+        4,
+        5
+      ],
+      "ids": [
+        "C014"
+      ],
+      "note": "One clear west-inner symbol. East-inner counterpart is visibly blank; not cloned."
+    },
+    {
+      "betweenRows": [
+        5,
+        6
+      ],
+      "ids": [
+        "C018",
+        "C047"
+      ],
+      "note": "Two clear inner symbols."
+    },
+    {
+      "betweenRows": [
+        6,
+        7
+      ],
+      "ids": [
+        "C025",
+        "C048"
+      ],
+      "note": "Two clear inner symbols."
+    },
+    {
+      "betweenRows": [
+        7,
+        8
+      ],
+      "ids": [
+        "C023",
+        "C052"
+      ],
+      "note": "Two clear inner symbols."
+    },
+    {
+      "betweenRows": [
+        8,
+        "held9"
+      ],
+      "ids": [
+        "C017",
+        "C051"
+      ],
+      "note": "Two clear inner symbols near Z−34.6. Outside the first provisional Z−34 cutoff; do not silently include without adjusting the explicitly temporary subset extent."
+    }
+  ],
+  "additionalOuterBandGroups": [
+    {
+      "row": 2,
+      "ids": [
+        "C001",
+        "C004",
+        "C073",
+        "C072"
+      ]
+    },
+    {
+      "row": 3,
+      "ids": [
+        "C005"
+      ]
+    }
+  ],
+  "points": [
+    {
+      "uv": [
+        311.52,
+        1167.45
+      ],
+      "area": 44,
+      "bounds": [
+        308,
+        1165,
+        316,
+        1170
+      ],
+      "id": "C012",
+      "observedInkDimensionsPixels": [
+        9,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.92311401869159,
+        "z": 67.69683923095236
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        313.33,
+        1233.64
+      ],
+      "area": 45,
+      "bounds": [
+        310,
+        1231,
+        317,
+        1237
+      ],
+      "id": "C043",
+      "observedInkDimensionsPixels": [
+        8,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -61.26665271028037,
+        "z": 67.53121763694246
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        449.04,
+        1167.24
+      ],
+      "area": 25,
+      "bounds": [
+        447,
+        1165,
+        451,
+        1170
+      ],
+      "id": "C008",
+      "observedInkDimensionsPixels": [
+        5,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.94106018691589,
+        "z": 56.37006663861548
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        482.38,
+        1167.34
+      ],
+      "area": 32,
+      "bounds": [
+        480,
+        1165,
+        485,
+        1170
+      ],
+      "id": "C009",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.93251439252337,
+        "z": 53.6239949067723
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        450.11,
+        1233.04
+      ],
+      "area": 28,
+      "bounds": [
+        447,
+        1231,
+        453,
+        1235
+      ],
+      "id": "C039",
+      "observedInkDimensionsPixels": [
+        7,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -61.31792747663552,
+        "z": 56.26549255438424
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        481.6,
+        1233.04
+      ],
+      "area": 25,
+      "bounds": [
+        479,
+        1231,
+        484,
+        1235
+      ],
+      "id": "C040",
+      "observedInkDimensionsPixels": [
+        6,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -61.31792747663552,
+        "z": 53.671820931962145
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        616.27,
+        1167.5
+      ],
+      "area": 22,
+      "bounds": [
+        614,
+        1165,
+        618,
+        1170
+      ],
+      "id": "C013",
+      "observedInkDimensionsPixels": [
+        5,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.91884112149533,
+        "z": 42.59611454358413
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        615.46,
+        1232.17
+      ],
+      "area": 24,
+      "bounds": [
+        613,
+        1230,
+        618,
+        1234
+      ],
+      "id": "C036",
+      "observedInkDimensionsPixels": [
+        6,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -61.39227588785046,
+        "z": 42.64666891662473
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        788.16,
+        1167
+      ],
+      "area": 31,
+      "bounds": [
+        785,
+        1165,
+        791,
+        1169
+      ],
+      "id": "C006",
+      "observedInkDimensionsPixels": [
+        7,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.96157009345795,
+        "z": 28.438531804391154
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        825.58,
+        1167.42
+      ],
+      "area": 33,
+      "bounds": [
+        823,
+        1165,
+        828,
+        1170
+      ],
+      "id": "C011",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.92567775700934,
+        "z": 25.356331192240336
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        825.44,
+        1233.38
+      ],
+      "area": 34,
+      "bounds": [
+        823,
+        1231,
+        828,
+        1237
+      ],
+      "id": "C042",
+      "observedInkDimensionsPixels": [
+        6,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -61.288871775700926,
+        "z": 25.351378687952835
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        958.36,
+        1168.94
+      ],
+      "area": 50,
+      "bounds": [
+        955,
+        1166,
+        963,
+        1173
+      ],
+      "id": "C019",
+      "observedInkDimensionsPixels": [
+        9,
+        8
+      ],
+      "workingWorldXZ": {
+        "x": -66.79578168224299,
+        "z": 14.419536032606183
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        997.43,
+        1168.43
+      ],
+      "area": 35,
+      "bounds": [
+        995,
+        1166,
+        1000,
+        1171
+      ],
+      "id": "C016",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.83936523364486,
+        "z": 11.201665696859417
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        957.24,
+        1234
+      ],
+      "area": 38,
+      "bounds": [
+        955,
+        1231,
+        960,
+        1237
+      ],
+      "id": "C046",
+      "observedInkDimensionsPixels": [
+        6,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -61.23588785046729,
+        "z": 14.495526071591966
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1000.55,
+        1233.66
+      ],
+      "area": 38,
+      "bounds": [
+        998,
+        1231,
+        1004,
+        1237
+      ],
+      "id": "C044",
+      "observedInkDimensionsPixels": [
+        7,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -61.26494355140186,
+        "z": 10.928385952288783
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1123.82,
+        1169
+      ],
+      "area": 33,
+      "bounds": [
+        1121,
+        1167,
+        1127,
+        1171
+      ],
+      "id": "C020",
+      "observedInkDimensionsPixels": [
+        7,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.79065420560748,
+        "z": 0.7914198429437088
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1153.05,
+        1169.7
+      ],
+      "area": 44,
+      "bounds": [
+        1150,
+        1167,
+        1156,
+        1173
+      ],
+      "id": "C026",
+      "observedInkDimensionsPixels": [
+        7,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -66.73083364485981,
+        "z": -1.616281971369464
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1122.42,
+        1235.42
+      ],
+      "area": 33,
+      "bounds": [
+        1120,
+        1233,
+        1125,
+        1238
+      ],
+      "id": "C049",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.114537570093454,
+        "z": 0.890132194197049
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1152.42,
+        1235.58
+      ],
+      "area": 33,
+      "bounds": [
+        1150,
+        1233,
+        1155,
+        1238
+      ],
+      "id": "C050",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.10086429906543,
+        "z": -1.580855668088288
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1271.83,
+        1169.35
+      ],
+      "area": 40,
+      "bounds": [
+        1268,
+        1167,
+        1276,
+        1172
+      ],
+      "id": "C024",
+      "observedInkDimensionsPixels": [
+        9,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.76074392523365,
+        "z": -11.399500802955153
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1313.81,
+        1169.1
+      ],
+      "area": 31,
+      "bounds": [
+        1311,
+        1167,
+        1317,
+        1171
+      ],
+      "id": "C022",
+      "observedInkDimensionsPixels": [
+        7,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.78210841121496,
+        "z": -14.857118057601278
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1271.5,
+        1236.5
+      ],
+      "area": 32,
+      "bounds": [
+        1269,
+        1234,
+        1274,
+        1239
+      ],
+      "id": "C054",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.022242990654206,
+        "z": -11.389101355117877
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1313.33,
+        1236.5
+      ],
+      "area": 42,
+      "bounds": [
+        1310,
+        1234,
+        1317,
+        1239
+      ],
+      "id": "C055",
+      "observedInkDimensionsPixels": [
+        8,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.022242990654206,
+        "z": -14.834426346096468
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1443.96,
+        1169
+      ],
+      "area": 24,
+      "bounds": [
+        1442,
+        1167,
+        1447,
+        1171
+      ],
+      "id": "C021",
+      "observedInkDimensionsPixels": [
+        6,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.79065420560748,
+        "z": -25.576888610603667
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1445.53,
+        1236.47
+      ],
+      "area": 38,
+      "bounds": [
+        1442,
+        1234,
+        1449,
+        1239
+      ],
+      "id": "C053",
+      "observedInkDimensionsPixels": [
+        8,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.02480672897197,
+        "z": -25.72306249728551
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        384.22,
+        1118.37
+      ],
+      "area": 49,
+      "bounds": [
+        380,
+        1116,
+        388,
+        1121
+      ],
+      "id": "C003",
+      "observedInkDimensionsPixels": [
+        9,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -71.11738990654207,
+        "z": 61.7211741073557
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        383.09,
+        1167.77
+      ],
+      "area": 56,
+      "bounds": [
+        377,
+        1165,
+        388,
+        1170
+      ],
+      "id": "C015",
+      "observedInkDimensionsPixels": [
+        12,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.89576747663551,
+        "z": 61.801901274834414
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        384.36,
+        1233.06
+      ],
+      "area": 50,
+      "bounds": [
+        381,
+        1230,
+        388,
+        1237
+      ],
+      "id": "C041",
+      "observedInkDimensionsPixels": [
+        8,
+        8
+      ],
+      "workingWorldXZ": {
+        "x": -61.31621831775702,
+        "z": 61.68098165522306
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        386.24,
+        1276.14
+      ],
+      "area": 37,
+      "bounds": [
+        383,
+        1274,
+        390,
+        1278
+      ],
+      "id": "C074",
+      "observedInkDimensionsPixels": [
+        8,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -57.634690093457934,
+        "z": 61.51536977186859
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        550.69,
+        1118.36
+      ],
+      "area": 36,
+      "bounds": [
+        548,
+        1116,
+        554,
+        1121
+      ],
+      "id": "C002",
+      "observedInkDimensionsPixels": [
+        7,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -71.11824448598132,
+        "z": 48.00988683234184
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        551.6,
+        1167.4
+      ],
+      "area": 15,
+      "bounds": [
+        550,
+        1166,
+        553,
+        1169
+      ],
+      "id": "C010",
+      "observedInkDimensionsPixels": [
+        4,
+        4
+      ],
+      "workingWorldXZ": {
+        "x": -66.92738691588785,
+        "z": 47.92267950916766
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        550.69,
+        1232.42
+      ],
+      "area": 26,
+      "bounds": [
+        548,
+        1230,
+        553,
+        1235
+      ],
+      "id": "C037",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.37091140186916,
+        "z": 47.981382909124115
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        550.36,
+        1275.94
+      ],
+      "area": 50,
+      "bounds": [
+        547,
+        1273,
+        554,
+        1279
+      ],
+      "id": "C071",
+      "observedInkDimensionsPixels": [
+        8,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -57.65178168224299,
+        "z": 47.99768756216598
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        722.08,
+        1167.08
+      ],
+      "area": 24,
+      "bounds": [
+        720,
+        1165,
+        724,
+        1169
+      ],
+      "id": "C007",
+      "observedInkDimensionsPixels": [
+        5,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.95473345794393,
+        "z": 33.88118633771283
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        722.18,
+        1232.71
+      ],
+      "area": 34,
+      "bounds": [
+        719,
+        1230,
+        725,
+        1235
+      ],
+      "id": "C038",
+      "observedInkDimensionsPixels": [
+        7,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.34612859813084,
+        "z": 33.856548718355256
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        893,
+        1167.5
+      ],
+      "area": 38,
+      "bounds": [
+        890,
+        1165,
+        896,
+        1170
+      ],
+      "id": "C014",
+      "observedInkDimensionsPixels": [
+        7,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.91884112149533,
+        "z": 19.80326766924738
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1056.9,
+        1168.67
+      ],
+      "area": 40,
+      "bounds": [
+        1054,
+        1166,
+        1061,
+        1171
+      ],
+      "id": "C018",
+      "observedInkDimensionsPixels": [
+        8,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.8188553271028,
+        "z": 6.3033633770278605
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1058.25,
+        1234.47
+      ],
+      "area": 36,
+      "bounds": [
+        1056,
+        1231,
+        1061,
+        1238
+      ],
+      "id": "C047",
+      "observedInkDimensionsPixels": [
+        6,
+        8
+      ],
+      "workingWorldXZ": {
+        "x": -61.19572261682243,
+        "z": 6.175727112603601
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1211.72,
+        1169.38
+      ],
+      "area": 29,
+      "bounds": [
+        1209,
+        1167,
+        1214,
+        1172
+      ],
+      "id": "C025",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.75818018691588,
+        "z": -6.448552402176025
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1212.63,
+        1235.22
+      ],
+      "area": 32,
+      "bounds": [
+        1210,
+        1233,
+        1215,
+        1238
+      ],
+      "id": "C048",
+      "observedInkDimensionsPixels": [
+        6,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.1316291588785,
+        "z": -6.539958093841013
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1381.33,
+        1169.13
+      ],
+      "area": 24,
+      "bounds": [
+        1379,
+        1167,
+        1384,
+        1171
+      ],
+      "id": "C023",
+      "observedInkDimensionsPixels": [
+        6,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -66.77954467289719,
+        "z": -20.418405578375992
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1382.88,
+        1236.22
+      ],
+      "area": 32,
+      "bounds": [
+        1380,
+        1234,
+        1386,
+        1239
+      ],
+      "id": "C052",
+      "observedInkDimensionsPixels": [
+        7,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -61.046171214953276,
+        "z": -20.562837203375825
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1553.11,
+        1168.47
+      ],
+      "area": 19,
+      "bounds": [
+        1551,
+        1166,
+        1555,
+        1171
+      ],
+      "id": "C017",
+      "observedInkDimensionsPixels": [
+        5,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -66.83594691588785,
+        "z": -34.56688819088844
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        1553.19,
+        1235.95
+      ],
+      "area": 21,
+      "bounds": [
+        1551,
+        1234,
+        1555,
+        1238
+      ],
+      "id": "C051",
+      "observedInkDimensionsPixels": [
+        5,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -61.06924485981308,
+        "z": -34.59034083200061
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        450.97,
+        1118.21
+      ],
+      "area": 29,
+      "bounds": [
+        448,
+        1116,
+        454,
+        1121
+      ],
+      "id": "C001",
+      "observedInkDimensionsPixels": [
+        7,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -71.1310631775701,
+        "z": 56.22335506366018
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        480.8,
+        1118.5
+      ],
+      "area": 40,
+      "bounds": [
+        477,
+        1116,
+        484,
+        1121
+      ],
+      "id": "C004",
+      "observedInkDimensionsPixels": [
+        8,
+        6
+      ],
+      "workingWorldXZ": {
+        "x": -71.10628037383178,
+        "z": 53.76633675197395
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        449.3,
+        1276.12
+      ],
+      "area": 33,
+      "bounds": [
+        446,
+        1273,
+        453,
+        1279
+      ],
+      "id": "C073",
+      "observedInkDimensionsPixels": [
+        8,
+        7
+      ],
+      "workingWorldXZ": {
+        "x": -57.63639925233646,
+        "z": 56.321442330741284
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        480.4,
+        1276.07
+      ],
+      "area": 15,
+      "bounds": [
+        479,
+        1274,
+        482,
+        1278
+      ],
+      "id": "C072",
+      "observedInkDimensionsPixels": [
+        4,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -57.64067214953272,
+        "z": 53.75990552587521
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    },
+    {
+      "uv": [
+        648.59,
+        1121.59
+      ],
+      "area": 29,
+      "bounds": [
+        645,
+        1120,
+        652,
+        1124
+      ],
+      "id": "C005",
+      "observedInkDimensionsPixels": [
+        8,
+        5
+      ],
+      "workingWorldXZ": {
+        "x": -70.84221532710282,
+        "z": 39.94555307138817
+      },
+      "observationConfidence": "Clear compact filled mark in original Fig3, distinct from lettering/arrow/fence stroke.",
+      "role": "Probable lower-floor structural column/post cut symbol",
+      "roleConfidence": "Probable, not a labelled framing schedule. Fig3 is an architectural floor plan; source photo independently corroborates this lower-support family.",
+      "memberDimensions": "Ink size is not a physical column width; no section size certified.",
+      "minimumWorldPositionUncertaintyM": 1,
+      "constructionStatus": "Position candidate for independent actual-platform/rail/train and framing checks; no certified straight-down foundation path."
+    }
+  ],
+  "faintHeldSymbols": [
+    {
+      "id": "F-ROW3-EAST-NORTH",
+      "nativeUV": [
+        646.875,
+        1231.125
+      ],
+      "observedBoundsUV": [
+        646,
+        1230,
+        649,
+        1232
+      ],
+      "workingWorldXZ": {
+        "x": -61.481579439252336,
+        "z": 40.05943581241346
+      },
+      "role": "Possible faint/partly lost support symbol",
+      "confidence": "Low: only8pixels below190, distinct but small. Not a certified smaller member.",
+      "constructionStatus": "Hold/flag. Do not normalize to a full four-post pattern."
+    }
+  ],
+  "excludedCandidateIds": [
+    "C027",
+    "C028",
+    "C029",
+    "C030",
+    "C031",
+    "C032",
+    "C033",
+    "C034",
+    "C035",
+    "C045",
+    "C056",
+    "C057",
+    "C058",
+    "C059",
+    "C060",
+    "C061",
+    "C062",
+    "C063",
+    "C064",
+    "C065",
+    "C066",
+    "C067",
+    "C068",
+    "C069",
+    "C070",
+    "C075",
+    "C076",
+    "C077",
+    "C078"
+  ],
+  "exclusionReason": "Lift interior arrows/marks, ExitConcourse caption letters, disconnected endwall strokes and lower-edge stair/fence attachments are not counted as free-standing support symbols.",
+  "verticalAndFramingEvidence": {
+    "sourcePhoto": {
+      "id": "LOC071937",
+      "url": "https://www.loc.gov/item/2016815392/",
+      "crop": "071937-lower-frame-column-example-native.png",
+      "originalCropRect": [
+        3900,
+        2480,
+        500,
+        1050
+      ],
+      "observation": "Rectangular lower pier visibly continues platform→Exit edge girder→Main underside. Several other photo supports are similarly lower framing, distinct from large lattice roof columns.",
+      "limit": "This photographic family is not individually cross-identified to each plan symbol."
+    },
+    "mainPlanComparison": {
+      "file": "main-row5-comparison-native4x.png",
+      "source": "S10 Fig2, printed243",
+      "originalCropRect": [
+        920,
+        1150,
+        230,
+        250
+      ],
+      "observation": "No corresponding small inner-post forest continues above finishedMain here. Do not grow these minor supports into roof piers.",
+      "limit": "Absence in floor plan does not alone prove exact top/bottom of each support."
+    },
+    "s9Printed189": "Track-level columns governed by railway clearances; unusual girders and offset upper columns explicitly required. Do not assume every Exit cut-plane symbol continues straight down to platform.",
+    "s9Printed188": "Reinforcedconcrete floors with concrete beam haunches generally used throughout station.",
+    "s9Printed191": "General finishedfloor→beamtop5in rule; not an ordinaryExit girder-depth schedule.",
+    "s9PlateLXI": "Actual section shows supporting columns/decks under31st/33rd streets. NorthExit lowerdeck2ft overall framing restriction is local; do not copy its18/24in webs universally into interior.",
+    "s10Printed255_256": "Lower station-support columns fireproofed with grout inside steelplate jacket to8ft6 aboveplatform, exposedconcrete above. Exact profile of each traced symbol remains inferred.",
+    "constructionQualification": "A proposed platform→Exit→Mainunderside support/frame at these plan positions is source-consistent reconstruction only where actual platform/rail/train checks fit. Transferbeam/offset details and member profiles require explicit interpretation; reject conflicts instead of moving railway."
+  },
+  "limits": [
+    "First8 rows only;P9/LIRR correspondence held.",
+    "49points are observed clear filled symbols, not49survey-certified foundation columns.",
+    "Missing/faint supports are not completed by symmetry.",
+    "Lift outerinkbounds are not car size or operating schedule.",
+    "No universal4postrow,structural member schedule or full1935 certification."
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "scope": "Actual Chrome Metal, quiet GPU, current candidate and locally served exact b86a591 commit; render invocation/draw counters, not empty rAF. All six zones stay loaded. Headless results are not a universal device FPS claim.",
+  "browser": "156.0.8078.74",
+  "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+  "framebuffer": {
+    "cssPixels": [
+      1280,
+      816
+    ],
+    "dpr2Pixels": [
+      2560,
+      1632
+    ]
+  },
+  "baselineConcourseDpr2": [
+    {
+      "version": "current",
+      "renderedFps": 47.45254745261368,
+      "gpuMs": {
+        "mean": 41.02716969014085,
+        "p50": 41.054,
+        "p95": 53.499291,
+        "max": 58.845666
+      },
+      "navigationCpuMs": {
+        "mean": 0.019736842154280135,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "totalTriangles": {
+        "mean": 49993910.05263158,
+        "p50": 49474592,
+        "p95": 50639956,
+        "max": 50639956
+      },
+      "totalDrawCalls": {
+        "mean": 443.8157894736842,
+        "p50": 439,
+        "p95": 457,
+        "max": 457
+      }
+    },
+    {
+      "version": "b86",
+      "renderedFps": 59.947545897256155,
+      "gpuMs": {
+        "mean": 9.697183642105262,
+        "p50": 9.566,
+        "p95": 10.483624,
+        "max": 17.794583
+      },
+      "navigationCpuMs": {
+        "mean": 0.019791666767559946,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "totalTriangles": {
+        "mean": 19020219.5,
+        "p50": 19031777,
+        "p95": 19094453,
+        "max": 19094453
+      },
+      "totalDrawCalls": {
+        "mean": 422.8125,
+        "p50": 419,
+        "p95": 435,
+        "max": 435
+      }
+    }
+  ],
+  "narrowPair": [
+    {
+      "variant": "baseline",
+      "renderedFps": 40.574282147315856,
+      "gpuMs": {
+        "mean": 47.46625786666668,
+        "p50": 45.336791,
+        "p95": 67.186,
+        "max": 68.154541
+      },
+      "totalTriangles": {
+        "mean": 49925359.26153846,
+        "p50": 49474592,
+        "p95": 50639956,
+        "max": 50639956
+      },
+      "totalDrawCalls": {
+        "mean": 443.0923076923077,
+        "p50": 439,
+        "p95": 457,
+        "max": 457
+      }
+    },
+    {
+      "variant": "cache-front",
+      "renderedFps": 59.30827818701199,
+      "gpuMs": {
+        "mean": 26.288074351063827,
+        "p50": 28.233124,
+        "p95": 39.584999,
+        "max": 41.507458
+      },
+      "totalTriangles": {
+        "mean": 20128397.136842106,
+        "p50": 19571252,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "totalDrawCalls": {
+        "mean": 146.13684210526316,
+        "p50": 141,
+        "p95": 159,
+        "max": 159
+      }
+    }
+  ],
+  "actualWalkCpu": {
+    "mean": 0.26354166651920724,
+    "p50": 0.19999999925494194,
+    "p95": 0.3999999985098839,
+    "max": 3
+  },
+  "recommendation": [
+    "Cache static shadows and refresh on model/light/quality/shadow changes.",
+    "Render exact closed SquareVaultLightGlass with FrontSide; retain its transmission and keep thin window glazing double-sided.",
+    "Keep full refraction-buffer resolution; the narrow pair already restored near60renderedFPS in the matched control."
+  ],
+  "controlsAndLimits": [
+    "Solo-zone/no-transmission/no-shadows were scratch diagnostics only, never proposed unloading or opaque glass.",
+    "Latest retina screenshot baseline already includes a concurrent production FrontSide change; compare it as FrontSide+dynamic vs FrontSide+cached shadows, not original DoubleSide.",
+    "One earlier walk-labelled case reset to orbit through the view button; it is excluded from walking evidence. Corrected retina case asserts modewalk.",
+    "GPU elapsed query intervals and actual render-submission FPS are reported separately; these are short interactive movement windows."
+  ],
+  "reports": [
+    "render-performance/report.json",
+    "render-performance-prism/report.json",
+    "render-performance-final-control/report.json",
+    "render-performance-retina/report.json"
+  ]
+}

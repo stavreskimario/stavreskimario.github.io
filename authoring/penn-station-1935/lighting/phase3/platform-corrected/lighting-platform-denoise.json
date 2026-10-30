@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "zone": "platform",
+  "source": "lighting-platform-sky.hdr",
+  "sourceSha256": "b02a611d5c1d2eaf3921ea293fe4be2b4110b16e1cab75370d8c4b4605b9771b",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.25997987389564514,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "originalLinear": {
+    "mean": 0.25997987389564514,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "denoisedLinear": {
+    "mean": 0.25994929671287537,
+    "minimum": 0.0,
+    "maximum": 1.0390487909317017
+  },
+  "relativeMeanChange": -0.00011761365336326879,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-sky-denoised-linear.hdr",
+    "sha256": "1c9cb0ff0b0b6a82769e55100e15fc593af9b627972bca0b4d6b0b1ceecaca91",
+    "decodedLinear": {
+      "mean": 0.258939653635025,
+      "minimum": 0.0,
+      "maximum": 1.03125
+    },
+    "meanQuantizationError": 0.0010097749764099717
+  },
+  "full": {
+    "png": "lighting-platform-sky.png",
+    "webp": "lighting-platform-sky.webp",
+    "clippedRGBSamples": 1,
+    "width": 2048,
+    "height": 2048
+  },
+  "low": {
+    "png": "lighting-platform-sky-low.png",
+    "webp": "lighting-platform-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 3.672759916051291
+}

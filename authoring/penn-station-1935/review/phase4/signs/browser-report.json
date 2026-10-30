@@ -1,0 +1,57 @@
+{
+  "created": "2026-10-29T07:46:25.676Z",
+  "section": "sign",
+  "checks": [
+    "Telephone sign screenshot captured from the passenger side using real walking and drag inputs; legibility requires visual review"
+  ],
+  "contexts": [
+    {
+      "label": "west telephone sign passenger view",
+      "errors": [],
+      "requestsFailed": [],
+      "renderer": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)"
+      },
+      "camera": {
+        "position": [
+          -9.042371276727412,
+          -2.584173831836061,
+          28.22401345567035
+        ],
+        "quaternion": [
+          0.1061291162740204,
+          0.6948572875064786,
+          -0.10482427284710481,
+          0.7035068105570195
+        ],
+        "fov": 50
+      },
+      "navigation": {
+        "sourceMeshes": 105,
+        "excludedMeshes": 75,
+        "excludedInstances": 76894,
+        "structuralInstances": 0,
+        "colliders": 30,
+        "cells": 2236,
+        "queries": 2196,
+        "lastCandidates": 7,
+        "maximumCandidates": 8,
+        "buildMilliseconds": 1.3000000000465661,
+        "floorWorld": -4.264173831836061
+      }
+    }
+  ],
+  "scope": "Installed desktop Chrome and 390 px touch emulation; no physical-phone certification.",
+  "runtimeBundleSha256": "84633c64d9a7562e6e871ecb340237ca35903e0bf193ae5a6d18037333adca95",
+  "modelSha256": {
+    "model-waiting-room.glb.gz": "a19ad08b7c404d3cbfc3ad354eb2cdc92ac1d3df9d68e9838b935c3cbcbf493e",
+    "model-waiting-room-low.glb.gz": "1ee246d444669cf96e2fb1fe76cb4912d99b48f942810fb788996c68179f930c",
+    "model-concourse.glb.gz": "c62b8630e7a65ecedb99bd6990755988ef7defeb888330641f41e33b923bbd08",
+    "model-concourse-low.glb.gz": "e6d015cc0c9d5fcba7b4a159f6964956ede58706ded13ec5d99c90e919e97809",
+    "scene-manifest.json": "3a84ac64aed3f53fa244e1ba69c131b7e6fd0c17b52c685369b3e1df4227a8c3"
+  },
+  "requestedAngle": "metal",
+  "browser": "156.0.8078.48",
+  "status": "passed"
+}

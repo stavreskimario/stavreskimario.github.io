@@ -1,0 +1,134 @@
+{
+  "scope": "Diagnostic natural-response-reader observation against a frozen bundle/assets; no source changes or response cloning. It preserves original cancellation flags. This is not final integrated visual QA.",
+  "bundleSha256": "5cdcb754721b6410cefab1fd12368d5fe05dd29cc4be382f08fedb26a8a2dc87",
+  "fetchedAssetResponses": 42,
+  "completeHashMatchedResponses": 41,
+  "abortSignals": 0,
+  "networkCancelledRequests": 12,
+  "cancelledResponses": [
+    {
+      "uri": "/exhibition/penn-station-1935/assets/sky.hdr?revision=4",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 705246,
+      "expectedBytes": 705246,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=4",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 4483819,
+      "expectedBytes": 4483819,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=4",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 4651564,
+      "expectedBytes": 4651564,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/9a2a57aafe53d16676d3.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 5419454,
+      "expectedBytes": 5419454,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 3556449,
+      "expectedBytes": 3556449,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/4210287e358bb2da10ee.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 3849018,
+      "expectedBytes": 3849018,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 3746211,
+      "expectedBytes": 3746211,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/cfa5d8f301774c078a0c.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 3934923,
+      "expectedBytes": 3934923,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 2381311,
+      "expectedBytes": 2381311,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 2351043,
+      "expectedBytes": 2351043,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/0739d50563d34373af6a.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 5398915,
+      "expectedBytes": 5398915,
+      "abortSignals": 0
+    },
+    {
+      "uri": "/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+      "http": 200,
+      "error": "net::ERR_ABORTED",
+      "consumerComplete": true,
+      "bodyShaMatchesSource": true,
+      "bytes": 3608355,
+      "expectedBytes": 3608355,
+      "abortSignals": 0
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "decodedModelReports": 6,
+  "interpretation": "Chromium reports some HTTP200 requests as net::ERR_ABORTED even though the app’s natural response reader consumed every byte and all checked response hashes match frozen source files. No same-URI retries were observed. The precise browser/interception reporting cause remains unproven; the cancelled transport statuses are not removed or relabelled successful requests."
+}

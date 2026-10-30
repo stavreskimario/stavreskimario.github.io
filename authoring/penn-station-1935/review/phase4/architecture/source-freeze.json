@@ -1,0 +1,110 @@
+{
+  "inputFiles": [
+    {
+      "file": "assets/mural-north-archival.png",
+      "sha256": "3fe44b7afcbd89a26bb1db1cdc1108bd525643ae4f556378340168b7afc49076",
+      "bytes": 76559
+    },
+    {
+      "file": "model/add_stair_support_manifest.py",
+      "sha256": "7dc29ad9157a0d3fea5cc4e5f32cf8ee2f94d98ace3be1901ae1f5926897dd25",
+      "bytes": 4412
+    },
+    {
+      "file": "model/bake_lighting.py",
+      "sha256": "ae938c2a4ec6773b11fe061234c59ff628b2e968c3bcb73adeec64938a4a7850",
+      "bytes": 15512
+    },
+    {
+      "file": "model/build_context.py",
+      "sha256": "f63d60826b679ae077e913b47547023a87a064d998009f2fb25de03e31d3b518",
+      "bytes": 54105
+    },
+    {
+      "file": "model/build_railway.py",
+      "sha256": "0c95e45e75e838f59eaf94d3cc9f8b681296e4b17ed26b1ecbf56a7cc685054e",
+      "bytes": 20673
+    },
+    {
+      "file": "model/build_rolling_stock.py",
+      "sha256": "d956a2b833959cea594ffc04ff6646749a7ba0d1d9342528224149f6192367a2",
+      "bytes": 34156
+    },
+    {
+      "file": "model/build_station-ceiling-stage.py",
+      "sha256": "b909d6d2cf1ff1a5f3f3bb6ce57f634ddbf59efb53681ff8c4ed46482aa93de2",
+      "bytes": 117385
+    },
+    {
+      "file": "model/build_station.py",
+      "sha256": "bd0db82b40dfb51e15820937c88c4b258fb0f8740d1b3116d46df14db9c77356",
+      "bytes": 127507
+    },
+    {
+      "file": "model/calibrate_diffuse.py",
+      "sha256": "85bbd10bd36eef7b85f8c52925c27919ea3befe1eb8e6e6eb6adc96522cce2ff",
+      "bytes": 4167
+    },
+    {
+      "file": "model/capture_reflections.py",
+      "sha256": "a3a9d139382da8aa11a443820a4328bc0a9b86b91013674d6b07cc5e3cedbaa5",
+      "bytes": 7086
+    },
+    {
+      "file": "model/coffer_geometry.py",
+      "sha256": "a77c9aa5c25010bf43cbf8a883f656249398c29d6eae3f89ff75813d306392fa",
+      "bytes": 4482
+    },
+    {
+      "file": "model/concourse_details.py",
+      "sha256": "bb2d3fbb7694881b6bee2ebe657fdddc94ae9c058d9e1feab79e9559767b18a6",
+      "bytes": 21067
+    },
+    {
+      "file": "model/denoise_lighting.py",
+      "sha256": "974260debcd7d577563143a0e684672f4ed6af99cbe754d8bf88e8bd1d68228a",
+      "bytes": 7907
+    },
+    {
+      "file": "model/material_library.py",
+      "sha256": "777045a3497c490996dd3804e51083e092926051f82f81796503fcf0e011cc85",
+      "bytes": 6273
+    },
+    {
+      "file": "model/prepare_surface_library.py",
+      "sha256": "dcdfc309b2b9ed571f17610403e701336c4b4e01b04b2946b70bad2de5b0624e",
+      "bytes": 7131
+    },
+    {
+      "file": "model/refresh_waiting_ceiling.py",
+      "sha256": "bd35a422c9efd630b1a1d196aea08d973c1b0040b03c906ff36ad83daf1e4b91",
+      "bytes": 4406
+    },
+    {
+      "file": "model/render_device.py",
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "bytes": 1188
+    },
+    {
+      "file": "model/render_review.py",
+      "sha256": "bcda9f2ca53f2b1d8a6b48ff6b94ad4227f81a975d9a0a0d063a6d89070a1642",
+      "bytes": 2025
+    },
+    {
+      "file": "model/repair_gate_clearance.py",
+      "sha256": "f64c2920ba7a13538e0235c5bd5161bd88fc17471908228ad60dfc79ddce0634",
+      "bytes": 4241
+    },
+    {
+      "file": "model/repair_office_signs.py",
+      "sha256": "5a961ce2551e8fad120309fe3add990ecc020c40435e29e67e4cb044ad72220b",
+      "bytes": 2191
+    },
+    {
+      "file": "model/repair_stair_heads.py",
+      "sha256": "15c4d42c3fb92e7556ac2fb8e7fecdc6d83e5cdb53172a65c473b04669b81bbb",
+      "bytes": 2290
+    }
+  ],
+  "purpose": "Immutable reviewed full-core architecture input; bpy4.3.0; outputlevels and geometry audits remain separate"
+}

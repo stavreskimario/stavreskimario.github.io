@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 3,
+  "zone": "waiting-room",
+  "atlases": [
+    {
+      "zone": "waiting-room-vault",
+      "report": "lighting-waiting-room-vault-denoise.json"
+    },
+    {
+      "zone": "waiting-room-masonry",
+      "report": "lighting-waiting-room-masonry-denoise.json"
+    },
+    {
+      "zone": "waiting-room-order",
+      "report": "lighting-waiting-room-order-denoise.json"
+    }
+  ],
+  "note": "Each child report preserves its own source HDR hash, linear transfer control, source-resolution HDR and delivered derivatives."
+}

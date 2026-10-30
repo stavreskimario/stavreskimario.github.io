@@ -1,0 +1,1024 @@
+{
+  "created": "2026-10-29T08:35:58.413Z",
+  "tool": "toktx v4.4.2",
+  "settings": {
+    "encoder": "UASTC",
+    "level": 1,
+    "zstd": 6,
+    "jobs": 2,
+    "resizing": false
+  },
+  "inputs": {
+    "before": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/scalar-optimization/waiting-masonry-desktop-2k.glb",
+      "sha256": "621218ad1088cf6d4658eadacf58daaca2df82959507f246039fa121a6720da4"
+    },
+    "after": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/scalar-optimization/waiting-masonry-desktop-scalars.glb",
+      "sha256": "5901448b1f5a6a4233612c97e1e5bdcb358bcc13b8cbc74a8c455ee0a3166cd7"
+    }
+  },
+  "roles": [
+    {
+      "material": "PublicFloorMarble",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "PublicFloorMarble",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.17949223518371582,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 93.98494338989258,
+            "decodedMean": 94.00450873374939
+          },
+          "baselineVsSource": {
+            "mean": 0.2856273651123047,
+            "p99": 2,
+            "max": 5,
+            "sourceMean": 93.98494338989258,
+            "decodedMean": 93.97812223434448
+          },
+          "preparedVsBaseline": {
+            "mean": 0.20944857597351074,
+            "p99": 2,
+            "max": 7,
+            "sourceMean": 93.97812223434448,
+            "decodedMean": 94.00450873374939
+          }
+        }
+      }
+    },
+    {
+      "material": "PublicFloorMarble",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "PublicFloorMarble",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "CofferRecess",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "Travertine",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "Travertine",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "Travertine",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "Travertine",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField1",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "BotticinoMarble",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "BotticinoMarble",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.17949223518371582,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 93.98494338989258,
+            "decodedMean": 94.00450873374939
+          },
+          "baselineVsSource": {
+            "mean": 0.2856273651123047,
+            "p99": 2,
+            "max": 5,
+            "sourceMean": 93.98494338989258,
+            "decodedMean": 93.97812223434448
+          },
+          "preparedVsBaseline": {
+            "mean": 0.20944857597351074,
+            "p99": 2,
+            "max": 7,
+            "sourceMean": 93.97812223434448,
+            "decodedMean": 94.00450873374939
+          }
+        }
+      }
+    },
+    {
+      "material": "BotticinoMarble",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "BotticinoMarble",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField2",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField3",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField4",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "InteriorGranite",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "InteriorGranite",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.30055975914001465,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 8.510176658630371,
+            "decodedMean": 8.363829851150513
+          },
+          "baselineVsSource": {
+            "mean": 0.364408016204834,
+            "p99": 2,
+            "max": 6,
+            "sourceMean": 8.510176658630371,
+            "decodedMean": 8.340218544006348
+          },
+          "preparedVsBaseline": {
+            "mean": 0.26784491539001465,
+            "p99": 2,
+            "max": 6,
+            "sourceMean": 8.340218544006348,
+            "decodedMean": 8.363829851150513
+          }
+        }
+      }
+    },
+    {
+      "material": "InteriorGranite",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "InteriorGranite",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar0",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar0",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar0",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar0",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar1",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar1",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar1",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar1",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar2",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar2",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.07858991622924805,
+            "p99": 1,
+            "max": 3,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.403723955154419
+          },
+          "baselineVsSource": {
+            "mean": 0.1285867691040039,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.427682161331177,
+            "decodedMean": 9.396620035171509
+          },
+          "preparedVsBaseline": {
+            "mean": 0.08175849914550781,
+            "p99": 1,
+            "max": 4,
+            "sourceMean": 9.396620035171509,
+            "decodedMean": 9.403723955154419
+          }
+        }
+      }
+    },
+    {
+      "material": "TravertineAshlar2",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "TravertineAshlar2",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField5",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    },
+    {
+      "material": "GuerinMuralField6",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "GuerinMuralField6",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "baselineVsSource": {
+            "mean": 0.34710144996643066,
+            "p99": 5,
+            "max": 19,
+            "sourceMean": 28.93610143661499,
+            "decodedMean": 28.911712408065796
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 28.911712408065796,
+            "decodedMean": 28.911712408065796
+          }
+        }
+      }
+    }
+  ],
+  "images": {
+    "before": {
+      "count": 11,
+      "bytes": 24900680
+    },
+    "after": {
+      "count": 11,
+      "bytes": 25441249
+    }
+  },
+  "savedImageBytes": -540569,
+  "status": "passed"
+}

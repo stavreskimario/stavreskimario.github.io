@@ -1,0 +1,56 @@
+{
+  "zone": "waiting-room",
+  "schemaVersion": 3,
+  "purpose": "Separate high-resolution ceiling, masonry and carved-order atlases",
+  "sources": [
+    {
+      "file": "model-waiting-room-vault.glb",
+      "sha256": "078507f593e555758ee3d0ecdd41b71b18a87e37bb83ec590c795e2ec625795c",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
+    },
+    {
+      "file": "model-waiting-room-masonry.glb",
+      "sha256": "58b7548bd92d5932d6f8779ce41ae1eac43cdf0266fa2baff8a2e7c830dd4c29",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
+    },
+    {
+      "file": "model-waiting-room-order.glb",
+      "sha256": "bc31a622f6715369e57b7e6c5e512faccaa933d344d175ed455bcfd5f04195c0",
+      "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945"
+    }
+  ],
+  "unchangedPrimitiveBuffersAndAtlasBindings": true,
+  "bounds": {
+    "min": [
+      -18.139999389648438,
+      -0.4000000059604645,
+      -49.02939987182617
+    ],
+    "max": [
+      32.709999084472656,
+      43.58639907836914,
+      49.02939987182617
+    ]
+  },
+  "atlases": [
+    {
+      "zone": "waiting-room-vault",
+      "report": "lighting-waiting-room-vault.json",
+      "resolution": 8192,
+      "samples": 128
+    },
+    {
+      "zone": "waiting-room-masonry",
+      "report": "lighting-waiting-room-masonry.json",
+      "resolution": 4096,
+      "samples": 128
+    },
+    {
+      "zone": "waiting-room-order",
+      "report": "lighting-waiting-room-order.json",
+      "resolution": 4096,
+      "samples": 512
+    }
+  ],
+  "outputSha256": "941d10553254b86c51e05f4ec0b8031ea00a85ba5caa31f1f363911214d7b709"
+}

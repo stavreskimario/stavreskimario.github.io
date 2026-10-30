@@ -1,0 +1,46 @@
+{
+  "scope": "Reviewed module appended offline without re-encoding existing BIN payloads. Only declared replacement primitives and explicitly permitted vault AO/lighting binding change.",
+  "inputSha256": "de9be2e62341665007e75b140d12d9b9609afaa7c42ee3732b2563ad66e12a5d",
+  "moduleSha256": "e3cbbaff65d1dc5794983105ce67c9c9662d54bc360f39e11622c39db03c4498",
+  "outputSha256": "55184fcef6fe8f96e39f33b165b308abae3693a5fd2bf0839cc1ceebb9ea641e",
+  "decodedSha256": "1271b1e40cc2b4fd09cc124a991d42496a2dd8c9655b3036cf96525a081db924",
+  "unchangedBinaryPrefixSha256": "896245e2cba67da3500ddedfede52f934dfa459cc1bb52c4bd573111dc5a8745",
+  "unchangedBinaryPrefixBytes": 17465552,
+  "removedMaterial": null,
+  "removedPrimitives": 0,
+  "removedMeshes": 0,
+  "detachedNodes": 0,
+  "oldMeshIndexMap": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "addedMeshes": 2,
+  "addedNodes": 6,
+  "moduleBufferIndexMap": [
+    0
+  ],
+  "materialBindings": [
+    {
+      "name": "OpalCandelabraGlass",
+      "existingMaterial": 12
+    },
+    {
+      "name": "AgedBronze",
+      "existingMaterial": 9
+    }
+  ],
+  "bindingReplacement": null,
+  "texturesAdded": 0,
+  "imagesAdded": 0,
+  "samplersAdded": 0,
+  "externalTextureFiles": [],
+  "callerMustPlaceExternalFiles": true,
+  "liveLightsAdded": 0
+}

@@ -1,0 +1,104 @@
+{
+  "sourceCommit": "b86a59177e65461f5eb71c0593cab5b53fd4e5f6",
+  "scope": "Exact four-zone bake/denoise JSON pairs from the maintenance checkpoint. No image/texture payloads are stored in fixtures. Tests regenerate temporary lossless WebP derivatives from retained Phase3 PNGs; this is backward-compatibility validation, not a recheck of earlier runtime bytes or final model acceptance.",
+  "records": [
+    {
+      "file": "lighting-exterior.json",
+      "sourcePath": "penn-station-1935/assets/lighting-exterior.json",
+      "bytes": 5028,
+      "sha256": "c9802f0a9268ac5d437a312d21b13f7673dca09fd694f0fcb084161dafa03d03",
+      "gitBlob": "dc4779c606dfa99928de5001134be3ad4190f5f9"
+    },
+    {
+      "file": "lighting-exterior-denoise.json",
+      "sourcePath": "penn-station-1935/assets/lighting-exterior-denoise.json",
+      "bytes": 2103,
+      "sha256": "7d8b840493d0a486571a7bae2e0142c579bd3f7756fd673deb7c4d25c85ce8c4",
+      "gitBlob": "b2f7605f8c37c7acb1b2b7059f9b76b2f4ca4e20"
+    },
+    {
+      "file": "lighting-waiting-room.json",
+      "sourcePath": "penn-station-1935/assets/lighting-waiting-room.json",
+      "bytes": 5032,
+      "sha256": "a9c0c2a9e0a8a13e8b77c061405ec50e32099798f970d6c670a96900a23e0d3e",
+      "gitBlob": "eaf09c64fd998d913cd55ab4bf1acdee291efe90"
+    },
+    {
+      "file": "lighting-waiting-room-denoise.json",
+      "sourcePath": "penn-station-1935/assets/lighting-waiting-room-denoise.json",
+      "bytes": 2130,
+      "sha256": "c13d00f84cc19a6dc89c696a5740e3521d8842ee2fb30eefe1a56c3ef46c85c1",
+      "gitBlob": "94e96d8bef4a76128314f2e074b7a182894aeadb"
+    },
+    {
+      "file": "lighting-concourse.json",
+      "sourcePath": "penn-station-1935/assets/lighting-concourse.json",
+      "bytes": 4867,
+      "sha256": "3e9d696f56accfd785a257c7c5095a5d64626f6da3d7cd16d49dc299008f750d",
+      "gitBlob": "4525b58e3b8d55f5c51b293eb2bbaa0c50ee4ebd"
+    },
+    {
+      "file": "lighting-concourse-denoise.json",
+      "sourcePath": "penn-station-1935/assets/lighting-concourse-denoise.json",
+      "bytes": 2118,
+      "sha256": "c8e85287c4176bb093a356958689910d02282b431c0e4b9650af8a9d29a94a06",
+      "gitBlob": "3fdc3a2cd6a66e1e78e923c35732740f6e809685"
+    },
+    {
+      "file": "lighting-platform.json",
+      "sourcePath": "penn-station-1935/assets/lighting-platform.json",
+      "bytes": 4961,
+      "sha256": "90c00465874d4147672ae42e780d4115ed23fb433794b620c9f605745ae7923d",
+      "gitBlob": "ab74ef11ae508d38f5b8fa37f3f01ac6bb746646"
+    },
+    {
+      "file": "lighting-platform-denoise.json",
+      "sourcePath": "penn-station-1935/assets/lighting-platform-denoise.json",
+      "bytes": 2096,
+      "sha256": "d83732d8bf93bd9df696f4e2aafc40e487cee558468220869fe07658f9c214a6",
+      "gitBlob": "b67a6045b1ebdc7626b669bd17e220dcc2657621"
+    }
+  ],
+  "sourcePngs": [
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky.png",
+      "bytes": 3169580,
+      "sha256": "d2050d5bd9d755739cbfa8bfa521109f032a8660b4ed8f162262bb78b975b410"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-low.png",
+      "bytes": 344000,
+      "sha256": "bdae224ad21b125ecccfb04ada7598862daab34ce7b61c1d00d3e2b98878ccc3"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky.png",
+      "bytes": 2645805,
+      "sha256": "e39bf877c47602509a4e65baf16b3a9a27bac2cf1baa0a98dabb296ce15f7130"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-low.png",
+      "bytes": 321873,
+      "sha256": "61352df4ca196dee35d9034f2abc1abe30f22ab32c4c3525f547514db352019f"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky.png",
+      "bytes": 2618584,
+      "sha256": "68bce01135d591766482d10099f243f7c9b42baa77d427ab650cadbff9b6e9ee"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-low.png",
+      "bytes": 268246,
+      "sha256": "eccafc5a2b1e274eaafc0d766082eaa8cdb2cc0d4288d2022403d27599b3ad3f"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.png",
+      "bytes": 1324186,
+      "sha256": "ab1874833c6af3d5231b3d3a52ef74c20994bf179e47784aa19971ba3b4ccfc8"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky-low.png",
+      "bytes": 116186,
+      "sha256": "9bd4ed3a80bfc8441839e15696aae19990ebc6fc0cc80c8266588f06cb4dc2ac"
+    }
+  ]
+}

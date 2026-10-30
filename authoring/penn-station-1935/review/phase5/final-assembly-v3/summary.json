@@ -1,0 +1,548 @@
+{
+  "scope": "Outside-repo Phase5 final candidate assembly; final mapped/functional acceptance pending",
+  "status": "assembled-and-validated; not promoted",
+  "sourceHashes": {
+    "radialModule": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+    "canonicalBlend": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+    "bakeRecord": "711b892fdff08892e6777d51663014b1f99a456091ba055fe585ee4c5ed2b3d7"
+  },
+  "waiting": [
+    {
+      "file": "model-waiting-room.glb.gz",
+      "baseSha256": "15ab0975b7376621227f67899efa843fe5adc547e92df4028715f84eff06977f",
+      "vaultModuleSha256": "10cac8075d7a93ff9d8c8b843da5946907a5202961559b4816580dfe7b83d514",
+      "radialModuleSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+      "oldNonVaultMeshesExact": 8,
+      "oldBinaryPrefixBytes": 15761452,
+      "newModuleDecodedAttributesAndTransformsExact": true,
+      "fixtureParents": 2,
+      "fixtureMeshNodes": 4,
+      "fixtureTriangles": 28992,
+      "fixturePaletteExact": true,
+      "newLights": 0,
+      "sourceBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "candidateBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "noBoundsSpike": true,
+      "finishBindings": [
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 14
+        },
+        {
+          "material": "InteriorGranite",
+          "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+          "index": 15
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2",
+          "index": 14
+        }
+      ],
+      "geometryBinaryExactAcrossFinishReuse": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "baseSha256": "73970ca45dd112baca9f22b1a06c5939cca58517f7b13fde1997d85bc79b902d",
+      "vaultModuleSha256": "b8d242fce735cda9f41036d77964c938e24dd85a9288e26e74cc5bd654ba97c2",
+      "radialModuleSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+      "oldNonVaultMeshesExact": 8,
+      "oldBinaryPrefixBytes": 11578756,
+      "newModuleDecodedAttributesAndTransformsExact": true,
+      "fixtureParents": 2,
+      "fixtureMeshNodes": 4,
+      "fixtureTriangles": 28992,
+      "fixturePaletteExact": true,
+      "newLights": 0,
+      "sourceBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "candidateBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ]
+      },
+      "noBoundsSpike": true,
+      "finishBindings": [
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 14
+        },
+        {
+          "material": "InteriorGranite",
+          "uri": "textures/e6417bb84166b7f417ae.ktx2",
+          "index": 15
+        },
+        {
+          "material": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+          "index": 14
+        }
+      ],
+      "geometryBinaryExactAcrossFinishReuse": true
+    }
+  ],
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "bytes": 2711634,
+      "decodedBytes": 8839992,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "decodedSha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035",
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31,
+      "retainedExact": true
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "bytes": 2805415,
+      "decodedBytes": 7969992,
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "decodedSha256": "5c23cd5e58106529b463d2895babd5fd6e238631aeb58f0811db1edaeb114117",
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31,
+      "retainedExact": true
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "bytes": 8965529,
+      "decodedBytes": 17508952,
+      "sha256": "dd40258467d302890c18473ca797793fb16046ffa67f86a1ebd2678d59517496",
+      "decodedSha256": "795b7b3f7798c06a383c39e0ee558437ee9c30005732452b169a16fece764701",
+      "errors": 0,
+      "warnings": 37,
+      "decodedMeshoptViews": 51,
+      "retainedExact": false
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "bytes": 7988525,
+      "decodedBytes": 12864024,
+      "sha256": "e1ea15715633ec19e4b247990269ad499ab5bd1a2355cac24c51be6f439a166e",
+      "decodedSha256": "04ef1ce3833e7bb5ec585f617cce8615aa5330d9e265475d44866cb9f3bb65ba",
+      "errors": 0,
+      "warnings": 37,
+      "decodedMeshoptViews": 51,
+      "retainedExact": false
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "bytes": 4268512,
+      "decodedBytes": 11033920,
+      "sha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+      "decodedSha256": "69747ba3addb8ea930a5f0f59481391402cbeda84d19161de64fb14ef080df76",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52,
+      "retainedExact": true
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "bytes": 4246967,
+      "decodedBytes": 10270564,
+      "sha256": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+      "decodedSha256": "f74f1a792be96c6008114016938363e6aedd5ccd65cbe35fe1c4be59e9a731de",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52,
+      "retainedExact": true
+    },
+    {
+      "file": "model-context.glb.gz",
+      "bytes": 504344,
+      "decodedBytes": 2197204,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 187,
+      "retainedExact": true
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "bytes": 684590,
+      "decodedBytes": 1756120,
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "decodedSha256": "44f2d84fd77ffad1f61f4d924225b1369bc0cc435b64fe972b6cf004397a5018",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 186,
+      "retainedExact": true
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "bytes": 161587,
+      "decodedBytes": 1062664,
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1",
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60,
+      "retainedExact": true
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "bytes": 188633,
+      "decodedBytes": 875592,
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "decodedSha256": "794f9f942529c05fd3fcbc87943fde531c2e7fe5288c664eac7cd807269018c7",
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60,
+      "retainedExact": true
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "bytes": 123231,
+      "decodedBytes": 667464,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979",
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54,
+      "retainedExact": true
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "bytes": 157720,
+      "decodedBytes": 488976,
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "decodedSha256": "041fdb85f1b5d6e6d8375e9d7f82eef0b6a5218468bd915a4328223cb315abb8",
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54,
+      "retainedExact": true
+    }
+  ],
+  "retainedFiles": [
+    {
+      "file": "scene-manifest.json",
+      "bytes": 567295,
+      "sha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+    },
+    {
+      "file": "reflection-probes.json",
+      "bytes": 7631,
+      "sha256": "4cf46e385d0ab92b3ee6c5c80f75c83a3ff0df3fe648b3d89c45dff4a1167fdf"
+    },
+    {
+      "file": "reflection-exterior-probe.json",
+      "bytes": 6879,
+      "sha256": "ca60792793b594c670712086170f6ea2f061d50af37b2148298c08d476661fa5"
+    },
+    {
+      "file": "sky.hdr",
+      "bytes": 2513408,
+      "sha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1"
+    },
+    {
+      "file": "reflection-waiting-room.hdr.gz",
+      "bytes": 4936342,
+      "sha256": "2852344887b0f51174341b452c1fb2122787fd3924db60b910f71fbc527a4844"
+    },
+    {
+      "file": "reflection-waiting-room-low.hdr.gz",
+      "bytes": 336231,
+      "sha256": "bd831495338fe92e20e947c14d314c7f893ccdc7502362e964c4a7e2b701d0c7"
+    },
+    {
+      "file": "reflection-concourse.hdr.gz",
+      "bytes": 5537345,
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d"
+    },
+    {
+      "file": "reflection-concourse-low.hdr.gz",
+      "bytes": 366456,
+      "sha256": "a2358a4f16ff07ee16ddb5ebdb27dfad47235dc26b9397770026ce44cbb487f7"
+    },
+    {
+      "file": "reflection-platform.hdr.gz",
+      "bytes": 4785576,
+      "sha256": "5a3fc2b3dbe5c7390f2bbbbbf80858b377140d188f3c9df5f3520d371ffc00e0"
+    },
+    {
+      "file": "reflection-platform-low.hdr.gz",
+      "bytes": 314101,
+      "sha256": "aca64b1713e1d885070a96c8c7c68f6982dd83eca2bacbee26a5f399375884dc"
+    },
+    {
+      "file": "lighting-exterior-sky.webp",
+      "bytes": 1276008,
+      "sha256": "9fced6e69fc9d34c9e01ba0b6d5f48abe451aad85852fdb4836795550f64f6f3"
+    },
+    {
+      "file": "lighting-exterior-sky-low.webp",
+      "bytes": 162948,
+      "sha256": "da947a56b7a7955ebe063aea2c9c2d57427082f00f056affae60db2252a8599b"
+    },
+    {
+      "file": "lighting-exterior.json",
+      "bytes": 7098,
+      "sha256": "7fc3052b04b615e00c479c17ea03b75c4ce366561b27ffd8b071508bcc80b8c0"
+    },
+    {
+      "file": "lighting-exterior-denoise.json",
+      "bytes": 2313,
+      "sha256": "06d673974f61d7f7b8bbd6d0172b3fc46951d1adae9c9a6bf2ad8b8342b034d0"
+    },
+    {
+      "file": "lighting-waiting-room-masonry-sky.webp",
+      "bytes": 3033948,
+      "sha256": "9db43579186eaedb86be3c1ea4c313c920cc5fe8f765c73fbcfa9f5396baefa0"
+    },
+    {
+      "file": "lighting-waiting-room-masonry-sky-low.webp",
+      "bytes": 139780,
+      "sha256": "ed6731701400cc258eee9e853eac3393af1b1c46f8eb5268b00450ddad60dc6c"
+    },
+    {
+      "file": "lighting-waiting-room-masonry.json",
+      "bytes": 8617,
+      "sha256": "48d224a63c16f17ddb87ebf542646d2e12af77d3395e955cf2b512cdf2170f73"
+    },
+    {
+      "file": "lighting-waiting-room-masonry-denoise.json",
+      "bytes": 2420,
+      "sha256": "30204346850f6d863dc9592eac15d00450ed3a31ab35d8307ddc30744b2b7734"
+    },
+    {
+      "file": "lighting-waiting-room-order-sky.webp",
+      "bytes": 5611270,
+      "sha256": "100bd6a739b62feaf40ff3f03dd2d2375cca60d345f1d3d4097c978868249df0"
+    },
+    {
+      "file": "lighting-waiting-room-order-sky-low.webp",
+      "bytes": 154876,
+      "sha256": "3b76810810698ca9e2a86849a8436c439abce795147aa1f21cf52901085f3350"
+    },
+    {
+      "file": "lighting-waiting-room-order.json",
+      "bytes": 9455,
+      "sha256": "6de7caf8333f7fb96b3d7317600a43b2cec13816a191793072d1c9868d12f9c1"
+    },
+    {
+      "file": "lighting-waiting-room-order-denoise.json",
+      "bytes": 2414,
+      "sha256": "824e9ca69bb9672d2b6ba8314d9984a4480d30e60a365f60b78fc0ff55b576b2"
+    },
+    {
+      "file": "lighting-concourse-sky.webp",
+      "bytes": 1170636,
+      "sha256": "b8c23d8c48c2d627e76384d1bdd8e67ce2165fb673028b88c96a6b26a487861e"
+    },
+    {
+      "file": "lighting-concourse-sky-low.webp",
+      "bytes": 139918,
+      "sha256": "4adb860ef1ba597f3a4d01cb97dcd5ec9e6f41c0a0f8565ee96ba0d0d25919b4"
+    },
+    {
+      "file": "lighting-concourse.json",
+      "bytes": 7105,
+      "sha256": "e84bf935b1b674eeda00942846ad60a7d1ac05c38f6ab896d3ca0f106e47653f"
+    },
+    {
+      "file": "lighting-concourse-denoise.json",
+      "bytes": 2330,
+      "sha256": "17dd298ff7a0226b60be06f461cdfc369e22ff0d51c0572a90a9f7afcb8b443f"
+    },
+    {
+      "file": "lighting-platform-sky.webp",
+      "bytes": 783758,
+      "sha256": "98ba14e32f3bd6c3bcae69fa3941bc977bf66eb986c38a3daba725ef36c6a113"
+    },
+    {
+      "file": "lighting-platform-sky-low.webp",
+      "bytes": 62942,
+      "sha256": "0823a46120496c2c29deb3a12b4e1d9ee0e09e8dbed91b0e9f8c95a49a44c76a"
+    },
+    {
+      "file": "lighting-platform.json",
+      "bytes": 7101,
+      "sha256": "98f8a18885b8333a2bc79b6fff4dda6da9e20ba797fbc584e2516787d162ecf7"
+    },
+    {
+      "file": "lighting-platform-denoise.json",
+      "bytes": 2313,
+      "sha256": "a3034ee27a7b088a1301c2fdd18f1628a3b19fd847d02946258362b8a923e029"
+    }
+  ],
+  "texturesCopied": [
+    {
+      "uri": "textures/e76d2d402d02dcb0adbc.ktx2",
+      "sha256": "e76d2d402d02dcb0adbc9d99a8e5906625bd9ef0de094d7089cf2b13de9cafde",
+      "bytes": 2394117,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/c7670262d7c33cc39671.ktx2",
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+      "bytes": 3106230,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+      "bytes": 3734401,
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "uri": "textures/b4cdebf85a4c5023cc0d.ktx2",
+      "sha256": "b4cdebf85a4c5023cc0da31fd0e450b2f95da2737146db6b25bee9dee55bc295",
+      "bytes": 223442,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+      "sha256": "cd5b2e95d69b82d43084bca72583d8ad972adfd5af127c75fca22777a76d2933",
+      "bytes": 247116,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "uri": "textures/e6417bb84166b7f417ae.ktx2",
+      "sha256": "e6417bb84166b7f417ae930a66352deb8431d4f477fcbf5d1d25e9bdc4ec899e",
+      "bytes": 250305,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "texturesPruned": [
+    "textures/a291801d7c3c00e7853f.ktx2",
+    "textures/fe00d4a5459054b73c4a.ktx2"
+  ],
+  "textureReencodes": 0,
+  "errors": 0,
+  "warnings": 284,
+  "sourceGuards": {
+    "method": "Welded UV workspace; exact CORNER-ID UV transfer onto untouched source mesh",
+    "cornerCount": 452496,
+    "cornerAssociationPreservedExactly": true,
+    "architecturalUv0PreservedExactly": true,
+    "weldCoincidentVertices": true,
+    "architecturalFaceCornerPositionsPreservedExactly": true,
+    "architecturalTopologyPreservedExactly": true,
+    "authoredSplitNormalsPreservedExactly": true,
+    "weldForUvPackingOnly": true,
+    "uvPackingVerticesAfterWeld": 75857,
+    "smartProjectAngleDegrees": 25,
+    "uvOwnership": {
+      "method": "Float64 convex separating-axis test of strict triangle interiors; shared edges excluded",
+      "uvDistanceTolerance": 1e-12,
+      "triangles": 150832,
+      "candidatePairs": 375849,
+      "overlappingTrianglePairs": 0,
+      "firstOverlappingPairs": [],
+      "zeroAreaTriangles": 0,
+      "minimumTriangleUvArea": 6.373969174688909e-08,
+      "elapsedSeconds": 1.0415675410004042
+    },
+    "weldToleranceMetres": 1e-05,
+    "verticesBefore": 155838,
+    "verticesAfter": 155838,
+    "triangles": 150832,
+    "maximumNormalStorageAngleDegrees": 0,
+    "meanNormalStorageAngleDegrees": 0,
+    "expectedNormalsSha256": "49299f09c010af4d884925f3d2ca889f399f9958c160fc63f7d131cdc8062e81",
+    "actualNormalsSha256": "49299f09c010af4d884925f3d2ca889f399f9958c160fc63f7d131cdc8062e81"
+  },
+  "optimizerProvenance": {
+    "schemaVersion": 1,
+    "rawArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/model-waiting-room-vault.glb",
+    "rawArtifactSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+    "bakeReport": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/lighting-waiting-room-vault.json",
+    "bakeReportSha256": "711b892fdff08892e6777d51663014b1f99a456091ba055fe585ee4c5ed2b3d7",
+    "optimizerInput": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-optimizer-input-v3/model-waiting-room.glb",
+    "optimizerInputSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+    "unchangedInput": true,
+    "standaloneModels": {
+      "model-waiting-room.glb": {
+        "sha256": "10cac8075d7a93ff9d8c8b843da5946907a5202961559b4816580dfe7b83d514",
+        "bytes": 1407200
+      },
+      "model-waiting-room-low.glb": {
+        "sha256": "b8d242fce735cda9f41036d77964c938e24dd85a9288e26e74cc5bd654ba97c2",
+        "bytes": 945028
+      }
+    }
+  },
+  "positiveHdr": {
+    "width": 8192,
+    "height": 8192,
+    "positivePixels": 24159078,
+    "decodedMeanRGB": 0.014109998529679263,
+    "sha256": "084078b1e4743b144ff3416e6f2a74fd94d5db6c3fd8812d86ba8c354f6dcd2b"
+  },
+  "gi": {
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase5/denoised",
+    "sourceSha256": "084078b1e4743b144ff3416e6f2a74fd94d5db6c3fd8812d86ba8c354f6dcd2b",
+    "full": {
+      "png": "lighting-waiting-room-vault-sky.png",
+      "webp": "lighting-waiting-room-vault-sky.webp",
+      "clippedRGBSamples": 0,
+      "width": 8192,
+      "height": 8192
+    },
+    "low": {
+      "png": "lighting-waiting-room-vault-sky-low.png",
+      "webp": "lighting-waiting-room-vault-sky-low.webp",
+      "clippedRGBSamples": 0,
+      "width": 512,
+      "height": 512
+    }
+  },
+  "metrics": {
+    "pipeline": "Blender 4.3 \u2192 glTF Transform 4.2.1 \u2192 Meshopt + KTX2/UASTC",
+    "scope": "Assembled Phase5 candidate; final mapped/functional acceptance pending",
+    "sharedTextureFiles": 78,
+    "modelTextureAndLightingBytes": 169474073,
+    "navigationBytes": 567295
+  },
+  "visualAcceptance": "Pending root review. Central-pocket UV defect is cured in the geometry-owner browser controls, but thin-moulding GI grain remains; packaging validation alone does not accept the full roof.",
+  "candidateDirectory": "/Users/stavreskimario/Desktop/penn-station-work/phase5-final-candidate-v3"
+}

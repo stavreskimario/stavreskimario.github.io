@@ -1,0 +1,61 @@
+{
+  "scope": "Reviewed module appended offline without re-encoding existing BIN payloads. Only declared replacement primitives and explicitly permitted vault AO/lighting binding change.",
+  "inputSha256": "73970ca45dd112baca9f22b1a06c5939cca58517f7b13fde1997d85bc79b902d",
+  "moduleSha256": "02db540b1177cf15a3613209fef5b61f7054d234df3786a43dda428be5cba59d",
+  "outputSha256": "d351283bef6bf3d9fd0edfa4ac22b09fa95af88e00663228aada906af4654358",
+  "decodedSha256": "d351283bef6bf3d9fd0edfa4ac22b09fa95af88e00663228aada906af4654358",
+  "unchangedBinaryPrefixSha256": "8da234de5639f720db51f712effe32713ee9bf55ba0fa8f4c632915c311a3fc3",
+  "unchangedBinaryPrefixBytes": 11578756,
+  "removedMaterial": "PaleVaultPlaster",
+  "removedPrimitives": 1,
+  "removedMeshes": 1,
+  "detachedNodes": 1,
+  "oldMeshIndexMap": [
+    null,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "addedMeshes": 1,
+  "addedNodes": 1,
+  "moduleBufferIndexMap": [
+    0,
+    2
+  ],
+  "materialBindings": [
+    {
+      "name": "PaleVaultPlaster",
+      "existingMaterial": 0
+    }
+  ],
+  "bindingReplacement": {
+    "name": "PaleVaultPlaster",
+    "materialIndex": 0,
+    "aoTextureIndex": 13,
+    "effectiveTexCoord": 0,
+    "lightingExtras": {
+      "lighting_atlas_uv": 1,
+      "sky_illumination": "lighting-waiting-room-vault-sky.webp",
+      "sky_illumination_scale": 1,
+      "lightmap_encoding": "srgb-linear-radiance-v3"
+    }
+  },
+  "texturesAdded": 1,
+  "imagesAdded": 1,
+  "samplersAdded": 0,
+  "externalTextureFiles": [
+    {
+      "uri": "textures/fe00d4a5459054b73c4a.ktx2",
+      "sha256": "fe00d4a5459054b73c4a6d647e7845e70279d0599aca066fa8e75b564657b1b5",
+      "bytes": 170042,
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-runtime-v2/textures/fe00d4a5459054b73c4a.ktx2"
+    }
+  ],
+  "callerMustPlaceExternalFiles": true,
+  "liveLightsAdded": 0
+}

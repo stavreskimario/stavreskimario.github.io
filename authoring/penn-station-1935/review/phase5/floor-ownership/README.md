@@ -1,0 +1,9 @@
+# Floor ownership and preserved stair support
+
+The independent test decoder now handles raw and Meshopt views, strided/normalized accessors and the complete active node matrix/TRS hierarchy. It uses actual transformed triangles; it does not substitute a support plane. Hand-computed raw hierarchy controls accompany the exported-model tests.
+
+The nine stair-head positions, three lanes, 51 samples per lane, height limits and barycentric tolerances in `tests/penn-stair-geometry.mjs` are unchanged. Adding the authoritative concrete floor material corrects the stale decoder's omission: baseline 60563ab and the repaired full/fallback models each pass all 2,754 support samples. The old 960/1,377 failures per variant are retained unchanged with their identity in summary.json and must not be reported as a repair regression.
+
+`tests/penn-floor-ownership.mjs` keeps the original 78-point overlap grid. Baseline models fail 52 points per variant with competing marble/concrete tops; repaired models have zero overlaps. Both retain exactly the same four stair apertures and no newly unsupported solid samples. Complete reports and input identities are alongside this note.
+
+The narrow browser control uses current app source and only routes the two concourse model files to the repaired candidate; all other production assets stay unchanged. No geometry is hidden. At the reported samples the marble top remains in place and concrete is separated beneath it by about 0.20m/0.22m. Actual camera out-and-back produces new frames with all six zones present and zero page errors/shadow-matrix mismatch. The axial gray patch is absent. The subsidiary camera partly enters an adjacent wall, so it is a scoped ray/support check rather than a presentation view. These checks do not replace the full walking/navigation suite or general performance acceptance.

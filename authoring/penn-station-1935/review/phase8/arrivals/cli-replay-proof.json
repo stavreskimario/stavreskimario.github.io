@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "status": "PASS exactgeometryreproduction",
+  "sourceSha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+  "generator": {
+    "file": "penn-station-1935/model/repair_arrivals_access.py",
+    "sha256": "115d16ae2a6fe9d2217ab443c27dfeb7a3d7bacac7982360ee1f5c7337b440cf"
+  },
+  "geometry": [
+    {
+      "file": "old-exit-owned.glb",
+      "frozenSha256": "48f9fcd749628a535061ad75b98ecfa27ddae53d79d83aa9c82efd2164b3882a",
+      "replaySha256": "48f9fcd749628a535061ad75b98ecfa27ddae53d79d83aa9c82efd2164b3882a",
+      "byteExact": true,
+      "bytes": 108976
+    },
+    {
+      "file": "arrivals-module.glb",
+      "frozenSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+      "replaySha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+      "byteExact": true,
+      "bytes": 15438492
+    },
+    {
+      "file": "retained-concourse-occluder.glb",
+      "frozenSha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+      "replaySha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+      "byteExact": true,
+      "bytes": 59854884
+    },
+    {
+      "file": "retained-protected.glb",
+      "frozenSha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+      "replaySha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+      "byteExact": true,
+      "bytes": 59854884
+    }
+  ],
+  "fixtureGroupsPartsModelsExact": true,
+  "structuralSourceRecordsExact": true,
+  "closedComponentCounts": {
+    "newObjects": 4047,
+    "closedOutwardComponents": 4047,
+    "triangles": 374852
+  },
+  "unrelatedExact": 7230,
+  "frozenBlendSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "replayBlendSha256": "5a0ba9c38ef7605faf7076e43756f46c6dcc9e9b44234a0ad152bc0e8b5c99dc",
+  "metadataQualification": "SavedBlendcontainersandgenerator/path-bearingproofhashesmaydiffer;rawgeometrybyteidentityandactualfixturecoordinatesareexact. NoGPU/browser/bakeperformed."
+}

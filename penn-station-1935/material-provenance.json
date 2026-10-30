@@ -1,0 +1,579 @@
+{
+  "revision": 6,
+  "references": [
+    {
+      "id": "Granite005A",
+      "material": "MilfordGranite",
+      "source": "https://ambientcg.com/view?id=Granite005A",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Granite005A_2K-JPG.zip",
+      "interpretation": "Modern material reference, not a scan or calibrated sample of Pennsylvania Station; grain scale and colour remain interpreted",
+      "maps": [
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_Color.jpg",
+          "bytes": 8537509,
+          "sha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c"
+        },
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_Roughness.jpg",
+          "bytes": 2301486,
+          "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f"
+        },
+        {
+          "file": "Granite005A/Granite005A_2K-JPG_NormalGL.jpg",
+          "bytes": 1742147,
+          "sha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b"
+        }
+      ]
+    },
+    {
+      "id": "Travertine009",
+      "material": "Travertine",
+      "source": "https://ambientcg.com/view?id=Travertine009",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Travertine009_2K-JPG.zip",
+      "interpretation": "Modern material reference, not a scan or calibrated sample of Pennsylvania Station; grain scale and colour remain interpreted",
+      "maps": [
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_Color.jpg",
+          "bytes": 3798875,
+          "sha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc"
+        },
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_Roughness.jpg",
+          "bytes": 1135101,
+          "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc"
+        },
+        {
+          "file": "Travertine009/Travertine009_2K-JPG_NormalGL.jpg",
+          "bytes": 1312711,
+          "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22"
+        }
+      ]
+    },
+    {
+      "id": "Marble018",
+      "material": "PublicFloorMarble / BotticinoMarble",
+      "source": "https://ambientcg.com/view?id=Marble018",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "download": "https://ambientcg.com/get?file=Marble018_2K-JPG.zip",
+      "interpretation": "Modern beige-marble appearance interpretation. Gibbs specifies marble public floors without certifying their variety, and Botticino ticket-booth exteriors. This asset is not a station sample or a verified Botticino/Tennessee scan.",
+      "maps": [
+        {
+          "file": "Marble018/Marble018_2K-JPG_Color.jpg",
+          "bytes": 3945678,
+          "sha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06"
+        },
+        {
+          "file": "Marble018/Marble018_2K-JPG_Roughness.jpg",
+          "bytes": 2097792,
+          "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235"
+        },
+        {
+          "file": "Marble018/Marble018_2K-JPG_NormalGL.jpg",
+          "bytes": 1288531,
+          "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357"
+        }
+      ]
+    }
+  ],
+  "runtime": "The departure access module shares the existing CC0 stone and marble surface maps and adds its own bounded illumination/AO. Existing room surfaces and probes remain unchanged. This desktop-first checkpoint shares the reviewed full concourse geometry/PBR between both quality files; low illumination/reflection/DPR/shadow settings and the other five low-zone models remain. Further mobile geometry optimization is deferred.",
+  "lighting": "All six Phase 4 neutral-dome Cycles atlases are retained unchanged: 8192px vault, 4096px masonry/order, 2048px exterior/concourse/platform. Order used 512 Metal samples; other atlases 128, all with six diffuse bounces. Desktop order AO remains 4096px. Existing source/occluder hashes and output identities remain those of Phase 4; there is no fresh vault GI in this material/fixture checkpoint. The 25-degree ceiling UV/bake work remains pending. Directional sun stays dynamic; outputs do not calibrate historical lighting. A separate2048px,64-sample Metal neutral-dome atlas now covers new departure stairs and infills, with actual retained concourse/exterior occluders. Its512px illumination derivative is retained. No waiting-room ceiling or exterior roof flicker fix is implied.",
+  "reflections": "Retained Phase 4 static captures: 2048x1024 HDR at 64 Metal samples, 512x256 low derivatives, Non-Color resizing and zero dither. Existing reflection-probes.json and exterior record retain the source hashes and decoded transport identity. No probe is rebaked for this checkpoint. No positional parallax, moving-passenger reflection or calibrated historical weather is claimed.",
+  "denoising": "Retained Phase 4 color-only OpenImageDenoise output from explicitly linear radiance, once-encoded sRGB and lossless WebP. Original and denoised full-resolution HDR archives remain under authoring/penn-station-1935/lighting/phase4 with decoded SHA verification. Existing 0.18 controls, statistics and PNG/WebP identity apply to those retained outputs. New guided/unique-owner vault denoising is pending and is not delivered by this checkpoint.",
+  "architecturalUvRevision": 3,
+  "appearance": {
+    "revision": 5,
+    "scope": "Retain Phase 4 colour/normal/Bedford/opal interpretations; add selected B linear roughness derivatives for InteriorGranite, MilfordGranite, Travertine with unit multipliers. No measured historic surface is claimed.",
+    "calibratedHistoricSamples": false,
+    "method": "Decode sRGB to linear; normalize each source channel by its spatial mean; apply contrast about that mean and multiply by the target linear palette; clip to0..1; resize in linear light; encode sRGB once.",
+    "sourceMapsVerified": 9,
+    "derivationReport": "../authoring/penn-station-1935/materials/phase4/surface-finish.json",
+    "applicationHelper": "model/apply_surface_finish.mjs",
+    "profiles": [
+      {
+        "name": "MilfordFine",
+        "source": "Granite005A",
+        "targetSrgb": [
+          0.76,
+          0.7,
+          0.66
+        ],
+        "contrast": 0.65,
+        "normalStrength": 0.045,
+        "decodedLinearMean": [
+          0.5375664821881201,
+          0.44746480087056534,
+          0.39239811362011084
+        ],
+        "clippedRgbSamples": 11300,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "InteriorFine",
+        "source": "Granite005A",
+        "targetSrgb": [
+          0.73,
+          0.71,
+          0.67
+        ],
+        "contrast": 0.55,
+        "normalStrength": 0.025,
+        "decodedLinearMean": [
+          0.4914818359985512,
+          0.46181188451850974,
+          0.4058650591310931
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "RomanTravertine",
+        "source": "Travertine009",
+        "targetSrgb": [
+          0.85,
+          0.82,
+          0.75
+        ],
+        "contrast": 0.48,
+        "normalStrength": 0.035,
+        "decodedLinearMean": [
+          0.6926407475101808,
+          0.6385578085519785,
+          0.5229263271257834
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      },
+      {
+        "name": "HonedMarble",
+        "source": "Marble018",
+        "targetSrgb": [
+          0.8,
+          0.78,
+          0.73
+        ],
+        "contrast": 0.68,
+        "normalStrength": 0.018,
+        "decodedLinearMean": [
+          0.6035794039014757,
+          0.5706952909717267,
+          0.4917776798475667
+        ],
+        "clippedRgbSamples": 0,
+        "rgbSamples": 12582912
+      }
+    ],
+    "normalStrengths": {
+      "MilfordGranite": 0.045,
+      "InteriorGranite": 0.025,
+      "Travertine": 0.035,
+      "PublicFloorMarble": 0.018,
+      "TennesseeMarble": 0.018,
+      "BotticinoMarble": 0.025
+    },
+    "baseColourFactors": "Original material-family factors are accounted for in the colour-derivative application reports. The authored Bedford maps already contain their target mean linear colour and use a unit baseColorFactor, avoiding double tinting.",
+    "lightingLimitation": "This checkpoint retains all six Phase 4 atlases and static probes. New ceiling UV packing and the fresh vault bake remain pending; source checks do not establish their runtime acceptance.",
+    "roughnessFactors": {
+      "InteriorGranite": 1,
+      "MilfordGranite": 1,
+      "Travertine": 1
+    },
+    "interiorGraniteFinish": "Selected bounded B range 0.30\u20130.48 in linear data replaces the earlier 0.50 multiplier; original CC0 grain remains, with no calibrated historic roughness sample.",
+    "nativeApplicationHelper": "model/material_library.py",
+    "finishRoughness": {
+      "provenance": "../authoring/penn-station-1935/materials/phase5/roughness-provenance.json",
+      "method": "Linear Non-Color; clip robust p1/p99 then affine candidate range; round to nearest 8-bit value",
+      "qualification": "CC0 grain reused for a bounded finish interpretation; no calibrated historic roughness samples",
+      "roughnessFactor": 1,
+      "generator": "model/prepare_finish_roughness.py",
+      "applicationHelper": "model/apply_finish_roughness.mjs",
+      "generatorSha256": "bf966891256ad26367b1b68655bf7905155078e37bbdfd220cae34de31c60937",
+      "profiles": [
+        {
+          "materialProfile": "InteriorGranite",
+          "source": "Granite005A",
+          "range": [
+            0.3,
+            0.48
+          ],
+          "inputClipPercentiles": [
+            0.0,
+            0.1411764705882353
+          ],
+          "previousRoughnessFactor": 0.5,
+          "previousEffectiveMean": 0.016686620899275247,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "InteriorGranite-roughness.png",
+            "sha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.34223909939036673,
+            "minimum": 0.2980392156862745,
+            "maximum": 0.47843137254901963,
+            "standardDeviation": 0.03570291581649791,
+            "percentiles": {
+              "0": 0.2980392156862745,
+              "1": 0.2980392156862745,
+              "5": 0.3058823529411765,
+              "50": 0.32941176470588235,
+              "95": 0.4196078431372549,
+              "99": 0.47843137254901963,
+              "100": 0.47843137254901963
+            },
+            "originalCandidateFile": "InteriorGranite-B-roughness.png",
+            "bytes": 2252437
+          },
+          "low": {
+            "file": "InteriorGranite-roughness-low.png",
+            "sha256": "721e053a2963c77985f75547e75096a00f3b7059c55efb9935b271e1ed4a8574",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "InteriorGranite-B-roughness-low.png",
+            "bytes": 149368
+          }
+        },
+        {
+          "materialProfile": "MilfordGranite",
+          "source": "Granite005A",
+          "range": [
+            0.55,
+            0.78
+          ],
+          "inputClipPercentiles": [
+            0.0,
+            0.1411764705882353
+          ],
+          "previousRoughnessFactor": 0.88,
+          "previousEffectiveMean": 0.029368452782724434,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "MilfordGranite-roughness.png",
+            "sha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.604103965385287,
+            "minimum": 0.5490196078431373,
+            "maximum": 0.7803921568627451,
+            "standardDeviation": 0.04555061079839782,
+            "percentiles": {
+              "0": 0.5490196078431373,
+              "1": 0.5490196078431373,
+              "5": 0.5568627450980392,
+              "50": 0.5882352941176471,
+              "95": 0.7019607843137254,
+              "99": 0.7803921568627451,
+              "100": 0.7803921568627451
+            },
+            "originalCandidateFile": "MilfordGranite-B-roughness.png",
+            "bytes": 2422436
+          },
+          "low": {
+            "file": "MilfordGranite-roughness-low.png",
+            "sha256": "5ff06d0cd4cf1e76190ec5b41aa44022ebe9fbe1eb9e3ce8ceee8d9409f22bc8",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "MilfordGranite-B-roughness-low.png",
+            "bytes": 160223
+          }
+        },
+        {
+          "materialProfile": "Travertine",
+          "source": "Travertine009",
+          "range": [
+            0.6,
+            0.78
+          ],
+          "inputClipPercentiles": [
+            0.011764705882352941,
+            0.06274509803921569
+          ],
+          "previousRoughnessFactor": 0.95,
+          "previousEffectiveMean": 0.0351227374637828,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "Travertine-roughness.png",
+            "sha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.6892055604972087,
+            "minimum": 0.6,
+            "maximum": 0.7803921568627451,
+            "standardDeviation": 0.039822843319515466,
+            "percentiles": {
+              "0": 0.6,
+              "1": 0.6,
+              "5": 0.6274509803921569,
+              "50": 0.6823529411764706,
+              "95": 0.7529411764705882,
+              "99": 0.7803921568627451,
+              "100": 0.7803921568627451
+            },
+            "originalCandidateFile": "Travertine-B-roughness.png",
+            "bytes": 1885295
+          },
+          "low": {
+            "file": "Travertine-roughness-low.png",
+            "sha256": "9e8a219f9ad8ff92ee9a48e6cfe0dbd026467dfae360b82a9b370d4cf0e75fcb",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "Travertine-B-roughness-low.png",
+            "bytes": 120902
+          }
+        }
+      ],
+      "unchangedMarble": "Marble018 and all marble-family runtime roughness bindings remain unchanged.",
+      "sourceMapsVerified": 9,
+      "normalsSurfaceUvAndColourChanged": false
+    }
+  },
+  "authoredSurfaces": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "script": "model/prepare_bedford_surface.py",
+      "provenance": "../authoring/penn-station-1935/materials/phase4/bedford-surface-provenance.json",
+      "authorship": "Original deterministic seeded isotropic stone-grain appearance; no photographs, scans or third-party image sampling",
+      "historicalQualification": "Bedford limestone material identity follows the existing source ledger. This micro-surface, exact colour/roughness and normal response are authored appearance interpretations, not an authenticated historic surface sample.",
+      "sourceScriptSha256": "4f50de29ef8f90a5abd3839a5c725fa70bdeac913d71098f1a36fd5fb7e9857f",
+      "seed": 19351008,
+      "size": [
+        2048,
+        2048
+      ],
+      "tileMetres": 1.5,
+      "seamless": "Periodic Fourier-filtered random field; central-difference periodic height derivatives",
+      "application": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 1,
+        "metallicFactor": 0,
+        "normalStrength": 0.15,
+        "uvScale": "ArchitecturalUV stores0.28UV/m before material preparation; use UV/(0.28*1.5) for a1.5m tile. Do not apply the colour(.56,.55,.49) a second time.",
+        "textures": {
+          "colour": "BedfordLimestoneConcourse-Color.png",
+          "roughness": "BedfordLimestoneConcourse-Roughness.png",
+          "normal": "BedfordLimestoneConcourse-NormalGL.png"
+        }
+      },
+      "files": [
+        {
+          "role": "colour",
+          "file": "BedfordLimestoneConcourse-Color.png",
+          "bytes": 1627960,
+          "sha256": "cd42e7dd2cd70cfcbb0628962fdd8522daa57299718b140c492645e15dcc6d5a"
+        },
+        {
+          "role": "roughness",
+          "file": "BedfordLimestoneConcourse-Roughness.png",
+          "bytes": 1375067,
+          "sha256": "10a506f7925250947afa5ef0137f86839656927e2de4ea19df5bb4d1299cb715"
+        },
+        {
+          "role": "normal",
+          "file": "BedfordLimestoneConcourse-NormalGL.png",
+          "bytes": 4519322,
+          "sha256": "0e1659e0d1616d0dd9a07481574addcdd36f4fcabb4b903fcffe35b847124995"
+        }
+      ]
+    }
+  ],
+  "fixtureOptics": {
+    "OpalCandelabraGlass": {
+      "scope": "Existing interpreted optics reused by the five-globe floor standards and two photograph-supported twin-globe wall fixtures; separate from clock/sign white materials. No new photometry or live lights.",
+      "baseColourLinear": [
+        0.94,
+        0.93,
+        0.89,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.3,
+      "transmission": 0.18,
+      "ior": 1.5,
+      "historicalQualification": "Photograph-led appearance interpretation; no calibrated surviving opal-glass sample or lamp photometry."
+    }
+  },
+  "visualPassSettings": {
+    "qualification": "Retained Phase4 delivery settings for this material/fixture checkpoint; fresh ceiling UV/GI work is pending outside its delivered runtime.",
+    "geometry": "Broad visible central-court floor coverage revision 3; precise extent, pitch and module remain inferred.",
+    "globalIllumination": {
+      "device": "METAL",
+      "samples": 128,
+      "diffuseBounces": 6,
+      "atlasSizes": {
+        "waitingVault": 8192,
+        "waitingMasonry": 4096,
+        "exterior": 2048,
+        "concourse": 2048,
+        "platform": 2048,
+        "waitingOrder": 4096
+      },
+      "waitingRoomIndexSchemaVersion": 3,
+      "desktopOrderAO": {
+        "resolution": 4096,
+        "retention": "Retain full 4K desktop order AO through optimization; it is separate from dedicated order illumination and exempt from 2K general surface-map resizing."
+      }
+    },
+    "staticProbes": {
+      "device": "METAL",
+      "samples": 64,
+      "fullResolution": [
+        2048,
+        1024
+      ],
+      "lowResolution": [
+        512,
+        256
+      ],
+      "lowDataHandling": "Non-Color; zero dither",
+      "radianceControl": 0.18,
+      "transport": "Full HDR retained; lossless gzip room-probe transport with decoded SHA256 identity in per-probe reports"
+    },
+    "archiveDestinations": {
+      "originals": "../authoring/penn-station-1935/lighting/phase4/originals/",
+      "denoised": "../authoring/penn-station-1935/lighting/phase4/denoised/"
+    },
+    "mobile": "Existing 512px surface/GI and 512\u00d7256 probe derivatives are retained as fallback; further mobile optimization is deferred in this desktop-first iteration."
+  },
+  "muralPreservation": {
+    "asset": "assets/mural-north-archival.png",
+    "nativeRectifiedSize": [
+      728,
+      260
+    ],
+    "sha256": "3fe44b7afcbd89a26bb1db1cdc1108bd525643ae4f556378340168b7afc49076",
+    "originalTiffSize": [
+      5076,
+      4061
+    ],
+    "originalTiffSha256": "b11e92e022cd1aec75b78c3164f35bc2e7772a336f4d31029e2f2ed9665f5d9d",
+    "provenance": "../authoring/penn-station-1935/references/phase3/mural-north-provenance.json",
+    "limitation": "Original TIFF was rechecked unchanged. Mechanical monochrome rectification only; no inferred colour, upscaling represented as recovered detail, painting or new mural image. Other five fields remain neutral."
+  },
+  "renderingPolicy": {
+    "staticShadows": "Cached for camera motion; refreshed for model, lighting, shadow and quality changes. WebGL-only helper; experimental WebGPU retains its prior path.",
+    "closedPrismGlass": "Front faces for the closed square-prism units retain full transmission and refraction resolution; thin glazing stays double-sided.",
+    "limits": "High-frequency distant prism grids can alias. This checkpoint does not certify final photographic fidelity or all hardware."
+  },
+  "checkpoint": {
+    "name": "Concourse departure access checkpoint",
+    "assetRevision": "6-access-1",
+    "scope": "Nine court-facing departure stair heads, three straight eastward flights per row, supported infills and shifted cast-iron indicators; provisional arrivals deck retained independently. Existing rooms stay loaded together.",
+    "modelTextureAndLightingBytes": 170305353,
+    "packaging": {
+      "models": 12,
+      "gltfErrors": 0,
+      "retainedWarnings": 312,
+      "sharedKtx2Files": 74,
+      "receipt": "../authoring/penn-station-1935/review/phase6/departure-access/asset-validation.json"
+    },
+    "acceptance": "Exact production-bundle Chrome/Metal native court approach, immediate WASD, full and low-quality platform down/up, persistent six-zone views, daylight and Sources controls pass locally. Matching Pages deployment verification remains separate.",
+    "limits": [
+      "Source nominal gate X\u221250.0 versus reconciled X\u221248.4 remains an unresolved1.6m plan/frame registration difference.",
+      "Three flights,45risers,2m clear width, intermediate landings and pale tread finish remain interpreted.",
+      "P3 approach clears the0.32m body but remains narrow; P1/P2 need global connections from the main court.",
+      "Separate arrivals route and further interior finish remain unfinished; roof flicker is scheduled last."
+    ]
+  },
+  "wallFixtureAddition": {
+    "count": 2,
+    "acceptedModuleSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+    "evidenceLedger": "../authoring/penn-station-1935/review/phase5/wall-brackets/README.md",
+    "evidenceRecord": "../authoring/penn-station-1935/review/phase5/wall-brackets/evidence.json",
+    "refinement": "../authoring/penn-station-1935/review/phase5/wall-brackets/silhouette-refinement/README.md",
+    "photograph": {
+      "sourceId": "S23",
+      "item": "https://www.loc.gov/item/2016815386/",
+      "download": "https://cdn.loc.gov/master/pnp/det/4a20000/4a23000/4a23700/4a23713u.tif",
+      "identifier": "LC-DIG-det-4a23713; negative071928",
+      "originalSize": [
+        5076,
+        4061
+      ],
+      "sha256": "b11e92e022cd1aec75b78c3164f35bc2e7772a336f4d31029e2f2ed9665f5d9d",
+      "rights": "LOC no known restrictions on publication, as recorded in existingS23; pre1931US publication corroborated by copyright registration1911J151601 inS27",
+      "dateLimit": "Opening-era photograph, not independent proof of complete1935fixture inventory",
+      "crops": [
+        {
+          "file": "wall-bracket-original-crop.png",
+          "sha256": "0ff3c0e6a4aed9e92377fafb1430f8ec1c80f599b8d8a0c1b75820b88d1ce4f0",
+          "cropXYWH": [
+            200,
+            1870,
+            720,
+            620
+          ],
+          "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+        },
+        {
+          "file": "opposite-wall-bracket-original-crop.png",
+          "sha256": "dcc458505ffdcfc6aa09a386c1a8414b571d07dd6f9588fffe19e108d30948a8",
+          "cropXYWH": [
+            4420,
+            1730,
+            550,
+            820
+          ],
+          "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+        }
+      ]
+    },
+    "photoCredit": "Library of Congress, Prints and Photographs Division, Detroit Publishing Company Collection; LC-DIG-det-4a23713. Both mechanical crops derive from the same original photograph.",
+    "limits": "Dark decorative metal and diffuse pale globes are visible; exact alloy, polish, glass chemistry, colour, photometry and minor casting profiles are unmeasured. Reuse existingAgedBronze/OpalCandelabraGlass as interpretations; no individual live point lights.",
+    "inventory1935": "Not established; only two photographed foreground fixtures are included.",
+    "newLiveLights": 0,
+    "surfaceTextureUse": "None; source crops remain review evidence."
+  },
+  "previousMaterialCheckpoint": {
+    "name": "Material and interior checkpoint",
+    "scope": "Current floor/default-Walk assets plus selected B roughness and exactly two radial-refined photo-supported wall fixtures. Existing vault geometry, all six Phase 4 GI/AO atlases and static probes retained.",
+    "pending": "25-degree unique-owner ceiling UV and fresh vault bake remain outside this checkpoint.",
+    "modelTextureAndLightingBytes": 161327896,
+    "acceptance": "Exact candidate runtime/validation/publication receipt pending; no final Phase5 or photographic-fidelity claim.",
+    "packaging": {
+      "models": 12,
+      "gltfErrors": 0,
+      "retainedWarnings": 280,
+      "sharedKtx2Files": 76,
+      "receipt": "../authoring/penn-station-1935/review/phase5/stone-checkpoint/summary.json",
+      "status": "Offline packaging passed; actual browser/publication acceptance pending."
+    }
+  },
+  "accessIllumination": {
+    "bake": "./assets/lighting-concourse-access.json",
+    "denoise": "./assets/lighting-concourse-access-denoise.json",
+    "atlasResolution": 2048,
+    "sourceSamples": 64,
+    "sourceModuleSha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+    "newAtlasOnly": true,
+    "existingRoomMapsAndProbesUnchanged": true,
+    "retainedExitLampSupports": 22
+  },
+  "phase7Circulation": {
+    "sourceModuleSha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13",
+    "atlas": "lighting-concourse-circulation-sky.webp",
+    "resolution": 2048,
+    "samples": 64,
+    "scope": "Closed residual wall only; existing room/floor atlases and reflection probes retained. Source-supported openings/3ftprincipal envelope with minor dimensions and finish interpreted."
+  }
+}

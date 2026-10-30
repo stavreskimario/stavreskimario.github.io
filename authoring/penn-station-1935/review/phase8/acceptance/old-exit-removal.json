@@ -1,0 +1,100 @@
+{
+  "scope": "Owned reviewed-component surfaces only; protected coincident faces retained. Original attributes, materials, transforms and BIN prefix preserved.",
+  "removalScope": "departure-access",
+  "toleranceMetres": 0.004,
+  "normalCosine": 0.9,
+  "minimumCoverage": 0.98,
+  "sourceOffsetY": 0,
+  "materials": {
+    "PublicFloorMarble": {
+      "sourceTriangles": 1892,
+      "examined": 660,
+      "removed": 468,
+      "protectedAmbiguous": 0,
+      "quantizedSliversRemoved": 0,
+      "quantizedSliverArea": 0,
+      "maximumSliverAltitude": 0,
+      "orientationOnlyProtected": 0,
+      "maximumOrientedProtectionResidual": 0,
+      "orientationOnlyRetained": 0,
+      "orientationOnlyArea": 0,
+      "maximumOrientationOnlyAltitude": 0,
+      "maximumRemovalResidual": 0.0010512378736979855,
+      "sourceCentroidsCovered": 1892,
+      "sourceCentroidsProtected": 0,
+      "sourceCentroidCoverage": 1
+    }
+  },
+  "changes": [
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "node": 2,
+      "material": "PublicFloorMarble",
+      "beforeTriangles": 660,
+      "removedTriangles": 468,
+      "remainingTriangles": 192,
+      "removedTriangleRanges": [
+        [
+          0,
+          166
+        ],
+        [
+          169,
+          172
+        ],
+        [
+          175,
+          180
+        ],
+        [
+          183,
+          186
+        ],
+        [
+          189,
+          190
+        ],
+        [
+          203,
+          294
+        ],
+        [
+          305,
+          453
+        ],
+        [
+          456,
+          461
+        ],
+        [
+          464,
+          467
+        ],
+        [
+          470,
+          471
+        ],
+        [
+          624,
+          655
+        ]
+      ],
+      "protectedAmbiguousTriangleRanges": []
+    }
+  ],
+  "detachedNodes": [],
+  "unchangedBinaryPrefixBytes": 15672248,
+  "unchangedBinaryPrefixSha256": "7b80db337e638c2a6098cfb8317cc11b759f37e16d7d0bcc9ddfab5660041cbc",
+  "removedTriangles": 468,
+  "protectedAmbiguousTriangles": 0,
+  "indexEncoding": "EXT_meshopt_compression INDICES (sequence-preserving)",
+  "appendedVirtualBuffer": 6,
+  "decodedIndexBytes": 1152,
+  "appendedIndexBytes": 588,
+  "inputSha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+  "componentsSha256": "48f9fcd749628a535061ad75b98ecfa27ddae53d79d83aa9c82efd2164b3882a",
+  "protectedSha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+  "decodedOutputSha256": "710e1eea4e65bee3df5b5e0d408f6a4e37d89367d02566966ffb96156fc98e02",
+  "outputSha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269"
+}
