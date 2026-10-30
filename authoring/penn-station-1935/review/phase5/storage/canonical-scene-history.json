@@ -8,8 +8,17 @@
   },
   "current": {
     "path": "authoring/penn-station-1935/penn-station-phase5.blend",
+    "sha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+    "bytes": 72553533,
+    "sourceProof": "../source/finish-scene-proof.json",
+    "fixtureRegistration": "Actual world matrices/bounds agree with the raw exported module plus Main offset within0.87 micrometre."
+  },
+  "previousPhase5Checkpoint": {
+    "path": "authoring/penn-station-1935/penn-station-phase5.blend",
     "sha256": "d1e0160b7c5db2845f8a4b868acfd4e5a662d015aa26fad539fd0d7886dea5e2",
     "bytes": 72494405,
-    "sourceProof": "../source/finish-scene-proof.json"
+    "gitCommit": "551865bb1b57c82ca83d4fedb110f5b7084b717b",
+    "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/first-phase5-source.blend",
+    "qualification": "Initial source checkpoint; its newly linked fixture transforms were subsequently corrected. Runtime module placement was separate and correct."
   }
 }

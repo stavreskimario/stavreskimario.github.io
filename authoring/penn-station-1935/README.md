@@ -48,7 +48,7 @@ Licensing is recorded in [ASSET_RIGHTS.md](../../penn-station-1935/ASSET_RIGHTS.
 
 ## Recover older sources and lighting
 
-Older Phase 1, 2, 3 and Phase 4 maintenance station scenes remain byte-for-byte in the immutable Git commit linked above and in earlier history. Their Blender files were already Zstandard-compressed; redundant gzip envelopes are not kept in the active public tree. The current Phase 4 architecture, context, railway and train scenes remain directly editable. [The lossless history receipt](review/phase4/history-storage/lossless-history-receipt.json) records original SHA-256 hashes, Git blob identities, immutable downloads and verified local backups. This organization reduces hosted storage without reducing model, image or lighting quality.
+Older Phase 1, 2, 3 and Phase 4 station scenes remain byte-for-byte in the immutable Git commits linked above and in earlier history. Their Blender files were already Zstandard-compressed; redundant gzip envelopes are not kept in the active public tree. The current Phase 5 station, context, railway and train scenes remain directly editable. [The earlier lossless history receipt](review/phase4/history-storage/lossless-history-receipt.json) and [Phase 5 source-history receipt](review/phase5/storage/canonical-scene-history.json) record original SHA-256 hashes, Git blob identities, immutable downloads and verified local backups. This organization reduces hosted storage without reducing model, image or lighting quality.
 
 Restore a historical scene from the repository root into a review file alongside the checkout, outside the published tree:
 
@@ -56,10 +56,10 @@ Restore a historical scene from the repository root into a review file alongside
 git show cefcd2bd366ee236bd2e748b9922d34e4cbf3305:authoring/penn-station-1935/penn-station-phase3.blend > ../penn-station-restored-phase3.blend
 ```
 
-All older HDR files under `lighting/` outside `phase4/` use lossless `.hdr.gz` archives, including the root lighting library and Phase 3 raw, denoised, corrected-platform, reflection and superseded-environment sources. Every original encoded HDR byte and recorded decoded SHA-256 is preserved; this changes storage transport only, not image encoding or quality. Restore one outside the published tree with:
+Retained HDR files use lossless `.hdr.gz` transport. Eight superseded Phase 3 illumination payloads are now preserved through [verified immutable Git objects and persistent backups](review/phase5/storage/archived-phase3-hdr.json), rather than duplicated in the current tree. Every archived byte remains recoverable. Restore one outside the published tree with:
 
 ```sh
-gzip -dc authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-denoised-linear.hdr.gz > ../penn-station-restored-phase3-exterior.hdr
+git show 60563ab11c1d83c9b21badcd7fbd7b21efa66473:authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-denoised-linear.hdr.gz | gzip -dc > ../penn-station-restored-phase3-exterior.hdr
 ```
 
 Current Phase 4 source radiance, image files and provenance are not removed by this historical storage step.

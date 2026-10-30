@@ -36,6 +36,8 @@ with bpy.data.libraries.load(str(args.brackets.resolve()),link=False) as (source
     target.collections=['Phase5 photographed wall-bracket pair']
 collection=target.collections[0]
 bpy.context.scene.collection.children.link(collection)
+# Evaluate linked anchor transforms before applying the Main-to-world offset.
+bpy.context.view_layer.update()
 added=list(collection.all_objects)
 assert len(added)==6 and sum(obj.type=='MESH' for obj in added)==4 and sum(obj.type=='EMPTY' for obj in added)==2
 for obj in added:

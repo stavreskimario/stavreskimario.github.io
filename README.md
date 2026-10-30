@@ -65,7 +65,7 @@ cp -R hello-world my-app
    ```
 
 3. Run `python3 scripts/validate.py` and check the app’s actual interactions, mobile layout and accessibility.
-4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. After the pull request is merged, verify the matching Pages deployment and live app URL.
+4. Commit and push the app folder and manifest together on the feature branch, then open a pull request to `main`. Do not push directly to `main`. The collection reads `apps.json`; no homepage card or routing edit is needed. Verify the matching Pages deployment and live app URL for the configured publishing branch; merging still requires the owner's authorization.
 
 See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [UI craft reference](docs/UI_CRAFT_REFERENCE.md) and [Codex repository instructions](AGENTS.md). Shared bone colours, Instrument Serif headings, DM Sans body, Caveat accents and motion primitives live in `shared/`. The LA app remains self-contained as the original reference.
 
@@ -83,7 +83,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [
 
 ## Development and publishing
 
-All changes, including fixes and documentation, use a `feature/<short-description>` branch and a pull request targeting `main`. Never push or directly update the `main` ref, including through GitHub API/connector tools. Preserve concurrent changes and do not force-push. An open pull request is not a deployment; changes reach the live site after the pull request is merged.
+All changes, including fixes and documentation, use a `feature/<short-description>` branch and a pull request targeting `main`. Never push or directly update the `main` ref, including through GitHub API/connector tools. Preserve concurrent changes and do not force-push. Pages currently publishes the Penn Station feature branch directly, so a feature-branch push can become live while its pull request remains open and unmerged. Confirm deployment completion separately.
 
 No build step or package install is required to serve the apps. Python 3 and Node.js are needed for the validator:
 
@@ -94,7 +94,7 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/` and `/la-trip/` or `/hello-world/`. Use HTTP rather than `file://` so the catalog can load its manifest. Localhost has its own browser storage, separate from the live site.
 
-GitHub Pages retains its existing **root of `main`** publishing source. Keep `.nojekyll`, preserve relative paths and check the deployment result, not only the commit. Shared staging remains available through `python3 scripts/site-publishing/stage.py /path/to/new-pages-directory`; the optional Actions publisher stays disabled unless separately authorized. See [publishing and staging](docs/PUBLISHING.md). The validator is not a substitute for keyboard, touch, reduced-motion, narrow-screen and storage-failure checks. All repository files are public; never commit credentials or private booking references.
+GitHub Pages retains its existing **root of `feature/penn-station-1935-reconstruction`** publishing source. Preserve those settings, keep `.nojekyll`, use relative paths and check the deployment result, not only the commit. Shared staging remains available through `python3 scripts/site-publishing/stage.py /path/to/new-pages-directory`; the optional Actions publisher stays disabled unless separately authorized. See [publishing and staging](docs/PUBLISHING.md). The validator is not a substitute for keyboard, touch, reduced-motion, narrow-screen and storage-failure checks. All repository files are public; never commit credentials or private booking references.
 
 
 UI changes follow the [motion decision rules](DESIGN.md#ui-craft-and-motion-decisions) and include a Before/After/Why review table. The LA planner keeps keyboard navigation immediate and uses restrained pointer feedback while preserving its journal styling. Its saved edits remain device-local.

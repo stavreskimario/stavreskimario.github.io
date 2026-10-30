@@ -1,0 +1,188 @@
+{
+  "silhouetteRefinement": {
+    "scope": "Only twin lamp cups and central finial radial tessellation",
+    "radialSegmentsBefore": 64,
+    "radialSegmentsAfter": 128,
+    "bevel": "None; bevel experiments rejected after mapped shading comparison",
+    "unchanged": [
+      "profile control points",
+      "original smooth-side/flat-cap shading",
+      "rosette",
+      "swept supports",
+      "globes",
+      "placement",
+      "palette",
+      "lights"
+    ]
+  },
+  "scope": "Only two photo-visible waiting-room wall brackets; not the complete1935inventory",
+  "datum": "MainlocalZ0; apply street lowering4.2672m exactly once on world-scene append",
+  "fixtureCount": 2,
+  "meshNodes": 4,
+  "sharedMeshes": 2,
+  "materialNames": [
+    "AgedBronze",
+    "OpalCandelabraGlass"
+  ],
+  "liveLights": 0,
+  "instancedTriangles": 28992,
+  "components": [
+    {
+      "name": "Round moulded wall rosette",
+      "triangles": 768,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.00621427639580248
+    },
+    {
+      "name": "Swept projecting central support",
+      "triangles": 1312,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.00292621824873663
+    },
+    {
+      "name": "Central stepped stem and modest finial",
+      "triangles": 2560,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.0031607201572246774
+    },
+    {
+      "name": "Curved twin crossarm",
+      "triangles": 1568,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.002030206070974133
+    },
+    {
+      "name": "Downward stepped lamp cup",
+      "triangles": 2304,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.01256767309903815
+    },
+    {
+      "name": "Downward pale globe",
+      "triangles": 1840,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.01701374026068598
+    },
+    {
+      "name": "Downward stepped lamp cup.001",
+      "triangles": 2304,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.01256767309709044
+    },
+    {
+      "name": "Downward pale globe.001",
+      "triangles": 1840,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.017013740312239897
+    }
+  ],
+  "closedPositiveVolumeComponents": true,
+  "contactsPerFixture": [
+    {
+      "label": "Support root in rosette",
+      "support": "Round moulded wall rosette",
+      "pointMaster": [
+        0.035,
+        0,
+        -0.02
+      ],
+      "nearestDistance": 0.017000000923871994,
+      "outwardSignedDistance": -0.017000000923871994,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Support tip in central stem",
+      "support": "Central stepped stem and modest finial",
+      "pointMaster": [
+        0.37,
+        0,
+        0.34
+      ],
+      "nearestDistance": 0.06961764395236969,
+      "outwardSignedDistance": -0.06961764767765999,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm centre in central stem",
+      "support": "Central stepped stem and modest finial",
+      "pointMaster": [
+        0.37,
+        0,
+        0.38
+      ],
+      "nearestDistance": 0.054765861481428146,
+      "outwardSignedDistance": -0.05476586474105716,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm end meets lamp cup",
+      "support": "Downward stepped lamp cup",
+      "pointMaster": [
+        0.38,
+        -0.34,
+        0.33
+      ],
+      "nearestDistance": 0.0,
+      "outwardSignedDistance": 0.0,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Globe crown seated in lamp cup",
+      "support": "Downward stepped lamp cup",
+      "pointMaster": [
+        0.38,
+        -0.34,
+        0.04
+      ],
+      "nearestDistance": 0.004999998956918716,
+      "outwardSignedDistance": -0.004999998956918716,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm end meets lamp cup",
+      "support": "Downward stepped lamp cup.001",
+      "pointMaster": [
+        0.38,
+        0.34,
+        0.33
+      ],
+      "nearestDistance": 0.0,
+      "outwardSignedDistance": 0.0,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Globe crown seated in lamp cup",
+      "support": "Downward stepped lamp cup.001",
+      "pointMaster": [
+        0.38,
+        0.34,
+        0.04
+      ],
+      "nearestDistance": 0.004999998956918716,
+      "outwardSignedDistance": -0.004999998956918716,
+      "touchesOrInside": true
+    }
+  ],
+  "geometryStatus": "Photograph-led profile, dimensions reconstructed",
+  "mounts": [
+    {
+      "wall": "west",
+      "blenderMainLocal": [
+        -15.655,
+        -28.144,
+        8.6
+      ]
+    },
+    {
+      "wall": "east",
+      "blenderMainLocal": [
+        15.655,
+        -28.144,
+        8.6
+      ]
+    }
+  ],
+  "blendSha256": "e8cab550673953aa8489b64bac812d5097c572d4fd70157c589617c52f641a32",
+  "glbSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+  "glbBytes": 310020
+}

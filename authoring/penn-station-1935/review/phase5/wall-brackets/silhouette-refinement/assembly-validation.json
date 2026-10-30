@@ -1,0 +1,45 @@
+{
+  "models": [
+    {
+      "file": "model-waiting-room.glb.gz",
+      "inputSha256": "4b2a0a96d3d9f84c21a0f41d6b941deea1260be82b93ed50567604ce71943464",
+      "outputSha256": "84c804b4af603fb70e813460491347b28be878320df0e38f51df3a857b5138ae",
+      "bytes": 9501693,
+      "decodedBytes": 17809240,
+      "decodedSha256": "d2062594fd563c145921d9a1dcbe396ec38137d43fc034156b00d7c8f54d1bd9",
+      "errors": 0,
+      "warnings": 37,
+      "fixtureParentCount": 2,
+      "materialBindingsExact": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "inputSha256": "eb9b5997195a17c11195bb62cc9e1a4b5d01bec96712361584fc17b2f6528569",
+      "outputSha256": "b62ff60dfffa157b3dcebf221d95a2b088d3f634815b175e95aa7bbe6838309f",
+      "bytes": 8413594,
+      "decodedBytes": 13403588,
+      "decodedSha256": "beb1e3e2313df8827a5193b88031eda2f5da8b9279708a1047801ddd0f7fe5e7",
+      "errors": 0,
+      "warnings": 37,
+      "fixtureParentCount": 2,
+      "materialBindingsExact": true
+    }
+  ],
+  "unchangedOtherModels": [
+    "model-exterior.glb.gz",
+    "model-exterior-low.glb.gz",
+    "model-concourse.glb.gz",
+    "model-concourse-low.glb.gz",
+    "model-context.glb.gz",
+    "model-context-low.glb.gz",
+    "model-platform.glb.gz",
+    "model-platform-low.glb.gz",
+    "model-trains.glb.gz",
+    "model-trains-low.glb.gz"
+  ],
+  "texturesReencoded": 0,
+  "finishBindingsExact": true,
+  "canonicalSourceUpdatePending": true,
+  "metricBytes": 163339980,
+  "waitingTransportDelta": 59852
+}

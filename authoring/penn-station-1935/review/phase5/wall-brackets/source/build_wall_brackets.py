@@ -122,7 +122,8 @@ for j in range(41):
 tube('Swept projecting central support', path, .041, (0, 1, 0))
 crown = lathe('Central stepped stem and modest finial', [(.245, .049), (.285, .061),
       (.320, .077), (.355, .069), (.415, .045), (.452, .051),
-      (.475, .072), (.495, .070), (.515, .034), (.520, .012)], at=(.370, 0, 0))
+      (.475, .072), (.495, .070), (.515, .034), (.520, .012)], at=(.370, 0, 0),
+      segments=128)
 path = []
 for j in range(49):
     u = -.340 + .680 * j / 48
@@ -132,7 +133,8 @@ canopies = []
 for sign in [-1, 1]:
     canopy = lathe('Downward stepped lamp cup', [(.035, .107), (.058, .145),
           (.087, .155), (.120, .139), (.160, .092), (.247, .070),
-          (.276, .113), (.304, .147), (.330, .109)], at=(.380, sign * .340, 0))
+          (.276, .113), (.304, .147), (.330, .109)], at=(.380, sign * .340, 0),
+          segments=128)
     canopies.append((sign, canopy))
     bpy.ops.mesh.primitive_uv_sphere_add(segments=40, ring_count=24, radius=.160,
         location=(.380, sign * .340, -.120))
@@ -226,7 +228,12 @@ triangles = sum(len(obj.data.loop_triangles) for obj in objects)
 for obj in objects:
     obj.data.calc_loop_triangles()
 triangles = sum(len(obj.data.loop_triangles) for obj in objects)
-report = {'scope': scene['module_scope'], 'datum': scene['datum'], 'fixtureCount': 2,
+report = {'silhouetteRefinement': {'scope': 'Only twin lamp cups and central finial radial tessellation',
+          'radialSegmentsBefore': 64, 'radialSegmentsAfter': 128,
+          'bevel': 'None; bevel experiments rejected after mapped shading comparison',
+          'unchanged': ['profile control points', 'original smooth-side/flat-cap shading',
+                        'rosette', 'swept supports', 'globes', 'placement', 'palette', 'lights']},
+          'scope': scene['module_scope'], 'datum': scene['datum'], 'fixtureCount': 2,
           'meshNodes': len(objects), 'sharedMeshes': 2, 'materialNames': [m.name for m in [bronze, opal]],
           'liveLights': 0, 'instancedTriangles': triangles, 'components': component_audits,
           'closedPositiveVolumeComponents': True, 'contactsPerFixture': contact_audits,

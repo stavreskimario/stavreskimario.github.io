@@ -1,7 +1,7 @@
 {
   "scope": "Append the verified bracket pair and bounded finish to the repaired source.\n\nThe input already contains the scoped coffer-normal and floor-ownership repair.\nExisting geometry, transforms, UVs and corner normals must remain unchanged.\nThe new roughness images are packed and use portable authoring-relative paths.",
   "inputSha256": "c781f60ec9790c467672d9b439bd12e2d1d4224f3013fa583ae26656052e3ae9",
-  "bracketModuleBlendSha256": "a146fb3599115fc33a17bc70d17977ace20dee1aacef1f15c57c9c833b0186b5",
+  "bracketModuleBlendSha256": "e8cab550673953aa8489b64bac812d5097c572d4fd70157c589617c52f641a32",
   "originalObjectsGeometryExact": 5105,
   "newMeshObjects": 4,
   "newAnchorObjects": 2,
@@ -74,6 +74,265 @@
       "packed": true
     }
   ],
-  "outputSha256": "d1e0160b7c5db2845f8a4b868acfd4e5a662d015aa26fad539fd0d7886dea5e2",
-  "outputBytes": 72494405
+  "outputSha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+  "outputBytes": 72553533,
+  "originalBounds": {
+    "min": [
+      -119.98159790039062,
+      -72.38999938964844,
+      -104.26719665527344
+    ],
+    "max": [
+      120.20559692382812,
+      72.38999938964844,
+      46.848838806152344
+    ]
+  },
+  "fullBounds": {
+    "min": [
+      -119.98159790039062,
+      -72.38999938964844,
+      -104.26719665527344
+    ],
+    "max": [
+      120.20559692382812,
+      72.38999938964844,
+      46.848838806152344
+    ]
+  },
+  "fullBoundsUnchanged": true,
+  "sceneObjects": 5111,
+  "anchorWorldBlender": {
+    "Photo-supported west wall bracket": [
+      -15.654999732971191,
+      -28.143999099731445,
+      4.332800388336182
+    ],
+    "Photo-supported east wall bracket": [
+      15.654999732971191,
+      -28.143999099731445,
+      4.332800388336182
+    ]
+  },
+  "canonicalWritten": true,
+  "fixtureBoundsMatchRawModulePlusMain": [
+    {
+      "name": "Photographed bracket metalwork.001",
+      "actualWorldBlender": {
+        "min": [
+          -15.654999732971191,
+          -28.638999938964844,
+          4.114800453186035
+        ],
+        "max": [
+          -15.119999885559082,
+          -27.648998260498047,
+          4.852800369262695
+        ]
+      },
+      "expectedFromRawModulePlusMain": {
+        "min": [
+          -15.654999732971191,
+          -28.638999104499817,
+          4.114800386714935
+        ],
+        "max": [
+          -15.119999706745148,
+          -27.648999094963074,
+          4.85280036239624
+        ]
+      },
+      "maximumDifferenceMetres": 8.344650268554688e-07,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -15.654999732971191
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -28.143999099731445
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.332800388336182
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Photographed bracket globes.001",
+      "actualWorldBlender": {
+        "min": [
+          -15.434999465942383,
+          -28.643999099731445,
+          4.052800178527832
+        ],
+        "max": [
+          -15.114999771118164,
+          -27.643999099731445,
+          4.372800350189209
+        ]
+      },
+      "expectedFromRawModulePlusMain": {
+        "min": [
+          -15.434999853372574,
+          -28.64399915933609,
+          4.052800380277634
+        ],
+        "max": [
+          -15.11499971151352,
+          -27.643999099731445,
+          4.372800380575657
+        ]
+      },
+      "maximumDifferenceMetres": 3.8743019104003906e-07,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -15.654999732971191
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -28.143999099731445
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.332800388336182
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Photographed bracket metalwork.002",
+      "actualWorldBlender": {
+        "min": [
+          15.119999885559082,
+          -28.638999938964844,
+          4.114800453186035
+        ],
+        "max": [
+          15.654999732971191,
+          -27.648998260498047,
+          4.852800369262695
+        ]
+      },
+      "expectedFromRawModulePlusMain": {
+        "min": [
+          15.119999677021404,
+          -28.63899913772047,
+          4.114800386714935
+        ],
+        "max": [
+          15.654999747833063,
+          -27.64899912818373,
+          4.85280036239624
+        ]
+      },
+      "maximumDifferenceMetres": 8.676856815270639e-07,
+      "matrixWorld": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          0.0,
+          15.654999732971191
+        ],
+        [
+          -1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          -28.143999099731445
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.332800388336182
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Photographed bracket globes.002",
+      "actualWorldBlender": {
+        "min": [
+          15.114999771118164,
+          -28.643999099731445,
+          4.052800178527832
+        ],
+        "max": [
+          15.434999465942383,
+          -27.643999099731445,
+          4.372800350189209
+        ]
+      },
+      "expectedFromRawModulePlusMain": {
+        "min": [
+          15.114999681789772,
+          -28.6439991329521,
+          4.052800380277634
+        ],
+        "max": [
+          15.43499988309632,
+          -27.64399907334745,
+          4.372800380575657
+        ]
+      },
+      "maximumDifferenceMetres": 4.1715393805930034e-07,
+      "matrixWorld": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          0.0,
+          15.654999732971191
+        ],
+        [
+          -1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          -28.143999099731445
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.332800388336182
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "cpuOnly": "Loaded/saved scene and computed geometry hashes; no render or bake invoked",
+  "canonicalPath": "authoring/penn-station-1935/penn-station-phase5.blend"
 }
