@@ -4,6 +4,8 @@ Checked 30 October 2026. The current navigation checkpoint uses bundle SHA256 `2
 
 The [focused production browser receipt](../authoring/penn-station-1935/review/phase5/default-walking/production-report.json) passes the supported street spawn at [124,1.68,0], real WASD/drag, loaded floor/collision queries, ignored flight-only height keys, selected HTML/help state, three-view mode persistence, reset from neighbour framing and tour cancellation. All six zones remain loaded. This does not claim a new broad railway/performance run or completion of the separately reviewed ceiling/material candidate.
 
+Implementation `cd6d06cc1e65fae90d4461b17388c2ccf12aebb9` passed all eight checks and its matching [Pages deployment](https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982091412). [Actual live verification](../authoring/penn-station-1935/review/phase5/default-walking/final-publication.json) matches the served bundle and all six decoded model responses to immutable checkpoint expectations. Fresh entry uses Walk at 1.68m; real W input moves 1.148m with floor support, 300 collision/support queries and advancing rendered frames. No page or local HTTP resource errors occurred. This is functional desktop evidence, not an FPS measurement. PR11 remains draft and unmerged.
+
 ## Retained concourse floor and shadow checkpoint
 
 Checked 30 October 2026. This smaller checkpoint repairs the reported motion-related gray floor patches before the broader Phase5 visual pass.
