@@ -24,6 +24,11 @@ for(const profile of ['InteriorGranite','MilfordGranite','Travertine'])for(const
  const source=path.join(args.library,`${profile}-roughness${low?'-low':''}.png`);
  const rgb=path.join(args.work,name+'-rgb.png'),encoded=path.join(args.work,name+'.ktx2'),decoded=path.join(args.work,name+'-decoded.png');
  await sharp(source).removeAlpha().toColourspace('srgb').png().toFile(rgb);
+ const scalar=await sharp(source).raw().toBuffer({resolveWithObject:true});
+ const carrier=await sharp(rgb).raw().toBuffer({resolveWithObject:true});
+ assert.equal(scalar.info.width,carrier.info.width);assert.equal(scalar.info.height,carrier.info.height);
+ for(let p=0;p<scalar.info.width*scalar.info.height;p++)
+   assert.equal(carrier.data[p*carrier.info.channels+1],scalar.data[p*scalar.info.channels],'RGB carrier preserves the original Non-Color scalar exactly');
  run(['create','--format','R8G8B8_UNORM','--assign-tf','linear','--assign-primaries','bt709','--encode','uastc','--uastc-quality','2','--threads','2','--zstd','6','--generate-mipmap',rgb,encoded]);
  const data=canonicalKtx(await readFile(encoded)),container=ktx.read(data);
  assert.equal(container.dataFormatDescriptor[0].transferFunction,1,'Linear roughness transfer');
@@ -36,7 +41,7 @@ for(const profile of ['InteriorGranite','MilfordGranite','Travertine'])for(const
  assert(meanError<.01,'Roughness UASTC mean error exceeds one percent');
  const uri=`textures/${hash(data).slice(0,20)}.ktx2`;
  await writeFile(path.join(args.out,uri),data);
- const entry={profile,low,sourceFile:path.basename(source),sourceSha256:hash(await readFile(source)),uri,sha256:hash(data),bytes:data.length,dimensions:[container.pixelWidth,container.pixelHeight],mipLevels:container.levels.length,transfer:'linear Non-Color',roughnessFactor:1,roundtripMeanAbsoluteError:meanError,roundtripMaximumAbsoluteError:maximum/255};
+ const entry={profile,low,sourceFile:path.basename(source),sourceSha256:hash(await readFile(source)),uri,sha256:hash(data),bytes:data.length,dimensions:[container.pixelWidth,container.pixelHeight],mipLevels:container.levels.length,transfer:'linear Non-Color',scalarCarrierPixelsExact:true,roughnessFactor:1,roundtripMeanAbsoluteError:meanError,roundtripMaximumAbsoluteError:maximum/255};
  textures.set(name,entry);report.profiles.push(entry);
 }
 for(const zone of ['exterior','waiting-room','concourse','context','platform','trains'])for(const low of [false,true]){

@@ -1,0 +1,192 @@
+{
+  "checkpoint": "42189629203829c43c8ee7e091bb0670eefe3614",
+  "scope": "Floor-flicker and shadow-alignment checkpoint publication. Functional/hash verification of the actual Pages site; no FPS or throughput conclusion. Later Phase5 ceiling/material work is outside this published checkpoint.",
+  "passed": true,
+  "live": {
+    "url": "https://stavreskimario.github.io/penn-station-1935/",
+    "checkedAt": "2026-10-30T00:16:21.621Z",
+    "browser": "156.0.8078.74",
+    "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "bundleSha256": "2c361aa0705b8f179848efb32a3a48f24f3b05f16a846ff2fb5a2f89d8b8deb7",
+    "models": [
+      {
+        "file": "model-exterior.glb.gz",
+        "decodedSha256": "69e506de4c2c35e540ca2bd3b6a869ed89d48cf1059d119bfb95923e28efc2e9"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "decodedSha256": "79ec5eaa6672ae75deb67fd591247eaa112a8e6555329d139b79669f16c40317"
+      },
+      {
+        "file": "model-concourse.glb.gz",
+        "decodedSha256": "2d4ac7520a86510baf26482b2f9fec1468f6a806cac22dea960019471d8cca9e"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979"
+      }
+    ],
+    "views": [
+      {
+        "view": "exterior",
+        "loading": false,
+        "error": "",
+        "renderFrame": 172,
+        "loadedZones": 6
+      },
+      {
+        "view": "waiting",
+        "loading": false,
+        "error": "",
+        "renderFrame": 175,
+        "loadedZones": 6
+      },
+      {
+        "view": "concourse",
+        "loading": false,
+        "error": "",
+        "renderFrame": 177,
+        "loadedZones": 6
+      }
+    ],
+    "pageErrors": [],
+    "resourceFailures": [],
+    "sourceReportSha256": "a13fa7083fec4c99a7ffd117e2fe4f73420a3c45f06cb24916719c860eb9b457",
+    "sourceReport": "phase5-floor-live.json"
+  },
+  "checks": [
+    {
+      "id": 123808424854,
+      "name": "CodeQL",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/runs/123808424854"
+    },
+    {
+      "id": 123808378714,
+      "name": "deploy",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977185499/job/123808378714"
+    },
+    {
+      "id": 123808378578,
+      "name": "report-build-status",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977185499/job/123808378578"
+    },
+    {
+      "id": 123808049920,
+      "name": "Analyze (actions)",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977195458/job/123808049920"
+    },
+    {
+      "id": 123808049902,
+      "name": "Analyze (python)",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977195458/job/123808049902"
+    },
+    {
+      "id": 123808049814,
+      "name": "check",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977196687/job/123808049814"
+    },
+    {
+      "id": 123808049637,
+      "name": "Analyze (javascript-typescript)",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977195458/job/123808049637"
+    },
+    {
+      "id": 123808018520,
+      "name": "build",
+      "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977185499/job/123808018520"
+    }
+  ],
+  "pages": {
+    "runId": 40977185499,
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40977185499",
+    "jobs": [
+      {
+        "id": 123808018520,
+        "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123808378578,
+        "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+        "name": "report-build-status",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123808378714,
+        "head_sha": "42189629203829c43c8ee7e091bb0670eefe3614",
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "pullRequest": {
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/pull/11",
+    "head": "feature/penn-station-1935-reconstruction",
+    "headSha": "42189629203829c43c8ee7e091bb0670eefe3614",
+    "base": "main",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergedAt": null,
+    "checkedAt": "2026-10-30T00:16:55.337Z"
+  },
+  "artifactIdentity": {
+    "matchingImmutableLocalCommit": "42189629203829c43c8ee7e091bb0670eefe3614",
+    "concourseVariants": [
+      {
+        "file": "penn-station-1935/assets/model-concourse.glb.gz",
+        "bytes": 4268412,
+        "sha256": "17b8d29112d4ca46ee47d237e46b1293aaaa07c4fd5ee63ae1f3327467b1f1b7",
+        "decodedSha256": "2d4ac7520a86510baf26482b2f9fec1468f6a806cac22dea960019471d8cca9e"
+      },
+      {
+        "file": "penn-station-1935/assets/model-concourse-low.glb.gz",
+        "bytes": 4246726,
+        "sha256": "155fc3cf39cf54130845d24dffa96ba2c11c359b7fda4c5383f93ffb66421190",
+        "decodedSha256": "ac092ad85d956f91dc3512bde806f9d34a5e1ce8ca0e9b4a8a2fa404376912f0"
+      }
+    ]
+  },
+  "hosting": "Existing feature-branch/root Pages source retained; this verification changed no hosting settings and did not merge the pull request.",
+  "limitations": [
+    "Installed desktop Chrome on the recorded Metal driver; no physical mobile coverage added.",
+    "Passing live artifact/function checks do not certify photographic fidelity, historical completeness or all navigation routes.",
+    "No performance claim: another bounded shader comparison could overlap this functional run."
+  ]
+}

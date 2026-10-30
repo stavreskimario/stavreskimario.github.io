@@ -8,10 +8,10 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[2]
 # The architectural exhibition retains full-resolution desktop geometry and
-# dedicated8K illumination. Keep a bounded public artifact without forcing
+# dedicated 8K illumination. Keep a bounded public artifact without forcing
 # those assets below their reviewed visual quality. This is an internal budget;
 # GitHub Pages' separate published-site limit still applies to legacy builds.
-MAX_PUBLIC_SITE_BYTES = 160_000_000
+MAX_PUBLIC_SITE_BYTES = 180_000_000
 
 
 def stage(root, destination):
@@ -36,7 +36,7 @@ def stage(root, destination):
         if file.is_symlink() or any(part.startswith('.') for part in relative.parts) and relative.name != '.nojekyll':
             raise ValueError('Hidden files and symlinks must not enter the Pages artifact')
     if sum(p.stat().st_size for p in files) > MAX_PUBLIC_SITE_BYTES:
-        raise ValueError('Site exceeds the 160 MB public artifact budget')
+        raise ValueError(f'Site exceeds the {MAX_PUBLIC_SITE_BYTES // 1_000_000} MB public artifact budget')
     destination.mkdir(parents=True)
     for file in files:
         target = destination / file.relative_to(root)

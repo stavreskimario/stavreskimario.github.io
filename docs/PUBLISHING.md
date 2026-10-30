@@ -12,7 +12,7 @@ python3 -m unittest discover -s tests -p 'test_site_staging.py'
 python3 scripts/site-publishing/stage.py /path/to/new-pages-directory
 ```
 
-Choose a staging directory that does not already exist and does not contain the source checkout. The stager copies the root shell, `.nojekyll`, shared assets and every registered app, including its images and local runtime assets. Git history, workflows, source/review archives and unrelated directories are excluded. Hidden files and symlinks within an app are rejected. The current custom artifact budget remains 160,000,000 bytes; the complete legacy-root public site has its separate below-1GB requirement. A custom staging exclusion does not make repository files private.
+Choose a staging directory that does not already exist and does not contain the source checkout. The stager copies the root shell, `.nojekyll`, shared assets and every registered app, including its images and local runtime assets. Git history, workflows, source/review archives and unrelated directories are excluded. Hidden files and symlinks within an app are rejected. The current custom artifact budget is 180,000,000 bytes, allowing the reviewed full-resolution vault and stone finishes; the complete legacy-root public site has its separate below-1GB requirement. A custom staging exclusion does not make repository files private.
 
 The stager was moved without content changes from its former feed-specific location. It performs no network requests or catalogue updates. Site checks run these static/staging controls for pull requests; app-specific browser checks remain separate.
 

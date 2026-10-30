@@ -152,35 +152,22 @@ if not mesh.uv_layers:
 original_uv = mesh.uv_layers[0].name
 light_uv_name = "BakedLightingUV"
 order_uv_audit = None
-vault_normals_before_uv = None
-if args.surface_group == "vault":
-    vault_normals_before_uv = np.empty(len(mesh.loops) * 3, dtype=np.float32)
-    mesh.corner_normals.foreach_get("vector", vault_normals_before_uv)
+vault_normal_integrity = None
 if args.surface_group == "order":
     from order_lighting_uv import prepare_order_uv
     order_uv_audit = prepare_order_uv(architecture, args.resolution, args.uv_margin_pixels)
+elif args.surface_group == "vault":
+    from vault_lighting_uv import prepare_vault_uv
+    vault_normal_integrity = prepare_vault_uv(architecture, args.resolution, args.uv_margin_pixels)
 else:
     mesh.uv_layers.new(name=light_uv_name)
     mesh.uv_layers.active_index = len(mesh.uv_layers) - 1
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.mesh.select_all(action="SELECT")
-    # The vault's coincident vertices separate actual moulding-band normals.
-    # Welding them changes the authored split normals and creates transport
-    # artifacts even though the silhouette and vertex positions stay the same.
-    if args.surface_group != "vault":
-        bpy.ops.mesh.remove_doubles(threshold=.00001)
+    bpy.ops.mesh.remove_doubles(threshold=.00001)
     bpy.ops.uv.smart_project(angle_limit=math.radians(75), island_margin=args.uv_margin_pixels / args.resolution, margin_method="FRACTION", area_weight=.5, correct_aspect=True, scale_to_bounds=True)
     bpy.ops.object.mode_set(mode="OBJECT")
 mesh.calc_loop_triangles()
-vault_normal_integrity = None
-if vault_normals_before_uv is not None:
-    vault_normals_after_uv = np.empty(len(mesh.loops) * 3, dtype=np.float32)
-    mesh.corner_normals.foreach_get("vector", vault_normals_after_uv)
-    if not np.array_equal(vault_normals_before_uv, vault_normals_after_uv):
-        raise RuntimeError("Vault UV preparation changed its authored split shading normals")
-    vault_normal_integrity = {"preservedExactly": True, "cornerCount": len(mesh.loops),
-        "sha256": hashlib.sha256(vault_normals_after_uv.tobytes()).hexdigest(),
-        "weldCoincidentVertices": False}
 uv_values = np.empty(len(mesh.loops) * 2, dtype=np.float32)
 mesh.uv_layers[light_uv_name].data.foreach_get("uv", uv_values)
 triangle_loops = np.empty(len(mesh.loop_triangles) * 3, dtype=np.int32)
