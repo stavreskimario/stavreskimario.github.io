@@ -1821,6 +1821,10 @@ def stair_flight(name,x0,x1,cy,z0,z1,width,steps):
 
 # Nine east-edge heads are traced from Gibbs' plan243; exact rail-platform
 # numbering and dimensions of individual stair shafts remain under review.
+# Layout defect: these upper flights currently descend west from a wall-side
+# head. Fig2 and LOC det.4a23718 instead support court-facing western entries
+# descending east. Rebuild connected shafts/landings together; do not treat
+# the authored 1.4m setback as a historical dimension. See platform-stair-audit.md.
 for i,yy in enumerate(ACCESS_CENTRES):
     stair_flight("Main-to-exit access stair",STAIR_HEAD_X,STAIR_HEAD_X-5.7,yy,0,EXIT_LEVEL,3.0,19)
     box("Exit stair receiving landing",(STAIR_HEAD_X-6.2,yy,EXIT_LEVEL-.10),(1.0,3.2,.20),FLOOR,.015)

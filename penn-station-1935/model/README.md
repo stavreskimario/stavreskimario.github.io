@@ -97,6 +97,8 @@ See the [research ledger](../RESEARCH.md), [source register](../sources.json) an
 
 The reconstruction should be assessed against matching-view primary photographs and the actual browser experience. Render polish and a working route do not establish a1:1 historical replica.
 
+The [30 October platform-stair layout review](platform-stair-audit.md) supersedes any implication that the current upper departure-flight direction has been authenticated. The original plan and east-wall photograph place the gates on the court-facing ends; the current upper flights run in the opposite direction. Correct their orientation, registered wall margins and connecting circulation in the next iteration. Existing point-support checks do not establish historical placement.
+
 
 ## Revision 4 source and geometry evidence
 
