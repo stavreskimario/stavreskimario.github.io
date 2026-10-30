@@ -2,6 +2,18 @@
 
 Research date: 29 October 2026. Historical target: 1935–1940. **The target period has not yet been validated throughout the model.** The principal dimensional evidence records the original station around its opening, while several photographs establish later conditions. This is a phased architectural reconstruction study, not a surveyed replica or completed photorealistic reconstruction.
 
+## First eight arrivals: current scope
+
+The first eight ordinary platform correspondences now have sixteen separate arrival stairs and a continuous lower Exit gallery. Main departures remain independent. The [arrivals evidence ledger](./model/arrivals-evidence.md) and [source archive](../authoring/penn-station-1935/review/phase8/arrivals/README.md) retain the plan controls, reproduction inputs and unfinished areas.
+
+| Evidence status | Features and limits |
+| --- | --- |
+| Documented form | The printed 60 ft / 18.288 m Exit width; northern Main-to-Exit difference 10 ft 6 in / 3.2004 m in plate LXI; separate east/west arrival flights with a flat intermediate landing, ornamental guards and lower framing in plate LXXXIV and LOC 071937. That number is a negative identifier, not a 1937 photograph date. |
+| Coordinated reconstruction | First-eight platform correspondence, absolute placement with at least ±1 m uncertainty, individual 14 + 13 risers, tread/landing dimensions, minor metal profiles, neutral floor finish and lamp placement. Physical support/contact checks do not certify original fabrication or structural capacity. The new gallery has its own 4K neutral-sky illumination; direct sunlight remains adjustable. |
+| Held or unfinished | Northern P9/LIRR registration, streetward Exit connections, western Main-floor opening/support correction, two lower support conflicts, 26 upper/transfer cases, exact identities of the three Main-reaching lifts, complete platform enclosure and 1935–1940 retention. The northern guard is an explicit temporary reconstruction boundary. Existing platform lighting and older reflection captures remain from the preceding scene and need reconciliation with the enlarged gallery. |
+
+Eight individually traced lift enclosures are present at Exit level. They are visual enclosures, not functioning elevators or an assignment of the eight Exit-only lifts. Five original northern floor cells remain exact; three crossing cells have closed retained portions. Their six fixture groups keep real support while the other sixteen complete groups move with the wider floor. No railway or platform polygon is shifted for this change.
+
 ## Primary evidence
 
 **S1 — Pennsylvania Railroad, _The New York Improvement and Tunnel Extension of the Pennsylvania Railroad_, October 1910.** [Digitized primary publication](https://upload.wikimedia.org/wikipedia/commons/4/4f/The_New_York_improvement_and_tunnel_extension_of_the_Pennsylvania_railroad._Issued_October%2C_1910_%28IA_newyorkimproveme00penn%29.pdf). Printed page numbers below differ from PDF page indices. Printed pp. 8–12 describe the exterior; pp. 13–16 circulation, stone and the concourse; p. 18 gives a second, conflicting building-size summary. This publication is a historical record, not an as-built survey. Its promotional superlatives should not be repeated as present-day judgments.

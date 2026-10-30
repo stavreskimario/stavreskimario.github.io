@@ -24,7 +24,7 @@ The existing Main floor/prisms, departure routes and P1/P2 peripheral connection
 
 ## Source files and reproduction
 
-The standalone [authoring helper](repair_arrivals_access.py) uses the exact pre-arrivals source SHA256 `f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588`. It writes only into a new directory outside the repository. It does not modify the canonical scene, runtime assets or application bundle.
+The standalone [authoring helper](https://github.com/stavreskimario/stavreskimario.github.io/blob/f53091b456a5aed99150914b696771c5865c48b9/penn-station-1935/model/repair_arrivals_access.py) uses the exact pre-arrivals source SHA256 `f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588`. It writes only into a new directory outside the repository. It does not modify the canonical scene, runtime assets or application bundle.
 
 Run with the pinned Blender 4.3.0 Python package and NumPy below 2:
 
@@ -34,7 +34,7 @@ python penn-station-1935/model/repair_arrivals_access.py \
   --out /absolute/path/to/a/new/external-review-directory
 ```
 
-The default frozen inputs are in the [source-input archive](../../authoring/penn-station-1935/review/phase8/arrivals/sourceinputs). `--inputs` can select another copy of those same pinned bytes; it does not waive their hash guards. Larger JSON files are retained losslessly as gzip and unpacked into the external output. All required geometry constructors are embedded in the helper; no Desktop prototype or historical raster is needed to reproduce the source model.
+The default frozen inputs are in the [source-input archive](../../authoring/penn-station-1935/review/phase8/arrivals/sourceinputs/expected-inputs.json). `--inputs` can select another copy of those same pinned bytes; it does not waive their hash guards. Larger JSON files are retained losslessly as gzip and unpacked into the external output. All required geometry constructors are embedded in the helper; no Desktop prototype or historical raster is needed to reproduce the source model.
 
 The [review archive](../../authoring/penn-station-1935/review/phase8/arrivals/README.md) preserves the chronological frozen candidate, input hashes, source/route/contact evidence and CLI replay receipt. Saved Blender containers and path-bearing proof metadata may differ when replayed into a different directory. The old-owned, new-module and retained raw geometry must reproduce their reviewed hashes exactly.
 

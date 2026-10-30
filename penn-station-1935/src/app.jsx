@@ -14,6 +14,7 @@ import { MeshoptDecoder } from 'meshoptimizer';
 import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
+import { platformPracticalAnchors } from './platform-practicals.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
 import { findFloorJointSupport } from './floor-contact.mjs';
 import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
@@ -22,12 +23,13 @@ THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
 const TRAIN_POSITION = [0, -13.154025, 8.690045261];
 const PLATFORM_FLOOR = -11.985625;
+const EXIT_FLOOR = -7.4676;
 
 const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '7-circulation-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '8-arrivals-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -42,6 +44,7 @@ const framing = {
   hotel: { eye: [140, 6, 65], target: [183, 31, -24], title: 'Across Seventh Avenue', caption: 'Hotel Pennsylvania · four bedroom wings and three courts, informed by the 1919 plan' },
   farley: { eye: [-130, 8, 71], target: [-169, 18, -12], title: 'Across Eighth Avenue', caption: 'The General Post Office · twenty Corinthian columns and the monumental stair' },
   platform: { eye: [-14, PLATFORM_FLOOR + 2.2, 15.7], target: [-38, -10.2, TRAIN_POSITION[2]], walk: [-14, PLATFORM_FLOOR + 1.68, 13.327870361], look: [-65, PLATFORM_FLOOR + 1.68, 13.327870361], title: 'Track 10 · Platform 5', caption: 'Twenty-one tracks and eleven platforms · opening-era plan with interpreted GG1 and P70 stock' },
+  arrivals: { eye: [-70, EXIT_FLOOR + 1.8, 28], target: [-70, EXIT_FLOOR + 1.75, -20], walk: [-70, EXIT_FLOOR + 1.68, 28], look: [-70, EXIT_FLOOR + 1.68, -20], title: 'The arrivals gallery', caption: 'Independent platform arrivals · the lower exit gallery' },
 };
 let state = { view: 'exterior', framing: '', mode: 'walk', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
 const listeners = new Set();
@@ -392,10 +395,10 @@ function Lighting({ current }) {
   // Four broad downward cones approximate local practical light on moving or
   // unbaked stock. Their energy is an appearance interpretation, not a claim
   // about original Nernst candlepower. The cone never reaches above its source.
-  const practicals = useMemo(() => [-54.5, -48.404].flatMap((x, column) => [13.327870361, -.341442588].map((z, row) => {
-    const target = new THREE.Object3D(); target.position.set(x, PLATFORM_FLOOR, z);
-    return { id: `${column}:${row}`, position: [x, -8.0916, z], target, primaryShadow: column === row };
-  })), []);
+  const practicals = useMemo(() => platformPracticalAnchors(modelManifest).map(practical => {
+    const target = new THREE.Object3D(); target.position.set(practical.position[0], PLATFORM_FLOOR, practical.position[2]);
+    return { ...practical, target };
+  }), [modelManifest]);
   useEffect(() => { invalidate(); }, [p.exposure, gl]);
   useFrame((_, delta) => {
     const interval = (value, low, high, fade = 2) => THREE.MathUtils.smoothstep(value, low - fade, low + fade) * (1 - THREE.MathUtils.smoothstep(value, high - fade, high + fade));
@@ -819,9 +822,9 @@ document.addEventListener('click', async event => {
     // button focus so they can continue through the viewpoint controls.
     if (event.detail > 0) $('#scene-root canvas')?.focus({ preventScroll: true });
   }
-  if (command === 'focus' && ['hotel', 'farley', 'platform'].includes(value)) { stopTour(); const view = value === 'platform' ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: 'orbit', pose: state.pose + 1 }); }
+  if (command === 'focus' && ['hotel', 'farley', 'platform', 'arrivals'].includes(value)) { stopTour(); const view = ['platform', 'arrivals'].includes(value) ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: value === 'arrivals' ? 'walk' : 'orbit', pose: state.pose + 1 }); }
   if (command === 'reference' && framing[state.view]) update({ framing: state.view, mode: 'orbit', fov: framing[state.view].fov, pose: state.pose + 1 });
-  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: state.framing === 'platform' ? 'platform' : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
+  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: ['platform', 'arrivals'].includes(state.framing) ? state.framing : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
   if (command === 'light' && ['morning', 'afternoon', 'evening'].includes(value)) update({ light: value });
   if (command === 'annotations') update({ annotations: !state.annotations });
   if (command === 'tour') state.tour ? stopTour() : startTour();
@@ -829,7 +832,7 @@ document.addEventListener('click', async event => {
   if (command === 'sources') openDialog('#sources-dialog', button);
   if (command === 'help') openDialog('#help-dialog', button);
   if (command === 'retry') { useEnvironment.clear({ files: assetURL('sky.hdr') }); update({ revision: state.revision + 1, loading: true, error: '' }); }
-  if (command === 'reset') update({ mode: 'walk', framing: state.framing === 'platform' ? 'platform' : '', revision: state.revision + 1, fov: 50, annotations: false });
+  if (command === 'reset') update({ mode: 'walk', framing: ['platform', 'arrivals'].includes(state.framing) ? state.framing : '', revision: state.revision + 1, fov: 50, annotations: false });
   if (command === 'fullscreen') {
     try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); } catch { $('#movement-help').textContent = 'Fullscreen is unavailable. The viewer still fills this window.'; }
   }
@@ -857,7 +860,7 @@ const pad = document.createElement('div'); pad.className = 'walk-pad'; pad.setAt
 });
 $('#viewport')?.append(pad);
 const neighbourhood = document.createElement('div'); neighbourhood.className = 'map-places';
-[['hotel', 'Across Seventh · Hotel Pennsylvania'], ['farley', 'Across Eighth · General Post Office'], ['platform', 'Below the concourse · Platform 5']].forEach(([value, text]) => {
+[['hotel', 'Across Seventh · Hotel Pennsylvania'], ['farley', 'Across Eighth · General Post Office'], ['platform', 'Below the concourse · Platform 5'], ['arrivals', 'The lower arrivals gallery']].forEach(([value, text]) => {
   const button = document.createElement('button'); button.type = 'button'; button.dataset.command = 'focus'; button.dataset.value = value; button.textContent = text; neighbourhood.append(button);
 });
 $('.map-body')?.append(neighbourhood);

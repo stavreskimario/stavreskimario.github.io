@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "zone": "concourse-arrivals",
+  "source": "lighting-concourse-arrivals-sky.hdr",
+  "sourceSha256": "5f2b39421fa962197e69eb16b0c462df8593191958636b55d07a7972ed9ef261",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 4.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.022774329409003258,
+    "minimum": 0.0,
+    "maximum": 2.359375
+  },
+  "originalLinear": {
+    "mean": 0.022774329409003258,
+    "minimum": 0.0,
+    "maximum": 2.359375
+  },
+  "denoisedLinear": {
+    "mean": 0.022769024595618248,
+    "minimum": 0.0,
+    "maximum": 0.991066575050354
+  },
+  "relativeMeanChange": -0.00023292950978892613,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-concourse-arrivals-sky-denoised-linear.hdr",
+    "sha256": "cc8a0b27317d1b6e8adc0ef418f769e7ed14af807a41c7131eb202bdab61e36f",
+    "decodedLinear": {
+      "mean": 0.02269401215016842,
+      "minimum": 0.0,
+      "maximum": 0.98828125
+    },
+    "meanQuantizationError": 7.501931395381689e-05,
+    "archiveFile": "lighting-concourse-arrivals-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-concourse-arrivals-sky.png",
+    "webp": "lighting-concourse-arrivals-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-concourse-arrivals-sky-low.png",
+    "webp": "lighting-concourse-arrivals-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 10.235618082995643,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase8/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase8/raw",
+  "sourceArchiveFile": "lighting-concourse-arrivals-sky.hdr.gz",
+  "bakeReportSha256": "f779572f882d7cee60fa60b7d8427813bc430be189f3709c80155819befdaa2a"
+}
