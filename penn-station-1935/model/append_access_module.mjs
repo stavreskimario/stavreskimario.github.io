@@ -11,7 +11,8 @@ import {writeGlb} from '../asset_io.mjs';
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const validIndex=(value,list,label)=>{assert(Number.isInteger(value)&&value>=0&&value<list.length,`Invalid ${label} index`);return value;};
 
-export async function appendAccessModule(inputPath,modulePath,outputPath,reportPath,{allowedNewMaterials=[]}={}) {
+export async function appendAccessModule(inputPath,modulePath,outputPath,reportPath,{allowedNewMaterials=[],lightingArtifact='concourse-access'}={}) {
+  assert(['concourse-access','concourse-circulation'].includes(lightingArtifact),'Unreviewed access lighting artifact');
   assert.notEqual(path.resolve(inputPath),path.resolve(outputPath),'Preserve the station input');
   assert.notEqual(path.resolve(modulePath),path.resolve(outputPath),'Preserve the Blender module');
   const input=await readFile(inputPath),incoming=await readFile(modulePath);
@@ -66,7 +67,7 @@ export async function appendAccessModule(inputPath,modulePath,outputPath,reportP
     const material=structuredClone(original);remapTextures(material);
     if(material.extras?.sky_illumination){
       const file=material.extras.sky_illumination;
-      assert(/^lighting-concourse-access-sky(?:-low)?\.webp$/.test(file),'New access illumination must not overwrite the old room atlas');
+      assert([`lighting-${lightingArtifact}-sky.webp`,`lighting-${lightingArtifact}-sky-low.webp`].includes(file),'New access illumination must use its selected artifact without overwriting another atlas');
       assert(material.occlusionTexture,'Illuminated surfaces need an explicit atlas UV binding');
       for(const name of new Set([file,file.replace('-sky.webp','-sky-low.webp')])){
         const bytes=await readFile(path.join(path.dirname(modulePath),name));lighting.push({file:name,bytes:bytes.length,sha256:hash(bytes)});
@@ -99,13 +100,13 @@ export async function appendAccessModule(inputPath,modulePath,outputPath,reportP
   const decoded=writeGlb(j,binary),output=outputPath.endsWith('.gz')?gzipSync(decoded,{level:9}):decoded;
   for(const file of [outputPath,reportPath])await mkdir(path.dirname(file),{recursive:true});
   await writeFile(outputPath,output);
-  const report={scope:'Independent Blender access module appended; original retained station BIN and existing bindings exact',inputSha256:hash(input),moduleSha256:hash(incoming),outputSha256:hash(output),decodedSha256:hash(decoded),originalBinaryPrefixSha256:hash(base.binary),originalBinaryPrefixBytes:offset,addedMaterials:allowedNewMaterials,addedNodes:m.nodes.length,addedMeshes:m.meshes.length,newTextures:files,newLighting:lighting,callerMustCopyExternalAssets:true};
+  const report={scope:'Independent Blender access module appended; original retained station BIN and existing bindings exact',inputSha256:hash(input),moduleSha256:hash(incoming),outputSha256:hash(output),decodedSha256:hash(decoded),originalBinaryPrefixSha256:hash(base.binary),originalBinaryPrefixBytes:offset,lightingArtifact,addedMaterials:allowedNewMaterials,addedNodes:m.nodes.length,addedMeshes:m.meshes.length,newTextures:files,newLighting:lighting,callerMustCopyExternalAssets:true};
   await writeFile(reportPath,JSON.stringify(report,null,2)+'\n');return report;
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
-  const args={};for(let i=2;i<process.argv.length;i+=2){assert(['--input','--module','--out','--report','--materials'].includes(process.argv[i])&&process.argv[i+1],'Expected named arguments');args[process.argv[i].slice(2)]=process.argv[i+1];}
+  const args={};for(let i=2;i<process.argv.length;i+=2){assert(['--input','--module','--out','--report','--materials','--lighting-artifact'].includes(process.argv[i])&&process.argv[i+1],'Expected named arguments');args[process.argv[i].slice(2)]=process.argv[i+1];}
   for(const key of ['input','module','out','report','materials'])assert(args[key],`Missing ${key}`);
-  const report=await appendAccessModule(args.input,args.module,args.out,args.report,{allowedNewMaterials:args.materials.split(',')});
+  const report=await appendAccessModule(args.input,args.module,args.out,args.report,{allowedNewMaterials:args.materials.split(','),lightingArtifact:args['lighting-artifact']??'concourse-access'});
   console.log(JSON.stringify({outputSha256:report.outputSha256,addedMeshes:report.addedMeshes,addedMaterials:report.addedMaterials}));
 }

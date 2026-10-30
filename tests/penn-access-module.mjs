@@ -1,6 +1,6 @@
 // Independent glTF reader checks for a bounded access-module append.
 import assert from 'node:assert/strict';
-import {mkdtemp,readFile,writeFile} from 'node:fs/promises';
+import {mkdtemp,readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import {fileURLToPath} from 'node:url';
@@ -33,4 +33,32 @@ await assert.rejects(appendAccessModule(input,path.join(out,'lights.glb'),path.j
 const incomplete=structuredClone(json);incomplete.materials[0].extras={sky_illumination:'lighting-concourse-access-sky.webp'};
 await writeFile(path.join(out,'no-uv.glb'),writeGlb(incomplete,binary));
 await assert.rejects(appendAccessModule(input,path.join(out,'no-uv.glb'),path.join(out,'no-uv-output.glb'),report,{allowedNewMaterials:[material]}),/explicit atlas UV/);
-console.log('PASS independent appended geometry and exact station payload; reject unlisted material, input overwrite, live lights and incomplete illumination binding');
+// Exercise independent new illumination beside the already-published atlas.
+// Existing real KTX2/WebP bytes are temporary test inputs, not a new light bake.
+const lit=structuredClone(json),litBinary=Buffer.alloc(68);binary.copy(litBinary);
+new Float32Array(litBinary.buffer,litBinary.byteOffset+44,6).set([0,0,1,0,0,1]);
+lit.buffers[0].byteLength=68;lit.bufferViews.push({buffer:0,byteOffset:44,byteLength:24,target:34962});
+lit.accessors.push({bufferView:2,componentType:5126,count:3,type:'VEC2',min:[0,0],max:[1,1]});
+lit.meshes[0].primitives[0].attributes.TEXCOORD_0=2;
+const texture='textures/0f399333f7175f5e5afa.ktx2';
+lit.images=[{uri:texture,mimeType:'image/ktx2'}];lit.textures=[{extensions:{KHR_texture_basisu:{source:0}}}];
+lit.extensionsUsed=['KHR_texture_basisu'];lit.extensionsRequired=['KHR_texture_basisu'];
+lit.materials[0].occlusionTexture={index:0,texCoord:0};
+lit.materials[0].extras={sky_illumination:'lighting-concourse-circulation-sky.webp'};
+await mkdir(path.join(out,'textures'));
+await copyFile(path.join(root,'penn-station-1935/assets',texture),path.join(out,texture));
+for(const suffix of ['sky','sky-low'])await copyFile(path.join(root,`penn-station-1935/assets/lighting-concourse-access-${suffix}.webp`),path.join(out,`lighting-concourse-circulation-${suffix}.webp`));
+const litPath=path.join(out,'lit.glb'),litOutput=path.join(out,'lit-appended.glb.gz');await writeFile(litPath,writeGlb(lit,litBinary));
+await appendAccessModule(input,litPath,litOutput,report,{allowedNewMaterials:[material],lightingArtifact:'concourse-circulation'});
+const litResult=parseGlb(await readFile(litOutput)),litReport=JSON.parse(await readFile(report,'utf8'));
+assert(litResult.binary.subarray(0,base.binary.length).equals(base.binary));
+assert.deepEqual(litResult.json.materials.slice(0,base.json.materials.length),base.json.materials);
+assert.deepEqual([...decodedTriangles(litResult,new Set([material]))].map(v=>v.triangle),[[[2,3,4],[3,3,4],[2,4,4]]]);
+assert.equal(litResult.json.materials.at(-1).occlusionTexture.index,base.json.textures.length);
+assert.deepEqual(litReport.newLighting.map(v=>v.file),['lighting-concourse-circulation-sky.webp','lighting-concourse-circulation-sky-low.webp']);
+await assert.rejects(appendAccessModule(input,litPath,path.join(out,'wrong-artifact.glb'),report,{allowedNewMaterials:[material]}),/selected artifact/,'A circulation module cannot silently reuse the old access family');
+await assert.rejects(appendAccessModule(input,litPath,path.join(out,'unsafe-artifact.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'../concourse'}),/Unreviewed/,'Artifact names cannot introduce unreviewed files or path traversal');
+const missing=structuredClone(lit);delete missing.meshes[0].primitives[0].attributes.TEXCOORD_0;
+await writeFile(path.join(out,'missing-uv.glb'),writeGlb(missing,litBinary));
+await assert.rejects(appendAccessModule(input,path.join(out,'missing-uv.glb'),path.join(out,'missing-uv-output.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'concourse-circulation'}),/actual lighting UV channel/);
+console.log('PASS independent appended geometry and isolated circulation atlas; exact retained payload and reject unsafe materials, overwrite, lights, namespaces and missing illumination UVs');
