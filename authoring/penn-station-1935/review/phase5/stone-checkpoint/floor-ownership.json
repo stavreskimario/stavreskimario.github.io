@@ -1,0 +1,2341 @@
+{
+  "created": "2026-10-30T02:13:00.828Z",
+  "input": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets",
+  "scope": "Actual decoded desktop/fallback Main-level top triangles. Exactly one finish owns each sampled solid location; four authored stair void samples must stay empty. Same-material tessellation edges do not count as competing finishes.",
+  "variants": [
+    {
+      "file": "model-concourse.glb.gz",
+      "sha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+      "topTriangles": 1802,
+      "tested": 78,
+      "overlappingSamples": 0,
+      "emptySamples": [
+        [
+          -44.13,
+          -15.13
+        ],
+        [
+          -43.13,
+          -15.13
+        ],
+        [
+          -44.13,
+          0.13
+        ],
+        [
+          -43.13,
+          0.13
+        ]
+      ],
+      "unexpectedlyUnsupported": [],
+      "filledVoids": [],
+      "samples": [
+        {
+          "x": -44.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.0010403112565233743
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -15.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -15.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.0010403112565233739
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 0.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 0.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "sha256": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+      "topTriangles": 1802,
+      "tested": 78,
+      "overlappingSamples": 0,
+      "emptySamples": [
+        [
+          -44.13,
+          -15.13
+        ],
+        [
+          -43.13,
+          -15.13
+        ],
+        [
+          -44.13,
+          0.13
+        ],
+        [
+          -43.13,
+          0.13
+        ]
+      ],
+      "unexpectedlyUnsupported": [],
+      "filledVoids": [],
+      "samples": [
+        {
+          "x": -44.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.0010403112565233743
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -15.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -15.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.0010403112565233739
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": -2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 0.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 0.13,
+          "surfaces": [],
+          "owners": [],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 0.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 2.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 5.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 15.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 25.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 35.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -44.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -43.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -42.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "node": 9,
+              "height": 0
+            }
+          ],
+          "owners": [
+            "ConcourseOpaqueCirculationConcrete"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.33,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -41.13,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        },
+        {
+          "x": -40.93,
+          "z": 43.13,
+          "surfaces": [
+            {
+              "material": "PublicFloorMarble",
+              "node": 2,
+              "height": -0.001040311256523374
+            }
+          ],
+          "owners": [
+            "PublicFloorMarble"
+          ],
+          "overlap": false
+        }
+      ]
+    }
+  ]
+}

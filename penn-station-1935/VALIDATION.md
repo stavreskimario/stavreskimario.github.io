@@ -1,6 +1,18 @@
-# Default walking and retained floor repair
+# Material and interior checkpoint
 
-Checked 30 October 2026. The current navigation checkpoint uses bundle SHA256 `2a925da8a33ad307e0a9014641a74f08871f1446b2da43cffe5cb2e55c6aa581`. Its twelve model transports and world manifest remain exact to the verified floor checkpoint below. Walk is the initial and Reset mode; ordinary station viewpoints retain the selected mode, while archive/neighbour/tour controls explicitly use cinematic framing.
+Checked 30 October 2026. Exact browser bundle SHA256: `ccb1e4611cbfaf2c16d79793e3e7b8b3a247e937333164272cb533d8dc0e8c30`.
+
+This checkpoint adds the selected bounded stone roughness profiles and exactly two photograph-supported wall brackets. It retains the published floor/shadow repair, default walking, existing vault geometry and all six Phase4 illumination atlases/probes. The corrected25degree ceiling source and fresh bake are saved, but their remaining moulding breakup is still under review and is not part of this runtime.
+
+- [Actual asset validation](../authoring/penn-station-1935/review/phase5/stone-checkpoint/assets.json): 12 full/fallback GLBs, zero errors,280 retained warnings,76 shared KTX2 textures and161,327,896 model/texture/lighting/probe bytes.
+- [Production browser check](../authoring/penn-station-1935/review/phase5/stone-checkpoint/production-browser-summary.json): actual bundle/six decoded-model responses match frozen identities; default Walk, real supported movement and UI-only Orbit captures of exterior/waiting/concourse pass with six persistent zones. All three stone families use factor1 and their bound2048px KTX2 data is linear. No page/local HTTP/loader failures occur. Initial Chrome cancellations and response-body observer misses are preserved separately; they are not described as successful natural retries or explained as teardown.
+- [Floor ownership](../authoring/penn-station-1935/review/phase5/stone-checkpoint/floor-ownership.json):78 points per variant retain zero competing finishes and four real stair voids. [All2,754 stair-head samples](../authoring/penn-station-1935/review/phase5/stone-checkpoint/stair-heads.json) pass. Concourse BIN bytes remain exact through the material change.
+- [Source/assembly proof](../authoring/penn-station-1935/review/phase5/stone-checkpoint/summary.json): original vault geometry/AO/material, other unrelated geometry and atlas/probe/manifest bytes remain intact; fixture envelope stays inside unchanged room bounds, two parents/four mesh nodes,28,992 rendered triangles and zero new live lights. Minor fixture dimensions/placement/finish and1935 retention remain inferred.
+- Registry/link/syntax checks pass for three apps; staging remains within180MB and the complete legacy-root tree below1GB. Final stage measurements and matching publication are recorded separately. This functional desktop check does not claim a new quiet FPS benchmark, broad railway rerun, physical-mobile certification or native-WebGPU parity.
+
+## Previous default walking checkpoint
+
+Checked 30 October 2026. The preceding navigation checkpoint uses bundle SHA256 `2a925da8a33ad307e0a9014641a74f08871f1446b2da43cffe5cb2e55c6aa581`. Its twelve model transports and world manifest remain exact to the verified floor checkpoint below. Walk is the initial and Reset mode; ordinary station viewpoints retain the selected mode, while archive/neighbour/tour controls explicitly use cinematic framing.
 
 The [focused production browser receipt](../authoring/penn-station-1935/review/phase5/default-walking/production-report.json) passes the supported street spawn at [124,1.68,0], real WASD/drag, loaded floor/collision queries, ignored flight-only height keys, selected HTML/help state, three-view mode persistence, reset from neighbour framing and tour cancellation. All six zones remain loaded. This does not claim a new broad railway/performance run or completion of the separately reviewed ceiling/material candidate.
 

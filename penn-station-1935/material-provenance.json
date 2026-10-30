@@ -1,5 +1,5 @@
 {
-  "revision": 4,
+  "revision": 5,
   "references": [
     {
       "id": "Granite005A",
@@ -80,14 +80,14 @@
       ]
     }
   ],
-  "runtime": "Shared content-addressed KTX2/UASTC surfaces, with retained 2K desktop and 512px fallback derivatives. Architectural UV revision 3 and physical grain scale are retained. Four interpreted colour profiles, separate authored Bedford maps, restrained normal strength and material-specific roughness/optics are applied by the appearance library. Runtime encoding and sampled-channel preservation are documented in the asset reports; original CC0 source files remain unchanged. Desktop is the focus of this iteration; additional mobile optimization is deferred.",
-  "lighting": "Completed Phase4 neutral-dome Cycles illumination uses8192px for the waiting-room vault,4096px for masonry and colossal order, and2048px for exterior/concourse/platform. The repaired order uses512 Metal samples; other atlases128, with six diffuse bounces. The order retains4096px desktop AO. All final inputs include the broad revision3 prism court and repaired leaf source; each report records actual source/occluder hashes. Fine ironwork and repeated tiny concrete webs remain outside the large masonry atlas. Directional sun stays dynamic. Explicit linear-radiance transfer and pixel-identical lossless WebP preserve the normalized atlas; the browser restores scale and irradiance. Completed settings do not establish final photographic fidelity or calibrated historic colours.",
-  "reflections": "Four completed repaired-source static captures use2048x1024 HDR,64 Metal samples, plus512x256 low derivatives. Non-Color resizing and zero dither preserve linear radiance. assets/reflection-probes.json and reflection-exterior-probe.json retain source hashes, positions and decoded transport identity. Static probes have no positional parallax, moving-passenger reflections or time-specific indirect relighting. Sky, colours, sun and exposure are not historically calibrated.",
-  "denoising": "Color-only OpenImageDenoise filters explicitly linear radiance; runtime sRGB is encoded once and transported as lossless WebP. Original and denoised full-resolution HDR are losslessly gzip archived under authoring/penn-station-1935/lighting/phase4, with decoded SHA verification. Each atlas records its0.18 control, radiance statistics and clipping. Filtering can soften fine features; mapped browser review remains separately required.",
+  "runtime": "Shared content-addressed KTX2 surfaces, retained 2K desktop and 512px fallback derivatives. Selected B roughness uses Non-Color data in the green channel with roughnessFactor 1. Original nine CC0 maps, four colour profiles, surface UVs, normal strengths and marble roughness remain unchanged. All six Phase 4 illumination/AO atlases and static probes are retained. Desktop remains the focus; additional mobile optimization is deferred.",
+  "lighting": "All six Phase 4 neutral-dome Cycles atlases are retained unchanged: 8192px vault, 4096px masonry/order, 2048px exterior/concourse/platform. Order used 512 Metal samples; other atlases 128, all with six diffuse bounces. Desktop order AO remains 4096px. Existing source/occluder hashes and output identities remain those of Phase 4; there is no fresh vault GI in this material/fixture checkpoint. The 25-degree ceiling UV/bake work remains pending. Directional sun stays dynamic; outputs do not calibrate historical lighting.",
+  "reflections": "Retained Phase 4 static captures: 2048x1024 HDR at 64 Metal samples, 512x256 low derivatives, Non-Color resizing and zero dither. Existing reflection-probes.json and exterior record retain the source hashes and decoded transport identity. No probe is rebaked for this checkpoint. No positional parallax, moving-passenger reflection or calibrated historical weather is claimed.",
+  "denoising": "Retained Phase 4 color-only OpenImageDenoise output from explicitly linear radiance, once-encoded sRGB and lossless WebP. Original and denoised full-resolution HDR archives remain under authoring/penn-station-1935/lighting/phase4 with decoded SHA verification. Existing 0.18 controls, statistics and PNG/WebP identity apply to those retained outputs. New guided/unique-owner vault denoising is pending and is not delivered by this checkpoint.",
   "architecturalUvRevision": 3,
   "appearance": {
-    "revision": 4,
-    "scope": "Four interpreted colour derivatives and reduced normal strengths retain the original nine ambientCG maps and architectural UV revision3. The broader visual pass also introduces separately authored seamless Bedford maps, an interpreted InteriorGranite roughness factor 0.50 and distinct milky opal-glass response; global illumination and static probes are freshly rebuilt rather than retained from the maintenance checkpoint.",
+    "revision": 5,
+    "scope": "Retain Phase 4 colour/normal/Bedford/opal interpretations; add selected B linear roughness derivatives for InteriorGranite, MilfordGranite, Travertine with unit multipliers. No measured historic surface is claimed.",
     "calibratedHistoricSamples": false,
     "method": "Decode sRGB to linear; normalize each source channel by its spatial mean; apply contrast about that mean and multiply by the target linear palette; clip to0..1; resize in linear light; encode sRGB once.",
     "sourceMapsVerified": 9,
@@ -176,12 +176,172 @@
       "BotticinoMarble": 0.025
     },
     "baseColourFactors": "Original material-family factors are accounted for in the colour-derivative application reports. The authored Bedford maps already contain their target mean linear colour and use a unit baseColorFactor, avoiding double tinting.",
-    "lightingLimitation": "The maintenance checkpoint retained Phase3 lighting. The completed visual pass rebuilds all six illumination atlases and four static probes with recorded final geometry/material inputs. Transfer validation and mapped visual acceptance are separate; historic colour, polish, lamp photometry and weather remain uncalibrated.",
+    "lightingLimitation": "This checkpoint retains all six Phase 4 atlases and static probes. New ceiling UV packing and the fresh vault bake remain pending; source checks do not establish their runtime acceptance.",
     "roughnessFactors": {
-      "InteriorGranite": 0.5
+      "InteriorGranite": 1,
+      "MilfordGranite": 1,
+      "Travertine": 1
     },
-    "interiorGraniteFinish": "The smoother shaft response is interpreted from primary photographs; 0.50 is a material multiplier on the existing modern roughness map, not a measured historic polish specification.",
-    "nativeApplicationHelper": "model/material_library.py"
+    "interiorGraniteFinish": "Selected bounded B range 0.30\u20130.48 in linear data replaces the earlier 0.50 multiplier; original CC0 grain remains, with no calibrated historic roughness sample.",
+    "nativeApplicationHelper": "model/material_library.py",
+    "finishRoughness": {
+      "provenance": "../authoring/penn-station-1935/materials/phase5/roughness-provenance.json",
+      "method": "Linear Non-Color; clip robust p1/p99 then affine candidate range; round to nearest 8-bit value",
+      "qualification": "CC0 grain reused for a bounded finish interpretation; no calibrated historic roughness samples",
+      "roughnessFactor": 1,
+      "generator": "model/prepare_finish_roughness.py",
+      "applicationHelper": "model/apply_finish_roughness.mjs",
+      "generatorSha256": "bf966891256ad26367b1b68655bf7905155078e37bbdfd220cae34de31c60937",
+      "profiles": [
+        {
+          "materialProfile": "InteriorGranite",
+          "source": "Granite005A",
+          "range": [
+            0.3,
+            0.48
+          ],
+          "inputClipPercentiles": [
+            0.0,
+            0.1411764705882353
+          ],
+          "previousRoughnessFactor": 0.5,
+          "previousEffectiveMean": 0.016686620899275247,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "InteriorGranite-roughness.png",
+            "sha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.34223909939036673,
+            "minimum": 0.2980392156862745,
+            "maximum": 0.47843137254901963,
+            "standardDeviation": 0.03570291581649791,
+            "percentiles": {
+              "0": 0.2980392156862745,
+              "1": 0.2980392156862745,
+              "5": 0.3058823529411765,
+              "50": 0.32941176470588235,
+              "95": 0.4196078431372549,
+              "99": 0.47843137254901963,
+              "100": 0.47843137254901963
+            },
+            "originalCandidateFile": "InteriorGranite-B-roughness.png",
+            "bytes": 2252437
+          },
+          "low": {
+            "file": "InteriorGranite-roughness-low.png",
+            "sha256": "721e053a2963c77985f75547e75096a00f3b7059c55efb9935b271e1ed4a8574",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "InteriorGranite-B-roughness-low.png",
+            "bytes": 149368
+          }
+        },
+        {
+          "materialProfile": "MilfordGranite",
+          "source": "Granite005A",
+          "range": [
+            0.55,
+            0.78
+          ],
+          "inputClipPercentiles": [
+            0.0,
+            0.1411764705882353
+          ],
+          "previousRoughnessFactor": 0.88,
+          "previousEffectiveMean": 0.029368452782724434,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "MilfordGranite-roughness.png",
+            "sha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.604103965385287,
+            "minimum": 0.5490196078431373,
+            "maximum": 0.7803921568627451,
+            "standardDeviation": 0.04555061079839782,
+            "percentiles": {
+              "0": 0.5490196078431373,
+              "1": 0.5490196078431373,
+              "5": 0.5568627450980392,
+              "50": 0.5882352941176471,
+              "95": 0.7019607843137254,
+              "99": 0.7803921568627451,
+              "100": 0.7803921568627451
+            },
+            "originalCandidateFile": "MilfordGranite-B-roughness.png",
+            "bytes": 2422436
+          },
+          "low": {
+            "file": "MilfordGranite-roughness-low.png",
+            "sha256": "5ff06d0cd4cf1e76190ec5b41aa44022ebe9fbe1eb9e3ce8ceee8d9409f22bc8",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "MilfordGranite-B-roughness-low.png",
+            "bytes": 160223
+          }
+        },
+        {
+          "materialProfile": "Travertine",
+          "source": "Travertine009",
+          "range": [
+            0.6,
+            0.78
+          ],
+          "inputClipPercentiles": [
+            0.011764705882352941,
+            0.06274509803921569
+          ],
+          "previousRoughnessFactor": 0.95,
+          "previousEffectiveMean": 0.0351227374637828,
+          "roughnessFactor": 1,
+          "full": {
+            "file": "Travertine-roughness.png",
+            "sha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+            "dimensions": [
+              2048,
+              2048
+            ],
+            "mean": 0.6892055604972087,
+            "minimum": 0.6,
+            "maximum": 0.7803921568627451,
+            "standardDeviation": 0.039822843319515466,
+            "percentiles": {
+              "0": 0.6,
+              "1": 0.6,
+              "5": 0.6274509803921569,
+              "50": 0.6823529411764706,
+              "95": 0.7529411764705882,
+              "99": 0.7803921568627451,
+              "100": 0.7803921568627451
+            },
+            "originalCandidateFile": "Travertine-B-roughness.png",
+            "bytes": 1885295
+          },
+          "low": {
+            "file": "Travertine-roughness-low.png",
+            "sha256": "9e8a219f9ad8ff92ee9a48e6cfe0dbd026467dfae360b82a9b370d4cf0e75fcb",
+            "dimensions": [
+              512,
+              512
+            ],
+            "originalCandidateFile": "Travertine-B-roughness-low.png",
+            "bytes": 120902
+          }
+        }
+      ],
+      "unchangedMarble": "Marble018 and all marble-family runtime roughness bindings remain unchanged.",
+      "sourceMapsVerified": 9,
+      "normalsSurfaceUvAndColourChanged": false
+    }
   },
   "authoredSurfaces": [
     {
@@ -239,7 +399,7 @@
   ],
   "fixtureOptics": {
     "OpalCandelabraGlass": {
-      "scope": "Separate from clock/sign white materials, allowing an interpreted milky five-globe candelabrum finish without recolouring clock faces or lettering.",
+      "scope": "Existing interpreted optics reused by the five-globe floor standards and two photograph-supported twin-globe wall fixtures; separate from clock/sign white materials. No new photometry or live lights.",
       "baseColourLinear": [
         0.94,
         0.93,
@@ -254,7 +414,7 @@
     }
   },
   "visualPassSettings": {
-    "qualification": "Requested final visual-pass settings; some refreshed jobs can still be running when this catalog is written. Exact output hashes, observed controls, completion and delivered-browser checks must come from their own reports.",
+    "qualification": "Retained Phase4 delivery settings for this material/fixture checkpoint; fresh ceiling UV/GI work is pending outside its delivered runtime.",
     "geometry": "Broad visible central-court floor coverage revision 3; precise extent, pitch and module remain inferred.",
     "globalIllumination": {
       "device": "METAL",
@@ -314,5 +474,69 @@
     "staticShadows": "Cached for camera motion; refreshed for model, lighting, shadow and quality changes. WebGL-only helper; experimental WebGPU retains its prior path.",
     "closedPrismGlass": "Front faces for the closed square-prism units retain full transmission and refraction resolution; thin glazing stays double-sided.",
     "limits": "High-frequency distant prism grids can alias. This checkpoint does not certify final photographic fidelity or all hardware."
+  },
+  "checkpoint": {
+    "name": "Material and interior checkpoint",
+    "scope": "Current floor/default-Walk assets plus selected B roughness and exactly two radial-refined photo-supported wall fixtures. Existing vault geometry, all six Phase 4 GI/AO atlases and static probes retained.",
+    "pending": "25-degree unique-owner ceiling UV and fresh vault bake remain outside this checkpoint.",
+    "modelTextureAndLightingBytes": 161327896,
+    "acceptance": "Exact candidate runtime/validation/publication receipt pending; no final Phase5 or photographic-fidelity claim.",
+    "packaging": {
+      "models": 12,
+      "gltfErrors": 0,
+      "retainedWarnings": 280,
+      "sharedKtx2Files": 76,
+      "receipt": "../authoring/penn-station-1935/review/phase5/stone-checkpoint/summary.json",
+      "status": "Offline packaging passed; actual browser/publication acceptance pending."
+    }
+  },
+  "wallFixtureAddition": {
+    "count": 2,
+    "acceptedModuleSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+    "evidenceLedger": "../authoring/penn-station-1935/review/phase5/wall-brackets/README.md",
+    "evidenceRecord": "../authoring/penn-station-1935/review/phase5/wall-brackets/evidence.json",
+    "refinement": "../authoring/penn-station-1935/review/phase5/wall-brackets/silhouette-refinement/README.md",
+    "photograph": {
+      "sourceId": "S23",
+      "item": "https://www.loc.gov/item/2016815386/",
+      "download": "https://cdn.loc.gov/master/pnp/det/4a20000/4a23000/4a23700/4a23713u.tif",
+      "identifier": "LC-DIG-det-4a23713; negative071928",
+      "originalSize": [
+        5076,
+        4061
+      ],
+      "sha256": "b11e92e022cd1aec75b78c3164f35bc2e7772a336f4d31029e2f2ed9665f5d9d",
+      "rights": "LOC no known restrictions on publication, as recorded in existingS23; pre1931US publication corroborated by copyright registration1911J151601 inS27",
+      "dateLimit": "Opening-era photograph, not independent proof of complete1935fixture inventory",
+      "crops": [
+        {
+          "file": "wall-bracket-original-crop.png",
+          "sha256": "0ff3c0e6a4aed9e92377fafb1430f8ec1c80f599b8d8a0c1b75820b88d1ce4f0",
+          "cropXYWH": [
+            200,
+            1870,
+            720,
+            620
+          ],
+          "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+        },
+        {
+          "file": "opposite-wall-bracket-original-crop.png",
+          "sha256": "dcc458505ffdcfc6aa09a386c1a8414b571d07dd6f9588fffe19e108d30948a8",
+          "cropXYWH": [
+            4420,
+            1730,
+            550,
+            820
+          ],
+          "treatment": "Mechanical crop and PNG packaging only; no colourization, restoration or generative edits"
+        }
+      ]
+    },
+    "photoCredit": "Library of Congress, Prints and Photographs Division, Detroit Publishing Company Collection; LC-DIG-det-4a23713. Both mechanical crops derive from the same original photograph.",
+    "limits": "Dark decorative metal and diffuse pale globes are visible; exact alloy, polish, glass chemistry, colour, photometry and minor casting profiles are unmeasured. Reuse existingAgedBronze/OpalCandelabraGlass as interpretations; no individual live point lights.",
+    "inventory1935": "Not established; only two photographed foreground fixtures are included.",
+    "newLiveLights": 0,
+    "surfaceTextureUse": "None; source crops remain review evidence."
   }
 }

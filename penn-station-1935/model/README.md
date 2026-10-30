@@ -114,3 +114,9 @@ The [independent photograph comparison](../../authoring/penn-station-1935/review
 ## Capital return repair
 
 The [capital-leaf shell review](../../authoring/penn-station-1935/review/phase4/leaf-shell/) records a narrow hidden-return correction after the order-lighting diagnosis. The visible front grid, order heights and placements remain unchanged. The former fixed radial back extrusion intersected the downward-curled front. A bounded inward profile return now closes each leaf without crossing the front; its 55mm hidden thickness remains interpreted. All 128 actual shells pass triangle intersection, winding and positive-volume checks. Exact scene hashes preserve all unrelated architecture. New baked/browser appearance acceptance is separate from this source proof.
+
+## Deferred Seventh Avenue arcade completion
+
+The street-to-waiting-room arcade remains unfinished: the user has reported excessive darkness and apparent side-wall gaps. Completing its enclosure, documented shopfronts/openings, finishes and appropriate lighting is on the backlog. The current material/fixture checkpoint does not complete this connection. Primary sources S1/S2 document a225×45ft arcade, shops on both sides and a western loggia/dining connection; exact1935 tenants and detailed closure arrangements still require review.
+
+The user explicitly places this work after the waiting room, concourse and tracks. The fuller Manhattan streetscape and further mobile optimization also remain deferred. No new arcade geometry or lighting is claimed from the brief source audit.
