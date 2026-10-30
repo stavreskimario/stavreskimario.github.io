@@ -1,5 +1,5 @@
 {
-  "revision": 5,
+  "revision": 6,
   "references": [
     {
       "id": "Granite005A",
@@ -80,8 +80,8 @@
       ]
     }
   ],
-  "runtime": "Shared content-addressed KTX2 surfaces, retained 2K desktop and 512px fallback derivatives. Selected B roughness uses Non-Color data in the green channel with roughnessFactor 1. Original nine CC0 maps, four colour profiles, surface UVs, normal strengths and marble roughness remain unchanged. All six Phase 4 illumination/AO atlases and static probes are retained. Desktop remains the focus; additional mobile optimization is deferred.",
-  "lighting": "All six Phase 4 neutral-dome Cycles atlases are retained unchanged: 8192px vault, 4096px masonry/order, 2048px exterior/concourse/platform. Order used 512 Metal samples; other atlases 128, all with six diffuse bounces. Desktop order AO remains 4096px. Existing source/occluder hashes and output identities remain those of Phase 4; there is no fresh vault GI in this material/fixture checkpoint. The 25-degree ceiling UV/bake work remains pending. Directional sun stays dynamic; outputs do not calibrate historical lighting.",
+  "runtime": "The departure access module shares the existing CC0 stone and marble surface maps and adds its own bounded illumination/AO. Existing room surfaces and probes remain unchanged. This desktop-first checkpoint shares the reviewed full concourse geometry/PBR between both quality files; low illumination/reflection/DPR/shadow settings and the other five low-zone models remain. Further mobile geometry optimization is deferred.",
+  "lighting": "All six Phase 4 neutral-dome Cycles atlases are retained unchanged: 8192px vault, 4096px masonry/order, 2048px exterior/concourse/platform. Order used 512 Metal samples; other atlases 128, all with six diffuse bounces. Desktop order AO remains 4096px. Existing source/occluder hashes and output identities remain those of Phase 4; there is no fresh vault GI in this material/fixture checkpoint. The 25-degree ceiling UV/bake work remains pending. Directional sun stays dynamic; outputs do not calibrate historical lighting. A separate2048px,64-sample Metal neutral-dome atlas now covers new departure stairs and infills, with actual retained concourse/exterior occluders. Its512px illumination derivative is retained. No waiting-room ceiling or exterior roof flicker fix is implied.",
   "reflections": "Retained Phase 4 static captures: 2048x1024 HDR at 64 Metal samples, 512x256 low derivatives, Non-Color resizing and zero dither. Existing reflection-probes.json and exterior record retain the source hashes and decoded transport identity. No probe is rebaked for this checkpoint. No positional parallax, moving-passenger reflection or calibrated historical weather is claimed.",
   "denoising": "Retained Phase 4 color-only OpenImageDenoise output from explicitly linear radiance, once-encoded sRGB and lossless WebP. Original and denoised full-resolution HDR archives remain under authoring/penn-station-1935/lighting/phase4 with decoded SHA verification. Existing 0.18 controls, statistics and PNG/WebP identity apply to those retained outputs. New guided/unique-owner vault denoising is pending and is not delivered by this checkpoint.",
   "architecturalUvRevision": 3,
@@ -476,19 +476,24 @@
     "limits": "High-frequency distant prism grids can alias. This checkpoint does not certify final photographic fidelity or all hardware."
   },
   "checkpoint": {
-    "name": "Material and interior checkpoint",
-    "scope": "Current floor/default-Walk assets plus selected B roughness and exactly two radial-refined photo-supported wall fixtures. Existing vault geometry, all six Phase 4 GI/AO atlases and static probes retained.",
-    "pending": "25-degree unique-owner ceiling UV and fresh vault bake remain outside this checkpoint.",
-    "modelTextureAndLightingBytes": 161327896,
-    "acceptance": "Exact candidate runtime/validation/publication receipt pending; no final Phase5 or photographic-fidelity claim.",
+    "name": "Concourse departure access checkpoint",
+    "assetRevision": "6-access-1",
+    "scope": "Nine court-facing departure stair heads, three straight eastward flights per row, supported infills and shifted cast-iron indicators; provisional arrivals deck retained independently. Existing rooms stay loaded together.",
+    "modelTextureAndLightingBytes": 170305353,
     "packaging": {
       "models": 12,
       "gltfErrors": 0,
-      "retainedWarnings": 280,
-      "sharedKtx2Files": 76,
-      "receipt": "../authoring/penn-station-1935/review/phase5/stone-checkpoint/summary.json",
-      "status": "Offline packaging passed; actual browser/publication acceptance pending."
-    }
+      "retainedWarnings": 312,
+      "sharedKtx2Files": 74,
+      "receipt": "../authoring/penn-station-1935/review/phase6/departure-access/asset-validation.json"
+    },
+    "acceptance": "Exact production-bundle Chrome/Metal native court approach, immediate WASD, full and low-quality platform down/up, persistent six-zone views, daylight and Sources controls pass locally. Matching Pages deployment verification remains separate.",
+    "limits": [
+      "Source nominal gate X\u221250.0 versus reconciled X\u221248.4 remains an unresolved1.6m plan/frame registration difference.",
+      "Three flights,45risers,2m clear width, intermediate landings and pale tread finish remain interpreted.",
+      "P3 approach clears the0.32m body but remains narrow; P1/P2 need global connections from the main court.",
+      "Separate arrivals route and further interior finish remain unfinished; roof flicker is scheduled last."
+    ]
   },
   "wallFixtureAddition": {
     "count": 2,
@@ -538,5 +543,30 @@
     "inventory1935": "Not established; only two photographed foreground fixtures are included.",
     "newLiveLights": 0,
     "surfaceTextureUse": "None; source crops remain review evidence."
+  },
+  "previousMaterialCheckpoint": {
+    "name": "Material and interior checkpoint",
+    "scope": "Current floor/default-Walk assets plus selected B roughness and exactly two radial-refined photo-supported wall fixtures. Existing vault geometry, all six Phase 4 GI/AO atlases and static probes retained.",
+    "pending": "25-degree unique-owner ceiling UV and fresh vault bake remain outside this checkpoint.",
+    "modelTextureAndLightingBytes": 161327896,
+    "acceptance": "Exact candidate runtime/validation/publication receipt pending; no final Phase5 or photographic-fidelity claim.",
+    "packaging": {
+      "models": 12,
+      "gltfErrors": 0,
+      "retainedWarnings": 280,
+      "sharedKtx2Files": 76,
+      "receipt": "../authoring/penn-station-1935/review/phase5/stone-checkpoint/summary.json",
+      "status": "Offline packaging passed; actual browser/publication acceptance pending."
+    }
+  },
+  "accessIllumination": {
+    "bake": "./assets/lighting-concourse-access.json",
+    "denoise": "./assets/lighting-concourse-access-denoise.json",
+    "atlasResolution": 2048,
+    "sourceSamples": 64,
+    "sourceModuleSha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+    "newAtlasOnly": true,
+    "existingRoomMapsAndProbesUnchanged": true,
+    "retainedExitLampSupports": 22
   }
 }

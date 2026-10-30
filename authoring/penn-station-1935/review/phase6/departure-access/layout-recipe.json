@@ -1,0 +1,353 @@
+{
+  "schema": 1,
+  "revision": "phase6-platform-access-recipe-2-indicator-clearance",
+  "status": "Interpreted working reconstruction for geometry/body/visual review; not a surveyed historical stair schedule.",
+  "coordinates": {
+    "horizontal": "World X east-positive, world Z south-positive; Blender plan Y = -world Z.",
+    "vertical": "Main-relative Y is height above original Main floor; runtime world Y = Main-relative Y -4.2672. Existing track/platform elevation registration retained.",
+    "mainWorldY": -4.2672,
+    "platformMainRelativeY": -7.718425,
+    "platformWorldY": -11.985624999999999,
+    "provisionalArrivalExitMainRelativeY": -3.2004
+  },
+  "sources": [
+    {
+      "id": "Gibbs1910",
+      "url": "https://archive.org/details/transactionsofam69amer",
+      "doi": "https://doi.org/10.1061/TACEAT.0002223",
+      "localPdf": "/Users/stavreskimario/Desktop/penn-station-work/next-visual-references/asce69.pdf",
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+      "controls": [
+        "Printed242/PDF426: Main gated departure stairs to platforms; separate narrower Exit concourse below receives arrivals from stairs on either side of platforms.",
+        "Printed243/Fig2/PDF427: nine eastern departure stairheads and wallside strip.",
+        "Printed244/Fig3/PDF428: separate arrival corridor and flanking stairways.",
+        "PlateLXXXIV/PDF439: Fig1 Main/platform stairs; Fig2 platform-to-Exit stair.",
+        "Printed256: ornamental cast iron and steel in stairways and fences; tread finish not specified.",
+        "Printed262: rejected platform-to-Main escalators would conflict with incoming/outgoing separation."
+      ]
+    },
+    {
+      "id": "PRR1910",
+      "title": "Pennsylvania station in New York city",
+      "creator": "Pennsylvania Railroad Company",
+      "date": "1910",
+      "url": "https://archive.org/details/pennsylvaniastat00penn",
+      "pdfUrl": "https://archive.org/download/pennsylvaniastat00penn/pennsylvaniastat00penn.pdf",
+      "localPdf": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/prr1910-ia.pdf",
+      "sha256": "da756824c1b8c997e95473ad16246c49b2019cb9a6a232495f28ee878afaa668",
+      "controls": [
+        "PDF27: gently inclined stairs begin at Main gates and reach individual platforms.",
+        "PDF28: descent ends on designated platform; intermediate auxiliary concourse is for incoming passengers/exit only.",
+        "PDF33 caption Train Platforms\u2014Concourse Above: long straight stairs with intervening landings visible; no certification of exact flight counts or dimensions."
+      ]
+    },
+    {
+      "id": "LOC2016815390",
+      "url": "https://www.loc.gov/item/2016815390/",
+      "digitalId": "det.4a23718",
+      "catalogDate": "between1905and1915",
+      "negativeNumber": "071935",
+      "warning": "Negative071935 is not a1935 date.",
+      "localOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase5-stair-evidence/det-4a23718-original.tif",
+      "sha256": "faf4ebd37b75bd6e9eae61f459440a256352cb9218cebbba4e78e0f58d5799e0",
+      "controls": [
+        "Court-facing paired departure indicators/gates and handrails descending behind toward east ticket-wall side."
+      ]
+    }
+  ],
+  "verifiedTopology": {
+    "departure": "Main court -> court-facing west gate -> eastward stair descent -> platform. Intermediate departure landings do not join the arrival corridor.",
+    "arrival": "Platform -> separate stairs on east/west sides of narrower Exit corridor -> Exit concourse -> outward circulation. Arrival flights are not an obligatory continuation of departure stairs.",
+    "dateLimit": "Opening-era source layout; all details retained unchanged into1935 are not established."
+  },
+  "sourceRegistration": {
+    "fullPlanRaster": "/Users/stavreskimario/Desktop/penn-station-work/phase5-stair-evidence/gibbs-243-full-4000.png",
+    "rasterDimensions": [
+      2462,
+      4000
+    ],
+    "scale": {
+      "approximatelyRoomSpanPixels": 1158,
+      "knownRoomLengthMetres": 95.8088,
+      "metresPerPixel": 0.0827364421416235,
+      "basis": "314ft4 waiting-room extent; local isotropic raster assumption, not a surveyed stair scale."
+    },
+    "eastWallControl": {
+      "plan243FullY": 1543,
+      "worldX": -41.13111,
+      "basis": "Ordinary court-facing masonry face; projecting piers excluded. Current wall/roof registration itself remains interpreted."
+    },
+    "eastwardMap": "X = -41.13111 + (plan243FullY -1543) *95.8088/1158",
+    "departureReadings": {
+      "courtwardSymbolEndsFullY": [
+        1435,
+        1439
+      ],
+      "wallsideSymbolEndsFullY": [
+        1513,
+        1517
+      ],
+      "symbolWidthPixels": [
+        24,
+        27
+      ],
+      "nominalGateX": -50.0,
+      "nominalWallsideApertureEndX": -43.35,
+      "nominalUpperRun": 6.65,
+      "approximateNominalWidthMetres": [
+        1.99,
+        2.23
+      ],
+      "wallsideStripMetres": [
+        1.9,
+        2.7
+      ],
+      "globalTopEndToleranceMetres": 0.75,
+      "qualification": "Manual schematic raster reading, no fabrication schedule. The working gate differs beyond this local interval because current pier/frame registration conflicts."
+    },
+    "arrivalReadings": {
+      "plan244To243ApproximateTranslationPixels": [
+        51,
+        75
+      ],
+      "translationUncertaintyPixels": 8,
+      "arrivalCorridorClearFullYOnPlan244": [
+        1095,
+        1307
+      ],
+      "interpretedWorldXBounds": [
+        -72.0,
+        -54.4
+      ],
+      "qualification": "Approximate independent corridor, ~17.6m wide, WEST of departure gates. Do not use current7.5m-wide deck as primary evidence. Full arrival module awaits further coordinated tracing."
+    }
+  },
+  "workingDepartureCandidate": {
+    "rootAcceptedInterpretation": true,
+    "gateX": -48.4,
+    "upperApertureX": [
+      -48.4,
+      -43.35
+    ],
+    "clearWidth": 2.0,
+    "openingEnvelopeWidth": 2.25,
+    "openingEnvelopeNotFabricationCertified": true,
+    "flights": [
+      {
+        "flight": 1,
+        "startX": -48.4,
+        "endX": -43.35,
+        "startMainRelativeY": 0,
+        "endMainRelativeY": -2.572808333333,
+        "run": 5.05,
+        "risers": 15,
+        "riserHeight": 0.17152055555555556,
+        "clearWidth": 2.0
+      },
+      {
+        "flight": 2,
+        "startX": -42.15,
+        "endX": -37.1,
+        "startMainRelativeY": -2.572808333333,
+        "endMainRelativeY": -5.145616666667,
+        "run": 5.05,
+        "risers": 15,
+        "riserHeight": 0.17152055555555556,
+        "clearWidth": 2.0
+      },
+      {
+        "flight": 3,
+        "startX": -35.9,
+        "endX": -30.85,
+        "startMainRelativeY": -5.145616666667,
+        "endMainRelativeY": -7.718425,
+        "run": 5.05,
+        "risers": 15,
+        "riserHeight": 0.17152055555555556,
+        "clearWidth": 2.0
+      }
+    ],
+    "intermediateLandings": [
+      {
+        "afterFlight": 1,
+        "startX": -43.35,
+        "endX": -42.15,
+        "mainRelativeY": -2.572808333333,
+        "length": 1.2,
+        "clearWidth": 2.0,
+        "joinsExitConcourse": false
+      },
+      {
+        "afterFlight": 2,
+        "startX": -37.1,
+        "endX": -35.9,
+        "mainRelativeY": -5.145616666667,
+        "length": 1.2,
+        "clearWidth": 2.0,
+        "joinsExitConcourse": false
+      }
+    ],
+    "platformLanding": {
+      "startX": -30.85,
+      "endX": -29.65,
+      "mainRelativeY": -7.718425,
+      "length": 1.2,
+      "clearWidth": 2.0
+    },
+    "mainFloorThicknessControl": 0.44,
+    "clearanceAtFirstLandingUnderFlatMainSlab": 2.1328083333333336,
+    "rows": [
+      {
+        "workingPlatform": 1,
+        "centreWorldZ": 68.764528,
+        "centreBlenderY": -68.764528,
+        "upperOpeningZ": [
+          67.639528,
+          69.889528
+        ],
+        "clearTreadZ": [
+          67.764528,
+          69.764528
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 2,
+        "centreWorldZ": 54.791453,
+        "centreBlenderY": -54.791453,
+        "upperOpeningZ": [
+          53.666453,
+          55.916453
+        ],
+        "clearTreadZ": [
+          53.791453,
+          55.791453
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 3,
+        "centreWorldZ": 40.818378,
+        "centreBlenderY": -40.818378,
+        "upperOpeningZ": [
+          39.693378,
+          41.943378
+        ],
+        "clearTreadZ": [
+          39.818378,
+          41.818378
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 4,
+        "centreWorldZ": 27.149065,
+        "centreBlenderY": -27.149065,
+        "upperOpeningZ": [
+          26.024065,
+          28.274065
+        ],
+        "clearTreadZ": [
+          26.149065,
+          28.149065
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 5,
+        "centreWorldZ": 13.32787,
+        "centreBlenderY": -13.32787,
+        "upperOpeningZ": [
+          12.20287,
+          14.45287
+        ],
+        "clearTreadZ": [
+          12.32787,
+          14.32787
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 6,
+        "centreWorldZ": -0.341443,
+        "centreBlenderY": 0.341443,
+        "upperOpeningZ": [
+          -1.466443,
+          0.7835570000000001
+        ],
+        "clearTreadZ": [
+          -1.341443,
+          0.6585570000000001
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 7,
+        "centreWorldZ": -13.555112,
+        "centreBlenderY": 13.555112,
+        "upperOpeningZ": [
+          -14.680112,
+          -12.430112
+        ],
+        "clearTreadZ": [
+          -14.555112,
+          -12.555112
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 8,
+        "centreWorldZ": -27.224425,
+        "centreBlenderY": 27.224425,
+        "upperOpeningZ": [
+          -28.349425,
+          -26.099425
+        ],
+        "clearTreadZ": [
+          -28.224425,
+          -26.224425
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      },
+      {
+        "workingPlatform": 9,
+        "centreWorldZ": -40.32146,
+        "centreBlenderY": 40.32146,
+        "upperOpeningZ": [
+          -41.44646,
+          -39.19646
+        ],
+        "clearTreadZ": [
+          -41.32146,
+          -39.32146
+        ],
+        "mappingStatus": "Existing opening-era platform fit retained; individual original1935 gate assignment not certified."
+      }
+    ],
+    "whyNotSourceNominalGate": "Existing actual pier baseplates occupyX[-50.048698,-48.834301]; nominalX\u221250 stair envelopes intersect rows3/5/7/9. Gate moved east to\u221248.4 to preserve real current structural geometry. This unresolved~1.6m plan/frame discrepancy must remain visible in provenance.",
+    "pierEvidence": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/gate-pier-conflict.json",
+    "implementationInferences": [
+      "Three flights of15 risers, their exact runs and1.2m landings are coordinated construction choices constrained by source orientation, photographs, adopted elevations and physical clearances. They are not copied dimensions.",
+      "Departure landing heights are deliberately independent of provisional arrival Exit level; no source forces them to coincide.",
+      "Dark iron guard/stringer system is supported by original256 text/photos. Pale tread material is an interpretation; do not label it verified limestone or travertine.",
+      "Rows1/2 require restored peripheral Main-floor access beyond the320ft glazed roof; the source plan is not evidence for a solid full-width Main-floor wall there."
+    ],
+    "acceptanceBeforePromotion": [
+      "No actual stair/rail/post/indicator/pier intersections, including low variant.",
+      "Body-radius approaches/turns around piers on rows3/9; the .4343m pier-to-gate longitudinal gap alone does not prove an accessible entrance.",
+      "Continuous support and headroom through all three flights, both intermediate landings and platform landing, walking down/back up every row.",
+      "Restore old holes with correct opaque/prism floor ownership; new voids must meet upper tread without unsupported seams or coplanar finish conflicts.",
+      "Arrival deck/stairs must remain separate; remove unsupported sharedU-dogleg claim and geometry in corrected scope.",
+      "Visual comparison at LOC east-wall angle plus actual platform-level view, with real geometry and no hidden walls.",
+      "Main/Exit/Platform topology and all inferred dimensions explicitly recorded; no1:1 or complete1935 accuracy claim."
+    ],
+    "indicatorX": -48.2,
+    "indicatorPlacementStatus": "Interpreted post/cabinet/card/numeral position shifted0.20m east as a body-clearance correction. Stair gateX, all flights, apertures, landings and infills retain V3 coordinates."
+  },
+  "remainingDecisions": [
+    "Validate actual gate approaches before fixingX\u221248.4; a farther-east highend may be necessary and must be documented as a further reconstruction adjustment.",
+    "Complete source-registered arrival Exit corridor/two-side stairs in a separate module; do not publish inferred partial arrivals as a complete48-stair inventory.",
+    "Reconcile current structural grid and plan registration in future if a dimensioned stair drawing becomes available."
+  ],
+  "noCanonicalChanges": true
+}

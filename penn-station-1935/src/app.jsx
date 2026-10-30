@@ -15,6 +15,7 @@ import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
+import { findFloorJointSupport } from './floor-contact.mjs';
 import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
@@ -26,7 +27,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '5-stone-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '6-access-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -48,6 +49,7 @@ const update = patch => { state = { ...state, ...patch }; [...listeners].forEach
 const subscribe = fn => { listeners.add(fn); return () => listeners.delete(fn); };
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let debugCamera;
+let commitWalkView;
 let debugRenderer;
 let debugBuilding;
 let debugNavigation;
@@ -446,16 +448,29 @@ function Navigation({ current, model }) {
     ray.current.firstHitOnly = true;
     return () => { collision.current = null; debugNavigation = null; };
   }, [model]);
-  useLayoutEffect(() => {
-    appliedPose.current = '';
-    camera.position.fromArray(current.mode === 'walk' ? config.walk : config.eye);
-    const look = new THREE.Vector3().fromArray(current.mode === 'walk' ? config.look : config.target);
-    camera.lookAt(look); camera.fov = current.fov; camera.updateProjectionMatrix();
+  const applyCameraPose = next => {
+    const preset = { ...views[next.view], ...(framing[next.framing] || {}) };
+    camera.position.fromArray(next.mode === 'walk' ? preset.walk : preset.eye);
+    const look = new THREE.Vector3().fromArray(next.mode === 'walk' ? preset.look : preset.target);
+    camera.lookAt(look); camera.fov = next.fov; camera.updateProjectionMatrix();
     const euler = new THREE.Euler().setFromQuaternion(camera.quaternion, 'YXZ'); yaw.current = euler.y; pitch.current = euler.x;
     velocity.current.set(0, 0, 0); keys.current.clear(); heldPointers.current.clear();
     feet.current = camera.position.y - 1.68;
     if (orbit.current) { orbit.current.target.copy(look); orbit.current.update(); }
+    appliedPose.current = next.mode === 'walk' ? `${next.pose}:${next.mode}:${next.revision}` : '';
     debugCamera = camera; invalidate();
+  };
+  useLayoutEffect(() => {
+    const commit = next => { if (next.mode === 'walk') applyCameraPose(next); };
+    commitWalkView = commit;
+    return () => { if (commitWalkView === commit) commitWalkView = undefined; };
+  }, [camera, invalidate]);
+  useLayoutEffect(() => {
+    // The DOM command can finish this pose before Fiber's separate renderer
+    // commits its props. Preserve any key pressed after that command.
+    const token = `${current.pose}:${current.mode}:${current.revision}`;
+    if (current.mode === 'walk' && appliedPose.current === token) return;
+    applyCameraPose(current);
   }, [current.pose, current.mode, current.revision]);
   useEffect(() => { camera.fov = current.fov; camera.updateProjectionMatrix(); invalidate(); }, [current.fov]);
   useEffect(() => {
@@ -589,13 +604,21 @@ function Navigation({ current, model }) {
           return hit.point.y;
         }
       }
-      const contact = findStairBevelSupport(point.toArray(), floor, supportHits.map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y })), modelManifest.stairSupportFlights || [], neighbour => {
+      const probeSupport = neighbour => {
         const neighbourOrigin = new THREE.Vector3(...neighbour); neighbourOrigin.y = floor + .25;
         return hitsAt(neighbourOrigin, down, .65).map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y }));
-      });
+      };
+      const contact = findStairBevelSupport(point.toArray(), floor, supportHits.map(hit => ({ height: hit.point.y, normalY: hit.face.normal.clone().applyNormalMatrix(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).y })), modelManifest.stairSupportFlights || [], probeSupport);
       if (contact) {
         if (debugNavigation) { debugNavigation.stairBevelContacts = (debugNavigation.stairBevelContacts || 0) + 1; debugNavigation.lastStairBevelContact = contact; }
         return contact.height;
+      }
+      // A finite foot can bridge a floating-point seam only when actual,
+      // near-coplanar surfaces exist within 0.1 mm on both sides of its centre.
+      const joint = findFloorJointSupport(point.toArray(), floor, probeSupport);
+      if (joint) {
+        if (debugNavigation) { debugNavigation.floorJointContacts = (debugNavigation.floorJointContacts || 0) + 1; debugNavigation.lastFloorJointContact = joint; }
+        return joint.height;
       }
       // The street surface belongs to the separately instanced neighbourhood.
       // Analytic navigation uses the same authored street/sidewalk datum.
@@ -628,7 +651,10 @@ function Navigation({ current, model }) {
     }
     camera.position.y = THREE.MathUtils.damp(camera.position.y, feet.current + 1.68, 18, dt);
     if (debugNavigation) debugNavigation.floorWorld = feet.current;
-    const zone = camera.position.x > 18 ? 'exterior' : camera.position.x < -38 ? 'concourse' : 'waiting';
+    // Departure stairs continue east beneath the adjoining passenger rooms.
+    // Their lower levels belong to railway circulation even beyond the hall's
+    // horizontal boundary; walking there must not select the waiting room.
+    const zone = feet.current < MAIN_FLOOR - .5 ? 'concourse' : camera.position.x > 18 ? 'exterior' : camera.position.x < -38 ? 'concourse' : 'waiting';
     if (zone !== state.view) update({ view: zone });
     invalidate();
   });
@@ -697,6 +723,9 @@ function stopTour() { clearTimeout(tourTimer); if (state.tour) update({ tour: fa
 function go(view, instant = true) {
   if (!views[view]) return;
   update({ view, framing: '', entered: true, instant, pose: state.pose + 1 });
+  // Fiber has its own reconciler. Commit its imperative walking camera in the
+  // same user command so immediate WASD cannot act on the previous viewpoint.
+  commitWalkView?.(state);
   if ($('#comparison')) $('#comparison').hidden = true;
   document.querySelectorAll('button[data-command="compare"]').forEach(button => button.setAttribute('aria-pressed', 'false'));
 }

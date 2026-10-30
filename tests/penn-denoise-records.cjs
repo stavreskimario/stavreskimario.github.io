@@ -148,6 +148,9 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
       assetsDirectory: scratch, illumination, fullDimensions: phase5VaultPolicy.fullDimensions }), /atlas dimension/);
     report.checks.push('Only the exact Phase5 vault source directory is accepted, with linear transfer and an 8K full atlas; other zones, traversal/alias paths and a 6K derivative are rejected');
 
+    await require('./penn-access-denoise.cjs')({ assets, illumination,
+      repositoryDirectory: legacySources, sampleRecord: waiting, report });
+
     for (const mutation of [
       value => { value.constant018Test.after = .19; },
       value => { value.constant018Test.maximumError = .001; },

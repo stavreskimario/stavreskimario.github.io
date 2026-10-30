@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "scope": "Independent test-side Meshopt/hierarchy decoder plus actual index streams, unchanged payload checks and22Exit-underside rays. This does not certify new stair navigation or historical accuracy.",
+  "inputSha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+  "outputSha256": "972619fcc8da7ad7594bb9b10e65fff8a32c2b1f21295dd66053a6a10a76d8a3",
+  "unchangedPrefixBytes": 10997480,
+  "unchangedPrefixSha256": "ec64574f2d7fff70c7a167765177dda8d3e0674045f02909326a66593a94b6ef",
+  "removedTriangles": 75916,
+  "retainedAffectedMaterialTriangles": 663860,
+  "retainedTriangleGeometrySha256": "62d8c467f75441cb279d9810cad8b642d265fbb3009a34c69135660b1390a982",
+  "retainedIndicesChecked": 1991580,
+  "unaffectedPrimitivesExact": 11,
+  "oldFloorTriangles": 1812,
+  "newFloorTriangles": 660,
+  "lampChecks": [
+    {
+      "platform": 1,
+      "x": -54.5,
+      "z": 68.76452842937418,
+      "flangeTop": -3.5004,
+      "before": -3.500468364883744,
+      "after": -3.500468364883744,
+      "delta": 0
+    },
+    {
+      "platform": 1,
+      "x": -48.403999999999996,
+      "z": 68.76452842937418,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 2,
+      "x": -54.5,
+      "z": 54.7914529709588,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 2,
+      "x": -48.403999999999996,
+      "z": 54.7914529709588,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 3,
+      "x": -54.5,
+      "z": 40.81837751254342,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 3,
+      "x": -48.403999999999996,
+      "z": 40.81837751254342,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 4,
+      "x": -54.5,
+      "z": 27.149064564093592,
+      "flangeTop": -3.5004,
+      "before": -3.500468364883744,
+      "after": -3.500468364883744,
+      "delta": 0
+    },
+    {
+      "platform": 4,
+      "x": -48.403999999999996,
+      "z": 27.149064564093592,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 5,
+      "x": -54.5,
+      "z": 13.327870360660988,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 5,
+      "x": -48.403999999999996,
+      "z": 13.327870360660988,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 6,
+      "x": -54.5,
+      "z": -0.34144258778884096,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 6,
+      "x": -48.403999999999996,
+      "z": -0.34144258778884096,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 7,
+      "x": -54.5,
+      "z": -13.555111771290342,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 7,
+      "x": -48.403999999999996,
+      "z": -13.555111771290342,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 8,
+      "x": -54.5,
+      "z": -27.22442471974017,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 8,
+      "x": -48.403999999999996,
+      "z": -27.22442471974017,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 9,
+      "x": -54.5,
+      "z": -40.32145955066416,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 9,
+      "x": -48.403999999999996,
+      "z": -40.32145955066416,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 10,
+      "x": -54.5,
+      "z": -52.097703634510154,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 10,
+      "x": -48.403999999999996,
+      "z": -52.097703634510154,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 11,
+      "x": -54.5,
+      "z": -69.59929485993464,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    },
+    {
+      "platform": 11,
+      "x": -48.403999999999996,
+      "z": -69.59929485993464,
+      "flangeTop": -3.5004,
+      "before": -3.5004683648837442,
+      "after": -3.5004683648837442,
+      "delta": 0
+    }
+  ],
+  "maximumLampSupportChange": 0,
+  "validator": {
+    "errors": 0,
+    "warnings": 34
+  }
+}

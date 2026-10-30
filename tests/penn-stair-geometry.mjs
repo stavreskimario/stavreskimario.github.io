@@ -9,8 +9,18 @@ import { decodedTriangles } from './helpers/penn-decoded-geometry.mjs';
 const repo = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const root = process.env.PENN_GEOMETRY_ASSETS || path.join(repo, 'penn-station-1935/assets');
 const reportPath = process.env.PENN_STAIR_GEOMETRY_REPORT;
-const head = -42.2563;
+const legacyHead = -42.2563;
 const centres = [68.764528, 54.791453, 40.818378, 27.149065, 13.327870, -.341443, -13.555112, -27.224425, -40.321460];
+let manifest;
+try { manifest = JSON.parse(await readFile(path.join(root, 'scene-manifest.json'), 'utf8')); }
+catch (error) { if (error.code !== 'ENOENT') throw error; }
+const heads = manifest?.departureAccess
+  ? manifest.accessStairs.map(stair => {
+      assert(stair.mainFlight?.start && stair.mainFlight?.end, 'Departure head requires its authored first flight');
+      return { x: stair.mainFlight.start[0], z: stair.centerZ, direction: Math.sign(stair.mainFlight.end[0] - stair.mainFlight.start[0]) };
+    })
+  : centres.map(z => ({ x: legacyHead, z, direction: 1 })); // Retain the original legacy seam-probe interval.
+assert.equal(heads.length, 9); assert(heads.every(head => Math.abs(head.direction) === 1));
 const report = { created: new Date().toISOString(), input: root, variants: [], limitation: 'Scoped main-floor-to-first-tread support check. Complete multi-level walking and collision checks are separate.' };
 async function modelFor(name) {
   try { return parseGlb(await readFile(path.join(root, name))); }
@@ -30,20 +40,21 @@ function triangleSupport(triangles, x, z) {
 for (const suffix of ['', '-low']) {
   const name = `model-concourse${suffix}.glb`; const model = await modelFor(name);
   const triangles = [];
-  const materials = new Set(['ConcourseOpaqueCirculationConcrete', 'PublicFloorMarble', 'Travertine']);
+  const materials = new Set(['ConcourseOpaqueCirculationConcrete', 'PublicFloorMarble', 'Travertine', 'ConcourseOpaqueCirculationConcreteAccessInfill', 'PublicFloorMarbleAccessInfill', 'TravertineDepartureStairStone']);
   for (const { triangle } of decodedTriangles(model, materials)) {
     if (triangle.some(v => v[1] < -.08 || v[1] > .03)) continue;
-    if (Math.max(...triangle.map(v => v[0])) < head - .1 || Math.min(...triangle.map(v => v[0])) > head + .2) continue;
+    if (!heads.some(head => Math.max(...triangle.map(v => v[0])) >= head.x - .25 && Math.min(...triangle.map(v => v[0])) <= head.x + .25)) continue;
     const [a, b, c] = triangle;
     const up = (b[2] - a[2]) * (c[0] - a[0]) - (b[0] - a[0]) * (c[2] - a[2]);
     if (up <= 1e-9) continue;
     triangles.push(triangle);
   }
   const variant = { name, sampledTriangles: triangles.length, tested: 0, unsupported: [], minimumSupportedHeight: Infinity, stairs: [] };
-  for (const z of centres) {
+  for (const head of heads) {
+    const z = head.z;
     let checks = 0; let failures = 0;
     for (const lane of [-.8, 0, .8]) for (let i = 0; i <= 50; i++) {
-      const x = head - .05 + i * .005;
+      const x = head.x + head.direction * (-.05 + i * .005);
       const height = triangleSupport(triangles, x, z + lane);
       variant.tested++; checks++;
       if (!Number.isFinite(height) || height < -.05) {
@@ -56,4 +67,4 @@ for (const suffix of ['', '-low']) {
 }
 if (reportPath) { await mkdir(path.dirname(path.resolve(reportPath)), { recursive: true }); await writeFile(reportPath, JSON.stringify(report, null, 2) + '\n'); }
 for (const variant of report.variants) assert.equal(variant.unsupported.length, 0, `${variant.name}: ${variant.unsupported.length}/${variant.tested} unsupported points at the stair heads`);
-console.log(`PASS ${report.variants.reduce((n, item) => n + item.tested, 0)} triangle-support samples across nine stair heads, desktop and mobile.`);
+console.log(`PASS ${report.variants.reduce((n, item) => n + item.tested, 0)} triangle-support samples across nine stair heads, full and fallback assets.`);
