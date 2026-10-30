@@ -99,3 +99,5 @@ module.exports = async function accessControls({assets, illumination, repository
   report.checks.push('Access source resolution cannot exceed2048; undersized full/low derivatives and changed same-size source pixels are rejected');
   report.accessControl={synthetic:true,rawSourceSha256:hash(rawHdr),retainedHdrSha256:hash(retained),bakeReportSha256:hash(bakeBytes),validatedAtlas:atlas};
 };
+
+module.exports.constantHdr = constantHdr;

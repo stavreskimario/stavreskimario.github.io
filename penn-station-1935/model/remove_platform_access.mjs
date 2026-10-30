@@ -14,14 +14,15 @@ const requireTools = createRequire(path.join(process.env.PENN_TOOLS || '/private
 const {Matrix4, Quaternion, Vector3, BufferGeometry, BufferAttribute} = requireTools('three');
 const {MeshBVH} = requireTools('three-mesh-bvh');
 const allowed = new Set(['Travertine', 'PublicFloorMarble', 'AgedBronze', 'PaintedStructuralIron', 'ClockFace']);
+const circulationAllowed = new Set(['BedfordLimestoneConcourse', 'PaintedStructuralIron']);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sizes = {5120:1,5121:1,5122:2,5123:2,5125:4,5126:4};
 const methods = {5120:'getInt8',5121:'getUint8',5122:'getInt16',5123:'getUint16',5125:'getUint32',5126:'getFloat32'};
 const widths = {SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16};
-function materialName(material) {
+function materialName(material, permitted=allowed) {
   if (material?.name?.startsWith('REMOVAL_')) {
     const original = material.extras?.original_material_name;
-    assert(allowed.has(original) && material.name === `REMOVAL_${original}`, 'Removal material must declare its exact original name');
+    assert(permitted.has(original) && material.name === `REMOVAL_${original}`, 'Removal material must declare its exact original name');
     return original;
   }
   return material?.name;
@@ -78,13 +79,13 @@ function activeNodes(json) {
   return nodes;
 }
 
-function* primitives(model, materialFilter) {
+function* primitives(model, materialFilter, permitted=allowed) {
   const read = readers(model);
   for (const {index:nodeIndex, node, matrix} of activeNodes(model.json)) {
     if (node.mesh === undefined) continue;
     const mesh = model.json.meshes[node.mesh]; assert(mesh, 'Missing mesh');
     for (const [primitiveIndex, primitive] of mesh.primitives.entries()) {
-      const material = materialName(model.json.materials?.[primitive.material]);
+      const material = materialName(model.json.materials?.[primitive.material],permitted);
       if (materialFilter && !materialFilter.has(material)) continue;
       assert(node.skin === undefined && !node.extensions?.EXT_mesh_gpu_instancing, 'Owned batches must not be skinned or instanced');
       assert.equal(primitive.mode ?? 4, 4, 'Owned surfaces must be triangle lists');
@@ -139,9 +140,9 @@ function surface(triangles) {
     }
   };
 }
-function groupedSurfaces(model, filter, offsetY = 0) {
+function groupedSurfaces(model, filter, offsetY = 0, permitted=allowed) {
   const groups = new Map();
-  for (const p of primitives(model, filter)) {
+  for (const p of primitives(model, filter,permitted)) {
     if (!groups.has(p.material)) groups.set(p.material, []);
     const list = groups.get(p.material);
     for (let i = 0; i < p.count; i += 3) list.push(p.triangle(i).map(v => v.add(new Vector3(0, offsetY, 0))));
@@ -171,32 +172,34 @@ function ranges(numbers) {
   }
   return result;
 }
-function validateRaw(model, label, owned) {
+function validateRaw(model, label, owned, permitted=allowed) {
   assert.equal(model.json.buffers.length, 1, `${label} must be raw embedded geometry`);
   for (const key of ['images','textures','skins','animations','cameras']) assert.equal(model.json[key]?.length || 0, 0, `${label} must not introduce ${key}`);
   assert(!model.json.extensionsUsed?.includes('EXT_meshopt_compression'), `${label} must be the original raw surface authority`);
   assert(!model.json.extensions, `${label} must not contain live lights/root extensions`);
-  if (owned) for (const p of primitives(model)) assert(allowed.has(p.material), `Unreviewed old-access material: ${p.material}`);
+  if (owned) for (const p of primitives(model,undefined,permitted)) assert(permitted.has(p.material), `Unreviewed old-access material: ${p.material}`);
 }
 
-export function removePlatformAccess(base, components, protectedModel, {tolerance=.004, normalCosine=.90, sourceOffsetY=0, minimumCoverage=.98} = {}) {
+export function removePlatformAccess(base, components, protectedModel, {tolerance=.004, normalCosine=.90, sourceOffsetY=0, minimumCoverage=.98, scope='departure-access'} = {}) {
+  assert(['departure-access','concourse-circulation'].includes(scope),'Unreviewed component removal scope');
+  const permitted=scope==='concourse-circulation'?circulationAllowed:allowed;
   assert(tolerance > 0 && tolerance <= .006, 'Removal tolerance must be positive and at most6mm');
   assert(normalCosine >= .85 && normalCosine <= 1, 'Normals must preserve oriented surface agreement');
   assert(minimumCoverage >= .98 && minimumCoverage <= 1, 'Owned-surface coverage may not be weakened below98%');
   assert(Number.isFinite(sourceOffsetY), 'Source height offset must be finite');
   assert(base.json.extensionsUsed?.includes('EXT_meshopt_compression') && base.json.extensionsRequired?.includes('EXT_meshopt_compression'), 'Input must already require Meshopt decoding');
-  validateRaw(components, 'Owned component export', true);
-  validateRaw(protectedModel, 'Retained-neighbour export', false);
-  const owned = groupedSurfaces(components, allowed, sourceOffsetY);
+  validateRaw(components, 'Owned component export', true,permitted);
+  validateRaw(protectedModel, 'Retained-neighbour export', false,permitted);
+  const owned = groupedSurfaces(components, permitted, sourceOffsetY,permitted);
   assert(owned.size, 'No owned surfaces were exported');
   // Other materials cannot be selected for removal at all. Avoid expanding
   // millions of linked glass-prism instances into an irrelevant protection BVH.
-  const protectedSurfaces = groupedSurfaces(protectedModel, new Set(owned.keys()), sourceOffsetY);
+  const protectedSurfaces = groupedSurfaces(protectedModel, new Set(owned.keys()), sourceOffsetY,permitted);
   const json = structuredClone(base.json), plans = new Map(), meshReferenceCounts = new Map();
   for (const node of base.json.nodes) if (node.mesh !== undefined) meshReferenceCounts.set(node.mesh, (meshReferenceCounts.get(node.mesh)||0)+1);
   const materials = Object.fromEntries([...owned].map(([name, value]) => [name, {sourceTriangles:value.triangles.length, examined:0, removed:0, protectedAmbiguous:0, quantizedSliversRemoved:0, quantizedSliverArea:0, maximumSliverAltitude:0, orientationOnlyRetained:0, orientationOnlyArea:0, maximumOrientationOnlyAltitude:0, maximumRemovalResidual:0, sourceCentroidsCovered:0, sourceCentroidsProtected:0}]));
   const removedGeometry = new Map(), protectedKept = new Map();
-  for (const p of primitives(base, new Set(owned.keys()))) {
+  for (const p of primitives(base, new Set(owned.keys()),permitted)) {
     assert.equal(meshReferenceCounts.get(p.mesh), 1, 'Shared meshes need per-instance ownership review, including inactive nodes');
     const keep = [], removed = [], ambiguous = [], stats = materials[p.material];
     for (let offset = 0; offset < p.count; offset += 3) {
@@ -298,14 +301,14 @@ export function removePlatformAccess(base, components, protectedModel, {toleranc
     const expected=structuredClone(base.json.nodes[i]); if(detachedNodes.some(n=>n.node===i)) delete expected.mesh;
     assert.deepEqual(json.nodes[i],expected,'Unrelated node payloads must stay exact');
   }
-  const report = {scope:'Owned old-access surfaces only; protected coincident faces retained. Original attributes, materials, transforms and BIN prefix preserved.',toleranceMetres:tolerance,normalCosine,minimumCoverage,sourceOffsetY,materials,changes,detachedNodes,unchangedBinaryPrefixBytes:base.binary.length,unchangedBinaryPrefixSha256:sha(base.binary),removedTriangles:changes.reduce((n,c)=>n+c.removedTriangles,0),protectedAmbiguousTriangles:Object.values(materials).reduce((n,s)=>n+s.protectedAmbiguous,0),indexEncoding:'EXT_meshopt_compression INDICES (sequence-preserving)',appendedVirtualBuffer:fallbackBuffer,decodedIndexBytes,appendedIndexBytes:size-base.binary.length};
+  const report = {scope:'Owned reviewed-component surfaces only; protected coincident faces retained. Original attributes, materials, transforms and BIN prefix preserved.',removalScope:scope,toleranceMetres:tolerance,normalCosine,minimumCoverage,sourceOffsetY,materials,changes,detachedNodes,unchangedBinaryPrefixBytes:base.binary.length,unchangedBinaryPrefixSha256:sha(base.binary),removedTriangles:changes.reduce((n,c)=>n+c.removedTriangles,0),protectedAmbiguousTriangles:Object.values(materials).reduce((n,s)=>n+s.protectedAmbiguous,0),indexEncoding:'EXT_meshopt_compression INDICES (sequence-preserving)',appendedVirtualBuffer:fallbackBuffer,decodedIndexBytes,appendedIndexBytes:size-base.binary.length};
   return {json,binary,report};
 }
 
 async function main() {
   const args = {};
   for (let i=2;i<process.argv.length;i+=2) {
-    assert(['--input','--components','--protected','--out','--report','--tolerance','--source-y','--minimum-coverage'].includes(process.argv[i]) && process.argv[i+1], 'Expected named removal arguments');
+    assert(['--input','--components','--protected','--out','--report','--tolerance','--source-y','--minimum-coverage','--scope'].includes(process.argv[i]) && process.argv[i+1], 'Expected named removal arguments');
     args[process.argv[i].slice(2)] = process.argv[i+1];
   }
   for (const key of ['input','components','protected','out','report']) assert(args[key], `Missing${key}`);
@@ -313,7 +316,7 @@ async function main() {
   for (const key of ['input','components','protected','out']) assert.notEqual(path.resolve(args[key]),path.resolve(args.report),'Report must not overwrite geometry inputs or output');
   const [input,components,protectedBytes] = await Promise.all([readFile(args.input),readFile(args.components),readFile(args.protected)]);
   const result = removePlatformAccess(parseGlb(input),parseGlb(components),parseGlb(protectedBytes),{
-    tolerance:Number(args.tolerance ?? .004),sourceOffsetY:Number(args['source-y'] ?? 0),minimumCoverage:Number(args['minimum-coverage'] ?? .98)});
+    tolerance:Number(args.tolerance ?? .004),sourceOffsetY:Number(args['source-y'] ?? 0),minimumCoverage:Number(args['minimum-coverage'] ?? .98),scope:args.scope??'departure-access'});
   const bytes = writeGlb(result.json,result.binary), output = args.out.endsWith('.gz') ? gzipSync(bytes,{level:9}) : bytes;
   const report = {...result.report,inputSha256:sha(input),componentsSha256:sha(components),protectedSha256:sha(protectedBytes),decodedOutputSha256:sha(bytes),outputSha256:sha(output)};
   await mkdir(path.dirname(path.resolve(args.out)),{recursive:true}); await mkdir(path.dirname(path.resolve(args.report)),{recursive:true});

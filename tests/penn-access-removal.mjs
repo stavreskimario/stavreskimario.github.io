@@ -88,6 +88,17 @@ assert.equal(result.report.appendedVirtualBuffer,base.json.buffers.length);
 for(const view of result.json.bufferViews.slice(base.json.bufferViews.length)){assert.equal(view.buffer,base.json.buffers.length);assert.equal(view.extensions.EXT_meshopt_compression.mode,'INDICES');assert.equal(view.extensions.EXT_meshopt_compression.buffer,0);}
 assert.equal(mixedResult.report.appendedVirtualBuffer,null,'No empty fallback buffer when every owned batch detaches');
 controls.push('sequence-preserving compressed index views append one fallback buffer and preserve every old virtual buffer');
+const wallBase=make([{name:'BedfordLimestoneConcourse',triangles:[a,b]},{name:'PaintedStructuralIron',triangles:[pier]}],{compressed:true});
+const wallOwned=make([{name:'BedfordLimestoneConcourse',triangles:[a]}],{owned:true}),wallProtection=make([{name:'BedfordLimestoneConcourse',triangles:[b]},{name:'PaintedStructuralIron',triangles:[pier]}]);
+rejects('departure scope cannot acquire wall-removal ownership',()=>removePlatformAccess(wallBase,wallOwned,wallProtection),/Removal material/);
+const wallResult=removePlatformAccess(wallBase,wallOwned,wallProtection,{scope:'concourse-circulation',minimumCoverage:1});
+assert.equal(wallResult.report.removedTriangles,1);assert.equal(wallResult.report.removalScope,'concourse-circulation');
+assert(wallResult.binary.subarray(0,wallBase.binary.length).equals(wallBase.binary));
+assert.deepEqual([...decodedTriangles(wallResult)].map(v=>[v.material,v.triangle]),[['BedfordLimestoneConcourse',b],['PaintedStructuralIron',pier]]);
+assert.deepEqual(wallResult.json.materials,wallBase.json.materials);
+controls.push('explicit circulation scope removes only selected wall faces and retains unrelated pier, wall, original BIN and material bindings');
+rejects('circulation scope cannot acquire legacy furniture-removal ownership',()=>removePlatformAccess(base,owned,protection,{scope:'concourse-circulation'}),/Removal material/);
+rejects('unreviewed removal scope rejected',()=>removePlatformAccess(wallBase,wallOwned,wallProtection,{scope:'all'}),/Unreviewed/);
 const report={status:'passed',controls,fixtureBaseSha256:sha(writeGlb(base.json,base.binary)),outputSha256:sha(writeGlb(result.json,result.binary)),removal:result.report};await writeFile(out+'/controls.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,controls:controls.length,fixtureBaseSha256:report.fixtureBaseSha256,outputSha256:report.outputSha256}));
 
 } finally {
