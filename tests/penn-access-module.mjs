@@ -61,4 +61,13 @@ await assert.rejects(appendAccessModule(input,litPath,path.join(out,'unsafe-arti
 const missing=structuredClone(lit);delete missing.meshes[0].primitives[0].attributes.TEXCOORD_0;
 await writeFile(path.join(out,'missing-uv.glb'),writeGlb(missing,litBinary));
 await assert.rejects(appendAccessModule(input,path.join(out,'missing-uv.glb'),path.join(out,'missing-uv-output.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'concourse-circulation'}),/actual lighting UV channel/);
+const arrivals=structuredClone(lit);arrivals.materials[0].extras.sky_illumination='lighting-concourse-arrivals-sky.webp';
+for(const suffix of ['sky','sky-low'])await copyFile(path.join(out,`lighting-concourse-circulation-${suffix}.webp`),path.join(out,`lighting-concourse-arrivals-${suffix}.webp`));
+const arrivalsPath=path.join(out,'arrivals.glb'),arrivalsOutput=path.join(out,'arrivals-output.glb.gz');
+await writeFile(arrivalsPath,writeGlb(arrivals,litBinary));
+await appendAccessModule(input,arrivalsPath,arrivalsOutput,report,{allowedNewMaterials:[material],lightingArtifact:'concourse-arrivals'});
+const arrivalsResult=parseGlb(await readFile(arrivalsOutput));
+assert(arrivalsResult.binary.subarray(0,base.binary.length).equals(base.binary));
+assert.equal(arrivalsResult.json.materials.at(-1).extras.sky_illumination,'lighting-concourse-arrivals-sky.webp');
+await assert.rejects(appendAccessModule(input,arrivalsPath,path.join(out,'arrivals-cannot-use-circulation.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'concourse-circulation'}),/selected artifact/);
 console.log('PASS independent appended geometry and isolated circulation atlas; exact retained payload and reject unsafe materials, overwrite, lights, namespaces and missing illumination UVs');
