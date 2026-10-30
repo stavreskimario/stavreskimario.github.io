@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "zone": "waiting-room-vault",
+  "source": "lighting-waiting-room-vault-sky.hdr",
+  "sourceSha256": "084078b1e4743b144ff3416e6f2a74fd94d5db6c3fd8812d86ba8c354f6dcd2b",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,object-normal+unit-white-image-albedo,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.014110005460679531,
+    "minimum": 0.0,
+    "maximum": 0.158203125
+  },
+  "originalLinear": {
+    "mean": 0.014110005460679531,
+    "minimum": 0.0,
+    "maximum": 0.158203125
+  },
+  "denoisedLinear": {
+    "mean": 0.014071851968765259,
+    "minimum": 0.0,
+    "maximum": 0.1503836214542389
+  },
+  "relativeMeanChange": -0.0027040026327839195,
+  "normalGuide": {
+    "file": "vault-normal-guide.npy",
+    "sha256": "d99ff3db23809f655263a2df3188e2e525521cdc7febb53fdd2a741ba7e6cc46",
+    "shape": [
+      8192,
+      8192,
+      3
+    ],
+    "encoding": "Signed unit object-space vectors; empty atlas background zero; bottom-to-top Blender pixel order",
+    "albedo": "Full-resolution unit-white image buffer, appropriate for outgoing unit-albedo diffuse GI; avoids Blender4.3 single-element auxiliary-input bypass"
+  },
+  "guideSensitivityControl": {
+    "sameColourSha256": "815f4a0fa321bef616300700cb25142dc7f32446c9c7f66b2804b0852868af4b",
+    "sameUnitWhiteImageAlbedo": true,
+    "albedoIsSingleElement": false,
+    "normalGuideChangedOnly": true,
+    "maximumOutputDifference": 0.033874139189720154,
+    "meanOutputDifference": 0.0002740618074312806,
+    "flatOutputSha256": "ce26cdb1d8f7a632de5da4a18efd85442e8166d6d603e98f05d5db0202e28033",
+    "changedOutputSha256": "cd125de86483a65ca0db67968a6dbf92fdab718319cc2f5996f62727765025ba",
+    "normalInputLinked": true,
+    "albedoInputLinked": true,
+    "albedoNodeType": "CompositorNodeImage",
+    "prefilter": "NONE",
+    "passed": true
+  },
+  "syntheticEdgeControl": {
+    "columns120to135": [
+      0.08986802667883846,
+      0.08988759664741035,
+      0.08991958426001172,
+      0.09020832599101898,
+      0.08989165013190359,
+      0.08991614757299733,
+      0.08986909330512087,
+      0.09008060518923837,
+      0.2699167866570254,
+      0.2698374769339959,
+      0.26959269094125676,
+      0.2699220711365342,
+      0.26998450288859505,
+      0.2699567750096321,
+      0.26990058719335747,
+      0.2698664514270301
+    ],
+    "transitionWidthPixels": 0,
+    "leftAdjacentError": 8.060518923837245e-05,
+    "rightAdjacentError": 8.321334297461958e-05,
+    "wholeImageMaximumError": 0.028721153736114502,
+    "interiorRegion": "Rows16:240 and columns16:96/160:240; outer image-frame padding reported separately",
+    "qualification": "Synthetic step with a matching guide-normal discontinuity; actual atlas chart/gutter and mapped edge checks remain required"
+  },
+  "nonuniformControl": {
+    "left": 0.09,
+    "right": 0.27,
+    "relativeMeanChange": -0.0007456401963586989,
+    "maximumInteriorError": 0.0005794763565063477,
+    "wholeImageMaximumError": 0.028721153736114502,
+    "interiorRegion": "Rows16:240, left columns16:96/right160:240; outer image-frame padding reported separately",
+    "passed": true
+  },
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-waiting-room-vault-sky-denoised-linear.hdr",
+    "sha256": "f2f6b3f5de262b165da69688987af34ff406709007e19c0da3c64790739d9695",
+    "decodedLinear": {
+      "mean": 0.01403092686086893,
+      "minimum": 0.0,
+      "maximum": 0.1494140625
+    },
+    "meanQuantizationError": 4.093499228474684e-05
+  },
+  "full": {
+    "png": "lighting-waiting-room-vault-sky.png",
+    "webp": "lighting-waiting-room-vault-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 8192,
+    "height": 8192
+  },
+  "low": {
+    "png": "lighting-waiting-room-vault-sky-low.png",
+    "webp": "lighting-waiting-room-vault-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Normal-guided atlas denoising retains source coffer edge cues; guide/chart-boundary filtering still requires mapped browser review. No geometry, AO, UV or source illumination bake is changed. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 59.976622666003095
+}

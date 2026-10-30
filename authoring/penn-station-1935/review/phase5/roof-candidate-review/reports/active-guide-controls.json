@@ -1,0 +1,46 @@
+{
+  "constant018MaximumError": 0.0,
+  "nonuniformRelativeMeanChange": -0.0007456401963586989,
+  "nonuniformInteriorError": 0.0005794763565063477,
+  "edge": {
+    "columns120to135": [
+      0.08986802667883846,
+      0.08988759664741035,
+      0.08991958426001172,
+      0.09020832599101898,
+      0.08989165013190359,
+      0.08991614757299733,
+      0.08986909330512087,
+      0.09008060518923837,
+      0.2699167866570254,
+      0.2698374769339959,
+      0.26959269094125676,
+      0.2699220711365342,
+      0.26998450288859505,
+      0.2699567750096321,
+      0.26990058719335747,
+      0.2698664514270301
+    ],
+    "transitionWidthPixels": 0,
+    "leftAdjacentError": 8.060518923837245e-05,
+    "rightAdjacentError": 8.321334297461958e-05,
+    "wholeImageMaximumError": 0.028721153736114502,
+    "interiorRegion": "Rows16:240 and columns16:96/160:240; outer image-frame padding reported separately",
+    "qualification": "Synthetic step with a matching guide-normal discontinuity; actual atlas chart/gutter and mapped edge checks remain required"
+  },
+  "guideSensitivity": {
+    "sameColourSha256": "815f4a0fa321bef616300700cb25142dc7f32446c9c7f66b2804b0852868af4b",
+    "sameUnitWhiteImageAlbedo": true,
+    "albedoIsSingleElement": false,
+    "normalGuideChangedOnly": true,
+    "maximumOutputDifference": 0.033874139189720154,
+    "meanOutputDifference": 0.0002740618074312806,
+    "flatOutputSha256": "ce26cdb1d8f7a632de5da4a18efd85442e8166d6d603e98f05d5db0202e28033",
+    "changedOutputSha256": "cd125de86483a65ca0db67968a6dbf92fdab718319cc2f5996f62727765025ba",
+    "normalInputLinked": true,
+    "albedoInputLinked": true,
+    "albedoNodeType": "CompositorNodeImage",
+    "prefilter": "NONE",
+    "passed": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "createdUtc": "2026-10-30T02:31:51.617680+00:00",
+  "files": {
+    "reports/vault-bake.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/lighting-waiting-room-vault.json",
+      "originalBytes": 9979,
+      "originalSha256": "711b892fdff08892e6777d51663014b1f99a456091ba055fe585ee4c5ed2b3d7"
+    },
+    "reports/vault-color-only-denoise.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-denoised-v3/lighting-waiting-room-vault-denoise.json",
+      "originalBytes": 2182,
+      "originalSha256": "6910fcdbcab07f104fe3f28eaea8d169f4d20b9dc9b724a8777cfb7735139027"
+    },
+    "reports/normal-guide.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/normal-guide-report.json",
+      "originalBytes": 1540,
+      "originalSha256": "6e33fcce37bc2b8e288ceada196eee95bf8aaf6c52deb625f313a1429ece1593"
+    },
+    "reports/guided-denoise.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/denoised/lighting-waiting-room-vault-denoise.json",
+      "originalBytes": 4679,
+      "originalSha256": "8d0cc69e65cd6dde4d2f297407257701408970a0097ce60364e0e3137599e3df"
+    },
+    "reports/active-guide-controls.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/denoised/guided-control-supplement.json",
+      "originalBytes": 1731,
+      "originalSha256": "db3c467f8d83b5fd3a8ccf773c0ba6693b7232819f824d599821a48a4053bc60"
+    },
+    "reports/guide-mask.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/uv-mask-report.json",
+      "originalBytes": 946,
+      "originalSha256": "a9270c757707b6e0c462e4ac6a742e0063835e0f1ba209760158bb1af2a6ba4c"
+    },
+    "reports/guided-mask-energy-and-patches.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/guided-mask-and-patch-report.json",
+      "originalBytes": 36818,
+      "originalSha256": "255f8f3e1b56dd19f95a2585cca68c7acec143b212a21ee4d7e1ad0fa3313572"
+    },
+    "reports/uv25-exact-transfer.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/uv-pack-transfer-v3/pack-25.json",
+      "originalBytes": 2020,
+      "originalSha256": "73364de503b037ef5e3e48662cf1713cec857fb381a267a6ef0e18eae8d72556"
+    },
+    "reports/uv25-independent-review.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-uv-cause/pack-25-independent-review.json",
+      "originalBytes": 2279,
+      "originalSha256": "ddf5181adc97ed76a0abdb10981ff125f57763088b7dabbef9fbdc0226d980bc"
+    },
+    "reports/exact-source-transfer-addendum.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-uv-cause/exact-source-transfer-addendum.json",
+      "originalBytes": 1837,
+      "originalSha256": "81b519486163f61a7788dcde70e7a0228c444a3d9cf4570203aae174620f847e"
+    },
+    "reports/optimized-uv-ownership.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-runtime-v3/decoded-ownership.json",
+      "originalBytes": 361,
+      "originalSha256": "57e0b82a3847e64789f5ff781d2bad8d798dbba61a2217a5c9211a0165ae90fe"
+    },
+    "reports/optimizer-provenance.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-runtime-v3/optimizer-provenance.json",
+      "originalBytes": 1046,
+      "originalSha256": "345db74cb3f173416b1c1aaf4bb220b8825bd3f008575e743fa0cb9f6e791c64"
+    },
+    "reports/bilateral-patch-proof.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/bilateral-patches/patch-report.json",
+      "originalBytes": 2964,
+      "originalSha256": "cf776d55dd923683c79d784ae0b1ccfdf10b0110574763b235feef9209ad63bb"
+    },
+    "reports/pale-only-zero-classification-incomplete.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/visible-zero-classification.json",
+      "originalBytes": 32997,
+      "originalSha256": "f1c8f093034e46ed6a31ae4097bc0717c75bfa479fa21fd13c65b1dff3474ffc"
+    },
+    "source/vault_lighting_uv-used-for-bake.py": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/bake-source-v3-final/vault_lighting_uv.py",
+      "originalBytes": 6224,
+      "originalSha256": "9b75530d1f906b691189fe17f564ed275069f4a272e44fa357e8e3978131fa42"
+    },
+    "source/uv_ownership.py": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/bake-source-v3-final/uv_ownership.py",
+      "originalBytes": 3759,
+      "originalSha256": "713dbb93a767e75ee6e82815235f70c45d0c4f70f49569304c68cf08d72179af"
+    },
+    "source/normal-guide.py": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/build_normal_guide.py",
+      "originalBytes": 4655,
+      "originalSha256": "8f58ea326c571c07c7e445cf9b6d4c98f8dc5191f87a55af09cfd1f065515dc5"
+    },
+    "source/guided-denoise.py": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/guided_denoise.py",
+      "originalBytes": 13524,
+      "originalSha256": "ab1ebcb371eabd39821a3df02f84cae78df6825c15f09cc358ef2bff1359c557"
+    },
+    "source/bounded-vault-sampling-candidate.mjs": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/bounded-vault-sampling-candidate.mjs",
+      "originalBytes": 2179,
+      "originalSha256": "8824db3751b4c447bbf93dc7553c871110f901e4ed2884089185889dacbd4b10"
+    },
+    "source/patch-bilateral-proof.py": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/prove_patch_bilateral.py",
+      "originalBytes": 8353,
+      "originalSha256": "ffd4d7a1fe399e63fd0332a37fdb30ec3a2a8476c3f95a97981655b6304bcb89"
+    },
+    "source/full-material-classification.mjs": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/classify-full-visible-materials.mjs",
+      "originalBytes": 5042,
+      "originalSha256": "d7fde1df825df814818a1c92ec33abb58704035a7000ad0fe68d2ee258c3124f"
+    },
+    "source/all-source-occlusion-probe.mjs": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/probe-all-occluders.mjs",
+      "originalBytes": 8970,
+      "originalSha256": "c4c03b4cda695d4d67564bbe292148869cafc76c0c4fa9d5ea8ea362b475785f"
+    },
+    "reports/bake-helper-hashes.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/bake-source-v3-final-receipt.json",
+      "originalBytes": 745,
+      "originalSha256": "fc9e32dde34e9a70342463adf93357db3feb16d0c3848a7b2ee3a9051acb8457"
+    },
+    "reports/closest-visible-materials-summary.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/full-visible-materials.json",
+      "originalBytes": 596990,
+      "originalSha256": "2ae2ba6e258a1d462f512b0c538e8c769d8704640d8fbc301f5a33a54b963f84"
+    },
+    "reports/all-source-hidden-zero-correction.json": {
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/all-source-occlusion.json",
+      "originalBytes": 273717,
+      "originalSha256": "61c431a983778a6f5f032ca2cd183c290f897f487da98389ee469cf1c7790425"
+    }
+  }
+}
