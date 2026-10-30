@@ -25,6 +25,33 @@ def sample_site(root):
 
 
 class SiteStagingTests(unittest.TestCase):
+    def test_penn_bundle_and_research_ship_without_authoring_tools(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td) / 'site'
+            root.mkdir()
+            sample_site(root)
+            app = root / 'penn-station-1935'
+            for directory in ('dist/chunks', 'src', 'model/__pycache__'):
+                (app / directory).mkdir(parents=True, exist_ok=True)
+            for relative in ('index.html', 'dist/app.js', 'dist/chunks/runtime.mjs',
+                             'model/circulation-evidence.md', 'model/recipe.json',
+                             'model/build.py', 'model/package.mjs', 'model/__pycache__/build.pyc',
+                             'src/app.jsx', 'build.mjs'):
+                (app / relative).write_text(relative)
+            (root / 'hello-world/runtime.mjs').write_text('retained')
+            manifest = json.loads((root / 'apps.json').read_text())
+            manifest['apps'].append({'id': 'penn-station-1935', 'path': './penn-station-1935/'})
+            (root / 'apps.json').write_text(json.dumps(manifest))
+            output = Path(td) / 'pages'
+            stage.stage(root, output)
+            for relative in ('index.html', 'dist/app.js', 'dist/chunks/runtime.mjs',
+                             'model/circulation-evidence.md', 'model/recipe.json'):
+                self.assertEqual((output / 'penn-station-1935' / relative).read_bytes(),
+                                 (app / relative).read_bytes())
+            for relative in ('src', 'model/build.py', 'model/package.mjs', 'model/__pycache__', 'build.mjs'):
+                self.assertFalse((output / 'penn-station-1935' / relative).exists())
+            self.assertTrue((output / 'hello-world/runtime.mjs').is_file())
+
     def test_complete_site_keeps_registered_apps_and_assets(self):
         with tempfile.TemporaryDirectory() as td:
             output = Path(td) / 'pages'

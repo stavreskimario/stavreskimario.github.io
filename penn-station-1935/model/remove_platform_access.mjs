@@ -197,7 +197,7 @@ export function removePlatformAccess(base, components, protectedModel, {toleranc
   const protectedSurfaces = groupedSurfaces(protectedModel, new Set(owned.keys()), sourceOffsetY,permitted);
   const json = structuredClone(base.json), plans = new Map(), meshReferenceCounts = new Map();
   for (const node of base.json.nodes) if (node.mesh !== undefined) meshReferenceCounts.set(node.mesh, (meshReferenceCounts.get(node.mesh)||0)+1);
-  const materials = Object.fromEntries([...owned].map(([name, value]) => [name, {sourceTriangles:value.triangles.length, examined:0, removed:0, protectedAmbiguous:0, quantizedSliversRemoved:0, quantizedSliverArea:0, maximumSliverAltitude:0, orientationOnlyRetained:0, orientationOnlyArea:0, maximumOrientationOnlyAltitude:0, maximumRemovalResidual:0, sourceCentroidsCovered:0, sourceCentroidsProtected:0}]));
+  const materials = Object.fromEntries([...owned].map(([name, value]) => [name, {sourceTriangles:value.triangles.length, examined:0, removed:0, protectedAmbiguous:0, quantizedSliversRemoved:0, quantizedSliverArea:0, maximumSliverAltitude:0, orientationOnlyProtected:0, maximumOrientedProtectionResidual:0, orientationOnlyRetained:0, orientationOnlyArea:0, maximumOrientationOnlyAltitude:0, maximumRemovalResidual:0, sourceCentroidsCovered:0, sourceCentroidsProtected:0}]));
   const removedGeometry = new Map(), protectedKept = new Map();
   for (const p of primitives(base, new Set(owned.keys()),permitted)) {
     assert.equal(meshReferenceCounts.get(p.mesh), 1, 'Shared meshes need per-instance ownership review, including inactive nodes');
@@ -221,6 +221,15 @@ export function removePlatformAccess(base, components, protectedModel, {toleranc
       if (residual === null) {
         keep.push(...p.indices(offset));
         if (detail.orientationOnly) {
+          // Adjacent closed wall cells can share a plane with opposite
+          // normals. Keep a neighbour only when all seven samples and its
+          // actual orientation also match the retained source authority.
+          const protectedResidual=match(triangle,protectedSurfaces.get(p.material)?.surface,tolerance,normalCosine);
+          if(protectedResidual!==null){
+            stats.orientationOnlyProtected++;
+            stats.maximumOrientedProtectionResidual=Math.max(stats.maximumOrientedProtectionResidual,protectedResidual);
+            continue;
+          }
           stats.orientationOnlyRetained++;
           const twiceArea = new Vector3().subVectors(triangle[1],triangle[0]).cross(new Vector3().subVectors(triangle[2],triangle[0])).length();
           const longest = Math.max(triangle[0].distanceTo(triangle[1]),triangle[1].distanceTo(triangle[2]),triangle[2].distanceTo(triangle[0]));

@@ -1,0 +1,102 @@
+{
+  "scope": "Actual raw-angle GLB cap polygons with exact2D clipping and positive shared height; applicable because all repaired L-prisms are straight vertical extrusions. Excludes rail/joint contacts by selecting only the new angle material.",
+  "rejectedV1NegativeControl": {
+    "angleComponents": 192,
+    "actualCapTriangleCount": 768,
+    "candidatePairs": 4,
+    "positivePairs": 4,
+    "maximumArea": 0.0022268979664659128,
+    "hits": [
+      {
+        "a": 48,
+        "b": 166,
+        "area": 0.0022268979664659128,
+        "centres": [
+          [
+            -41.31349999999999,
+            -40.690799999999996
+          ],
+          [
+            -40.8563,
+            -40.690799999999996
+          ]
+        ]
+      },
+      {
+        "a": 49,
+        "b": 167,
+        "area": 0.0022268979664659128,
+        "centres": [
+          [
+            -41.31349999999999,
+            -40.690799999999996
+          ],
+          [
+            -40.8563,
+            -40.690799999999996
+          ]
+        ]
+      },
+      {
+        "a": 60,
+        "b": 190,
+        "area": 0.0022268979664659128,
+        "centres": [
+          [
+            -41.31349999999999,
+            40.6908
+          ],
+          [
+            -40.8563,
+            40.6908
+          ]
+        ]
+      },
+      {
+        "a": 61,
+        "b": 191,
+        "area": 0.0022268979664659128,
+        "centres": [
+          [
+            -41.31349999999999,
+            40.6908
+          ],
+          [
+            -40.8563,
+            40.6908
+          ]
+        ]
+      }
+    ]
+  },
+  "V2": {
+    "angleComponents": 176,
+    "actualCapTriangleCount": 704,
+    "candidatePairs": 0,
+    "positivePairs": 0,
+    "maximumArea": 0,
+    "hits": []
+  },
+  "unchangedWallAndRearGuardPrimitives": 91,
+  "unchangedAttributesTopologyTransformsMaterialsExact": true,
+  "validations": {
+    "old-owned.glb": {
+      "sha256": "e0e78dc0df0f7e6c8d12bea02742823ef0e508807d83ccd4abcd2fb83f609e98",
+      "bytes": 228940,
+      "errors": 0,
+      "warnings": 0
+    },
+    "new-geometry-module.glb": {
+      "sha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13",
+      "bytes": 364084,
+      "errors": 0,
+      "warnings": 0
+    },
+    "retained-protected.glb": {
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322",
+      "bytes": 59596788,
+      "errors": 0,
+      "warnings": 0
+    }
+  }
+}

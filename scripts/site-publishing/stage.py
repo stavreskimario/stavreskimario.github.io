@@ -28,8 +28,17 @@ def stage(root, destination):
         if not (root / app['id'] / 'index.html').is_file():
             raise ValueError('Missing app entrypoint')
         folders.append(app['id'])
-    # Explicit manifest directories retain all app assets, including LA photos.
+    # Preserve runtime files and research documents. Penn Station's bundled
+    # renderer does not load its Blender/build tools or unbundled JSX sources.
     files = [p for folder in folders for p in (root / folder).rglob('*') if p.is_file()]
+    def authoring_only(file):
+        relative = file.relative_to(root)
+        if relative.parts[0] != 'penn-station-1935':
+            return False
+        app_path = file.relative_to(root / 'penn-station-1935')
+        return ('__pycache__' in app_path.parts or app_path.parts[0] == 'src'
+                or file.suffix in ('.py', '.mjs') and 'dist' not in app_path.parts)
+    files = [file for file in files if not authoring_only(file)]
     files += [root / name for name in ('index.html', 'apps.json', '.nojekyll', 'CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico') if (root / name).is_file()]
     for file in files:
         relative = file.relative_to(root)

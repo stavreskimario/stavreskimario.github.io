@@ -99,6 +99,15 @@ assert.deepEqual(wallResult.json.materials,wallBase.json.materials);
 controls.push('explicit circulation scope removes only selected wall faces and retains unrelated pier, wall, original BIN and material bindings');
 rejects('circulation scope cannot acquire legacy furniture-removal ownership',()=>removePlatformAccess(base,owned,protection,{scope:'concourse-circulation'}),/Removal material/);
 rejects('unreviewed removal scope rejected',()=>removePlatformAccess(wallBase,wallOwned,wallProtection,{scope:'all'}),/Unreviewed/);
+const contactBase=make([{name:'BedfordLimestoneConcourse',triangles:[a,a.toReversed(),far]}],{compressed:true});
+const contactProtected=make([{name:'BedfordLimestoneConcourse',triangles:[a.toReversed(),far]}]);
+const contactResult=removePlatformAccess(contactBase,wallOwned,contactProtected,{scope:'concourse-circulation',minimumCoverage:1});
+assert.equal(contactResult.report.removedTriangles,1);
+assert.equal(contactResult.report.materials.BedfordLimestoneConcourse.orientationOnlyProtected,1);
+assert.equal(contactResult.report.materials.BedfordLimestoneConcourse.orientationOnlyRetained,0);
+assert.deepEqual([...decodedTriangles(contactResult)].map(v=>v.triangle),[a.toReversed(),far]);
+controls.push('opposite-facing closed neighbour is retained only with seven-sample oriented protection; owned face still removed');
+rejects('unexplained opposite-facing geometry remains a hard failure',()=>removePlatformAccess(contactBase,wallOwned,make([]),{scope:'concourse-circulation',minimumCoverage:1}),/Unresolved oriented/);
 const report={status:'passed',controls,fixtureBaseSha256:sha(writeGlb(base.json,base.binary)),outputSha256:sha(writeGlb(result.json,result.binary)),removal:result.report};await writeFile(out+'/controls.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,controls:controls.length,fixtureBaseSha256:report.fixtureBaseSha256,outputSha256:report.outputSha256}));
 
 } finally {

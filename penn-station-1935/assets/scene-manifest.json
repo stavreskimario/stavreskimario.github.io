@@ -30481,5 +30481,97 @@
       "Rows1/2 require restored peripheral Main-floor access beyond the320ft glazed roof; the source plan is not evidence for a solid full-width Main-floor wall there."
     ],
     "arrivalStatus": "Provisional old arrival deck and22lamp supports intentionally retained pending separate arrival reconstruction; no departure landing joins it."
+  },
+  "concourseCirculation": {
+    "revision": "phase7-southern-main-court-links-1",
+    "status": "Qualified opening-era reconstruction; exact source and route acceptance are recorded separately. Arrivals remain unfinished.",
+    "sourceSceneSha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d",
+    "sourceProofSha256": "a7214793534d9700e1124c0b8cc6f97fd85fead6e313b7607e8d241dc85ad8b4",
+    "moduleSha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13",
+    "sources": [
+      {
+        "id": "Francis1910",
+        "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002221",
+        "control": "Printed198: principal columns3ft square, four8by8in angles."
+      },
+      {
+        "id": "Gibbs1910",
+        "url": "https://archive.org/details/transactionsofam69amer",
+        "control": "Fig2 printed243: isolated piers/open intervals at eastern southern Main boundary; western compartments retained. Printed252 distinguishes Main475by125ft, court340by210ft and Exit480by60ft."
+      }
+    ],
+    "southernOpenings": [
+      {
+        "boundsXZ": [
+          -54.6,
+          -50.6149787902832,
+          48.49300003051758,
+          49.042999267578125
+        ],
+        "removedWallCellHeightMain": [
+          0,
+          3.799999952316284
+        ],
+        "clearanceStatus": "Retained sill/moulding remains below the removed cell top; actual body/headroom checks determine clearance."
+      },
+      {
+        "boundsXZ": [
+          -48.30358123779297,
+          -42.451419830322266,
+          48.49300003051758,
+          49.042999267578125
+        ],
+        "removedWallCellHeightMain": [
+          0,
+          3.799999952316284
+        ],
+        "clearanceStatus": "Retained sill/moulding remains below the removed cell top; actual body/headroom checks determine clearance."
+      }
+    ],
+    "principalAngleEnvelope": {
+      "metres": 0.9144,
+      "status": "Restored documented3ft envelope; original centres, heights, lattice, base/cap plates retained. Detailed shop section is not certified."
+    },
+    "minorAngleEnvelope": {
+      "metres": 0.62,
+      "correctedLegs": 144,
+      "deferredOriginalLegs": 16,
+      "deferredCentresBlenderXY": [
+        [
+          -41.31349999999999,
+          -40.690799999999996
+        ],
+        [
+          -41.31349999999999,
+          40.6908
+        ],
+        [
+          -40.8563,
+          -40.690799999999996
+        ],
+        [
+          -40.8563,
+          40.6908
+        ]
+      ],
+      "status": "Interpreted envelope corrected on isolated secondary piers. Sixteen original legs remain exact at four close compound-edge piers pending joint reconstruction."
+    },
+    "rearWellGuards": {
+      "rows": 9,
+      "x": -43.3,
+      "topMainRelative": 1.12,
+      "sourceGeometry": "Source-consistent rear enclosure; exact dimensions and cadence reconstructed. Allposts sit on closed east-side infill, not over treads."
+    },
+    "retained": "All baseplates,lattice,collars,capplates,full-height stone piers,upperwindows,departure flights,gates/indicators,Main/Exit/platform floors and arrival deck. Existing runtime context cover reused; no invented street roof.",
+    "uncertainty": [
+      "3ft major angle envelope is primary-supported; corner orientation is diagnosed mechanically, not a complete shop-detail tracing.",
+      "Minor0.62m envelope remains interpreted;16originallegs at4close compound-edge piers are explicitly deferred.",
+      "Opening region primary-supported±0.75m;3.8m is removed wall-cell height, not measured unobstructed clearance. Retained sill iron crosses slightly below it.",
+      "Arrivals and platform mappings retain earlier limitations.",
+      "Exact southern jambs are reconstructed; raster region has at least±0.75m placement uncertainty. The3.8m removed wall-cell height is not an unobstructed passage height.",
+      "Approximately1.6m departure gate/pier registration difference remains unresolved; platform numbering is an existing interpreted fit.",
+      "Western Main floor extent/open-to-tracks void and the separate lower arrivals corridor require coordinated follow-up. This correction does not verify the earlier whole-court prism extent.",
+      "Opening-era evidence does not prove every detail remained unchanged in1935–1940."
+    ]
   }
 }

@@ -303,11 +303,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 13500308,
+      "bytes": 15730964,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 4453491,
-      "sha256": "f807a497737745a93bb3cbff25ebfa1d9b6d4be37d86a1bbdd3609cfeb00a5db",
-      "transportSha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "transportBytes": 4543895,
+      "sha256": "9b7221a4cecacf1401fe94561aab36dbcd97e6cbb373dc345e003bb4ca29bd75",
+      "transportSha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -396,12 +396,28 @@
         {
           "uri": "textures/71508f85f3c325538f05.ktx2",
           "bytes": 3139363
+        },
+        {
+          "uri": "textures/7be11436c1b7fe0e5ab7.ktx2",
+          "bytes": 3761640
+        },
+        {
+          "uri": "textures/1e3025f04821ca80c83a.ktx2",
+          "bytes": 2104923
+        },
+        {
+          "uri": "textures/9dd19af74e513b23a448.ktx2",
+          "bytes": 2757425
+        },
+        {
+          "uri": "textures/54c4b6193c2de4abdc13.ktx2",
+          "bytes": 2816144
         }
       ],
-      "nodes": 14,
-      "meshes": 14,
-      "materials": 22,
-      "textures": 22,
+      "nodes": 17,
+      "meshes": 17,
+      "materials": 24,
+      "textures": 26,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -414,11 +430,11 @@
     },
     {
       "file": "model-concourse-low.glb",
-      "bytes": 13500308,
+      "bytes": 15730964,
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 4453491,
-      "sha256": "f807a497737745a93bb3cbff25ebfa1d9b6d4be37d86a1bbdd3609cfeb00a5db",
-      "transportSha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "transportBytes": 4543895,
+      "sha256": "9b7221a4cecacf1401fe94561aab36dbcd97e6cbb373dc345e003bb4ca29bd75",
+      "transportSha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -507,12 +523,28 @@
         {
           "uri": "textures/71508f85f3c325538f05.ktx2",
           "bytes": 3139363
+        },
+        {
+          "uri": "textures/7be11436c1b7fe0e5ab7.ktx2",
+          "bytes": 3761640
+        },
+        {
+          "uri": "textures/1e3025f04821ca80c83a.ktx2",
+          "bytes": 2104923
+        },
+        {
+          "uri": "textures/9dd19af74e513b23a448.ktx2",
+          "bytes": 2757425
+        },
+        {
+          "uri": "textures/54c4b6193c2de4abdc13.ktx2",
+          "bytes": 2816144
         }
       ],
-      "nodes": 14,
-      "meshes": 14,
-      "materials": 22,
-      "textures": 22,
+      "nodes": 17,
+      "meshes": 17,
+      "materials": 24,
+      "textures": 26,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -782,8 +814,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 74,
-  "modelTextureAndLightingBytes": 170305353,
-  "navigationBytes": 590371,
-  "scope": "Phase6 departure access module with separate2048/512 linear sky atlas; existing six-zone geometry/material/light payloads retained except explicitly removed access components; concourse geometry shared between quality variants pending mobile work."
+  "sharedTextureFiles": 75,
+  "modelTextureAndLightingBytes": 174008834,
+  "navigationBytes": 594687,
+  "scope": "Phase7 southern circulation and principal pier correction with separate2048/512 linear sky atlas; existing six-zone geometry/material/light payloads retained except explicitly replaced wall cells and176verticalangleprofiles; concourse geometry shared between quality variants pending mobile work."
 }

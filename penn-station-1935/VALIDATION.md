@@ -1,4 +1,17 @@
-# Concourse departure checkpoint — 30 October 2026
+# Southern concourse connections — 30 October 2026
+
+The `7-circulation-1` checkpoint restores two source-supported lower openings at the southern Main-court boundary, connects the two outer departure stairs and closes all nine rear stair-well guards. The principal steel angle sections now occupy the documented3ft envelope;176legs are corrected, while16legs at four ambiguous secondary joints remain exact pending reconstruction. Existing piers, bases, lattice, upper windows, stair flights, platforms and separate provisional arrivals deck are retained.
+
+- [Actual compressed-geometry checks](../authoring/penn-station-1935/review/phase7/circulation/optimized-navigation.json):9,618Main/P1/P2route samples and50,652all-flight samples pass with all six full/fallback zones. Platform3 passes both0.32m and0.37m body approaches. Nine rear barriers per variant stop the rear approach before the real void. Minimum sampled overhead clearance is1.962m.
+- [Native production-browser route](../authoring/penn-station-1935/review/phase7/circulation/production-browser.json): Main court → Platform2down/up → Platform1down/up → original Main start, using the unmodified production bundle, native viewpoint and actual WASD/drag. All six zone identities persist. Zero page exceptions/local HTTP failures; request cancellations and blocked remote fonts remain separately recorded. This is not a fresh FPS or physical-phone certification.
+- [Delivered assets](../authoring/penn-station-1935/review/phase7/circulation/asset-validation.json):12GLBs,zero errors,330recorded warnings,75shared KTX2 textures and174,008,834model/texture/light/probe bytes. Eight lighting records pass archive, linear-transfer and pixel checks. Only the closed residual wall receives the new2048px/64-sample sky atlas; older room/floor/probe maps remain unchanged.
+- Editable source SHA256`f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588` replaces the verified backed-up source. The reproducible CLI replays all four raw module exports byte-for-byte.7,137unrelated source objects and retained batch corners remain exact. The rejected intersecting candidate and36FONT-transform-ULP export failure remain documented; neither is shipped.
+
+The [evidence](model/circulation-evidence.md) qualifies the±0.75m raster placement, remaining gate/pier registration difference, interpreted minor sections, guard fabrication and platform assignments.3.8m is the removed wall-cell height; retained sill/moulding limits sampled passage height to about3.65m. Separate arrivals stairs, the western Main-floor openings and platform enclosure remain unfinished. Further stone/glass/furnishing work and the waiting-room ceiling remain open; exterior roof flicker stays last.
+
+Six obsolete top-level lighting sources are [reversibly archived](../authoring/penn-station-1935/review/phase7/storage/README.md), with exact immutable Git identities and persistent verified backups. Current phase-specific sources and all active runtime maps remain. Custom staging omits Penn Station's authoring tools/unbundled sources while retaining bundled runtime files and research documents. Matching publication is recorded after pushing; PR11 remains unmerged.
+
+## Previous concourse departure checkpoint — 30 October 2026
 
 The `6-access-1` checkpoint replaces the reversed upper flights and shared departure/Exit doglegs with nine court-facing entries and three straight eastward flights per row. New closed infills preserve the original Main slab, pier bearings and prism field. Existing platform surfaces receive the stairs without duplicate landing slabs. The provisional arrival deck and all 22 lamp supports remain separate and unchanged.
 
