@@ -2,6 +2,8 @@
 
 An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. This iteration rebuilds the waiting-room roof and ceiling, refines supported interiors and materials, and reduces desktop rendering cost. Exterior, waiting room, concourse, streets and railway share one continuously loaded world.
 
+A smaller subsequent maintenance checkpoint repairs competing concourse floor surfaces and initializes cached shadows consistently. [Its validation](VALIDATION.md) identifies the exact runtime. The broader Phase5 stone/ceiling/bracket visual pass remains under review.
+
 The final photographic target remains in progress. This is a phased reconstruction aimed at 1935–1940, anchored in original drawings, engineering records and photographs; later alterations and minor profiles remain qualified. It is not a certified 1:1 replica. See the [research register](RESEARCH.md), [source catalog](sources.json) and [model ledger](model/README.md).
 
 ## This iteration

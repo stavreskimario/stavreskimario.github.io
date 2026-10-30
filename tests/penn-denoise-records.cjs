@@ -10,6 +10,7 @@ const os = require('node:os');
 const { gzipSync } = require('node:zlib');
 const { createHash } = require('node:crypto');
 const { createRequire } = require('node:module');
+const { spawnSync } = require('node:child_process');
 const tools = createRequire(path.join(process.env.PENN_TOOLS || '/private/tmp/penn-station-tools', 'package.json'));
 const sharp = tools('sharp');
 const { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics,
@@ -41,30 +42,58 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
     assert.equal(waiting.schemaVersion, 1, 'Archived maintenance record retains schema1 after runtime promotion');
     const illumination = new Set();
     const derivatives = [];
+    const legacySources = path.join(scratch, 'legacy-source-tree');
+    const archivedHdrs = JSON.parse(await fs.readFile(path.join(repo, 'authoring/penn-station-1935/review/phase5/storage/archived-phase3-hdr.json')));
+    const restoredArchivedHdrs = [];
     for (const zone of ['exterior', 'waiting-room', 'concourse', 'platform']) {
       const record = JSON.parse(await fs.readFile(path.join(assets, `lighting-${zone}-denoise.json`)));
-      const sourceDirectory = path.join(repo, denoisePolicy(record, zone).authoringDirectory);
+      const relativeDirectory = denoisePolicy(record, zone).authoringDirectory;
+      const retainedDirectory = path.join(repo, relativeDirectory);
+      const sourceDirectory = path.join(legacySources, relativeDirectory);
+      await fs.mkdir(sourceDirectory, { recursive: true });
+      try {
+        const retained = await retainedHdr(record, retainedDirectory);
+        assert.equal(record.retainedHdr.archiveFile, undefined, 'Exact legacy fixture uses the implicit archive fallback');
+        await fs.writeFile(path.join(sourceDirectory, record.retainedHdr.file), retained.bytes);
+      } catch (error) {
+        if (error.code !== 'ENOENT') throw error;
+        const archivePath = `${relativeDirectory}/${record.retainedHdr.file}.gz`;
+        const archived = archivedHdrs.files.find(item => item.path === archivePath);
+        assert(archived, `${zone}: missing HDR has an explicit immutable history receipt`);
+        assert(/^[a-f0-9]{40}$/.test(archived.gitBlob), `${zone}: immutable Git blob identity`);
+        const result = spawnSync('git', ['cat-file', 'blob', archived.gitBlob], { cwd: repo, maxBuffer: 64 * 1024 * 1024 });
+        assert.equal(result.status, 0, `${zone}: archived HDR blob must be available in local Git history`);
+        assert.equal(result.stdout.length, archived.bytes);
+        assert.equal(hash(result.stdout), archived.sha256, `${zone}: restored compressed HDR matches its history receipt`);
+        await fs.writeFile(path.join(sourceDirectory, path.basename(archivePath)), result.stdout);
+        const retained = await retainedHdr(record, sourceDirectory);
+        restoredArchivedHdrs.push({ zone, sourcePath: archivePath, gitCommit: archived.gitCommit, gitBlob: archived.gitBlob,
+          archiveSha256: archived.sha256, retainedDecodedSha256: hash(retained.bytes) });
+      }
       for (const variant of ['full', 'low']) {
         const derivative = record[variant];
         illumination.add(derivative.webp);
         const source = path.join(sourceDirectory, derivative.png);
+        const retainedPng = path.join(retainedDirectory, derivative.png);
         const destination = path.join(assets, derivative.webp);
-        const sourceBytes = await fs.readFile(source);
-        const sourceFixture = fixtureManifest.sourcePngs.find(item => item.file === path.relative(repo, source));
+        const sourceBytes = await fs.readFile(retainedPng);
+        const sourceFixture = fixtureManifest.sourcePngs.find(item => item.file === path.relative(repo, retainedPng));
         assert(sourceFixture, `${zone}/${variant}: retained PNG fixture identity exists`);
         assert.equal(sourceBytes.length, sourceFixture.bytes);
         assert.equal(hash(sourceBytes), sourceFixture.sha256, `${zone}/${variant}: retained PNG matches the exact maintenance source`);
+        await fs.writeFile(source, sourceBytes);
         await sharp(source).removeAlpha().webp({ lossless: true, effort: 6 }).toFile(destination);
         const decoded = await sharp(destination).removeAlpha().raw().toBuffer({ resolveWithObject: true });
-        derivatives.push({ zone, variant, sourcePng: path.relative(repo, source), sourceSha256: hash(sourceBytes),
+        derivatives.push({ zone, variant, sourcePng: path.relative(repo, retainedPng), sourceSha256: hash(sourceBytes),
           regeneratedWebp: derivative.webp, regeneratedSha256: hash(await fs.readFile(destination)),
           decodedPixelSha256: hash(decoded.data), width: decoded.info.width, height: decoded.info.height });
       }
     }
-    const legacy = await validateDenoising({ assetsDirectory: assets, illumination, repositoryDirectory: repo });
+    const legacy = await validateDenoising({ assetsDirectory: assets, illumination, repositoryDirectory: legacySources });
     assert.equal(legacy.atlases.length, 4);
     report.legacyCompatibility = { sourceCommit: fixtureManifest.sourceCommit, fixtureRecords: fixtureManifest.records, retainedSourcePngs: fixtureManifest.sourcePngs,
-      derivativeTreatment: 'Temporary lossless WebPs regenerated from retained Phase3 PNGs; not the earlier actual runtime WebP files. Earlier delivered-runtime proof and final model/browser acceptance are separate.',
+      derivativeTreatment: 'Temporary lossless WebPs regenerated from retained Phase3 PNGs; missing historical HDR archives are restored only in the temporary source tree from SHA-verified immutable local Git blobs. These are not the earlier actual runtime WebP files. Earlier delivered-runtime proof and final model/browser acceptance are separate.',
+      restoredArchivedHdrs,
       regeneratedDerivatives: derivatives, validatedAtlases: legacy.atlases };
     report.checks.push('Four exact archived checkpoint records validate retained HDR hashes, 0.18 controls and bake coverage against regenerated lossless full/fallback derivatives; no current runtime dependency');
 
@@ -101,6 +130,24 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
     assert.deepEqual(denoisePolicy({ zone: 'waiting-room-order', authoringDirectory: freshDirectory }, 'waiting-room').fullDimensions, [4096]);
     report.checks.push('Schema3 requires the dedicated local order atlas, rejecting missing-order and traversal substitutions');
 
+    const phase5Directory = 'authoring/penn-station-1935/lighting/phase5/denoised';
+    const phase5VaultPolicy = denoisePolicy({ zone: 'waiting-room-vault', authoringDirectory: phase5Directory }, 'waiting-room');
+    assert.deepEqual(phase5VaultPolicy, { authoringDirectory: phase5Directory, fresh: true, fullDimensions: [8192], inputTransfer: 'linear' });
+    for (const zone of ['exterior', 'waiting-room', 'waiting-room-masonry', 'waiting-room-order', 'concourse', 'platform']) {
+      const baseZone = zone.startsWith('waiting-room') ? 'waiting-room' : zone;
+      assert.throws(() => denoisePolicy({ zone, authoringDirectory: phase5Directory }, baseZone), /supported local authoring directory/);
+    }
+    for (const directory of [phase5Directory + '/', phase5Directory + '/../denoised', phase5Directory.replace('/phase5/', '/phase5/../phase5/'), '../' + phase5Directory])
+      assert.throws(() => denoisePolicy({ zone: 'waiting-room-vault', authoringDirectory: directory }, 'waiting-room'), /supported local authoring directory/);
+    const reducedPhase5Vault = structuredClone(waiting);
+    reducedPhase5Vault.zone = 'waiting-room-vault';
+    reducedPhase5Vault.full.width = reducedPhase5Vault.full.height = 6144;
+    reducedPhase5Vault.full.png = 'lighting-waiting-room-vault-sky.png';
+    reducedPhase5Vault.full.webp = 'lighting-waiting-room-vault-sky.webp';
+    await assert.rejects(() => verifyDenoiseDerivative({ record: reducedPhase5Vault, variant: 'full', sourceDirectory: scratch,
+      assetsDirectory: scratch, illumination, fullDimensions: phase5VaultPolicy.fullDimensions }), /atlas dimension/);
+    report.checks.push('Only the exact Phase5 vault source directory is accepted, with linear transfer and an 8K full atlas; other zones, traversal/alias paths and a 6K derivative are rejected');
+
     for (const mutation of [
       value => { value.constant018Test.after = .19; },
       value => { value.constant018Test.maximumError = .001; },
@@ -124,7 +171,7 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
     const controls = path.join(scratch, 'rejection-controls');
     await fs.mkdir(controls);
     try {
-      const sourceDirectory = path.join(repo, 'authoring/penn-station-1935/lighting/phase3/denoised');
+      const sourceDirectory = path.join(legacySources, 'authoring/penn-station-1935/lighting/phase3/denoised');
       const original = (await retainedHdr(waiting, sourceDirectory)).bytes;
       const archive = waiting.retainedHdr.file + '.gz';
       await fs.writeFile(path.join(controls, archive), gzipSync(original));

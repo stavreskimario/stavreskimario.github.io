@@ -19,6 +19,7 @@ const output = process.env.PENN_ASSET_REPORT || '/private/tmp/penn-phase3-asset-
 
 const repositoryRoot = path.resolve(__dirname, '..');
 const phase4DenoisedDirectory = 'authoring/penn-station-1935/lighting/phase4/denoised';
+const phase5VaultDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase5/denoised';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
 function denoiseEntries(zone, file, record) {
@@ -40,14 +41,15 @@ function denoisePolicy(record, baseZone) {
   const zone = record.zone;
   const legacyDirectory = `authoring/penn-station-1935/lighting/phase3/${zone === 'platform' ? 'platform-corrected' : 'denoised'}`;
   const authoringDirectory = record.authoringDirectory || legacyDirectory;
-  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory), `${zone}: supported local authoring directory`);
-  const fresh = authoringDirectory === phase4DenoisedDirectory;
+  const phase5Vault = zone === 'waiting-room-vault' && authoringDirectory === phase5VaultDenoisedDirectory;
+  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault, `${zone}: supported local authoring directory`);
+  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault;
   if (zone !== baseZone) {
     assert.equal(baseZone, 'waiting-room', 'Only waiting-room children use atlas-specific zones');
     assert(['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'].includes(zone));
     assert(fresh, `${zone}: split-atlas provenance must identify the new authored source directory`);
   }
-  const fullDimensions = zone === 'waiting-room-vault' ? [8192, 6144]
+  const fullDimensions = phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
     : ['waiting-room-masonry', 'waiting-room-order'].includes(zone) ? [4096] : [2048];
   return { authoringDirectory, fresh, fullDimensions,
     inputTransfer: fresh || zone === 'platform' ? 'linear' : 'srgb' };

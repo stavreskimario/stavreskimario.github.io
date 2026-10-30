@@ -1,0 +1,528 @@
+{
+  "scope": "Scratch current app source with corrected shadow conventions. Only the two concourse GLB routes use the matching immutable source or repaired UV-restored candidate; all other production assets are unchanged. All floor geometry remains visible; no hiding controls are invoked. Downward rays and actual camera out-and-back at the reported floor patches; no FPS benchmark.",
+  "passed": true,
+  "errors": [],
+  "browser": "156.0.8078.74",
+  "inputModels": {
+    "source": "0505d04338aacb21df6d47ed07cdd4dca6af976e22743eba5f93ac83f6d8c79c",
+    "candidate": "2d4ac7520a86510baf26482b2f9fec1468f6a806cac22dea960019471d8cca9e"
+  },
+  "captures": [
+    {
+      "variant": "baseline",
+      "name": "axial-overlap",
+      "screenshot": "source-floor-axial-overlap.png",
+      "afterImage": "source-floor-axial-overlap-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "normal": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "position": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 12210,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.13184536464506533,
+                0.94358357631878
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.1358075985739935,
+                0.9919626579429413
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "name": "subsidiary-overlap",
+      "screenshot": "source-floor-subsidiary-overlap.png",
+      "afterImage": "source-floor-subsidiary-overlap-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "normal": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "position": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 12210,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.13184536464506533,
+                0.94358357631878
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.1358075985739935,
+                0.9919626579429413
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "variant": "baseline",
+      "name": "subsidiary-inside",
+      "screenshot": "source-floor-subsidiary-inside.png",
+      "afterImage": "source-floor-subsidiary-inside-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "normal": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "position": {
+              "count": 12210,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 12210,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.13184536464506533,
+                0.94358357631878
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.268240311256523,
+              "uv": [
+                0.1358075985739935,
+                0.9919626579429413
+              ]
+            },
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "variant": "fixed",
+      "name": "axial-overlap",
+      "screenshot": "uv-restored-floor-axial-overlap.png",
+      "afterImage": "uv-restored-floor-axial-overlap-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "position": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "normal": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 16620,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.467199809265137,
+              "uv": [
+                0.13184536053753387,
+                0.9435835807948432
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.48719979019165,
+              "uv": [
+                0.13580760459090102,
+                0.9919626699399192
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "variant": "fixed",
+      "name": "subsidiary-overlap",
+      "screenshot": "uv-restored-floor-subsidiary-overlap.png",
+      "afterImage": "uv-restored-floor-subsidiary-overlap-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "position": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "normal": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 16620,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.467199809265137,
+              "uv": [
+                0.13184536053753387,
+                0.9435835807948432
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.48719979019165,
+              "uv": [
+                0.13580760459090102,
+                0.9919626699399192
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "variant": "fixed",
+      "name": "subsidiary-inside",
+      "screenshot": "uv-restored-floor-subsidiary-inside.png",
+      "afterImage": "uv-restored-floor-subsidiary-inside-returned.png",
+      "zones": 6,
+      "shadowMatrixMaximumMismatch": 0,
+      "concrete": [
+        {
+          "attributes": {
+            "position": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "normal": {
+              "count": 16620,
+              "itemSize": 3
+            },
+            "uv": {
+              "count": 16620,
+              "itemSize": 2
+            }
+          },
+          "ao": {
+            "name": "lighting-concourse-ao",
+            "channel": 0,
+            "width": 2048
+          },
+          "GI": {
+            "channel": 0,
+            "width": 2048
+          }
+        }
+      ],
+      "floorRays": [
+        {
+          "x": -43,
+          "z": 2.13,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -23.888988962551082,
+                2.183668436174427
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.467199809265137,
+              "uv": [
+                0.13184536053753387,
+                0.9435835807948432
+              ]
+            }
+          ]
+        },
+        {
+          "x": -41.13,
+          "z": 25,
+          "hits": [
+            {
+              "material": "PublicFloorMarble",
+              "y": -4.268240311256523,
+              "uv": [
+                -22.850022756650546,
+                14.889414272098076
+              ]
+            },
+            {
+              "material": "ConcourseOpaqueCirculationConcrete",
+              "y": -4.48719979019165,
+              "uv": [
+                0.13580760459090102,
+                0.9919626699399192
+              ]
+            }
+          ]
+        },
+        {
+          "x": -43,
+          "z": 0,
+          "hits": []
+        }
+      ]
+    }
+  ]
+}

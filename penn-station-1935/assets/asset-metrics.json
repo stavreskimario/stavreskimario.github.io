@@ -1,5 +1,5 @@
 {
-  "pipeline": "Blender 4.3 → glTF Transform 4.2.1 → Meshopt + KTX2/UASTC",
+  "pipeline": "Blender 4.3 \u2192 glTF Transform 4.2.1 \u2192 Meshopt + KTX2/UASTC",
   "assets": [
     {
       "file": "model-trains.glb",
@@ -472,7 +472,7 @@
     {
       "file": "model-concourse.glb",
       "rawBytes": 115542312,
-      "bytes": 10293000,
+      "bytes": 11033292,
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -527,8 +527,8 @@
           "bytes": 2816144
         }
       ],
-      "nodes": 9,
-      "meshes": 9,
+      "nodes": 10,
+      "meshes": 10,
       "materials": 16,
       "textures": 13,
       "extensionsUsed": [
@@ -540,12 +540,13 @@
         "KHR_texture_basisu"
       ],
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 4129641
+      "transportBytes": 4268412,
+      "geometryRevision": "Phase5 physical circulation-floor ownership; other original compressed payloads retained"
     },
     {
       "file": "model-concourse-low.glb",
       "rawBytes": 115542312,
-      "bytes": 9529644,
+      "bytes": 10269932,
       "externalTextures": [
         {
           "uri": "textures/c8ffb212f6d77c7a9102.ktx2",
@@ -600,8 +601,8 @@
           "bytes": 163319
         }
       ],
-      "nodes": 9,
-      "meshes": 9,
+      "nodes": 10,
+      "meshes": 10,
       "materials": 16,
       "textures": 13,
       "extensionsUsed": [
@@ -613,7 +614,8 @@
         "KHR_texture_basisu"
       ],
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 4107504
+      "transportBytes": 4246726,
+      "geometryRevision": "Phase5 physical circulation-floor ownership; other original compressed payloads retained"
     },
     {
       "file": "model-platform.glb",
@@ -665,6 +667,6 @@
     }
   ],
   "sharedTextureFiles": 70,
-  "modelTextureAndLightingBytes": 149469306,
+  "modelTextureAndLightingBytes": 149747299,
   "navigationBytes": 567295
 }
