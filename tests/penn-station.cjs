@@ -463,6 +463,8 @@ async function finishCli(code) {
       return;
     }
     assert.equal(initial.state.entered, false);
+    assert.equal(initial.state.mode, 'walk', 'Fresh exhibition defaults to Walk');
+    assert(distance(initial.camera.position, [124, HUMAN_EYE, 0]) < .001, 'Default camera uses the supported street walking spawn');
     assert(initial.state.renderer.includes('WebGL') || initial.state.renderer.includes('WebGPU'));
     assert(desktop.record.requests.some(r => r.path.endsWith('/sky.hdr') && r.status === 200), 'Local HDR environment loads');
     assert(desktop.record.requests.some(r => r.path.endsWith('/model-exterior.glb.gz') && r.status === 200), 'Desktop authored GLB loads through lossless GZip transport');
@@ -472,6 +474,7 @@ async function finishCli(code) {
     assert(await p.locator('#intro').isHidden());
     assert(await p.locator('#scene-root canvas').evaluate(el => el === document.activeElement), 'Enter Station focuses the interactive canvas');
     report.checks.push('Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths');
+    await settings(p); await p.locator('[data-command="mode"][data-value="orbit"]').click(); await settings(p, false);
     await exteriorCorners(p, desktop.record);
 
     for (const view of ['waiting', 'concourse']) {

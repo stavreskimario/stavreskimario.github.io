@@ -42,7 +42,7 @@ const framing = {
   farley: { eye: [-130, 8, 71], target: [-169, 18, -12], title: 'Across Eighth Avenue', caption: 'The General Post Office · twenty Corinthian columns and the monumental stair' },
   platform: { eye: [-14, PLATFORM_FLOOR + 2.2, 15.7], target: [-38, -10.2, TRAIN_POSITION[2]], walk: [-14, PLATFORM_FLOOR + 1.68, 13.327870361], look: [-65, PLATFORM_FLOOR + 1.68, 13.327870361], title: 'Track 10 · Platform 5', caption: 'Twenty-one tracks and eleven platforms · opening-era plan with interpreted GG1 and P70 stock' },
 };
-let state = { view: 'exterior', framing: '', mode: 'orbit', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
+let state = { view: 'exterior', framing: '', mode: 'walk', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
 const listeners = new Set();
 const update = patch => { state = { ...state, ...patch }; [...listeners].forEach(fn => fn()); syncUI(); };
 const subscribe = fn => { listeners.add(fn); return () => listeners.delete(fn); };
@@ -696,7 +696,7 @@ function showAnnotation(h) {
 function stopTour() { clearTimeout(tourTimer); if (state.tour) update({ tour: false }); }
 function go(view, instant = true) {
   if (!views[view]) return;
-  update({ view, framing: '', entered: true, instant, mode: 'orbit', pose: state.pose + 1 });
+  update({ view, framing: '', entered: true, instant, pose: state.pose + 1 });
   if ($('#comparison')) $('#comparison').hidden = true;
   document.querySelectorAll('button[data-command="compare"]').forEach(button => button.setAttribute('aria-pressed', 'false'));
 }
@@ -800,7 +800,7 @@ document.addEventListener('click', async event => {
   if (command === 'sources') openDialog('#sources-dialog', button);
   if (command === 'help') openDialog('#help-dialog', button);
   if (command === 'retry') { useEnvironment.clear({ files: assetURL('sky.hdr') }); update({ revision: state.revision + 1, loading: true, error: '' }); }
-  if (command === 'reset') update({ mode: 'orbit', revision: state.revision + 1, fov: 50, annotations: false });
+  if (command === 'reset') update({ mode: 'walk', framing: state.framing === 'platform' ? 'platform' : '', revision: state.revision + 1, fov: 50, annotations: false });
   if (command === 'fullscreen') {
     try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); } catch { $('#movement-help').textContent = 'Fullscreen is unavailable. The viewer still fills this window.'; }
   }

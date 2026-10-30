@@ -1,4 +1,10 @@
-# Concourse floor and shadow maintenance checkpoint
+# Default walking and retained floor repair
+
+Checked 30 October 2026. The current navigation checkpoint uses bundle SHA256 `2a925da8a33ad307e0a9014641a74f08871f1446b2da43cffe5cb2e55c6aa581`. Its twelve model transports and world manifest remain exact to the verified floor checkpoint below. Walk is the initial and Reset mode; ordinary station viewpoints retain the selected mode, while archive/neighbour/tour controls explicitly use cinematic framing.
+
+The [focused production browser receipt](../authoring/penn-station-1935/review/phase5/default-walking/production-report.json) passes the supported street spawn at [124,1.68,0], real WASD/drag, loaded floor/collision queries, ignored flight-only height keys, selected HTML/help state, three-view mode persistence, reset from neighbour framing and tour cancellation. All six zones remain loaded. This does not claim a new broad railway/performance run or completion of the separately reviewed ceiling/material candidate.
+
+## Retained concourse floor and shadow checkpoint
 
 Checked 30 October 2026. This smaller checkpoint repairs the reported motion-related gray floor patches before the broader Phase5 visual pass.
 

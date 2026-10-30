@@ -23,7 +23,7 @@ The prism court contains 2,488 linked panels and 248,800 square units, with soli
 
 ## Explore
 
-Open this folder on a static server or GitHub Pages and choose **Enter Station**. In Orbit, drag to turn, use **WASD/arrows** to translate, **Q/E** for height and **Shift** for speed. In **Environment → Walk**, movement uses human eye height, body collision and real floor/tread support. Viewpoints, the map and tour move through the same loaded station. Native fields, dialogs and blur guard camera input.
+Open this folder on a static server or GitHub Pages and choose **Enter Station**. **Walk is the default**, with human eye height, body collision and real floor/tread support. Drag to look, use **WASD/arrows** to walk and **Shift** for speed. Choose **Environment → Orbit** for free flight, including **Q/E** for height. Ordinary station viewpoints preserve your selected movement mode; archive comparisons and the guided tour use their cinematic framing. Viewpoints, the map and tour move through the same loaded station. Native fields, dialogs and blur guard camera input.
 
 Daylight, FOV, shadows, quality, annotations, archive comparisons and opt-in synthesized ambience remain available. Historical camera matches are approximate. Existing touch/low-quality fallbacks remain; further mobile optimization is deferred in this desktop-focused iteration.
 

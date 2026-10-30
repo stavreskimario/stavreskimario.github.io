@@ -1,6 +1,6 @@
 /* Real-input navigation regressions. Run after build.mjs, from the repository:
  * PLAYWRIGHT_MODULE=/path/to/tools/node_modules/playwright PENN_ANGLE=metal node tests/penn-navigation.cjs
- * PENN_NAV_SECTION=flight|train|prisms|all (default all); sign captures office lettering.
+ * PENN_NAV_SECTION=default|flight|train|prisms|all (default all); sign captures office lettering.
  * PENN_PRISM_NEGATIVE=1 with section prisms checks a local disabled-glass control. Outputs are outside the public app.
  * PENN_TRAIN_VARIANT=full|low|both (default full); low remains an optional geometry check.
  * No camera setters, teleports, platform shortcut or synthetic frame deltas are used.
@@ -12,9 +12,10 @@ const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..');
+const bundleDirectory = process.env.PENN_NAV_BUNDLE_DIR || path.join(root, 'penn-station-1935/dist');
 const output = process.env.PENN_SCREENSHOTS || path.join(root, '../penn-station-work/navigation-review');
 const section = process.env.PENN_NAV_SECTION || 'all';
-assert(['all', 'flight', 'train', 'sign', 'prisms'].includes(section));
+assert(['all', 'default', 'flight', 'train', 'sign', 'prisms'].includes(section));
 const prefix = '/exhibition/';
 const report = { created: new Date().toISOString(), section, checks: [], contexts: [], scope: 'Installed desktop Chrome and 390 px touch emulation; no physical-phone certification.' };
 const length = (a, b) => Math.hypot(...a.map((v, i) => v - b[i]));
@@ -25,6 +26,8 @@ const server = http.createServer(async (req, res) => {
   let file = path.resolve(root, decodeURIComponent(url.pathname.slice(prefix.length)));
   if (!file.startsWith(root + path.sep)) return res.writeHead(403).end();
   if (url.pathname.endsWith('/')) file = path.join(file, 'index.html');
+  const dist = path.join(root, 'penn-station-1935/dist');
+  if (file.startsWith(dist + path.sep)) file = path.join(bundleDirectory, path.relative(dist, file));
   try { const data = await fs.readFile(file); res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Cache-Control':'no-store' }); res.end(data); }
   catch { res.writeHead(404).end(); }
 });
@@ -34,7 +37,7 @@ const server = http.createServer(async (req, res) => {
   const origin = `http://127.0.0.1:${server.address().port}`;
   let browser;
   try {
-    report.runtimeBundleSha256 = createHash('sha256').update(await fs.readFile(path.join(root, 'penn-station-1935/dist/app.js'))).digest('hex');
+    report.runtimeBundleSha256 = createHash('sha256').update(await fs.readFile(path.join(bundleDirectory, 'app.js'))).digest('hex');
     report.modelSha256 = {};
     const modelFiles = ['exterior', 'waiting-room', 'concourse', 'context', 'platform', 'trains'].flatMap(zone => [`model-${zone}.glb.gz`, `model-${zone}-low.glb.gz`]);
     for (const filename of [...modelFiles, 'scene-manifest.json']) report.modelSha256[filename] = createHash('sha256').update(await fs.readFile(path.join(root, 'penn-station-1935/assets', filename))).digest('hex');
@@ -51,7 +54,7 @@ const server = http.createServer(async (req, res) => {
       page.on('response', r => { if (r.url().startsWith(origin) && r.status() >= 400) record.requestsFailed.push({ url: r.url(), status: r.status() }); });
       await page.route('**/*', route => /^(data:|blob:)/.test(route.request().url()) || route.request().url().startsWith(origin + '/') ? route.continue() : route.abort());
       if (section === 'prisms' && process.env.PENN_PRISM_NEGATIVE === '1') await page.route(/\/penn-station-1935\/dist\/app\.js(?:\?.*)?$/, async route => {
-        const original = await fs.readFile(path.join(root, 'penn-station-1935/dist/app.js'), 'utf8');
+        const original = await fs.readFile(path.join(bundleDirectory, 'app.js'), 'utf8');
         assert.equal(original.split('SquareVaultLightGlass').length - 1, 1, 'Negative control targets only the exact load-bearing-glass rule');
         const disabled = original.replace('SquareVaultLightGlass', 'SquareVaultLightGlass_DISABLED_CONTROL');
         record.localNegativeControl = { description:'Load-bearing-glass recognition disabled only in the local response', modifiedBundleSha256:createHash('sha256').update(disabled).digest('hex') };
@@ -71,8 +74,66 @@ const server = http.createServer(async (req, res) => {
       const control = page.locator('.settings');
       if (await control.evaluate(e => e.open) !== open) await control.locator(':scope > summary').click();
     }
+    async function defaultWalking() {
+      const { page, context, record } = await open('fresh default walking');
+      await page.waitForFunction(() => {
+        const s = window.pennStation.getState(), c = window.pennStation.getCamera(), n = window.pennStation.getNavigation();
+        return s.mode === 'walk' && !s.loading && n?.colliders > 0 && Math.hypot(c.position[0] - 124, c.position[1] - 1.68, c.position[2]) < .001;
+      });
+      const initial = await pose(page), world = await page.evaluate(() => window.pennStation.getScene());
+      record.initial = { camera: initial, state: await state(page), navigation: await page.evaluate(() => window.pennStation.getNavigation()) };
+      assert.equal(await page.locator('[data-command="mode"][data-value="walk"]').getAttribute('aria-pressed'),'true','Default Walk control is selected');
+      assert.equal(await page.locator('[data-command="mode"][data-value="orbit"]').getAttribute('aria-pressed'),'false','Orbit starts unselected');
+      assert.match(await page.locator('#movement-help').textContent(),/to walk/,'Default help describes walking');
+      assert.equal(record.initial.navigation.floorWorld, 0, 'Fresh Walk spawn uses the existing street floor');
+      assert(world.zones.length === 6 && world.zones.every(z => z.visible && z.meshes > 0), 'Fresh Walk has all six collision/render zones loaded');
+      assert(await page.locator('#scene-root canvas').evaluate(e => e === document.activeElement), 'Enter Station focuses default walking input');
+      await hold(page, 'KeyW', 450); const moved = await pose(page), support = await page.evaluate(() => window.pennStation.getNavigation());
+      assert(length(initial.position, moved.position) > .4 && length(initial.position, moved.position) < 2.5, 'Fresh W performs human-speed walking, without selecting a mode');
+      assert(Math.abs(moved.position[1] - 1.68) < .03 && Math.abs(support.floorWorld) < .03, 'Actual walking stays 1.68m above the authored street support');
+      assert(support.queries > record.initial.navigation.queries, 'Walking queries loaded physical collision/support geometry');
+      await hold(page, 'KeyE', 200); assert(length(moved.position, (await pose(page)).position) < .02, 'Default Walk does not accept flight-only height keys');
+      const box = await page.locator('#scene-root canvas').boundingBox();
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2); await page.mouse.down();
+      await page.mouse.move(box.x + box.width / 2 + 60, box.y + box.height / 2, {steps:5}); await page.mouse.up();
+      const looked = await pose(page); assert(length(moved.quaternion, looked.quaternion) > .02, 'Default Walk supports drag-to-look');
+      assert(length(moved.position, looked.position) < .02, 'Walking look does not orbit away from the human position');
+      await page.screenshot({path:path.join(output,'default-walking.png')});
+      for (const [view, eye] of [['waiting', [0, -2.5872, 25]], ['concourse', [-67, -2.5872, 33]], ['exterior', [124, 1.68, 0]]]) {
+        await page.locator(`.viewpoints [data-command="view"][data-value="${view}"]`).click();
+        await page.waitForFunction(({view,eye}) => {const s=window.pennStation.getState(), c=window.pennStation.getCamera(); return s.view===view && s.mode==='walk' && !s.loading && Math.hypot(...c.position.map((x,i)=>x-eye[i]))<.001;}, {view,eye});
+      }
+      await settings(page,true); await page.locator('[data-command="mode"][data-value="orbit"]').click(); await settings(page,false);
+      for (const view of ['waiting','concourse','exterior']) {
+        await page.locator(`.viewpoints [data-command="view"][data-value="${view}"]`).click();
+        await page.waitForFunction(view => {const s=window.pennStation.getState();return s.view===view&&s.mode==='orbit'&&!s.loading;},view);
+      }
+      assert.deepEqual(await page.evaluate(() => window.pennStation.getScene()),world,'Ordinary Walk/Orbit viewpoints retain all six zone IDs');
+      await page.locator('.viewpoints [data-command="view"][data-value="waiting"]').click();
+      const revision = (await state(page)).revision;
+      await settings(page,true); await page.locator('[data-command="reset"]').click(); await settings(page,false);
+      await page.waitForFunction(revision => {const s=window.pennStation.getState(),c=window.pennStation.getCamera(),n=window.pennStation.getNavigation();return s.mode==='walk'&&s.revision===revision+1&&!s.loading&&n?.colliders>0&&Math.abs(c.position[1]+2.5872)<.03;},revision);
+      record.reset = {state:await state(page),camera:await pose(page),navigation:await page.evaluate(()=>window.pennStation.getNavigation())};
+      await page.locator('#map-control > summary').click();
+      await page.locator('.map-places [data-command="focus"][data-value="hotel"]').click();
+      await page.locator('#map-control > summary').click();
+      await page.waitForFunction(()=>window.pennStation.getState().framing==='hotel'&&window.pennStation.getState().mode==='orbit');
+      await settings(page,true); await page.locator('[data-command="reset"]').click(); await settings(page,false);
+      await page.waitForFunction(()=>{const s=window.pennStation.getState(),c=window.pennStation.getCamera();return s.mode==='walk'&&s.framing===''&&!s.loading&&Math.hypot(c.position[0]-124,c.position[1]-1.68,c.position[2])<.001;});
+      record.resetFromNeighbour = {state:await state(page),camera:await pose(page)};
+      await page.locator('.utility-buttons [data-command="tour"]').click();
+      await page.waitForFunction(()=>window.pennStation.getState().tour&&window.pennStation.getState().mode==='orbit');
+      await page.keyboard.press('Escape');
+      assert.equal((await state(page)).tour,false,'Escape stops the cinematic tour');
+      assert.equal((await state(page)).mode,'orbit','Stopping the tour does not unexpectedly change its explicit cinematic mode');
+      record.afterTour = await state(page);
+      assert.deepEqual(record.errors,[]); assert.deepEqual(record.requestsFailed,[]);
+      report.checks.push('Fresh default Walk, street support/eye height, actual WASD and drag, preserved viewpoint mode, Walk reset and explicit cinematic tour');
+      await context.close();
+    }
     async function flight() {
       const { page, context, record } = await open('desktop flight');
+      await settings(page, true); await page.locator('[data-command="mode"][data-value="orbit"]').click(); await settings(page, false);
       const beforeViewFrame = await page.evaluate(() => window.pennStation.getMetrics().renderFrame);
       await page.locator('.viewpoints [data-command="view"][data-value="exterior"]').click();
       assert(await page.locator('#scene-root canvas').evaluate(e => e === document.activeElement), 'Pointer-selected viewpoint makes WASD immediately available');
@@ -122,6 +183,8 @@ const server = http.createServer(async (req, res) => {
       report.checks.push('Desktop WASD flight, camera/target coherence, QE height, Shift, deceleration, native-field/dialog and blur guards, persistent world');
       await context.close();
       const mobile = await open('390 px touch flight', true);
+      await settings(mobile.page, true); await mobile.page.locator('[data-command="mode"][data-value="orbit"]').click(); await settings(mobile.page, false);
+      await mobile.page.waitForFunction(() => window.pennStation.getState().mode === 'orbit' && Math.abs(window.pennStation.getCamera().position[0] - 145) < .001);
       await mobile.page.locator('#scene-root canvas').focus();
       const before = await pose(mobile.page); const button = mobile.page.locator('.walk-pad button[data-move="KeyW"]');
       assert(await button.isVisible(), 'Narrow touch Orbit shows the direction pad');
@@ -333,6 +396,7 @@ const server = http.createServer(async (req, res) => {
       report.checks.push('Telephone sign screenshot captured from the passenger side using real walking and drag inputs; legibility requires visual review');
       await context.close();
     }
+    if (section === 'all' || section === 'default') await defaultWalking();
     if (section === 'all' || section === 'flight') await flight();
     if (section === 'all' || section === 'train') {
       const variant = process.env.PENN_TRAIN_VARIANT || 'full'; assert(['full', 'low', 'both'].includes(variant));

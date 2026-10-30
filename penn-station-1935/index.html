@@ -10,7 +10,7 @@
  <link rel="stylesheet" href="../shared/theme.css?v=1">
  <link rel="stylesheet" href="./styles.css?v=1">
  <script src="../shared/ui.js?v=1" defer></script>
- <script src="./dist/app.js?v=4-floor-1" type="module"></script>
+ <script src="./dist/app.js?v=4-walk-1" type="module"></script>
 </head>
 <body>
  <a class="skip-link" href="#main">Skip to the station</a>
@@ -38,7 +38,7 @@
     <details class="settings control-surface" id="settings">
      <summary><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14M7 3v4m6 1v4m-6 1v4"/></svg><span>Environment</span><span class="summary-plus" aria-hidden="true">+</span></summary>
      <div class="settings-body">
-      <fieldset><legend>Explore</legend><div class="button-group" role="group" aria-label="Exploration mode"><button type="button" data-command="mode" data-value="orbit" aria-pressed="true">Orbit</button><button type="button" data-command="mode" data-value="walk" aria-pressed="false">Walk</button></div></fieldset>
+      <fieldset><legend>Explore</legend><div class="button-group" role="group" aria-label="Exploration mode"><button type="button" data-command="mode" data-value="walk" aria-pressed="true">Walk</button><button type="button" data-command="mode" data-value="orbit" aria-pressed="false">Orbit</button></div></fieldset>
       <fieldset><legend>Time of day</legend><div class="button-group" role="group" aria-label="Daylight preset"><button type="button" data-command="light" data-value="morning" aria-pressed="false">Morning</button><button type="button" data-command="light" data-value="afternoon" aria-pressed="true">Afternoon</button><button type="button" data-command="light" data-value="evening" aria-pressed="false">Evening</button></div><p class="field-note">An interpretation of seasonal daylight.</p></fieldset>
       <div class="settings-field"><label for="quality">Graphics quality</label><select id="quality" name="quality"><option value="low">Light · mobile</option><option value="balanced" selected>Balanced</option><option value="high">High · desktop</option></select></div>
       <div class="settings-field"><label for="fov">Field of view <span id="fov-value">50°</span></label><input id="fov" type="range" min="35" max="75" step="1" value="50" aria-describedby="fov-note"><p class="field-note" id="fov-note">Lower values give a more natural perspective.</p></div>
@@ -65,7 +65,7 @@
     <nav class="viewpoints control-surface" aria-label="Camera viewpoints within the station"><button type="button" data-command="view" data-value="exterior" aria-pressed="true"><span>01</span>Exterior</button><button type="button" data-command="view" data-value="waiting" aria-pressed="false"><span>02</span>Waiting room</button><button type="button" data-command="view" data-value="concourse" aria-pressed="false"><span>03</span>Concourse</button></nav>
     <div class="viewport-actions control-surface"><button class="icon-button" type="button" data-command="help" aria-label="How to explore"><span aria-hidden="true">?</span></button><button class="icon-button" type="button" data-command="fullscreen" aria-label="Enter full screen"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button></div>
    </div>
-   <p class="movement-help" id="movement-help">WASD to fly · Q down / E up · Drag to turn</p>
+   <p class="movement-help" id="movement-help">Drag to look · WASD / arrows to walk · Shift to move faster</p>
    <span class="renderer-status" id="renderer-status" role="status"></span>
    <p class="sr-only" id="app-status" role="status" aria-live="polite" aria-atomic="true"></p>
   </section>
