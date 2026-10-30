@@ -159,6 +159,7 @@ if args.surface_group == "order":
 elif args.surface_group == "vault":
     from vault_lighting_uv import prepare_vault_uv
     vault_normal_integrity = prepare_vault_uv(architecture, args.resolution, args.uv_margin_pixels)
+    mesh = architecture.data
 else:
     mesh.uv_layers.new(name=light_uv_name)
     mesh.uv_layers.active_index = len(mesh.uv_layers) - 1

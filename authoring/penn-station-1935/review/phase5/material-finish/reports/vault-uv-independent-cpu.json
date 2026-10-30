@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-30T01:24:42.980Z",
+  "scope": "Independent source review and focused CPU regressions. No render, GPU device configuration, browser, performance measurement or full-vault bake was started by this review.",
+  "status": "passed",
+  "reviewFindings": [],
+  "sourceHashes": {
+    "penn-station-1935/model/vault_lighting_uv.py": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee",
+    "penn-station-1935/model/uv_ownership.py": "713dbb93a767e75ee6e82815235f70c45d0c4f70f49569304c68cf08d72179af",
+    "penn-station-1935/model/bake_lighting.py": "aebf0199c377a2c53d673d083bf5d200552a434759b179713c317934c9a23379",
+    "tests/penn-vault-uv.py": "6c7eeb32603de2c1087ab537e185f6dcb07ee9a8c127bf33c489f6939a724807"
+  },
+  "blenderRegression": {
+    "runtime": "Pinned bpy4.3.0 / Python3.11 / numpy<2, offline cache",
+    "exitCode": 0,
+    "stdout": "WARN `--no-project` was provided, but no project was found\nInfo: Removed 2 vertices\nPASS: uniquely owned coherent UV chart; exact original geometry, UV0 and split-normal storage; fold/collapse rejection",
+    "checks": [
+      "Authored split corner normals and UV0 remain exact",
+      "Split physical vertices and loop vertex indices remain exact",
+      "Welded UV workspace forms a coherent shared-edge chart",
+      "CORNER-ID mapping is bijective and temporary IDs do not leak to restored mesh",
+      "Same-winding fold and collapsed triangle reject before baking",
+      "Repeated preparation of already baked source rejects"
+    ],
+    "initialRestrictedAttempt": {
+      "exitCode": 139,
+      "qualification": "Native Blender process terminated before regression output; subsequent CPU-only run outside that restricted process environment passed."
+    }
+  },
+  "independentOwnershipControls": {
+    "scope": "Independent CPU mathematical controls; no Blender bake, browser or GPU work",
+    "status": "passed",
+    "cases": [
+      {
+        "name": "contained triangles",
+        "expectedOverlappingTrianglePairs": 1,
+        "actualOverlappingTrianglePairs": 1
+      },
+      {
+        "name": "reversed winding still overlaps",
+        "expectedOverlappingTrianglePairs": 1,
+        "actualOverlappingTrianglePairs": 1
+      },
+      {
+        "name": "duplicate triangles",
+        "expectedOverlappingTrianglePairs": 1,
+        "actualOverlappingTrianglePairs": 1
+      },
+      {
+        "name": "shared chart edge",
+        "expectedOverlappingTrianglePairs": 0,
+        "actualOverlappingTrianglePairs": 0
+      },
+      {
+        "name": "one shared vertex",
+        "expectedOverlappingTrianglePairs": 0,
+        "actualOverlappingTrianglePairs": 0
+      },
+      {
+        "name": "separated triangles",
+        "expectedOverlappingTrianglePairs": 0,
+        "actualOverlappingTrianglePairs": 0
+      },
+      {
+        "name": "overlap far smaller than one texel even at8192",
+        "expectedOverlappingTrianglePairs": 1,
+        "actualOverlappingTrianglePairs": 1
+      },
+      {
+        "name": "collapsed triangle",
+        "rejectedAsExpected": true
+      },
+      {
+        "name": "nonfinite coordinate",
+        "rejectedAsExpected": true
+      },
+      {
+        "name": "outside atlas",
+        "rejectedAsExpected": true
+      },
+      {
+        "name": "wrong array shape",
+        "rejectedAsExpected": true
+      }
+    ],
+    "sourceSha256": "713dbb93a767e75ee6e82815235f70c45d0c4f70f49569304c68cf08d72179af",
+    "controlScriptSha256": "3f51e350275da9f06692f0bbad4ef9ca096987787af596a00af6a4ee856dc986"
+  },
+  "fullVaultOwnershipEvidenceReviewed": {
+    "qualification": "Existing full-vault evidence reviewed; not rerun by this small regression.",
+    "file": "phase5-materials/uv-packs-v3/pack-25.exact-owners.json",
+    "sha256": "1511651b5166bb010268b4c23f9bc5cce93024a8d7bc9fe484f1a41a18b92ded",
+    "method": "Exact convex separating-axis test in float64, strict open interiors; UV distance tolerance1e-12; shared edges excluded",
+    "triangleCount": 150832,
+    "candidatePairs": 375849,
+    "overlappingTrianglePairs": 0,
+    "firstPairs": [],
+    "zeroAreaTriangles": 0,
+    "minimumTriangleUvArea": 6.373969174688909e-8,
+    "elapsedSeconds": 0.8374978749998263
+  },
+  "integration": {
+    "refreshedArchitectureDataReference": true,
+    "meshCopyMadeBeforeTemporaryPackingEdits": true,
+    "explicitOriginalLoopVertexIndexGuardAdded": true,
+    "immutableRunningBakeHelper": {
+      "sha256": "9b75530d1f906b691189fe17f564ed275069f4a272e44fa357e8e3978131fa42",
+      "canonicalDiff": "Only the additional exact loop-vertex-index assertion; no geometry/UV transformation logic differs.",
+      "snapshotChanged": false
+    }
+  },
+  "limitations": [
+    "The tiny fixture and mathematical controls do not establish final 8K bake completion or mapped visual acceptance.",
+    "Unique triangle interiors prevent multiple atlas owners; they do not by themselves certify all gutter/denoiser filtering behavior."
+  ]
+}

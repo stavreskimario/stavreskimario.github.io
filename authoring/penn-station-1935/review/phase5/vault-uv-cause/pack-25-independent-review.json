@@ -1,0 +1,54 @@
+{
+  "scope": "Independent read-only actual25degree packed array review; no bake/browser/helper changes",
+  "packSha256": "b04e7d2a55acc5479e35240033ff39a800734b2cd062a1335292f0650511cf28",
+  "trianglePositionsExactVersusAngles": [
+    45,
+    55,
+    30
+  ],
+  "allValuesFinite": true,
+  "uvWithinUnitSquare": true,
+  "triangles": 150832,
+  "zeroUvArea": 0,
+  "minimumUvArea": 6.373969174688909e-08,
+  "densityPercentilesIndependent": {
+    "0": 59.68159776169672,
+    "1": 60.6096097872523,
+    "5": 61.15029110532827,
+    "10": 61.37022370512628,
+    "50": 62.16714093916125,
+    "90": 62.60128596187698,
+    "100": 62.644629812853616
+  },
+  "candidatePairs": 375849,
+  "broadPhaseNearTouchPairs": 282939,
+  "polygonClipPositiveIntersections": 0,
+  "maximumNumericalClipArea": 4.336808689942018e-19,
+  "sourcePreservationReceipt": {
+    "method": "Coherent welded UV charts; integer CORNER-ID restoration of authored split normals",
+    "cornerCount": 452496,
+    "cornerAssociationPreservedExactly": true,
+    "architecturalUv0PreservedExactly": true,
+    "weldCoincidentVertices": true,
+    "weldToleranceMetres": 1e-05,
+    "verticesBefore": 155838,
+    "verticesAfter": 75857,
+    "triangles": 150832,
+    "maximumNormalStorageAngleDegrees": 0.048456642776727676,
+    "meanNormalStorageAngleDegrees": 0.007726732175797224,
+    "expectedNormalsSha256": "49299f09c010af4d884925f3d2ca889f399f9958c160fc63f7d131cdc8062e81",
+    "actualNormalsSha256": "f519c3675e612696ce5b6a1d66542756710b79dfbc983a2545e8700b9be2dcb5"
+  },
+  "limits": "Polygon intersection tolerance1e-14 normalized UV area; source report owns exact corner-ID/UV0/custom-normal restoration. Packed25 positions independently match all three other source packs.",
+  "baseline75DensityPercentilesIndependent": {
+    "0": 52.093431280502706,
+    "1": 52.1432428973152,
+    "5": 52.8264145106417,
+    "10": 55.06007514630802,
+    "50": 68.11537280939368,
+    "90": 74.55473462503096,
+    "100": 74.78124168174256
+  },
+  "medianDensityRelativeChange": -0.08732583592953802,
+  "selectedHelperReview": "No actionable correctness blocker: 25degree projection, exact original-corner positions/UV0 and normal restoration; finite/range/strict ownership/collapse guards and same-winding/shared-edge regression controls."
+}

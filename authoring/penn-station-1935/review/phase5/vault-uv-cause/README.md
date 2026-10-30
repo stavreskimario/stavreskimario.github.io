@@ -1,0 +1,11 @@
+# Read-only vault UV cause and selected-pack review
+
+The prior75degree pack contains multiple distant surfaces in a single UV chart. At native diagnostic screen635,220, raw triangles86630 and86796 belong to the same7242-triangle chart but lie0.711m apart in3D. Their separate high-pocket and low-border points fall in neighbouring authored coffer columns4 and5. A common oblique affine projection reproduces the entire chart to7.4e-8 UV error; its axis is about59degrees from the near-vertical pocket normal. All faces retain consistent projected winding, so a winding-only check would miss the global self-overlap. This is distinct from near-coplanar world geometry or atlas-island padding.
+
+A read-only projection onto the authored height graph (BlenderXY / glTF X,-Z) has zero strict8Kpixel overlaps, establishing an injective fallback. It has uneven steep-face density, so no new pack/helper/bake was delivered from that experiment. The proposed341-cell fallback was stopped when the selected25degree pack passed both raster and analytical ownership gates.
+
+Independent review of the actual25degree NPZ verifies finite UVs within the unit square,150832 noncollapsed triangles and exact triangle positions versus the other55/45/30degree controls. Density was recalculated independently, including the actual old75degree raw bake comparison. An independent polygon-clipping cross-check over375849 possible pairs finds no positive-area overlap (largest numerical residual4.34e-19). The selected pack's minimum/p1/p5/median density is59.68/60.61/61.15/62.17pixels per metre. The lower median compared with the old pack is an explicit tradeoff for unique chart ownership.
+
+The canonical helper diff was reviewed without edits. Original CORNER-ID checks preserve every face-corner position and architectural UV0, retain authored split normals within the existing storage tolerance, and reject finite/range, collapsed-triangle and multiple-owner failures before baking. Regression controls include same-winding folded triangles and valid shared edges. No concrete correctness blocker was found.
+
+These receipts are CPU-only geometry/UV checks, not final mapped visual acceptance. No shared helper, production asset, browser or bake changes were made by this reviewer.
