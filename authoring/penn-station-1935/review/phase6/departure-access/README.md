@@ -12,3 +12,5 @@ The current editable `penn-station-phase5.blend` now contains the reviewed V4 de
 The new access lighting uses a separate64-sample2K atlas. Older room/roof maps remain unchanged by this correction. Platform3's narrow approach, the unresolved approximately1.6m gate-registration difference, peripheral Platform1/2 Main-court links and the provisional arrival/Exit deck remain explicit limitations. No1:1 or complete1935 layout claim is made.
 
 Full raw GLBs, source-render/browser images and large reports remain under `/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access`. No raw GLBs or historical photographs are copied into this compact archive.
+
+[Actual published verification](final-publication.json) records the exact b31036f served assets, observed Metal driver, native Platform 5 roundtrip and request-event distinctions. The initial overly strict observer material-count assertion is retained separately and explained; the rerun changed no application bytes.
