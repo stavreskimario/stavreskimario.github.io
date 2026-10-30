@@ -19,6 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("input", type=Path)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--zone", required=True)
+parser.add_argument("--artifact-name", choices=("concourse-access",), help="Separate access-module maps while retaining the concourse coordinate frame")
 parser.add_argument("--resolution", type=int, default=2048)
 parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
@@ -34,7 +35,9 @@ if args.surface_group != "all" and args.zone != "waiting-room":
     raise ValueError("Split surface groups currently apply only to the waiting room")
 if not 0 < args.uv_margin_pixels < args.resolution / 16:
     raise ValueError("UV margin must be a small positive texel count")
-artifact_zone = args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group
+if args.artifact_name and (args.zone != "concourse" or args.surface_group != "all"):
+    raise ValueError("The access artifact name requires the full concourse-frame module")
+artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
 started = time.monotonic()
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
