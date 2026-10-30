@@ -1,0 +1,480 @@
+{
+  "schema": 1,
+  "date": "2026-10-30",
+  "scope": "External primary-evidence audit and bounded construction recipe only. No repository/model/runtime/bake edits.",
+  "sources": [
+    {
+      "id": "S9",
+      "existingRepositorySourceId": true,
+      "title": "Francis and O’Brien, Certain Engineering Structures of the New York Terminal Area, Transactions ASCE LXIX, paper1164",
+      "date": "1910",
+      "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002221",
+      "downloadUrl": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "local": "next-visual-references/asce69.pdf",
+      "bytes": 34864081,
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+      "controls": {
+        "printedPages": [
+          167,
+          168,
+          169
+        ],
+        "plate": "LXI",
+        "pdfPageOneBased": 309
+      },
+      "rights": "1910 United States publication, public domain in the United States; research renders external only."
+    },
+    {
+      "id": "S10",
+      "existingRepositorySourceId": true,
+      "title": "George Gibbs, Station Construction, Road, Track, Yard Equipment, Electric Traction, and Locomotives, Transactions ASCE LXIX, paper1165",
+      "date": "1910",
+      "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002223",
+      "downloadUrl": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "controls": {
+        "printedPages": [
+          242,
+          243,
+          244,
+          252,
+          255,
+          256,
+          257,
+          259,
+          261,
+          262
+        ],
+        "fig3PdfPageOneBased": 428,
+        "plateLXXVIIIPdfPageOneBased": 405,
+        "plateLXXXIVPdfPageOneBased": 439
+      },
+      "rights": "1910 United States publication, public domain in the United States; research renders external only."
+    },
+    {
+      "id": "S1",
+      "existingRepositorySourceId": true,
+      "title": "The New York Improvement and Tunnel Extension of the Pennsylvania Railroad",
+      "date": "October1910",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/The_New_York_improvement_and_tunnel_extension_of_the_Pennsylvania_railroad._Issued_October%2C_1910_%28IA_newyorkimproveme00penn%29.pdf",
+      "printedPages": [
+        16,
+        17
+      ],
+      "usedFor": "Primary explicit Exit destinations and separate northern Long Island facilities; not exact stair mesh vertices.",
+      "rights": "1910 United States publication, public domain in the United States; linked only in this external audit."
+    },
+    {
+      "id": "LOC071937",
+      "existingRepositorySourceId": false,
+      "title": "Track level, main and exits, concourses, Penna. [Pennsylvania] Station, New York, N.Y.",
+      "publisher": "Detroit Publishing Company",
+      "url": "https://www.loc.gov/item/2016815392/",
+      "downloadUrl": "https://cdn.loc.gov/master/pnp/det/4a20000/4a23000/4a23700/4a23720u.tif",
+      "digitalId": "LC-DIG-det-4a23720",
+      "negativeNumber": "071937",
+      "catalogDate": "between1905and1915",
+      "caution": "Negative number071937 does not mean year1937. Original photograph is monochrome; colors and exact stair dimensions are not established.",
+      "rightsAdvisory": "No known restrictions on publication.",
+      "credit": "Library of Congress, Prints & Photographs Division, Detroit Publishing Company Collection",
+      "rightsVerifiedOn": "2026-10-30",
+      "local": "phase7-arrivals/loc-071937-original.tif",
+      "bytes": 20663570,
+      "sha256": "df39ef8dca2e3fa9714bca89877665ca1869054e4dc25a9dc649017363ecd47e",
+      "width": 5064,
+      "height": 4074
+    }
+  ],
+  "registration": {
+    "path": "phase7-circulation/arrivals/plan-registration.json",
+    "bytes": 14824,
+    "sha256": "fe158a3898db3b3eb907a5a3e36fae90cb6990a64dc33a7550a5508053268413",
+    "rmsResidualPixels": 1.697971891846262,
+    "minimumGlobalRegistrationUncertaintyMetres": 1,
+    "nativeOrientation": {
+      "top": "west",
+      "bottom": "east",
+      "left": "south",
+      "right": "north"
+    }
+  },
+  "nativeFig3": {
+    "path": "phase5-stair-evidence/gibbs-244-full-4000.png",
+    "bytes": 1467539,
+    "sha256": "aef3ef725d50500067a4760b46e2d5a83a06ec89016cd54cc9373206e1b48bd9",
+    "width": 2462,
+    "height": 4000
+  },
+  "crops": [
+    {
+      "file": "071937-left-arrival-stair-detail.png",
+      "source": "loc-071937-original.tif",
+      "rect": [
+        1350,
+        2400,
+        1450,
+        1000
+      ],
+      "method": "Native mechanical grayscale crop, no enhancement, inpainting or inferred detail.",
+      "bytes": 1576849,
+      "sha256": "e121c05cb73c747ce714a7b28aacae0b95535e601225b16cadf7d0b5bc60e0c2",
+      "width": 1450,
+      "height": 1000
+    },
+    {
+      "file": "071937-right-arrival-stair-detail.png",
+      "source": "loc-071937-original.tif",
+      "rect": [
+        3350,
+        2400,
+        1400,
+        1200
+      ],
+      "method": "Native mechanical grayscale crop, no enhancement, inpainting or inferred detail.",
+      "bytes": 1534009,
+      "sha256": "2c50ea6b5c7c35293e42ef8e193289229ed9f02f6821134a4e96ed7df1150abe",
+      "width": 1400,
+      "height": 1200
+    },
+    {
+      "file": "LXI-north-floor-datums-native.png",
+      "source": "plate-LXI-31st-33rd-viaduct-sections.png",
+      "rect": [
+        3950,
+        3150,
+        2000,
+        1250
+      ],
+      "bytes": 760737,
+      "sha256": "27a62d7c8a55930c75f7069f1d28c22c4cd2cf8074cd19994703ae56e5b174fb",
+      "width": 2000,
+      "height": 1250
+    },
+    {
+      "file": "LXI-south-floor-datums-native.png",
+      "source": "plate-LXI-31st-33rd-viaduct-sections.png",
+      "rect": [
+        2150,
+        3000,
+        950,
+        1350
+      ],
+      "bytes": 313874,
+      "sha256": "b45e4681ebea735cf6f78140dbb86b820e4e6d14c6222ddc78b2fbe7b9523a28",
+      "width": 950,
+      "height": 1350
+    },
+    {
+      "file": "LXXXIV-arrival-photo-native.png",
+      "source": "../phase5-stair-evidence/gibbs-plate84.png",
+      "rect": [
+        200,
+        1900,
+        1800,
+        1400
+      ],
+      "bytes": 2712265,
+      "sha256": "49d2d8df4d9e717936bb1bd9e64760d3e44aa5bad8f21671b3f141d6f6c25b45",
+      "width": 1800,
+      "height": 1400
+    },
+    {
+      "file": "exit-corridor-ordinary-supports-native2x.png",
+      "source": "../phase5-stair-evidence/gibbs-244-full-4000.png",
+      "rect": [
+        185,
+        1040,
+        1550,
+        300
+      ],
+      "linearDisplayScale": 2,
+      "bytes": 667254,
+      "sha256": "640e79ff38ab285590c83a22b1eb48bef7da58f7414415e74976845080407154",
+      "width": 3100,
+      "height": 600
+    },
+    {
+      "file": "exit-south-ordinary-end-native3x.png",
+      "source": "../phase5-stair-evidence/gibbs-244-full-4000.png",
+      "rect": [
+        165,
+        1020,
+        280,
+        360
+      ],
+      "linearDisplayScale": 3,
+      "bytes": 277189,
+      "sha256": "5a6eda3c6f7102bf347e8f9951765f0bf20479a1a6814d48729befbae872f1a9",
+      "width": 840,
+      "height": 1080
+    },
+    {
+      "file": "exit-row5-supports-native4x.png",
+      "source": "../phase5-stair-evidence/gibbs-244-full-4000.png",
+      "rect": [
+        860,
+        1060,
+        260,
+        270
+      ],
+      "linearDisplayScale": 4,
+      "bytes": 200429,
+      "sha256": "e857054b02821efef6d3917cf491fd07d32575aa30ff5ce1d8be0128a46767d4",
+      "width": 1040,
+      "height": 1080
+    },
+    {
+      "file": "exit-south-wide-native2x.png",
+      "source": "../phase5-stair-evidence/gibbs-244-full-4000.png",
+      "rect": [
+        160,
+        950,
+        500,
+        550
+      ],
+      "linearDisplayScale": 2,
+      "bytes": 418901,
+      "sha256": "8262a69e683fa863f8d6a5167753336f64b4ec10694e1b5b704c511f707e88c2",
+      "width": 1000,
+      "height": 1100
+    }
+  ],
+  "controls": {
+    "relativeFloor": {
+      "source": "S9 plateLXI",
+      "northFeet": {
+        "main": 319.01,
+        "exit": 308.51,
+        "difference": 10.5
+      },
+      "northDifferenceMetres": 3.2004,
+      "southFeet": {
+        "main": 318.82,
+        "lower": 308.39,
+        "difference": 10.43
+      },
+      "qualification": "Local graded absolute floors; adopted global relative difference is north control, not a universal flat absolute datum."
+    },
+    "clearHeight": {
+      "source": "S9 plateLXI north33rdStreet section",
+      "feet": 8,
+      "inches": 10,
+      "metres": 2.6924,
+      "qualification": "Local explicitly printed clearance; Gibbs11ft table entry is not proved universal clear height."
+    },
+    "width": {
+      "source": "S10 printed252",
+      "feet": 60,
+      "metres": 18.288,
+      "workingWorldX": [
+        -73.2,
+        -54.912
+      ],
+      "minimumGlobalUncertaintyM": 1
+    },
+    "longitudinalBoundaries": {
+      "southNativeUBand": [
+        270,
+        285
+      ],
+      "southWorkingWorldZ": 71,
+      "qualification": "Approximately read end beside source row1, not exact finished-wall survey.",
+      "northFirstSubsetWorldZ": -34,
+      "northStatus": "Temporary research/safety boundary between rows8/9; not historical partition.",
+      "fullPrintedLengthFt": 480,
+      "fullLengthMustNotBeCentred": true
+    },
+    "row5FilledSupportSymbols": {
+      "source": "S10 Fig3",
+      "method": "Manually identified compact filled symbols around central lift; threshold170 connected-component centroid in native grayscale, 8-neighbour adjacency. Positions of symbols, not certified member profiles.",
+      "points": [
+        {
+          "uv": [
+            958.36,
+            1168.94
+          ],
+          "componentBoundsUV": [
+            955,
+            1166,
+            963,
+            1173
+          ],
+          "pixels": 50,
+          "workingWorldXZ": {
+            "x": -66.79578168224299,
+            "z": 14.419536032606183
+          }
+        },
+        {
+          "uv": [
+            997.43,
+            1168.43
+          ],
+          "componentBoundsUV": [
+            995,
+            1166,
+            1000,
+            1171
+          ],
+          "pixels": 35,
+          "workingWorldXZ": {
+            "x": -66.83936523364486,
+            "z": 11.201665696859417
+          }
+        },
+        {
+          "uv": [
+            957.24,
+            1234
+          ],
+          "componentBoundsUV": [
+            955,
+            1231,
+            960,
+            1237
+          ],
+          "pixels": 38,
+          "workingWorldXZ": {
+            "x": -61.23588785046729,
+            "z": 14.495526071591966
+          }
+        },
+        {
+          "uv": [
+            1000.55,
+            1233.66
+          ],
+          "componentBoundsUV": [
+            998,
+            1231,
+            1004,
+            1237
+          ],
+          "pixels": 38,
+          "workingWorldXZ": {
+            "x": -61.26494355140186,
+            "z": 10.928385952288783
+          }
+        }
+      ],
+      "centralLiftNativeApproximateUV": [
+        980,
+        1200
+      ],
+      "minimumGlobalUncertaintyM": 1,
+      "minorDimensions": "Not printed; reconstructed with physical railway/support checks."
+    },
+    "stairPrototype": {
+      "form": "Two aligned straight flights and flat intermediate landing",
+      "formEvidence": [
+        "S10 plateLXXXIV Fig2",
+        "LOC071937"
+      ],
+      "workingHeadsX": [
+        -73.2,
+        -54.912
+      ],
+      "sourceRow": 5,
+      "centresZ": [
+        12.667632121365035,
+        12.590911935252352
+      ],
+      "adoptedExitWorldY": -7.4676,
+      "adoptedPlatformWorldY": -11.985625,
+      "workingDropM": 4.518025,
+      "risers": [
+        14,
+        13
+      ],
+      "riserM": 0.16733425925925924,
+      "internalGoings": [
+        13,
+        12
+      ],
+      "goingM": 0.284,
+      "landingM": 1.2,
+      "totalEnvelopeM": 8.3,
+      "nominalClearWidthM": 2,
+      "treadWidthM": 2.14,
+      "qualification": "All minor dimensions/counts are inferred coordination choices; source supports overall form and separate arrivals route, not this precise stair schedule."
+    },
+    "firstSubsetRows": [
+      {
+        "ordinal": 1,
+        "platformMapping": "CandidateP1; not labelled inFig3",
+        "westZ": 69.49943331242115,
+        "eastZ": 69.42271312630847
+      },
+      {
+        "ordinal": 2,
+        "platformMapping": "CandidateP2; not labelled inFig3",
+        "westZ": 55.332665479288316,
+        "eastZ": 55.255945293175635
+      },
+      {
+        "ordinal": 3,
+        "platformMapping": "CandidateP3; not labelled inFig3",
+        "westZ": 40.91880285836828,
+        "eastZ": 40.8420826722556
+      },
+      {
+        "ordinal": 4,
+        "platformMapping": "CandidateP4; not labelled inFig3",
+        "westZ": 26.752035025235454,
+        "eastZ": 26.675314839122773
+      },
+      {
+        "ordinal": 5,
+        "platformMapping": "CandidateP5; not labelled inFig3",
+        "westZ": 12.667632121365035,
+        "eastZ": 12.590911935252352
+      },
+      {
+        "ordinal": 6,
+        "platformMapping": "CandidateP6; not labelled inFig3",
+        "westZ": -0.3460267020941719,
+        "eastZ": -0.42274688820685336
+      },
+      {
+        "ordinal": 7,
+        "platformMapping": "CandidateP7; not labelled inFig3",
+        "westZ": -14.018604959652592,
+        "eastZ": -14.095325145765273
+      },
+      {
+        "ordinal": 8,
+        "platformMapping": "CandidateP8; not labelled inFig3",
+        "westZ": -28.350102651310227,
+        "eastZ": -28.426822837422907
+      }
+    ],
+    "row9Hold": {
+      "nativeU": 1649,
+      "nominalWestZ": -42.43450555518065,
+      "nominalEastZ": -42.51122574129333,
+      "reason": "Source nominal envelope falls outside current actualP9 and crosses near track18. TrackplateLXXVIII shows stair groups inside labelledP9. No ad hoc reindexing, stair translation or railway shift authorized by evidence."
+    },
+    "floorFinish": {
+      "status": "Unverified for completeExit",
+      "s10PrintedPages": [
+        256,
+        257
+      ],
+      "correction": "Marble and granolithic schedules do not positively name completeExit. Francis168 granolithic paragraph describes31stStreet baggage/pipegallery, not33rdStreet Exit;169 says concourse architectural finish underothercontracts.",
+      "permittedClaim": "Neutral material appearance is interpreted; no exact marble variety or complete granolithic certification."
+    },
+    "westernMain": {
+      "status": "Held for coordinated structural/floor correction",
+      "qualifiedWesternEdgeX": -78.8,
+      "minimumEdgeUncertaintyM": 1,
+      "reason": "Source includes open-to-track court; current Main-based roof pier feet lack lower continuations. Do not cut floor and expose floating supports."
+    },
+    "notDelivered": [
+      "Complete northernLIRR arrangement",
+      "ResolvedP9 cross-plan correspondence",
+      "Full source-backed Exit-to-street routes",
+      "Exact historic riser/member schedule",
+      "Certified1935 retention",
+      "CorrectedwesternMainfloor"
+    ]
+  }
+}

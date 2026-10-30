@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "scope": "Compactsource-onlyfirst-eightarrivalscheckpoint;no rawGLBs/scenes/reference-rasters",
+  "baselineSourceSha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+  "standaloneGenerator": {
+    "file": "penn-station-1935/model/repair_arrivals_access.py",
+    "sha256": "115d16ae2a6fe9d2217ab443c27dfeb7a3d7bacac7982360ee1f5c7337b440cf"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2560,
+      "sha256": "8b36397d0c7bb33275db7a3c484e9626088b4b41d8738a82d20f6891c7ab1abb"
+    },
+    {
+      "path": "cli-replay-proof.json",
+      "bytes": 2059,
+      "sha256": "993d5e11a6b1a9d44b87fbb5c2d86fda24393beea38d2ea1fa8d8583a0962bc9"
+    },
+    {
+      "path": "frozen-candidate-READY.json",
+      "bytes": 1465,
+      "sha256": "1ec20e5bbd1a2b2c38e1414d01d4bcb5a5683e7a3b154d394a8129d81bfec10d"
+    },
+    {
+      "path": "frozen-candidate-arrival-layout.json",
+      "bytes": 69108,
+      "sha256": "940c3e9af86b06b97f6deef42c922c3d2750c33764dbd3ad35551e267262dc31"
+    },
+    {
+      "path": "frozen-candidate-fixture-relocation-recipe.json",
+      "bytes": 22361,
+      "sha256": "4e3b6005e3d7364b0a7d1dd41004e159218d9559d31b97dd9aa3dc548a4e1525"
+    },
+    {
+      "path": "frozen-candidate-fixture-support-proof.json",
+      "bytes": 6692,
+      "sha256": "aaa64c221076a920f5d52b2587fedee02fb0011bc9b1f7e8dee03928217928fc"
+    },
+    {
+      "path": "frozen-candidate-source-proof.json.gz",
+      "bytes": 45415,
+      "sha256": "00633587d848988f28dff4eaa1215b0bda8ef72b73c318f44bd6fc67adb6334a",
+      "uncompressedBytes": 1034330,
+      "uncompressedSha256": "715435918224899607c4241bc41b80afc7c5141a1d243f8b6724a00de2035146"
+    },
+    {
+      "path": "independent-loadpaths.json.gz",
+      "bytes": 3056,
+      "sha256": "2a8c2b7c964d267ce5f27f56cad2ba51deb1e7b450577f70f3dfc624ffe8e845",
+      "uncompressedBytes": 89090,
+      "uncompressedSha256": "c731fa04dd52d24707ffbdee5084541fc6111c8f8b65113102bffffc02350ff9"
+    },
+    {
+      "path": "independent-raw-routes-relocated-platform.json.gz",
+      "bytes": 2402,
+      "sha256": "697eef66056cbd6d1d179912c8b5657673c1c66bc49df664b62c8352a17d8473",
+      "uncompressedBytes": 60104,
+      "uncompressedSha256": "6524bb525d614d997300fdae9b4c91dcb7ec2eb8ce9f04d85088ac12e2ccdae3"
+    },
+    {
+      "path": "sourceinputs/bounded-construction-recipe.json",
+      "bytes": 6853,
+      "sha256": "7b71199f6cccb90bc6ccda1216df300ba7d0e93113349f06efd4626be84a8e7f"
+    },
+    {
+      "path": "sourceinputs/expected-inputs.json",
+      "bytes": 733,
+      "sha256": "ceafc7f2ab8342f468668de614c3573d01676a4f600bbbf40916c491627a24c3"
+    },
+    {
+      "path": "sourceinputs/input-scene-manifest.json.gz",
+      "bytes": 48494,
+      "sha256": "1b2179f829de072c002b5ab9d9515b36e7fc6fd75bf0fc84d5b2cfd301ec67da",
+      "uncompressedBytes": 594687,
+      "uncompressedSha256": "fdb502f1b0226f59f9102f9cea88493cd771b5d08323e074a7b9a19d0191de65"
+    },
+    {
+      "path": "sourceinputs/physical-input-hashes.json",
+      "bytes": 958,
+      "sha256": "b0c6c085018d7fee08ff659b1255033de59e0ec1b2466b19b70bb818a4081e30"
+    },
+    {
+      "path": "sourceinputs/research-evidence.json",
+      "bytes": 15009,
+      "sha256": "2bcbe20ff8a8e42b85e05e8d757e7f2788d5325a23ee06fec917a0eb1b6858b0"
+    },
+    {
+      "path": "sourceinputs/reviewed-support-point-summary.json",
+      "bytes": 20318,
+      "sha256": "1f1452ce994e1d5e82b863b97e0ee8629fe23286253ba6c56ec40d4631be96b2"
+    },
+    {
+      "path": "sourceinputs/reviewed-support-trace.json",
+      "bytes": 69075,
+      "sha256": "2c457abd0f7354353a943431aae6de33d229f93d87eb1aa7a1b71148abd9da6e"
+    },
+    {
+      "path": "sourceinputs/runtime-arrival-fixture-census.json.gz",
+      "bytes": 8518,
+      "sha256": "951311a49c43e7b2f9ec7b606dad21d6c01821ab7b88d43311b31871a4f27ab0",
+      "uncompressedBytes": 243518,
+      "uncompressedSha256": "b51b8b9787939f1818f78750603353606e8059f9672c9bd70e5a6de332986590"
+    },
+    {
+      "path": "sourceinputs/source-arrival-dependencies.json.gz",
+      "bytes": 77033,
+      "sha256": "c3a3d78898656ed19a98f82540a092968cd381b7ad6f4edbffd62ba680c565ce",
+      "uncompressedBytes": 2476866,
+      "uncompressedSha256": "26de8ed782b4d29e76f105ee6f166943f011078be30be2dbcf1a1f55baf3a94e"
+    }
+  ]
+}

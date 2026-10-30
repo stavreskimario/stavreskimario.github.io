@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "scope": "External primary-evidence audit and bounded construction recipe only. No repository/model/runtime/bake edits.",
+  "sourceEvidence": "research-evidence.json",
+  "relativeFloor": {
+    "source": "S9 plateLXI",
+    "northFeet": {
+      "main": 319.01,
+      "exit": 308.51,
+      "difference": 10.5
+    },
+    "northDifferenceMetres": 3.2004,
+    "southFeet": {
+      "main": 318.82,
+      "lower": 308.39,
+      "difference": 10.43
+    },
+    "qualification": "Local graded absolute floors; adopted global relative difference is north control, not a universal flat absolute datum."
+  },
+  "clearHeight": {
+    "source": "S9 plateLXI north33rdStreet section",
+    "feet": 8,
+    "inches": 10,
+    "metres": 2.6924,
+    "qualification": "Local explicitly printed clearance; Gibbs11ft table entry is not proved universal clear height."
+  },
+  "width": {
+    "source": "S10 printed252",
+    "feet": 60,
+    "metres": 18.288,
+    "workingWorldX": [
+      -73.2,
+      -54.912
+    ],
+    "minimumGlobalUncertaintyM": 1
+  },
+  "longitudinalBoundaries": {
+    "southNativeUBand": [
+      270,
+      285
+    ],
+    "southWorkingWorldZ": 71,
+    "qualification": "Approximately read end beside source row1, not exact finished-wall survey.",
+    "northFirstSubsetWorldZ": -34,
+    "northStatus": "Temporary research/safety boundary between rows8/9; not historical partition.",
+    "fullPrintedLengthFt": 480,
+    "fullLengthMustNotBeCentred": true
+  },
+  "row5FilledSupportSymbols": {
+    "source": "S10 Fig3",
+    "method": "Manually identified compact filled symbols around central lift; threshold170 connected-component centroid in native grayscale, 8-neighbour adjacency. Positions of symbols, not certified member profiles.",
+    "points": [
+      {
+        "uv": [
+          958.36,
+          1168.94
+        ],
+        "componentBoundsUV": [
+          955,
+          1166,
+          963,
+          1173
+        ],
+        "pixels": 50,
+        "workingWorldXZ": {
+          "x": -66.79578168224299,
+          "z": 14.419536032606183
+        }
+      },
+      {
+        "uv": [
+          997.43,
+          1168.43
+        ],
+        "componentBoundsUV": [
+          995,
+          1166,
+          1000,
+          1171
+        ],
+        "pixels": 35,
+        "workingWorldXZ": {
+          "x": -66.83936523364486,
+          "z": 11.201665696859417
+        }
+      },
+      {
+        "uv": [
+          957.24,
+          1234
+        ],
+        "componentBoundsUV": [
+          955,
+          1231,
+          960,
+          1237
+        ],
+        "pixels": 38,
+        "workingWorldXZ": {
+          "x": -61.23588785046729,
+          "z": 14.495526071591966
+        }
+      },
+      {
+        "uv": [
+          1000.55,
+          1233.66
+        ],
+        "componentBoundsUV": [
+          998,
+          1231,
+          1004,
+          1237
+        ],
+        "pixels": 38,
+        "workingWorldXZ": {
+          "x": -61.26494355140186,
+          "z": 10.928385952288783
+        }
+      }
+    ],
+    "centralLiftNativeApproximateUV": [
+      980,
+      1200
+    ],
+    "minimumGlobalUncertaintyM": 1,
+    "minorDimensions": "Not printed; reconstructed with physical railway/support checks."
+  },
+  "stairPrototype": {
+    "form": "Two aligned straight flights and flat intermediate landing",
+    "formEvidence": [
+      "S10 plateLXXXIV Fig2",
+      "LOC071937"
+    ],
+    "workingHeadsX": [
+      -73.2,
+      -54.912
+    ],
+    "sourceRow": 5,
+    "centresZ": [
+      12.667632121365035,
+      12.590911935252352
+    ],
+    "adoptedExitWorldY": -7.4676,
+    "adoptedPlatformWorldY": -11.985625,
+    "workingDropM": 4.518025,
+    "risers": [
+      14,
+      13
+    ],
+    "riserM": 0.16733425925925924,
+    "internalGoings": [
+      13,
+      12
+    ],
+    "goingM": 0.284,
+    "landingM": 1.2,
+    "totalEnvelopeM": 8.3,
+    "nominalClearWidthM": 2,
+    "treadWidthM": 2.14,
+    "qualification": "All minor dimensions/counts are inferred coordination choices; source supports overall form and separate arrivals route, not this precise stair schedule."
+  },
+  "firstSubsetRows": [
+    {
+      "ordinal": 1,
+      "platformMapping": "CandidateP1; not labelled inFig3",
+      "westZ": 69.49943331242115,
+      "eastZ": 69.42271312630847
+    },
+    {
+      "ordinal": 2,
+      "platformMapping": "CandidateP2; not labelled inFig3",
+      "westZ": 55.332665479288316,
+      "eastZ": 55.255945293175635
+    },
+    {
+      "ordinal": 3,
+      "platformMapping": "CandidateP3; not labelled inFig3",
+      "westZ": 40.91880285836828,
+      "eastZ": 40.8420826722556
+    },
+    {
+      "ordinal": 4,
+      "platformMapping": "CandidateP4; not labelled inFig3",
+      "westZ": 26.752035025235454,
+      "eastZ": 26.675314839122773
+    },
+    {
+      "ordinal": 5,
+      "platformMapping": "CandidateP5; not labelled inFig3",
+      "westZ": 12.667632121365035,
+      "eastZ": 12.590911935252352
+    },
+    {
+      "ordinal": 6,
+      "platformMapping": "CandidateP6; not labelled inFig3",
+      "westZ": -0.3460267020941719,
+      "eastZ": -0.42274688820685336
+    },
+    {
+      "ordinal": 7,
+      "platformMapping": "CandidateP7; not labelled inFig3",
+      "westZ": -14.018604959652592,
+      "eastZ": -14.095325145765273
+    },
+    {
+      "ordinal": 8,
+      "platformMapping": "CandidateP8; not labelled inFig3",
+      "westZ": -28.350102651310227,
+      "eastZ": -28.426822837422907
+    }
+  ],
+  "row9Hold": {
+    "nativeU": 1649,
+    "nominalWestZ": -42.43450555518065,
+    "nominalEastZ": -42.51122574129333,
+    "reason": "Source nominal envelope falls outside current actualP9 and crosses near track18. TrackplateLXXVIII shows stair groups inside labelledP9. No ad hoc reindexing, stair translation or railway shift authorized by evidence."
+  },
+  "floorFinish": {
+    "status": "Unverified for completeExit",
+    "s10PrintedPages": [
+      256,
+      257
+    ],
+    "correction": "Marble and granolithic schedules do not positively name completeExit. Francis168 granolithic paragraph describes31stStreet baggage/pipegallery, not33rdStreet Exit;169 says concourse architectural finish underothercontracts.",
+    "permittedClaim": "Neutral material appearance is interpreted; no exact marble variety or complete granolithic certification."
+  },
+  "westernMain": {
+    "status": "Held for coordinated structural/floor correction",
+    "qualifiedWesternEdgeX": -78.8,
+    "minimumEdgeUncertaintyM": 1,
+    "reason": "Source includes open-to-track court; current Main-based roof pier feet lack lower continuations. Do not cut floor and expose floating supports."
+  },
+  "notDelivered": [
+    "Complete northernLIRR arrangement",
+    "ResolvedP9 cross-plan correspondence",
+    "Full source-backed Exit-to-street routes",
+    "Exact historic riser/member schedule",
+    "Certified1935 retention",
+    "CorrectedwesternMainfloor"
+  ]
+}
