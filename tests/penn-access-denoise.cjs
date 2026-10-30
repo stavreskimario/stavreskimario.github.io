@@ -14,15 +14,17 @@ const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const denoisedDirectory = 'authoring/penn-station-1935/lighting/phase6/denoised';
 const rawDirectory = 'authoring/penn-station-1935/lighting/phase6/raw';
 
-function constantHdr(label) {
-  // Valid 2048-square Radiance RLE at exactly0.125, not a header-only stub.
-  const header = Buffer.from(`#?RADIANCE\n# Synthetic validator ${label}\nFORMAT=32-bit_rle_rgbe\n\n-Y 2048 +X 2048\n`);
-  const scanline = [2,2,8,0];
+function constantHdr(label, resolution = 2048) {
+  // Valid square Radiance RLE at exactly0.125, not a header-only stub.
+  assert([2048,4096].includes(resolution));
+  const header = Buffer.from(`#?RADIANCE\n# Synthetic validator ${label}\nFORMAT=32-bit_rle_rgbe\n\n-Y ${resolution} +X ${resolution}\n`);
+  const scanline = [2,2,resolution >> 8,resolution & 255];
   for (const value of [128,128,128,126]) {
-    for (let i=0;i<16;i++) scanline.push(255,value);
-    scanline.push(144,value);
+    for (let remaining=resolution; remaining>0;) {
+      const count=Math.min(127,remaining);scanline.push(128+count,value);remaining-=count;
+    }
   }
-  return Buffer.concat([header,...Array.from({length:2048},()=>Buffer.from(scanline))]);
+  return Buffer.concat([header,...Array.from({length:resolution},()=>Buffer.from(scanline))]);
 }
 
 module.exports = async function accessControls({assets, illumination, repositoryDirectory, sampleRecord, report}) {

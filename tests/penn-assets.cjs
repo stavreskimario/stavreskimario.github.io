@@ -24,6 +24,8 @@ const phase6AccessDenoisedDirectory = 'authoring/penn-station-1935/lighting/phas
 const phase6AccessRawDirectory = 'authoring/penn-station-1935/lighting/phase6/raw';
 const phase7CirculationDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase7/denoised';
 const phase7CirculationRawDirectory = 'authoring/penn-station-1935/lighting/phase7/raw';
+const phase8ArrivalsDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase8/denoised';
+const phase8ArrivalsRawDirectory = 'authoring/penn-station-1935/lighting/phase8/raw';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
 function denoiseEntries(zone, file, record) {
@@ -48,16 +50,18 @@ function denoisePolicy(record, baseZone) {
   const phase5Vault = zone === 'waiting-room-vault' && authoringDirectory === phase5VaultDenoisedDirectory;
   const phase6Access = zone === 'concourse-access' && authoringDirectory === phase6AccessDenoisedDirectory;
   const phase7Circulation = zone === 'concourse-circulation' && authoringDirectory === phase7CirculationDenoisedDirectory;
-  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation, `${zone}: supported local authoring directory`);
+  const phase8Arrivals = zone === 'concourse-arrivals' && authoringDirectory === phase8ArrivalsDenoisedDirectory;
+  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals, `${zone}: supported local authoring directory`);
   if (zone === 'concourse-access') assert(phase6Access, `${zone}: requires its exact Phase6 source directory`);
   if (zone === 'concourse-circulation') assert(phase7Circulation, `${zone}: requires its exact Phase7 source directory`);
-  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation;
+  if (zone === 'concourse-arrivals') assert(phase8Arrivals, `${zone}: requires its exact Phase8 source directory`);
+  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals;
   if (zone !== baseZone) {
     assert.equal(baseZone, 'waiting-room', 'Only waiting-room children use atlas-specific zones');
     assert(['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'].includes(zone));
     assert(fresh, `${zone}: split-atlas provenance must identify the new authored source directory`);
   }
-  const fullDimensions = phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
+  const fullDimensions = phase8Arrivals ? [4096] : phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
     : ['waiting-room-masonry', 'waiting-room-order'].includes(zone) ? [4096] : [2048];
   return { authoringDirectory, fresh, fullDimensions,
     inputTransfer: fresh || zone === 'platform' ? 'linear' : 'srgb' };
@@ -112,6 +116,7 @@ function checkBakeStatistics(bake, record, retained) {
   assert(Number.isInteger(bake.resolution) && bake.resolution >= 2048, `${zone}: finite source bake resolution`);
   if (zone === 'concourse-access') assert.equal(bake.resolution, 2048, `${zone}: bounded access source bake is exactly2048`);
   if (zone === 'concourse-circulation') assert.equal(bake.resolution, 2048, `${zone}: bounded circulation source bake is exactly2048`);
+  if (zone === 'concourse-arrivals') assert.equal(bake.resolution, 4096, `${zone}: arrivals source bake is exactly4096`);
   assert.equal(retained.width, bake.resolution); assert.equal(retained.height, bake.resolution);
   assert(bake.resolution >= record.full.width, `${zone}: delivered derivative does not exceed retained source resolution`);
   assert(Number.isFinite(bake.atlasSurfaceArea) && bake.atlasSurfaceArea >= .01 && bake.atlasSurfaceArea <= 1.001,
@@ -170,6 +175,28 @@ async function verifyCirculationSource({ record, bakeBytes, repositoryDirectory 
     archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
 }
 
+async function verifyArrivalsSource({ record, bakeBytes, repositoryDirectory }) {
+  assert.equal(record.zone, 'concourse-arrivals');
+  assert.equal(record.authoringDirectory, phase8ArrivalsDenoisedDirectory, 'Arrivals denoised source uses its exact Phase8 directory');
+  assert.equal(record.inputTransfer, 'linear', 'Arrivals HDR input remains linear');
+  assert.equal(record.rawAuthoringDirectory, phase8ArrivalsRawDirectory, 'Arrivals raw source uses its exact Phase8 directory');
+  assert.equal(record.sourceArchiveFile, 'lighting-concourse-arrivals-sky.hdr.gz', 'Arrivals raw HDR uses its exact lossless archive name');
+  assert.equal(record.retainedHdr.archiveFile, 'lighting-concourse-arrivals-sky-denoised-linear.hdr.gz', 'Arrivals retained HDR uses its exact lossless archive name');
+  assert(/^[a-f0-9]{64}$/.test(record.bakeReportSha256), 'Arrivals bake report has an exact SHA256');
+  assert.equal(hash(bakeBytes), record.bakeReportSha256, 'Arrivals runtime bake report matches the reported SHA');
+  const directory = path.resolve(repositoryDirectory, record.rawAuthoringDirectory);
+  const rawBakeBytes = await fs.readFile(path.join(directory, 'lighting-concourse-arrivals.json'));
+  assert(rawBakeBytes.equals(bakeBytes), 'Arrivals raw and runtime bake reports match byte-for-byte');
+  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));
+  const source = gunzipSync(archive);
+  assert.equal(hash(source), record.sourceSha256, 'Arrivals raw HDR decoded bytes match sourceSha256');
+  assert(source.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), 'Arrivals raw source is actual HDR radiance');
+  const resolution = source.subarray(0, 4096).toString('ascii').match(/\n[+-]Y\s+(\d+)\s+[+-]X\s+(\d+)/);
+  assert(resolution && Number(resolution[1]) === 4096 && Number(resolution[2]) === 4096, 'Arrivals raw HDR retains its4096 source resolution');
+  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,
+    archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
+}
+
 async function verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions }) {
   const zone = record.zone; const derivative = record[variant];
   const suffix = variant === 'low' ? '-low' : '';
@@ -197,7 +224,10 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   const circulationMaps = ['lighting-concourse-circulation-sky.webp', 'lighting-concourse-circulation-sky-low.webp'];
   const circulationReferenced = circulationMaps.some(file => illumination.has(file));
   if (circulationReferenced) assert(circulationMaps.every(file => illumination.has(file)), 'Referenced circulation atlas requires both full and low maps');
-  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : [])]) {
+  const arrivalsMaps = ['lighting-concourse-arrivals-sky.webp', 'lighting-concourse-arrivals-sky-low.webp'];
+  const arrivalsReferenced = arrivalsMaps.some(file => illumination.has(file));
+  if (arrivalsReferenced) assert(arrivalsMaps.every(file => illumination.has(file)), 'Referenced arrivals atlas requires both full and low maps');
+  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : []), ...(arrivalsReferenced ? ['concourse-arrivals'] : [])]) {
     const indexFile = `lighting-${baseZone}-denoise.json`;
     const indexBytes = await fs.readFile(path.join(assetsDirectory, indexFile));
     const index = JSON.parse(indexBytes);
@@ -219,7 +249,8 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
       checkBakeStatistics(bake, record, retained);
       const rawSource = record.zone === 'concourse-access'
         ? await verifyAccessSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-circulation'
-          ? await verifyCirculationSource({ record, bakeBytes, repositoryDirectory }) : null;
+          ? await verifyCirculationSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-arrivals'
+            ? await verifyArrivalsSource({ record, bakeBytes, repositoryDirectory }) : null;
       const derivatives = [];
       for (const variant of ['full', 'low']) {
         const derivative = await verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions: policy.fullDimensions });
@@ -241,7 +272,7 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   return { atlases, groups };
 }
 
-module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, validateDenoising };
+module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, validateDenoising };
 
 if (require.main === module) (async () => {
   await MeshoptDecoder.ready;
