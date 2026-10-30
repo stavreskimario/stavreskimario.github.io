@@ -36,7 +36,7 @@ Static probes have no positional parallax or time-specific indirect relighting. 
 
 ## Validation and remaining work
 
-[VALIDATION.md](VALIDATION.md) identifies this checkpoint's exact bundle, model identities and scoped tests. The [actual production browser receipt](../authoring/penn-station-1935/review/phase5/stone-checkpoint/production-browser-summary.json) passes default walking, supported movement, all three main views, six persistent zones and the three linear roughness-map bindings. Publication is verified separately after pushing.
+[VALIDATION.md](VALIDATION.md) identifies this checkpoint's exact bundle, model identities and scoped tests. The [actual production browser receipt](../authoring/penn-station-1935/review/phase5/stone-checkpoint/production-browser-summary.json) passes default walking, supported movement, all three main views, six persistent zones and the three linear roughness-map bindings. [Actual published verification](../authoring/penn-station-1935/review/phase5/stone-checkpoint/final-publication.json) matches the bundle and six models, with supported walking and no page, HTTP or network failures. All eight checks and the matching Pages deployment pass; PR11 remains draft and unmerged.
 
 Runtime model, unique texture and lighting bytes: **161,327,896 bytes** across both variants. The asset check passes 12 decoded GLBs with zero errors, 280 retained warnings and 76 shared KTX2 files. The internal custom-stage allowance is **180,000,000 bytes**; the complete legacy-root public tree must remain below its separate 1GB limit. Hosting settings are unchanged. The registry retains three apps; Engineering Journal and Crystal Palace remain removed.
 
