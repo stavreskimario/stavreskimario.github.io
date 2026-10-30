@@ -1,45 +1,33 @@
-# Pennsylvania Station — material and interior checkpoint
+# Pennsylvania Station — concourse circulation checkpoint
 
-An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. This checkpoint refines three stone finishes and adds two photograph-supported waiting-room wall fixtures. Exterior, waiting room, concourse, neighbourhood and railway remain one continuously loaded world.
+An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Two restored southern passage bays now connect the Main court to the outer departure stairs; the principal steel angle sections and all nine rear stair-well guards are corrected.
 
-The corrected ceiling charts and fresh vault bake are saved; their browser finish remains under review. This delivery retains the existing vault geometry and all six Phase 4 illumination atlases, AO bindings and static reflection probes. It does not complete the broader Phase 5 ceiling pass or the final photographic target.
-
-The intended period is 1935–1940, with opening-era drawings and photographs as architectural anchors. Minor dimensions, later alterations and appearance remain qualified; this is not a certified 1:1 replica. See the [research register](RESEARCH.md), [source catalog](sources.json) and [model ledger](model/README.md).
-
-## This checkpoint
+The intended period is1935–1940, using opening-era plans and photographs as anchors. Minor dimensions, later alterations, material appearance and several major unfinished areas remain qualified. This is a phased reconstruction with further photographic fidelity work ahead. See the [research register](RESEARCH.md), [source catalogue](sources.json), [circulation evidence](model/circulation-evidence.md) and [validation](VALIDATION.md).
 
 | Before | After | Why |
 | --- | --- | --- |
-| Very low effective roughness produces harsh stone highlights | Bounded linear roughness profiles for interior granite, exterior granite and travertine, each with a unit multiplier | Give the modern CC0 references a restrained interpreted finish without multiplying dark source values again |
-| Two photographed foreground wall fixtures are absent | A supported twin-globe bracket on each documented long-wall panel, with finer radial sampling on the existing cup/finial profiles | Recover a specific missing fitting without inventing a complete lighting inventory |
-| The earlier movement/floor repair needs to carry forward | Default Walk, supported street eye height, corrected floor layers and synchronized cached shadows remain | Preserve the verified navigation and floor checkpoint while changing the finish/fixture layer |
+| Southern masonry blocks two outer stair entrances | Two source-supported lower passage bays between retained piers | Connect the Main court to the peripheral departures |
+| Outward corner angles enlarge the principal columns |32principal and144isolated minor angle legs corrected around fixed anchors | Recover the documented principal envelope while retaining bases/lattice |
+| Rear stair-well edges have no visible barrier | Nine grounded rear closures joined to existing side guards | Complete the visible well perimeter; dimensions remain reconstructed |
 
-[The roughness provenance](../authoring/penn-station-1935/materials/phase5/roughness-provenance.json) records the selected B profiles: InteriorGranite 0.30–0.48, MilfordGranite 0.55–0.78 and Travertine 0.60–0.78. These are authored ranges in linear data, not measurements of historic stone. All nine original ambientCG maps, the four existing colour profiles, normal strengths, architectural surface UVs and marble-family roughness remain intact. The separate authored Bedford grain and existing opal-glass response remain interpreted materials.
-
-[The wall-fixture ledger](../authoring/penn-station-1935/review/phase5/wall-brackets/README.md) and [radial refinement](../authoring/penn-station-1935/review/phase5/wall-brackets/silhouette-refinement/README.md) distinguish photographed form from inferred size, placement and optics. Both credited reference crops come from the same opening-era LOC photograph. Only two foreground fixtures are added; exact 1935 retention and the complete fixture inventory remain unverified. No live lights or new lighting bake are added.
-
-The broad prism court, repaired capital shells, roof, furnishings and railway retain their previous geometry, apart from the two appended fixtures. Exact prism boundaries/pitch and minor ornament remain inferred. The authenticated north mural remains its native 728×260 monochrome recovery; five other mural fields remain neutral.
+Sixteen legs at four ambiguous secondary joints remain exact pending joint reconstruction. The existing departure flights, gate indicators, Main/Exit/platform datums and provisional arrivals deck retain their geometry. The approximately1.6m gate/pier registration difference remains unresolved. Western Main-floor openings and the separate arrivals stairs require coordinated reconstruction.
 
 ## Explore
 
-Choose **Enter Station**. **Walk is the default**, with a 1.68m street eye height and existing collision/floor support. Drag to look, use **WASD/arrows** to walk and **Shift** for speed. **Environment → Orbit** provides free flight, including **Q/E** for height. Ordinary viewpoints preserve the selected movement mode; archive comparisons and the guided tour use their cinematic framing. Exterior and interiors share the same loaded station. Fields, dialogs and blur guard camera input.
+Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors/stairs. **Environment → Orbit** enables free flight, with **Q/E** for height. The three main viewpoints move the camera around the same loaded station. Fields, dialogs and blur guard movement input.
 
-Daylight, field of view, shadows, quality, annotations, approximate archive comparisons and optional synthesized ambience remain available. Existing touch/low-quality fallbacks remain; further mobile optimization and the fuller Manhattan environment are deferred while desktop architecture takes priority.
+Daylight, field of view, shadows, quality, annotations, approximate archive comparisons and optional ambience are available. Existing touch/low-quality fallbacks remain; fuller Manhattan and further mobile optimization are deferred.
 
-## Rendering and source evidence
+## Rendering and evidence
 
-Blender authors the station and fixtures. React, React Three Fiber, Drei and Three.js render glTF 2.0 using Meshopt and shared KTX2 textures. WebGL 2 remains the default; native WebGPU parity is experimental. GitHub Pages needs no backend or visitor build step.
+Blender authors the architecture. React, React Three Fiber, Drei and Three.js render glTF2.0 with Meshopt and shared KTX2 textures. WebGL2 is the default; native WebGPU parity remains experimental. GitHub Pages requires no backend or visitor build step.
 
-All six retained Phase 4 GI atlases remain unchanged: 8192px vault, 4096px masonry/order and 2048px exterior/concourse/platform. The order uses 512 Metal samples; the other atlases use 128, with six diffuse bounces. Desktop order AO remains 4K. The retained static probes use 2048×1024 HDR at 64 samples, with existing low derivatives. Their source/denoise archives remain under `authoring/penn-station-1935/lighting/phase4/`. The new 25-degree ceiling charts and their separate bake are not part of this checkpoint.
+Eight illumination records are retained: the six original room/architecture atlases, the separate departure-access atlas and a new2048px/64-sample atlas for the closed southern wall residual. Existing room/floor lighting and static probes remain unchanged. Stone roughness refinements and two photograph-supported waiting-room brackets carry forward. The separately saved ceiling finish is still under review. Glass/stone optics, historic colours and static probes remain interpretations.
 
-Static probes have no positional parallax or time-specific indirect relighting. Historic colour, polish, lighting output and weather remain uncalibrated. Original maps, current editable sources and review files are public under repository-root `authoring/penn-station-1935/`; historical versions use the recorded immutable Git recovery paths. Exclusion from custom staging does not make those files private. See [asset rights](ASSET_RIGHTS.md) and [authoring instructions](model/README.md).
+Runtime model, unique texture, light and probe transfer totals **174,008,834bytes**. All12GLBs validate with zero errors,330recorded warnings and75shared KTX2 textures. Actual compressed-geometry checks cover all27flights, the restored Main/P1/P2 route, P3body clearance and rear barriers. The published browser completes both outer platform roundtrips with six persistent zones. Request events and hardware limits remain in the [validation record](VALIDATION.md); no fresh FPS or physical-phone certification is claimed.
 
-## Validation and remaining work
+Custom staging omits Blender/build tools and unbundled frontend sources while retaining runtime assets, licences and research documents. The complete legacy-root site remains below1GB. Source history is public and recoverable through immutable Git identities and verified backups; [asset rights](ASSET_RIGHTS.md) identify the references. Hosting settings remain unchanged. Engineering Journal and Crystal Palace remain removed.
 
-[VALIDATION.md](VALIDATION.md) identifies this checkpoint's exact bundle, model identities and scoped tests. The [actual production browser receipt](../authoring/penn-station-1935/review/phase5/stone-checkpoint/production-browser-summary.json) passes default walking, supported movement, all three main views, six persistent zones and the three linear roughness-map bindings. [Actual published verification](../authoring/penn-station-1935/review/phase5/stone-checkpoint/final-publication.json) matches the bundle and six models, with supported walking and no page, HTTP or network failures. All eight checks and the matching Pages deployment pass; PR11 remains draft and unmerged.
+## Remaining work
 
-Runtime model, unique texture and lighting bytes: **161,327,896 bytes** across both variants. The asset check passes 12 decoded GLBs with zero errors, 280 retained warnings and 76 shared KTX2 files. The internal custom-stage allowance is **180,000,000 bytes**; the complete legacy-root public tree must remain below its separate 1GB limit. Hosting settings are unchanged. The registry retains three apps; Engineering Journal and Crystal Palace remain removed.
-
-The preceding [floor](../authoring/penn-station-1935/review/phase5/floor-checkpoint/final-publication.json) and [default-walking](../authoring/penn-station-1935/review/phase5/default-walking/final-publication.json) receipts establish those published checkpoints. Current asset and browser evidence identifies the new material/fixture bytes separately. No new FPS result is claimed here.
-
-Ceiling mottling and its fresh bake remain unfinished, alongside distant prism-grid moiré, fine ornament/furnishing details, five murals, realistic period passengers, exact late-1930s operations and the fuller Manhattan environment. The PR remains unmerged pending owner authorization.
+Separate arrivals stairs, western floor openings, platform enclosure, further concourse/track/arcade detail, waiting-room ceiling/material finish, five murals and realistic passengers remain unfinished. Fuller Manhattan/mobile work is deferred. Exterior roof flicker stays last in this iteration. [PR11](https://github.com/stavreskimario/stavreskimario.github.io/pull/11) remains draft and unmerged.

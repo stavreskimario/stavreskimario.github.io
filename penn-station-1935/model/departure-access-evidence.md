@@ -37,7 +37,7 @@ The archived earlier Platform5 browser harness used a camera-only initial preset
 
 The access module has its own64-sample,2048px diffuse atlas, separate AO and512px fallback. `lighting-concourse-access-*` is separate from the retained older concourse, waiting-room and roof lighting maps. This correction does not publish the unaccepted roof-filtering experiments or claim a new whole-station illumination pass.
 
-`build_station.py` remains the older broad authoring baseline; running it alone does not reproduce this scoped departure correction. Run [repair_departure_access.py](repair_departure_access.py) against the exact previous Blender input recorded in the integration receipt, with the archived final recipe and decompressed census:
+`build_station.py` remains the older broad authoring baseline; running it alone does not reproduce this scoped departure correction. Run [repair_departure_access.py](https://github.com/stavreskimario/stavreskimario.github.io/blob/d6d6cb169c2c109b08da6b956bf8e439e94ab8f6/penn-station-1935/model/repair_departure_access.py) against the exact previous Blender input recorded in the integration receipt, with the archived final recipe and decompressed census:
 
 ```sh
 git show f7f4c23a68e8c59884a61ef48c048b85446d9a60:authoring/penn-station-1935/penn-station-phase5.blend > /path/to/review/penn-station-phase5-before-departure.blend

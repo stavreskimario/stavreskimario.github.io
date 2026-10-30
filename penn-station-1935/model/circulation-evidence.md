@@ -44,7 +44,7 @@ The departure schedule, platform mapping and approximately 1.6 m gate-registrati
 
 ## Reproduce the source correction
 
-Run [repair_concourse_circulation.py](repair_concourse_circulation.py) with the exact pre-correction input, SHA256 `ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d`. It requires a new output directory outside the repository and uses the frozen Phase 6 departure recipe by default.
+Run [repair_concourse_circulation.py](https://github.com/stavreskimario/stavreskimario.github.io/blob/d6d6cb169c2c109b08da6b956bf8e439e94ab8f6/penn-station-1935/model/repair_concourse_circulation.py) with the exact pre-correction input, SHA256 `ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d`. It requires a new output directory outside the repository and uses the frozen Phase 6 departure recipe by default.
 
 ```sh
 git show 4b97d5e54947084629c04b4f7307c26bf98019cb:authoring/penn-station-1935/penn-station-phase5.blend > /path/to/review/before-circulation.blend
