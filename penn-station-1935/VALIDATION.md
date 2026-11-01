@@ -1,4 +1,10 @@
-# Walking-query checkpoint — 2 November 2026 (Melbourne)
+# Faster Shift walking — 2 November 2026 (Melbourne)
+
+At the owner's request, Shift walking increases15%:5→5.75m/s. Normal walking remains2.6m/s and Orbit/free-flight speeds remain10/28m/s. Acceleration, deceleration and short collision sweeps are retained. [Actual native Chrome checks](../authoring/penn-station-1935/review/phase9/navigation/shift-speed.json) confirm ordinary W and both Shift keys move along the real waiting-room floor with six persistent zones and no page/HTTP errors. Short measured rates retain explicit RAF frame-phase tolerance. The complete collision-query34-leg loop below ran before this separate speed adjustment.
+
+Verified bundle SHA256 `5ec949e64a921d6c54121e3cafdb389b25a61800afb225d65c0f0820b963def5`; entry revision `9-walk-speed-1`. Publication follows the matching feature-branch Pages run. Further platform geometry, arcade completion and sustained lag remain in progress.
+
+## Previous walking-query checkpoint — 2 November 2026 (Melbourne)
 
 Conservative horizontal bounds rejection reduces unnecessary triangle collision queries. [Decoded-asset controls](../authoring/penn-station-1935/review/phase9/navigation/asset-query.json) preserve every hit/order/position/face across26,112 probes. Candidates fall155,444→122,820, with32,624 independent finite-ray exclusion checks. The [actual34-leg native walking loop](../authoring/penn-station-1935/review/phase9/navigation/native-query-summary.json) passes with six persistent zones and no page/server errors; cancellations and timing observations remain explicit. This is a small CPU component improvement, not proof of a whole-scene FPS gain or resolved sustained lag. Geometry, materials, light and quality settings remain unchanged.
 

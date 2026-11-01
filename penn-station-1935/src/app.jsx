@@ -543,7 +543,7 @@ function Navigation({ current, model }) {
       orbit.current.update(); invalidate(); return;
     }
     if (current.mode !== 'walk' || state.mode !== 'walk') return;
-    const desired = new THREE.Vector3(sideways, 0, -forward).normalize().applyAxisAngle(new THREE.Vector3(0, 1, 0), yaw.current).multiplyScalar(k.has('ShiftLeft') || k.has('ShiftRight') ? 5 : 2.6);
+    const desired = new THREE.Vector3(sideways, 0, -forward).normalize().applyAxisAngle(new THREE.Vector3(0, 1, 0), yaw.current).multiplyScalar(k.has('ShiftLeft') || k.has('ShiftRight') ? 5.75 : 2.6);
     velocity.current.lerp(desired, 1 - Math.exp(-dt * 10));
     if (velocity.current.lengthSq() < 0.0001 && !forward && !sideways) return;
     const movement = velocity.current.clone().multiplyScalar(dt);

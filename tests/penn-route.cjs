@@ -221,7 +221,7 @@ async function finishCli(code) {
           assert(!current.state.loading, `${label}: movement does not unexpectedly replace the world`);
           assert.deepEqual(current.scene, initial.scene, `${label}: every architectural zone remains the same visible world`);
           assert(current.navigation?.maximumCandidates < 512, `${label}: short collision rays stay local rather than traversing the railway fitting population`);
-          assert(horizontalDistance <= 5.25 * elapsed + .35, `${label}: movement stays within running speed; no preset teleport`);
+          assert(horizontalDistance <= (5.75 * 1.05) * elapsed + .35, `${label}: movement stays within running speed; no preset teleport`);
           if (options.mainStair) {
             const stairFraction = Math.max(0, Math.min(1, (position[0] - mainStair.bounds[0]) / (mainStair.bounds[1] - mainStair.bounds[0])));
             const expectedEye = mainStair.startFloorWorld + stairFraction * (mainStair.endFloorWorld - mainStair.startFloorWorld) + HUMAN_EYE;
