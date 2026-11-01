@@ -154,6 +154,8 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
       repositoryDirectory: legacySources, sampleRecord: waiting, report });
     await require('./penn-arrivals-denoise.cjs')({ assets, illumination,
       repositoryDirectory: legacySources, sampleRecord: waiting, report });
+    await require('./penn-platform-surface-denoise.cjs')({ assets, illumination,
+      repositoryDirectory: legacySources, sampleRecord: waiting, report });
 
     for (const mutation of [
       value => { value.constant018Test.after = .19; },

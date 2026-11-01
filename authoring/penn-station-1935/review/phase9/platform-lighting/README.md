@@ -1,0 +1,5 @@
+# Platform surface lighting preparation — 2 November 2026 (Melbourne)
+
+Adds an isolated `platform-surfaces` artifact in the platform/Main-relative coordinate frame. The existing platform atlas remains untouched. Source validation requires its exact Phase9 platform raw/denoised directories,4096px raw/retained/full images,512px fallback, lossless HDR archive identities, exact raw/runtime bake reports and pixel-identical full/fallback derivatives. Unreviewed namespaces, transfer substitutions, path aliases, changed reports, undersized derivatives and incomplete references remain rejected.
+
+[Fourteen validator control groups](validator-controls.json) pass, including retained earlier families. Independent append controls also pass retained BIN/material preservation and a platform-family mismatch rejection. These synthetic controls prepare the authoring pipeline; they do not establish a new bake, final platform model, visual improvement or publication. The actual module still needs source/encoded ownership, lighting, contacts, route and browser review.
