@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "scope": "Exact observed bounded ownership, normalization, manifest, removal and independent audit evidence. Large raw GLBs, model candidates, duplicate inputs and helper snapshots excluded.",
+  "files": [
+    {
+      "file": "receipts/manifest-review-v12.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 2313,
+      "compressedSha256": "6fc202bd68429b2a2af7465c9d620919906cb19e12f54515cb0577c6d2635c7a",
+      "decodedBytes": 10330,
+      "decodedSha256": "cd79f7175aa64b398a4b001c4e51441680539da758bb6d276d9b805b4099c660",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-manifest-review/final-v12/receipt-final-accepted-v12.json"
+    },
+    {
+      "file": "receipts/authority-reuse-v12.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 2429,
+      "compressedSha256": "85ab3d0c2c558c360b16d88932aed28386ab5757b82fa47bd762ea0cf158ceca",
+      "decodedBytes": 8745,
+      "decodedSha256": "d671a2c21d39a1370613a7186343faa654ed71e32ed182d66d475bb5299eaa53",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/v12-authority-reuse.json"
+    },
+    {
+      "file": "receipts/retained-v11-ready.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 3289,
+      "compressedSha256": "938ef7e3090fc2543faffa0346e200f14e05bd29659673c7842c0fa7c0299cb4",
+      "decodedBytes": 9997,
+      "decodedSha256": "c6e52d0e95110b4eff5b4756b29635a4ec491c654371778e629be723d45f10ec",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/READY.json"
+    },
+    {
+      "file": "receipts/owned-lattice-v11.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 3100,
+      "compressedSha256": "b3885dda8008f880010f2bd942c392cd378f62641fb6d027a566dce5b7e5d216",
+      "decodedBytes": 49229,
+      "decodedSha256": "bfe9e1aecee670329bc5634c4ab2f05b545f147711aa77d103f8a1ed06230aa5",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/owned-lattice-connected-v11.json"
+    },
+    {
+      "file": "receipts/reverse-interface-source-v11.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 2769,
+      "compressedSha256": "66d099ef2458fe9e33e74516df55289ff8f0de405ec1c74b20aff3cb1bbc34cb",
+      "decodedBytes": 41336,
+      "decodedSha256": "ff87d7902c3a3fcc4f663b123095f4677e8c7271aca35f327d39cc8410ffe6e5",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/retained-reverse-interfaces-connected-v11.json"
+    },
+    {
+      "file": "receipts/platform-regression.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 3173,
+      "compressedSha256": "af3561c70805e65ffddca72df46053d9eb59889d10fe58f1bfdae1d35175e696",
+      "decodedBytes": 19643,
+      "decodedSha256": "5c9b9dedd14ee143bd18bc73e6560452d0fe3e6d521659c2042f68e8ae8c4d59",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/platform-regression-after-bookkeeping.json"
+    },
+    {
+      "file": "receipts/initial-oriented-mismatch-v9.json.gz",
+      "kind": "Preserved initial mismatch; not a promotion receipt",
+      "compressedBytes": 2169,
+      "compressedSha256": "ed52299832c6f2e9b7e8894d1260ca2b750b05e5e4fb617d94ae5812b88ed69f",
+      "decodedBytes": 29474,
+      "decodedSha256": "1dac292d0ebc42c585211d806460bb765eec511d9ce88027b2b70d3503a785bf",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/owned-lattice-exploratory-v9.json"
+    },
+    {
+      "file": "receipts/main-owned-mapping-core.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1113,
+      "compressedSha256": "1135d2cf972e09cbffba273764433415579f2fc2d180a194bc91c8265b8259e3",
+      "decodedBytes": 3313,
+      "decodedSha256": "f212a4d174ac9d3bdb40996f979d90090fcde71a8c3857725c4eae21f3cc84c1",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/comparison-owned-main-v11/mapping-core.json"
+    },
+    {
+      "file": "receipts/main-owned-mapping-receipt.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1283,
+      "compressedSha256": "b7687edc50c152a90520e476de4defd37d4249ae11eeb9ca618f43b1a445646b",
+      "decodedBytes": 3617,
+      "decodedSha256": "97675b528ee481dacc2afb6c3da8d4a475cdfe8fe62f40fe8f9c227a2cb9e226",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/comparison-owned-main-v11/mapping-receipt.json"
+    },
+    {
+      "file": "receipts/main-protected-mapping-core.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1121,
+      "compressedSha256": "6e5cc7c7cb5987c57f3796c452ecaeddc315d1b7f3eec098ebde2c5ffe9f069b",
+      "decodedBytes": 3337,
+      "decodedSha256": "c7d65dcde10a33ccdd8f6c637f9e8cf0d38f6266aaabb236df194749d25bd517",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/comparison-protected-main-v11/mapping-core.json"
+    },
+    {
+      "file": "receipts/main-protected-mapping-receipt.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1292,
+      "compressedSha256": "b09cb588939adc5c79b12b572a1688039566a488bff0f0e77dc3197c7cc36f52",
+      "decodedBytes": 3643,
+      "decodedSha256": "48af02190c4cde0899b7c4efdec4f83ac719f427b8efe0f36c6cd0528e5b488c",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/comparison-protected-main-v11/mapping-receipt.json"
+    },
+    {
+      "file": "receipts/exterior-full-index-audit.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 580,
+      "compressedSha256": "3272edf890a704eb0e0d5b7d9c31933343441d74f198b1bc8a9821360dc54d2c",
+      "decodedBytes": 1290,
+      "decodedSha256": "5314c7df0d5188ca7ca723a31e29544f0f1b1e247f5e1ad2bcca126f590f45c9",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-full-index-audit.json"
+    },
+    {
+      "file": "receipts/exterior-full-interface-outcome.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 927,
+      "compressedSha256": "a5d7abb822f00fa7ddfeb61aaf2e2eef3342ae6b4152b622dbc4e06238d10dfa",
+      "decodedBytes": 6542,
+      "decodedSha256": "a2e77333a70a0c913242a779f80fa098f46300c1cdd18abee399153630b5eb43",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-full-interface-outcome.json"
+    },
+    {
+      "file": "receipts/exterior-full-removal.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1589,
+      "compressedSha256": "25d33d22e069964114bb0a024f630d2eee9892319f706618e4ad1715f817a9c0",
+      "decodedBytes": 6658,
+      "decodedSha256": "31c12d28356941e343d1818e3426694a95034879417635d6371e12dcb64340fd",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-full-removal.json"
+    },
+    {
+      "file": "receipts/exterior-low-index-audit.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 580,
+      "compressedSha256": "2cdbbd9d128946002b781b7bf7b39433a2e13db180b59b0bfca55cba14999d86",
+      "decodedBytes": 1289,
+      "decodedSha256": "92ab99b66d2bdcf0cb9735021235239f136168ff6fc38315b56c1fbc571237cf",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-low-index-audit.json"
+    },
+    {
+      "file": "receipts/exterior-low-interface-outcome.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 929,
+      "compressedSha256": "50c525a4d3a5026af35a0365d30183b162b4d8e245e8254ab8cb9c252ae49acb",
+      "decodedBytes": 6542,
+      "decodedSha256": "179e6563a8f81736e62e13b8cc92d456567bc26e182b4614b53ae137306fa7f6",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-low-interface-outcome.json"
+    },
+    {
+      "file": "receipts/exterior-low-removal.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1584,
+      "compressedSha256": "e90eaf9a1b72ec0b3799950c27675c496a9712045e6bbedb89b1151c51b92317",
+      "decodedBytes": 6656,
+      "decodedSha256": "02fd623d9232b742bc4b02e7db7cdfc40fd719e152e5c6e93888d6798f55e216",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/exterior-low-removal.json"
+    },
+    {
+      "file": "receipts/waiting-full-index-audit.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 510,
+      "compressedSha256": "fd996be319d8ac55bae2e167cbe58aed17d56116c0e4269673d79ffd7fa50c00",
+      "decodedBytes": 877,
+      "decodedSha256": "e4caf08c8ab92a2c786aacf8d4943b41b39980a68b70a85604f2a77aa5d33858",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/waiting-full-index-audit.json"
+    },
+    {
+      "file": "receipts/waiting-full-removal.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1381,
+      "compressedSha256": "e0ba787b5fd5b1a8de898a3b660449d8e1f090cbd48775513d5d8924f44f49c8",
+      "decodedBytes": 4701,
+      "decodedSha256": "45ec5110c28937dca37bd4f531b1dc3d96a9097324f1c656d642da1fc6f92d26",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/waiting-full-removal.json"
+    },
+    {
+      "file": "receipts/waiting-low-index-audit.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 509,
+      "compressedSha256": "e0b2cb625f11a6fa2b379787680b74b70c6038b6cbe586cfbdf11b547771dc5d",
+      "decodedBytes": 876,
+      "decodedSha256": "00e123fdd81e84691b6d49c65a20ad9204a6e4492896a424170846981165e740",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/waiting-low-index-audit.json"
+    },
+    {
+      "file": "receipts/waiting-low-removal.json.gz",
+      "kind": "receipt",
+      "compressedBytes": 1379,
+      "compressedSha256": "16635578dab2890a6a82b7f956e73783cab14a4d21ed5aab6a256b669cd872e1",
+      "decodedBytes": 4700,
+      "decodedSha256": "d034448f68eec10f3bdb983c8091a2435d03a1d5097bfb51d2edfd38167a4d16",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/final-retained-v11/waiting-low-removal.json"
+    },
+    {
+      "file": "failures/actual-v11-before-bookkeeping.log",
+      "kind": "Preserved prior failure/source identity",
+      "bytes": 1199,
+      "sha256": "0184116e6f426d86b60df1a5d998cc1645c88fe4ff3b2bd20da23f2d1cb4c3d3",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/diagnostic-v11-before-exterior.log"
+    },
+    {
+      "file": "failures/synthetic-before-bookkeeping.log",
+      "kind": "Preserved prior failure/source identity",
+      "bytes": 692,
+      "sha256": "21a066a6fb69a0978973da9745fbd7bd5f798135df3026cabb36a5a357814e51",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/reverse-interface-before-fix.log"
+    },
+    {
+      "file": "failures/before-bookkeeping-source-pins.json",
+      "kind": "Preserved prior failure/source identity",
+      "bytes": 1040,
+      "sha256": "71c32e55f3fb877cd32e4b8a6cfe0c04e5898b54c5cfc4716cd13c77a7cca5b8",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-packaging-v1/before-bookkeeping-source/source-pins.json"
+    },
+    {
+      "file": "receipts/source-portable-replay-v12.json.gz",
+      "kind": "Independent full portable source replay; all5rawGLBs exact",
+      "compressedBytes": 1973,
+      "compressedSha256": "0c5407c173f3abaff828dcfabeda5ee17b08cba1731f736ca13daf591728b5e3",
+      "decodedBytes": 4943,
+      "decodedSha256": "f87795450cf01923d3400a1fe03deb349eb9aad2f31105b3f4598dc1dddb4641",
+      "originalArtifact": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/portable-replay-v12/portable-replay-proof.json"
+    }
+  ]
+}

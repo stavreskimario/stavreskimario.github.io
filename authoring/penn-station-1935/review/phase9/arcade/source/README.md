@@ -30,7 +30,16 @@ uv run --offline --no-project --python 3.11 \
   --out /path/to/a/new/external/review-directory
 ```
 
-`portable-source-proof.json` proves the architectural body in `repair_arcade_enclosure.py` is copied byte-for-byte from the frozen generator, and `arcade_connected_extensions.py` is unchanged. The portable header alters only argument/path handling and input checks. Both files compile and `--check-inputs` passes. A complete replay through this portable header is not claimed here; the frozen original producer ran successfully.
+`portable-source-proof.json` proves the architectural body in `repair_arcade_enclosure.py` is copied byte-for-byte from the frozen generator, and `arcade_connected_extensions.py` is unchanged. The portable header alters only argument/path handling and input checks. Both files compile and `--check-inputs` passes. A complete CPU-only replay of the copied repository CLI also succeeds: the new module and all four authority GLBs are **byte-identical** to frozen v12. `portable-replay-proof.json` pins the exact files and distinguishes generator/Blender serialization metadata from unchanged architecture.
+
+The protected Main context is a separate transport export. After authoring, reproduce it with the included unchanged helper:
+
+```sh
+uv run --offline --no-project --python 3.11 \
+  --with bpy==4.3.0 --with 'numpy<2' \
+  python export_retained_main.py \
+  --candidate /path/to/the/new/external/review-directory
+```
 
 ## Source and uncertainty
 
@@ -70,6 +79,6 @@ The reviewed lighting-preparation step may set `skip_lighting_atlas` only on exa
 
 ## Validation and promotion
 
-Frozen v12 has 596,604 triangles and thirteen materials. Every new solid passes directed-edge closure, positive volume and nondegenerate triangulation. The CPU audit records 1,878 passing finite probes, including all twenty measured reveal-slit probes. The independent architectural reviewer separately checks dense street-to-Main circulation, all eight Ionic bearing chains, arch normals, retained ownership/materials and side-floor metadata.
+Frozen v12 has 596,604 triangles and thirteen materials. Every new solid passes directed-edge closure, positive volume and nondegenerate triangulation. The CPU audit records 1,878 passing finite probes, including all twenty measured reveal-slit probes. Independent source, physical and export gates also pass; receipts are in [the independent review](../independent/README.md). They include 21,570 walking states, all eight Ionic bearing chains, 51 protected old material datablocks, all thirteen independent new material/node trees, 33,464 unchanged portico faces, nine entire public-floor meshes, and the Main arch/jambs plus all 28 treads. Finite rays establish tested contacts and circulation, not structural capacity or browser certification.
 
 Root owns the final source review, asset baking/compression, four-tier strict removal, navigation/glass integration, native browser traversal and publication. Until those gates pass, the canonical source and live assets remain unchanged.

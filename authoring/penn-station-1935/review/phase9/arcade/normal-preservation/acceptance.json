@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "status": "PASS: scoped arcade authored-normal preservation through actual CPU bake preparation",
+  "sourceFiles": {
+    "arcade_corner_normals.py": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/arcade_corner_normals.py",
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "bake_lighting.py": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/bake_lighting.py",
+      "sha256": "0856c7e028af7340e3a25aff14c38a0699a74e4e76e40b877eeea63904349241"
+    }
+  },
+  "rawSourceSha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+  "preparedGlbSha256": "f037b26aaf58d755b95a83d7604c0bb42d835cbf527d63c116fe9a9486a8c6c4",
+  "receipts": {
+    "actualPrep": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/prepared-normal-v4/preparation-proof.json",
+      "sha256": "c4b75aaa40202ac36995935bb8a3dac6222bc5c2c3277faa3d5f58918265ed2a"
+    },
+    "independentGeometryAndNormals": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/v12-prepared-normal-correspondence.json",
+      "sha256": "58b118eee0aea7415c5070b0ef7415850c6cda9226c5e4bbdac4f33b7df0cf08"
+    },
+    "hiddenContactReconciliation": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/v12-prepared-hidden-contact-reconciliation.json",
+      "sha256": "55914317b1436bacfcff9df4c67abb12263694b736de711cbb0f9459371251c5"
+    }
+  },
+  "geometry": {
+    "matchedTriangles": 596604,
+    "retriangulatedTriangles": 0,
+    "degenerateRawTriangles": 0,
+    "maximumCornerDeltaMetres": 7.64428116888113e-06,
+    "minimumMatchedNormalDot": -1.0000000000000002
+  },
+  "normalIntegrity": {
+    "schema": 1,
+    "scope": "arcade-enclosure authored corner normals",
+    "temporaryAttribute": "_PennArcadeWorldCornerNormal",
+    "sourceObjects": 865,
+    "sourceCorners": 1637856,
+    "sourceNegativeHemisphereCorners": 800,
+    "sourceMinimumFaceAlignment": -0.17489463494833302,
+    "restoredCorners": 1637547,
+    "minimumRestoredSourceNormalDot": 0.999976827657675,
+    "maxEncodingAngleDegrees": 0.3900528331360596,
+    "maxAllowedEncodingAngleDegrees": 0.5,
+    "restoredNegativeHemisphereCorners": 800,
+    "restoredMinimumFaceAlignment": -0.17482367359471906,
+    "finiteUnitNormals": true,
+    "temporaryAttributeRemoved": true,
+    "status": "PASS"
+  },
+  "resolvedNegativeControl": {
+    "previousBakedGlbSha256": "483f3e394f0e3c33037c650bca2e1b6c4761d4ed27ab290ade0f5d9e162f0c76",
+    "previousChangedVaultTriangles": 391,
+    "newChangedExposedVaultTriangles": 0,
+    "previousChangedIonicTriangles": 884,
+    "newExposedIonicTrianglesBeyondEncodingBound": 0,
+    "allowedExactPairedInternalContacts": 99
+  },
+  "archRings": {
+    "Loggia terminal transverse stone archivolt": {
+      "triangles": 1156,
+      "flatTriangles": 576,
+      "curvedTriangles": 580,
+      "minimumSourceNormalDot": 0.9999999951499925,
+      "flatMinimumGeometricAlignment": 1.0,
+      "maximumCornerDelta": 3.732723320805972e-16
+    },
+    "Vestibule front arched stone reveal": {
+      "triangles": 1156,
+      "flatTriangles": 576,
+      "curvedTriangles": 580,
+      "minimumSourceNormalDot": 0.9999999200000074,
+      "flatMinimumGeometricAlignment": 0.9999999800000017,
+      "maximumCornerDelta": 3.3187928778615763e-16
+    }
+  },
+  "scope": [
+    "Only arcade-enclosure snapshots/restores; all previous artifact behavior and report shape remain unchanged.",
+    "Actual topology, merge threshold, UV smart-project settings and smoothing flags remain unchanged.",
+    "Temporary corner attribute is absent from export.",
+    "All existing 800 authored negative-hemisphere corner values are retained as source state; none introduced."
+  ],
+  "remaining": [
+    "Fresh Metal bake required; stale v2 is rejected.",
+    "Final baked/encoded and native browser acceptance follow separately."
+  ]
+}

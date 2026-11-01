@@ -126,7 +126,18 @@ function checkBakeStatistics(bake, record, retained) {
   if (zone === 'concourse-circulation') assert.equal(bake.resolution, 2048, `${zone}: bounded circulation source bake is exactly2048`);
   if (zone === 'concourse-arrivals') assert.equal(bake.resolution, 4096, `${zone}: arrivals source bake is exactly4096`);
   if (zone === 'platform-surfaces') assert.equal(bake.resolution, 4096, `${zone}: platform-surface source bake is exactly4096`);
-  if (zone === 'arcade-enclosure') assert.equal(bake.resolution, 4096, `${zone}: arcade source bake is exactly4096`);
+  if (zone === 'arcade-enclosure') {
+    assert.equal(bake.resolution, 4096, `${zone}: arcade source bake is exactly4096`);
+    const normals = bake.arcadeNormalIntegrity;
+    assert.equal(normals?.status, 'PASS', 'Arcade bake requires authored corner-normal preservation');
+    assert.equal(normals.temporaryAttributeRemoved, true);
+    assert.equal(normals.finiteUnitNormals, true);
+    assert.equal(normals.maxAllowedEncodingAngleDegrees, .5, 'Bounded Blender custom-normal re-encoding');
+    assert(Number.isFinite(normals.maxEncodingAngleDegrees) && normals.maxEncodingAngleDegrees >= 0 && normals.maxEncodingAngleDegrees <= .5);
+    assert(Number.isFinite(normals.minimumRestoredSourceNormalDot) && normals.minimumRestoredSourceNormalDot >= Math.cos(Math.PI / 360) - 1e-7);
+    assert(Number.isInteger(normals.sourceNegativeHemisphereCorners) && normals.sourceNegativeHemisphereCorners >= 0);
+    assert(Number.isInteger(normals.restoredNegativeHemisphereCorners) && normals.restoredNegativeHemisphereCorners >= 0 && normals.restoredNegativeHemisphereCorners <= normals.sourceNegativeHemisphereCorners, 'No new inward corner normals');
+  }
   assert.equal(retained.width, bake.resolution); assert.equal(retained.height, bake.resolution);
   assert(bake.resolution >= record.full.width, `${zone}: delivered derivative does not exceed retained source resolution`);
   assert(Number.isFinite(bake.atlasSurfaceArea) && bake.atlasSurfaceArea >= .01 && bake.atlasSurfaceArea <= 1.001,

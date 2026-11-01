@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "status": "PASS: full portable CLI authoring replay, no rendering",
+  "sourceSha256Before": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "sourceSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "portableCliSha256": "6ccbfb8578693c3b4f59e07bb4c8bb7e963721e11087c7afad2c18c14d0126bc",
+  "portableExtensionSha256": "f10e0032e5513f6eea8eb0f75447868d01fcf60794029496d8ef76670640bffc",
+  "frozenOriginalGeneratorSha256": "98e82326c7e0e8da42f2bcbe431af264c664110ec958553fd48f56101179fe39",
+  "separateMainContextExporterSha256": "e5214aa06fa225ea5548ec276654cf8f0dd6a199cff4458f9fe3ff9bf6a41be7",
+  "CPUControls": "Reduced priority; OPENBLAS_NUM_THREADS1, OMP_NUM_THREADS2; no renders/GPU use.",
+  "files": {
+    "formal-arcade-module.glb": {
+      "bytes": 33546008,
+      "frozenSha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "replaySha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "byteIdentical": true,
+      "jsonSha256": "ea386b95c56cb2920a4fe308e47d8a1c3ab4c1c2a04ac3aca29b8836a5378fe4",
+      "trailingBinSha256": "cadb7ac7be1148b44f6f69ea91ebf1ffbc6888384c04e1c349724efff189b40c",
+      "images": 9,
+      "textures": 17
+    },
+    "old-arcade-owned-exterior-street0.glb": {
+      "bytes": 959208,
+      "frozenSha256": "f8ad116cc8e59a764a754b0ab73b67371f52b44325fa7e81c2c2e34c8457f893",
+      "replaySha256": "f8ad116cc8e59a764a754b0ab73b67371f52b44325fa7e81c2c2e34c8457f893",
+      "byteIdentical": true,
+      "jsonSha256": "d67cc187b5814bd40d868a6bc8ced10ae568207092887ce4b2bcf4d7b6a969af",
+      "trailingBinSha256": "2f22236e462c8ceafc674579f97ea740d538c0cec3cee3384c14c3c54704d900",
+      "images": 0,
+      "textures": 0
+    },
+    "old-arcade-owned-main-main0.glb": {
+      "bytes": 188260,
+      "frozenSha256": "b8da605c17114cea4f6bf6a67e6ba8fb1826550677b0ff2617efaf254052c03f",
+      "replaySha256": "b8da605c17114cea4f6bf6a67e6ba8fb1826550677b0ff2617efaf254052c03f",
+      "byteIdentical": true,
+      "jsonSha256": "3da20706d7164d9205c641b46bfb84f1d215ecdd7ff1e9554f45fca3fea230ff",
+      "trailingBinSha256": "b145b3a4f5791ce5d6b5f58c14cc540170c1b9fe94fc3daea810b73a2949d0de",
+      "images": 0,
+      "textures": 0
+    },
+    "retained-exterior-occluder.glb": {
+      "bytes": 49410300,
+      "frozenSha256": "fc62b1f34c1a56c771a2b91e21aa48e3c5d2d0d1f65712c62c29b0d450894ec6",
+      "replaySha256": "fc62b1f34c1a56c771a2b91e21aa48e3c5d2d0d1f65712c62c29b0d450894ec6",
+      "byteIdentical": true,
+      "jsonSha256": "dcc54ae93a045c18e703fa8124481911783555346e825555c476cc016873665c",
+      "trailingBinSha256": "560a75610cdfa16eb3b5d3b1a9c479bea6a7df200d687cd6d0afa99e849fec72",
+      "images": 0,
+      "textures": 0
+    },
+    "retained-main-occluder-main0.glb": {
+      "bytes": 54752524,
+      "frozenSha256": "5e56cfc2a135c499eb40a1a9c6ad5516359c7bbee95043a8f0d32ebba58ad511",
+      "replaySha256": "5e56cfc2a135c499eb40a1a9c6ad5516359c7bbee95043a8f0d32ebba58ad511",
+      "byteIdentical": true,
+      "jsonSha256": "dd8ada9ee5016a421db30f5b99b88200fa9f2bcc2c270ef4462e599f24bbe730",
+      "trailingBinSha256": "24ae18aa24175d413e5161f759cf2e1eba34ecbaae22057c6d3320e75c1ba7d9",
+      "images": 0,
+      "textures": 0
+    }
+  },
+  "allFiveRawFilesByteIdentical": true,
+  "architecturalProofFieldsEqual": {
+    "removedComponents": true,
+    "retainedCornerChecks": true,
+    "unrelatedSourceObjectSignaturesExact": true,
+    "bays": true,
+    "pilasterContactRecords": true,
+    "geometryChecks": true,
+    "counts": true,
+    "newMaterialNames": true,
+    "protectedMaterialSignaturesBefore": true,
+    "protectedMaterialSignaturesAfter": true,
+    "allRetainedMaterialNamesNodesPropertiesAndExtrasExact": true,
+    "walkableAdditions": true,
+    "connectedRouteControls": true,
+    "extensionRecords": true,
+    "protectedExteriorScalarisation": true
+  },
+  "exporterTagRestorationRecordsExactlyEqualWhenOrderedByIdentity": true,
+  "provenanceDifferences": {
+    "generatorSha256": {
+      "frozen": "98e82326c7e0e8da42f2bcbe431af264c664110ec958553fd48f56101179fe39",
+      "portable": "6ccbfb8578693c3b4f59e07bb4c8bb7e963721e11087c7afad2c18c14d0126bc"
+    },
+    "reviewBlendSha256": {
+      "frozen": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+      "portable": "de2953ce096d1ad3ce4e265fcf26762b187eeb1331411c132f524873c5325f94"
+    },
+    "exporterTagLedgerSequence": {
+      "sameRecords": true,
+      "sameSequence": false,
+      "meaning": "Iteration over Blender material identities can log the same four restored used-tags in a different sequence. Full records and all final material signatures match."
+    },
+    "meaning": "Portable argument/path handling changes generator provenance and Blender file serialization. Every raw geometry/material/authority GLB is byte-identical; no architectural attribute difference is present."
+  }
+}

@@ -18,5 +18,6 @@
     "arcade-section-calibration.json": "e375323ec56ad541bc8a25bac7c5d39fbb5d7cd78488dc9167a5e97df2d6f60f",
     "arcade-connected-ownership-controls.json": "a38ce6abfbd07689cf7cde2bfcc73a3b139ae6e2d37ebdca8045dd728adb924f"
   },
-  "validation": "Python compile + check-inputs only; no full portable-header replay claimed yet. Root owns acceptance/promotion."
+  "validation": "Python compile, input-hash checks, full portable CLI authoring replay and separate Main-context export pass. New module and all four authority GLBs byte-identical to frozen v12.",
+  "portableReplayProofSha256": "f87795450cf01923d3400a1fe03deb349eb9aad2f31105b3f4598dc1dddb4641"
 }

@@ -143,6 +143,10 @@ for obj in [obj for obj in scene.objects if obj.type == "MESH"]:
 
 if not solids:
     raise RuntimeError("No opaque architecture to bake")
+arcade_normal_integrity = None
+if artifact_zone == "arcade-enclosure":
+    from arcade_corner_normals import preserve_arcade_corner_normals, restore_arcade_corner_normals
+    arcade_normal_integrity = preserve_arcade_corner_normals(solids)
 bpy.ops.object.select_all(action="DESELECT")
 for obj in solids:
     obj.select_set(True)
@@ -173,6 +177,8 @@ else:
     bpy.ops.mesh.remove_doubles(threshold=.00001)
     bpy.ops.uv.smart_project(angle_limit=math.radians(75), island_margin=args.uv_margin_pixels / args.resolution, margin_method="FRACTION", area_weight=.5, correct_aspect=True, scale_to_bounds=True)
     bpy.ops.object.mode_set(mode="OBJECT")
+if arcade_normal_integrity is not None:
+    arcade_normal_integrity = restore_arcade_corner_normals(architecture, arcade_normal_integrity)
 mesh.calc_loop_triangles()
 uv_values = np.empty(len(mesh.loops) * 2, dtype=np.float32)
 mesh.uv_layers[light_uv_name].data.foreach_get("uv", uv_values)
@@ -356,6 +362,8 @@ report = {
     "orderUv": order_uv_audit,
     "vaultNormalIntegrity": vault_normal_integrity,
 }
+if arcade_normal_integrity is not None:
+    report["arcadeNormalIntegrity"] = arcade_normal_integrity
 if not args.ao_only and not (report["illumination"] and report["illumination"]["maximum"] > 0 and report["illumination"]["mean"] > 0):
     raise RuntimeError("The complete daylight atlas contains no positive radiance; do not promote this bake")
 (args.out / f"lighting-{artifact_zone}.json").write_text(json.dumps(report, indent=2) + "\n")
