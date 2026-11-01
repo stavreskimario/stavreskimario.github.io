@@ -1,0 +1,9 @@
+# First-eight platform surface illumination
+
+Blender4.3 CyclesMetal,4096px/64diffuse samples,4outer×24AO rays,neutral sky/sixdiffuse bounces. No directional sun is baked. Input/source hashes and five current registered occluders are retained in the [review packet](../../review/phase9/platform-lighting/bake-inputs-v1.json): waiting room, complete concourse, exterior, retained railway and trains. Old solid P1–8 platform prisms are excluded from transport.
+
+Raw and retained HDRs use lossless gzip; source-resolution PNGs, AO and exact raw bake metadata remain here. The [archive manifest](archive-manifest.json) binds every source byte. The denoised4096px/512px PNGs are delivered as pixel-identical lossless WebP. Mean radiance changes approximately−0.303%; the linear0.18 transfer control passes. Storage scale2 retains denoiser highlights without clipping; decoded physical brightness remains unchanged. The original scale1 bake report is retained exactly, with normalization recorded separately.
+
+The original16source meshes contain2,432triangles. The standard bake join removes six exactly coincident, internal dressing underside faces already covered by concrete bearing faces; [surface reconciliation](../../review/phase9/platform-lighting/bake-hidden-interface-reconciliation.json) retains all exposed top, edge and cove geometry. The resulting2,426triangles use two material batches. Subsequent texture packaging and losslessFloat32 Meshopt transport are separate receipts.
+
+This source package does not establish final browser appearance, full platform enclosure, new reflection probes, structural capacity or a1:1historic replica. Flat tops, chosen centre depth, end closures and colour/joint/aggregate values remain interpreted. Older P9–11 illumination and existing probes remain separate artifacts.

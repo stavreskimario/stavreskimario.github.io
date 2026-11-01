@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "status": "LOSSLESS MODULE COMPRESSION PASS; no geometry generation, quantization, simplification or filtering",
+  "inputSha256": "541c5e305eb8a6b82b5e60e9a53d3cf0777e43bf52e183aac22747dec30dc3b3",
+  "decodedInputSha256": "541c5e305eb8a6b82b5e60e9a53d3cf0777e43bf52e183aac22747dec30dc3b3",
+  "outputSha256": "f2adad98c904f54d8b3b06787f364cc8d96698ed1fec541a95f31882cced06db",
+  "triangleCount": 2426,
+  "accessors": 10,
+  "decodedAccessorScalars": 32208,
+  "viewCount": 3,
+  "allDecodedViewBytesExact": true,
+  "allAccessorDefinitionsIndicesAttributesTransformsMaterialsTexturesExact": true,
+  "sourcePositions": "Float32 retained exactly",
+  "indexEncoding": "Meshopt INDICES, sequence-preserving",
+  "views": [
+    {
+      "view": 0,
+      "kind": "attribute",
+      "mode": "ATTRIBUTES",
+      "filter": "NONE",
+      "count": 2179,
+      "stride": 40,
+      "decodedBytes": 87160,
+      "decodedSha256": "3893e2197e947daf534d2c832067b5213941ca7ab4f6253328bdfa524b284b8f",
+      "encodedBytes": 57877
+    },
+    {
+      "view": 1,
+      "kind": "indices",
+      "mode": "INDICES",
+      "filter": "NONE",
+      "count": 7278,
+      "stride": 2,
+      "decodedBytes": 14556,
+      "decodedSha256": "a6a4362fd4cdbe4662cfa8de1974d04924d1fdc4a12baade04fb5195a6837a84",
+      "encodedBytes": 7300
+    },
+    {
+      "view": 2,
+      "kind": "attribute",
+      "mode": "ATTRIBUTES",
+      "filter": "NONE",
+      "count": 314,
+      "stride": 40,
+      "decodedBytes": 12560,
+      "decodedSha256": "ed3dd395d9269754b887647a8e31c3bf90af8e58194f8997eb99f6a3e8cefd00",
+      "encodedBytes": 8334
+    }
+  ]
+}

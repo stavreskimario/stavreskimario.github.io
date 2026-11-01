@@ -1,0 +1,267 @@
+{
+  "status": "PASS",
+  "scope": "Read-only baked-source→texture-prepared→lossless module audit. All2426 post-bake triangles and32208 accessor scalars preserve exact world/material/normal/UV/index correspondence; separate six-hidden-interface bake reconciliation remains outside this codec proof. KTX2 image compression quality and atlas filtering have their own receipts, not implied pixel identity here.",
+  "inputs": {
+    "baked": {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/baked-v1/model-platform-surfaces.glb",
+      "sha256": "b53e75469857e37f5a559407fffc2ebc588a84abc52813d932703714e0645586",
+      "bytes": 9306144
+    },
+    "texturePrepared": {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-textures-v1/surface-textures-ready.glb",
+      "sha256": "541c5e305eb8a6b82b5e60e9a53d3cf0777e43bf52e183aac22747dec30dc3b3",
+      "bytes": 117944
+    },
+    "lossless": {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-packaging/lossless-replay-v2/platform-surface-module.glb",
+      "sha256": "f2adad98c904f54d8b3b06787f364cc8d96698ed1fec541a95f31882cced06db",
+      "bytes": 77728
+    }
+  },
+  "latestHelperReproducesEarlierCandidateExactly": true,
+  "comparisons": [
+    {
+      "stage": "texturePrepared",
+      "worldTriangles": 2426,
+      "allWorldPositionsAndMaterialCorrespondencesExact": true,
+      "allAccessorsAndIndexOrderExact": true,
+      "materials": [
+        {
+          "name": "RailwayPlatformRubbedConcretePhase9",
+          "attributes": {
+            "POSITION": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 6537,
+              "canonicalFloat32Sha256": "d9e8f556af1db676847912a93045e15cb8980e86c27ef5949d6ac983be6e1b2a"
+            },
+            "NORMAL": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 6537,
+              "canonicalFloat32Sha256": "ea6d45eba903596d0acf4af36c2b34b41e31956f84662b2ad5eb3d03b95b65b7"
+            },
+            "TEXCOORD_0": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 4358,
+              "canonicalFloat32Sha256": "fe357304f7d13480807864f6ea05f764b167702db9244c3eb9f7985b1361140a"
+            },
+            "TEXCOORD_1": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 4358,
+              "canonicalFloat32Sha256": "99c69709c6ea6e59a45697ffd6890f74392f2e4bae4ed289c8ae04a353e5690e"
+            }
+          },
+          "indices": {
+            "count": 6768,
+            "triangles": 2256,
+            "canonicalUInt16Sha256": "2e0e24022ec917b2d34b9d4470f33c641adeb43fe5ed67406584450f87de639e"
+          }
+        },
+        {
+          "name": "RailwayPlatformStippledGranolithicPhase9",
+          "attributes": {
+            "POSITION": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 942,
+              "canonicalFloat32Sha256": "0ec37a9cd277bfd362a5ff70f01bc5543455c8dd43bad266f21afffbe9c3fd21"
+            },
+            "NORMAL": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 942,
+              "canonicalFloat32Sha256": "131d3609a5a3d2981cbc10ee5687362eaff0e757c37ff81a3e48923c482bd7fb"
+            },
+            "TEXCOORD_0": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 628,
+              "canonicalFloat32Sha256": "3aa4807112391771246e1ce127791ca2fb7736ed842efc41af9d878ef72c7af6"
+            },
+            "TEXCOORD_1": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 628,
+              "canonicalFloat32Sha256": "c01452847729d5f155c571fa779a3bc420a22ca1f0247be3ba08e8b2155bb0d1"
+            }
+          },
+          "indices": {
+            "count": 510,
+            "triangles": 170,
+            "canonicalUInt16Sha256": "f04953e4986060c70d711a0a11850b9b60952f1ff79f0fd2fb00bcfc89e16322"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "lossless",
+      "worldTriangles": 2426,
+      "allWorldPositionsAndMaterialCorrespondencesExact": true,
+      "allAccessorsAndIndexOrderExact": true,
+      "materials": [
+        {
+          "name": "RailwayPlatformRubbedConcretePhase9",
+          "attributes": {
+            "POSITION": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 6537,
+              "canonicalFloat32Sha256": "d9e8f556af1db676847912a93045e15cb8980e86c27ef5949d6ac983be6e1b2a"
+            },
+            "NORMAL": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 6537,
+              "canonicalFloat32Sha256": "ea6d45eba903596d0acf4af36c2b34b41e31956f84662b2ad5eb3d03b95b65b7"
+            },
+            "TEXCOORD_0": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 4358,
+              "canonicalFloat32Sha256": "fe357304f7d13480807864f6ea05f764b167702db9244c3eb9f7985b1361140a"
+            },
+            "TEXCOORD_1": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 2179,
+              "normalized": false,
+              "scalars": 4358,
+              "canonicalFloat32Sha256": "99c69709c6ea6e59a45697ffd6890f74392f2e4bae4ed289c8ae04a353e5690e"
+            }
+          },
+          "indices": {
+            "count": 6768,
+            "triangles": 2256,
+            "canonicalUInt16Sha256": "2e0e24022ec917b2d34b9d4470f33c641adeb43fe5ed67406584450f87de639e"
+          }
+        },
+        {
+          "name": "RailwayPlatformStippledGranolithicPhase9",
+          "attributes": {
+            "POSITION": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 942,
+              "canonicalFloat32Sha256": "0ec37a9cd277bfd362a5ff70f01bc5543455c8dd43bad266f21afffbe9c3fd21"
+            },
+            "NORMAL": {
+              "type": "VEC3",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 942,
+              "canonicalFloat32Sha256": "131d3609a5a3d2981cbc10ee5687362eaff0e757c37ff81a3e48923c482bd7fb"
+            },
+            "TEXCOORD_0": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 628,
+              "canonicalFloat32Sha256": "3aa4807112391771246e1ce127791ca2fb7736ed842efc41af9d878ef72c7af6"
+            },
+            "TEXCOORD_1": {
+              "type": "VEC2",
+              "componentType": 5126,
+              "count": 314,
+              "normalized": false,
+              "scalars": 628,
+              "canonicalFloat32Sha256": "c01452847729d5f155c571fa779a3bc420a22ca1f0247be3ba08e8b2155bb0d1"
+            }
+          },
+          "indices": {
+            "count": 510,
+            "triangles": 170,
+            "canonicalUInt16Sha256": "f04953e4986060c70d711a0a11850b9b60952f1ff79f0fd2fb00bcfc89e16322"
+          }
+        }
+      ]
+    }
+  ],
+  "materialBindings": [
+    {
+      "name": "RailwayPlatformRubbedConcretePhase9",
+      "physicalScalarsAndTexcoordsExact": true,
+      "allowedLightingExtraChanges": {
+        "sky_illumination": [
+          "lighting-platform-surfaces-sky.png",
+          "lighting-platform-surfaces-sky.webp"
+        ],
+        "sky_illumination_scale": [
+          1,
+          2
+        ]
+      },
+      "slots": [
+        {
+          "slot": "occlusionTexture",
+          "texCoord": 1,
+          "uri": "textures/1dbb4370dc80ba66e186.ktx2"
+        }
+      ]
+    },
+    {
+      "name": "RailwayPlatformStippledGranolithicPhase9",
+      "physicalScalarsAndTexcoordsExact": true,
+      "allowedLightingExtraChanges": {
+        "sky_illumination": [
+          "lighting-platform-surfaces-sky.png",
+          "lighting-platform-surfaces-sky.webp"
+        ],
+        "sky_illumination_scale": [
+          1,
+          2
+        ]
+      },
+      "slots": [
+        {
+          "slot": "normalTexture",
+          "texCoord": 0,
+          "uri": "textures/f46d86be9b939ee4beec.ktx2"
+        },
+        {
+          "slot": "occlusionTexture",
+          "texCoord": 1,
+          "uri": "textures/1dbb4370dc80ba66e186.ktx2"
+        },
+        {
+          "slot": "baseColorTexture",
+          "texCoord": 0,
+          "uri": "textures/206a10b6a2d3fbbd05a1.ktx2"
+        },
+        {
+          "slot": "metallicRoughnessTexture",
+          "texCoord": 0,
+          "uri": "textures/e31619f2b2a7a5ba20dd.ktx2"
+        }
+      ]
+    }
+  ]
+}

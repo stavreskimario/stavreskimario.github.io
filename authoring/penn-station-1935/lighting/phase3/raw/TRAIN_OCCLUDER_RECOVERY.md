@@ -1,0 +1,1 @@
+The earlier `model-trains-occluder-before-step-flange-correction.glb` remains recoverable through the [Phase9 immutable source receipt](../../../review/phase9/storage/prior-train-occluder.json) and verified external backup. It is archived to keep room for platform authoring within the legacy root budget; no active runtime asset is removed.

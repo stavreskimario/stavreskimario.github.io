@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "status": "PASS: read-only canonical exports; no saved source mutation",
+  "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/authoring/penn-station-1935/penn-station-phase5.blend",
+  "sourceSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "sourceSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "generatorSha256": "93c314f924f0b1125b11fcbd1d7018214cae8e8d8e2f9f61fa8689cee8eecf79",
+  "allSourceObjectMatricesRestored": 11278,
+  "uniqueMeshAttributesRestored": 6222,
+  "exports": [
+    {
+      "zone": "waiting",
+      "meshObjects": 28,
+      "fontObjects": 4,
+      "objects": 32,
+      "rootObjects": 32,
+      "sourceToExportHeightShift": 4.2672,
+      "sourceFrame": "Street0; Mainworld-4.2672m",
+      "exportFrame": "Main0",
+      "expectedBakerZoneOffset": 0,
+      "beforeSourceFloorControls": [
+        {
+          "object": "02 Main waiting room \u2014 PublicFloorMarble",
+          "height": -4.267199993133545,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "PublicFloorMarble"
+        }
+      ],
+      "exportFrameFloorControls": [
+        {
+          "object": "02 Main waiting room \u2014 PublicFloorMarble",
+          "height": 6.866454960174906e-09,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "PublicFloorMarble"
+        }
+      ],
+      "restoredSourceFloorControls": [
+        {
+          "object": "02 Main waiting room \u2014 PublicFloorMarble",
+          "height": -4.267199993133545,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "PublicFloorMarble"
+        }
+      ],
+      "output": "current-waiting-occluder.glb",
+      "bytes": 70997940,
+      "sha256": "6b85f29ce1912314808c4c147f8b06918e68e96d5fba471042737d71135292a0"
+    },
+    {
+      "zone": "concourse",
+      "meshObjects": 11156,
+      "fontObjects": 73,
+      "objects": 11229,
+      "rootObjects": 11229,
+      "sourceToExportHeightShift": 4.2672,
+      "sourceFrame": "Street0; Mainworld-4.2672m",
+      "exportFrame": "Main0",
+      "expectedBakerZoneOffset": 0,
+      "beforeSourceFloorControls": [
+        {
+          "object": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+          "height": -4.267199993133545,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "ConcourseOpaqueCirculationConcrete"
+        },
+        {
+          "object": "Source registered ordinary Exit slab around individual lift.015",
+          "height": -7.467599868774414,
+          "normalZ": 1.0,
+          "deltaExpected": 1.3122558595313194e-07,
+          "material": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ],
+      "exportFrameFloorControls": [
+        {
+          "object": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+          "height": 0.0,
+          "normalZ": 1.0,
+          "deltaExpected": 0.0,
+          "material": "ConcourseOpaqueCirculationConcrete"
+        },
+        {
+          "object": "Source registered ordinary Exit slab around individual lift.015",
+          "height": -3.200399875640869,
+          "normalZ": 1.0,
+          "deltaExpected": 1.2435913099295703e-07,
+          "material": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ],
+      "restoredSourceFloorControls": [
+        {
+          "object": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+          "height": -4.267199993133545,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "ConcourseOpaqueCirculationConcrete"
+        },
+        {
+          "object": "Source registered ordinary Exit slab around individual lift.015",
+          "height": -7.467599868774414,
+          "normalZ": 1.0,
+          "deltaExpected": 1.3122558595313194e-07,
+          "material": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ],
+      "output": "current-concourse-occluder.glb",
+      "bytes": 91517356,
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce"
+    },
+    {
+      "zone": "exterior",
+      "meshObjects": 14,
+      "fontObjects": 1,
+      "objects": 15,
+      "rootObjects": 15,
+      "sourceToExportHeightShift": 0,
+      "sourceFrame": "Street0; Mainworld-4.2672m",
+      "exportFrame": "Street0",
+      "expectedBakerZoneOffset": 4.2672,
+      "beforeSourceFloorControls": [],
+      "exportFrameFloorControls": [],
+      "restoredSourceFloorControls": [],
+      "output": "current-exterior-occluder.glb",
+      "bytes": 50435532,
+      "sha256": "58bd1e9e76d1d7c16ed25e0c4e86d2e6430684d2a90c5d28ceb6825139427824"
+    }
+  ],
+  "limits": [
+    "Occluder geometry comes from current authored canonical source, not a historical scan.",
+    "Frame controls verify actual source floors; encoded runtime tolerances remain separate.",
+    "The source is never saved or overwritten."
+  ]
+}

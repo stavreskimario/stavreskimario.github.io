@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "status": "PASS: raw bake completed; denoise/packaging/browser pending",
+  "returncode": 0,
+  "elapsedWallMonotonicSeconds": 120.68733775000146,
+  "packetSha256": "b08094547de89682202b97d61f65b5eb2e847a49231808b36a547cf0b19d1e70",
+  "sourceSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "outputFiles": {
+    "lighting-platform-surfaces.json": {
+      "bytes": 8641,
+      "sha256": "d82cdbee541ca1dcfae4373a0a34468aac6fa8ce2ed58bfe5114dba7e50a8787"
+    },
+    "lighting-platform-surfaces-sky-low.png": {
+      "bytes": 68126,
+      "sha256": "e4e4712efd19437c2863191c08ef3a8e806c86db5b0fcf891572c5e4465453a7"
+    },
+    "model-platform-surfaces.glb": {
+      "bytes": 9306144,
+      "sha256": "b53e75469857e37f5a559407fffc2ebc588a84abc52813d932703714e0645586"
+    },
+    "lighting-platform-surfaces-ao.png": {
+      "bytes": 3782880,
+      "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f"
+    },
+    "lighting-platform-surfaces-sky.hdr": {
+      "bytes": 9584586,
+      "sha256": "972b209c51b5655f7a72857008d1f3591e1755e1468245cc54506ab97ca62f1e"
+    },
+    "lighting-platform-surfaces-sky.png": {
+      "bytes": 3788385,
+      "sha256": "fd14173c000ad2395f48d5e1ebc1cc4b67443ee715fd509c99e7ceed832d32f2"
+    }
+  },
+  "stats": {
+    "zone": "platform-surfaces",
+    "frameZone": "platform",
+    "resolution": 4096,
+    "samples": 64,
+    "engine": "4.3.0 Cycles METAL",
+    "atlasSurfaceArea": 0.20852309465408325,
+    "radianceScale": 1.0,
+    "ambientOcclusion": {
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.0894053503870964,
+      "coveredPixels": 16777216
+    },
+    "illumination": {
+      "minimum": 0.0,
+      "maximum": 0.7713595032691956,
+      "mean": 0.06417740881443024,
+      "coveredPixels": 4688007
+    },
+    "elapsedSeconds": 119.33994954198715,
+    "registeredOccluders": [
+      {
+        "zone": "waiting",
+        "source": "current-waiting-occluder.glb",
+        "sha256": "6b85f29ce1912314808c4c147f8b06918e68e96d5fba471042737d71135292a0",
+        "heightOffset": 0.0,
+        "objects": 28
+      },
+      {
+        "zone": "concourse",
+        "source": "current-concourse-occluder.glb",
+        "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce",
+        "heightOffset": 0.0,
+        "objects": 11229
+      },
+      {
+        "zone": "exterior",
+        "source": "current-exterior-occluder.glb",
+        "sha256": "58bd1e9e76d1d7c16ed25e0c4e86d2e6430684d2a90c5d28ceb6825139427824",
+        "heightOffset": 4.2672,
+        "objects": 15
+      },
+      {
+        "zone": "platform",
+        "source": "platform-retained-occluder.glb",
+        "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+        "heightOffset": 0.0,
+        "objects": 66376
+      },
+      {
+        "zone": "trains",
+        "source": "model-trains.glb",
+        "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+        "heightOffset": -8.886825000000002,
+        "objects": 66
+      }
+    ]
+  }
+}

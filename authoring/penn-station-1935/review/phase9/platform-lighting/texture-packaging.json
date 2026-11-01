@@ -1,0 +1,56 @@
+{
+  "scope": "Texture-only2048px KTX2/scalar normalization and external sharing. No quantize/simplify/weld/optimize geometry transform. Material radiance storage normalization changes1to2 to retain denoiser overshoot without clipping; physical decoded brightness is preserved.",
+  "source": {
+    "sha256": "b53e75469857e37f5a559407fffc2ebc588a84abc52813d932703714e0645586",
+    "bytes": 9306144
+  },
+  "output": {
+    "file": "surface-textures-ready.glb",
+    "sha256": "541c5e305eb8a6b82b5e60e9a53d3cf0777e43bf52e183aac22747dec30dc3b3",
+    "bytes": 117944
+  },
+  "textures": [
+    {
+      "uri": "textures/1dbb4370dc80ba66e186.ktx2",
+      "bytes": 950518
+    },
+    {
+      "uri": "textures/f46d86be9b939ee4beec.ktx2",
+      "bytes": 2553771
+    },
+    {
+      "uri": "textures/206a10b6a2d3fbbd05a1.ktx2",
+      "bytes": 2317428
+    },
+    {
+      "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
+      "bytes": 2819507
+    }
+  ],
+  "materials": [
+    {
+      "name": "RailwayPlatformRubbedConcretePhase9",
+      "extras": {
+        "lighting_atlas_uv": 1,
+        "sky_illumination": "lighting-platform-surfaces-sky.webp",
+        "sky_illumination_scale": 2,
+        "lightmap_encoding": "srgb-linear-radiance-v3"
+      }
+    },
+    {
+      "name": "RailwayPlatformStippledGranolithicPhase9",
+      "extras": {
+        "lighting_atlas_uv": 1,
+        "sky_illumination": "lighting-platform-surfaces-sky.webp",
+        "sky_illumination_scale": 2,
+        "lightmap_encoding": "srgb-linear-radiance-v3"
+      }
+    }
+  ],
+  "geometryCounts": {
+    "nodes": 1,
+    "meshes": 1,
+    "primitives": 2
+  },
+  "originalGeometrySource": "baked-v1; six internal underside-face changes reconciled separately"
+}

@@ -14,7 +14,7 @@ const validator = tools('gltf-validator');
 const sharp = tools('sharp');
 const { gunzipSync } = require('node:zlib');
 const { createHash } = require('node:crypto');
-const root = path.resolve(__dirname, '../penn-station-1935/assets');
+const root = path.resolve(process.env.PENN_ASSET_DIRECTORY || path.resolve(__dirname, '../penn-station-1935/assets'));
 const output = process.env.PENN_ASSET_REPORT || '/private/tmp/penn-phase3-asset-validation.json';
 
 const repositoryRoot = path.resolve(__dirname, '..');
@@ -322,7 +322,7 @@ if (require.main === module) (async () => {
     .flatMap(zone => [`model-${zone}.glb`, `model-${zone}-low.glb`]).sort();
   assert.deepEqual(metrics.assets.map(record => record.file).sort(), expectedModels,
     'Exactly six full and six mobile model variants are delivered');
-  const report = { created: new Date().toISOString(), revision: manifest.revision, railway: { tracks: manifest.railway.trackCount, platforms: manifest.railway.platformCount }, platformNormalCorrection: manifest.platformNormalCorrection, assets: [], anchors: manifest.dimensions };
+  const report = { created: new Date().toISOString(), assetsDirectory: root, revision: manifest.revision, railway: { tracks: manifest.railway.trackCount, platforms: manifest.railway.platformCount }, platformNormalCorrection: manifest.platformNormalCorrection, assets: [], anchors: manifest.dimensions };
   const shared = new Set(); const illumination = new Set(); let transfer = 0; let decoded = 0;
   for (const record of metrics.assets) {
     const filename = path.join(root, record.transportFile || record.file);

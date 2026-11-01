@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "status": "PASS: independently decoded exported floors in Main0 frame",
+  "rows": [
+    {
+      "zone": "waiting",
+      "control": [
+        0,
+        0,
+        0
+      ],
+      "hits": [
+        {
+          "material": "PublicFloorMarble",
+          "point": [
+            0,
+            0,
+            0
+          ],
+          "gap": 0
+        },
+        {
+          "material": "PublicFloorMarble",
+          "point": [
+            0,
+            0,
+            0
+          ],
+          "gap": 0
+        }
+      ],
+      "sha256": "6b85f29ce1912314808c4c147f8b06918e68e96d5fba471042737d71135292a0"
+    },
+    {
+      "zone": "concourse",
+      "control": [
+        -44,
+        0,
+        -30
+      ],
+      "hits": [
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "point": [
+            -44,
+            0,
+            -30
+          ],
+          "gap": 0
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "point": [
+            -44,
+            0,
+            -30
+          ],
+          "gap": 0
+        }
+      ],
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce"
+    },
+    {
+      "zone": "concourse",
+      "control": [
+        -70,
+        -3.2004,
+        30
+      ],
+      "hits": [
+        {
+          "material": "ConcourseOpaqueArrivalsConcrete",
+          "point": [
+            -70,
+            -3.200399875640869,
+            30
+          ],
+          "gap": 1.2435913099295703e-7
+        }
+      ],
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce"
+    }
+  ],
+  "limits": [
+    "This verifies the frozen raw occluder frames, not encoded runtime geometric precision or historical registration."
+  ]
+}

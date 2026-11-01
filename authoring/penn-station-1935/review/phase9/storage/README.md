@@ -1,0 +1,3 @@
+# Reversible source storage
+
+The earlier pre-step-flange-correction train occluder is archived to make room for the new platform lighting/source within the legacy Pages root budget. [Exact recovery receipt](prior-train-occluder.json) records a verified persistent backup, immutable Git commit/blob, original SHA256 and size. This is historical lighting provenance, not a discarded model. Current corrected train sources, runtime models, materials and all active retained lighting derivatives remain present. Restore the exact original outside the published tree with `git show COMMIT:PATH`, using the receipt fields.
