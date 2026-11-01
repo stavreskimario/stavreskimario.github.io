@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "status": "PASS: standalone repository CLI reproduces three rawGLBs and three PBRPNGs byte for byte",
+  "generatorSha256": "373795aed535f501c2e7e4a50fcc8992b58d90346cda247690eea9a4924dd86a",
+  "sourceSha256": "db4b398537b5838e8625091f4b81401834fc822d2c77652393c5f216e5532b1c",
+  "sourceSha256After": "db4b398537b5838e8625091f4b81401834fc822d2c77652393c5f216e5532b1c",
+  "manifestSha256": "f2d0e638a8db9b6b968c747bd69fb3f0e875a5ac4182607fad7835c88aeffe03",
+  "unrelatedObjectCount": 66264,
+  "unrelatedNamesAndSignaturesSha256": "3fccfae07a1fd8e075452b9899a84c88dc9e2e83e73fe815288fe60c14d557ec",
+  "outputs": [
+    {
+      "file": "platform-section-module.glb",
+      "referenceSha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "replaySha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "byteExact": true,
+      "bytes": 5510404
+    },
+    {
+      "file": "platform-section-owned-old.glb",
+      "referenceSha256": "53814f12236f587dc596fd2ad5b5310525641eedf23fddfcf88251ceede58769",
+      "replaySha256": "53814f12236f587dc596fd2ad5b5310525641eedf23fddfcf88251ceede58769",
+      "byteExact": true,
+      "bytes": 650572
+    },
+    {
+      "file": "platform-retained-occluder.glb",
+      "referenceSha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "replaySha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "byteExact": true,
+      "bytes": 13735708
+    },
+    {
+      "file": "granolithic-basecolor.png",
+      "referenceSha256": "6a3dcb0c18720c5a6e0b09d364a2f8dd78224519dae1cc4e001d74d9a487b8e2",
+      "replaySha256": "6a3dcb0c18720c5a6e0b09d364a2f8dd78224519dae1cc4e001d74d9a487b8e2",
+      "byteExact": true,
+      "bytes": 1473134
+    },
+    {
+      "file": "granolithic-normal.png",
+      "referenceSha256": "cabf112ba459e80f662edfaa9632b5cf7889dcc4e9b1b05609adb45627e278a2",
+      "replaySha256": "cabf112ba459e80f662edfaa9632b5cf7889dcc4e9b1b05609adb45627e278a2",
+      "byteExact": true,
+      "bytes": 1501792
+    },
+    {
+      "file": "granolithic-roughness.png",
+      "referenceSha256": "53a1a584267eaad13c8eda604dbbf6535a30864609abce7efa5f0abcb8b1fb64",
+      "replaySha256": "53a1a584267eaad13c8eda604dbbf6535a30864609abce7efa5f0abcb8b1fb64",
+      "byteExact": true,
+      "bytes": 1227466
+    }
+  ],
+  "editableScene": {
+    "referenceSha256": "c24c5ce587799ebe8fce6d629664a2187a6b1dfb180a753e798832a2aaaeb0ad",
+    "replaySha256": "0aed176c3b8ef92d714ef91a48948ea3a7965feb1f752629794f105a18e2f4bf",
+    "byteExact": false,
+    "qualification": "Blender container stores output paths/metadata; geometry exports and PBRpixels are exact."
+  },
+  "limits": [
+    "CPU authoring replay only; no GPU rendering, runtime assets, canonical source or deployment changed."
+  ]
+}

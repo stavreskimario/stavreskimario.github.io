@@ -1,0 +1,516 @@
+{
+  "status": "PASS",
+  "scope": "Pinned old full/low platform source ownership projected onto the actual delivered grid. Geometry matching uses20micrometre tolerance and100percent source-centroid coverage; no model translation or relaxed remover contract. Original raw sources remain byte-exact.",
+  "negativeControls": [
+    "nearest existing vertex is not a substitute for actual lattice rounding",
+    "one missing actual decoded vertex rejects source ownership",
+    "nonfinite source vertex",
+    "projection outside normalized source lattice",
+    "a wrong projection transform cannot exceed the half-cell bound",
+    "same points with reversed surface orientation are not owned",
+    "an adjacent nonowned triangle is never accepted",
+    "quantization cannot collapse source geometry into a line",
+    "explicit variant is required",
+    "variant cannot claim a different pinned base",
+    "altered decoded base cannot reuse pinned ownership",
+    "owned and protected source authorities cannot be swapped",
+    "altered source bytes are not a historical authority",
+    "default departure scope still rejects platform component materials",
+    "concourse-circulation scope cannot silently acquire railway materials",
+    "platform scope cannot widen the six-millimetre global contract",
+    "platform scope cannot lower existing source-coverage requirement",
+    "platform scope cannot relax oriented normals"
+  ],
+  "variants": [
+    {
+      "variant": "full",
+      "inputSha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+      "authority": {
+        "schema": 1,
+        "status": "EXACT DELIVERED-LATTICE OWNERSHIP AUTHORITY; not historical source alteration or runtime publication",
+        "variant": "full",
+        "base": {
+          "transportSha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+          "decodedSha256": "0b0bc9fa2d6974c20edd05cab9af900991222e6b9245dc9c5e587c7226bdd9de"
+        },
+        "sources": {
+          "owned": {
+            "file": "platform-section-owned-old.glb",
+            "sha256": "53814f12236f587dc596fd2ad5b5310525641eedf23fddfcf88251ceede58769"
+          },
+          "protected": {
+            "file": "platform-retained-occluder.glb",
+            "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b"
+          }
+        },
+        "method": "Transform each unchanged source vertex to Main0 world, inverse-transform by actual delivered batch matrix, round normalized coordinates*32767 to nearest integer, require exact actual same-material decoded vertex and oriented-triangle membership. No nearest-surface snapping or matching-tolerance increase.",
+        "lattice": {
+          "matrix": [
+            253.49057006835938,
+            0,
+            0,
+            0,
+            0,
+            253.49057006835938,
+            0,
+            0,
+            0,
+            0,
+            253.49057006835938,
+            0,
+            -52.533294677734375,
+            -8.720900058746338,
+            -0.49332427978515625,
+            1
+          ],
+          "stepMetres": 0.007736154364707155,
+          "maximumHalfCellAxisMetres": 0.0038680771823535777,
+          "maximumHalfCell3dMetres": 0.006699706207434261
+        },
+        "roles": {
+          "owned": {
+            "sourceObjects": 428,
+            "vertices": 10392,
+            "verticesExactlyPresentInBase": 10392,
+            "triangles": 5216,
+            "degenerateProjectedTriangles": 0,
+            "maximumProjectionDeltaMetres": 0.006275992899764035,
+            "maximumAxisProjectionDeltaMetres": [
+              0.0038632753694471944,
+              0.00322528256085608,
+              0.003817243113573454
+            ],
+            "sourceNegativeDeterminants": 0
+          },
+          "protected": {
+            "sourceObjects": 164,
+            "vertices": 3996,
+            "verticesExactlyPresentInBase": 3996,
+            "triangles": 2008,
+            "degenerateProjectedTriangles": 0,
+            "maximumProjectionDeltaMetres": 0.006188018767245468,
+            "maximumAxisProjectionDeltaMetres": [
+              0.0038632753694471944,
+              0.00322528256085608,
+              0.0038375207203245054
+            ],
+            "sourceNegativeDeterminants": 0
+          }
+        },
+        "materials": {
+          "Railway platform concrete interpretation": {
+            "baseTriangles": 252,
+            "ownedTriangles": 176,
+            "protectedTriangles": 76,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          },
+          "Railway unpainted stone coping": {
+            "baseTriangles": 888,
+            "ownedTriangles": 624,
+            "protectedTriangles": 264,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          },
+          "Railway smooth concrete track base": {
+            "baseTriangles": 6084,
+            "ownedTriangles": 4416,
+            "protectedTriangles": 1668,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          }
+        },
+        "files": {
+          "owned-delivered-lattice-authority.glb": {
+            "sha256": "55b1563b6bf7170a48f480d0cae452db9adb424790eabeb2089be8e11ec556ef",
+            "bytes": 379448
+          },
+          "protected-delivered-lattice-authority.glb": {
+            "sha256": "eb7b1795ae6bfd7dac88a229631882a2fb9bb3aab7b8ec32292334e7c630ecf9",
+            "bytes": 145804
+          },
+          "per-source-vertex-projection.json.gz": {
+            "sha256": "f09a6a9b8cca3d462bc4b3bb79793ee52884744938c7eca2fca3859092415693",
+            "decodedSha256": "add62a030fd1855632285062b1795ec8ca3e34b73710c56a047b30a4d8f66fef"
+          }
+        }
+      },
+      "removal": {
+        "scope": "Owned reviewed-component surfaces only; protected coincident faces retained. Original attributes, materials, transforms and BIN prefix preserved.",
+        "removalScope": "platform-sections",
+        "toleranceMetres": 0.00002,
+        "normalCosine": 0.9,
+        "minimumCoverage": 1,
+        "sourceOffsetY": 0,
+        "materials": {
+          "Railway platform concrete interpretation": {
+            "sourceTriangles": 176,
+            "examined": 252,
+            "removed": 176,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000014482588076793438,
+            "sourceCentroidsCovered": 176,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          },
+          "Railway unpainted stone coping": {
+            "sourceTriangles": 624,
+            "examined": 888,
+            "removed": 624,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000014482588076793438,
+            "sourceCentroidsCovered": 624,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          },
+          "Railway smooth concrete track base": {
+            "sourceTriangles": 4416,
+            "examined": 6084,
+            "removed": 4416,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000003848800780392588,
+            "sourceCentroidsCovered": 4416,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          }
+        },
+        "changes": [
+          {
+            "mesh": 0,
+            "primitive": 0,
+            "node": 0,
+            "material": "Railway platform concrete interpretation",
+            "beforeTriangles": 252,
+            "removedTriangles": 176,
+            "remainingTriangles": 76,
+            "removedTriangleRanges": [
+              [
+                0,
+                175
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          },
+          {
+            "mesh": 0,
+            "primitive": 1,
+            "node": 0,
+            "material": "Railway unpainted stone coping",
+            "beforeTriangles": 888,
+            "removedTriangles": 624,
+            "remainingTriangles": 264,
+            "removedTriangleRanges": [
+              [
+                0,
+                623
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          },
+          {
+            "mesh": 0,
+            "primitive": 2,
+            "node": 0,
+            "material": "Railway smooth concrete track base",
+            "beforeTriangles": 6084,
+            "removedTriangles": 4416,
+            "remainingTriangles": 1668,
+            "removedTriangleRanges": [
+              [
+                0,
+                4415
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          }
+        ],
+        "detachedNodes": [],
+        "unchangedBinaryPrefixBytes": 1035120,
+        "unchangedBinaryPrefixSha256": "0511eb917b799d4d7ca4edc347229c48b734421eb9deea9f9dce6c654cc00fce",
+        "removedTriangles": 5216,
+        "protectedAmbiguousTriangles": 0,
+        "indexEncoding": "EXT_meshopt_compression INDICES (sequence-preserving)",
+        "appendedVirtualBuffer": 3,
+        "decodedIndexBytes": 12048,
+        "appendedIndexBytes": 6048
+      },
+      "retainedDecodedSha256": "bf294fe9251bf2b6827f49a413287e238c6b0b0c33f8c627bb5812ab1b598449",
+      "independentWorldTriangleCounts": {
+        "base": 7224,
+        "owned": 5216,
+        "protected": 2008,
+        "retained": 2008
+      },
+      "allRetainedWorldTrianglesExactlyProtected": true
+    },
+    {
+      "variant": "low",
+      "inputSha256": "14c9c2fe3bd482eebc0aaee71b93dd761e8cd25552cc702dbde08a0ab21f12ba",
+      "authority": {
+        "schema": 1,
+        "status": "EXACT DELIVERED-LATTICE OWNERSHIP AUTHORITY; not historical source alteration or runtime publication",
+        "variant": "low",
+        "base": {
+          "transportSha256": "14c9c2fe3bd482eebc0aaee71b93dd761e8cd25552cc702dbde08a0ab21f12ba",
+          "decodedSha256": "974e1e637eb63ad4626744c2d47948647931641976b434e70db713a31f1f5c35"
+        },
+        "sources": {
+          "owned": {
+            "file": "platform-section-owned-old.glb",
+            "sha256": "53814f12236f587dc596fd2ad5b5310525641eedf23fddfcf88251ceede58769"
+          },
+          "protected": {
+            "file": "platform-retained-occluder.glb",
+            "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b"
+          }
+        },
+        "method": "Transform each unchanged source vertex to Main0 world, inverse-transform by actual delivered batch matrix, round normalized coordinates*32767 to nearest integer, require exact actual same-material decoded vertex and oriented-triangle membership. No nearest-surface snapping or matching-tolerance increase.",
+        "lattice": {
+          "matrix": [
+            253.49057006835938,
+            0,
+            0,
+            0,
+            0,
+            253.49057006835938,
+            0,
+            0,
+            0,
+            0,
+            253.49057006835938,
+            0,
+            -52.533294677734375,
+            -8.720900058746338,
+            -0.49332427978515625,
+            1
+          ],
+          "stepMetres": 0.007736154364707155,
+          "maximumHalfCellAxisMetres": 0.0038680771823535777,
+          "maximumHalfCell3dMetres": 0.006699706207434261
+        },
+        "roles": {
+          "owned": {
+            "sourceObjects": 428,
+            "vertices": 10392,
+            "verticesExactlyPresentInBase": 10392,
+            "triangles": 5216,
+            "degenerateProjectedTriangles": 0,
+            "maximumProjectionDeltaMetres": 0.006275992899764035,
+            "maximumAxisProjectionDeltaMetres": [
+              0.0038632753694471944,
+              0.00322528256085608,
+              0.003817243113573454
+            ],
+            "sourceNegativeDeterminants": 0
+          },
+          "protected": {
+            "sourceObjects": 164,
+            "vertices": 3996,
+            "verticesExactlyPresentInBase": 3996,
+            "triangles": 2008,
+            "degenerateProjectedTriangles": 0,
+            "maximumProjectionDeltaMetres": 0.006188018767245468,
+            "maximumAxisProjectionDeltaMetres": [
+              0.0038632753694471944,
+              0.00322528256085608,
+              0.0038375207203245054
+            ],
+            "sourceNegativeDeterminants": 0
+          }
+        },
+        "materials": {
+          "Railway platform concrete interpretation": {
+            "baseTriangles": 252,
+            "ownedTriangles": 176,
+            "protectedTriangles": 76,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          },
+          "Railway unpainted stone coping": {
+            "baseTriangles": 888,
+            "ownedTriangles": 624,
+            "protectedTriangles": 264,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          },
+          "Railway smooth concrete track base": {
+            "baseTriangles": 6084,
+            "ownedTriangles": 4416,
+            "protectedTriangles": 1668,
+            "ambiguousOwnedProtectedSignatures": 0,
+            "exactCombinedMultiplicity": true
+          }
+        },
+        "files": {
+          "owned-delivered-lattice-authority.glb": {
+            "sha256": "55b1563b6bf7170a48f480d0cae452db9adb424790eabeb2089be8e11ec556ef",
+            "bytes": 379448
+          },
+          "protected-delivered-lattice-authority.glb": {
+            "sha256": "eb7b1795ae6bfd7dac88a229631882a2fb9bb3aab7b8ec32292334e7c630ecf9",
+            "bytes": 145804
+          },
+          "per-source-vertex-projection.json.gz": {
+            "sha256": "f09a6a9b8cca3d462bc4b3bb79793ee52884744938c7eca2fca3859092415693",
+            "decodedSha256": "add62a030fd1855632285062b1795ec8ca3e34b73710c56a047b30a4d8f66fef"
+          }
+        }
+      },
+      "removal": {
+        "scope": "Owned reviewed-component surfaces only; protected coincident faces retained. Original attributes, materials, transforms and BIN prefix preserved.",
+        "removalScope": "platform-sections",
+        "toleranceMetres": 0.00002,
+        "normalCosine": 0.9,
+        "minimumCoverage": 1,
+        "sourceOffsetY": 0,
+        "materials": {
+          "Railway platform concrete interpretation": {
+            "sourceTriangles": 176,
+            "examined": 252,
+            "removed": 176,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000014482588076793438,
+            "sourceCentroidsCovered": 176,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          },
+          "Railway unpainted stone coping": {
+            "sourceTriangles": 624,
+            "examined": 888,
+            "removed": 624,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000014482588076793438,
+            "sourceCentroidsCovered": 624,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          },
+          "Railway smooth concrete track base": {
+            "sourceTriangles": 4416,
+            "examined": 6084,
+            "removed": 4416,
+            "protectedAmbiguous": 0,
+            "quantizedSliversRemoved": 0,
+            "quantizedSliverArea": 0,
+            "maximumSliverAltitude": 0,
+            "orientationOnlyProtected": 0,
+            "maximumOrientedProtectionResidual": 0,
+            "orientationOnlyRetained": 0,
+            "orientationOnlyArea": 0,
+            "maximumOrientationOnlyAltitude": 0,
+            "maximumRemovalResidual": 0.000003848800780392588,
+            "sourceCentroidsCovered": 4416,
+            "sourceCentroidsProtected": 0,
+            "sourceCentroidCoverage": 1
+          }
+        },
+        "changes": [
+          {
+            "mesh": 0,
+            "primitive": 0,
+            "node": 0,
+            "material": "Railway platform concrete interpretation",
+            "beforeTriangles": 252,
+            "removedTriangles": 176,
+            "remainingTriangles": 76,
+            "removedTriangleRanges": [
+              [
+                0,
+                175
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          },
+          {
+            "mesh": 0,
+            "primitive": 1,
+            "node": 0,
+            "material": "Railway unpainted stone coping",
+            "beforeTriangles": 888,
+            "removedTriangles": 624,
+            "remainingTriangles": 264,
+            "removedTriangleRanges": [
+              [
+                0,
+                623
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          },
+          {
+            "mesh": 0,
+            "primitive": 2,
+            "node": 0,
+            "material": "Railway smooth concrete track base",
+            "beforeTriangles": 6084,
+            "removedTriangles": 4416,
+            "remainingTriangles": 1668,
+            "removedTriangleRanges": [
+              [
+                0,
+                4415
+              ]
+            ],
+            "protectedAmbiguousTriangleRanges": []
+          }
+        ],
+        "detachedNodes": [],
+        "unchangedBinaryPrefixBytes": 848084,
+        "unchangedBinaryPrefixSha256": "fd5ffd340012e668f9cb78908cbf9a135473d98c0c2d9d4be81bf942f3aab5b0",
+        "removedTriangles": 5216,
+        "protectedAmbiguousTriangles": 0,
+        "indexEncoding": "EXT_meshopt_compression INDICES (sequence-preserving)",
+        "appendedVirtualBuffer": 3,
+        "decodedIndexBytes": 12048,
+        "appendedIndexBytes": 6048
+      },
+      "retainedDecodedSha256": "8cf08aae71fa91468cc251dfda6f5da6a58de42965ff852a18189931463bec1a",
+      "independentWorldTriangleCounts": {
+        "base": 7224,
+        "owned": 5216,
+        "protected": 2008,
+        "retained": 2008
+      },
+      "allRetainedWorldTrianglesExactlyProtected": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "status": "PASS: current encoded five-zone world plus raw platform candidate, scoped CPU routes only",
+  "reportSha256": "fd262b60e5fffb3a6eb2f7afcdc73f1aa3703de4c8c314a64aa0240080e8c91e",
+  "variants": [
+    {
+      "variant": "full",
+      "stairRoutes": 96,
+      "stairSamples": 39696,
+      "corridorSamples": 9084,
+      "routeFailures": 0,
+      "mountRays": 80,
+      "mountRaysWithinExisting2mmEncodedEnvelope": 80,
+      "maxNominalMountToActualEncodedUnderfaceGap": 0.0008156503051237607,
+      "mountQualification": "Inherited raw20micron gate is inapplicable to the unchanged quantized published concourse. Existing Phase8 final encoded contact gate permits2mm; the actual+0.815173mm residual is retained, not shifted away."
+    },
+    {
+      "variant": "low",
+      "stairRoutes": 96,
+      "stairSamples": 39696,
+      "corridorSamples": 9084,
+      "routeFailures": 0,
+      "mountRays": 80,
+      "mountRaysWithinExisting2mmEncodedEnvelope": 80,
+      "maxNominalMountToActualEncodedUnderfaceGap": 0.0008156503051237607,
+      "mountQualification": "Inherited raw20micron gate is inapplicable to the unchanged quantized published concourse. Existing Phase8 final encoded contact gate permits2mm; the actual+0.815173mm residual is retained, not shifted away."
+    }
+  ],
+  "limits": [
+    "New encoded module and native browser gate still pending.",
+    "Existing underface quantization residual remains explicit; no exact zero-gap claim."
+  ]
+}

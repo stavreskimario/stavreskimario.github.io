@@ -1,0 +1,3 @@
+# Primary evidence and construction controls
+
+Read-only research for the nextinterior/platform phase. Source identities, dimensional conflicts, component selectors and qualified nextsteps are in the linked reports. Native source images and uncopyright-cleared1939magazine reproductions stay in external research storage; no new historical raster is committed here. These reports do not establish completed geometry or new publication. The westernMain support/floor correction and northernP9 registration remain held pending coordinated source resolution. The arcade has confirmed enclosure/pilaster defects plus unresolved vault-height and minor threshold-level controls.

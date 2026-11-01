@@ -1,0 +1,1010 @@
+{
+  "schema": 1,
+  "status": "PASS: scoped decoded geometry, not full optimized/browser acceptance",
+  "files": {
+    "candidate": {
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "triangles": 2432
+    },
+    "retained": {
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b"
+    }
+  },
+  "sections": [
+    {
+      "platform": 1,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.0003658975255129704,
+      "walls": [
+        {
+          "edgeZ": 65.8787841796875,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              66.38678741455078
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5080032348632812
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              66.79318237304688
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5080032348632812,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.40639495849609375
+        },
+        {
+          "edgeZ": 71.6502685546875,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              71.14226531982422
+            ],
+            "normal": [
+              0,
+              0,
+              0.9999999999999999
+            ],
+            "distance": 0.5080032348632812
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              70.73587036132812
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5080032348632812,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.40639495849609375
+        }
+      ]
+    },
+    {
+      "platform": 2,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.0003657324518556715,
+      "walls": [
+        {
+          "edgeZ": 51.90570831298828,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              52.4137077331543
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              52.820106506347656
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.4063987731933594
+        },
+        {
+          "edgeZ": 57.67719650268555,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              57.16919708251953
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              56.76279830932617
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.4063987731933594
+        }
+      ]
+    },
+    {
+      "platform": 3,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.0003657324518556715,
+      "walls": [
+        {
+          "edgeZ": 37.93263244628906,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              38.44063186645508
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              38.84703063964844
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.4063987731933594
+        },
+        {
+          "edgeZ": 43.70412063598633,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              43.19612121582031
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              42.78972244262695
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.585601806640625
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.914398193359375,
+          "thickness": 0.4063987731933594
+        }
+      ]
+    },
+    {
+      "platform": 4,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.00036666593766754296,
+      "walls": [
+        {
+          "edgeZ": 24.263320922851562,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              24.771320343017578
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              25.17772102355957
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4064006805419922
+        },
+        {
+          "edgeZ": 30.034809112548828,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              29.526809692382812
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              29.12040901184082
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4064006805419922
+        }
+      ]
+    },
+    {
+      "platform": 5,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.00036666593766754296,
+      "walls": [
+        {
+          "edgeZ": 10.290245056152344,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              10.798245429992676
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.508000373840332
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              11.204645156860352
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.508000373840332,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4063997268676758
+        },
+        {
+          "edgeZ": 16.365495681762695,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              15.857495307922363
+            ],
+            "normal": [
+              0,
+              0,
+              0.9999999999999999
+            ],
+            "distance": 0.508000373840332
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              15.451095581054688
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.508000373840332,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4063997268676758
+        }
+      ]
+    },
+    {
+      "platform": 6,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.00036643253521301267,
+      "walls": [
+        {
+          "edgeZ": -3.075305223464966,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -2.567305326461792
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5079998970031738
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -2.160905122756958
+            ],
+            "normal": [
+              0,
+              0,
+              0.9999999999999999
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.5079998970031738,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.406400203704834
+        },
+        {
+          "edgeZ": 2.3924200534820557,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              1.8844200372695923
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5080000162124634
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              1.4780200719833374
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5856000185012817
+          },
+          "outerInset": 0.5080000162124634,
+          "innerInset": 0.9143999814987183,
+          "thickness": 0.4063999652862549
+        }
+      ]
+    },
+    {
+      "platform": 7,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.00036666593766754296,
+      "walls": [
+        {
+          "edgeZ": -16.440855026245117,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -15.932854652404785
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.508000373840332
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -15.52645492553711
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.508000373840332,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4063997268676758
+        },
+        {
+          "edgeZ": -10.669367790222168,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -11.1773681640625
+            ],
+            "normal": [
+              0,
+              0,
+              0.9999999999999999
+            ],
+            "distance": 0.508000373840332
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -11.583767890930176
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.508000373840332,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4063997268676758
+        }
+      ]
+    },
+    {
+      "platform": 8,
+      "floorSamples": 2349,
+      "maxFloorGap": 0,
+      "coveSamples": 32,
+      "maxCoveRadialError": 0.00036666593766754296,
+      "walls": [
+        {
+          "edgeZ": -30.11016845703125,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -29.602169036865234
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -29.195768356323242
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4064006805419922
+        },
+        {
+          "edgeZ": -24.338680267333984,
+          "outside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -24.8466796875
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "distance": 0.5079994201660156
+          },
+          "inside": {
+            "point": [
+              -60,
+              -8.568424797058105,
+              -25.253080368041992
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "distance": 0.5855998992919922
+          },
+          "outerInset": 0.5079994201660156,
+          "innerInset": 0.9144001007080078,
+          "thickness": 0.4064006805419922
+        }
+      ]
+    }
+  ],
+  "foundation": [
+    {
+      "object": "C012 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C043 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C008 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C009 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C039 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C040 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C013 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C036 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C006 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C011 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C042 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C019 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C016 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C046 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C044 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C020 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C026 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C049 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C050 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C024 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C022 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C054 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C055 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C021 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C053 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C003 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C015 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C041 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C074 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C002 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C010 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C037 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C071 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C007 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C038 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C018 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C047 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C048 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C023 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C052 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C017 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C051 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C001 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C004 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C073 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C072 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "C005 foundation bearing plate",
+      "checked": 25,
+      "supported": 25
+    }
+  ],
+  "feet": [
+    {
+      "object": "Arrival row1 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row1 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row1 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row1 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row2 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row2 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row2 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row2 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row3 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row3 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row3 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row3 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row4 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row4 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row4 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row4 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row5 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row5 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row5 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row5 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row6 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row6 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row6 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row6 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row7 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row7 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row7 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row7 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row8 west Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row8 west Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row8 east Arrival lower stringer bearing plate",
+      "checked": 25,
+      "supported": 25
+    },
+    {
+      "object": "Arrival row8 east Arrival lower stringer bearing plate.001",
+      "checked": 25,
+      "supported": 25
+    }
+  ],
+  "counts": {
+    "floorSamples": 18792,
+    "coveSamples": 256,
+    "foundationSamples": 1175,
+    "arrivalBearingSamples": 800
+  },
+  "failures": [],
+  "limits": [
+    "This checks actual raw exported source surfaces and foundation contacts. Full/low encoded geometry and native walking remain independent gates.",
+    "The existing flat source top is retained; Fig6 crossfall remains held.",
+    "Material appearance and absolute historical registration are not certified."
+  ]
+}

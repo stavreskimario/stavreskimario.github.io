@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "status": "EXACT DELIVERED-LATTICE OWNERSHIP AUTHORITY; not historical source alteration or runtime publication",
+  "variant": "full",
+  "base": {
+    "transportSha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+    "decodedSha256": "0b0bc9fa2d6974c20edd05cab9af900991222e6b9245dc9c5e587c7226bdd9de"
+  },
+  "sources": {
+    "owned": {
+      "file": "platform-section-owned-old.glb",
+      "sha256": "53814f12236f587dc596fd2ad5b5310525641eedf23fddfcf88251ceede58769"
+    },
+    "protected": {
+      "file": "platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b"
+    }
+  },
+  "method": "Transform each unchanged source vertex to Main0 world, inverse-transform by actual delivered batch matrix, round normalized coordinates*32767 to nearest integer, require exact actual same-material decoded vertex and oriented-triangle membership. No nearest-surface snapping or matching-tolerance increase.",
+  "lattice": {
+    "matrix": [
+      253.49057006835938,
+      0,
+      0,
+      0,
+      0,
+      253.49057006835938,
+      0,
+      0,
+      0,
+      0,
+      253.49057006835938,
+      0,
+      -52.533294677734375,
+      -8.720900058746338,
+      -0.49332427978515625,
+      1
+    ],
+    "stepMetres": 0.007736154364707155,
+    "maximumHalfCellAxisMetres": 0.0038680771823535777,
+    "maximumHalfCell3dMetres": 0.006699706207434261
+  },
+  "roles": {
+    "owned": {
+      "sourceObjects": 428,
+      "vertices": 10392,
+      "verticesExactlyPresentInBase": 10392,
+      "triangles": 5216,
+      "degenerateProjectedTriangles": 0,
+      "maximumProjectionDeltaMetres": 0.006275992899764035,
+      "maximumAxisProjectionDeltaMetres": [
+        0.0038632753694471944,
+        0.00322528256085608,
+        0.003817243113573454
+      ],
+      "sourceNegativeDeterminants": 0
+    },
+    "protected": {
+      "sourceObjects": 164,
+      "vertices": 3996,
+      "verticesExactlyPresentInBase": 3996,
+      "triangles": 2008,
+      "degenerateProjectedTriangles": 0,
+      "maximumProjectionDeltaMetres": 0.006188018767245468,
+      "maximumAxisProjectionDeltaMetres": [
+        0.0038632753694471944,
+        0.00322528256085608,
+        0.0038375207203245054
+      ],
+      "sourceNegativeDeterminants": 0
+    }
+  },
+  "materials": {
+    "Railway platform concrete interpretation": {
+      "baseTriangles": 252,
+      "ownedTriangles": 176,
+      "protectedTriangles": 76,
+      "ambiguousOwnedProtectedSignatures": 0,
+      "exactCombinedMultiplicity": true
+    },
+    "Railway unpainted stone coping": {
+      "baseTriangles": 888,
+      "ownedTriangles": 624,
+      "protectedTriangles": 264,
+      "ambiguousOwnedProtectedSignatures": 0,
+      "exactCombinedMultiplicity": true
+    },
+    "Railway smooth concrete track base": {
+      "baseTriangles": 6084,
+      "ownedTriangles": 4416,
+      "protectedTriangles": 1668,
+      "ambiguousOwnedProtectedSignatures": 0,
+      "exactCombinedMultiplicity": true
+    }
+  },
+  "files": {
+    "owned-delivered-lattice-authority.glb": {
+      "sha256": "55b1563b6bf7170a48f480d0cae452db9adb424790eabeb2089be8e11ec556ef",
+      "bytes": 379448
+    },
+    "protected-delivered-lattice-authority.glb": {
+      "sha256": "eb7b1795ae6bfd7dac88a229631882a2fb9bb3aab7b8ec32292334e7c630ecf9",
+      "bytes": 145804
+    },
+    "per-source-vertex-projection.json.gz": {
+      "sha256": "f09a6a9b8cca3d462bc4b3bb79793ee52884744938c7eca2fca3859092415693",
+      "decodedSha256": "add62a030fd1855632285062b1795ec8ca3e34b73710c56a047b30a4d8f66fef"
+    }
+  }
+}

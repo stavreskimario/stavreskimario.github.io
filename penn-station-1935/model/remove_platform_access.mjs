@@ -15,6 +15,7 @@ const {Matrix4, Quaternion, Vector3, BufferGeometry, BufferAttribute} = requireT
 const {MeshBVH} = requireTools('three-mesh-bvh');
 const allowed = new Set(['Travertine', 'PublicFloorMarble', 'AgedBronze', 'PaintedStructuralIron', 'ClockFace']);
 const circulationAllowed = new Set(['BedfordLimestoneConcourse', 'PaintedStructuralIron']);
+const platformSectionAllowed = new Set(['Railway platform concrete interpretation', 'Railway unpainted stone coping', 'Railway smooth concrete track base']);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sizes = {5120:1,5121:1,5122:2,5123:2,5125:4,5126:4};
 const methods = {5120:'getInt8',5121:'getUint8',5122:'getInt16',5123:'getUint16',5125:'getUint32',5126:'getFloat32'};
@@ -181,8 +182,8 @@ function validateRaw(model, label, owned, permitted=allowed) {
 }
 
 export function removePlatformAccess(base, components, protectedModel, {tolerance=.004, normalCosine=.90, sourceOffsetY=0, minimumCoverage=.98, scope='departure-access'} = {}) {
-  assert(['departure-access','concourse-circulation'].includes(scope),'Unreviewed component removal scope');
-  const permitted=scope==='concourse-circulation'?circulationAllowed:allowed;
+  assert(['departure-access','concourse-circulation','platform-sections'].includes(scope),'Unreviewed component removal scope');
+  const permitted=scope==='concourse-circulation'?circulationAllowed:scope==='platform-sections'?platformSectionAllowed:allowed;
   assert(tolerance > 0 && tolerance <= .006, 'Removal tolerance must be positive and at most6mm');
   assert(normalCosine >= .85 && normalCosine <= 1, 'Normals must preserve oriented surface agreement');
   assert(minimumCoverage >= .98 && minimumCoverage <= 1, 'Owned-surface coverage may not be weakened below98%');
