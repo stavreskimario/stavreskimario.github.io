@@ -15,11 +15,12 @@ const require=createRequire(path.join(process.env.PENN_TOOLS || '/private/tmp/pe
 const {Box3,Vector3,Matrix4,Quaternion,Ray,BufferGeometry,Float32BufferAttribute,Mesh,MeshBasicMaterial,DoubleSide,FrontSide,Raycaster,Matrix3}=require('three');
 const {computeBoundsTree,acceleratedRaycast}=require('three-mesh-bvh');Mesh.prototype.raycast=acceleratedRaycast;
 const {nearbyCollisionObjects}=await import(root+'/penn-station-1935/src/collision-query.mjs');
+const {closedArcadeGlazing}=await import(root+'/penn-station-1935/src/collision-surfaces.mjs');
 const {parseGlb}=await import(root+'/penn-station-1935/model/meshopt_patch_io.mjs');
 const {accessors,worldNodes}=await import(root+'/tests/helpers/penn-decoded-geometry.mjs');
 const CELL=6,sha=b=>createHash('sha256').update(b).digest('hex');
 const index={cells:new Map(),records:[],stats:{queries:0,lastCandidates:0,maximumCandidates:0}},models=[],byObject=new Map();
-const ignored=m=>!m||((m.name!=='SquareVaultLightGlass')&&((m.extensions?.KHR_materials_transmission?.transmissionFactor??0)>0||m.alphaMode==='BLEND'||/^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(m.name)));
+const ignored=m=>!m||(!closedArcadeGlazing(m.name,m.extras)&&(m.name!=='SquareVaultLightGlass')&&((m.extensions?.KHR_materials_transmission?.transmissionFactor??0)>0||m.alphaMode==='BLEND'||/^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(m.name)));
 function add(bounds,label,object){const record={bounds,label,object};index.records.push(record);byObject.set(object,record);for(let x=Math.floor(bounds.min.x/CELL);x<=Math.floor(bounds.max.x/CELL);x++)for(let z=Math.floor(bounds.min.z/CELL);z<=Math.floor(bounds.max.z/CELL);z++){const k=`${x}:${z}`;if(!index.cells.has(k))index.cells.set(k,[]);index.cells.get(k).push(record);}}
 for(const zone of ['exterior','waiting-room','concourse','platform']){
  const file=`model-${zone}.glb.gz`,bytes=await fs.readFile(root+'/penn-station-1935/assets/'+file),model=parseGlb(bytes),read=accessors(model),offset=['waiting-room','concourse','platform'].includes(zone)?-4.2672:0;

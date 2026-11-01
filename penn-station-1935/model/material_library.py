@@ -50,7 +50,8 @@ def prepare_surface_uvs(objects):
             factor = 1 / (.28 * profile[1])
             offset = (0, 0)
             if material.name.startswith("TravertineAshlar"):
-                digest = hashlib.sha256(material.name.split(".")[0].encode()).digest()
+                source_name = material.get("surface_source_name", material.name)
+                digest = hashlib.sha256(source_name.split(".")[0].encode()).digest()
                 offset = (digest[0] / 255, digest[1] / 255)
             for index in face.loop_indices:
                 point = uv.data[index].uv
@@ -79,6 +80,10 @@ def apply_materials(materials, library):
             # Thousands of tiny repeated web faces overwhelm whole-room UV
             # packing. They retain actual geometry, cast transport shadows and
             # use local room IBL/direct light, like the fine ironwork.
+            material["skip_lighting_atlas"] = True
+        if material.name == "ArcadeOrnamentalMetal":
+            # Fine shop/clerestory frames retain their authored geometry and
+            # local arcade probe; they still participate in light transport.
             material["skip_lighting_atlas"] = True
         if material.name.startswith("PaintedStructuralIron"):
             pbr.inputs["Metallic"].default_value = 0

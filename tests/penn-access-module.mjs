@@ -80,4 +80,16 @@ assert(platformResult.binary.subarray(0,base.binary.length).equals(base.binary))
 assert.deepEqual(platformResult.json.materials.slice(0,base.json.materials.length),base.json.materials);
 assert.equal(platformResult.json.materials.at(-1).extras.sky_illumination,'lighting-platform-surfaces-sky.webp');
 await assert.rejects(appendAccessModule(input,platformPath,path.join(out,'platform-cannot-use-arrivals.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'concourse-arrivals'}),/selected artifact/);
+const arcade=structuredClone(lit);arcade.materials[0].extras.sky_illumination='lighting-arcade-enclosure-sky.webp';
+arcade.materials[0].extensions={KHR_materials_transmission:{transmissionFactor:.96}};
+arcade.extensionsUsed.push('KHR_materials_transmission');
+for(const suffix of ['sky','sky-low'])await copyFile(path.join(out,`lighting-concourse-circulation-${suffix}.webp`),path.join(out,`lighting-arcade-enclosure-${suffix}.webp`));
+const arcadePath=path.join(out,'arcade.glb'),arcadeOutput=path.join(out,'arcade-output.glb.gz');
+await writeFile(arcadePath,writeGlb(arcade,litBinary));
+await appendAccessModule(input,arcadePath,arcadeOutput,report,{allowedNewMaterials:[material],lightingArtifact:'arcade-enclosure'});
+const arcadeResult=parseGlb(await readFile(arcadeOutput));
+assert(arcadeResult.binary.subarray(0,base.binary.length).equals(base.binary));
+assert.equal(arcadeResult.json.materials.at(-1).extras.sky_illumination,'lighting-arcade-enclosure-sky.webp');
+assert.equal(arcadeResult.json.materials.at(-1).extensions.KHR_materials_transmission.transmissionFactor,.96);
+await assert.rejects(appendAccessModule(input,arcadePath,path.join(out,'arcade-cannot-use-platform.glb'),report,{allowedNewMaterials:[material],lightingArtifact:'platform-surfaces'}),/Unreviewed access extension|selected artifact/);
 console.log('PASS independent appended geometry and isolated circulation atlas; exact retained payload and reject unsafe materials, overwrite, lights, namespaces and missing illumination UVs');

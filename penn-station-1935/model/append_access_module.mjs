@@ -12,7 +12,7 @@ const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const validIndex=(value,list,label)=>{assert(Number.isInteger(value)&&value>=0&&value<list.length,`Invalid ${label} index`);return value;};
 
 export async function appendAccessModule(inputPath,modulePath,outputPath,reportPath,{allowedNewMaterials=[],lightingArtifact='concourse-access'}={}) {
-  assert(['concourse-access','concourse-circulation','concourse-arrivals','platform-surfaces'].includes(lightingArtifact),'Unreviewed access lighting artifact');
+  assert(['concourse-access','concourse-circulation','concourse-arrivals','platform-surfaces','arcade-enclosure'].includes(lightingArtifact),'Unreviewed access lighting artifact');
   assert.notEqual(path.resolve(inputPath),path.resolve(outputPath),'Preserve the station input');
   assert.notEqual(path.resolve(modulePath),path.resolve(outputPath),'Preserve the Blender module');
   const input=await readFile(inputPath),incoming=await readFile(modulePath);
@@ -22,6 +22,7 @@ export async function appendAccessModule(inputPath,modulePath,outputPath,reportP
   for(const key of ['skins','animations','cameras'])assert.equal(m[key]?.length||0,0,`Access module cannot add ${key}`);
   assert(m.buffers?.length&& !m.buffers[0].uri,'Module BIN must be embedded');
   const allowedExtensions=new Set(['EXT_meshopt_compression','KHR_mesh_quantization','KHR_texture_basisu','KHR_texture_transform','EXT_mesh_gpu_instancing','KHR_materials_ior','KHR_materials_specular']);
+  if (lightingArtifact === 'arcade-enclosure') allowedExtensions.add('KHR_materials_transmission');
   for(const name of m.extensionsUsed||[])assert(allowedExtensions.has(name),`Unreviewed access extension: ${name}`);
   const offset=base.binary.length,buffers=[0],counts={};
   for(const key of ['buffers','bufferViews','accessors','images','textures','samplers','materials','meshes','nodes']){j[key]||=[];counts[key]=j[key].length;}

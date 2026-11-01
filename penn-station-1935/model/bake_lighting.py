@@ -19,7 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("input", type=Path)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--zone", required=True)
-parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "platform-surfaces"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
+parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "platform-surfaces", "arcade-enclosure"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
 parser.add_argument("--resolution", type=int, default=2048)
 parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
@@ -36,7 +36,7 @@ if args.surface_group != "all" and args.zone != "waiting-room":
 if not 0 < args.uv_margin_pixels < args.resolution / 16:
     raise ValueError("UV margin must be a small positive texel count")
 if args.artifact_name:
-    expected_zone = "platform" if args.artifact_name == "platform-surfaces" else "concourse"
+    expected_zone = {"platform-surfaces": "platform", "arcade-enclosure": "exterior"}.get(args.artifact_name, "concourse")
     if args.zone != expected_zone or args.surface_group != "all":
         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)

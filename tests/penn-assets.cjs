@@ -28,6 +28,8 @@ const phase8ArrivalsDenoisedDirectory = 'authoring/penn-station-1935/lighting/ph
 const phase8ArrivalsRawDirectory = 'authoring/penn-station-1935/lighting/phase8/raw';
 const phase9PlatformDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase9-platform/denoised';
 const phase9PlatformRawDirectory = 'authoring/penn-station-1935/lighting/phase9-platform/raw';
+const phase9ArcadeDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase9-arcade/denoised';
+const phase9ArcadeRawDirectory = 'authoring/penn-station-1935/lighting/phase9-arcade/raw';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
 function denoiseEntries(zone, file, record) {
@@ -54,18 +56,20 @@ function denoisePolicy(record, baseZone) {
   const phase7Circulation = zone === 'concourse-circulation' && authoringDirectory === phase7CirculationDenoisedDirectory;
   const phase8Arrivals = zone === 'concourse-arrivals' && authoringDirectory === phase8ArrivalsDenoisedDirectory;
   const phase9Platform = zone === 'platform-surfaces' && authoringDirectory === phase9PlatformDenoisedDirectory;
-  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform, `${zone}: supported local authoring directory`);
+  const phase9Arcade = zone === 'arcade-enclosure' && authoringDirectory === phase9ArcadeDenoisedDirectory;
+  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade, `${zone}: supported local authoring directory`);
   if (zone === 'concourse-access') assert(phase6Access, `${zone}: requires its exact Phase6 source directory`);
   if (zone === 'concourse-circulation') assert(phase7Circulation, `${zone}: requires its exact Phase7 source directory`);
   if (zone === 'concourse-arrivals') assert(phase8Arrivals, `${zone}: requires its exact Phase8 source directory`);
   if (zone === 'platform-surfaces') assert(phase9Platform, `${zone}: requires its exact Phase9 platform source directory`);
-  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform;
+  if (zone === 'arcade-enclosure') assert(phase9Arcade, `${zone}: requires its exact Phase9 arcade source directory`);
+  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade;
   if (zone !== baseZone) {
     assert.equal(baseZone, 'waiting-room', 'Only waiting-room children use atlas-specific zones');
     assert(['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'].includes(zone));
     assert(fresh, `${zone}: split-atlas provenance must identify the new authored source directory`);
   }
-  const fullDimensions = phase8Arrivals || phase9Platform ? [4096] : phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
+  const fullDimensions = phase8Arrivals || phase9Platform || phase9Arcade ? [4096] : phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
     : ['waiting-room-masonry', 'waiting-room-order'].includes(zone) ? [4096] : [2048];
   return { authoringDirectory, fresh, fullDimensions,
     inputTransfer: fresh || zone === 'platform' ? 'linear' : 'srgb' };
@@ -122,6 +126,7 @@ function checkBakeStatistics(bake, record, retained) {
   if (zone === 'concourse-circulation') assert.equal(bake.resolution, 2048, `${zone}: bounded circulation source bake is exactly2048`);
   if (zone === 'concourse-arrivals') assert.equal(bake.resolution, 4096, `${zone}: arrivals source bake is exactly4096`);
   if (zone === 'platform-surfaces') assert.equal(bake.resolution, 4096, `${zone}: platform-surface source bake is exactly4096`);
+  if (zone === 'arcade-enclosure') assert.equal(bake.resolution, 4096, `${zone}: arcade source bake is exactly4096`);
   assert.equal(retained.width, bake.resolution); assert.equal(retained.height, bake.resolution);
   assert(bake.resolution >= record.full.width, `${zone}: delivered derivative does not exceed retained source resolution`);
   assert(Number.isFinite(bake.atlasSurfaceArea) && bake.atlasSurfaceArea >= .01 && bake.atlasSurfaceArea <= 1.001,
@@ -224,6 +229,28 @@ async function verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirect
     archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
 }
 
+async function verifyArcadeSource({ record, bakeBytes, repositoryDirectory }) {
+  assert.equal(record.zone, 'arcade-enclosure');
+  assert.equal(record.authoringDirectory, phase9ArcadeDenoisedDirectory, 'Arcade denoised source uses its exact Phase9 arcade directory');
+  assert.equal(record.inputTransfer, 'linear', 'Arcade HDR input remains linear');
+  assert.equal(record.rawAuthoringDirectory, phase9ArcadeRawDirectory, 'Arcade raw source uses its exact Phase9 arcade directory');
+  assert.equal(record.sourceArchiveFile, 'lighting-arcade-enclosure-sky.hdr.gz', 'Arcade raw HDR uses its exact lossless archive name');
+  assert.equal(record.retainedHdr.archiveFile, 'lighting-arcade-enclosure-sky-denoised-linear.hdr.gz', 'Arcade retained HDR uses its exact lossless archive name');
+  assert(/^[a-f0-9]{64}$/.test(record.bakeReportSha256), 'Arcade bake report has an exact SHA256');
+  assert.equal(hash(bakeBytes), record.bakeReportSha256, 'Arcade runtime bake report matches the reported SHA');
+  const directory = path.resolve(repositoryDirectory, record.rawAuthoringDirectory);
+  const rawBakeBytes = await fs.readFile(path.join(directory, 'lighting-arcade-enclosure.json'));
+  assert(rawBakeBytes.equals(bakeBytes), 'Arcade raw and runtime bake reports match byte-for-byte');
+  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));
+  const source = gunzipSync(archive);
+  assert.equal(hash(source), record.sourceSha256, 'Arcade raw HDR decoded bytes match sourceSha256');
+  assert(source.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), 'Arcade raw source is actual HDR radiance');
+  const resolution = source.subarray(0, 4096).toString('ascii').match(/\n[+-]Y\s+(\d+)\s+[+-]X\s+(\d+)/);
+  assert(resolution && Number(resolution[1]) === 4096 && Number(resolution[2]) === 4096, 'Arcade raw HDR retains its4096 source resolution');
+  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,
+    archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
+}
+
 async function verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions }) {
   const zone = record.zone; const derivative = record[variant];
   const suffix = variant === 'low' ? '-low' : '';
@@ -257,7 +284,10 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   const platformSurfaceMaps = ['lighting-platform-surfaces-sky.webp', 'lighting-platform-surfaces-sky-low.webp'];
   const platformSurfacesReferenced = platformSurfaceMaps.some(file => illumination.has(file));
   if (platformSurfacesReferenced) assert(platformSurfaceMaps.every(file => illumination.has(file)), 'Referenced platform-surface atlas requires both full and low maps');
-  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : []), ...(arrivalsReferenced ? ['concourse-arrivals'] : []), ...(platformSurfacesReferenced ? ['platform-surfaces'] : [])]) {
+  const arcadeMaps = ['lighting-arcade-enclosure-sky.webp', 'lighting-arcade-enclosure-sky-low.webp'];
+  const arcadeReferenced = arcadeMaps.some(file => illumination.has(file));
+  if (arcadeReferenced) assert(arcadeMaps.every(file => illumination.has(file)), 'Referenced arcade atlas requires both full and low maps');
+  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : []), ...(arrivalsReferenced ? ['concourse-arrivals'] : []), ...(platformSurfacesReferenced ? ['platform-surfaces'] : []), ...(arcadeReferenced ? ['arcade-enclosure'] : [])]) {
     const indexFile = `lighting-${baseZone}-denoise.json`;
     const indexBytes = await fs.readFile(path.join(assetsDirectory, indexFile));
     const index = JSON.parse(indexBytes);
@@ -281,7 +311,8 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
         ? await verifyAccessSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-circulation'
           ? await verifyCirculationSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-arrivals'
             ? await verifyArrivalsSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'platform-surfaces'
-              ? await verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) : null;
+              ? await verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'arcade-enclosure'
+                ? await verifyArcadeSource({ record, bakeBytes, repositoryDirectory }) : null;
       const derivatives = [];
       for (const variant of ['full', 'low']) {
         const derivative = await verifyDenoiseDerivative({ record, variant, sourceDirectory, assetsDirectory, illumination, fullDimensions: policy.fullDimensions });
@@ -303,7 +334,7 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   return { atlases, groups };
 }
 
-module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, verifyPlatformSurfaceSource, validateDenoising };
+module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, verifyPlatformSurfaceSource, verifyArcadeSource, validateDenoising };
 
 if (require.main === module) (async () => {
   await MeshoptDecoder.ready;
@@ -434,6 +465,22 @@ if (require.main === module) (async () => {
     const severity = notice.severity === 1 ? 'warning' : 'information';
     const key = severity + ':' + notice.code;
     report.validatorNoticesBySeverity[key] = (report.validatorNoticesBySeverity[key] || 0) + 1;
+  }
+  if (illumination.has('lighting-arcade-enclosure-sky.webp')) {
+    const bytes = await fs.readFile(path.join(root, 'reflection-arcade-probe.json'));
+    const capture = JSON.parse(bytes); assert.equal(capture.probes?.length, 1, 'Isolated arcade capture has one current-source probe');
+    assert(capture.createdInputs?.some(input => input.zone === 'arcade'), 'Arcade probe includes its actual new geometry');
+    const probe = capture.probes[0]; assert.equal(probe.zone, 'arcade');
+    assert(probe.worldPosition?.length === 3 && probe.worldPosition.every(Number.isFinite), 'Arcade probe has a finite world pose');
+    transfer += bytes.length;
+    for (const low of [false, true]) {
+      const file = `reflection-arcade${low ? '-low' : ''}.hdr.gz`; assert.equal(low ? probe.lowFile : probe.fullFile, file);
+      const packed = await fs.readFile(path.join(root, file)), hdr = gunzipSync(packed);
+      assert(hdr.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), 'Arcade reflection is actual HDR radiance');
+      if (!low) assert.equal(hash(hdr), probe.decodedSha256, 'Arcade reflection source identity');
+      transfer += packed.length; report.reflections.push({ file, bytes: packed.length, decodedBytes: hdr.length, worldPosition: probe.worldPosition });
+    }
+    report.arcadeReflection = capture;
   }
   const denoising = await validateDenoising({ assetsDirectory: root, illumination, requireCurrentCore: manifest.architecturalDetailRevision >= 4 });
   report.denoising = denoising.atlases; report.denoisingGroups = denoising.groups;
