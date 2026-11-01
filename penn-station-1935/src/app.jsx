@@ -15,6 +15,7 @@ import { gunzipSync } from 'three/addons/libs/fflate.module.js';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
 import { platformPracticalAnchors } from './platform-practicals.mjs';
+import { COLLISION_CELL, nearbyCollisionObjects } from './collision-query.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
 import { findFloorJointSupport } from './floor-contact.mjs';
 import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
@@ -84,7 +85,6 @@ async function loadManifest() {
 // Navigation indexes static structure once per loaded world. An InstancedMesh
 // raycast otherwise loops through its entire batch, even for a half-metre ray.
 // The railway alone has over 66,000 fitting instances that cannot stop a person.
-const COLLISION_CELL = 6;
 const vaultLightGlass = material => material?.name === 'SquareVaultLightGlass';
 const vaultLightConcrete = material => material?.name === 'ConcourseReinforcedVaultLightConcrete' || material?.name === 'ConcourseOpaqueCirculationConcrete';
 const collisionMaterialAt = hit => Array.isArray(hit.object.material) ? hit.object.material[hit.face.materialIndex] : hit.object.material;
@@ -151,27 +151,6 @@ function buildCollisionIndex(model) {
   index.stats.cells = index.cells.size;
   index.stats.buildMilliseconds = performance.now() - started;
   return index;
-}
-
-function nearbyCollisionObjects(index, origin, direction, distance) {
-  if (!index) return [];
-  const endX = origin.x + direction.x * distance;
-  const endY = origin.y + direction.y * distance;
-  const endZ = origin.z + direction.z * distance;
-  const minY = Math.min(origin.y, endY) - .001;
-  const maxY = Math.max(origin.y, endY) + .001;
-  const found = new Set();
-  for (let x = Math.floor(Math.min(origin.x, endX) / COLLISION_CELL); x <= Math.floor(Math.max(origin.x, endX) / COLLISION_CELL); x++) {
-    for (let z = Math.floor(Math.min(origin.z, endZ) / COLLISION_CELL); z <= Math.floor(Math.max(origin.z, endZ) / COLLISION_CELL); z++) {
-      for (const record of index.cells.get(`${x}:${z}`) || []) {
-        if (record.bounds.max.y >= minY && record.bounds.min.y <= maxY) found.add(record.object);
-      }
-    }
-  }
-  index.stats.queries++;
-  index.stats.lastCandidates = found.size;
-  index.stats.maximumCandidates = Math.max(index.stats.maximumCandidates, found.size);
-  return [...found];
 }
 
 function insidePlatform(point, polygon) {

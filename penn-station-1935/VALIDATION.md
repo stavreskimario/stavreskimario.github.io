@@ -1,8 +1,14 @@
-# Clearer viewport — 2 November 2026 (Melbourne)
+# Walking-query checkpoint — 2 November 2026 (Melbourne)
+
+Conservative horizontal bounds rejection reduces unnecessary triangle collision queries. [Decoded-asset controls](../authoring/penn-station-1935/review/phase9/navigation/asset-query.json) preserve every hit/order/position/face across26,112 probes. Candidates fall155,444→122,820, with32,624 independent finite-ray exclusion checks. The [actual34-leg native walking loop](../authoring/penn-station-1935/review/phase9/navigation/native-query-summary.json) passes with six persistent zones and no page/server errors; cancellations and timing observations remain explicit. This is a small CPU component improvement, not proof of a whole-scene FPS gain or resolved sustained lag. Geometry, materials, light and quality settings remain unchanged.
+
+Verified bundle SHA256 `a9b5d33ebbf9ab51fe4f254c4a582eb22e5fafddf59f75a7e9bf5f2dcc7bf27a`; entry revision `9-navigation-1`. Publication of this query change follows feature-branch verification.
+
+## Previous clearer viewport — 2 November 2026 (Melbourne)
 
 Removed the persistent location-title/description card at the owner's request. Viewpoint labels remain in navigation and the nonvisual live status. [Scoped local Chrome verification](../authoring/penn-station-1935/review/phase9/clear-view/local-browser.json) passes all three main viewpoints, six unchanged world-zone IDs and a supported 1.80m walk. No page/HTTP errors; duplicate resource cancellations and their actual successful responses remain recorded. Three-app validation passes. This changes no model, illumination, reflection, collision or quality setting; no new performance or physical-mobile claim is made.
 
-Bundle SHA256 `e35a21c601a3c6ee063e4eec70eb4f54344372ab52d8206cd1a609e8e9536f59`; HTML/CSS cache revision `9-clear-view-1`. Model assets retain `8-arrivals-1`. Publication awaits the matching feature-branch Pages run.
+Bundle SHA256 `e35a21c601a3c6ee063e4eec70eb4f54344372ab52d8206cd1a609e8e9536f59`; HTML/CSS cache revision `9-clear-view-1`. Model assets retain `8-arrivals-1`. The card removal is published as `31418bc`: Pages41355339473 and sitechecks41355348989 pass. [Actual public HTML/CSS/bundle responses](../authoring/penn-station-1935/review/phase9/clear-view/publication.json) match that commit exactly.
 
 ## Previous independent arrivals checkpoint — 31 October 2026 (Melbourne)
 
