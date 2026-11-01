@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "status": "Source authoring frozen; independent review and root runtime lighting acceptance remain separate gates.",
+  "sourceCanonicalSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "sourceCanonicalSha256After": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "files": {
+    "generator.py": {
+      "sha256": "98e82326c7e0e8da42f2bcbe431af264c664110ec958553fd48f56101179fe39",
+      "bytes": 32296
+    },
+    "arcade_connected_extensions.py": {
+      "sha256": "f10e0032e5513f6eea8eb0f75447868d01fcf60794029496d8ef76670640bffc",
+      "bytes": 22994
+    },
+    "formal-arcade-module.glb": {
+      "sha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "bytes": 33546008
+    },
+    "formal-arcade-review.blend": {
+      "sha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+      "bytes": 82090595
+    },
+    "old-arcade-owned-exterior-street0.glb": {
+      "sha256": "f8ad116cc8e59a764a754b0ab73b67371f52b44325fa7e81c2c2e34c8457f893",
+      "bytes": 959208
+    },
+    "old-arcade-owned-main-main0.glb": {
+      "sha256": "b8da605c17114cea4f6bf6a67e6ba8fb1826550677b0ff2617efaf254052c03f",
+      "bytes": 188260
+    },
+    "retained-exterior-occluder.glb": {
+      "sha256": "fc62b1f34c1a56c771a2b91e21aa48e3c5d2d0d1f65712c62c29b0d450894ec6",
+      "bytes": 49410300
+    },
+    "retained-main-occluder-main0.glb": {
+      "sha256": "5e56cfc2a135c499eb40a1a9c6ad5516359c7bbee95043a8f0d32ebba58ad511",
+      "bytes": 54752524
+    },
+    "source-proof.json": {
+      "sha256": "9232c4a2c37950bc2a8c2768cd2e2ee323d4f869849250f3eca6b532a16081cf",
+      "bytes": 1167557
+    },
+    "retained-main-export-proof.json": {
+      "sha256": "de0cd32dc85a8c9c71074a0f4081e87cb7a91f5f6cacb9b74cc4f6c523906543",
+      "bytes": 669
+    },
+    "legacy-ashlar-source-identity.json": {
+      "sha256": "b494659da98148e3073c823820edd1e8aa3297cb64f0f0446d61cfb615d8d370",
+      "bytes": 2293
+    },
+    "connected-physical-review.json": {
+      "sha256": "98c401f8aa887e349234438052caa2abe1b87ac12631c781ce607f35cf0c00f0",
+      "bytes": 488016
+    }
+  },
+  "inputArchive": {
+    "penn-station-phase5-c96.blend": {
+      "bytes": 75486342,
+      "sha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739"
+    },
+    "arcade-connected-ownership-controls.json": {
+      "bytes": 98376,
+      "sha256": "a38ce6abfbd07689cf7cde2bfcc73a3b139ae6e2d37ebdca8045dd728adb924f"
+    },
+    "arcade-ownership-controls.json": {
+      "bytes": 104103,
+      "sha256": "30dfea97e2ab7ca44f13a8eee5156941f55b07c30ebee5c773dd8c29cff08240"
+    },
+    "arcade-source-audit.json": {
+      "bytes": 4066440,
+      "sha256": "2185467c03416512569dea1ddb681051b85361a4861e351a249b4591a3c1fce5"
+    },
+    "arcade-section-calibration.json": {
+      "bytes": 5477,
+      "sha256": "e375323ec56ad541bc8a25bac7c5d39fbb5d7cd78488dc9167a5e97df2d6f60f"
+    }
+  },
+  "frames": {
+    "module": "street0",
+    "ownedExterior": "street0",
+    "protectedExterior": "street0",
+    "ownedMain": "Main0",
+    "protectedMain": "Main0; place at street Y\u22124.2672"
+  },
+  "newMaterialNames": [
+    "ArcadeNeutralUnassignedShopBacking",
+    "ArcadeOrnamentalMetal",
+    "ArcadeShopAndClerestoryGlass",
+    "ArcadeVaultCastComposition",
+    "MilfordGraniteArcadeRepairPhase9",
+    "PublicFloorMarbleArcadeRecessBearingPhase9",
+    "TravertineArcadeCastComposition",
+    "TravertineArcadeRepairPhase9",
+    "TravertineAshlar-1ArcadeRepairPhase9",
+    "TravertineAshlar-2ArcadeRepairPhase9",
+    "TravertineAshlar0ArcadeRepairPhase9",
+    "TravertineAshlar1ArcadeRepairPhase9",
+    "TravertineAshlar2ArcadeRepairPhase9"
+  ],
+  "counts": {
+    "objects": 2041,
+    "triangles": 596604,
+    "materials": 13
+  },
+  "authoritiesByteExactWithAcceptedV11": {
+    "old-arcade-owned-exterior-street0.glb": {
+      "byteEquality": true,
+      "sha256": "f8ad116cc8e59a764a754b0ab73b67371f52b44325fa7e81c2c2e34c8457f893"
+    },
+    "old-arcade-owned-main-main0.glb": {
+      "byteEquality": true,
+      "sha256": "b8da605c17114cea4f6bf6a67e6ba8fb1826550677b0ff2617efaf254052c03f"
+    },
+    "retained-exterior-occluder.glb": {
+      "byteEquality": true,
+      "sha256": "fc62b1f34c1a56c771a2b91e21aa48e3c5d2d0d1f65712c62c29b0d450894ec6"
+    },
+    "retained-main-occluder-main0.glb": {
+      "byteEquality": true,
+      "sha256": "5e56cfc2a135c499eb40a1a9c6ad5516359c7bbee95043a8f0d32ebba58ad511"
+    }
+  },
+  "closureOnlyChange": "One30mm deep unornamented arched reveal joins actualX16.535face toX16.565backing, closing measured26mm slit without altering clear aperture, ownership scopes, protected geometry or foundations.",
+  "cpuProbeSummary": {
+    "floorMisses": 0,
+    "routeObstructions": 0,
+    "headroomBelow2_3m": 0,
+    "sideEnclosureMisses": 0,
+    "remainingOldPortalBlockers": 0,
+    "courtWindowOpaqueObstructions": 0,
+    "courtGlassMisses": 0,
+    "openLunetteShoulders": 0,
+    "frontDoorwayObstructions": 0,
+    "openPortalRevealSlits": 0
+  },
+  "studioImages": "Prior v11 studio geometry views remain composition references; they are not final lighting or literal v12 renders."
+}

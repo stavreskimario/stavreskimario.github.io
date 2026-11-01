@@ -19,6 +19,8 @@ Editable sources, materials, lighting records and review evidence for the recons
 
 The core opens in common world coordinates: street0m and Main−4.2672m. Scene property `main_floor_world` records that level. Exported room/railway GLBs retain Main0 and receive their offset in the browser; do not apply it twice to the editable core. The separate railway authoring source retains its own Main0 coordinate contract.
 
+The [connected entrance source checkpoint](review/phase9/arcade/source/README.md) preserves the new arcade, loggia and vestibule generator, frozen evidence controls and qualified dimensions. Its [independent source review](review/phase9/arcade/independent/README.md) passes while the current canonical core and live geometry remain unchanged. Lighting, encoded surfaces and browser acceptance are pending separately.
+
 ## Current finish source and earlier appearance checkpoints
 
 The [Phase5 source proofs](review/phase5/source/) record the combined editable scene, exact preservation checks and correct world datum. Its three selected roughness maps are packed and also retained under [materials/phase5/](materials/phase5/). They use unit multipliers and explicitly interpreted ranges, rather than multiplying the near-black modern source maps again. [Material controls](review/phase5/material-finish/) separate these appearance choices from historical evidence. Final mapped-ceiling and runtime acceptance remain separate gates. Superseded source/HDR archives use verified immutable Git references and persistent backups; see [source history](review/phase5/storage/canonical-scene-history.json) and [Phase3 HDR history](lighting/phase3/HDR_ARCHIVE.md).

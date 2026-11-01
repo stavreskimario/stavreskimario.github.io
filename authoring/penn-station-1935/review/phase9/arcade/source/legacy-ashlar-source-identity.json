@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "meaning": "Semantic source identity only; runtime matching must additionally prove every owned triangle belongs uniquely to the actual same-surface target batch. Not an unrestricted material-alias whitelist.",
+  "oldSourceFamily": {
+    "TravertineAshlar-2": "Travertine",
+    "TravertineAshlar-1": "Travertine",
+    "TravertineAshlar0": "Travertine",
+    "TravertineAshlar1": "Travertine",
+    "TravertineAshlar2": "Travertine"
+  },
+  "evidence": [
+    "build_station.py line202 creates the five subtle TravertineAshlar colour variants; lines1189\u20131201 explicitly author individually faced travertine ashlar.",
+    "material_library.py SURFACES and surface_profile assign every Travertine-prefix material the Travertine009 / RomanTravertine physical surface.",
+    "prepare_surface_uvs retains an Ashlar-specific offset, so original UVs must remain unchanged. New repair clones provide surface_source_name with the exact original variant identity.",
+    "optimise.mjs runs glTF Transform optimize, without simplification for the full tier; this receipt alone does not prove which deduplication selected the delivered material name.",
+    "Independent performance agent proves all six old Main groups map uniquely to delivered masonry material4, and none to the monumental-order material14. Its pinned target membership report supplies the necessary geometric evidence."
+  ],
+  "sourceReceipts": [
+    {
+      "file": "penn-station-1935/model/build_station.py",
+      "sha256": "6c6d8bc313f5a52a680e7f5e6f554c43687d344601236ec61060746f39ecb3eb"
+    },
+    {
+      "file": "penn-station-1935/model/material_library.py",
+      "sha256": "482f810b4a3a7913a9d7da668359084e2a5d79a4ff708acac391c5aa1c506953"
+    },
+    {
+      "file": "penn-station-1935/optimise.mjs",
+      "sha256": "d5be257b67bfea1cdae0baa3e71d0e966686709d688bbd72b8c5789fda425324"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase4/source/lighting-phase4-source/material_library.py",
+      "sha256": "d5952f33ea35be18f2b1988765e144ca94d7fb1cc178e3757a946d3ac18880fa"
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase4/source/lighting-phase4-source/bake_lighting.py",
+      "sha256": "12d2310c29ba07459d0b03bfcec3254b10252b4301ef3e98218a2ce093ec0002"
+    }
+  ]
+}
