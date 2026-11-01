@@ -512,7 +512,7 @@ async function finishCli(code) {
       const after = await p.evaluate(() => window.pennStation.getCamera().position);
       assert(distance(before, after) > 1, `${neighbour}: the neighbourhood control changes the actual camera`);
       assert(neighbour === 'hotel' ? after[0] > 119 : after[0] < -119, `${neighbour}: viewpoint lies across the correct avenue`);
-      assert.match(await p.locator('#location-title').textContent(), neighbour === 'hotel' ? /Seventh/ : /Eighth/);
+      assert.match(await p.locator('#app-status').textContent(), neighbour === 'hotel' ? /Seventh/ : /Eighth/);
       await snapshot(p, `desktop-${neighbour}`, desktop.record);
     }
     await p.locator('#map-control > summary').click();

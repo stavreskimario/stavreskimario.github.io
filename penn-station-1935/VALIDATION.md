@@ -1,4 +1,10 @@
-# Independent arrivals checkpoint — 31 October 2026 (Melbourne)
+# Clearer viewport — 2 November 2026 (Melbourne)
+
+Removed the persistent location-title/description card at the owner's request. Viewpoint labels remain in navigation and the nonvisual live status. [Scoped local Chrome verification](../authoring/penn-station-1935/review/phase9/clear-view/local-browser.json) passes all three main viewpoints, six unchanged world-zone IDs and a supported 1.80m walk. No page/HTTP errors; duplicate resource cancellations and their actual successful responses remain recorded. Three-app validation passes. This changes no model, illumination, reflection, collision or quality setting; no new performance or physical-mobile claim is made.
+
+Bundle SHA256 `e35a21c601a3c6ee063e4eec70eb4f54344372ab52d8206cd1a609e8e9536f59`; HTML/CSS cache revision `9-clear-view-1`. Model assets retain `8-arrivals-1`. Publication awaits the matching feature-branch Pages run.
+
+## Previous independent arrivals checkpoint — 31 October 2026 (Melbourne)
 
 The `8-arrivals-1` checkpoint adds sixteen separate arrival staircases for eight ordinary platform correspondences and a connected lower Exit gallery. Main departures, all eleven unequal platform polygons and all twenty-one tracks retain their registered geometry. This is a bounded circulation release, not the completed photorealistic station or a surveyed 1935 replica.
 

@@ -189,8 +189,9 @@ const server = http.createServer(async (req, res) => {
       const before = await pose(mobile.page); const button = mobile.page.locator('.walk-pad button[data-move="KeyW"]');
       assert(await button.isVisible(), 'Narrow touch Orbit shows the direction pad');
       const box = await button.boundingBox();
-      const padBox = await mobile.page.locator('.walk-pad').boundingBox(), cardBox = await mobile.page.locator('.location-card').boundingBox();
-      assert(padBox.y + padBox.height <= cardBox.y - 4, 'Touch movement pad clears the location caption');
+      const padBox = await mobile.page.locator('.walk-pad').boundingBox(), controlsBox = await mobile.page.locator('.bottom-controls').boundingBox();
+      assert.equal(await mobile.page.locator('.location-card').count(), 0, 'Location card does not cover the architecture');
+      assert(padBox.y + padBox.height <= controlsBox.y - 4, 'Touch movement pad clears the navigation controls');
       assert(await mobile.page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), '390 px view has no horizontal overflow');
       const session = await mobile.context.newCDPSession(mobile.page);
       try {

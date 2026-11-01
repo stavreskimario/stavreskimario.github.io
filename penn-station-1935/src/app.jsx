@@ -787,9 +787,8 @@ function syncUI() {
   if ($('#load-error')) { $('#load-error').hidden = !state.error; const p = $('#load-error p'); if (p) p.textContent = state.error; }
   if ($('#load-progress')) $('#load-progress').value = state.progress;
   if ($('#load-status')) $('#load-status').textContent = `${state.progress >= 94 ? 'Preparing materials' : 'Loading architecture'} · ${Math.round(state.progress)}%`;
-  if ($('#location-title')) $('#location-title').textContent = config.title;
-  if ($('#location-index')) $('#location-index').textContent = { exterior: '01', waiting: '02', concourse: '03' }[state.view];
-  if ($('#location-caption')) $('#location-caption').textContent = config.caption;
+  const status = $('#app-status');
+  if (status && status.textContent !== config.title) status.textContent = config.title;
   if ($('#renderer-status')) $('#renderer-status').textContent = `${state.renderer || 'Starting renderer'} · ${state.quality === 'low' ? 'Mobile' : state.quality} quality`;
   if ($('#movement-help')) $('#movement-help').textContent = state.mode === 'walk' ? 'Drag to look · WASD / arrows to walk · Shift to move faster' : 'WASD / arrows to fly · Q down / E up · Shift faster · drag to turn';
   document.querySelectorAll('.walk-pad button').forEach(button => {
