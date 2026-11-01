@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "status": "PASS: scoped final encoded geometry/CPU navigation",
+  "variants": [
+    {
+      "variant": "full",
+      "platformSha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "counts": {
+        "floorSamples": 18792,
+        "coveSamples": 256,
+        "foundationSamples": 1175,
+        "arrivalBearingSamples": 800,
+        "fixtureMountSamples": 110,
+        "footSeamSamples": 7575
+      },
+      "arrivalRoutes": 96,
+      "arrivalStairSamples": 39696,
+      "gallerySamples": 9084,
+      "departureRoutes": 18,
+      "rearGuards": 3,
+      "newModuleTriangles": 2426,
+      "maxNewFloorGap": 0,
+      "maxNewCoveRadialError": 0.00036666593766754296,
+      "minimumFoundationEmbed": 0.03962518296884099,
+      "maxArrivalBearingPlateGap": 4.699707032429501e-07,
+      "maxExistingEncodedFixtureGap": 0.0008156503051237607,
+      "protectedPrefix": {
+        "oldTransportSha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+        "newTransportSha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+        "binaryBytes": 1035120,
+        "binaryPrefixSha256": "0511eb917b799d4d7ca4edc347229c48b734421eb9deea9f9dce6c654cc00fce",
+        "originalNodesExact": 14,
+        "originalAccessorsExact": 75,
+        "originalViewsExact": 67,
+        "originalMaterialsExact": 10,
+        "changedIndexPrimitives": [
+          {
+            "mesh": 0,
+            "primitive": 0,
+            "material": "Railway platform concrete interpretation",
+            "beforeIndices": 756,
+            "afterIndices": 228
+          },
+          {
+            "mesh": 0,
+            "primitive": 1,
+            "material": "Railway unpainted stone coping",
+            "beforeIndices": 2664,
+            "afterIndices": 792
+          },
+          {
+            "mesh": 0,
+            "primitive": 2,
+            "material": "Railway smooth concrete track base",
+            "beforeIndices": 18252,
+            "afterIndices": 5004
+          }
+        ],
+        "trackCount": 21,
+        "railwayTopologySha256": "ff9c40bcad6a387729369175fa510dfba795352b03878d2912577d5dd5a268e5"
+      },
+      "all25FeetThreeLaneSeamsPass": true,
+      "failures": 0
+    },
+    {
+      "variant": "low",
+      "platformSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "counts": {
+        "floorSamples": 18792,
+        "coveSamples": 256,
+        "foundationSamples": 1175,
+        "arrivalBearingSamples": 800,
+        "fixtureMountSamples": 110,
+        "footSeamSamples": 7575
+      },
+      "arrivalRoutes": 96,
+      "arrivalStairSamples": 39696,
+      "gallerySamples": 9084,
+      "departureRoutes": 18,
+      "rearGuards": 3,
+      "newModuleTriangles": 2426,
+      "maxNewFloorGap": 0,
+      "maxNewCoveRadialError": 0.00036666593766754296,
+      "minimumFoundationEmbed": 0.03962518296884099,
+      "maxArrivalBearingPlateGap": 4.699707032429501e-07,
+      "maxExistingEncodedFixtureGap": 0.0008156503051237607,
+      "protectedPrefix": {
+        "oldTransportSha256": "14c9c2fe3bd482eebc0aaee71b93dd761e8cd25552cc702dbde08a0ab21f12ba",
+        "newTransportSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+        "binaryBytes": 848084,
+        "binaryPrefixSha256": "fd5ffd340012e668f9cb78908cbf9a135473d98c0c2d9d4be81bf942f3aab5b0",
+        "originalNodesExact": 14,
+        "originalAccessorsExact": 75,
+        "originalViewsExact": 67,
+        "originalMaterialsExact": 10,
+        "changedIndexPrimitives": [
+          {
+            "mesh": 0,
+            "primitive": 0,
+            "material": "Railway platform concrete interpretation",
+            "beforeIndices": 756,
+            "afterIndices": 228
+          },
+          {
+            "mesh": 0,
+            "primitive": 1,
+            "material": "Railway unpainted stone coping",
+            "beforeIndices": 2664,
+            "afterIndices": 792
+          },
+          {
+            "mesh": 0,
+            "primitive": 2,
+            "material": "Railway smooth concrete track base",
+            "beforeIndices": 18252,
+            "afterIndices": 5004
+          }
+        ],
+        "trackCount": 21,
+        "railwayTopologySha256": "ff9c40bcad6a387729369175fa510dfba795352b03878d2912577d5dd5a268e5"
+      },
+      "all25FeetThreeLaneSeamsPass": true,
+      "failures": 0
+    }
+  ],
+  "reports": {
+    "geometry-and-contacts.json": {
+      "sha256": "136ff3f0ad02b6c391d72517452b17f9ba2d876e6197d6351feb7d10375db27b",
+      "bytes": 100970
+    },
+    "retained-index-sequences.json": {
+      "sha256": "5eca8c34723ef1d1922480023db21b12af28c8d8b6c535aa8c84551238ffd1b8",
+      "bytes": 2313
+    },
+    "arrival-routes.json": {
+      "sha256": "2b329e3fe936029429b67b73bf2aaa362e39bccc3a6986b5246db375a39b7ae7",
+      "bytes": 288778
+    },
+    "departure-regressions.json": {
+      "sha256": "47ac284de9c1b4339b10c37961b238e6b5afac53effce59f33af1a45e735da6b",
+      "bytes": 80803
+    }
+  },
+  "limits": [
+    "The inherited raw arrival script records a20micrometre mount comparison unsuitable for the unchanged encoded concourse. The dedicated110ray final check uses its established2mm control and explicitly retains the measured~0.816mm offset.",
+    "Native browser, final material appearance and publication remain independent gates.",
+    "No fake support planes, collision exclusions, source/runtime writes or GPU jobs were used.",
+    "Opening-era evidence, interpreted wall end closures, flat preserved platform tops and northern P9 registration limits remain unchanged."
+  ]
+}

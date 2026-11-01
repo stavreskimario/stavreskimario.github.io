@@ -1,6 +1,6 @@
-# Pennsylvania Station — independent arrivals checkpoint
+# Pennsylvania Station — platform construction checkpoint
 
-An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases now connect eight ordinary platform correspondences to the lower Exit gallery, alongside the retained Main departure routes and southern passage connections.
+An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases connect eight ordinary platform correspondences to the lower Exit gallery. The first eight platforms now have source-controlled concrete overhangs, coved undersides, continuous supporting walls and a finer granolithic finish, with fresh illumination from the current station geometry.
 
 The intended period is 1935–1940, using opening-era plans and photographs as anchors. Minor dimensions, later alterations, finishes and major unfinished areas remain qualified. This is a phased reconstruction with further photographic fidelity work ahead. See the [research register](RESEARCH.md), [source catalogue](sources.json), [arrivals evidence](model/arrivals-evidence.md) and [validation](VALIDATION.md).
 
@@ -13,21 +13,21 @@ The intended period is 1935–1940, using opening-era plans and photographs as a
 
 ## Explore
 
-Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors and stairs. Open **Station plan → The lower arrivals gallery** to reach the new viewpoint. **Environment → Orbit** enables free flight, with **Q/E** for height; switching back to Walk retains the arrivals viewpoint.
+Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors and stairs. Shift walking is 15% faster than the previous checkpoint; ordinary walking and free-flight speeds are unchanged. Open **Station plan → The lower arrivals gallery** to reach the new viewpoint. **Environment → Orbit** enables free flight, with **Q/E** for height; switching back to Walk retains the arrivals viewpoint.
 
 The large location card has been removed so the architecture stays visible; viewpoint names remain in navigation. The main viewpoints move the camera around the same station. Daylight, field of view, shadows, quality, annotations, approximate archive comparisons and optional ambience remain available. Fields, dialogs and blur guard movement input. Fuller Manhattan and further mobile optimization are deferred.
 
-## Rendering and evidence
+## Platform construction and rendering
 
 Blender authors the architecture. React, React Three Fiber, Drei and Three.js render glTF 2.0 with Meshopt and shared KTX2 textures. WebGL 2 is the default; native WebGPU parity remains experimental. GitHub Pages requires no backend or visitor build step.
 
-Nine illumination records include the new 4096 px, 64-sample arrivals atlas and its 512 px fallback, with 2048 px runtime contact AO. The addition packages into four mesh batches. Earlier room maps, platform illumination and static reflection captures remain retained; the platform lighting and older probes still need reconciliation with the enlarged gallery. Stone, glass, floor finish and historic colours remain appearance interpretations.
+Ten illumination records include the new 4096 px platform atlas baked with 64 samples, a 512 px fallback and 2048 px contact AO. The platform addition uses two material batches and lossless Meshopt compression of the original floating-point geometry, preserving thin surfaces and stair contacts. Existing northern platform lighting and static reflection captures remain retained. Stone, glass and historical colour remain appearance interpretations.
 
-Model, unique texture, light and probe transfer totals **180,772,199 bytes** across both variants. All twelve GLBs validate with zero errors, 362 recorded warnings and 76 shared KTX2 textures. Actual compressed-geometry checks cover all arrival flights, gallery aisles, retained P1/P2/P5 departures, support contacts and complete fixture mounts. Native browser results and publication are recorded separately in [validation](VALIDATION.md); no fresh FPS or physical-phone certification is claimed.
+Model, unique texture, light and probe transfer totals **190,675,029 bytes** across both variants. All 12 GLBs validate with zero errors,380 recorded warnings and 80 shared KTX2 textures. The [platform evidence](model/platform-section-evidence.md) distinguishes documented construction from interpreted centre depth, flat tops, end closures and finish values. Actual compressed geometry passes all 25 stair-foot seams, source-based floor/cove/foundation contacts and scoped arrival/departure routes. The native 34-leg connected walking loop passes with both new materials and 4K lightmaps bound and six persistent zones. [Validation](VALIDATION.md) keeps functional acceptance separate from sustained performance.
 
-The [editable-source history](../authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md) preserves the new scene, exact earlier-source recovery and a standalone CLI replay that reproduces the raw geometry byte for byte. Required lighting sources remain retained or recoverable through immutable Git identities and verified backups. [Asset rights](ASSET_RIGHTS.md) identify the references.
+The [core editable-source history](../authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md) and [platform source/replay](../authoring/penn-station-1935/review/phase9/platform-sections/README.md) preserves the new scene, exact earlier-source recovery and a standalone CLI replay that reproduces the raw geometry byte for byte. Required lighting sources remain retained or recoverable through immutable Git identities and verified backups. [Asset rights](ASSET_RIGHTS.md) identify the references.
 
-Custom staging measures approximately 186.77 MB under its revised 200 MB internal allowance. The complete legacy-root site remains below 1 GB. Hosting settings are unchanged; Engineering Journal and Crystal Palace remain removed.
+Custom staging remains subject to the 200 MB internal allowance: this checkpoint measures 196.71 MB. The conservative legacy tree is approximately 993.20 MB, below 1 GB. The complete legacy-root site remains below 1 GB. Hosting settings are unchanged; Engineering Journal and Crystal Palace remain removed.
 
 ## Remaining work
 

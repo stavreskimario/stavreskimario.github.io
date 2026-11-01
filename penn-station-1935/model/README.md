@@ -1,4 +1,4 @@
-Current circulation source: the established `penn-station-phase5.blend` filename now contains Phase7 V2, SHA256`f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588`. See [circulation evidence](circulation-evidence.md) and the reproducible `repair_concourse_circulation.py` CLI. The old broad builder does not reproduce later scoped corrections by itself.
+Current core source: the established `penn-station-phase5.blend` contains the accepted independent-arrivals source SHA256`c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739`. The separate corrected railway source now contains the [first-eight platform section/finish upgrade](platform-section-evidence.md), with source history and replay receipts in Phase9. Earlier circulation and broad-builder records below describe their historical checkpoints.
 
 # Pennsylvania Station — architectural revision 4
 

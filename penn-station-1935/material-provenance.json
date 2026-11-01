@@ -1,5 +1,5 @@
 {
-  "revision": 6,
+  "revision": 7,
   "references": [
     {
       "id": "Granite005A",
@@ -575,5 +575,55 @@
     "resolution": 2048,
     "samples": 64,
     "scope": "Closed residual wall only; existing room/floor atlases and reflection probes retained. Source-supported openings/3ftprincipal envelope with minor dimensions and finish interpreted."
+  },
+  "platformSurfacePhase9": {
+    "source": "Original project-authored procedural PBR; no historic photograph or modern quarry scan is used in these new maps.",
+    "generator": "model/repair_platform_sections.py",
+    "seed": 19352026,
+    "pitchMetres": 0.762,
+    "resolution": 2048,
+    "materials": [
+      "RailwayPlatformRubbedConcretePhase9",
+      "RailwayPlatformStippledGranolithicPhase9"
+    ],
+    "documentaryBasis": "Francis/O\u2019Brien ASCE69 printed201\u2013202: stippled granolithic dressing with approximately30in joints and rubbed exposed concrete.",
+    "interpreted": [
+      "Aggregate/colour/roughness",
+      "3mm apparent joint width and2mm normal-map depth",
+      "Joint origin and surface wear"
+    ],
+    "sourceImages": {
+      "granolithic-basecolor.png": {
+        "sha256": "6a3dcb0c18720c5a6e0b09d364a2f8dd78224519dae1cc4e001d74d9a487b8e2",
+        "bytes": 1473134
+      },
+      "granolithic-normal.png": {
+        "sha256": "cabf112ba459e80f662edfaa9632b5cf7889dcc4e9b1b05609adb45627e278a2",
+        "bytes": 1501792
+      },
+      "granolithic-roughness.png": {
+        "sha256": "53a1a584267eaad13c8eda604dbbf6535a30864609abce7efa5f0abcb8b1fb64",
+        "bytes": 1227466
+      }
+    },
+    "compressedMaps": [
+      {
+        "uri": "textures/1dbb4370dc80ba66e186.ktx2",
+        "bytes": 950518
+      },
+      {
+        "uri": "textures/f46d86be9b939ee4beec.ktx2",
+        "bytes": 2553771
+      },
+      {
+        "uri": "textures/206a10b6a2d3fbbd05a1.ktx2",
+        "bytes": 2317428
+      },
+      {
+        "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
+        "bytes": 2819507
+      }
+    ],
+    "lighting": "Independent current-neighbour4096px diffuse bake and2048px runtimeAO; older northern lighting/probes retained."
   }
 }

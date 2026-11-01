@@ -6,13 +6,14 @@ Editable sources, materials, lighting records and review evidence for the recons
 
 | File | Contents |
 | --- | --- |
-| [penn-station-phase5.blend](penn-station-phase5.blend) | Current editable source: scoped coffer-normal correction, concrete bedding below existing marble finishes, packed bounded stone-roughness maps and two photographed wall brackets. Existing room geometry, prism coverage, stairs and closed capital shells are retained. Source checks are separate from runtime visual acceptance. |
+| [penn-station-phase5.blend](penn-station-phase5.blend) | Current editable core: scoped stone/coffer repairs, wall brackets, corrected departures/circulation and independent arrivals gallery. The separate railway file carries the Phase9 platform sections. Source checks are separate from runtime visual acceptance. |
 | [penn-station-phase4.blend](https://github.com/stavreskimario/stavreskimario.github.io/blob/60563ab11c1d83c9b21badcd7fbd7b21efa66473/authoring/penn-station-1935/penn-station-phase4.blend) | Immutable previous source, with exact bytes and a verified persistent backup recorded in the Phase5 source-history receipt. |
 | [scene-manifest-phase4-architecture.json](scene-manifest-phase4-architecture.json) | Current architectural source metadata and revision 3 broad-floor coverage, including retained bearing cells and navigation datums. |
 | [penn-station-phase4-maintenance.blend](https://github.com/stavreskimario/stavreskimario.github.io/blob/cefcd2bd366ee236bd2e748b9922d34e4cbf3305/authoring/penn-station-1935/penn-station-phase4-maintenance.blend) | Immutable historical maintenance checkpoint, retaining the Phase 3 scene with all four office labels turned toward the hall, nine closed floor-to-tread slots, and complete gate indicators moved onto supported stair flanks. The separate appearance pipeline applies the reviewed stone derivatives. |
 | [penn-station-phase3.blend](https://github.com/stavreskimario/stavreskimario.github.io/blob/cefcd2bd366ee236bd2e748b9922d34e4cbf3305/authoring/penn-station-1935/penn-station-phase3.blend) | Immutable historical corrected core exterior, waiting room, concourse, raised end entrances and connected access stairs. Packed fallback material images are preserved in the original Git object. |
 | [context-neighbourhood.blend](context-neighbourhood.blend) | Current Hotel Pennsylvania, General Post Office and period street context, including the corrected Hotel column grounding. |
-| [railway-editable.blend](railway-editable.blend) | Separate source-based21-track/11-platform layout and22 supported platform-light units. |
+| [railway-phase3-corrected.blend](railway-phase3-corrected.blend) | Current separate railway: source-controlled P1–8 concrete/coved platform sections and granolithic finish, all21tracks,11platforms and22 complete supported lamp units. [Source history and exact replay](review/phase9/platform-sections/README.md) retain the pre-change baseline. |
+| [railway-editable.blend](railway-editable.blend) | Earlier separate railway source; retained as an historical authoring checkpoint. |
 | [model-trains.blend](model-trains.blend) | Early-production GG1 and interpreted P70 coaches. |
 | [scene-manifest-phase4.json](scene-manifest-phase4.json) | Current dimensions, levels, walking bounds and repaired main-stair opening edges. Railway and end-stair registrations remain those of Phase 3. |
 
@@ -63,3 +64,7 @@ git show 60563ab11c1d83c9b21badcd7fbd7b21efa66473:authoring/penn-station-1935/li
 ```
 
 Current Phase 4 source radiance, image files and provenance are not removed by this historical storage step.
+
+## Platform construction checkpoint
+
+[Phase9 platform source and exact replay](review/phase9/platform-sections/README.md), [illumination sources](lighting/phase9-platform/README.md) and [asset/browser acceptance](review/phase9/platform-acceptance/) identify the bounded first-eight upgrade. The old corrected railway source is recoverable byte for byte through its immutable Git identity and persistent backup. The core c96 source is unchanged. [One earlier train-bake occluder](review/phase9/storage/README.md) is reversibly archived for storage; current runtime assets and all retained lighting derivatives remain present.
