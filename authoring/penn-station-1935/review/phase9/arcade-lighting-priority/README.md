@@ -1,0 +1,9 @@
+# Lighting preparation checkpoint — 2 November 2026
+
+The [source and evidence archive](arcade-lighting-uv-handoff-v1.tar.gz) preserves the weighted Blender lighting-UV generator, exact UV-only data, actual v4 bake source, separate tested v5 AO export fix, independent chart separation checks and compressed preflight evidence. Its SHA256 is `f72618ac3eea2bc8a3a5d1ccbcf10c3de33d0116200120013e5884fbfbdc7b56`. Extract it into an external review folder; package-manifest paths describe files inside that archive.
+
+The same4K atlas gives visible Ionic work about47.8 GI pixels/m, inner walls/vault33.5–33.7 and four public-floor additions27.5. Geometry and original surfaceUVs remain intact. Source islands stay continuous, with no cross-chart overlap/containment in the independent boundary review. Existing architecture remains the source; these scripts change lighting allocation only.
+
+The first raw priority bake is HELD: validation found that omitting global material preparation also omitted the required neighbour-material remap. Its geometry/UV and export checks remain useful; its GI is not approved for delivery. The corrected bake must restore only neighbouring material profiles while retaining primary PBR/UV0/normals. No new browser lighting is delivered by this preparation checkpoint.
+
+A separate actual-source regression reproduced fine normal-pixel loss in the generic JPEG resize stage. Lossless PNG carriers now preserve every original2048² RGB byte through that stage for travertine, marble and granite, before the existing higher-quality normal encoder. Low output retains its prior path. `normal-pixel-controls.json` and `normal-carrier-proof.json` retain actual source image hashes, pixel identities and rejection controls. This corrects the earlier compression-only diagnosis: the live direct-source normal replacement is valid, while future builds also need this lossless intermediate.

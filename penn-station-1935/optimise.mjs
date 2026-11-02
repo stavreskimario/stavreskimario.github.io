@@ -7,6 +7,7 @@ import { createRequire } from 'node:module';
 import { readGlb, writeGlb, shareGlbTextures } from './asset_io.mjs';
 import { prepareScalarTextures } from './prepare-scalars.mjs';
 import { preserveOrderAO } from './preserve-order-ao.mjs';
+import { preserveNormalPixels } from './preserve-normal-pixels.mjs';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const tools = process.env.PENN_TOOLS || '/private/tmp/penn-station-tools';
 const sharp = createRequire(path.join(tools, 'package.json'))('sharp');
@@ -51,8 +52,10 @@ for (const zone of (requestedZones.length ? requestedZones : ['exterior', 'waiti
     const textured = path.join(scratch, `${zone}${low ? '-low' : ''}-textured.glb`);
     const scalar = path.join(scratch, `${zone}${low ? '-low' : ''}-scalars.glb`);
     const scalarProof = path.join(scratch, `${zone}${low ? '-low' : ''}-scalar-proof.json`);
-    run(['resize', geometry, sized, '--width', low ? '512' : '2048', '--height', low ? '512' : '2048']);
-    if (!low) await preserveOrderAO(geometry, sized, sized, path.join(scratch, `${zone}-order-ao-proof.json`));
+    const resizeInput = low ? geometry : path.join(scratch, `${zone}-normal-pixels.glb`);
+    if (!low) await preserveNormalPixels(geometry, resizeInput, path.join(scratch, `${zone}-normal-pixel-proof.json`));
+    run(['resize', resizeInput, sized, '--width', low ? '512' : '2048', '--height', low ? '512' : '2048']);
+    if (!low) await preserveOrderAO(resizeInput, sized, sized, path.join(scratch, `${zone}-order-ao-proof.json`));
     await prepareScalarTextures(sized, scalar, scalarProof);
     if (low) {
       run(['uastc', scalar, textured, '--level', '1', '--zstd', '6', '--jobs', '2']);

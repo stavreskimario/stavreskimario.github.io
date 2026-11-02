@@ -25,6 +25,7 @@ parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
 parser.add_argument("--device", choices=("AUTO", "CPU", "METAL"), default="AUTO")
 parser.add_argument("--ao-only", action="store_true")
+parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade-only: retain an existing two-UV baked authoring mesh without joining, welding or re-unwrapping")
 parser.add_argument("--surface-group", choices=("all", "vault", "masonry", "order"), default="all")
 parser.add_argument("--uv-margin-pixels", type=float, default=4)
 parser.add_argument("--materials", type=Path, help="Optional local CC0 material library; see material-provenance.json")
@@ -43,11 +44,19 @@ if args.artifact_name:
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
 if artifact_zone == "arcade-enclosure" and not args.source_visibility_proof:
     raise ValueError("Arcade transport requires the original source render-visibility proof")
+if args.preserve_authored_uv1 and (artifact_zone != "arcade-enclosure" or args.surface_group != "all"):
+    raise ValueError("Preserve-authored-UV1 is restricted to the arcade authoring artifact")
+if args.preserve_authored_uv1 and args.materials:
+    raise ValueError("Preserve-authored-UV1 retains authored PBR and UV0; omit --materials")
 started = time.monotonic()
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
 scene = bpy.context.scene
 primary_objects = list(scene.objects)
+authored_primary_snapshot = None
+if args.preserve_authored_uv1:
+    from authored_lighting_uv_guard import snapshot_primary, verify_before_bake
+    authored_primary_snapshot = snapshot_primary(primary_objects)
 order_objects, order_audit = [], None
 if args.zone == "waiting-room" and args.surface_group != "all":
     from order_lighting_uv import split_waiting_order_objects
@@ -151,42 +160,61 @@ for obj in [obj for obj in scene.objects if obj.type == "MESH"]:
 
 if not solids:
     raise RuntimeError("No opaque architecture to bake")
-arcade_normal_integrity = None
-if artifact_zone == "arcade-enclosure":
-    from arcade_corner_normals import preserve_arcade_corner_normals, restore_arcade_corner_normals
-    arcade_normal_integrity = preserve_arcade_corner_normals(solids)
-bpy.ops.object.select_all(action="DESELECT")
-for obj in solids:
-    obj.select_set(True)
-bpy.context.view_layer.objects.active = solids[0]
-bpy.ops.object.join()
-architecture = bpy.context.object
-architecture.name = f"{artifact_zone} baked static architecture"
-bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-mesh = architecture.data
-if not mesh.uv_layers:
-    raise RuntimeError("Architecture must have its original material UVs")
-original_uv = mesh.uv_layers[0].name
-light_uv_name = "BakedLightingUV"
-order_uv_audit = None
-vault_normal_integrity = None
-if args.surface_group == "order":
-    from order_lighting_uv import prepare_order_uv
-    order_uv_audit = prepare_order_uv(architecture, args.resolution, args.uv_margin_pixels)
-elif args.surface_group == "vault":
-    from vault_lighting_uv import prepare_vault_uv
-    vault_normal_integrity = prepare_vault_uv(architecture, args.resolution, args.uv_margin_pixels)
+authored_uv_integrity = None
+if args.preserve_authored_uv1:
+    if len(solids) != 1:
+        raise RuntimeError("Preserve-authored-UV1 requires one already-batched opaque architecture mesh")
+    architecture = solids[0]
+    if not np.array_equal(np.array(architecture.matrix_world), np.eye(4)):
+        raise RuntimeError("Preserve-authored-UV1 requires the authored Street0 identity transform")
     mesh = architecture.data
+    if len(mesh.uv_layers) != 2:
+        raise RuntimeError("Preserve-authored-UV1 needs its original surface UV0 and authored lighting UV1")
+    original_uv = mesh.uv_layers[0].name
+    light_uv_name = mesh.uv_layers[1].name
+    order_uv_audit = None
+    vault_normal_integrity = None
+    bpy.ops.object.select_all(action="DESELECT")
+    architecture.select_set(True)
+    bpy.context.view_layer.objects.active = architecture
+    authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture)
 else:
-    mesh.uv_layers.new(name=light_uv_name)
-    mesh.uv_layers.active_index = len(mesh.uv_layers) - 1
-    bpy.ops.object.mode_set(mode="EDIT")
-    bpy.ops.mesh.select_all(action="SELECT")
-    bpy.ops.mesh.remove_doubles(threshold=.00001)
-    bpy.ops.uv.smart_project(angle_limit=math.radians(75), island_margin=args.uv_margin_pixels / args.resolution, margin_method="FRACTION", area_weight=.5, correct_aspect=True, scale_to_bounds=True)
-    bpy.ops.object.mode_set(mode="OBJECT")
-if arcade_normal_integrity is not None:
-    arcade_normal_integrity = restore_arcade_corner_normals(architecture, arcade_normal_integrity)
+    arcade_normal_integrity = None
+    if artifact_zone == "arcade-enclosure":
+        from arcade_corner_normals import preserve_arcade_corner_normals, restore_arcade_corner_normals
+        arcade_normal_integrity = preserve_arcade_corner_normals(solids)
+    bpy.ops.object.select_all(action="DESELECT")
+    for obj in solids:
+        obj.select_set(True)
+    bpy.context.view_layer.objects.active = solids[0]
+    bpy.ops.object.join()
+    architecture = bpy.context.object
+    architecture.name = f"{artifact_zone} baked static architecture"
+    bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+    mesh = architecture.data
+    if not mesh.uv_layers:
+        raise RuntimeError("Architecture must have its original material UVs")
+    original_uv = mesh.uv_layers[0].name
+    light_uv_name = "BakedLightingUV"
+    order_uv_audit = None
+    vault_normal_integrity = None
+    if args.surface_group == "order":
+        from order_lighting_uv import prepare_order_uv
+        order_uv_audit = prepare_order_uv(architecture, args.resolution, args.uv_margin_pixels)
+    elif args.surface_group == "vault":
+        from vault_lighting_uv import prepare_vault_uv
+        vault_normal_integrity = prepare_vault_uv(architecture, args.resolution, args.uv_margin_pixels)
+        mesh = architecture.data
+    else:
+        mesh.uv_layers.new(name=light_uv_name)
+        mesh.uv_layers.active_index = len(mesh.uv_layers) - 1
+        bpy.ops.object.mode_set(mode="EDIT")
+        bpy.ops.mesh.select_all(action="SELECT")
+        bpy.ops.mesh.remove_doubles(threshold=.00001)
+        bpy.ops.uv.smart_project(angle_limit=math.radians(75), island_margin=args.uv_margin_pixels / args.resolution, margin_method="FRACTION", area_weight=.5, correct_aspect=True, scale_to_bounds=True)
+        bpy.ops.object.mode_set(mode="OBJECT")
+    if arcade_normal_integrity is not None:
+        arcade_normal_integrity = restore_arcade_corner_normals(architecture, arcade_normal_integrity)
 mesh.calc_loop_triangles()
 uv_values = np.empty(len(mesh.loops) * 2, dtype=np.float32)
 mesh.uv_layers[light_uv_name].data.foreach_get("uv", uv_values)
@@ -294,19 +322,10 @@ if not args.ao_only:
     mobile_illumination.save_render(str(args.out / f"lighting-{artifact_zone}-sky-low.png"), scene=scene)
     print("Diffuse sky + bounce bake saved", flush=True)
 
-# Standard glTF occlusion texture, explicitly sampled using the atlas UV set.
-group = bpy.data.node_groups.new("glTF Material Output", "ShaderNodeTree")
-group.interface.new_socket(name="Occlusion", in_out="INPUT", socket_type="NodeSocketFloat")
+# Reuse imported glTF settings so no stale Occlusion group wins export.
+from baked_occlusion_binding import bind_fresh_baked_occlusion
+occlusion_binding_integrity = bind_fresh_baked_occlusion(materials, ao, light_uv_name)
 for material in materials:
-    nodes, links = material.node_tree.nodes, material.node_tree.links
-    uv = nodes.new("ShaderNodeUVMap")
-    uv.uv_map = light_uv_name
-    texture = nodes.new("ShaderNodeTexImage")
-    texture.image = ao
-    links.new(uv.outputs["UV"], texture.inputs["Vector"])
-    settings = nodes.new("ShaderNodeGroup")
-    settings.node_tree = group
-    links.new(texture.outputs["Color"], settings.inputs["Occlusion"])
     material["lighting_atlas_uv"] = 1
     if illumination:
         material["sky_illumination"] = f"lighting-{artifact_zone}-sky.png"
@@ -373,6 +392,9 @@ report = {
 if arcade_normal_integrity is not None:
     report["arcadeNormalIntegrity"] = arcade_normal_integrity
     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
+if authored_uv_integrity is not None:
+    report["authoredUvIntegrity"] = authored_uv_integrity
+report["occlusionBindingIntegrity"] = occlusion_binding_integrity
 if not args.ao_only and not (report["illumination"] and report["illumination"]["maximum"] > 0 and report["illumination"]["mean"] > 0):
     raise RuntimeError("The complete daylight atlas contains no positive radiance; do not promote this bake")
 (args.out / f"lighting-{artifact_zone}.json").write_text(json.dumps(report, indent=2) + "\n")

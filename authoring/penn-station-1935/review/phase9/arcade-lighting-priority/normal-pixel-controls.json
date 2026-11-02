@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "scope": "Three actual original2KnormalJPEGs through real installed resizeCLI; no architecture generated or runtime changed",
+  "pixels": [
+    {
+      "family": "Travertine009",
+      "sourceImageSha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+      "sourcePixelSha256": "650d339ccd6efa265bc45fab22f3d15bb7c1b33a76f38fe620894210c307fe2c",
+      "afterPixelSha256": "650d339ccd6efa265bc45fab22f3d15bb7c1b33a76f38fe620894210c307fe2c",
+      "width": 2048,
+      "height": 2048,
+      "baselineJpegResizeLostPixels": true,
+      "losslessCarrierResizePixelsExact": true
+    },
+    {
+      "family": "Marble018",
+      "sourceImageSha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+      "sourcePixelSha256": "1aef55ce4e46ecfd3e06a48e42b323895383d668628fdd0346f62cda6de2cd54",
+      "afterPixelSha256": "1aef55ce4e46ecfd3e06a48e42b323895383d668628fdd0346f62cda6de2cd54",
+      "width": 2048,
+      "height": 2048,
+      "baselineJpegResizeLostPixels": true,
+      "losslessCarrierResizePixelsExact": true
+    },
+    {
+      "family": "Granite005A",
+      "sourceImageSha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b",
+      "sourcePixelSha256": "32880ff279ca9928891436cece7c3ab45b2650b0b804809e5f368dae7a2974dd",
+      "afterPixelSha256": "32880ff279ca9928891436cece7c3ab45b2650b0b804809e5f368dae7a2974dd",
+      "width": 2048,
+      "height": 2048,
+      "baselineJpegResizeLostPixels": true,
+      "losslessCarrierResizePixelsExact": true
+    }
+  ],
+  "controls": [
+    "actualJPEG-loss-reproduced",
+    "allthreeRGBpixel-arrays-exact-afterPNG-andCLIresize",
+    "nonzero-geometry-BIN-prefix-exact",
+    "all-material-factors-bindings-exact",
+    "non-normal-JPEG-bytes-exact-before-resize",
+    "PNG-verbatim-repeat",
+    "mixed-normal-colour-image-rejected"
+  ],
+  "proof": {
+    "status": "PASS",
+    "helperSha256": "a8a57408170f1a752fd34930b9d7576dbf1364c86366504a7b5f00f55fdded03",
+    "input": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/normal-pixel-regression-v1/source.glb",
+      "sha256": "e7dca7dda2a326c0a4a0dfc94ba64653803b5d17093db199d2ad7ac219cc4892"
+    },
+    "output": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/normal-pixel-regression-v1/lossless-carrier.glb",
+      "sha256": "31170118bebcba23361aea65df4cab60b7c186c04d95be97567f831eed43bd9f"
+    },
+    "oldBinaryPrefixBytes": 8142384,
+    "oldBinaryPrefixSha256": "a517d7ef836c89c4f89859ae9e2eddd1c0f8c4487ff6a6383734973e6a88856f",
+    "oldBinaryPrefixExact": true,
+    "otherImagesAndAllGeometryUVBindingsExact": true,
+    "materialFactorsUnchanged": true,
+    "convertedNormals": [
+      {
+        "image": 1,
+        "mimeType": "image/jpeg",
+        "imageSha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+        "pixelSha256": "650d339ccd6efa265bc45fab22f3d15bb7c1b33a76f38fe620894210c307fe2c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "bindings": [
+          {
+            "material": "Travertine009",
+            "name": "normalTexture",
+            "index": 1,
+            "normal": true
+          }
+        ],
+        "newView": 6,
+        "pngSha256": "963e1fbbdd04ded0a745d921f9d7489d3ef3a59cb95c5baab5e39ffc494d61bd",
+        "pngBytes": 1485879,
+        "decodedPixelsExact": true
+      },
+      {
+        "image": 2,
+        "mimeType": "image/jpeg",
+        "imageSha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+        "pixelSha256": "1aef55ce4e46ecfd3e06a48e42b323895383d668628fdd0346f62cda6de2cd54",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "bindings": [
+          {
+            "material": "Marble018",
+            "name": "normalTexture",
+            "index": 2,
+            "normal": true
+          }
+        ],
+        "newView": 7,
+        "pngSha256": "21f1a9eb4cb0d2e7b07aeae9cd44abe4571debd9b7196a80bb5ecba2c30a3afc",
+        "pngBytes": 1505916,
+        "decodedPixelsExact": true
+      },
+      {
+        "image": 3,
+        "mimeType": "image/jpeg",
+        "imageSha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b",
+        "pixelSha256": "32880ff279ca9928891436cece7c3ab45b2650b0b804809e5f368dae7a2974dd",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "bindings": [
+          {
+            "material": "Granite005A",
+            "name": "normalTexture",
+            "index": 3,
+            "normal": true
+          }
+        ],
+        "newView": 8,
+        "pngSha256": "86ac7614eda15eb2af7e1619b2948feb6d7dab7329c316aaacc8a0995b862936",
+        "pngBytes": 2091260,
+        "decodedPixelsExact": true
+      }
+    ],
+    "originalPNGs": [],
+    "verbatimInput": false
+  }
+}
