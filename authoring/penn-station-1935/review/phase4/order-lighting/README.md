@@ -17,8 +17,8 @@ The large masonry atlas gave the shafts about 6.38 texels/metre; a bounded capit
 
 ## Retained evidence
 
-- [baseline.png](images/baseline.png): actual preliminary candidate with its defect.
-- [white-control.png](images/white-control.png): the same camera and fixed exposure, white materials with AO/irradiance removed and constant hemisphere illumination. This deliberately flat image isolates geometry from the atlases.
+- [baseline.png](https://github.com/stavreskimario/stavreskimario.github.io/blob/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/review/phase4/order-lighting/images/baseline.png): actual preliminary candidate with its defect.
+- [white-control.png](https://github.com/stavreskimario/stavreskimario.github.io/blob/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/review/phase4/order-lighting/images/white-control.png): the same camera and fixed exposure, white materials with AO/irradiance removed and constant hemisphere illumination. This deliberately flat image isolates geometry from the atlases.
 - [shader-isolation.json](reports/shader-isolation.json), [atlas-controls.json](reports/atlas-controls.json) and [face-controls.json](reports/face-controls.json): actual capture options, browser version, camera/exposure, input/request hashes and errors. The baseline/white pair comes from the same atlas-control run at exposure 4.153373611617231. Other large variant images are not copied into this archive.
 - [atlas-density.json](reports/atlas-density.json): measured original physical areas and UV footprints. The bounded capital measurement includes neighbouring order stone and is not a new architectural dimension.
 - [order-uv-proof.json](reports/order-uv-proof.json): accepted helper input/hash, eight equal 69,904-polygon selections, exact geometry/normal/UV0 preservation and atlas metrics.

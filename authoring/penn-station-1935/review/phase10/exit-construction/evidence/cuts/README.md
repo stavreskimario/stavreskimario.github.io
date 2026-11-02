@@ -1,0 +1,11 @@
+# Narrow arrivals-route interface cuts
+
+Use these concourse bases before appending the new Blender route module. They preserve the currently published first-west Platform 5 source and all unrelated attributes. The context outputs replace only the matching context transports. Do not append to the original uncut concourse or the research guard remains in the way.
+
+The exact accepted implementation is `../cut-current-route-v5.mjs`; `../audit-cuts-final.mjs` independently checks actual decoded geometry. Earlier v1–v4 experiments and failed audit logs are retained externally as history, not accepted candidates. `FROZEN-CUTS.json` pins the four current input models, raw guard source, import helpers, implementation, audit and accepted outputs. A rerun must verify those input hashes first; the implementation reads the current repository paths and should not be run against a later revision.
+
+Both concourse variants pass 243 interior guard/body rays after removal (zero hits). The full variant removes 880 source-owner triangles; the fallback retains its interpreted simplified shape while removing the corresponding 24-owner barrier. Coincident outer fence corner-post geometry remains. The retained old indices stay in original order and all original binary bytes remain untouched.
+
+Both context variants cut the north opposite sidewalk at X [-7.15,-1.45], Z [-87.85,-85.3]. The actual sidewalk ends near Z -87.7824, so the cut reaches its outer edge; road and curb do not change. Six old boundary triangles become 22 clipped outside triangles, using the original material and interpolated original attributes in one additional primitive. Nine vertical samples find no paving inside the opening; six adjacent controls agree within approximately 1e-10 m numerical roundoff. This is checked against a stated 1e-7 m bound, not described as exact geometry at edited boundary pieces.
+
+Root's Blender addon must provide real well walls/reveals against the clipped paving body and real outdoor landing support. There is no authored Main-floor aperture: the documented route lies beyond the current Main north edge. Final assembly, full route collision/headroom, illumination and browser publication remain separate gates.

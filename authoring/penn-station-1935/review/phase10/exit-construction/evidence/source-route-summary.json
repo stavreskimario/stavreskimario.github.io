@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "status": "PRIMARY TOPOLOGY/APPEARANCE VERIFIED; proposed construction alignment is qualified and not surveyed. No geometry/runtime edited.",
+  "selectedRoute": "Existing platform\u2192arrival stairs\u2192ordinary Exit gallery\u2192north extension\u2192lower33rdStreetpassage\u2192midblock escalator/adjacent stone stair\u2192privateway landing\u2192opposite33rdStreet sidewalk.",
+  "sources": [
+    {
+      "id": "Gibbs1910",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/next-visual-references/asce69.pdf",
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "controls": [
+        {
+          "printed": 242,
+          "pdf": 426,
+          "fact": "Main and Exit connect at their respective levels with a two-deck passage under33rdStreet; connects LIRR and34thStreet."
+        },
+        {
+          "printed": 248,
+          "pdf": 432,
+          "fact": "North LIRR station entered from7thAve/driveway,33rdStreet stair and34thStreet entrance/exit."
+        },
+        {
+          "printed": 252,
+          "pdf": 438,
+          "fact": "33rdStreet passage654ft\u00d730ft;30ft=9.144m."
+        },
+        {
+          "printed": 254,
+          "pdf": 442,
+          "fact": "Enameled brick faces retainingwalls under33rdStreet. Exact color is not established."
+        },
+        {
+          "printed": 261,
+          "pdf": 451,
+          "fact": "Table3 lists one escalator; stair4ftwide,25ftlift,85ft/min; operational capacity9000/h."
+        },
+        {
+          "printed": 262,
+          "pdf": 452,
+          "fact": "Installed escalator leads from Exit under33rdStreet to street level at midblock/private street near34thStreet surfacecars."
+        }
+      ]
+    },
+    {
+      "id": "PRR1910Improvement",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/research/prr-newyork-1910.pdf",
+      "sha256": "25e7113cd034680a0a7736745b6744952014d53caf6dab1c726892e0db42e97f",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/The_New_York_improvement_and_tunnel_extension_of_the_Pennsylvania_railroad._Issued_October%2C_1910_%28IA_newyorkimproveme00penn%29.pdf",
+      "controls": [
+        {
+          "printed": 16,
+          "pdf": 36,
+          "fact": "Exit concourse egress to side streets,EighthAve,34thStreet via stairs and inclines; moving stairway to midblock private street."
+        },
+        {
+          "pdf": 53,
+          "fact": "Photograph caption identifies Exitconcourse/lift and stairway leading to33rdStreet. Exactphoto-to-planmatch remains unverified."
+        }
+      ]
+    },
+    {
+      "id": "Otis1910Ad",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/source-route-v1/Architecture-1910-11.pdf",
+      "sha256": "f7de12ec52ae65ca9a9401119eeeca0322696e6e2ef324f1223cf456755083b0",
+      "url": "https://usmodernist.org/AM/AM-1910-11.pdf#page=4",
+      "controls": [
+        {
+          "printed": "vii",
+          "pdf": 4,
+          "fact": "Otis ad explicitly identifies new Pennsylvania Terminal installation. Actual photograph shows dark paneled rounded escalator balustrades, narrow metal trim/handrail and adjacent straight pale stone stair reaching same upperlanding."
+        }
+      ]
+    }
+  ],
+  "rejectedUnprovenShortcut": {
+    "rectangleWorldXZ": [
+      -88.07,
+      -78.67,
+      -68.87,
+      -54.01
+    ],
+    "reason": "Tentatively read northspecialwell is ambiguous sanitary/service fixtures in3xnativecrop. Do not build publicstairthere on this evidence. DirectExit-to-Mainstreetstairshortcut not established."
+  },
+  "registration": {
+    "sourceRecipe": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/bounded-construction-recipe.json",
+    "uvToWorldXZ": [
+      [
+        5.29484172553309e-17,
+        0.08545794392523363,
+        -166.69099065420565
+      ],
+      [
+        -0.08236492926078355,
+        -0.0002499028863556004,
+        93.64691111894723
+      ]
+    ],
+    "registrationReconstructedFromExistingFourSourceControls": true,
+    "maxResidualM": 2.3092638912203256e-14,
+    "minimumGlobalUncertaintyM": 1
+  },
+  "nativeImageSize": [
+    2462,
+    4000
+  ],
+  "projectedMidblockMarker": {
+    "nativeUV": [
+      2170,
+      2230,
+      1855,
+      1955
+    ],
+    "worldBoundsXZ": [
+      -8.1715,
+      0.3793,
+      -90.51,
+      -85.54
+    ],
+    "travelDirection": "Arrow toward increasing nativeU, north/worldZdecreasing",
+    "qualification": "Partial plan marker/projection; does not dimension full escalator incline/upperlanding."
+  },
+  "suggestedReviewGeometry": {
+    "coordinateSpace": "worldglTF Xeast Yup Zsouth",
+    "existingFloorY": -7.4676,
+    "mainFloorY": -4.2672,
+    "streetWorkingY": 0,
+    "northGalleryExtensionBoundsXZ": [
+      -73.2,
+      -54.912,
+      -70.228,
+      -36
+    ],
+    "northPassageWorkingBoundsXZ": [
+      -73.2,
+      -0.4,
+      -79.372,
+      -70.228
+    ],
+    "northPassagePrintedWidthM": 9.144,
+    "pathWaypoints": [
+      [
+        -64,
+        -7.4676,
+        -32
+      ],
+      [
+        -64,
+        -7.4676,
+        -69
+      ],
+      [
+        -64,
+        -7.4676,
+        -74.8
+      ],
+      [
+        -4,
+        -7.4676,
+        -74.8
+      ]
+    ],
+    "ascender": {
+      "proposedTopZ": -89,
+      "riseM": 7.4676,
+      "inferredInclinationDegrees": 30,
+      "inferredHorizontalRunM": 12.934262610601351,
+      "proposedFootZ": -76.06573738939865,
+      "escalatorCenterX": -5.2,
+      "stairCenterX": -2.0,
+      "escalatorPrintedClearWidthM": 1.2192,
+      "adjacentStairClearWidthInferredM": 2,
+      "topPrivateWayReviewBoundsXZ": [
+        -8.2,
+        0.4,
+        -91,
+        -87.5
+      ],
+      "qualification": "Only4ftescalatorclearwidth is documented here;fullrun,stepcounts,stairwidth,centres,landingandminordimensions needcoordination/visualreview."
+    },
+    "floorDatumConflict": {
+      "sourceLiftFt": 25,
+      "currentWorkingRiseFt": 24.5,
+      "differenceM": 0.1524,
+      "policy": "Keepexistingstationlevels;qualify6inregistrationdifference. Do not move station toforce25ft."
+    },
+    "sidewalkConnection": {
+      "existingContextWorldZ": [
+        -87.532,
+        -84.532
+      ],
+      "existingContextTopY": -0.00236,
+      "source": "Geometryagent currentcontextmeasurement; parent must use exact measured surface.",
+      "requirement": "Build actual landing/privatewaypaving and join real sidewalk; no imaginary collider plane. Keep road and roof/aperture bodyheadroom checked."
+    }
+  },
+  "appearance": {
+    "under33rdWalls": "Enameled brick documented; pale tone inferred from monochrome evidence.",
+    "escalator": "Dark solid paneled balustrades with rounded lowerreturns; narrow metal trim/handrail; dark step train. Photo-backed original form, not modern transparent guard.",
+    "adjacentStair": "Pale straight stoneflight besideescalator, sameupperlanding. Photo count does not certify fullriser schedule.",
+    "operation": "Static construction may be walkable via adjacent stair. No motor animation or original1935 hardware inventory established."
+  },
+  "holds": [
+    "Exact1935retention of1910hardware not independentlyverified.",
+    "Full34thStreetprivateway/context andnorthernplatformassignments remain outside thisfirstconnection.",
+    "No directMaincourtshortcut fromambiguousfixturewell.",
+    "No fullasbuiltsurvey claim."
+  ],
+  "files": {
+    "north-stairwell-native3x.png": {
+      "bytes": 54710,
+      "sha256": "71a6410fbafe70de91ba88a1a661acefef9a6f7a807b3ca27276c02ca134383a"
+    },
+    "prr74-pdf53.txt": {
+      "bytes": 124,
+      "sha256": "a6b94d236e85815db4d12d5a81237c386ac86fdf5c17611c27472ceb25e5e1cb"
+    },
+    "asce-pdf443.txt": {
+      "bytes": 261,
+      "sha256": "374e01eaca1407418022eb9645efb5b30f36849f49fc355ef5b7db35fb3aa5d7"
+    },
+    "Main-midblock-exit-detail.png": {
+      "bytes": 164704,
+      "sha256": "d191c70fea2e36d163a9c3da8b366691d543718701898bbebe5e09e7c8c271d8"
+    },
+    "asce-pdf442.txt": {
+      "bytes": 2966,
+      "sha256": "940b24e62c21a8ce81826be81437ad53e40d0b9fd9da377e0415247061ed159d"
+    },
+    "asce-pdf452.txt": {
+      "bytes": 2905,
+      "sha256": "f8ee6181aedbed861d604d8dcaab8dac48c98802a75738dbb2890eb1cd9e5377"
+    },
+    "prr44-pdf39.png": {
+      "bytes": 407251,
+      "sha256": "c4644ac85734b4af6c74ee45d0f3d50b785add48ba8e496f919d55acf2442c5f"
+    },
+    "asce-pdf451.txt": {
+      "bytes": 2699,
+      "sha256": "e4c05bc1913a8e3f7a56fead7e39327dfa6c70de0b31fbde271ef7de7f29dc6c"
+    },
+    "prr74-pdf36.png": {
+      "bytes": 477712,
+      "sha256": "3fd76f202ec43a80b73dae0b4ac598fc2fbf8cd8b694d8f75bab996f66aa131c"
+    },
+    "asce-pdf444.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "prr44-pdf38.png": {
+      "bytes": 532578,
+      "sha256": "4268cf5fe2fe3d02dda931a36ad15a35f194380cd76c353eaef775f6dab6ed4e"
+    },
+    "initial-pixel-registration.json": {
+      "bytes": 476,
+      "sha256": "abaa8a70533bb2516adec9419c09450e0d82efaf60d4edd5acd1f997b084eb30"
+    },
+    "Otis-Penn-ad-pdf4.png": {
+      "bytes": 3156471,
+      "sha256": "abe8edee1c68e8208a42aa74259abda2d0406a103497634bb4e339017e155c28"
+    },
+    "prr74-pdf53.png": {
+      "bytes": 391826,
+      "sha256": "8d5e93d48d0a865eeb398bb96d4651a79d8448461a624d00d17c1fa92481ce0d"
+    },
+    "Architecture-1910-11.pdf": {
+      "bytes": 22228002,
+      "sha256": "f7de12ec52ae65ca9a9401119eeeca0322696e6e2ef324f1223cf456755083b0"
+    },
+    "prr74-pdf36.txt": {
+      "bytes": 1412,
+      "sha256": "0cee47813727dfdb79c8031984b67ecbfc5bcd4f0f8bacc34849a58c1ff53e3d"
+    },
+    "asce-pdf426.txt": {
+      "bytes": 3030,
+      "sha256": "e23a3f84208c66598761ab1c9989ec6f8951e4126bfc8868295785e18604f285"
+    },
+    "asce-pdf432.txt": {
+      "bytes": 3253,
+      "sha256": "496113c7d445e59cfa929258800c5a4c22c6f388ab9cc1237fbd0a795481da6f"
+    },
+    "Exit-north-Exit-stair-candidate.png": {
+      "bytes": 121449,
+      "sha256": "24d34f23729b8f250d0b5e231c3c82031db9cfd92eb83f6065f9cf17c38e74c5"
+    },
+    "Street-north-Exit-stair-candidate.png": {
+      "bytes": 136998,
+      "sha256": "c48aa181b4ec086b68359d7f83ab7eabab8d027113ce2cdc96b97aaba124a0f9"
+    },
+    "prr44-pdf41.png": {
+      "bytes": 64923,
+      "sha256": "62e9b9ac9875926a104ae6d0293e2d22d698e542ec5031fe35e41e32edd26adf"
+    },
+    "prr44-pdf40.png": {
+      "bytes": 92369,
+      "sha256": "3745e001fe4d893c72db51b29515f7cd3810a51008f1a96c6436d5ffb684ee41"
+    },
+    "Street-north-up.png": {
+      "bytes": 3081248,
+      "sha256": "6969778e5eb3c6730dd4d51b060333f2899fd42833122eb6496756ad91185f24"
+    },
+    "asce-pdf438.txt": {
+      "bytes": 1974,
+      "sha256": "4335f92be36aed35b8190cb396e3e8c97ac5b6273bd9c527ac195d16bc37b61f"
+    },
+    "Main-north-up.png": {
+      "bytes": 3596173,
+      "sha256": "e3a9515d6da8ca9465b0a16c1b3b755ac35e09e3511f4683e9c76ec7c870f0f8"
+    },
+    "Exit-midblock-exit-detail.png": {
+      "bytes": 70094,
+      "sha256": "c2fd78e57ab3345431891cdadd34331c7bc8195f775bab01f1c33491da6a3433"
+    },
+    "Gibbs-table3-native.png": {
+      "bytes": 475008,
+      "sha256": "fe1fc773ab9b97a61d865c07d886e0bb319a688a29908076b997881e14374c59"
+    },
+    "Street-midblock-exit-detail.png": {
+      "bytes": 152535,
+      "sha256": "bbb97a8dcf9818195714f5bd8a3728096702d21ac81838ea1821115d9f70af12"
+    },
+    "street-north-strip.png": {
+      "bytes": 991238,
+      "sha256": "8506670daed7545da9cf5154e8464a96d5d698bd33fc683f88a9cd2cdd74da1a"
+    },
+    "gibbs-244-full-4000.png.north-strip.png": {
+      "bytes": 614468,
+      "sha256": "b08ed6da9f66edc0bde0057c2acc7280bd802d612ce61f1602bbedf6d7f5878f"
+    },
+    "Exit-northwest-court.png": {
+      "bytes": 586541,
+      "sha256": "8067d45c35012b394d24ff4e0c6c8d6ca9f55ad25eb48b821dae1d2881869a7d"
+    },
+    "Street-northwest-court.png": {
+      "bytes": 680333,
+      "sha256": "ea77a65174fe8d407f7a22b843c1cfb95191187be1bac6e6408d5003dec099f7"
+    },
+    "Main-northwest-court.png": {
+      "bytes": 741947,
+      "sha256": "45331a2284b2f97450480ccff38ff781d941123ab18c499cc4888a7a14f43099"
+    },
+    "Exit-north-up.png": {
+      "bytes": 2543737,
+      "sha256": "ca587b1eee989222bb43c49cf834d29c444fb2fbffc0138dfe9dbd3757e63194"
+    },
+    "gibbs-243-full-4000.png.north-strip.png": {
+      "bytes": 877423,
+      "sha256": "ea32ecbacb906ea1730696c6c75f2cedcc4f047bb45d37d196b86056e88ba82b"
+    },
+    "Main-north-stairwell-native3x.png": {
+      "bytes": 53447,
+      "sha256": "ecdda488bb5c64be19e031c71253a21f95cf99bb8b0f7dee8a4d1adf1cd46ae4"
+    },
+    "Main-north-Exit-stair-candidate.png": {
+      "bytes": 150368,
+      "sha256": "735145e0fe9ac26e71a21fb8ce7fb739b60562d88984dc5130d09f3c785b08d3"
+    },
+    "midblock-stub-native3x.png": {
+      "bytes": 25469,
+      "sha256": "ad11c237f27e46f8134d7d9628b2ca1a3af288b5f1f50dd4b9197e044977a191"
+    },
+    "prr44-pdf24.png": {
+      "bytes": 600549,
+      "sha256": "a5901ca3151f94f81eaeeb3b463264b015bc54f0ff1bd7f78e85758472ed53cc"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 The immutable original full-core source and native north-mural crop are in [source/](source/). The [earlier delivery receipt](architecture-delivery.json) identifies that pass and its small revision 2 floor patches. The broad visible central-court floor is superseded by [revision 3](../concourse-details/floor-v3/source-reconciliation.json), which records the current editable scene/manifest, canonical source and actual-triangle checks; the earlier source and reports are retained. Raw rooms use Main = 0; the saved scene already places Main at world −4.2672 m. The source preview and neutral diagnostic are actual Blender renders, with their lighting limitations identified separately from the final browser experience.
 
-![Final Blender-source waiting-room preview](source-preview/waiting-room-daylight.png)
+![Final Blender-source waiting-room preview](https://github.com/stavreskimario/stavreskimario.github.io/blob/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/review/phase4/architecture/source-preview/waiting-room-daylight.png)
 
 This CPU Cycles preview uses the final editable geometry, the current interpreted PBR library, directional daylight and an interior photographic exposure. It is a source render while the separate browser lighting is baked, rather than a browser screenshot. [Render settings, source hashes and limitations](source-preview/source-render.json) accompany it.
 

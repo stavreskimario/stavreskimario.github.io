@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "status": "BlenderCPU baked proceduralmaterial; mappedstationreviewpending",
+  "source": "Gibbs1910 printed254/PDF442",
+  "sourceUrl": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=442",
+  "periodicPatchMetres": [
+    2.032,
+    1.9812
+  ],
+  "brickModuleMetres": [
+    0.2032,
+    0.0762
+  ],
+  "horizontalModules": 10,
+  "courses": 26,
+  "halfBondOffset": 0.5,
+  "variationPeriodicity": "UV4Dtorus; identicalColor1/Color2 prevents nonperiodic perbrickrandomcolors",
+  "mortarNominalMetres": 0.003,
+  "mortarRecessMetres": 0.0018,
+  "brickRoughness": 0.26,
+  "mortarRoughness": 0.72,
+  "roughnessVariationInterpreted": true,
+  "qualification": "Materialfamilydocumented; hue,module,bond,glaze andminorrelief are inferred. NewBlenderproceduralmaps, not historicalphotographs.",
+  "threads": 2,
+  "device": "CPU",
+  "samples": 1,
+  "runtimeSeconds": 4.849424839019775,
+  "files": [
+    {
+      "file": "enameled-brick-color.png",
+      "bytes": 139754,
+      "sha256": "40d21822d0288860dc09de3c4273c601d237df8b3e798b6befe843d1d8a3ada2",
+      "type": "EMIT",
+      "colorSpace": "sRGB",
+      "width": 2048,
+      "height": 2048,
+      "imagePixelsMin": [
+        0.5764706134796143,
+        0.572549045085907,
+        0.5490196347236633
+      ],
+      "imagePixelsMax": [
+        0.8274510502815247,
+        0.8156863451004028,
+        0.7725490927696228
+      ]
+    },
+    {
+      "file": "enameled-brick-normal.png",
+      "bytes": 80993,
+      "sha256": "bad663d9afb39f8ac6124ad2370e30055b6bf7b515f668dcdc876c3217e3f636",
+      "type": "NORMAL",
+      "colorSpace": "Non-Color",
+      "width": 2048,
+      "height": 2048,
+      "imagePixelsMin": [
+        0.13725490868091583,
+        0.22745099663734436,
+        0.8078432083129883
+      ],
+      "imagePixelsMax": [
+        0.8941177129745483,
+        0.7725490927696228,
+        1.0
+      ]
+    },
+    {
+      "file": "enameled-brick-roughness.png",
+      "bytes": 64511,
+      "sha256": "4c26840a001e7d60552972900729dca8195310e2e75ec8bb4bc88f5b8a0ac684",
+      "type": "EMIT",
+      "colorSpace": "Non-Color",
+      "width": 2048,
+      "height": 2048,
+      "imagePixelsMin": [
+        0.25882354378700256,
+        0.25882354378700256,
+        0.25882354378700256
+      ],
+      "imagePixelsMax": [
+        0.7215686440467834,
+        0.7215686440467834,
+        0.7215686440467834
+      ]
+    }
+  ],
+  "scriptSha256": "d037227ed8e5fcf5c4743a1d430e356cd260b9b49cbb8bd05c3b43e60801734b",
+  "blendSha256": "5c00a753142a3aa70cdfc2b245ebbf4ae92008f9f656ba6038a0e7d70f63132e"
+}
