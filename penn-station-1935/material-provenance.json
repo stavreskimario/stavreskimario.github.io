@@ -641,5 +641,18 @@
     "dataTransfer": "linear/noncolour",
     "historicalQualification": "Modern CC0 material appearance interpretation, not a calibrated historical sample. Coarse lighting softness remains unfinished.",
     "evidence": "../authoring/penn-station-1935/review/phase9/stone-detail/README.md"
+  },
+  "phase9ArcadeLightingPriority": {
+    "date": "2026-11-02",
+    "scope": "Arcade/loggia lighting UV allocation and full normal-image fidelity; geometry, surfaceUV0 and material strengths unchanged",
+    "fullNormalEncoding": "Original normal JPEG RGB pixels -> exact losslessPNGcarrier -> resize -> UASTClevel4",
+    "sourceResolution": 4096,
+    "samples": 256,
+    "runtimeAODimension": 2048,
+    "runtimeSkyScale": 2,
+    "sourceRadianceSha256": "2d1cb314546bc500a7cebb725fbe6fa38d9aaf931e1d45ad6ac17435492f0d21",
+    "evidence": "../authoring/penn-station-1935/review/phase9/arcade-lighting-priority/README.md",
+    "qualification": "Modern CC0 surface interpretation, not measured historic material samples. Final photographic fidelity remains unfinished.",
+    "lowNormalPreparationUnchanged": true
   }
 }

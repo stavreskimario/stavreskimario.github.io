@@ -29,6 +29,7 @@ parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade
 parser.add_argument("--surface-group", choices=("all", "vault", "masonry", "order"), default="all")
 parser.add_argument("--uv-margin-pixels", type=float, default=4)
 parser.add_argument("--materials", type=Path, help="Optional local CC0 material library; see material-provenance.json")
+parser.add_argument("--occluder-materials", type=Path, help="Apply the established material library only to imported neighbour meshes/materials, preserving the authored primary")
 parser.add_argument("--source-visibility-proof", type=Path, help="Pinned source visibility rules for the connected entrance contexts")
 parser.add_argument("--occluder", action="append", default=[], metavar="ZONE=GLB", help="Registered neighbouring chunk to include in light transport, without exporting it")
 args = parser.parse_args()
@@ -48,6 +49,8 @@ if args.preserve_authored_uv1 and (artifact_zone != "arcade-enclosure" or args.s
     raise ValueError("Preserve-authored-UV1 is restricted to the arcade authoring artifact")
 if args.preserve_authored_uv1 and args.materials:
     raise ValueError("Preserve-authored-UV1 retains authored PBR and UV0; omit --materials")
+if args.materials and args.occluder_materials:
+    raise ValueError("--materials and --occluder-materials are mutually exclusive")
 started = time.monotonic()
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
@@ -70,6 +73,7 @@ if args.zone not in frames:
     raise ValueError("Unknown architectural frame")
 occluders = []
 source_visibility = []
+imported_occluder_objects = []
 for specification in args.occluder:
     zone, filename = specification.split("=", 1)
     if zone not in frames:
@@ -77,6 +81,7 @@ for specification in args.occluder:
     previous = set(scene.objects)
     bpy.ops.import_scene.gltf(filepath=str(Path(filename).resolve()))
     imported = set(scene.objects) - previous
+    imported_occluder_objects.extend(imported)
     offset = frames[zone] - frames[args.zone]
     for obj in imported:
         if obj.parent not in imported:
@@ -92,6 +97,10 @@ surface_report = []
 if args.materials:
     prepare_surface_uvs(list(scene.objects))
     surface_report = apply_materials(bpy.data.materials, args.materials)
+occluder_material_integrity = None
+if args.occluder_materials:
+    from occluder_materials import apply_occluder_materials
+    surface_report, occluder_material_integrity = apply_occluder_materials(primary_objects, imported_occluder_objects, args.occluder_materials)
 scene.render.engine = "CYCLES"
 device = configure_device(scene, args.device)
 print("Cycles device: " + json.dumps(device), flush=True)
@@ -395,6 +404,8 @@ if arcade_normal_integrity is not None:
 if authored_uv_integrity is not None:
     report["authoredUvIntegrity"] = authored_uv_integrity
 report["occlusionBindingIntegrity"] = occlusion_binding_integrity
+if occluder_material_integrity is not None:
+    report["occluderMaterialIntegrity"] = occluder_material_integrity
 if not args.ao_only and not (report["illumination"] and report["illumination"]["maximum"] > 0 and report["illumination"]["mean"] > 0):
     raise RuntimeError("The complete daylight atlas contains no positive radiance; do not promote this bake")
 (args.out / f"lighting-{artifact_zone}.json").write_text(json.dumps(report, indent=2) + "\n")

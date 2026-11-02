@@ -1,4 +1,12 @@
-# Stone detail compression checkpoint — 2 November 2026 (Melbourne)
+# Arcade lighting checkpoint — 2 November 2026 (Melbourne)
+
+A denser4K lighting layout and256-sample CyclesMetal bake reduce broad smearing on the arcade/loggia columns and bases. [Actual native view, source and pixel evidence](../authoring/penn-station-1935/review/phase9/arcade-lighting-priority/README.md) retain exact geometry/UV0/material preservation, corrected neighbour profiles, fresh AO and fine normal pixels through resize/compression. Source normal re-encoding is bounded at0.144degrees; final mesh quantization remains separately qualified. No canonical geometry or walking routes change.
+
+TwelveGLBs pass with0errors/440retained warnings,89sharedKTX2textures and218,753,125aggregate transfer bytes. Ten other-zone models stay exact. Eight native Chrome walking legs through the entrance and down arrivals stairs pass; six zones persist, with0page/server errors. Scale2, zero clipping,0.18calibration and exact PNG/WebP derivative pixels pass. Three-app checks and seven staging tests pass. The final bundle changes only cache revision and derived chunk references.
+
+Current runtime revision`9-arcade-lighting-1`. The custom stage allowance is230MB; complete legacy hosting remains below1GB. The retained Main-wall lighting, dark unassigned shop interiors and other visual limitations remain open. Arrivals lighting and finishing are prioritised next. Fuller streetscape/mobile work is deferred; exterior roof flicker stays last. No new FPS, physical-mobile, WebGPU or completed-photorealism claim is made. Matching publication is pending.
+
+# Previous stone detail compression checkpoint — 2 November 2026 (Melbourne)
 
 A full desktop travertine normal map now retains the fine variation erased by the previous compressor setting. Seven new arcade stone materials and arrivals stair stone use the corrected shared2048²/12-mip KTX2. The original .035 finish strength stays unchanged. [Source/pixel and native browser evidence](../authoring/penn-station-1935/review/phase9/stone-detail/README.md) records both actual walking comparisons and the rejected stronger finish. All geometry, UVs, GI/AO, unrelated materials and ten other model transports remain exact. Current canonical Blender scenes are unchanged.
 
