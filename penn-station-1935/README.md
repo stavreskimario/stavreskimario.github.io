@@ -1,6 +1,6 @@
 # Pennsylvania Station — connected entrance checkpoint
 
-Current checkpoint: the connected Seventh Avenue vestibule, arcade and Ionic loggia are now explorable through to the waiting room. [Validation](VALIDATION.md) records the21-leg native roundtrip, source accuracy and remaining lighting/finish limitations. All six zones load together; Walk remains default.
+Current checkpoint: the connected Seventh Avenue vestibule, arcade and Ionic loggia are now explorable through to the waiting room. The latest desktop texture checkpoint preserves fine stone normals; broader lighting softness remains in progress. Finishing the arrivals area is the next priority after this lighting pass. [Validation](VALIDATION.md) records the21-leg native roundtrip, source accuracy and remaining lighting/finish limitations. All six zones load together; Walk remains default.
 
 [Open the live connected entrance](https://stavreskimario.github.io/penn-station-1935/?preview=0177ad2). Matching [deployment and public-response evidence](../authoring/penn-station-1935/review/phase9/arcade/acceptance/final-publication.json) verifies the published `0177ad2` checkpoint.
 
