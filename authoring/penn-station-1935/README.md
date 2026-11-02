@@ -6,7 +6,7 @@ Editable sources, materials, lighting records and review evidence for the recons
 
 | File | Contents |
 | --- | --- |
-| [penn-station-phase5.blend](penn-station-phase5.blend) | Current editable core: scoped stone/coffer repairs, wall brackets, corrected departures/circulation and independent arrivals gallery. The separate railway file carries the Phase9 platform sections. Source checks are separate from runtime visual acceptance. |
+| [penn-station-phase5.blend](penn-station-phase5.blend) | Current editable core: connected source-backed arcade/loggia/vestibule, scoped stone/coffer repairs, wall brackets, corrected departures/circulation and independent arrivals gallery. The separate railway file carries the Phase9 platform sections. Source checks are separate from runtime visual acceptance. |
 | [penn-station-phase4.blend](https://github.com/stavreskimario/stavreskimario.github.io/blob/60563ab11c1d83c9b21badcd7fbd7b21efa66473/authoring/penn-station-1935/penn-station-phase4.blend) | Immutable previous source, with exact bytes and a verified persistent backup recorded in the Phase5 source-history receipt. |
 | [scene-manifest-phase4-architecture.json](scene-manifest-phase4-architecture.json) | Current architectural source metadata and revision 3 broad-floor coverage, including retained bearing cells and navigation datums. |
 | [penn-station-phase4-maintenance.blend](https://github.com/stavreskimario/stavreskimario.github.io/blob/cefcd2bd366ee236bd2e748b9922d34e4cbf3305/authoring/penn-station-1935/penn-station-phase4-maintenance.blend) | Immutable historical maintenance checkpoint, retaining the Phase 3 scene with all four office labels turned toward the hall, nine closed floor-to-tread slots, and complete gate indicators moved onto supported stair flanks. The separate appearance pipeline applies the reviewed stone derivatives. |
@@ -19,7 +19,7 @@ Editable sources, materials, lighting records and review evidence for the recons
 
 The core opens in common world coordinates: street0m and Main−4.2672m. Scene property `main_floor_world` records that level. Exported room/railway GLBs retain Main0 and receive their offset in the browser; do not apply it twice to the editable core. The separate railway authoring source retains its own Main0 coordinate contract.
 
-The [connected entrance source checkpoint](review/phase9/arcade/source/README.md) preserves the new arcade, loggia and vestibule generator, frozen evidence controls and qualified dimensions. Its [independent source review](review/phase9/arcade/independent/README.md) passes while the current canonical core and live geometry remain unchanged. Lighting, encoded surfaces and browser acceptance are pending separately.
+The [connected entrance source checkpoint](review/phase9/arcade/source/README.md) preserves the new arcade, loggia and vestibule generator, frozen evidence controls and qualified dimensions. Its [independent source review](review/phase9/arcade/independent/README.md) passes, and the [source history](review/phase9/arcade/canonical-history.json) records its adoption into the editable core. Lighting, encoded surfaces, browser and publication acceptance have separate records.
 
 ## Current finish source and earlier appearance checkpoints
 

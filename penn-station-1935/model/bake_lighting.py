@@ -28,6 +28,7 @@ parser.add_argument("--ao-only", action="store_true")
 parser.add_argument("--surface-group", choices=("all", "vault", "masonry", "order"), default="all")
 parser.add_argument("--uv-margin-pixels", type=float, default=4)
 parser.add_argument("--materials", type=Path, help="Optional local CC0 material library; see material-provenance.json")
+parser.add_argument("--source-visibility-proof", type=Path, help="Pinned source visibility rules for the connected entrance contexts")
 parser.add_argument("--occluder", action="append", default=[], metavar="ZONE=GLB", help="Registered neighbouring chunk to include in light transport, without exporting it")
 args = parser.parse_args()
 args.out.mkdir(parents=True, exist_ok=True)
@@ -40,6 +41,8 @@ if args.artifact_name:
     if args.zone != expected_zone or args.surface_group != "all":
         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
+if artifact_zone == "arcade-enclosure" and not args.source_visibility_proof:
+    raise ValueError("Arcade transport requires the original source render-visibility proof")
 started = time.monotonic()
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
@@ -57,6 +60,7 @@ frames = {"exterior": 0, "context": 0, "waiting": -4.2672, "waiting-room": -4.26
 if args.zone not in frames:
     raise ValueError("Unknown architectural frame")
 occluders = []
+source_visibility = []
 for specification in args.occluder:
     zone, filename = specification.split("=", 1)
     if zone not in frames:
@@ -70,6 +74,10 @@ for specification in args.occluder:
             obj.location.z += offset
         if zone == "trains" and obj.parent not in imported:
             obj.location.y -= 8.690045261
+    if artifact_zone == "arcade-enclosure":
+        from restore_imported_visibility import restore_source_render_visibility
+        bpy.context.view_layer.update()
+        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof))
     occluders.append({"zone": zone, "source": Path(filename).name, "sha256":hashlib.sha256(Path(filename).read_bytes()).hexdigest(), "heightOffset": offset, "objects": len(imported)})
 surface_report = []
 if args.materials:
@@ -364,6 +372,7 @@ report = {
 }
 if arcade_normal_integrity is not None:
     report["arcadeNormalIntegrity"] = arcade_normal_integrity
+    report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
 if not args.ao_only and not (report["illumination"] and report["illumination"]["maximum"] > 0 and report["illumination"]["mean"] > 0):
     raise RuntimeError("The complete daylight atlas contains no positive radiance; do not promote this bake")
 (args.out / f"lighting-{artifact_zone}.json").write_text(json.dumps(report, indent=2) + "\n")

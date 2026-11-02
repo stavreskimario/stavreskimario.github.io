@@ -1,4 +1,4 @@
-Current core source: the established `penn-station-phase5.blend` contains the accepted independent-arrivals source SHA256`c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739`. The separate corrected railway source now contains the [first-eight platform section/finish upgrade](platform-section-evidence.md), with source history and replay receipts in Phase9. Earlier circulation and broad-builder records below describe their historical checkpoints.
+Current core source: the established `penn-station-phase5.blend` contains the accepted connected-entrance source SHA256`c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc`, preserving the earlier arrivals architecture. [Source history](../../authoring/penn-station-1935/review/phase9/arcade/canonical-history.json) retains the exact c96 input and replay. The separate corrected railway source now contains the [first-eight platform section/finish upgrade](platform-section-evidence.md), with source history and replay receipts in Phase9. Earlier circulation and broad-builder records below describe their historical checkpoints.
 
 # Pennsylvania Station — architectural revision 4
 

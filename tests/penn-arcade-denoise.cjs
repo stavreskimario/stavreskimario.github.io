@@ -21,7 +21,8 @@ module.exports=async function({assets,illumination,repositoryDirectory,sampleRec
   await sharp(path.join(source,record[variant].png)).webp({lossless:true,effort:0}).toFile(path.join(assets,record[variant].webp));referenced.add(record[variant].webp);
  }
  const integrity={status:'PASS',temporaryAttributeRemoved:true,finiteUnitNormals:true,maxAllowedEncodingAngleDegrees:.5,maxEncodingAngleDegrees:0,minimumRestoredSourceNormalDot:1,sourceNegativeHemisphereCorners:0,restoredNegativeHemisphereCorners:0};
- const bake={...JSON.parse(await fs.readFile(path.join(assets,'lighting-concourse.json'))),zone,resolution:4096,arcadeNormalIntegrity:integrity,fixturePurpose:'Synthetic arcade provenance control; not a station bake'};
+ const visibility={proofSha256:'0'.repeat(64),contexts:['Doric column master — 35ft','Fluted Corinthian shaft master.001'].map(name=>({sourceVisibilityRule:name,alreadyExcludedByImporter:false,changedObjects:[{name,hideRenderAfter:true,sourceHideRender:true,meshMaterialAndMatrixExact:true,boundErrorM:0}]}))};
+ const bake={...JSON.parse(await fs.readFile(path.join(assets,'lighting-concourse.json'))),zone,resolution:4096,arcadeNormalIntegrity:integrity,sourceRenderVisibility:visibility,fixturePurpose:'Synthetic arcade provenance control; not a station bake'};
  const bakeBytes=Buffer.from(JSON.stringify(bake,null,2)+'\n');record.bakeReportSha256=hash(bakeBytes);
  const bakeFile=`lighting-${zone}.json`,recordFile=path.join(assets,`lighting-${zone}-denoise.json`);
  await fs.writeFile(path.join(assets,bakeFile),bakeBytes);await fs.writeFile(path.join(rawPath,bakeFile),bakeBytes);
@@ -43,6 +44,9 @@ module.exports=async function({assets,illumination,repositoryDirectory,sampleRec
  await assert.rejects(()=>validateDenoising({assetsDirectory:assets,illumination:new Set([...illumination,record.full.webp]),repositoryDirectory}),/both full and low/);
  assert.throws(()=>checkBakeStatistics({...bake,resolution:2048},record,{width:2048,height:2048}),/exactly4096/);
  assert.throws(()=>checkBakeStatistics({...bake,arcadeNormalIntegrity:undefined},record,{width:4096,height:4096}),/corner-normal preservation/);
+ assert.throws(()=>checkBakeStatistics({...bake,sourceRenderVisibility:undefined},record,{width:4096,height:4096}),/render-visibility provenance/);
+ const visibleTemplate=structuredClone(visibility);visibleTemplate.contexts[0].changedObjects[0].hideRenderAfter=false;
+ assert.throws(()=>checkBakeStatistics({...bake,sourceRenderVisibility:visibleTemplate},record,{width:4096,height:4096}));
  for(const values of [{maxAllowedEncodingAngleDegrees:2},{maxEncodingAngleDegrees:.6},{minimumRestoredSourceNormalDot:.9},{restoredNegativeHemisphereCorners:1}])assert.throws(()=>checkBakeStatistics({...bake,arcadeNormalIntegrity:{...integrity,...values}},record,{width:4096,height:4096}));
  const undersized=structuredClone(record);undersized.full.width=undersized.full.height=2048;
  await assert.rejects(()=>verifyDenoiseDerivative({record:undersized,variant:'full',sourceDirectory:source,assetsDirectory:assets,illumination:referenced,fullDimensions:[4096]}),/atlas dimension/);

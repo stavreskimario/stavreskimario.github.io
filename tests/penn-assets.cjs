@@ -118,6 +118,23 @@ async function retainedHdr(record, directory) {
   return { bytes: decoded, archiveFile, archiveBytes: bytes.length, width: Number(resolution[2]), height: Number(resolution[1]) };
 }
 
+function checkArcadeVisibility(visibility) {
+  assert(visibility && /^[a-f0-9]{64}$/.test(visibility.proofSha256), 'Arcade requires source render-visibility provenance');
+  const expected = new Set(['Doric column master — 35ft', 'Fluted Corinthian shaft master.001']);
+  const rules = visibility.contexts?.filter(context => context.sourceVisibilityRule);
+  assert.equal(rules?.length, 2, 'Exactly two proven hidden source templates');
+  assert.deepEqual(new Set(rules.map(rule => rule.sourceVisibilityRule)), expected);
+  for (const rule of rules) {
+    if (rule.alreadyExcludedByImporter) { assert.equal(rule.changedObjects.length, 0); continue; }
+    assert.equal(rule.changedObjects?.length, 1);
+    const object = rule.changedObjects[0];
+    assert.equal(object.name, rule.sourceVisibilityRule);
+    assert.equal(object.hideRenderAfter, true); assert.equal(object.sourceHideRender, true);
+    assert.equal(object.meshMaterialAndMatrixExact, true);
+    assert(Number.isFinite(object.boundErrorM) && object.boundErrorM >= 0 && object.boundErrorM < .00002);
+  }
+}
+
 function checkBakeStatistics(bake, record, retained) {
   const zone = record.zone;
   assert.equal(bake.zone, zone, `${zone}: raw bake report uses the actual atlas zone`);
@@ -137,6 +154,7 @@ function checkBakeStatistics(bake, record, retained) {
     assert(Number.isFinite(normals.minimumRestoredSourceNormalDot) && normals.minimumRestoredSourceNormalDot >= Math.cos(Math.PI / 360) - 1e-7);
     assert(Number.isInteger(normals.sourceNegativeHemisphereCorners) && normals.sourceNegativeHemisphereCorners >= 0);
     assert(Number.isInteger(normals.restoredNegativeHemisphereCorners) && normals.restoredNegativeHemisphereCorners >= 0 && normals.restoredNegativeHemisphereCorners <= normals.sourceNegativeHemisphereCorners, 'No new inward corner normals');
+    checkArcadeVisibility(bake.sourceRenderVisibility);
   }
   assert.equal(retained.width, bake.resolution); assert.equal(retained.height, bake.resolution);
   assert(bake.resolution >= record.full.width, `${zone}: delivered derivative does not exceed retained source resolution`);
@@ -345,7 +363,7 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   return { atlases, groups };
 }
 
-module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, verifyPlatformSurfaceSource, verifyArcadeSource, validateDenoising };
+module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, checkArcadeVisibility, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, verifyPlatformSurfaceSource, verifyArcadeSource, validateDenoising };
 
 if (require.main === module) (async () => {
   await MeshoptDecoder.ready;
@@ -480,6 +498,9 @@ if (require.main === module) (async () => {
   if (illumination.has('lighting-arcade-enclosure-sky.webp')) {
     const bytes = await fs.readFile(path.join(root, 'reflection-arcade-probe.json'));
     const capture = JSON.parse(bytes); assert.equal(capture.probes?.length, 1, 'Isolated arcade capture has one current-source probe');
+    checkArcadeVisibility(capture.sourceRenderVisibility);
+    const arcadeBake = JSON.parse(await fs.readFile(path.join(root, 'lighting-arcade-enclosure.json')));
+    assert.equal(capture.sourceRenderVisibility.proofSha256, arcadeBake.sourceRenderVisibility.proofSha256, 'Arcade lighting and reflections share exact source-visibility rules');
     assert(capture.createdInputs?.some(input => input.zone === 'arcade'), 'Arcade probe includes its actual new geometry');
     const probe = capture.probes[0]; assert.equal(probe.zone, 'arcade');
     assert(probe.worldPosition?.length === 3 && probe.worldPosition.every(Number.isFinite), 'Arcade probe has a finite world pose');

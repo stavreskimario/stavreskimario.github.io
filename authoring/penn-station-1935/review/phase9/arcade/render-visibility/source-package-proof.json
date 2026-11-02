@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "originalDeriverSha256": "f1b1b4d5d25f569b4de021e309d7f1ce80b3c7375ae1e7124b816204fa80ba85",
+  "portableDeriverSha256": "bd42058090357c7506233d7de56e865c6cf76a128c28b1eb3d5992ec198445c9",
+  "difference": "Input decoder accepts lossless .json.gz inventory; node selection, transforms, scene unlinking, BIN preservation and all output bytes are unchanged.",
+  "visibilityInventoryDecodedSha256": "b6ea9225593b9e7a7f325e8b254e1087ae251dd62f076f63db566607fd7676ae",
+  "visibilityInventoryArchiveSha256": "34cf3e9480ac9fe0e1014f15b633835df0d0f357c77f89c3a552adb2f33d0b43",
+  "visibilityInventoryDecodedBytes": 4237859,
+  "visibilityInventoryArchiveBytes": 292784,
+  "noDerivedGlbIncluded": true,
+  "importerObservation": "Blender4.3 recreates orphaned nodes in Scene Collection. The strict post-import source-visibility helper must be applied after frame placement for transport/capture; scene-root unlinking alone is insufficient in this importer.",
+  "restorationHelperSha256": "3d1e89900dfe2eb521a64dcda8ea14abc6c71501104da2c65d1165d7a77b4498",
+  "actualTwoInputRestorationTest": "blender-import-restoration-proof.json",
+  "actualTwoInputRestorationTestSha256": "953f58598a13e94eb736782e640a5faafe443b6effa75804f76d19550586519e",
+  "editableSourceCleanlinessSha256": "01612829b6e265d3d6658831a6258a7ae1eb8b3b4ccebba4fb5c8859a3a18177",
+  "additionalRawInputAuditSha256": "aed4defc2e9078e73d7c44f4fdaf8e425d9c59ce137cc8d1e1d25cb6fe600fa9",
+  "status": "PASS; exact two-source-flag restoration required by Blender4.3 importer"
+}

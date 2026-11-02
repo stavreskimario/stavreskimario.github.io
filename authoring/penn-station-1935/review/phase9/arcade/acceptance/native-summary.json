@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "status": "PASS: native connected entrance roundtrip",
+  "productionBundle": {
+    "sha256": "6c59bc672fae8a04d657549b194b3bf9c2ba4889cbc79be226d3b85f1c602241",
+    "bytes": 1046065
+  },
+  "manifest": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/runtime-candidate-v1/scene-manifest.json",
+    "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+  },
+  "legs": 21,
+  "sixPersistentZones": true,
+  "physicalEyeHeightM": 1.68,
+  "pageErrors": [],
+  "serverErrors": [],
+  "closedShopfrontSillAndGlassVerified": true,
+  "browserClosed": true,
+  "scope": "Actual unchanged production bundle, six persistent zones and native exterior Walk. Street\u2192both vestibule side slabs\u2192arcade/closed shop pane\u2192both loggia bays\u2192Main stairs\u2192waiting room\u2192street. Real pointer/keyboard only; readonly inspection; no camera setters, geometry hiding or shader overrides.",
+  "limitation": "Desktop Chrome/Metal, real pointer/keyboard only. No physical mobile or new WebGPU/performance certification."
+}

@@ -24,6 +24,8 @@ function materialInfo(material) {
     lightIntensity: material.lightMapIntensity ?? null,
     skyFile: material.userData?.sky_illumination ?? null,
     skyScale: material.userData?.sky_illumination_scale ?? null,
+    reflectionFile: material.envMap?.userData?.sourceFile ?? null,
+    walkingCollision: material.userData?.walk_collision ?? null,
     ao: textureInfo(material.aoMap), lightmap: textureInfo(material.lightMap),
   };
 }

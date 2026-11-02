@@ -16,6 +16,7 @@ import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { configureBakedDiffuse } from './lighting.mjs';
 import { platformPracticalAnchors } from './platform-practicals.mjs';
 import { COLLISION_CELL, nearbyCollisionObjects } from './collision-query.mjs';
+import { closedArcadeGlazing } from './collision-surfaces.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
 import { findFloorJointSupport } from './floor-contact.mjs';
 import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
@@ -30,7 +31,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '9-platform-surfaces-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '9-connected-entrance-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -89,7 +90,7 @@ const vaultLightGlass = material => material?.name === 'SquareVaultLightGlass';
 const vaultLightConcrete = material => material?.name === 'ConcourseReinforcedVaultLightConcrete' || material?.name === 'ConcourseOpaqueCirculationConcrete';
 const collisionMaterialAt = hit => Array.isArray(hit.object.material) ? hit.object.material[hit.face.materialIndex] : hit.object.material;
 function decorativeCollisionMaterial(material) {
-  if (vaultLightGlass(material)) return false;
+  if (vaultLightGlass(material) || closedArcadeGlazing(material?.name, material?.userData)) return false;
   return !material || material.transmission > 0 || material.transparent || /^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(material.name);
 }
 
@@ -118,7 +119,7 @@ function buildCollisionIndex(model) {
     let zone = object;
     while (zone.parent && zone.parent !== model) zone = zone.parent;
     const materials = Array.isArray(object.material) ? object.material : [object.material];
-    for (const material of materials) if (material && !vaultLightGlass(material) && (material.transmission > 0 || material.transparent)) ignoredGlazing.add(material.name);
+    for (const material of materials) if (material && !vaultLightGlass(material) && !closedArcadeGlazing(material.name, material.userData) && (material.transmission > 0 || material.transparent)) ignoredGlazing.add(material.name);
     if (zone.name === 'context' || zone.name === 'trains' || materials.every(decorativeCollisionMaterial)) {
       index.stats.excludedMeshes++;
       index.stats.excludedInstances += object.isInstancedMesh ? object.count : 0;
@@ -163,7 +164,7 @@ function insidePlatform(point, polygon) {
 }
 
 async function loadReflection(zone, quality) {
-  const room = zone === 'waiting' ? 'waiting-room' : zone === 'concourse' ? 'concourse' : ['platform', 'trains'].includes(zone) ? 'platform' : null;
+  const room = zone === 'waiting' ? 'waiting-room' : zone === 'concourse' ? 'concourse' : zone === 'arcade' ? 'arcade' : ['platform', 'trains'].includes(zone) ? 'platform' : null;
   if (!room) return null;
   const filename = `reflection-${room}${quality === 'low' ? '-low' : ''}.hdr.gz`;
   if (!reflectionCache.has(filename)) {
@@ -249,7 +250,11 @@ async function loadModel(view, quality, renderer, progress) {
         // their backs adds a separate refraction pass for every unit.
         if (vaultLightGlass(material)) material.side = THREE.FrontSide;
         if (material.aoMap) material.aoMapIntensity = .25;
-        if (reflection) { material.envMap = reflection; material.envMapIntensity = 1; }
+        if (material.userData?.reflection_probe === 'arcade') {
+          lightingTasks.push(loadReflection('arcade', quality).then(texture => {
+            material.envMap = texture; material.envMapIntensity = 1; material.needsUpdate = true;
+          }));
+        } else if (reflection) { material.envMap = reflection; material.envMapIntensity = 1; }
         for (const slot of ['map', 'normalMap', 'roughnessMap']) if (material[slot]) material[slot].anisotropy = quality === 'low' ? 2 : 8;
         if (material.userData?.sky_illumination) {
           const file = quality === 'low' ? material.userData.sky_illumination.replace('-sky.webp', '-sky-low.webp') : material.userData.sky_illumination;
@@ -265,7 +270,7 @@ async function loadModel(view, quality, renderer, progress) {
       }
     });
     await Promise.all(lightingTasks);
-    modelReports.set(file, { file, materials: assigned.size, bakedMaterials: [...assigned].filter(material => material.lightMap).length, occlusionMaterials: [...assigned].filter(material => material.aoMap).length, reflectionMaterials: [...assigned].filter(material => material.envMap).length, reflectionFile: reflection?.userData.sourceFile || null, atlasChannels: [...new Set([...assigned].filter(material => material.lightMap).map(material => material.lightMap.channel))] });
+    modelReports.set(file, { file, materials: assigned.size, bakedMaterials: [...assigned].filter(material => material.lightMap).length, occlusionMaterials: [...assigned].filter(material => material.aoMap).length, reflectionMaterials: [...assigned].filter(material => material.envMap).length, reflectionFile: reflection?.userData.sourceFile || null, reflectionFiles: [...new Set([...assigned].map(material => material.envMap?.userData.sourceFile).filter(Boolean))], atlasChannels: [...new Set([...assigned].filter(material => material.lightMap).map(material => material.lightMap.channel))] });
     // Keep the renderable scene, allowing the parser's raw buffers and temporary
     // dependency caches to be collected after decoding.
     progress(100); return { scene: gltf.scene };
@@ -366,6 +371,7 @@ function Lighting({ current }) {
       concourse: named('Main concourse') || [-105.1437, -40.8563, -72.39, 72.39],
       concourseTop: MAIN_FLOOR + (dimensions.concourse?.roofCrownAboveMain || 29.727525),
       passage: named('Axial concourse passage') || [-44.4, -16.5608, -7.75, 7.75],
+      arcade: modelManifest.arcadeInteriorDetails ? [16.5, 111.1816, -14, 14] : null,
       exitFloor: modelManifest.levels?.exitWorld ?? -7.4676,
       railway: platforms.length ? [Math.min(...platforms.map(item => item.bounds[0])), Math.max(...platforms.map(item => item.bounds[1])), Math.min(...platforms.map(item => item.bounds[2])), Math.max(...platforms.map(item => item.bounds[3]))] : [-293, 202, -75, 75],
     };
@@ -386,9 +392,10 @@ function Lighting({ current }) {
     const waiting = volume(regions.waiting, MAIN_FLOOR - .5, regions.waitingTop);
     const concourse = volume(regions.concourse, regions.exitFloor - .5, regions.concourseTop);
     const passage = volume(regions.passage, MAIN_FLOOR - .5, MAIN_FLOOR + 12);
+    const arcade = regions.arcade ? volume(regions.arcade, MAIN_FLOOR - .5, 18.9224) : 0;
     const passageGain = THREE.MathUtils.lerp(1.5, 4, THREE.MathUtils.smoothstep(camera.position.x, regions.passage[0], regions.passage[1]));
-    const outside = Math.max(0, 1 - Math.max(waiting, concourse, passage));
-    const upperGain = (waiting * 4 + concourse * 1.5 + passage * passageGain + outside) / Math.max(.0001, waiting + concourse + passage + outside);
+    const outside = Math.max(0, 1 - Math.max(waiting, concourse, passage, arcade));
+    const upperGain = (waiting * 4 + concourse * 1.5 + passage * passageGain + arcade * 4 + outside) / Math.max(.0001, waiting + concourse + passage + arcade + outside);
     const platform = horizontal(regions.railway) * (1 - THREE.MathUtils.smoothstep(camera.position.y, PLATFORM_FLOOR + 2.5, regions.exitFloor + 1.68));
     const desired = p.exposure * THREE.MathUtils.lerp(upperGain, 4, platform);
     const next = THREE.MathUtils.damp(gl.toneMappingExposure, desired, 3.2, Math.min(delta, 1));

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "zone": "arcade-enclosure",
+  "source": "lighting-arcade-enclosure-sky.hdr",
+  "sourceSha256": "38e78deaa5a642ef3449c510963fb3b3a8005d3ed301adeeb5c4b2491c46f855",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 2.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.00856843777000904,
+    "minimum": 0.0,
+    "maximum": 0.734375
+  },
+  "originalLinear": {
+    "mean": 0.00856843777000904,
+    "minimum": 0.0,
+    "maximum": 0.734375
+  },
+  "denoisedLinear": {
+    "mean": 0.008583084680140018,
+    "minimum": 0.0,
+    "maximum": 1.3125293254852295
+  },
+  "relativeMeanChange": 0.00170940263839503,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-arcade-enclosure-sky-denoised-linear.hdr",
+    "sha256": "3a4de4f4fccc3cc94323d1d958c40fbf34c2ca4742a8f89b129996a0c1ef5012",
+    "decodedLinear": {
+      "mean": 0.00855650007724762,
+      "minimum": 0.0,
+      "maximum": 1.3125
+    },
+    "meanQuantizationError": 2.6581139536574483e-05,
+    "archiveFile": "lighting-arcade-enclosure-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-arcade-enclosure-sky.png",
+    "webp": "lighting-arcade-enclosure-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-arcade-enclosure-sky-low.png",
+    "webp": "lighting-arcade-enclosure-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 10.742257333011366,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/raw",
+  "sourceArchiveFile": "lighting-arcade-enclosure-sky.hdr.gz",
+  "bakeReportSha256": "a021cdc69f07ecd4de955b63f731b201bf73eba7171cd0daa6fa7b73377d23b8"
+}

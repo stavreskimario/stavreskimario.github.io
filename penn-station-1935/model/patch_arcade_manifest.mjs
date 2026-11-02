@@ -59,8 +59,20 @@ export function patchArcadeManifest({baseBytes, baseSha256, proofBytes, freezeBy
     assert(typeof area.existingMeshUntouched === 'boolean');
   }
   assert.equal(additions.filter(area => area.existingMeshUntouched).length, 1, 'One retained landing, four new side slabs');
+  const centralPaving = base.walkable.find(area => area.label === 'Street-level loggia and arcade');
+  assert.deepEqual(centralPaving?.bounds, [24.9, 119.4816, -6.9, 6.9], 'Existing central walking permission');
+  const permissionBounds = area => {
+    const bounds = [...area.bounds];
+    // The protected central paving extends to |Z|7.0. Include its last100mm
+    // so the new side slabs meet the existing6.9m walking permission.
+    if (area.label === 'Seventh Avenue vestibule side circulation') {
+      if (bounds[2] === 7) bounds[2] = centralPaving.bounds[3];
+      if (bounds[3] === -7) bounds[3] = centralPaving.bounds[2];
+    }
+    return bounds;
+  };
   const result = structuredClone(base);
-  result.walkable.push(...additions.map(area => ({label: area.label, bounds: [...area.bounds], floor: area.floor,
+  result.walkable.push(...additions.map(area => ({label: area.label, bounds: permissionBounds(area), floor: area.floor,
     geometryBasedFloorRayRequired: true, surface: 'Permission bounds only; support and collision require actual authored mesh intersections.'})));
   result.arcadeInteriorDetails = {
     revision: 'phase9-connected-entrance-1', sourceManifestSha256: baseSha256,
@@ -68,6 +80,8 @@ export function patchArcadeManifest({baseBytes, baseSha256, proofBytes, freezeBy
     sourceSceneSha256: proof.sourceSha256, moduleSha256: proof.outputs['formal-arcade-module.glb'].sha256,
     frame: 'Street0; existing Main-floor/stair geometry and datum retained',
     walkableAdditions: structuredClone(additions),
+    vestibulePavingTransitions: {retainedPavingEdgeAbsZ: 7, priorPermissionEdgeAbsZ: 6.9, geometryChanged: false,
+      basis: 'Protected original paving and independently sampled flat floor at |Z|6.95 bridge the100mm permission interval; actual floor rays remain mandatory.'},
     closedGlazingCollisionMaterial: proof.closedGlazingCollisionMaterial,
     heightSource: structuredClone(proof.heightSource), limits: structuredClone(proof.limits),
     status: 'Evidence-led opening-era reconstruction with qualified photographic registration; geometry, lighting and browser acceptance are separate records.'

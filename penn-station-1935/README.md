@@ -1,5 +1,7 @@
 # Pennsylvania Station — platform construction checkpoint
 
+Current checkpoint: the connected Seventh Avenue vestibule, arcade and Ionic loggia are now explorable through to the waiting room. [Validation](VALIDATION.md) records the21-leg native roundtrip, source accuracy and remaining lighting/finish limitations. All six zones load together; Walk remains default.
+
 An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases connect eight ordinary platform correspondences to the lower Exit gallery. The first eight platforms now have source-controlled concrete overhangs, coved undersides, continuous supporting walls and a finer granolithic finish, with fresh illumination from the current station geometry.
 
 The intended period is 1935–1940, using opening-era plans and photographs as anchors. Minor dimensions, later alterations, finishes and major unfinished areas remain qualified. This is a phased reconstruction with further photographic fidelity work ahead. See the [research register](RESEARCH.md), [source catalogue](sources.json), [arrivals evidence](model/arrivals-evidence.md) and [validation](VALIDATION.md).
@@ -27,7 +29,7 @@ Model, unique texture, light and probe transfer totals **190,675,029 bytes** acr
 
 The [core editable-source history](../authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md) and [platform source/replay](../authoring/penn-station-1935/review/phase9/platform-sections/README.md) preserves the new scene, exact earlier-source recovery and a standalone CLI replay that reproduces the raw geometry byte for byte. Required lighting sources remain retained or recoverable through immutable Git identities and verified backups. [Asset rights](ASSET_RIGHTS.md) identify the references.
 
-Custom staging remains subject to the 200 MB internal allowance: this checkpoint measures 196.71 MB. The conservative legacy tree is approximately 993.20 MB, below 1 GB. The complete legacy-root site remains below 1 GB. Hosting settings are unchanged; Engineering Journal and Crystal Palace remain removed.
+Custom staging uses a bounded220 MB allowance for the added entrance lighting/reflections; the current stage measures212.96 MB. The conservative complete legacy tree is approximately992.2 MB, below 1 GB. Hosting settings are unchanged; Engineering Journal and Crystal Palace remain removed.
 
 ## Remaining work
 

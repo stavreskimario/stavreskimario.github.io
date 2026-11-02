@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "status": "ARCHIVED: exactly five approved raw authoring inputs removed after immutable Git and persistent backup verification",
+  "archivedBytes": 15758140,
+  "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+  "scope": "Exactly three raw sky HDR archives and two original AO PNGs. Preserve all current runtime, editable .blend sources, detailed-order AO, every filtered derivative and current Phase6\u20139 raw source.",
+  "proposalSha256": "29c3cac5d6b78d4e5e543b7dfc641056f502121374f4ce330ac3677b02d32e6a",
+  "runtimePayloadChanged": false,
+  "canonicalModelChanged": false,
+  "entries": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-sky.hdr.gz",
+      "bytes": 3220059,
+      "sha256": "715dd3fafac0b8e9801054f9dd5b80bf15e302e67a9b5bfb31247934aceed63e",
+      "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+      "gitBlob": "68c231255e4dd28260b4236b1091bc4c2a650407",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/backup/authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-sky.hdr.gz",
+      "backupVerified": true,
+      "originalStillPresent": false,
+      "classification": "Raw original authoring provenance; preserve by exact restoration, not obsolete or a runtime payload",
+      "decodedBytes": 4326603,
+      "decodedSha256": "9c2ae9f461543b44562aa7fc562b7fc7054452dd8e43ea1e290ce1f846b2724d",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 2048 +X 2048\n\u0002\u0002\b\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/9d722ff846b11ca78b4f1d0f56c30ff34393c9f1/authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-sky.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-platform-sky.hdr.gz",
+      "bytes": 3435065,
+      "sha256": "6b715193c6419de2ba19eb1953d879a8029653a9585d828c262358d49b9fb22c",
+      "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+      "gitBlob": "962d4b89a2cc69ee4a3a25b3e5127a3398bf2ef2",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/backup/authoring/penn-station-1935/lighting/phase4/originals/lighting-platform-sky.hdr.gz",
+      "backupVerified": true,
+      "originalStillPresent": false,
+      "classification": "Raw original authoring provenance; preserve by exact restoration, not obsolete or a runtime payload",
+      "decodedBytes": 4304437,
+      "decodedSha256": "2757d4bd04fd769c6063b57a2bdbcc5dafba294e13963a8a9c4423391117979f",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 2048 +X 2048\n\u0002\u0002\b\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000\ufffd\u0000",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/9d722ff846b11ca78b4f1d0f56c30ff34393c9f1/authoring/penn-station-1935/lighting/phase4/originals/lighting-platform-sky.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.hdr.gz",
+      "bytes": 5619877,
+      "sha256": "68077631b89c32c090d58dce52927d765d904c938e11ef073c7b30a3039d9c2b",
+      "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+      "gitBlob": "a87376780b1be9a82c7ea966b15c47fac7cb7d33",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/backup/authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.hdr.gz",
+      "backupVerified": true,
+      "originalStillPresent": false,
+      "classification": "Raw original authoring provenance; preserve by exact restoration, not obsolete or a runtime payload",
+      "decodedBytes": 6717975,
+      "decodedSha256": "b02a611d5c1d2eaf3921ea293fe4be2b4110b16e1cab75370d8c4b4605b9771b",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 2048 +X 2048\n\u0002\u0002\b\u0000\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/9d722ff846b11ca78b4f1d0f56c30ff34393c9f1/authoring/penn-station-1935/lighting/phase3/platform-corrected/lighting-platform-sky.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-ao.png",
+      "bytes": 1819519,
+      "sha256": "79c17d924bc43502788ba62da78d05490ede08b7d13c3c08d84b3b5080dc0883",
+      "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+      "gitBlob": "af8d99ebd222870ff311d2b422299d136c38086c",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/backup/authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-ao.png",
+      "backupVerified": true,
+      "originalStillPresent": false,
+      "classification": "Raw original authoring provenance; preserve by exact restoration, not obsolete or a runtime payload",
+      "pngDimensions": [
+        2048,
+        2048
+      ],
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/9d722ff846b11ca78b4f1d0f56c30ff34393c9f1/authoring/penn-station-1935/lighting/phase4/originals/lighting-exterior-ao.png"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-concourse-ao.png",
+      "bytes": 1663620,
+      "sha256": "625da1526cefd4fc17602c90dd6d3d860df0b3284af70a9c81d8a9474c5d0f7e",
+      "immutableCommit": "9d722ff846b11ca78b4f1d0f56c30ff34393c9f1",
+      "gitBlob": "40a2c19d8af962fe2eaf7636009fef11510b044f",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/backup/authoring/penn-station-1935/lighting/phase4/originals/lighting-concourse-ao.png",
+      "backupVerified": true,
+      "originalStillPresent": false,
+      "classification": "Raw original authoring provenance; preserve by exact restoration, not obsolete or a runtime payload",
+      "pngDimensions": [
+        2048,
+        2048
+      ],
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/9d722ff846b11ca78b4f1d0f56c30ff34393c9f1/authoring/penn-station-1935/lighting/phase4/originals/lighting-concourse-ao.png"
+    }
+  ],
+  "usageAudit": {
+    "activeChecksNeedTheseLocalPaths": false,
+    "qualification": "These include current/previous source provenance; restore before source reproduction needing original pixels. All denoise/bake JSON records retained.",
+    "activeCheckContract": "penn-assets validateDenoising reads retained filtered HDR/PNG; local raw HDR validation applies only access/circulation/arrivals/platform-surfaces/arcade-enclosure (excluded). Legacy fixture validator reads platform-corrected denoised HDR and PNGs, not the raw platform-sky.hdr.gz. Detailed-order AO excluded.",
+    "orderSkyAlreadyArchived": "Phase4 original detailed-order-sky.hdr.gz is already absent and recorded by review/phase8/storage/phase4-raw-source-archive.json; it is not proposed again.",
+    "searches": [
+      {
+        "argv": [
+          "rg",
+          "-n",
+          "phase4/originals|lighting-platform-sky.hdr|lighting-exterior-sky.hdr",
+          "tests",
+          "scripts",
+          "penn-station-1935/src"
+        ],
+        "exitCode": 0,
+        "stdout": "tests/fixtures/penn-lighting-legacy/lighting-exterior-denoise.json:3:  \"source\": \"lighting-exterior-sky.hdr\",\ntests/fixtures/penn-lighting-legacy/lighting-platform-denoise.json:4:  \"source\": \"lighting-platform-sky.hdr\",\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "rg",
+          "-n",
+          "sourceArchiveFile|verifyAccessSource|verifyPlatformSurfaceSource",
+          "tests/penn-assets.cjs"
+        ],
+        "exitCode": 0,
+        "stdout": "173:async function verifyAccessSource({ record, bakeBytes, repositoryDirectory }) {\n178:  assert.equal(record.sourceArchiveFile, 'lighting-concourse-access-sky.hdr.gz', 'Access raw HDR uses its exact lossless archive name');\n185:  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));\n191:  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,\n200:  assert.equal(record.sourceArchiveFile, 'lighting-concourse-circulation-sky.hdr.gz', 'Circulation raw HDR uses its exact lossless archive name');\n207:  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));\n213:  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,\n222:  assert.equal(record.sourceArchiveFile, 'lighting-concourse-arrivals-sky.hdr.gz', 'Arrivals raw HDR uses its exact lossless archive name');\n229:  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));\n235:  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,\n239:async function verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) {\n244:  assert.equal(record.sourceArchiveFile, 'lighting-platform-surfaces-sky.hdr.gz', 'Platform surface raw HDR uses its exact lossless archive name');\n251:  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));\n257:  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,\n266:  assert.equal(record.sourceArchiveFile, 'lighting-arcade-enclosure-sky.hdr.gz', 'Arcade raw HDR uses its exact lossless archive name');\n273:  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));\n279:  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,\n340:        ? await verifyAccessSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-circulation'\n343:              ? await verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'arcade-enclosure'\n366:module.exports = { denoiseEntries, denoisePolicy, checkDenoiseStatistics, checkBakeStatistics, checkArcadeVisibility, retainedHdr, verifyDenoiseDerivative, verifyAccessSource, verifyCirculationSource, verifyArrivalsSource, verifyPlatformSurfaceSource, verifyArcadeSource, validateDenoising };\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "preservationManifest": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/raw-sky-headroom-v1/preservation.json",
+    "sha256": "989a4b2b737a2fb763a5e221ab56a8846be0af78fa0731c43fe129e49ae6526c",
+    "fileCount": 301,
+    "identityListSha256": "86bf41a39b6c1108a2a18c50b125e32fa87813009b8450c489ee12ead7ac2926",
+    "verifiedBeforeAndAfter": true
+  },
+  "conservativeRootBefore": {
+    "bytes": 989175198,
+    "files": 1372,
+    "method": "Complete logical tree excluding.git only, including untracked/ignored; no compression credit. Other parent work may change later."
+  },
+  "conservativeRootAfter": {
+    "bytes": 973430449,
+    "files": 1369,
+    "method": "Complete logical tree excluding.git only, including untracked/ignored; no compression credit. Other parent work may change later."
+  },
+  "recoveryReadme": "raw-sky-headroom-recovery.md",
+  "remainingLegacyBytes": 26569551
+}

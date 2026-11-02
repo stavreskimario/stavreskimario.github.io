@@ -1,6 +1,6 @@
 # Connected Penn Station arcade — source-only checkpoint
 
-This checkpoint preserves the reviewed architectural authoring and its evidence controls. It does not change the live website, replace the canonical Blender file, or claim final lighting acceptance.
+This folder preserves the reviewed architectural authoring and its evidence controls. The [canonical history](../canonical-history.json) records its subsequent adoption into the editable core. Runtime lighting, browser review and publication are accepted separately.
 
 The source version is `connected-v12`. Its connected geometry includes the formal arcade, paired Ionic loggia screen, bounded restaurant entrance bays, grand-stair side enclosure and widened Seventh Avenue vestibule. The outdoor Doric portico stays open. Every existing public floor, all 28 Main risers, the existing monumental Main arch/jambs and unrelated source geometry/materials remain protected.
 

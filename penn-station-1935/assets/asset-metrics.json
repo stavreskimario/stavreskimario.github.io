@@ -3,11 +3,11 @@
   "assets": [
     {
       "file": "model-exterior.glb",
-      "bytes": 8839992,
+      "bytes": 13809096,
       "transportFile": "model-exterior.glb.gz",
-      "transportBytes": 2711634,
-      "sha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035",
-      "transportSha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "transportBytes": 4273265,
+      "sha256": "e63b2211b9e96a50f0ade54e8cc9585d0c5e51e762a587e18852671e0adab32d",
+      "transportSha256": "7ca9e045ac45a7b96253da50babe0759b33ae952abb2158270cf5e94d742b410",
       "externalTextures": [
         {
           "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
@@ -56,12 +56,52 @@
         {
           "uri": "textures/c7670262d7c33cc39671.ktx2",
           "bytes": 3106230
+        },
+        {
+          "uri": "textures/3d6f4a3323017ae4bc57.ktx2",
+          "bytes": 4296
+        },
+        {
+          "uri": "textures/363923bafe6efcb2994c.ktx2",
+          "bytes": 1731155
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/71508f85f3c325538f05.ktx2",
+          "bytes": 3139363
+        },
+        {
+          "uri": "textures/a2ee0eb44659d956bcb7.ktx2",
+          "bytes": 11104
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
+          "bytes": 1755
+        },
+        {
+          "uri": "textures/f20239dbf2c1e548d747.ktx2",
+          "bytes": 5419396
+        },
+        {
+          "uri": "textures/d027c562b48d63001b53.ktx2",
+          "bytes": 3847041
         }
       ],
-      "nodes": 8,
-      "meshes": 8,
-      "materials": 11,
-      "textures": 12,
+      "nodes": 11,
+      "meshes": 11,
+      "materials": 24,
+      "textures": 22,
       "extensionsUsed": [
         "EXT_meshopt_compression",
         "KHR_materials_ior",
@@ -72,11 +112,11 @@
     },
     {
       "file": "model-exterior-low.glb",
-      "bytes": 7969992,
+      "bytes": 11407092,
       "transportFile": "model-exterior-low.glb.gz",
-      "transportBytes": 2805415,
-      "sha256": "5c23cd5e58106529b463d2895babd5fd6e238631aeb58f0811db1edaeb114117",
-      "transportSha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "transportBytes": 4415596,
+      "sha256": "cf6bf23b220a990d709249cb0d40698a083ba778a65ba55d0bfb581626586d21",
+      "transportSha256": "fce3fa13cd55efb97f15156affc6a5a1a0d90175a41466ea7c54dadb1fe70cc8",
       "externalTextures": [
         {
           "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
@@ -125,12 +165,52 @@
         {
           "uri": "textures/cd5b2e95d69b82d43084.ktx2",
           "bytes": 247116
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/623a245c87b996572e77.ktx2",
+          "bytes": 164478
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/1175f64bd9bfd85e57fd.ktx2",
+          "bytes": 244187
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/54a913be94c788baff0c.ktx2",
+          "bytes": 336065
+        },
+        {
+          "uri": "textures/9a946d98bf8d81f09329.ktx2",
+          "bytes": 247101
         }
       ],
-      "nodes": 8,
-      "meshes": 8,
-      "materials": 11,
-      "textures": 12,
+      "nodes": 11,
+      "meshes": 11,
+      "materials": 24,
+      "textures": 22,
       "extensionsUsed": [
         "EXT_meshopt_compression",
         "KHR_materials_ior",
@@ -141,11 +221,11 @@
     },
     {
       "file": "model-waiting-room.glb",
-      "bytes": 16103268,
+      "bytes": 17141044,
       "transportFile": "model-waiting-room.glb.gz",
-      "transportBytes": 8274157,
-      "sha256": "cf0aad3568177a4fe4b1394541b5bccb9de35e1d8044cad84a693e8b9df8548c",
-      "transportSha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "transportBytes": 8304517,
+      "sha256": "8ac3f5c137326e4459a85d09a19f8593d4ebd8682f918a4b09fe5e6b5e475ebc",
+      "transportSha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
       "externalTextures": [
         {
           "uri": "textures/63eed54d00a46de365de.ktx2",
@@ -222,11 +302,11 @@
     },
     {
       "file": "model-waiting-room-low.glb",
-      "bytes": 11920512,
+      "bytes": 12586156,
       "transportFile": "model-waiting-room-low.glb.gz",
-      "transportBytes": 7239871,
-      "sha256": "7c1d20adcf6a695b5fbd0c4510724d367f55fb064418018257741d468c352925",
-      "transportSha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "transportBytes": 7271933,
+      "sha256": "415756f48ef804efd6c85019eda41dffac8c6ecbfdb6581b343ce158c178b20d",
+      "transportSha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d",
       "externalTextures": [
         {
           "uri": "textures/0b3fdeff4c401ceb3b51.ktx2",
@@ -902,8 +982,79 @@
       ]
     }
   ],
-  "sharedTextureFiles": 80,
-  "modelTextureAndLightingBytes": 190675029,
-  "navigationBytes": 686298,
-  "scope": "First-eight source-controlled platform sections/granolithic finish appended with new4Ksky/AO and lossless Float32module. Alloldtracks/fixtures/northernplatforms/otherzones retained. Source, CPU, browser andpublication acceptance recorded separately; broaderplatformenclosure/arcade andolderprobes unfinished."
+  "sharedTextureFiles": 85,
+  "modelTextureAndLightingBytes": 206893011,
+  "navigationBytes": 693276,
+  "scope": "First-eight source-controlled platform sections/granolithic finish appended with new4Ksky/AO and lossless Float32module. Alloldtracks/fixtures/northernplatforms/otherzones retained. Source, CPU, browser andpublication acceptance recorded separately; broaderplatformenclosure/arcade andolderprobes unfinished.",
+  "arcadeIntegration": {
+    "revision": 9,
+    "scope": "Connected arcade/loggia/vestibule module appended only to Exterior after strict v12owned-source removal from Exterior+Waiting. Other four full/low zones remain byte-exact; top-level transfer/texture/navigation aggregates are refreshed; previous values are retained below.",
+    "sourceRawSha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+    "bakedRawSha256": "96e370b42ad64220dc2af089ca43b9d71e1c609ca156707426a36bfbcbbb8c82",
+    "newModuleFullSha256": "60fea92c29e54aed9c915c1686340473d71bb3e9276d4b3659f8ff8a7e4c45ab",
+    "newModuleLowSha256": "48095c9ae0dc2b8c4d060621287fa8fde2baa412adfaa24e2f9113359e5b4652",
+    "changedModelFiles": [
+      "model-exterior-low.glb",
+      "model-exterior.glb",
+      "model-waiting-room-low.glb",
+      "model-waiting-room.glb"
+    ],
+    "unchangedModelFiles": [
+      "model-concourse.glb.gz",
+      "model-concourse-low.glb.gz",
+      "model-context.glb.gz",
+      "model-context-low.glb.gz",
+      "model-platform.glb.gz",
+      "model-platform-low.glb.gz",
+      "model-trains.glb.gz",
+      "model-trains-low.glb.gz"
+    ],
+    "addedTextureFiles": 5,
+    "addedTextureBytes": 6233962,
+    "currentSharedTextureFiles": 85,
+    "addedGIAndProbeFiles": [
+      {
+        "file": "lighting-arcade-enclosure-sky.webp",
+        "bytes": 2076130,
+        "sha256": "cc5c592848851cc5ec977717177d0f2fe9b6602aa4b96fa25793d63e84fe307d"
+      },
+      {
+        "file": "lighting-arcade-enclosure-sky-low.webp",
+        "bytes": 72214,
+        "sha256": "1f33cf96281f1372f2097621b92af9a59e85fda87e8a168c5c8d245de6f3d349"
+      },
+      {
+        "file": "reflection-arcade.hdr.gz",
+        "bytes": 4292934,
+        "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5"
+      },
+      {
+        "file": "reflection-arcade-low.hdr.gz",
+        "bytes": 294520,
+        "sha256": "fa319da93ff4d985b940f18cc639b751991cf4ee90454dc0a7a3a6767925057c"
+      }
+    ],
+    "navigationBytes": 693276,
+    "acceptanceQualification": "Source/CPU/encoded checks separate from pending final native browser and publication acceptance.",
+    "previousAggregateValues": {
+      "sharedTextureFiles": 80,
+      "modelTextureAndLightingBytes": 190675029,
+      "navigationBytes": 686298
+    },
+    "physicalStoredTextureFiles": 89,
+    "transferBreakdown": {
+      "compressedModelFiles": 12,
+      "compressedModelBytes": 36532594,
+      "uniqueReferencedKtxFiles": 85,
+      "uniqueReferencedKtxBytes": 109869194,
+      "uniqueIlluminationFiles": 22,
+      "uniqueIlluminationBytes": 37085812,
+      "probeHdrAndMetadataFiles": 11,
+      "probeHdrAndMetadataBytes": 20892003,
+      "exteriorSkyBytes": 2513408,
+      "totalBytes": 206893011,
+      "method": "Each compressed model once; each referenced KTX and GI once; three probe metadata JSONs/eight roomHDRs/exterior sky. Matches existing asset-validator transfer contract. Navigation separate."
+    },
+    "runtimeAssetFileBytesExcludingMetrics": 209847032
+  }
 }

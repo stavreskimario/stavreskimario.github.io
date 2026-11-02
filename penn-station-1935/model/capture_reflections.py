@@ -17,9 +17,10 @@ from material_library import apply_materials, prepare_surface_uvs
 from render_device import configure_device
 
 parser = argparse.ArgumentParser()
-for zone in ("exterior", "waiting", "concourse", "platform", "context", "trains", "arcade"):
-    parser.add_argument(f"--{zone}", type=Path, required=zone in ("exterior", "waiting", "concourse"))
+for zone in ("exterior", "waiting", "concourse", "platform", "context", "trains", "arcade", "platform_detail"):
+    parser.add_argument("--" + zone.replace("_", "-"), type=Path, required=zone in ("exterior", "waiting", "concourse"))
 parser.add_argument("--materials", type=Path, required=True)
+parser.add_argument("--source-visibility-proof", type=Path)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--width", type=int, default=1024)
 parser.add_argument("--samples", type=int, default=64)
@@ -30,13 +31,16 @@ parser.add_argument("--platform-probe", default="-65,-10.1,-0.341442588", help="
 parser.add_argument("--exterior-probe", default="142,12,0", help="Representative elevated Seventh Avenue position; world X,Y-up,Z-south. Captured only with --only exterior.")
 parser.add_argument("--arcade-probe", default="67,2.5,0", help="Street-world X,Y-up,Z-south inside the arcade; captured only with --only arcade.")
 args = parser.parse_args()
+if args.only == "arcade" and not args.source_visibility_proof:
+    raise ValueError("Arcade reflections require the original source render-visibility proof")
 args.out.mkdir(parents=True, exist_ok=True)
 started = time.monotonic()
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.context.scene
 frames = {"exterior": 0, "context": 0, "waiting": -4.2672, "concourse": -4.2672,
-          "platform": -4.2672, "trains": -13.154025, "arcade": 0}
+          "platform": -4.2672, "platform_detail": -4.2672, "trains": -13.154025, "arcade": 0}
 inputs = []
+source_visibility = []
 for zone, height in frames.items():
     filename = getattr(args, zone)
     if not filename:
@@ -49,6 +53,10 @@ for zone, height in frames.items():
             obj.location.z += height
             if zone == "trains":
                 obj.location.y -= 8.690045261
+    if args.only == "arcade":
+        from restore_imported_visibility import restore_source_render_visibility
+        bpy.context.view_layer.update()
+        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof))
     inputs.append({"zone": zone, "file": filename.name,
                    "sha256": hashlib.sha256(filename.read_bytes()).hexdigest(), "objects": len(imported)})
 prepare_surface_uvs(list(scene.objects))
@@ -150,6 +158,7 @@ if args.only == "exterior":
     report["limitation"] = "Static elevated Seventh Avenue approximation from the authored station and limited contextual buildings. Not a historical panorama, complete1935 streetscape, parallax-correct local reflection or time-varying indirect lighting. Sky is the neutral interpreted dome; no modern field/forest photograph is used."
 elif args.only == "arcade":
     report_name = "reflection-arcade-probe.json"
+    report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
     report["limitation"] = "Static arcade-centre approximation from the authored connected entrance, station and limited contextual buildings. Not a historical panorama, parallax-correct local reflection or time-varying indirect lighting. Sky and afternoon sunlight are appearance interpretations rather than a dated historic exposure."
 (args.out / report_name).write_text(json.dumps(report, indent=2) + "\n")
 print(json.dumps(report), flush=True)

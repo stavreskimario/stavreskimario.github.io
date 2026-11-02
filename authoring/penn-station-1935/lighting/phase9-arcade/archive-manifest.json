@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "status": "Source illumination staged for review; final transport, encoded assets and browser acceptance remain separate.",
+  "files": {
+    "README.md": {
+      "bytes": 1495,
+      "sha256": "b24620d7fa68adbc5851de3b4bad3deca70441c475938c9bb5366ba02f976e11"
+    },
+    "denoised/lighting-arcade-enclosure-denoise.json": {
+      "bytes": 2550,
+      "sha256": "c9d246819841dd8747c9ddcc5009b4c636e400d1e5325d065812c7fa3bbada18"
+    },
+    "denoised/lighting-arcade-enclosure-sky-denoised-linear.hdr.gz": {
+      "bytes": 19231136,
+      "sha256": "9f4106f72938a3996d78ced3557dadce482457a1f458d97a17b1a7db9e7670ce"
+    },
+    "denoised/lighting-arcade-enclosure-sky-low.png": {
+      "bytes": 117468,
+      "sha256": "30f1db836706150491926c218624e22f07999987111603fec34ec97706600c18"
+    },
+    "denoised/lighting-arcade-enclosure-sky.png": {
+      "bytes": 3103619,
+      "sha256": "7bd36ac3c3d7d2c6bcb3a7e08ddf42c36d0964fec2ecdc03c3930690462a1dc0"
+    },
+    "raw/lighting-arcade-enclosure-ao.png": {
+      "bytes": 5846971,
+      "sha256": "c83e6d635f2856e93add1b9d253e33fdff2f464ac7905496f8cd0ac80d0a79bc"
+    },
+    "raw/lighting-arcade-enclosure-sky.hdr.gz": {
+      "bytes": 11088245,
+      "sha256": "76317e971b3ead0d2f7bd0eea77354a732ebb52edd79380731f1cba27d9bba18"
+    },
+    "raw/lighting-arcade-enclosure.json": {
+      "bytes": 14877,
+      "sha256": "a021cdc69f07ecd4de955b63f731b201bf73eba7171cd0daa6fa7b73377d23b8"
+    },
+    "source/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "source/bake_lighting.py": {
+      "bytes": 20408,
+      "sha256": "935aecc05eebdeea227ecb79e6effa592f7af56160d340ef58113402fa6dc7a9"
+    },
+    "source/denoise_lighting.py": {
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    "source/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    "source/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    "source/restore_imported_visibility.py": {
+      "bytes": 2160,
+      "sha256": "3d1e89900dfe2eb521a64dcda8ea14abc6c71501104da2c65d1165d7a77b4498"
+    },
+    "source/visible-context-proof.json": {
+      "bytes": 5035,
+      "sha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9"
+    },
+    "source-provenance.json": {
+      "bytes": 5883,
+      "sha256": "71d8a6984719e24fa951bb26566b833bcec2ff3cb7cd08f50f53e7a8b105d064"
+    }
+  },
+  "totalSourceBytes": 39464783,
+  "rawSourceSha256": "38e78deaa5a642ef3449c510963fb3b3a8005d3ed301adeeb5c4b2491c46f855",
+  "bakeReportSha256": "a021cdc69f07ecd4de955b63f731b201bf73eba7171cd0daa6fa7b73377d23b8",
+  "retainedDecodedHdrSha256": "3a4de4f4fccc3cc94323d1d958c40fbf34c2ca4742a8f89b129996a0c1ef5012",
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/raw",
+  "finalBrowserAcceptanceClaimed": false
+}
