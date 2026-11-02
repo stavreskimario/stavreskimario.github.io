@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "PUBLIC ACCEPTANCE PASS",
+  "deployedCommit": "ed4e00b06be3dd6d48db6a7e4537c36e90b4b336",
+  "runtimeImplementationCommit": "2e6a486b5d475cf327ceffe4f4176dede2aafeec",
+  "runtimeRevision": "9-arrivals-lighting-1",
+  "scope": "Separate publication addition; the ed4 historical local checkpoint manifest is preserved verbatim. PNGs and harness are actual copied evidence; documentation replacements close pending-publication wording.",
+  "frozenLocalCheckpointManifestSha256": "c925f498296aace9878188ea2cbdc53de64f39430436504048104b21e1e2d830",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 7816,
+      "sha256": "78801a877878312d25b021b6cd16ee2838cd94e823bd06e8090c2a59324b80ed"
+    },
+    {
+      "file": "check-public-arrivals.cjs",
+      "bytes": 18352,
+      "sha256": "66524e4cb8a7a59328f7e58ae3d039c3d32c369898aeb396007fa3d28b0e55ac"
+    },
+    {
+      "file": "final-publication.json",
+      "bytes": 19143,
+      "sha256": "5a6fb7810546fdd45a6cbca2bb555d2aba37d806841db5a7d439a50050bfd5d4"
+    },
+    {
+      "file": "public-arrival-stair-from-platform.png",
+      "bytes": 1107160,
+      "sha256": "7ea75c5478f1af4835311deea654bd51be549d27979da87de48d1ba32ecc3117"
+    },
+    {
+      "file": "public-arrival-stair-midflight.png",
+      "bytes": 1108845,
+      "sha256": "442065f0b5bafb962ee8e048e7e636a8b5a3d74fbae07c8b50ce144a7a8532a8"
+    },
+    {
+      "file": "public-browser.json.gz",
+      "bytes": 32235,
+      "sha256": "e60592150b5f0cda4ccae4c5db97d5a0cafc4e81d538d3e62df62b132f7bfe35"
+    },
+    {
+      "file": "publication-archive-index.json",
+      "bytes": 332,
+      "sha256": "c7925b7606735f7a26aded6f7cc37d62d3db0badf68d3e5f29c51759160f222f"
+    },
+    {
+      "file": "publication-workflow-runs.json",
+      "bytes": 996,
+      "sha256": "7f9b91736131c5a3c998af63e6de41dc22ea52592e3cbdbd2a13a3248e52df0e"
+    }
+  ],
+  "updatedAppDocumentation": [
+    {
+      "path": "penn-station-1935/README.md",
+      "sha256": "1a438a55f8345d020afa89a748065ef352d31f42f001677999c9b8de78cea40f"
+    },
+    {
+      "path": "penn-station-1935/VALIDATION.md",
+      "sha256": "5841593e83221df573149d061d2a1913ca79bc058c57b6a782a3dc830c413cc8"
+    }
+  ],
+  "selfExcluded": true
+}

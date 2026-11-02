@@ -1,0 +1,451 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T03:21:04.232943+00:00",
+  "status": "PASS",
+  "publicRunCreated": "2026-11-02T03:19:23.764Z",
+  "publicRunClosed": "2026-11-02T03:20:22.469Z",
+  "deployedCommit": "ed4e00b06be3dd6d48db6a7e4537c36e90b4b336",
+  "runtimeImplementationCommit": "2e6a486b5d475cf327ceffe4f4176dede2aafeec",
+  "runtimeRevision": "9-arrivals-lighting-1",
+  "url": "https://stavreskimario.github.io/penn-station-1935/?preview=ed4e00b06be3&renderer=webgl",
+  "scope": "Actual published Pages responses and native arrivals gallery\u2192west stair\u2192platform\u2192gallery walking. Root separately retains the full34-leg local roundtrip and full/low physical acceptance. No camera injection, geometry changes, new performance benchmark, physical mobile test or complete historical-accuracy claim.",
+  "workflowVerification": {
+    "source": "Independent read-only connected GitHub workflow-run API",
+    "evidence": "publication-workflow-runs.json",
+    "sha256": "7f9b91736131c5a3c998af63e6de41dc22ea52592e3cbdbd2a13a3248e52df0e"
+  },
+  "workflows": [
+    {
+      "id": 41381711259,
+      "name": "pages build and deployment",
+      "headSha": "ed4e00b06be3dd6d48db6a7e4537c36e90b4b336",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T03:13:25Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41381711259",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41381711259"
+    },
+    {
+      "id": 41381721812,
+      "name": "Site checks",
+      "headSha": "ed4e00b06be3dd6d48db6a7e4537c36e90b4b336",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T03:12:19Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41381721812",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41381721812"
+    }
+  ],
+  "naturalBodyCount": 19,
+  "naturalBodies": [
+    {
+      "at": "2026-11-02T03:19:24.783Z",
+      "file": "index.html",
+      "url": "https://stavreskimario.github.io/penn-station-1935/?preview=ed4e00b06be3&renderer=webgl",
+      "bytes": 18277,
+      "sha256": "d2690eb13210d153944ef82b50abeb662c519db539ddea650f1504c38449f2b3",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "daaadcfed9e390d7a88647f8b2c88cf2795f6f06"
+    },
+    {
+      "at": "2026-11-02T03:19:25.122Z",
+      "file": "styles.css",
+      "url": "https://stavreskimario.github.io/penn-station-1935/styles.css?v=9-clear-view-1",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "7443419a64337c26ba12f2f9d8aab4b15658263b"
+    },
+    {
+      "at": "2026-11-02T03:19:25.225Z",
+      "file": "dist/app.js",
+      "url": "https://stavreskimario.github.io/penn-station-1935/dist/app.js?v=9-arrivals-lighting-1",
+      "bytes": 1046064,
+      "sha256": "616f91eb91fa62332987d1d3e9297d4cf183bbe7b32f9e690b812d7076a0bdb4",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "be526ead50a53cfaf65e9135e66aa399285e0e02"
+    },
+    {
+      "at": "2026-11-02T03:19:26.814Z",
+      "file": "assets/scene-manifest.json",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/scene-manifest.json?revision=9-arrivals-lighting-1",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "c02bd7785536b7f4bf27a9d98d5255e7ed248e99"
+    },
+    {
+      "at": "2026-11-02T03:19:27.146Z",
+      "file": "assets/model-context.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-context.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "742ca49a369530e69c37fb8adf0b8cf529517363"
+    },
+    {
+      "at": "2026-11-02T03:19:27.152Z",
+      "file": "assets/model-platform.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-platform.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "6cffbedac20acdcf6d94d5d071dc21c12428657f"
+    },
+    {
+      "at": "2026-11-02T03:19:27.153Z",
+      "file": "assets/model-trains.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-trains.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "2330c20887fb934e42ac67305ddb23b43d2451b1"
+    },
+    {
+      "at": "2026-11-02T03:19:27.478Z",
+      "file": "assets/model-exterior.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-exterior.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 4297530,
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "314dc23c1e8a78c55bbfd2beea34eee55bc5b21d"
+    },
+    {
+      "at": "2026-11-02T03:19:27.627Z",
+      "file": "assets/model-concourse.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-concourse.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 5175444,
+      "sha256": "c74aa5be856e72689b8e62694fe0715a2edb736ab518dbd3c96e4e8fc2cb9673",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "e343ffb9325fd9d2fabe8f4ef7cf829a5498af76"
+    },
+    {
+      "at": "2026-11-02T03:19:28.220Z",
+      "file": "assets/model-waiting-room.glb.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/model-waiting-room.glb.gz?revision=9-arrivals-lighting-1",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "2afbbb8ecda9442689a1684578cdda9f846718e2"
+    },
+    {
+      "at": "2026-11-02T03:19:28.602Z",
+      "file": "assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "bytes": 3746211,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "026995cecd6052fe89ab30345b44138cc018f359"
+    },
+    {
+      "at": "2026-11-02T03:19:28.755Z",
+      "file": "assets/textures/4f684d7c526a22f95162.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "bytes": 3935940,
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "8bd2684c214cb940364f566642df1583c7add326"
+    },
+    {
+      "at": "2026-11-02T03:19:28.952Z",
+      "file": "assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "bytes": 3849773,
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "cfeb348e7cca1535153e1cd33e33d6be4d8468cc"
+    },
+    {
+      "at": "2026-11-02T03:19:29.023Z",
+      "file": "assets/textures/71508f85f3c325538f05.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "bytes": 3139363,
+      "sha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "ce3c88e7bd4dadba4403d828d07c367ea655b519"
+    },
+    {
+      "at": "2026-11-02T03:19:29.042Z",
+      "file": "assets/textures/b4a5b7165636466257b3.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/b4a5b7165636466257b3.ktx2",
+      "bytes": 2348682,
+      "sha256": "b4a5b7165636466257b3b5be471c62f8b017b285012c020f9f0792b79c6f3dbd",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "8d854983c099a62561759f50cf5f40168b6eb215"
+    },
+    {
+      "at": "2026-11-02T03:19:29.425Z",
+      "file": "assets/textures/22ec9e77de77cf98bd6a.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/22ec9e77de77cf98bd6a.ktx2",
+      "bytes": 2355148,
+      "sha256": "22ec9e77de77cf98bd6a5c9ef0089ba05c2e054a5c60341e7eb7b3b6e00be570",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "745e35ba6aea0f6321ed16b2a17f19dd69aefe08"
+    },
+    {
+      "at": "2026-11-02T03:19:29.819Z",
+      "file": "assets/textures/5ac4f28aafa1a2c0c811.ktx2",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/textures/5ac4f28aafa1a2c0c811.ktx2",
+      "bytes": 3033940,
+      "sha256": "5ac4f28aafa1a2c0c81115a0d2f63b7f0e7226103a3c42448f133b0c45cdb806",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "bc9716388b03e822e162345a07e362f76e3aa447"
+    },
+    {
+      "at": "2026-11-02T03:19:31.043Z",
+      "file": "assets/reflection-concourse.hdr.gz",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/reflection-concourse.hdr.gz?revision=9-arrivals-lighting-1",
+      "bytes": 5537345,
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "3fc644fa9de0b1808962b7e3cd6dc200ef54a266"
+    },
+    {
+      "at": "2026-11-02T03:19:31.602Z",
+      "file": "assets/lighting-concourse-arrivals-sky.webp",
+      "url": "https://stavreskimario.github.io/penn-station-1935/assets/lighting-concourse-arrivals-sky.webp?revision=9-arrivals-lighting-1",
+      "bytes": 4867814,
+      "sha256": "80cd1779e96cb50da92fff96c83c12d301d55543319484e3bcf79f288f40b2fb",
+      "immutableCommitExact": true,
+      "runtimeImplementationCommitExact": true,
+      "gitBlob": "44d6e3b20e504ab989ecf2482fc9e4419c413cec"
+    }
+  ],
+  "allNineteenBodiesExactAtBothImplementationAndCleanupCommits": true,
+  "sourceBookkeepingCleanupDiff": [
+    "M\t.gitignore",
+    "M\tauthoring/penn-station-1935/review/phase9/arrivals-lighting-priority/checkpoint-manifest.json",
+    "D\tauthoring/penn-station-1935/review/phase9/arrivals-lighting-priority/source-handoff/source/__pycache__/glb_surface_io.cpython-311.pyc",
+    "D\tauthoring/penn-station-1935/review/phase9/arrivals-lighting-priority/source-handoff/source/lighting_uv/__pycache__/audit_arrivals_rebake.cpython-311.pyc"
+  ],
+  "publicControls": {
+    "nativeLegs": 8,
+    "allLegsPass": true,
+    "labels": [
+      "west-aisle-alignment",
+      "west-aisle-clear-lift",
+      "west-arrival-head",
+      "west-arrival-midflight",
+      "west-arrival-platform",
+      "west-arrival-return-gallery",
+      "west-aisle-return-clear-lift",
+      "west-aisle-return-preset-row"
+    ],
+    "sameSixZoneIdsAndVisibility": true,
+    "scene": {
+      "id": "c40c9379-a6a8-4cd7-a763-f1e83476cb6d",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "7b8b1973-55a8-4202-8379-40d5735adeed",
+          "visible": true,
+          "meshes": 24
+        },
+        {
+          "name": "waiting",
+          "id": "db6ff336-e037-4fdd-84f8-e2b4fa647ec6",
+          "visible": true,
+          "meshes": 19
+        },
+        {
+          "name": "concourse",
+          "id": "192285e6-7c70-4b43-b145-56668d1256f5",
+          "visible": true,
+          "meshes": 30
+        },
+        {
+          "name": "context",
+          "id": "a954f1fc-02ad-4384-b1e3-063a434a3534",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "b05ff2d0-70ca-40fa-9c0a-3a617cfdca6e",
+          "visible": true,
+          "meshes": 19
+        },
+        {
+          "name": "trains",
+          "id": "c72fd903-03de-4009-af5d-e329fd6a8921",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    },
+    "initialMode": "walk",
+    "quality": "balanced",
+    "renderer": "WebGL 2",
+    "browserVersion": "156.0.8078.74",
+    "settledModeToggle": {
+      "actualAppliedOrbitY": -5.667599999999999,
+      "actualRestoredWalkY": -5.7876,
+      "galleryFloorWorldY": -7.4676,
+      "expectedWalkEyeHeightM": 1.68,
+      "toleranceM": 0.02,
+      "distinctAppliedPositionsRequired": true,
+      "passed": true
+    },
+    "mountedArrivalsMaterials": [
+      "TravertineArrivalsStairStone",
+      "PublicFloorMarbleArrivalsRetainedNorth",
+      "ConcourseOpaqueArrivalsConcrete",
+      "ConcourseOpaqueArrivalsUpperSupports",
+      "PaintedStructuralIronArrivalsStructure",
+      "PaintedStructuralIronArrivalsGuard",
+      "PaintedStructuralIronArrivalsGroutJacket"
+    ],
+    "litMaterials": {
+      "count": 4,
+      "GI": [
+        4096,
+        4096
+      ],
+      "AO": [
+        2048,
+        2048
+      ],
+      "skyScale": 2
+    },
+    "pageErrors": 0,
+    "httpFailures": 0,
+    "unexplainedNetworkFailures": 0,
+    "unexplainedConsoleErrors": 0,
+    "intentionalBlocks": [
+      {
+        "at": "2026-11-02T03:19:25.131Z",
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      }
+    ],
+    "requestFailureClassification": [
+      {
+        "at": "2026-11-02T03:19:25.133Z",
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+        "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector",
+        "classification": "intentional-external-block"
+      }
+    ],
+    "retainedWarnings": [
+      {
+        "at": "2026-11-02T03:19:27.977Z",
+        "type": "warning",
+        "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+      },
+      {
+        "at": "2026-11-02T03:19:28.224Z",
+        "type": "warning",
+        "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+      },
+      {
+        "at": "2026-11-02T03:19:28.224Z",
+        "type": "warning",
+        "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+      },
+      {
+        "at": "2026-11-02T03:19:29.141Z",
+        "type": "warning",
+        "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+      },
+      {
+        "at": "2026-11-02T03:19:29.732Z",
+        "type": "warning",
+        "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+      }
+    ],
+    "browserClosed": true
+  },
+  "archive": {
+    "file": "public-browser.json.gz",
+    "decodedBytes": 1050077,
+    "decodedSha256": "6ada9285a03eb624829cfd48d515c950578365278347dac457a5621a9c11155a",
+    "archiveBytes": 32235,
+    "archiveSha256": "e60592150b5f0cda4ccae4c5db97d5a0cafc4e81d538d3e62df62b132f7bfe35"
+  },
+  "screenshots": [
+    {
+      "file": "public-arrival-stair-midflight.png",
+      "bytes": 1108845,
+      "sha256": "442065f0b5bafb962ee8e048e7e636a8b5a3d74fbae07c8b50ce144a7a8532a8",
+      "width": 1440,
+      "height": 1000,
+      "actualNativeSnapshot": "midflightCloseView",
+      "camera": {
+        "position": [
+          -75.006823001923,
+          -6.958660236567808,
+          12.667763632338174
+        ],
+        "quaternion": [
+          0.20896432040209947,
+          -0.6755248895442839,
+          -0.2089643019675133,
+          -0.6755249491382991
+        ],
+        "fov": 50
+      },
+      "captureSource": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-publication-v1/public-final-v2/public-arrival-stair-midflight.png",
+      "copyByteExact": true
+    },
+    {
+      "file": "public-arrival-stair-from-platform.png",
+      "bytes": 1107160,
+      "sha256": "7ea75c5478f1af4835311deea654bd51be549d27979da87de48d1ba32ecc3117",
+      "width": 1440,
+      "height": 1000,
+      "actualNativeSnapshot": "platformCloseView",
+      "camera": {
+        "position": [
+          -82.45260856974649,
+          -10.305624791949164,
+          12.667763632338174
+        ],
+        "quaternion": [
+          -0.08815836171484494,
+          0.7015896847755367,
+          -0.0881583585346122,
+          -0.7015897100847477
+        ],
+        "fov": 50
+      },
+      "captureSource": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-publication-v1/public-final-v2/public-arrival-stair-from-platform.png",
+      "copyByteExact": true
+    }
+  ],
+  "harness": {
+    "file": "check-public-arrivals.cjs",
+    "bytes": 18352,
+    "sha256": "66524e4cb8a7a59328f7e58ae3d039c3d32c369898aeb396007fa3d28b0e55ac",
+    "execution": "Root-approved actual public run; exact executed SHA supplied at handoff. No browser replay during packaging."
+  },
+  "previousLocalCheckpointManifest": {
+    "file": "checkpoint-manifest.json",
+    "sha256": "c925f498296aace9878188ea2cbdc53de64f39430436504048104b21e1e2d830",
+    "immutableCommit": "ed4e00b06be3dd6d48db6a7e4537c36e90b4b336",
+    "preservedWithoutRewrite": true,
+    "scope": "Frozen historical local acceptance. Publication uses the separate publication-manifest.json."
+  },
+  "limits": [
+    "The public run covers8actual west-arrival/gallery/stair legs. The34-leg local whole-station roundtrip and full/low decoded physical gates are retained separately.",
+    "Only19naturally captured response bodies are individually pinned here. Full12GLB validation remains separate evidence.",
+    "Five recorded KTX2Loader warnings remain visible; no FPS, physical-mobile, WebGPU or final photographic-fidelity certification.",
+    "Northern/LIRR registration, street exits, transfers, local soffit datums and broader first-eight gallery-edge/stair/underside construction remain open."
+  ]
+}
