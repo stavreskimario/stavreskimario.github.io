@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "baselineCommit": "0177ad20621a85fcf2ca476b549f73ec02761535",
+  "newBundleSha256": "772342f64ad292379a4212689df75b1d33181c4b5355b667fefb5dfc1fd92300",
+  "newBundleBytes": 1046059,
+  "scope": "Only asset cache revision and derived chunk filename references change. No renderer, navigation or material code changes.",
+  "chunks": [
+    {
+      "before": "chunk-O3MLNBEO.js",
+      "after": "chunk-4PMFNZKU.js",
+      "byteExactExceptImportAndLegalFilenameReferences": true
+    },
+    {
+      "before": "three.webgpu-VCFJNVTL.js",
+      "after": "three.webgpu-HGB2P5IA.js",
+      "byteExactExceptImportAndLegalFilenameReferences": true
+    }
+  ]
+}

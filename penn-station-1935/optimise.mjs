@@ -54,7 +54,15 @@ for (const zone of (requestedZones.length ? requestedZones : ['exterior', 'waiti
     run(['resize', geometry, sized, '--width', low ? '512' : '2048', '--height', low ? '512' : '2048']);
     if (!low) await preserveOrderAO(geometry, sized, sized, path.join(scratch, `${zone}-order-ao-proof.json`));
     await prepareScalarTextures(sized, scalar, scalarProof);
-    run(['uastc', scalar, textured, '--level', '1', '--zstd', '6', '--jobs', '2']);
+    if (low) {
+      run(['uastc', scalar, textured, '--level', '1', '--zstd', '6', '--jobs', '2']);
+    } else {
+      // Preserve fine full-resolution normal signals before encoding other roles.
+      // The second pass skips images already encoded to KTX2 by the first pass.
+      const normals = path.join(scratch, `${zone}-normals.glb`);
+      run(['uastc', scalar, normals, '--slots', '*normal*', '--level', '4', '--zstd', '6', '--jobs', '2']);
+      run(['uastc', normals, textured, '--level', '1', '--zstd', '6', '--jobs', '2']);
+    }
     run(['meshopt', textured, pending, ...precision]);
     const encoded = await shareGlbTextures(await readFile(pending), out);
     const parsed = readGlb(encoded.buffer);

@@ -3,11 +3,11 @@
   "assets": [
     {
       "file": "model-exterior.glb",
-      "bytes": 13809096,
+      "bytes": 13809268,
       "transportFile": "model-exterior.glb.gz",
-      "transportBytes": 4273265,
-      "sha256": "e63b2211b9e96a50f0ade54e8cc9585d0c5e51e762a587e18852671e0adab32d",
-      "transportSha256": "7ca9e045ac45a7b96253da50babe0759b33ae952abb2158270cf5e94d742b410",
+      "transportBytes": 4206073,
+      "sha256": "b8bea3799b5d1b576612249e3a7ee5e3a4c655629a963343a195a0640d94024a",
+      "transportSha256": "81a5b1b03b3d2beeab26f38a4f1411aea7d2f85c816e28e71436a480e55b7866",
       "externalTextures": [
         {
           "uri": "textures/96c2452f554cdcc0f0cc.ktx2",
@@ -96,12 +96,16 @@
         {
           "uri": "textures/d027c562b48d63001b53.ktx2",
           "bytes": 3847041
+        },
+        {
+          "uri": "textures/57b74bfd6c788b7c2da2.ktx2",
+          "bytes": 2357761
         }
       ],
       "nodes": 11,
       "meshes": 11,
       "materials": 24,
-      "textures": 22,
+      "textures": 23,
       "extensionsUsed": [
         "EXT_meshopt_compression",
         "KHR_materials_ior",
@@ -383,11 +387,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 17710208,
+      "bytes": 17710380,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 5171505,
-      "sha256": "9fa941951423438496159f425ffb5455977727b7a92b04a14db9df02bd1c92ec",
-      "transportSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "transportBytes": 5092816,
+      "sha256": "fd0bb8344c8ec0afb06de59531e841809aee60a9188f7b141db39c7c09ceb89b",
+      "transportSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -520,12 +524,16 @@
         {
           "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
           "bytes": 3746211
+        },
+        {
+          "uri": "textures/57b74bfd6c788b7c2da2.ktx2",
+          "bytes": 2357761
         }
       ],
       "nodes": 21,
       "meshes": 21,
       "materials": 31,
-      "textures": 33,
+      "textures": 34,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -982,8 +990,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 85,
-  "modelTextureAndLightingBytes": 206893011,
+  "sharedTextureFiles": 86,
+  "modelTextureAndLightingBytes": 209104891,
   "navigationBytes": 693276,
   "scope": "First-eight source-controlled platform sections/granolithic finish appended with new4Ksky/AO and lossless Float32module. Alloldtracks/fixtures/northernplatforms/otherzones retained. Source, CPU, browser andpublication acceptance recorded separately; broaderplatformenclosure/arcade andolderprobes unfinished.",
   "arcadeIntegration": {
@@ -1056,5 +1064,31 @@
       "method": "Each compressed model once; each referenced KTX and GI once; three probe metadata JSONs/eight roomHDRs/exterior sky. Matches existing asset-validator transfer contract. Navigation separate."
     },
     "runtimeAssetFileBytesExcludingMetrics": 209847032
+  },
+  "normalCandidate": {
+    "status": "Selected A for finalvalidation; no artistic strength change",
+    "label": "A selected, canonical packaging",
+    "scope": "Exact7newARCTravertine materials in fullExterior andTravertineArrivalsStairStone in fullConcourse only. Allotherfull/lowmodels/oldtexturebindings unchanged.",
+    "texture": {
+      "uri": "textures/57b74bfd6c788b7c2da2.ktx2",
+      "sha256": "57b74bfd6c788b7c2da23af64a4ec96e62c55531a3934df0f746b21c1680bee2",
+      "bytes": 2357761,
+      "width": 2048,
+      "height": 2048,
+      "mips": 12,
+      "encoding": "OriginalJPEGpixels\u2192UASTCquality4/noRDO/zstd6,linearTF,unspecifiedcolourprimaries"
+    },
+    "strengthPolicy": "Original.035exact",
+    "previousAggregateValues": {
+      "sharedTextureFiles": 85,
+      "modelTextureAndLightingBytes": 206893011,
+      "navigationBytes": 693276
+    },
+    "compressedModelDeltaBytes": -145881,
+    "changedModelFiles": [
+      "model-exterior.glb.gz",
+      "model-concourse.glb.gz"
+    ],
+    "reviewedMetadataOnlyBytesRemoved": 80
   }
 }

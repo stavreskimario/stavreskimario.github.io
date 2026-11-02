@@ -1,0 +1,123 @@
+{
+  "status": "PASS: selectedA imagepixels/mipblocks andstrengths exact after standardcanonical metadata cleanup",
+  "reviewedCandidate": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/normal-candidates-v1/candidate-A",
+  "finalCandidate": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/normal-candidates-v1/candidate-final-A",
+  "oldTexture": {
+    "uri": "textures/9d2a7d4d29e9eafe3e55.ktx2",
+    "sha256": "9d2a7d4d29e9eafe3e55431fc1b9658f0a63e3554252d038fb0731f2962234dd",
+    "bytes": 2357841
+  },
+  "canonicalTexture": {
+    "uri": "textures/57b74bfd6c788b7c2da2.ktx2",
+    "sha256": "57b74bfd6c788b7c2da23af64a4ec96e62c55531a3934df0f746b21c1680bee2",
+    "bytes": 2357761
+  },
+  "metadataOnlyBytesRemoved": 80,
+  "all12MipPayloadsExact": [
+    {
+      "level": 0,
+      "bytes": 1886224,
+      "decodedLevelBytes": 4194304,
+      "compressedPayloadSha256": "09d91d092d0d36897a5a6ee7c6e9d80a166e3b850c9c85daa788d8976abf8d2c"
+    },
+    {
+      "level": 1,
+      "bytes": 382848,
+      "decodedLevelBytes": 1048576,
+      "compressedPayloadSha256": "048f1be03b9f80af3d42a1edf0d8ff992c61ccd32a343a1f541d415c8987ec56"
+    },
+    {
+      "level": 2,
+      "bytes": 78247,
+      "decodedLevelBytes": 262144,
+      "compressedPayloadSha256": "ad1ec259077b548b97654003ebe2c66bae6db76a2e56d6084c86d6474e242086"
+    },
+    {
+      "level": 3,
+      "bytes": 9224,
+      "decodedLevelBytes": 65536,
+      "compressedPayloadSha256": "1515a41900147c8c6bb8a9f4eaafa393df88c6b8fc7b4d6f2b8c9db2afc52225"
+    },
+    {
+      "level": 4,
+      "bytes": 589,
+      "decodedLevelBytes": 16384,
+      "compressedPayloadSha256": "3bc0012a0b36d020ef57971158a155e23a297c4fb90c32c1133675590ece8517"
+    },
+    {
+      "level": 5,
+      "bytes": 28,
+      "decodedLevelBytes": 4096,
+      "compressedPayloadSha256": "21c3057a2dfcc1192ffdba0ef05976ddfe2cf6f927d9ee6bff2a68e82855c4cf"
+    },
+    {
+      "level": 6,
+      "bytes": 28,
+      "decodedLevelBytes": 1024,
+      "compressedPayloadSha256": "1b3ce4366093a68209f28d2bbcc77392689ab97799560e3a637c80c7e5716e80"
+    },
+    {
+      "level": 7,
+      "bytes": 28,
+      "decodedLevelBytes": 256,
+      "compressedPayloadSha256": "df30664ca216f700a7f5a3fac5f086ae564de31e3273e9ad281225b3517846a2"
+    },
+    {
+      "level": 8,
+      "bytes": 26,
+      "decodedLevelBytes": 64,
+      "compressedPayloadSha256": "fd0bdb5e0d389c1508a0f992dfcc2023d85516aa95a4393a8573718c626ea01f"
+    },
+    {
+      "level": 9,
+      "bytes": 25,
+      "decodedLevelBytes": 16,
+      "compressedPayloadSha256": "30aef12affc8f676956fa4455386bbd7ec8baee9a4b5eb08fcf6837834d3f548"
+    },
+    {
+      "level": 10,
+      "bytes": 25,
+      "decodedLevelBytes": 16,
+      "compressedPayloadSha256": "30aef12affc8f676956fa4455386bbd7ec8baee9a4b5eb08fcf6837834d3f548"
+    },
+    {
+      "level": 11,
+      "bytes": 25,
+      "decodedLevelBytes": 16,
+      "compressedPayloadSha256": "30aef12affc8f676956fa4455386bbd7ec8baee9a4b5eb08fcf6837834d3f548"
+    }
+  ],
+  "DFDAndFormatDimensionsExact": true,
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "reviewedTransportSha256": "d4925a22188b5e31b316335edd83dfd3b550a7e15d66a21e6ba7649208b41296",
+      "reviewedDecodedSha256": "ccaf9584f4c5e51bf9844a0df6e67cf3b94591c120120aa74dd19971b485efb3",
+      "finalTransportSha256": "81a5b1b03b3d2beeab26f38a4f1411aea7d2f85c816e28e71436a480e55b7866",
+      "finalDecodedSha256": "b8bea3799b5d1b576612249e3a7ee5e3a4c655629a963343a195a0640d94024a",
+      "transportBytes": 4206073,
+      "decodedBytes": 13809268,
+      "binaryTailExact": true,
+      "allJsonExceptOneImageURIExact": true
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "reviewedTransportSha256": "4c4f1738b543a4c0fed8876f50679b04466cd9832ce72f134366dc2d6d239d1f",
+      "reviewedDecodedSha256": "260273518203c2ff608b34db4b0ae03b51d1387a744a0aba5b082b3106949756",
+      "finalTransportSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "finalDecodedSha256": "fd0bb8344c8ec0afb06de59531e841809aee60a9188f7b141db39c7c09ceb89b",
+      "transportBytes": 5092816,
+      "decodedBytes": 17710380,
+      "binaryTailExact": true,
+      "allJsonExceptOneImageURIExact": true
+    }
+  ],
+  "normalScales": ".035unchanged on7ARC+1Arrivals; Bstrength1 rejectedafteractualvisualcomparison",
+  "metrics": {
+    "sha256": "1e694f3b34c058e7534f709fb4b172ade7fe648c5808df3815815d29cbf42e72",
+    "bytes": 31591,
+    "modelTextureAndLightingBytes": 209104891,
+    "sharedTextureFiles": 86
+  },
+  "allOtherCandidateFilesExact": true
+}

@@ -1,6 +1,8 @@
-# Pennsylvania Station — platform construction checkpoint
+# Pennsylvania Station — connected entrance checkpoint
 
 Current checkpoint: the connected Seventh Avenue vestibule, arcade and Ionic loggia are now explorable through to the waiting room. [Validation](VALIDATION.md) records the21-leg native roundtrip, source accuracy and remaining lighting/finish limitations. All six zones load together; Walk remains default.
+
+[Open the live connected entrance](https://stavreskimario.github.io/penn-station-1935/?preview=0177ad2). Matching [deployment and public-response evidence](../authoring/penn-station-1935/review/phase9/arcade/acceptance/final-publication.json) verifies the published `0177ad2` checkpoint.
 
 An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases connect eight ordinary platform correspondences to the lower Exit gallery. The first eight platforms now have source-controlled concrete overhangs, coved undersides, continuous supporting walls and a finer granolithic finish, with fresh illumination from the current station geometry.
 
