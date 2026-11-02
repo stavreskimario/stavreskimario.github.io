@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "status": "PROPOSED ONLY: no deletion authorized or performed by this packet",
+  "sourceCommit": "89035a4f09fcf43046c3651d6473de20f270e299",
+  "scope": "Inventory every image entry in all12 full/low GLBs, including image entries unreachable from materials. Preserve all89distinct image URIs. Only the8tracked KTX2files absent from the entire image-array union are proposed for recoverable archival. No model/array/PBR/quality/source/canonical mutation.",
+  "frozenModelCount": 12,
+  "allImageArrayEntries": 182,
+  "protectedTextureCount": 89,
+  "protectedTextureBytes": 119551559,
+  "explicitlyProtectedCurrentNormals": [
+    "textures/22ec9e77de77cf98bd6a.ktx2",
+    "textures/b4a5b7165636466257b3.ktx2",
+    "textures/1e3fdca78d540b4c4a2d.ktx2"
+  ],
+  "proposedFileCount": 8,
+  "proposedBytes": 7202466,
+  "exactProposedFiles": [
+    {
+      "file": "penn-station-1935/assets/textures/363923bafe6efcb2994c.ktx2",
+      "uri": "textures/363923bafe6efcb2994c.ktx2",
+      "bytes": 1731155,
+      "sha256": "363923bafe6efcb2994c3c9af760bc144583e38bfcf66f7030a8f792648be08a",
+      "gitBlob": "ed7e4edcf124bad0db1498fb19cffd401033330a",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/363923bafe6efcb2994c.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/363923bafe6efcb2994c.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/57b74bfd6c788b7c2da2.ktx2",
+      "uri": "textures/57b74bfd6c788b7c2da2.ktx2",
+      "bytes": 2357761,
+      "sha256": "57b74bfd6c788b7c2da23af64a4ec96e62c55531a3934df0f746b21c1680bee2",
+      "gitBlob": "b178fc417e44b74e3997cc2de9ada097186f99fb",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/57b74bfd6c788b7c2da2.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/57b74bfd6c788b7c2da2.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/623a245c87b996572e77.ktx2",
+      "uri": "textures/623a245c87b996572e77.ktx2",
+      "bytes": 164478,
+      "sha256": "623a245c87b996572e7795e28c401ac27dc9c02a3bb99fbc5f8fb3621d9ee29f",
+      "gitBlob": "b645b17d1d200197d9d53bb7827aca153ce6bee7",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/623a245c87b996572e77.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/623a245c87b996572e77.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/801a4f1dcf698acb12ca.ktx2",
+      "uri": "textures/801a4f1dcf698acb12ca.ktx2",
+      "bytes": 163319,
+      "sha256": "801a4f1dcf698acb12ca30cf4dc42abd0301bbbfc547ac6afbea6e8471d49375",
+      "gitBlob": "96cdf8384df990b286fe315c2bd8302e8903df7b",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/801a4f1dcf698acb12ca.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/801a4f1dcf698acb12ca.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/c8ffb212f6d77c7a9102.ktx2",
+      "uri": "textures/c8ffb212f6d77c7a9102.ktx2",
+      "bytes": 173916,
+      "sha256": "c8ffb212f6d77c7a91022a1da3e1698d7c42fcbdc52ae847a9ad5d8f10dc0540",
+      "gitBlob": "9f7ea5d9d85061ad4c701018b68bb465f3f17038",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/c8ffb212f6d77c7a9102.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/c8ffb212f6d77c7a9102.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "uri": "textures/cd6d4e919eb581296aa1.ktx2",
+      "bytes": 2203123,
+      "sha256": "cd6d4e919eb581296aa10380f730e58c35e1bc88b75a4d4b8d1300c270904076",
+      "gitBlob": "f0d82399cd3081591f171bc463bab17a71e905c5",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e3a546949c1022529068.ktx2",
+      "uri": "textures/e3a546949c1022529068.ktx2",
+      "bytes": 217523,
+      "sha256": "e3a546949c10225290682d7156b47b81f6cba70ba4efd20359962b3ca55f634b",
+      "gitBlob": "c866a6e5d938c209cd258a30a1fc5e4f469fc772",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/e3a546949c1022529068.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/e3a546949c1022529068.ktx2",
+      "backupByteExact": true
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f4f79aec04acf833312f.ktx2",
+      "uri": "textures/f4f79aec04acf833312f.ktx2",
+      "bytes": 191191,
+      "sha256": "f4f79aec04acf833312f89e0112b2c31b15513c84a9429a58dfe3e4c5f7e75b4",
+      "gitBlob": "772df52503b6633154b2fe6ffd95ee25ad558bc5",
+      "immutableCommitByteExact": true,
+      "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups/penn-station-1935/assets/textures/f4f79aec04acf833312f.ktx2",
+      "backupRelativePath": "penn-station-1935/assets/textures/f4f79aec04acf833312f.ktx2",
+      "backupByteExact": true
+    }
+  ],
+  "fullInventoryArchive": {
+    "file": "unused-runtime-ktx-plan.json.gz",
+    "bytes": 13672,
+    "sha256": "39f8c301d2987a7eb6ee5233aee64e2ea533163b038cb830f25ab9dd53537ef2",
+    "decodedBytes": 89288,
+    "decodedSha256": "72d591436d2b1c1988320c0c5408b1a04f7b046e77c2b5540139d1c89c31f787"
+  },
+  "externalBackupRoot": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/backups",
+  "activeExecutableOrHTMLReferences": 0,
+  "historicalTextReferencesRetained": true,
+  "currentMetricsUnchanged": {
+    "sharedTextureFiles": 89,
+    "modelTextureAndLightingBytes": 219408187
+  },
+  "recoveryAndGuardControls": {
+    "file": "unused-runtime-ktx-controls.json",
+    "sha256": "78038bdecf0096fb268647f3923c0a43b63ff67c6764b432ea76988c82994ecc",
+    "passed": 9
+  },
+  "rootFilesRemoved": false,
+  "qualityChanges": false,
+  "fpsGainClaimed": false
+}
