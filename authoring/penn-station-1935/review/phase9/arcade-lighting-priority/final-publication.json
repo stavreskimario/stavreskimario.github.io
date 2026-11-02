@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T02:40:59.272205+00:00",
+  "publicRunCreated": "2026-11-02T02:34:51.653Z",
+  "status": "PASS",
+  "runtimeCommit": "10a3f0cdb7b8f240162bac7d820eb7121c14e42b",
+  "runtimeRevision": "9-arcade-lighting-1",
+  "url": "https://stavreskimario.github.io/penn-station-1935/?preview=10a3f0c",
+  "observedPublicURL": "https://stavreskimario.github.io/penn-station-1935/?preview=10a3f0c&renderer=webgl",
+  "scope": "Independently match the 17 natural response hashes recorded by the actual public-browser run to immutable Git commit 10a; verify successful matching deployment/check runs and recorded six-zone, material-binding and native street-to-arcade observations. No additional browser run performed during packaging.",
+  "workflows": [
+    {
+      "databaseId": 41378159430,
+      "workflowName": "pages build and deployment",
+      "headSha": "10a3f0cdb7b8f240162bac7d820eb7121c14e42b",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T02:33:34Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41378159430",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41378159430"
+    },
+    {
+      "databaseId": 41378170077,
+      "workflowName": "Site checks",
+      "headSha": "10a3f0cdb7b8f240162bac7d820eb7121c14e42b",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T02:31:52Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41378170077",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41378170077"
+    }
+  ],
+  "workflowVerification": {
+    "source": "Independent read-only connected GitHub workflow-run API",
+    "externalEvidence": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/publication-priority-v2/workflow-runs.json",
+    "sha256": "5e161cd2b362e29ac18b0d1380a1a2b89f7011369553ddac869d4824bf948ce1"
+  },
+  "naturalBodies": [
+    {
+      "file": "index.html",
+      "bytes": 18275,
+      "sha256": "5775c141c7162225c0dd3877991b0661a77d4b9be5f20cd5a61127e4ea66f4c4",
+      "immutableCommitExact": true,
+      "gitBlob": "ded4a55ece3295794bab7e895eb27f5b9198a959"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617",
+      "immutableCommitExact": true,
+      "gitBlob": "7443419a64337c26ba12f2f9d8aab4b15658263b"
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 1046062,
+      "sha256": "5b9726ba469fa2904f36361a9fcec55ea3ad3947d9a27f05555b07b553a051dd",
+      "immutableCommitExact": true,
+      "gitBlob": "c5438e29fcbf014ab28dc198b205ba738db56236"
+    },
+    {
+      "file": "assets/scene-manifest.json",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+      "immutableCommitExact": true,
+      "gitBlob": "c02bd7785536b7f4bf27a9d98d5255e7ed248e99"
+    },
+    {
+      "file": "assets/model-platform.glb.gz",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "immutableCommitExact": true,
+      "gitBlob": "6cffbedac20acdcf6d94d5d071dc21c12428657f"
+    },
+    {
+      "file": "assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "immutableCommitExact": true,
+      "gitBlob": "742ca49a369530e69c37fb8adf0b8cf529517363"
+    },
+    {
+      "file": "assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "immutableCommitExact": true,
+      "gitBlob": "2330c20887fb934e42ac67305ddb23b43d2451b1"
+    },
+    {
+      "file": "assets/model-exterior.glb.gz",
+      "bytes": 4297530,
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a",
+      "immutableCommitExact": true,
+      "gitBlob": "314dc23c1e8a78c55bbfd2beea34eee55bc5b21d"
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "bytes": 5092816,
+      "sha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "immutableCommitExact": true,
+      "gitBlob": "36cd4c25cab97654c6b219d8009c37f5f4bc3e0b"
+    },
+    {
+      "file": "assets/model-waiting-room.glb.gz",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "immutableCommitExact": true,
+      "gitBlob": "2afbbb8ecda9442689a1684578cdda9f846718e2"
+    },
+    {
+      "file": "assets/textures/22ec9e77de77cf98bd6a.ktx2",
+      "bytes": 2355148,
+      "sha256": "22ec9e77de77cf98bd6a5c9ef0089ba05c2e054a5c60341e7eb7b3b6e00be570",
+      "immutableCommitExact": true,
+      "gitBlob": "745e35ba6aea0f6321ed16b2a17f19dd69aefe08"
+    },
+    {
+      "file": "assets/textures/b4a5b7165636466257b3.ktx2",
+      "bytes": 2348682,
+      "sha256": "b4a5b7165636466257b3b5be471c62f8b017b285012c020f9f0792b79c6f3dbd",
+      "immutableCommitExact": true,
+      "gitBlob": "8d854983c099a62561759f50cf5f40168b6eb215"
+    },
+    {
+      "file": "assets/textures/53ec32af1b61447bac9c.ktx2",
+      "bytes": 2701207,
+      "sha256": "53ec32af1b61447bac9ce168b784ce1af125a5f1e30e0d40fb75f0c07d78fb68",
+      "immutableCommitExact": true,
+      "gitBlob": "5388dea0133d8eedbc3c3c2f075c27f4324903c0"
+    },
+    {
+      "file": "assets/textures/d027c562b48d63001b53.ktx2",
+      "bytes": 3847041,
+      "sha256": "d027c562b48d63001b53f41b3151cc4b1f9c159b7827baf27b3e325a071ce372",
+      "immutableCommitExact": true,
+      "gitBlob": "497913255906e55a3b8a4b3ca726a99ff7584242"
+    },
+    {
+      "file": "assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+      "bytes": 2893842,
+      "sha256": "1e3fdca78d540b4c4a2d75bcd145bbb37c3b7e1a320b9574ead0b4b08266db10",
+      "immutableCommitExact": true,
+      "gitBlob": "2c452d62ab774ea2f568e7362d7de51ef4c9f7a6"
+    },
+    {
+      "file": "assets/reflection-arcade.hdr.gz",
+      "bytes": 4292934,
+      "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5",
+      "immutableCommitExact": true,
+      "gitBlob": "aa2b19110d9565e3d659e34dc0525c26c17f98bf"
+    },
+    {
+      "file": "assets/lighting-arcade-enclosure-sky.webp",
+      "bytes": 2969348,
+      "sha256": "4a4f7d78eef898515307b910350cb2eba750c39cd377ec59c51b459085c42b8e",
+      "immutableCommitExact": true,
+      "gitBlob": "b3100fe440220c64b3564abd17b00fa08770b4f5"
+    }
+  ],
+  "naturalBodyCount": 17,
+  "naturalBodyBytes": 41729686,
+  "publicObservation": {
+    "initialMode": "walk",
+    "quality": "balanced",
+    "renderer": "WebGL 2",
+    "sixZoneIdsAndVisibilityExactAcrossStreetArcadeAndArrivals": true,
+    "sceneIdentity": "dccae825-42ef-421b-ae2a-4c3f80a34883",
+    "zones": [
+      {
+        "name": "exterior",
+        "id": "93ad16fe-f774-434e-956e-7e65db069693",
+        "visible": true,
+        "meshes": 24
+      },
+      {
+        "name": "waiting",
+        "id": "7433772f-d44f-4808-b502-8d0bdf5aaa00",
+        "visible": true,
+        "meshes": 19
+      },
+      {
+        "name": "concourse",
+        "id": "58b90502-0956-4bca-aab5-1d1537bbf84e",
+        "visible": true,
+        "meshes": 30
+      },
+      {
+        "name": "context",
+        "id": "241a439a-d001-4fd9-a872-7052cba4ad6f",
+        "visible": true,
+        "meshes": 37
+      },
+      {
+        "name": "platform",
+        "id": "7e0fac62-44e3-48df-a353-f5bb4c8ee241",
+        "visible": true,
+        "meshes": 19
+      },
+      {
+        "name": "trains",
+        "id": "b5293cfe-8739-472d-b7a5-524c3565c7f1",
+        "visible": true,
+        "meshes": 16
+      }
+    ],
+    "nativeStreetToArcadeDistanceMetres": 34.45729952721729,
+    "floorWorldAfterWalk": -0.0017307747940940033,
+    "eyeHeightOverFloorAfterWalk": 1.6799999999999997,
+    "mountedArcadeMaterialNames": [
+      "TravertineArcadeCastComposition",
+      "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "ArcadeNeutralUnassignedShopBacking",
+      "ArcadeVaultCastComposition",
+      "MilfordGraniteArcadeRepairPhase9",
+      "TravertineArcadeRepairPhase9",
+      "TravertineAshlar-2ArcadeRepairPhase9",
+      "TravertineAshlar-1ArcadeRepairPhase9",
+      "TravertineAshlar0ArcadeRepairPhase9",
+      "TravertineAshlar1ArcadeRepairPhase9",
+      "TravertineAshlar2ArcadeRepairPhase9",
+      "ArcadeShopAndClerestoryGlass",
+      "ArcadeOrnamentalMetal"
+    ],
+    "litMaterialCount": 11,
+    "litBindings": {
+      "GI": [
+        4096,
+        4096
+      ],
+      "AO": [
+        2048,
+        2048
+      ],
+      "skyScale": 2
+    },
+    "arrivalsPreset": "arrivals",
+    "pageErrors": 0,
+    "httpFailures": 0,
+    "unexplainedRequestFailures": 0,
+    "intentionalBlocks": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+    ],
+    "browserClosed": true
+  },
+  "archive": {
+    "file": "public-browser.json.gz",
+    "decodedBytes": 30690,
+    "decodedSha256": "49033f1f8dcc35d341f4bac0b1c13bfe19e8a003e5b6af8583c52418a3f832b0",
+    "archiveBytes": 4646,
+    "archiveSha256": "9d7be9f2c16eabc9e36a7b4882381583ed9c216bd8d9b3baa088cc8e203a9113"
+  },
+  "screenshots": [
+    {
+      "file": "public-arcade.png",
+      "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/public-priority-v2/public-arcade.png",
+      "bytes": 1069249,
+      "sha256": "5066f5e9e7049699a177f94e73b7eb9241a7a18cc20c6d214d26427af96c1505",
+      "width": 1440,
+      "height": 1000,
+      "includedInRepo": false
+    },
+    {
+      "file": "public-arrivals.png",
+      "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/public-priority-v2/public-arrivals.png",
+      "bytes": 653184,
+      "sha256": "50be292e836309432ac027279d9787f304739cf4098b210c53533ac3abf77036",
+      "width": 1440,
+      "height": 1000,
+      "includedInRepo": false
+    }
+  ],
+  "limits": [
+    "The public run verifies native street-to-arcade walking and arrivals-preset framing. Actual arrivals-stair walking is separate local eight-leg regression evidence, not a claim from this public run.",
+    "Only the 17 naturally captured response bodies are individually matched here; full 12-model asset validation is separate retained evidence.",
+    "No fresh FPS, physical-mobile, WebGPU or final photographic-fidelity certification. Retained Main-wall lighting, unassigned dark shops and arrivals finishing remain open."
+  ]
+}
