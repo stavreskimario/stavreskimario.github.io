@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "1mm physical displacement",
+      "rejected": true,
+      "reason": "Any physical position change is rejected"
+    },
+    {
+      "control": "changed surface UV0",
+      "rejected": true,
+      "reason": "UV map changed beyond Float32 round-trip bound"
+    },
+    {
+      "control": "changed priority lighting UV1",
+      "rejected": true,
+      "reason": "UV map changed beyond Float32 round-trip bound"
+    },
+    {
+      "control": "non-finite lighting UV1",
+      "rejected": true,
+      "reason": "Non-finite exported attribute: TEXCOORD_1"
+    },
+    {
+      "control": "non-unit authored normal",
+      "rejected": true,
+      "reason": ""
+    },
+    {
+      "control": "changed PBR normal strength",
+      "rejected": true,
+      "reason": "Non-lighting material JSON changed: TravertineArrivalsStairStone"
+    },
+    {
+      "control": "changed authored normal image",
+      "rejected": true,
+      "reason": "Authored PBR image changed: TravertineArrivalsStairStone/normalTexture"
+    },
+    {
+      "control": "original stale AO exported after fresh bake",
+      "rejected": true,
+      "reason": "Stale or different AO export: TravertineArrivalsStairStone"
+    }
+  ],
+  "allSourceFilesUnchanged": true,
+  "generatorSha256": "be972f116ec440432ee5c43acda36d74307107142aa30d3560d8ff369fd0569c"
+}

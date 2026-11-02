@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "status": "PASS: portable CPU replay matches frozen authored input exactly",
+  "sourceScriptSha256": "728b77e16e536e6248d81787d2b001ee9f12f151b8a8a397f0cf88bf92b7ae4f",
+  "uvArraySha256": "772133f6db291022efb2215e0060a6327c2d10ddaf59b5a48de5d4e71dc5e510",
+  "originalUvArrayExact": true,
+  "replayedCandidateSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "candidateByteIdenticalToFrozenInput": true,
+  "blender": "4.3.0",
+  "numpy": "<2",
+  "cpuOnly": true,
+  "noBakeOrRender": true
+}

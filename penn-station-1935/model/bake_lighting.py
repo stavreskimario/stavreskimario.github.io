@@ -25,11 +25,11 @@ parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
 parser.add_argument("--device", choices=("AUTO", "CPU", "METAL"), default="AUTO")
 parser.add_argument("--ao-only", action="store_true")
-parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade-only: retain an existing two-UV baked authoring mesh without joining, welding or re-unwrapping")
+parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade/Main0 arrivals: retain an existing two-UV baked authoring mesh without joining, welding or re-unwrapping")
 parser.add_argument("--surface-group", choices=("all", "vault", "masonry", "order"), default="all")
 parser.add_argument("--uv-margin-pixels", type=float, default=4)
 parser.add_argument("--materials", type=Path, help="Optional local CC0 material library; see material-provenance.json")
-parser.add_argument("--occluder-materials", type=Path, help="Apply the established material library only to imported neighbour meshes/materials, preserving the authored primary")
+parser.add_argument("--occluder-materials", type=Path, help="Use the reviewed surface library only on imported neighbouring objects; preserve the primary PBR and UVs")
 parser.add_argument("--source-visibility-proof", type=Path, help="Pinned source visibility rules for the connected entrance contexts")
 parser.add_argument("--occluder", action="append", default=[], metavar="ZONE=GLB", help="Registered neighbouring chunk to include in light transport, without exporting it")
 args = parser.parse_args()
@@ -43,10 +43,10 @@ if args.artifact_name:
     if args.zone != expected_zone or args.surface_group != "all":
         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
-if artifact_zone == "arcade-enclosure" and not args.source_visibility_proof:
-    raise ValueError("Arcade transport requires the original source render-visibility proof")
-if args.preserve_authored_uv1 and (artifact_zone != "arcade-enclosure" or args.surface_group != "all"):
-    raise ValueError("Preserve-authored-UV1 is restricted to the arcade authoring artifact")
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals"} and not args.source_visibility_proof:
+    raise ValueError("Arcade/arrivals transport requires the original source render-visibility proof")
+if args.preserve_authored_uv1 and (artifact_zone not in {"arcade-enclosure", "concourse-arrivals"} or args.surface_group != "all"):
+    raise ValueError("Preserve-authored-UV1 is restricted to the arcade or Main0 arrivals authoring artifact")
 if args.preserve_authored_uv1 and args.materials:
     raise ValueError("Preserve-authored-UV1 retains authored PBR and UV0; omit --materials")
 if args.materials and args.occluder_materials:
@@ -65,6 +65,11 @@ if args.zone == "waiting-room" and args.surface_group != "all":
     from order_lighting_uv import split_waiting_order_objects
     order_objects, _, order_audit = split_waiting_order_objects(primary_objects)
     primary_objects = list(scene.objects)
+primary_material_initial = None
+if args.occluder_materials:
+    from occluder_materials import material_fingerprint
+    primary_material_objects = {m for obj in primary_objects if obj.type == "MESH" for m in obj.data.materials if m}
+    primary_material_initial = {m.name: material_fingerprint(m) for m in primary_material_objects}
 order_set = set(order_objects)
 primary_set = set(primary_objects)
 frames = {"exterior": 0, "context": 0, "waiting": -4.2672, "waiting-room": -4.2672,
@@ -88,10 +93,10 @@ for specification in args.occluder:
             obj.location.z += offset
         if zone == "trains" and obj.parent not in imported:
             obj.location.y -= 8.690045261
-    if artifact_zone == "arcade-enclosure":
+    if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
         from restore_imported_visibility import restore_source_render_visibility
         bpy.context.view_layer.update()
-        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof))
+        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof, frame_offset_z=-frames[args.zone]))
     occluders.append({"zone": zone, "source": Path(filename).name, "sha256":hashlib.sha256(Path(filename).read_bytes()).hexdigest(), "heightOffset": offset, "objects": len(imported)})
 surface_report = []
 if args.materials:
@@ -101,6 +106,12 @@ occluder_material_integrity = None
 if args.occluder_materials:
     from occluder_materials import apply_occluder_materials
     surface_report, occluder_material_integrity = apply_occluder_materials(primary_objects, imported_occluder_objects, args.occluder_materials)
+    primary_material_after = {m.name: material_fingerprint(m) for m in primary_material_objects}
+    if primary_material_initial != primary_material_after:
+        raise RuntimeError("Primary PBR changed across neighbour import/preparation")
+    occluder_material_integrity["primaryMaterialGraphsExactSinceInitialImport"] = True
+    occluder_material_integrity["primaryMaterialBeforeAllContextHashes"] = primary_material_initial
+    occluder_material_integrity["primaryMaterialAfterAllContextHashes"] = primary_material_after
 scene.render.engine = "CYCLES"
 device = configure_device(scene, args.device)
 print("Cycles device: " + json.dumps(device), flush=True)
@@ -175,7 +186,7 @@ if args.preserve_authored_uv1:
         raise RuntimeError("Preserve-authored-UV1 requires one already-batched opaque architecture mesh")
     architecture = solids[0]
     if not np.array_equal(np.array(architecture.matrix_world), np.eye(4)):
-        raise RuntimeError("Preserve-authored-UV1 requires the authored Street0 identity transform")
+        raise RuntimeError("Preserve-authored-UV1 requires the authored frame identity transform")
     mesh = architecture.data
     if len(mesh.uv_layers) != 2:
         raise RuntimeError("Preserve-authored-UV1 needs its original surface UV0 and authored lighting UV1")
@@ -186,7 +197,7 @@ if args.preserve_authored_uv1:
     bpy.ops.object.select_all(action="DESELECT")
     architecture.select_set(True)
     bpy.context.view_layer.objects.active = architecture
-    authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture)
+    authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture, artifact_zone=artifact_zone)
 else:
     arcade_normal_integrity = None
     if artifact_zone == "arcade-enclosure":
@@ -331,7 +342,7 @@ if not args.ao_only:
     mobile_illumination.save_render(str(args.out / f"lighting-{artifact_zone}-sky-low.png"), scene=scene)
     print("Diffuse sky + bounce bake saved", flush=True)
 
-# Reuse imported glTF settings so no stale Occlusion group wins export.
+# Reuse imported settings; no stale previous AO group may win export.
 from baked_occlusion_binding import bind_fresh_baked_occlusion
 occlusion_binding_integrity = bind_fresh_baked_occlusion(materials, ao, light_uv_name)
 for material in materials:
@@ -399,7 +410,8 @@ report = {
     "vaultNormalIntegrity": vault_normal_integrity,
 }
 if arcade_normal_integrity is not None:
-    report["arcadeNormalIntegrity"] = arcade_normal_integrity
+    report["arcadeNormalIntegrity" if artifact_zone == "arcade-enclosure" else "authoredNormalIntegrity"] = arcade_normal_integrity
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
 if authored_uv_integrity is not None:
     report["authoredUvIntegrity"] = authored_uv_integrity

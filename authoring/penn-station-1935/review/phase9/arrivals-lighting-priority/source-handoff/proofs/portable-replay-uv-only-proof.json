@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "status": "PASS: only lighting UV1 accessor elements changed",
+  "inputSha256": "f346aaa4177460c3b965217486d7f5d1944d9657c15281705b2735a096e8050d",
+  "inputAfterSha256": "f346aaa4177460c3b965217486d7f5d1944d9657c15281705b2735a096e8050d",
+  "candidateSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "candidateUvArraySha256": "772133f6db291022efb2215e0060a6327c2d10ddaf59b5a48de5d4e71dc5e510",
+  "candidateNeedsFreshBake": true,
+  "originalJsonBytesExact": true,
+  "allNonUv1BytesExact": true,
+  "changedByteCount": 56906,
+  "allowedUv1Bytes": 66416,
+  "primitiveRecords": [
+    {
+      "material": "TravertineArrivalsStairStone",
+      "triangles": 3520,
+      "uvAccessor": 3,
+      "uniqueAccessorVerticesPatched": 6050,
+      "maximumPackedCornerScatter": 0.0
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsRetainedNorth",
+      "triangles": 36,
+      "uvAccessor": 8,
+      "uniqueAccessorVerticesPatched": 56,
+      "maximumPackedCornerScatter": 0.0
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsConcrete",
+      "triangles": 300,
+      "uvAccessor": 13,
+      "uniqueAccessorVerticesPatched": 564,
+      "maximumPackedCornerScatter": 0.0
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsUpperSupports",
+      "triangles": 816,
+      "uvAccessor": 18,
+      "uniqueAccessorVerticesPatched": 1632,
+      "maximumPackedCornerScatter": 0.0
+    }
+  ],
+  "preserved": [
+    "All geometry/index buffers",
+    "All normal buffers",
+    "All surface UV0 buffers",
+    "All PBR/material/image data",
+    "All node transforms/visibility/hierarchy/extras"
+  ],
+  "generatorSha256": "d8e9b259304373370131acb3423c1ed349f8fbb77cf0ae128ad28d693cb4d274"
+}

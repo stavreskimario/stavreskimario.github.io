@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "role": "Exact retained runtime lineage review and historical fixture replay only",
+  "noGpu": true,
+  "noRepositoryWrites": true,
+  "files": {
+    "README.md": {
+      "bytes": 3282,
+      "sha256": "e345bfc77fddd2b7861dc4d0c2c91b3c0a2423b3d97b79f370983da359899330"
+    },
+    "original-append-replay/append-arrivals.json": {
+      "bytes": 3692,
+      "sha256": "6578f67d5078f2e52d96253961bb4a27990b4caa2c22186849608e8e9fa35acb"
+    },
+    "original-append-replay/model-concourse.glb.gz": {
+      "bytes": 5171505,
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b"
+    },
+    "original-append-replay-proof.json": {
+      "bytes": 2096,
+      "sha256": "bbc97521a40bafd8b5ba299f9613bcd7644fb6d225ae0938af34b3e6df8b33d5"
+    },
+    "retained-runtime-base-proof.json": {
+      "bytes": 10368,
+      "sha256": "0074df078faa8e849a95e7ad09103286da068c1e1a9fd905607c14a9ff01bc9b"
+    },
+    "sources-before.json": {
+      "bytes": 5066,
+      "sha256": "7d46993a3e62e43d85cb5f55cffa627f05d22bc206944c9b6803cba62719f900"
+    },
+    "verify_retained_runtime.py": {
+      "bytes": 1122,
+      "sha256": "7839b23b0524573db068856444cb779e3f6bbf220c834a25de33d2b0cfe19d7a"
+    }
+  }
+}

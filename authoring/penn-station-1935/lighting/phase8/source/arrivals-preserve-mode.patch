@@ -1,0 +1,252 @@
+--- preserve-mode-v4/bake_lighting.py
++++ arrivals-bake-source-v1/bake_lighting.py
+@@ -25,10 +25,11 @@
+ parser.add_argument("--threads", type=int, default=4)
+ parser.add_argument("--device", choices=("AUTO", "CPU", "METAL"), default="AUTO")
+ parser.add_argument("--ao-only", action="store_true")
+-parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade-only: retain an existing two-UV baked authoring mesh without joining, welding or re-unwrapping")
++parser.add_argument("--preserve-authored-uv1", action="store_true", help="Arcade/Main0 arrivals: retain an existing two-UV baked authoring mesh without joining, welding or re-unwrapping")
+ parser.add_argument("--surface-group", choices=("all", "vault", "masonry", "order"), default="all")
+ parser.add_argument("--uv-margin-pixels", type=float, default=4)
+ parser.add_argument("--materials", type=Path, help="Optional local CC0 material library; see material-provenance.json")
++parser.add_argument("--occluder-materials", type=Path, help="Use the reviewed surface library only on imported neighbouring objects; preserve the primary PBR and UVs")
+ parser.add_argument("--source-visibility-proof", type=Path, help="Pinned source visibility rules for the connected entrance contexts")
+ parser.add_argument("--occluder", action="append", default=[], metavar="ZONE=GLB", help="Registered neighbouring chunk to include in light transport, without exporting it")
+ args = parser.parse_args()
+@@ -42,17 +43,24 @@
+     if args.zone != expected_zone or args.surface_group != "all":
+         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
+ artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
+-if artifact_zone == "arcade-enclosure" and not args.source_visibility_proof:
+-    raise ValueError("Arcade transport requires the original source render-visibility proof")
+-if args.preserve_authored_uv1 and (artifact_zone != "arcade-enclosure" or args.surface_group != "all"):
+-    raise ValueError("Preserve-authored-UV1 is restricted to the arcade authoring artifact")
++if artifact_zone in {"arcade-enclosure", "concourse-arrivals"} and not args.source_visibility_proof:
++    raise ValueError("Arcade/arrivals transport requires the original source render-visibility proof")
++if args.preserve_authored_uv1 and (artifact_zone not in {"arcade-enclosure", "concourse-arrivals"} or args.surface_group != "all"):
++    raise ValueError("Preserve-authored-UV1 is restricted to the arcade or Main0 arrivals authoring artifact")
+ if args.preserve_authored_uv1 and args.materials:
+     raise ValueError("Preserve-authored-UV1 retains authored PBR and UV0; omit --materials")
++if args.materials and args.occluder_materials:
++    raise ValueError("--materials and --occluder-materials are mutually exclusive")
+ started = time.monotonic()
+ bpy.ops.wm.read_factory_settings(use_empty=True)
+ bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
+ scene = bpy.context.scene
+ primary_objects = list(scene.objects)
++primary_material_initial = None
++if args.occluder_materials:
++    from occluder_materials import material_fingerprint
++    primary_material_objects = {m for obj in primary_objects if obj.type == "MESH" for m in obj.data.materials if m}
++    primary_material_initial = {m.name: material_fingerprint(m) for m in primary_material_objects}
+ authored_primary_snapshot = None
+ if args.preserve_authored_uv1:
+     from authored_lighting_uv_guard import snapshot_primary, verify_before_bake
+@@ -62,6 +70,11 @@
+     from order_lighting_uv import split_waiting_order_objects
+     order_objects, _, order_audit = split_waiting_order_objects(primary_objects)
+     primary_objects = list(scene.objects)
++primary_material_initial = None
++if args.occluder_materials:
++    from occluder_materials import material_fingerprint
++    primary_material_objects = {m for obj in primary_objects if obj.type == "MESH" for m in obj.data.materials if m}
++    primary_material_initial = {m.name: material_fingerprint(m) for m in primary_material_objects}
+ order_set = set(order_objects)
+ primary_set = set(primary_objects)
+ frames = {"exterior": 0, "context": 0, "waiting": -4.2672, "waiting-room": -4.2672,
+@@ -70,6 +83,7 @@
+     raise ValueError("Unknown architectural frame")
+ occluders = []
+ source_visibility = []
++imported_occluder_objects = []
+ for specification in args.occluder:
+     zone, filename = specification.split("=", 1)
+     if zone not in frames:
+@@ -77,21 +91,32 @@
+     previous = set(scene.objects)
+     bpy.ops.import_scene.gltf(filepath=str(Path(filename).resolve()))
+     imported = set(scene.objects) - previous
++    imported_occluder_objects.extend(imported)
+     offset = frames[zone] - frames[args.zone]
+     for obj in imported:
+         if obj.parent not in imported:
+             obj.location.z += offset
+         if zone == "trains" and obj.parent not in imported:
+             obj.location.y -= 8.690045261
+-    if artifact_zone == "arcade-enclosure":
++    if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
+         from restore_imported_visibility import restore_source_render_visibility
+         bpy.context.view_layer.update()
+-        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof))
++        source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof, frame_offset_z=-frames[args.zone]))
+     occluders.append({"zone": zone, "source": Path(filename).name, "sha256":hashlib.sha256(Path(filename).read_bytes()).hexdigest(), "heightOffset": offset, "objects": len(imported)})
+ surface_report = []
+ if args.materials:
+     prepare_surface_uvs(list(scene.objects))
+     surface_report = apply_materials(bpy.data.materials, args.materials)
++occluder_material_integrity = None
++if args.occluder_materials:
++    from occluder_materials import apply_occluder_materials
++    surface_report, occluder_material_integrity = apply_occluder_materials(primary_objects, imported_occluder_objects, args.occluder_materials)
++    primary_material_after = {m.name: material_fingerprint(m) for m in primary_material_objects}
++    if primary_material_initial != primary_material_after:
++        raise RuntimeError("Primary PBR changed across neighbour import/preparation")
++    occluder_material_integrity["primaryMaterialGraphsExactSinceInitialImport"] = True
++    occluder_material_integrity["primaryMaterialBeforeAllContextHashes"] = primary_material_initial
++    occluder_material_integrity["primaryMaterialAfterAllContextHashes"] = primary_material_after
+ scene.render.engine = "CYCLES"
+ device = configure_device(scene, args.device)
+ print("Cycles device: " + json.dumps(device), flush=True)
+@@ -166,7 +191,7 @@
+         raise RuntimeError("Preserve-authored-UV1 requires one already-batched opaque architecture mesh")
+     architecture = solids[0]
+     if not np.array_equal(np.array(architecture.matrix_world), np.eye(4)):
+-        raise RuntimeError("Preserve-authored-UV1 requires the authored Street0 identity transform")
++        raise RuntimeError("Preserve-authored-UV1 requires the authored frame identity transform")
+     mesh = architecture.data
+     if len(mesh.uv_layers) != 2:
+         raise RuntimeError("Preserve-authored-UV1 needs its original surface UV0 and authored lighting UV1")
+@@ -177,7 +202,7 @@
+     bpy.ops.object.select_all(action="DESELECT")
+     architecture.select_set(True)
+     bpy.context.view_layer.objects.active = architecture
+-    authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture)
++    authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture, artifact_zone=artifact_zone)
+ else:
+     arcade_normal_integrity = None
+     if artifact_zone == "arcade-enclosure":
+@@ -322,19 +347,10 @@
+     mobile_illumination.save_render(str(args.out / f"lighting-{artifact_zone}-sky-low.png"), scene=scene)
+     print("Diffuse sky + bounce bake saved", flush=True)
+ 
+-# Standard glTF occlusion texture, explicitly sampled using the atlas UV set.
+-group = bpy.data.node_groups.new("glTF Material Output", "ShaderNodeTree")
+-group.interface.new_socket(name="Occlusion", in_out="INPUT", socket_type="NodeSocketFloat")
++# Reuse imported settings; no stale previous AO group may win export.
++from baked_occlusion_binding import bind_fresh_baked_occlusion
++occlusion_binding_integrity = bind_fresh_baked_occlusion(materials, ao, light_uv_name)
+ for material in materials:
+-    nodes, links = material.node_tree.nodes, material.node_tree.links
+-    uv = nodes.new("ShaderNodeUVMap")
+-    uv.uv_map = light_uv_name
+-    texture = nodes.new("ShaderNodeTexImage")
+-    texture.image = ao
+-    links.new(uv.outputs["UV"], texture.inputs["Vector"])
+-    settings = nodes.new("ShaderNodeGroup")
+-    settings.node_tree = group
+-    links.new(texture.outputs["Color"], settings.inputs["Occlusion"])
+     material["lighting_atlas_uv"] = 1
+     if illumination:
+         material["sky_illumination"] = f"lighting-{artifact_zone}-sky.png"
+@@ -399,10 +415,14 @@
+     "vaultNormalIntegrity": vault_normal_integrity,
+ }
+ if arcade_normal_integrity is not None:
+-    report["arcadeNormalIntegrity"] = arcade_normal_integrity
++    report["arcadeNormalIntegrity" if artifact_zone == "arcade-enclosure" else "authoredNormalIntegrity"] = arcade_normal_integrity
++if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
+     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
+ if authored_uv_integrity is not None:
+     report["authoredUvIntegrity"] = authored_uv_integrity
++report["occlusionBindingIntegrity"] = occlusion_binding_integrity
++if occluder_material_integrity is not None:
++    report["occluderMaterialIntegrity"] = occluder_material_integrity
+ if not args.ao_only and not (report["illumination"] and report["illumination"]["maximum"] > 0 and report["illumination"]["mean"] > 0):
+     raise RuntimeError("The complete daylight atlas contains no positive radiance; do not promote this bake")
+ (args.out / f"lighting-{artifact_zone}.json").write_text(json.dumps(report, indent=2) + "\n")
+--- preserve-mode-v4/authored_lighting_uv_guard.py
++++ arrivals-bake-source-v1/authored_lighting_uv_guard.py
+@@ -30,7 +30,7 @@
+     meshes=[o for o in objects if o.type=="MESH"]
+     return {"objects":meshes,"states":{o.name:_state(o)for o in meshes}}
+ 
+-def verify_before_bake(snapshot,architecture):
++def verify_before_bake(snapshot,architecture,artifact_zone="arcade-enclosure"):
+     if set(bpy.context.selected_objects)!={architecture} or bpy.context.view_layer.objects.active is not architecture:
+         raise RuntimeError("Preserve-authored-UV1 requires exactly the architecture selected and active before baking")
+     failures=[]
+@@ -46,6 +46,6 @@
+     normals=_values(m.corner_normals,"vector",3,np.float32).reshape(-1,3);length=np.linalg.norm(normals,axis=1)
+     if not np.isfinite(normals).all()or np.max(np.abs(length-1))>1e-4:raise RuntimeError("Invalid preserved authored corner normal")
+     face=_values(m.polygons,"normal",3,np.float32).reshape(-1,3);counts=_values(m.polygons,"loop_total",1,np.int32);dots=np.sum(normals*np.repeat(face,counts,axis=0),axis=1);negative=int((dots<-.0002).sum())
+-    normal_report={"schema":1,"status":"PASS","scope":"arcade-enclosure imported authored normals retained without topology or normal operations","method":"unchanged-imported-corner-buffers","sourceObjects":1,"sourceCorners":len(m.loops),"restoredCorners":len(m.loops),"sourceNegativeHemisphereCorners":negative,"restoredNegativeHemisphereCorners":negative,"sourceMinimumFaceAlignment":float(dots.min()),"restoredMinimumFaceAlignment":float(dots.min()),"minimumRestoredSourceNormalDot":1.0,"maxEncodingAngleDegrees":0.0,"maxAllowedEncodingAngleDegrees":.5,"finiteUnitNormals":True,"temporaryAttributeRemoved":True}
++    normal_report={"schema":1,"status":"PASS","scope":artifact_zone+" imported authored normals retained without topology or normal operations","method":"unchanged-imported-corner-buffers","sourceObjects":1,"sourceCorners":len(m.loops),"restoredCorners":len(m.loops),"sourceNegativeHemisphereCorners":negative,"restoredNegativeHemisphereCorners":negative,"sourceMinimumFaceAlignment":float(dots.min()),"restoredMinimumFaceAlignment":float(dots.min()),"minimumRestoredSourceNormalDot":1.0,"maxEncodingAngleDegrees":0.0,"maxAllowedEncodingAngleDegrees":.5,"finiteUnitNormals":True,"temporaryAttributeRemoved":True}
+     report={"schema":1,"status":"PASS","mode":"preserve-authored-uv1","primaryMeshObjects":len(snapshot["objects"]),"allImportedPrimaryBuffersByteExactBeforeBake":True,"onlyArchitectureSelectedAndActiveBeforeBake":True,"uv1Layer":m.uv_layers[1].name,"uv1Range":[float(uv.min()),float(uv.max())],"preservedBufferHashes":snapshot["states"],"scope":"Post-import buffers including geometry, every UV, normals, material indices, smoothing, matrices and render/viewport visibility. Source GLB byte preservation is proven separately."}
+     return report,normal_report
+--- preserve-mode-v4/restore_imported_visibility.py
++++ arrivals-bake-source-v1/restore_imported_visibility.py
+@@ -7,14 +7,14 @@
+ import hashlib,json
+ from mathutils import Vector
+ 
+-def restore_source_render_visibility(imported_objects,context_path,proof_path):
++def restore_source_render_visibility(imported_objects,context_path,proof_path,frame_offset_z=0):
+  context_path=Path(context_path);proof=json.loads(Path(proof_path).read_text());matches=[r for r in proof['files']if r['output']==context_path.name]
+  if not matches:return {'context':context_path.name,'sourceVisibilityRule':None,'changedObjects':[]}
+  assert len(matches)==1;rule=matches[0];assert hashlib.sha256(context_path.read_bytes()).hexdigest()==rule['outputSha256'];assert rule['sourceHideRender']is True
+  objects=list(imported_objects);found=[o for o in objects if o.name==rule['excludedNodeName']];assert len(found)<=1
+  if not found:return {'context':context_path.name,'sourceVisibilityRule':rule['excludedNodeName'],'alreadyExcludedByImporter':True,'changedObjects':[]}
+- obj=found[0];bounds=[obj.matrix_world@Vector(q)for q in obj.bound_box];actual=[[min(q[i]for q in bounds)for i in range(3)],[max(q[i]for q in bounds)for i in range(3)]];error=max(abs(actual[i][k]-rule['sourceWorldBounds'][i][k])for i in range(2)for k in range(3));assert error<2e-5,(obj.name,actual,rule['sourceWorldBounds'])
++ obj=found[0];bounds=[obj.matrix_world@Vector(q)for q in obj.bound_box];actual=[[min(q[i]for q in bounds)for i in range(3)],[max(q[i]for q in bounds)for i in range(3)]];expected=[[value+(frame_offset_z if k==2 else 0)for k,value in enumerate(corner)]for corner in rule['sourceWorldBounds']];error=max(abs(actual[i][k]-expected[i][k])for i in range(2)for k in range(3));assert error<2e-5,(obj.name,actual,expected)
+  before={'matrix':tuple(tuple(row)for row in obj.matrix_world),'dataPointer':obj.data.as_pointer(),'materials':tuple(m.as_pointer()if m else None for m in obj.data.materials),'hide_render':obj.hide_render}
+  obj.hide_render=True
+  assert before['matrix']==tuple(tuple(row)for row in obj.matrix_world)and before['dataPointer']==obj.data.as_pointer()and before['materials']==tuple(m.as_pointer()if m else None for m in obj.data.materials)
+- return {'context':context_path.name,'sourceVisibilityRule':rule['excludedNodeName'],'alreadyExcludedByImporter':False,'changedObjects':[{'name':obj.name,'hideRenderBefore':before['hide_render'],'hideRenderAfter':True,'sourceHideRender':True,'actualWorldBounds':actual,'boundErrorM':error,'meshMaterialAndMatrixExact':True}]}
++ return {'context':context_path.name,'sourceVisibilityRule':rule['excludedNodeName'],'alreadyExcludedByImporter':False,'changedObjects':[{'name':obj.name,'hideRenderBefore':before['hide_render'],'hideRenderAfter':True,'sourceHideRender':True,'actualWorldBounds':actual,'sourceStreet0Bounds':rule['sourceWorldBounds'],'expectedBakeFrameBounds':expected,'sourceToBakeFrameOffsetZ':frame_offset_z,'boundErrorM':error,'meshMaterialAndMatrixExact':True}]}
+--- /dev/null
++++ arrivals-bake-source-v1/baked_occlusion_binding.py
+@@ -0,0 +1,54 @@
++"""Bind fresh AO to all recognized exporter settings nodes after a rebake.
++
++An imported glTF Material Output group can precede a newly created group. The
++exporter may choose that first group, silently retaining the previous AO. Reuse
++and update every existing recognized group's Occlusion input instead. Existing
++material nodes and all links unrelated to Occlusion remain unchanged.
++"""
++import re
++import bpy
++
++def _recognized(node):
++    if node.type != "GROUP" or not node.node_tree or "Occlusion" not in node.inputs:
++        return False
++    return re.sub(r"\.\d+$", "", node.node_tree.name) in {"glTF Material Output", "glTF Settings"}
++
++def _link_key(link):
++    return (link.from_node.as_pointer(), link.from_socket.identifier,
++            link.to_node.as_pointer(), link.to_socket.identifier)
++
++def bind_fresh_baked_occlusion(materials, ao_image, uv_name):
++    records=[]
++    for material in materials:
++        nodes,links=material.node_tree.nodes,material.node_tree.links
++        original=set(nodes);settings=[node for node in original if _recognized(node)]
++        before={_link_key(link) for link in links
++                if not(link.to_node in settings and link.to_socket.name=="Occlusion")}
++        existing_count=len(settings)
++        if not settings:
++            group=bpy.data.node_groups.get("glTF Material Output")
++            if group is None:
++                group=bpy.data.node_groups.new("glTF Material Output","ShaderNodeTree")
++                group.interface.new_socket(name="Occlusion",in_out="INPUT",socket_type="NodeSocketFloat")
++            node=nodes.new("ShaderNodeGroup");node.node_tree=group
++            if "Occlusion"not in node.inputs:raise RuntimeError("Existing glTF settings group lacks an Occlusion input")
++            settings=[node]
++        uv=nodes.new("ShaderNodeUVMap");uv.uv_map=uv_name
++        texture=nodes.new("ShaderNodeTexImage");texture.image=ao_image
++        links.new(uv.outputs["UV"],texture.inputs["Vector"])
++        for node in settings:
++            for link in list(node.inputs["Occlusion"].links):links.remove(link)
++            links.new(texture.outputs["Color"],node.inputs["Occlusion"])
++        assert original.issubset(set(nodes)),"An existing material node was removed"
++        after={_link_key(link) for link in links
++               if link.from_node in original and link.to_node in original
++               and not(link.to_node in settings and link.to_socket.name=="Occlusion")}
++        assert before==after,"A non-AO original material link changed"
++        assert all(len(node.inputs["Occlusion"].links)==1 and
++                   node.inputs["Occlusion"].links[0].from_node == texture for node in settings)
++        records.append({"material":material.name,"existingSettingsGroups":existing_count,
++                        "updatedSettingsGroups":len(settings),"aoImage":ao_image.name,
++                        "uvName":uv_name,"allExistingNodesRetained":True,
++                        "allNonAoOriginalLinksExact":True})
++    return {"schema":1,"status":"PASS","method":"Reuse/update every recognized Occlusion settings input; create only when absent",
++            "freshAoImage":ao_image.name,"materials":records}

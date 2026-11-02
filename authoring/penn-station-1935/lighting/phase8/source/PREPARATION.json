@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "status": "READY FOR ROOT REVIEW: corrected occluder-only calibration; no GPU/bake/render run",
+  "v1FrozenCommandSha256": "e4393076c5df0c6023951409512b0f6ce4e7fdc6e8a904cc363f9b4dfe2cc582",
+  "primaryAndGeometryInputsStayPinned": true,
+  "reason": "OriginalARRbake applied12library profiles; current raw neighbors differ from runtime PBR. Primaryf346alreadyhasreviewedPBR/UV0 and mustnotbereapplied.",
+  "baseSourceCopiedFromV1ThenAdapted": true,
+  "completedBeforeFreeze": [
+    "Reviewed occluder-only library flag/helper",
+    "Primary full material graph/PBR and meshbuffer snapshot invariants",
+    "Actual full-context CPU preflight with source visibility/selection and new profile report",
+    "Fresh four-material AO export regression with the final helper",
+    "Pins for the exact library files used and unchanged primary/node/geometry proof"
+  ]
+}

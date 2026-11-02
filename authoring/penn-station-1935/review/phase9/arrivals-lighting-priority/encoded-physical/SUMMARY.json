@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "status": "PASS: new full/low encoded ARR physical outcomes; native browser/append acceptance separate",
+  "testedFullModuleSha256": "4b3f314ed5ea722729b351a3c6a26a21525490c6036ced76e87a6d249ee6cae8",
+  "testedLowModuleSha256": "6d4d8f6f3c372b52fd4b651b71cbb31134ec29f90c064182b7d9072bcb632591",
+  "retainedBaseSha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269",
+  "rules": {
+    "maximumBodyStepUpM": 0.24,
+    "maximumBodyStepDownM": 0.35,
+    "bodyRadiusM": 0.32,
+    "bodyHeightM": 1.85,
+    "leadingFootM": 0.25,
+    "routeSamplePitchM": 0.025,
+    "encodedContactToleranceM": 0.002,
+    "physicalColliderExclusions": false
+  },
+  "variants": [
+    {
+      "variant": "full",
+      "arrivalRoutes": 96,
+      "arrivalRouteSamples": 39696,
+      "arrivalRouteFailures": 0,
+      "galleryConnectorRoutes": 4,
+      "galleryConnectorSamples": 9084,
+      "galleryConnectorFailures": 0,
+      "maximumStepRiseM": 0.16735047915997114,
+      "maximumStepDropM": 0.16735047915997114,
+      "sourcePublicTreadLandingSurfaces": 416,
+      "treadSupportProbes": 3744,
+      "treadSupportPasses": 3744,
+      "maximumTreadHeightResidualM": 0.0003561794304900445,
+      "guardRays": 864,
+      "guardHits": 864,
+      "guardBodyProbes": 864,
+      "guardBodyStops": 864,
+      "maximumGuardSurfaceMovementFromRawM": 0.0009117228044388526,
+      "physicalContacts": {
+        "variant": "full",
+        "supportGroups": 47,
+        "foundationSupported": 1175,
+        "foundationRays": 1175,
+        "lowerCapCentreContacts": 47,
+        "lowerBearingWithin": 230,
+        "lowerBearingRays": 235,
+        "upperBuiltGroups": 21,
+        "upperBearingWithin": 525,
+        "upperBearingRays": 525,
+        "fixtureGroups": 22,
+        "fixtureWithin": 110,
+        "fixtureRays": 110,
+        "maximumComponentBoundDifferenceMetres": 0.0008229731742090962,
+        "maximumUpperBearingResidualMetres": 0.000779526123147356,
+        "maximumFixtureResidualMetres": 0.0008156503051237607,
+        "failures": []
+      },
+      "retainedDepartureRoutes": 18,
+      "retainedDepartureRouteSamples": 8442,
+      "retainedDepartureRearGuardsPassed": 3,
+      "rawSourceFixtureThresholdM": 2e-05,
+      "rawSourceFixtureThresholdFailures": 80,
+      "maximumRawSourceFixtureThresholdGapM": 0.0008156503051237607,
+      "rawSourceFixtureQualification": "Unchanged20micrometre source-only control rejects normal encoded0.816mm shift, as it did in accepted Phase8. The separate unchanged2mm encoded-contact test passes all110actualfixture rays; no runtime geometry/contact thresholds changed."
+    },
+    {
+      "variant": "low",
+      "arrivalRoutes": 96,
+      "arrivalRouteSamples": 39696,
+      "arrivalRouteFailures": 0,
+      "galleryConnectorRoutes": 4,
+      "galleryConnectorSamples": 9084,
+      "galleryConnectorFailures": 0,
+      "maximumStepRiseM": 0.16735047915997114,
+      "maximumStepDropM": 0.16735047915997114,
+      "sourcePublicTreadLandingSurfaces": 416,
+      "treadSupportProbes": 3744,
+      "treadSupportPasses": 3744,
+      "maximumTreadHeightResidualM": 0.0003561794304900445,
+      "guardRays": 864,
+      "guardHits": 864,
+      "guardBodyProbes": 864,
+      "guardBodyStops": 864,
+      "maximumGuardSurfaceMovementFromRawM": 0.004359693581768909,
+      "physicalContacts": {
+        "variant": "low",
+        "supportGroups": 47,
+        "foundationSupported": 1175,
+        "foundationRays": 1175,
+        "lowerCapCentreContacts": 47,
+        "lowerBearingWithin": 230,
+        "lowerBearingRays": 235,
+        "upperBuiltGroups": 21,
+        "upperBearingWithin": 525,
+        "upperBearingRays": 525,
+        "fixtureGroups": 22,
+        "fixtureWithin": 110,
+        "fixtureRays": 110,
+        "maximumComponentBoundDifferenceMetres": 0.0008229731742090962,
+        "maximumUpperBearingResidualMetres": 0.000779526123147356,
+        "maximumFixtureResidualMetres": 0.0008156503051237607,
+        "failures": []
+      },
+      "retainedDepartureRoutes": 18,
+      "retainedDepartureRouteSamples": 8442,
+      "retainedDepartureRearGuardsPassed": 3,
+      "rawSourceFixtureThresholdM": 2e-05,
+      "rawSourceFixtureThresholdFailures": 80,
+      "maximumRawSourceFixtureThresholdGapM": 0.0008156503051237607,
+      "rawSourceFixtureQualification": "Unchanged20micrometre source-only control rejects normal encoded0.816mm shift, as it did in accepted Phase8. The separate unchanged2mm encoded-contact test passes all110actualfixture rays; no runtime geometry/contact thresholds changed."
+    }
+  ],
+  "allActualInputFileHashesUnchangedAfterChecks": true,
+  "gpuOperations": 0,
+  "rootEdits": 0,
+  "limits": [
+    "Decoded base+module arrays are equivalent physical inputs; final appended retained-BIN/JSON proof remains with root.",
+    "Low guard round-profile surface drifts up to4.36mm while all864rails/body-stop probes pass. This is measured shape drift, not byte-exact geometry or a structural capacity certificate.",
+    "Source-only20micrometre fixture checks intentionally remain recorded as failed on encoded data; encoded contacts use the existing separate2mm acceptance.",
+    "Northern/streetward/enclosure/support research holds are unchanged. No new historical accuracy or completed-area claim.",
+    "Native visual/performance/interaction review and actual deployment remain root gates."
+  ],
+  "receipts": {
+    "routes.json": {
+      "sha256": "b8a50d4a7c8647c15443c8f917e68399fceca2538fd925bdc1cd01e08134ffb9",
+      "bytes": 291368
+    },
+    "treads-guards.json": {
+      "sha256": "ad69e0bdf832da77d8aa0dd37de14176bc1150427d43abf12cb20733beecccfe",
+      "bytes": 9891
+    },
+    "departures.json": {
+      "sha256": "0fac4b2ec7877968dddb490aaaf84c68af919ad1b1945be50ed4d0e467ffc29c",
+      "bytes": 81689
+    },
+    "contacts-check-v1/contacts-summary.json": {
+      "sha256": "6779c2fe2bb15d45d8de9636b3ec104f50b80ae411a3aca354e2218902844a2c",
+      "bytes": 8810
+    },
+    "input-and-helper-pins.json": {
+      "sha256": "edfbf14831a3a7ef15ea781afae4d56b1bfad2702b024c93d264fe11b9968f3a",
+      "bytes": 4853
+    },
+    "route-path-adaptation.patch": {
+      "sha256": "025046a4ff12866e18a68e96d389f47d3ad5beb3329c0208593e719e4aa9e941",
+      "bytes": 7006
+    }
+  }
+}

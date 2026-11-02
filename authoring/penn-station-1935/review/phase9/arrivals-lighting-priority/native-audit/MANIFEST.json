@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "status": "PASS: bounded native arrivals navigation and tested-asset identity; network caveat retained",
+  "files": {
+    "README.md": {
+      "sha256": "328a369b43013558ffdd3c68fe59047e2557d64c996ee93708595284fc20d31d",
+      "bytes": 3626
+    },
+    "acceptance.json": {
+      "sha256": "260112a66a48b2fe6ccc7d4af3e339737b6bb9696b1f69a80a298613bb752f58",
+      "bytes": 38061
+    },
+    "actual-browser-report.json.gz": {
+      "sha256": "ae9e079c1ac47a0aea573c762b2cef4b9b272151e8fea53cd88a01d857dd4eec",
+      "bytes": 172780
+    },
+    "audit_native_receipt.py": {
+      "sha256": "ab0d184376894ed492f7abc7e90cfb4cb0924768e13c8500c8fac3f75ef833c5",
+      "bytes": 13096
+    },
+    "runtime-link.json": {
+      "sha256": "b81e5c9de247073319f511bfac8edc66923bca9830852e9d9d0af831aca9c318",
+      "bytes": 1392
+    },
+    "served-rehash.json": {
+      "sha256": "b5a7a43a06b7e119a79c35c4ef33709d23768b8c24a8ec9d999f30c9d2fdc75e",
+      "bytes": 35681
+    }
+  },
+  "originalReportSha256": "caa2768abf0fdef3b69285a2c061466b13a8cf1e4342019009fed889332e806e",
+  "acceptanceSha256": "260112a66a48b2fe6ccc7d4af3e339737b6bb9696b1f69a80a298613bb752f58",
+  "noRootEdits": true,
+  "noGpuRun": true
+}

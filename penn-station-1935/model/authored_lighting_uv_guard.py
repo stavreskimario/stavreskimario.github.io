@@ -30,7 +30,7 @@ def snapshot_primary(objects):
     meshes=[o for o in objects if o.type=="MESH"]
     return {"objects":meshes,"states":{o.name:_state(o)for o in meshes}}
 
-def verify_before_bake(snapshot,architecture):
+def verify_before_bake(snapshot,architecture,artifact_zone="arcade-enclosure"):
     if set(bpy.context.selected_objects)!={architecture} or bpy.context.view_layer.objects.active is not architecture:
         raise RuntimeError("Preserve-authored-UV1 requires exactly the architecture selected and active before baking")
     failures=[]
@@ -46,6 +46,6 @@ def verify_before_bake(snapshot,architecture):
     normals=_values(m.corner_normals,"vector",3,np.float32).reshape(-1,3);length=np.linalg.norm(normals,axis=1)
     if not np.isfinite(normals).all()or np.max(np.abs(length-1))>1e-4:raise RuntimeError("Invalid preserved authored corner normal")
     face=_values(m.polygons,"normal",3,np.float32).reshape(-1,3);counts=_values(m.polygons,"loop_total",1,np.int32);dots=np.sum(normals*np.repeat(face,counts,axis=0),axis=1);negative=int((dots<-.0002).sum())
-    normal_report={"schema":1,"status":"PASS","scope":"arcade-enclosure imported authored normals retained without topology or normal operations","method":"unchanged-imported-corner-buffers","sourceObjects":1,"sourceCorners":len(m.loops),"restoredCorners":len(m.loops),"sourceNegativeHemisphereCorners":negative,"restoredNegativeHemisphereCorners":negative,"sourceMinimumFaceAlignment":float(dots.min()),"restoredMinimumFaceAlignment":float(dots.min()),"minimumRestoredSourceNormalDot":1.0,"maxEncodingAngleDegrees":0.0,"maxAllowedEncodingAngleDegrees":.5,"finiteUnitNormals":True,"temporaryAttributeRemoved":True}
+    normal_report={"schema":1,"status":"PASS","scope":artifact_zone+" imported authored normals retained without topology or normal operations","method":"unchanged-imported-corner-buffers","sourceObjects":1,"sourceCorners":len(m.loops),"restoredCorners":len(m.loops),"sourceNegativeHemisphereCorners":negative,"restoredNegativeHemisphereCorners":negative,"sourceMinimumFaceAlignment":float(dots.min()),"restoredMinimumFaceAlignment":float(dots.min()),"minimumRestoredSourceNormalDot":1.0,"maxEncodingAngleDegrees":0.0,"maxAllowedEncodingAngleDegrees":.5,"finiteUnitNormals":True,"temporaryAttributeRemoved":True}
     report={"schema":1,"status":"PASS","mode":"preserve-authored-uv1","primaryMeshObjects":len(snapshot["objects"]),"allImportedPrimaryBuffersByteExactBeforeBake":True,"onlyArchitectureSelectedAndActiveBeforeBake":True,"uv1Layer":m.uv_layers[1].name,"uv1Range":[float(uv.min()),float(uv.max())],"preservedBufferHashes":snapshot["states"],"scope":"Post-import buffers including geometry, every UV, normals, material indices, smoothing, matrices and render/viewport visibility. Source GLB byte preservation is proven separately."}
     return report,normal_report

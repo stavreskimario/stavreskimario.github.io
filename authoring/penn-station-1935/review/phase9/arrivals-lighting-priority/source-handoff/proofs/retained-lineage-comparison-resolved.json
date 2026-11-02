@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "status": "PASS: all7182 retained nodes match historical geometry within declared20um bound",
+  "old": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/retained-concourse-occluder.glb",
+    "sha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a"
+  },
+  "currentDerived": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/context-dedup-v1/current-concourse-without-primary-arrivals.glb",
+    "sha256": "35f726bf45a31227e4d6fe828d71e8f30913b51a778f386ed6dbaf6ba7b26b53"
+  },
+  "method": "Per-node material-base plus complete oriented world-triangle multiset;0.1mm matching lattice only for pairing, followed by actual Float64 corner residual bound20um. No geometry is snapped/rewritten.",
+  "matchedMeshNodes": 7182,
+  "oldMeshNodes": 7182,
+  "currentMeshNodes": 7182,
+  "unmatchedOldNodes": 0,
+  "unmatchedCurrentNodes": 0,
+  "maximumMatchedWorldCornerErrorM": 5.74542013964674e-09,
+  "sampleMissing": [
+    {
+      "key": [
+        [
+          "ClockFaceAccessIndicators",
+          596,
+          "86c082fbd3b644be7ba412064c7c5918b0fdb2ba3a497dcf65dda0aae5ba2b64"
+        ]
+      ],
+      "count": 1
+    }
+  ],
+  "sampleExtra": [
+    {
+      "key": [
+        [
+          "ClockFaceAccessIndicators",
+          596,
+          "1a0a9f098817606661487ab6c13b7ed82c2db610122622eccb7a21d0af78e0ca"
+        ]
+      ],
+      "count": 1
+    }
+  ],
+  "limits": [
+    "Names and node order are not treated as geometric authority.",
+    "Material numeric-copy suffixes are normalized only for lineage pairing; current source material/PBR JSON remains unchanged in the actual derived context."
+  ],
+  "initialHashBucketReviewRetained": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/context-dedup-v1/retained-lineage-comparison.json",
+  "resolvedQuantizationBoundaryCase": {
+    "oldNode": "Repositioned departure indicator number.121",
+    "currentNode": "Repositioned departure indicator number.049",
+    "material": "ClockFaceAccessIndicators",
+    "primitiveTriangles": 596,
+    "indicesExact": true,
+    "orderedVertexMaximumWorldErrorM": 5.745413034219382e-09,
+    "orderedVertexMaximumNormalError": 3.178651729702804e-08,
+    "explanation": "One font indicator lies on the0.1mm hash pairing boundary. The source export quaternion differs by3.18e-8, giving5.75nm geometry residual. A direct same-index ordered Float64 vertex/normal comparison resolves the bucket mismatch; no geometry or comparison tolerance is changed."
+  }
+}

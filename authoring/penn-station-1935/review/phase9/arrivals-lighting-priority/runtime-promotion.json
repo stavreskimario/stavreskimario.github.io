@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "created": "2026-11-02T03:06:15.580368+00:00",
+  "scope": "Exact copy of asset-validated candidate; bounded9file replacement/addition, no geometry rebuild. Ten other model transports remain exact.",
+  "candidate": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-runtime-uv-priority-v1",
+  "validationSha256": "a76e19ed6abcb9f65075d1b4c0837b5fb4a51045a49a4d7a4c9824142fcab5ea",
+  "changes": [
+    {
+      "file": "asset-metrics.json",
+      "previousSha256": "a3272acc01deb64f995a1b637825c2e4377872fb887d8a1a6247e970eabd7714",
+      "previousBytes": 34831,
+      "sha256": "ee43fcbeec1e1d34da30cc41526df18ff3167d3d0984301bb0a393fd48d7ff4e",
+      "bytes": 38094
+    },
+    {
+      "file": "lighting-concourse-arrivals-denoise.json",
+      "previousSha256": "590dd3e92a9703b478fcdc0657b36578806248e99be9e09e502094e5fe329f57",
+      "previousBytes": 2562,
+      "sha256": "f821409c994f37693ef7e6401729d749bef993b4e6698a5c0f2aea720d86146f",
+      "bytes": 2567
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky-low.webp",
+      "previousSha256": "7614faab7689dde3a83d5463f1bb760b93e49482d93e9d7802a61fcffdd79fda",
+      "previousBytes": 87030,
+      "sha256": "3d583bc075126e241512de7d068352e4c820e847b73916ac0dcdfcf82cafac33",
+      "bytes": 132540
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky.webp",
+      "previousSha256": "ba60c71360a329206e5c22b9173ba342cd8e795e64e78e60a38dad8240952492",
+      "previousBytes": 3219900,
+      "sha256": "80cd1779e96cb50da92fff96c83c12d301d55543319484e3bcf79f288f40b2fb",
+      "bytes": 4867814
+    },
+    {
+      "file": "lighting-concourse-arrivals.json",
+      "previousSha256": "f779572f882d7cee60fa60b7d8427813bc430be189f3709c80155819befdaa2a",
+      "previousBytes": 5846,
+      "sha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac",
+      "bytes": 3904713
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "previousSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "previousBytes": 5171505,
+      "sha256": "9cd9b42d72caaefa74c1e5135af7f4304ad2dfef0b0685bdb7ad1988fff5da00",
+      "bytes": 5345536
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "previousSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "previousBytes": 5092816,
+      "sha256": "c74aa5be856e72689b8e62694fe0715a2edb736ab518dbd3c96e4e8fc2cb9673",
+      "bytes": 5175444
+    },
+    {
+      "file": "textures/53979fdafe89bc4df9ca.ktx2",
+      "previousSha256": null,
+      "previousBytes": 0,
+      "sha256": "53979fdafe89bc4df9cad880f7299eae5ee1ce8376f0b9500fdc34e6cb4cfa06",
+      "bytes": 231923
+    },
+    {
+      "file": "textures/5ac4f28aafa1a2c0c811.ktx2",
+      "previousSha256": null,
+      "previousBytes": 0,
+      "sha256": "5ac4f28aafa1a2c0c81115a0d2f63b7f0e7226103a3c42448f133b0c45cdb806",
+      "bytes": 3033940
+    }
+  ],
+  "allCandidateRuntimeFilesEqualPromotedRoot": true,
+  "canonicalBlenderExact": true
+}

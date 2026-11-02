@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "originalArrivalsProfileCount": 12,
+  "originalPrimaryProfileCountAlreadyBakedAndPreserved": 2,
+  "originalNeighborProfileRecordsExactlyRestored": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "BedfordLimestoneConcourseCirculation",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "MilfordGranite",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "MilfordGranite.001",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "PublicFloorMarble",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "PublicFloorMarbleAccessInfill",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "Travertine",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "Travertine.001",
+      "oldNeighborProfileRecordExact": true
+    },
+    {
+      "material": "TravertineDepartureStairStone",
+      "oldNeighborProfileRecordExact": true
+    }
+  ],
+  "newActualNeighborProfileCount": 28,
+  "additionalProfileCountFromExpandedCurrentContexts": 18,
+  "primaryMaterialCount": 7,
+  "primaryPbrExactSinceInitialImport": true,
+  "runtimeBindingInventory": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/runtime-neighbor-material-inventory.json",
+  "scope": "Original ten neighbor profile records match exactly, while current additional Waiting/ARC/context families use the same reviewed library. This is authored appearance calibration, not a surveyed historic material sample."
+}

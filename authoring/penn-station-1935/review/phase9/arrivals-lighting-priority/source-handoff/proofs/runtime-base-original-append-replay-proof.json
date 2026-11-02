@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "argv": [
+    "node",
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/append_access_module.mjs",
+    "--input",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz",
+    "--module",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/optimized-module-v1/model-concourse.glb",
+    "--out",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-runtime-base-trace-v1/original-append-replay/model-concourse.glb.gz",
+    "--report",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-runtime-base-trace-v1/original-append-replay/append-arrivals.json",
+    "--materials",
+    "ConcourseOpaqueArrivalsConcrete,ConcourseOpaqueArrivalsUpperSupports,PaintedStructuralIronArrivalsGroutJacket,PaintedStructuralIronArrivalsGuard,PaintedStructuralIronArrivalsStructure,PublicFloorMarbleArrivalsRetainedNorth,TravertineArrivalsStairStone",
+    "--lighting-artifact",
+    "concourse-arrivals"
+  ],
+  "environment": {
+    "PENN_TOOLS": "/Users/stavreskimario/Desktop/penn-station-work/tools"
+  },
+  "replayTransportSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+  "originalReceiptOutputSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+  "byteExactOriginalAssembly": true,
+  "scope": "CPU old-module fixture replay only; not fresh lighting or promotable output",
+  "stdout": "{\"outputSha256\":\"38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b\",\"addedMeshes\":4,\"addedMaterials\":[\"ConcourseOpaqueArrivalsConcrete\",\"ConcourseOpaqueArrivalsUpperSupports\",\"PaintedStructuralIronArrivalsGroutJacket\",\"PaintedStructuralIronArrivalsGuard\",\"PaintedStructuralIronArrivalsStructure\",\"PublicFloorMarbleArrivalsRetainedNorth\",\"TravertineArrivalsStairStone\"]}",
+  "initialEnvironmentCorrection": "Default /private/tmp/penn-station-tools lacks ktx-parse; reviewed existing external work/tools used, no install/change."
+}

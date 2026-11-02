@@ -1,4 +1,12 @@
-# Arcade lighting checkpoint — 2 November 2026 (Melbourne)
+# Arrivals lighting candidate — 2 November 2026 (Melbourne)
+
+The [arrivals lighting review](../authoring/penn-station-1935/review/phase9/arrivals-lighting-priority/README.md) records a fresh 4K/256-sample bake and higher lighting-chart density on the existing stairs: approximately 115.8 GIpx/m on treads/landings instead of 42.3. Original source geometry, surface UV0 and material strengths remain unchanged; fresh AO and exact full normal pixels are preserved. Linear scale 2, zero clipping, the 0.18 control and exact PNG–WebP pixels pass. Denoising changes mean radiance −0.059025%.
+
+Both encoded variants pass 96 arrival routes, 4 gallery connectors, 3,744 tread support probes, 864 guard/body-stop probes and 18 retained departure routes per variant. Required support/fixture contacts pass the established encoded bound. The source-only 20 micrometre fixture failures remain explicitly recorded separately. A local native 34-leg Main→departure→platform→east arrival→gallery→west arrival→Main loop passes with six persistent zones and zero page/server errors. Its full log retains one deliberate font block and22resource aborts. Browser closed03:03:32UTC. All 12 GLBs pass with zero errors, 438 recorded warnings and 89 shared KTX2 textures. Compiled behavior matches the native-tested bundle after only the cache revision and generated import names are normalized. Site validation and all seven staging checks pass within the measured 240 MB internal allowance. Matching public deployment remains pending; no new public acceptance is claimed here.
+
+This is a lighting checkpoint. The next construction milestone starts with one P5 bay, then a coordinated first eight gallery-edge/stair/underside finish. Primary photos show open guards and exposed framing; continuous opaque side walls are unsupported. Northern/LIRR and streetward routes, western Main transfers and a universal T-gallery soffit datum remain held. No FPS, physical-mobile, new WebGPU or final-photorealism claim is made. Fuller Manhattan/mobile work remains deferred; exterior roof flicker stays last.
+
+# Previous arcade lighting checkpoint — 2 November 2026 (Melbourne)
 
 A denser4K lighting layout and256-sample CyclesMetal bake reduce broad smearing on the arcade/loggia columns and bases. [Actual native view, source and pixel evidence](../authoring/penn-station-1935/review/phase9/arcade-lighting-priority/README.md) retain exact geometry/UV0/material preservation, corrected neighbour profiles, fresh AO and fine normal pixels through resize/compression. Source normal re-encoding is bounded at0.144degrees; final mesh quantization remains separately qualified. No canonical geometry or walking routes change.
 

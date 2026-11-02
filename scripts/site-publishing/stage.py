@@ -8,11 +8,12 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[2]
 # The architectural exhibition retains full-resolution desktop geometry and
-# dedicated 8K illumination, plus the connected entrance's local HDR and4K maps.
+# dedicated 8K illumination, the connected entrance's local HDR/4K maps and
+# independently baked 4K arrivals lighting. The measured checkpoint is 237 MB.
 # Keep a bounded public artifact without forcing
 # those assets below their reviewed visual quality. This is an internal budget;
 # GitHub Pages' separate published-site limit still applies to legacy builds.
-MAX_PUBLIC_SITE_BYTES = 230_000_000
+MAX_PUBLIC_SITE_BYTES = 240_000_000
 
 
 def stage(root, destination):

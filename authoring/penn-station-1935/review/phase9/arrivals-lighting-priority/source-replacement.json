@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "created": "2026-11-02T03:03:23.733532+00:00",
+  "scope": "Lossless source replacement only; runtime candidate and native served bytes untouched",
+  "previousCommit": "9f43f8a74769cf9936c30f53938a5bd4ae5f88f8",
+  "previousDirectory": "authoring/penn-station-1935/lighting/phase8",
+  "externalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-previous-live-lighting-before-priority-v2",
+  "previousFiles": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/README.md",
+      "bytes": 1946,
+      "sha256": "41e88acdb208ac230f93c1f902495c8484e72e5ae6c367ea64388ab080706848",
+      "gitObject": "996e0d2226c6ea63dd464d85ef067b4b55a3db52"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-denoise.json",
+      "bytes": 2562,
+      "sha256": "590dd3e92a9703b478fcdc0657b36578806248e99be9e09e502094e5fe329f57",
+      "gitObject": "e781673a08e80359ed845d04e36e8588a98d3312"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+      "bytes": 24406414,
+      "sha256": "85f4c4a11fea618519fcdba75359ecf8c603bbcd59e67511a450eeb02b81af85",
+      "gitObject": "4dac932b715260176fc3e6b6041e874e96681d75"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-low.png",
+      "bytes": 134818,
+      "sha256": "d9bd3710f45cbfb516b9956d69267192703d6f77a047fecbb1d048af1fdca99a",
+      "gitObject": "002f9de79b8fe3fe45ac63ff2e1e3e0838e5a39c"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky.png",
+      "bytes": 4798994,
+      "sha256": "be4c11d0548b69293a25618f5ef9bc12b3e2a41a7a421c018780e697399b78db",
+      "gitObject": "48b3d0d03292dbed3e1f0cce3e4df20fc424e2ab"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "bytes": 7798291,
+      "sha256": "bc156681f6e96d3a0bed596be9a52fc24ba12bae9bc614372f9d2e3cc8d5b1e6",
+      "gitObject": "9d2446593ed8e7bb89678d3815d1ab49742df6cf"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-sky.hdr.gz",
+      "bytes": 33392283,
+      "sha256": "9d13f6792894dcbc2a4f19c41cc9818ed6951fff24cf77bf47786042e52645a2",
+      "gitObject": "2ae1e681c036ca721a6ccddfd75d93fdefa30cad"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals.json",
+      "bytes": 5846,
+      "sha256": "f779572f882d7cee60fa60b7d8427813bc430be189f3709c80155819befdaa2a",
+      "gitObject": "22eaf9c80274339dfb0e2a794eb8658943a2d68f"
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "README.md",
+      "bytes": 1962,
+      "sha256": "7e74b24834cf0010946177940af6e5e4034244e29fbd869a480854ba29e41020"
+    },
+    {
+      "path": "archive-manifest.json",
+      "bytes": 6095,
+      "sha256": "89bad6c0699d77dcb73357ae46819a7d81e779715e010877bd06d7453d6e2970"
+    },
+    {
+      "path": "denoised/lighting-concourse-arrivals-denoise.json",
+      "bytes": 2567,
+      "sha256": "f821409c994f37693ef7e6401729d749bef993b4e6698a5c0f2aea720d86146f"
+    },
+    {
+      "path": "denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+      "bytes": 30090391,
+      "sha256": "d1c341b6cb84041fd02387c331c3825c73cf4e76edb516bf2d00868a460eba36"
+    },
+    {
+      "path": "denoised/lighting-concourse-arrivals-sky-low.png",
+      "bytes": 208177,
+      "sha256": "910d2fc877d3ac49cbc725f11ed452bd9d802b1a523927cb18e667ad63bd7d88"
+    },
+    {
+      "path": "denoised/lighting-concourse-arrivals-sky.png",
+      "bytes": 6878594,
+      "sha256": "dce9d844508ae087af53b33245e99ac5674f4a3670b3d9c213e0dbee006e873d"
+    },
+    {
+      "path": "raw/lighting-concourse-arrivals-ao.png",
+      "bytes": 10710454,
+      "sha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3"
+    },
+    {
+      "path": "raw/lighting-concourse-arrivals-sky.hdr.gz",
+      "bytes": 41941911,
+      "sha256": "c01a6b36ba8b3a04a081660861c48dca7586787a8dbe538800159107e88844d3"
+    },
+    {
+      "path": "raw/lighting-concourse-arrivals.json",
+      "bytes": 3904713,
+      "sha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac"
+    },
+    {
+      "path": "source/FROZEN-PACKET-MANIFEST.json",
+      "bytes": 3688,
+      "sha256": "0ae327924eb57029616b79c2e82d32e383de3b8eeab404ba5151b5273861d01d"
+    },
+    {
+      "path": "source/PREPARATION.json",
+      "bytes": 879,
+      "sha256": "8e8875a9156a5b94ae098598fd020ae493671b6d877f6a5f411b13e40197cd5d"
+    },
+    {
+      "path": "source/actual-main0-visibility-proof.json",
+      "bytes": 4441,
+      "sha256": "a6bc3e5bc5cde3e101f2b3a0e80bdadcbec6d3ae5b9a889509d67bd11cfac92c"
+    },
+    {
+      "path": "source/arcade_corner_normals.py",
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    {
+      "path": "source/arrivals-preserve-mode.patch",
+      "bytes": 19540,
+      "sha256": "64ca66a977e6a0b256f3aec16c09340c84c34d26ea5bcc96947d996fe43315fe"
+    },
+    {
+      "path": "source/authored_lighting_uv_guard.py",
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    {
+      "path": "source/bake-command-preparation.json",
+      "bytes": 18585,
+      "sha256": "b79a06490ba79a0ac90d0974eee7075db57976aacee2c3d38283963394760a4b"
+    },
+    {
+      "path": "source/bake_lighting.py",
+      "bytes": 24234,
+      "sha256": "d367ec0b757d62aaafdd33eb29279c307b323b15326336a001b0643cc3405a2f"
+    },
+    {
+      "path": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "path": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "path": "source/freeze_bake_packet.py",
+      "bytes": 7843,
+      "sha256": "b20561a2bbf3b4d0f94a31d17530cd542b77b4ebf3bdf92a790d007e2d4451e4"
+    },
+    {
+      "path": "source/frozen-bake-command.json",
+      "bytes": 22942,
+      "sha256": "1b61345bd84aebbc174b8f1cd07304e094c1ccf72ebbb6326395da181887293d"
+    },
+    {
+      "path": "source/full-context-preflight.json.gz",
+      "bytes": 659198,
+      "sha256": "f5daac14e96f487a65bf5d488477a3b9bc0a2fb58dee73727845362af6d50a89"
+    },
+    {
+      "path": "source/material-library-pins.json",
+      "bytes": 7573,
+      "sha256": "881b439ed745e19cfcbfcf3a7c99a8e53e1337fd6954f0821c75326f66a8019d"
+    },
+    {
+      "path": "source/material_library.py",
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    {
+      "path": "source/neighbor-profile-restoration.json",
+      "bytes": 1773,
+      "sha256": "359c8770e42af67e3fe873c354169805f89de8f744f42742268e8a8c924ceda5"
+    },
+    {
+      "path": "source/occluder_materials.py",
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    {
+      "path": "source/order_lighting_uv.py",
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    },
+    {
+      "path": "source/prepare_bake_packet.py",
+      "bytes": 4895,
+      "sha256": "b5a118f9038ad4098902dc1f37ec8671ef317b7141a82036ff3342e0c1829217"
+    },
+    {
+      "path": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "path": "source/restore_imported_visibility.py",
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    {
+      "path": "source/reviewed-metal-bake.log",
+      "bytes": 7319862,
+      "sha256": "32497132c1545899e0545aa7bdf4baa826aec08b8bfe037c42246b542f505139"
+    },
+    {
+      "path": "source/run_frozen_bake.py",
+      "bytes": 1245,
+      "sha256": "c3a303821cd9c096ec3d667e32cd64750065bd70bab1122afde92ae5fea6ff28"
+    },
+    {
+      "path": "source/run_full_context_preflight.py",
+      "bytes": 5394,
+      "sha256": "706718d668a28e050cce2dbcdcaa1141d619930fb1543b38bd6971f4a94ff4da"
+    },
+    {
+      "path": "source/vault_lighting_uv.py",
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+    },
+    {
+      "path": "source/visible-context-proof.json",
+      "bytes": 5035,
+      "sha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 13424,
+      "sha256": "04d97cb5d1ee3566b89775b9bef5b77c906d1cc5c94bd755a0973d35a4d9499f"
+    }
+  ],
+  "sourceVerificationSha256": "027af38d78c32c6719861e4447688b3576d0c641faf67752b6774b40fde9ce45"
+}

@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Decoded encoded ARR physical supports and fixture mounts against current platform/retained station; no structural capacity certification.",
+  "method": "Unchanged phase7 check-optimized-contacts.mjs contact logic; only imports, current manifest/platform paths, base+newmodule arrays and report metadata/output adapted.",
+  "maximumAcceptedEncodingResidualMetres": 0.002,
+  "componentSelectionPaddingMetres": 0.012,
+  "allOriginalTestsRetained": true,
+  "allInputAndHelperPinsUnchangedAfterRun": true,
+  "baseAndModulesLoadedSeparatelyExactlyOnce": true,
+  "inputs": {
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/scene-manifest.json": {
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz": {
+      "bytes": 4297530,
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz": {
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz": {
+      "bytes": 4544016,
+      "sha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimized-uv-priority-v2/model-concourse.glb": {
+      "bytes": 1983316,
+      "sha256": "4b3f314ed5ea722729b351a3c6a26a21525490c6036ced76e87a6d249ee6cae8"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz": {
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz": {
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior-low.glb.gz": {
+      "bytes": 4443602,
+      "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room-low.glb.gz": {
+      "bytes": 7271933,
+      "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimized-uv-priority-v2/model-concourse-low.glb": {
+      "bytes": 1330924,
+      "sha256": "6d4d8f6f3c372b52fd4b651b71cbb31134ec29f90c064182b7d9072bcb632591"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz": {
+      "bytes": 684590,
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "bytes": 240418,
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains-low.glb.gz": {
+      "bytes": 157720,
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+    }
+  },
+  "helpersAndRawReferences": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/check-optimized-contacts.mjs": {
+      "bytes": 8336,
+      "sha256": "3a690c50a9c517afbfc921fbb17656c7170b6610c1a4b97cc8af555e01f98af2"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/arrivals-runtime-queries.mjs": {
+      "bytes": 9940,
+      "sha256": "e450621d228c082e643326b8358a65480dca878490134a699e6d1c0e017668bc"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/source-proof.json": {
+      "bytes": 1034330,
+      "sha256": "715435918224899607c4241bc41b80afc7c5141a1d243f8b6724a00de2035146"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/arrivals-module.glb": {
+      "bytes": 15438492,
+      "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/fixture-relocation-recipe.json": {
+      "bytes": 22361,
+      "sha256": "4e3b6005e3d7364b0a7d1dd41004e159218d9559d31b97dd9aa3dc548a4e1525"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz": {
+      "bytes": 4544016,
+      "sha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimized-uv-priority-v2/model-concourse.glb": {
+      "bytes": 1983316,
+      "sha256": "4b3f314ed5ea722729b351a3c6a26a21525490c6036ced76e87a6d249ee6cae8"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimized-uv-priority-v2/model-concourse-low.glb": {
+      "bytes": 1330924,
+      "sha256": "6d4d8f6f3c372b52fd4b651b71cbb31134ec29f90c064182b7d9072bcb632591"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/scene-manifest.json": {
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs": {
+      "bytes": 3200,
+      "sha256": "b5b1fb1ab8d73e2d39a990b18dcbaa399e44681568d387a1c693eec51ccb925d"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs": {
+      "bytes": 4950,
+      "sha256": "bd85df19cb8151236bcbb75cfcbfb5d8a8c40865e10e58745809d837f10a4030"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/src/floor-contact.mjs": {
+      "bytes": 1398,
+      "sha256": "9d543855b33c33e054dd82e5416e96021a16902e8dd346d843530f3c49b9ca69"
+    }
+  },
+  "adaptedSource": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-encoded-physical-v2/contacts-check-v1/check-optimized-contacts.mjs",
+    "sha256": "9fe6a67b08afdd5631d900909b20c71b4a0d5024a49d8cab6dbcb6049d2f0f86"
+  },
+  "summary": [
+    {
+      "variant": "full",
+      "supportGroups": 47,
+      "foundationSupported": 1175,
+      "foundationRays": 1175,
+      "lowerCapCentreContacts": 47,
+      "lowerBearingWithin": 230,
+      "lowerBearingRays": 235,
+      "upperBuiltGroups": 21,
+      "upperBearingWithin": 525,
+      "upperBearingRays": 525,
+      "fixtureGroups": 22,
+      "fixtureWithin": 110,
+      "fixtureRays": 110,
+      "maximumComponentBoundDifferenceMetres": 0.0008229731742090962,
+      "maximumUpperBearingResidualMetres": 0.000779526123147356,
+      "maximumFixtureResidualMetres": 0.0008156503051237607,
+      "failures": []
+    },
+    {
+      "variant": "low",
+      "supportGroups": 47,
+      "foundationSupported": 1175,
+      "foundationRays": 1175,
+      "lowerCapCentreContacts": 47,
+      "lowerBearingWithin": 230,
+      "lowerBearingRays": 235,
+      "upperBuiltGroups": 21,
+      "upperBearingWithin": 525,
+      "upperBearingRays": 525,
+      "fixtureGroups": 22,
+      "fixtureWithin": 110,
+      "fixtureRays": 110,
+      "maximumComponentBoundDifferenceMetres": 0.0008229731742090962,
+      "maximumUpperBearingResidualMetres": 0.000779526123147356,
+      "maximumFixtureResidualMetres": 0.0008156503051237607,
+      "failures": []
+    }
+  ],
+  "rawReportSha256": "9eaa0b597a1e593c8f14bb00565298518f77e77d053640a7ede6b9e3dc77ef2f",
+  "runtimeRootEdits": false,
+  "gpuRun": false,
+  "limits": [
+    "CPU actual decoded-ray checks only; native visual review remains with root.",
+    "The raw source contact authority is unchanged phase7 source-proof and raw component geometry.",
+    "Optional lower-bearing off-centre rays retain original classification; centre contacts are mandatory.",
+    "No geometric contact threshold, selection-padding or model changed."
+  ],
+  "dependencyPins": {
+    "file": "dependency-pins.json",
+    "sha256": "be07f5b535d4875434ce3696e842311ec0a1305c4b9e73e19db190d995e1eb0a"
+  }
+}
