@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "derivations": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs",
+      "sourceSha256": "bd85df19cb8151236bcbb75cfcbfb5d8a8c40865e10e58745809d837f10a4030",
+      "file": "source/lib/decoded-geometry.mjs",
+      "outputSha256": "577dad4c5b7a08cd89c1111b65108609e0787b1973091a8fc56d9f6d263990fb",
+      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
+      "replacements": [
+        [
+          "'../../penn-station-1935/model/gltf_hierarchy.mjs'",
+          "'./gltf_hierarchy.mjs'"
+        ],
+        [
+          "'../../penn-station-1935/model/meshopt_patch_io.mjs'",
+          "'./meshopt_patch_io.mjs'"
+        ]
+      ]
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/review-p5-finish.mjs",
+      "sourceSha256": "a7db4b6b6d12910ee072ece8e33c776129908cf5dd8499b527e04c6a3f00ec20",
+      "file": "source/review-p5-finish.mjs",
+      "outputSha256": "477275eef840acc8d8355b439f1ddfcdce687de5fbd0d3f3e263e1de57f2c4f6",
+      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
+      "replacements": [
+        [
+          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs'",
+          "'./lib/meshopt_patch_io.mjs'"
+        ],
+        [
+          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs'",
+          "'./lib/decoded-geometry.mjs'"
+        ],
+        [
+          "createRequire('/Users/stavreskimario/Desktop/penn-station-work/tools/package.json')",
+          "createRequire(path.join(process.env.PENN_TOOLS,'package.json'))"
+        ]
+      ]
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/audit-new-skin-normals.mjs",
+      "sourceSha256": "e9b122e7a164a0e16706cbe84c4628f64f005e32a90f2aaeee54f8072069065e",
+      "file": "source/audit-new-skin-normals.mjs",
+      "outputSha256": "c93c963f19dd14749b82a2674caa9995cfb546dde352cb76c3f0fe505903a375",
+      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
+      "replacements": [
+        [
+          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs'",
+          "'./lib/meshopt_patch_io.mjs'"
+        ],
+        [
+          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs'",
+          "'./lib/decoded-geometry.mjs'"
+        ],
+        [
+          "createRequire('/Users/stavreskimario/Desktop/penn-station-work/tools/package.json')",
+          "createRequire(path.join(process.env.PENN_TOOLS,'package.json'))"
+        ]
+      ]
+    }
+  ]
+}

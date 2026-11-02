@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T03:38:42.634551+00:00",
+  "status": "ACCEPTED ONLY AS A QUALIFIED FLAT-FACE GEOMETRY STUDY; HISTORICAL SILHOUETTE AND LIVE PROMOTION HELD",
+  "scope": "Actual Blender Cycles CPU before/after renders, unchanged input scene/camera/review illumination. Component scene contains the arrivals module, without platform or Main-concourse context. Not a browser screenshot or final materials/photorealism review.",
+  "sourceSceneSha256": "d33f8381f88228f86b431f4017d8cad10dceef5f6e62054084fbc96e245b7cf6",
+  "views": [
+    {
+      "view": "before",
+      "image": "before.png",
+      "bytes": 1340248,
+      "sha256": "4e2f53218f1ecbe4ae79cd3954ab4af012b2fc555277d779ab383893a83bfaf7",
+      "renderRecord": "before.json",
+      "renderRecordSha256": "7fa03e301ddf8efd1695edc3ef2966787c8375c2f0f74b965304f1dfc1e3ea52",
+      "hiddenStudyObjects": 14
+    },
+    {
+      "view": "after",
+      "image": "after.png",
+      "bytes": 1322963,
+      "sha256": "f24ebc61338e29f820fc7c420aab3711fa58d799ae3772ce55a451ded121ca06",
+      "renderRecord": "after.json",
+      "renderRecordSha256": "620d77a70651d8bafba0c91f935738f8438f9ed917b005b9e70660137175a01a",
+      "hiddenStudyObjects": 0
+    }
+  ],
+  "observations": [
+    "The new ramp and landing side faces visibly close the exposed I-section cavities into broad continuous bands consistent with the stair-family photographs.",
+    "The small gallery-edge finish stays within the existing lower Exit beam envelope; it does not borrow the upper Main-concourse fascia moulding.",
+    "Before/after support, newel and rail positions remain visually consistent; independent source preservation and contact results are retained separately.",
+    "Landing/stringer transitions and railing joins remain angular, unlike the rounded transitions visible in the primary crops. This study does not satisfy completed historical-stair silhouette acceptance."
+  ],
+  "historicalLimits": [
+    "The historical crops do not identify P5 or authenticate this review camera.",
+    "Eight-millimetre cover construction, exact seam positions and paint appearance are inferred.",
+    "Opening-era photographs do not certify all 1935\u20131940 details."
+  ],
+  "requiredBeforeLiveGeometry": [
+    "Resolve and review the photo-supported curved landing/stringer and handrail transitions.",
+    "Fresh lighting/material and full/low encoded geometry/route checks.",
+    "Native six-zone browser review of the final assembled candidate."
+  ],
+  "rendererHelperSha256": "6e5853ed77ee404edf24e45099930271e19b8240b6ff6010174bd6cf5d88a8c7",
+  "independentPhotoReviewSha256": "84fc847f51cf3300c41ab439d085be6c86fb788d1b3c4a0ce7c0d6a4593ec457"
+}

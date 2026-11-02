@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "status": "PASS: raw P5 appearance study adds no obstruction to accepted arrival/gallery source routes",
+  "candidateSha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+  "candidateFileStillExact": true,
+  "variants": [
+    {
+      "retainedContextVariant": "full",
+      "newStudyGeometry": "same unencoded source-plus14skins in both contexts",
+      "arrivalRoutes": 96,
+      "stairSamples": 39696,
+      "galleryConnectorRoutes": 4,
+      "galleryConnectorSamples": 9084,
+      "newFixtureMountRaysAtOriginal20MicrometreSourceThreshold": 80,
+      "newFixtureMountRaysPassed": 80,
+      "failures": 0,
+      "maximumStepRiseM": 0.16733455657958984,
+      "maximumStepDropM": 0.16733455657958984
+    },
+    {
+      "retainedContextVariant": "low",
+      "newStudyGeometry": "same unencoded source-plus14skins in both contexts",
+      "arrivalRoutes": 96,
+      "stairSamples": 39696,
+      "galleryConnectorRoutes": 4,
+      "galleryConnectorSamples": 9084,
+      "newFixtureMountRaysAtOriginal20MicrometreSourceThreshold": 80,
+      "newFixtureMountRaysPassed": 80,
+      "failures": 0,
+      "maximumStepRiseM": 0.16733455657958984,
+      "maximumStepDropM": 0.16733455657958984
+    }
+  ],
+  "rulesUnchanged": {
+    "bodyRadiusM": 0.32,
+    "bodyHeightM": 1.85,
+    "maxStepUpM": 0.24,
+    "maxStepDownM": 0.35,
+    "leadingFootM": 0.25,
+    "samplePitchM": 0.025,
+    "sourceFixtureMountThresholdM": 2e-05,
+    "physicalColliderExclusions": false
+  },
+  "inputPins": {
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/scene-manifest.json": {
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+      "bytes": 693276
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz": {
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a",
+      "bytes": 4297530
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz": {
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "bytes": 8304517
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz": {
+      "sha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269",
+      "bytes": 4544016
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/p5-study-source-plus-finish.glb": {
+      "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+      "bytes": 15471852
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz": {
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz": {
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior-low.glb.gz": {
+      "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3",
+      "bytes": 4443602
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room-low.glb.gz": {
+      "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d",
+      "bytes": 7271933
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz": {
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains-low.glb.gz": {
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    }
+  },
+  "sourceScriptSha256": "f338f19f1984888069d6bda2ce91301118f464efd36d6a8e6ff9a9076dfb9645",
+  "adaptedScriptSha256": "00f79a4cac6ffe545c8887995dab90a8b0d9e05a5f17a5df5f3709af03c59db0",
+  "detailedRoutesSha256": "04569cbd26d3489ddb06851b3a19b1b4cff59ee6429b06db256b358f232f5af1",
+  "independentGeometryReview": {
+    "path": "../arrivals-p5-finish-study-review-v1/candidate-v2/SUMMARY.json",
+    "sha256": "c8f8f67f9c645f8f38709b4bc52bb471349d991b966054aab5875accf20c8990"
+  },
+  "limits": [
+    "Raw geometry only; full/fallback labels refer to unchanged neighboring contexts, not new encoded study LODs.",
+    "All original source bytes/objects are immutable; this outcome check also includes the new14skins in the physical body query.",
+    "No new lighting, encoding, browser, performance, historical-fabrication or completed-stair acceptance claimed."
+  ],
+  "noGpu": true,
+  "noRootEdits": true
+}

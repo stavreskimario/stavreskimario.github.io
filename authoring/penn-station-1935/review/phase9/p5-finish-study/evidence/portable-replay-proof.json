@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "status": "PASS: portable CPU replay reproduces both raw GLBs byte-for-byte and full source/component states",
+  "builderSha256": "f9894ce4957793cea7921342f00d3bb7cdb38208e32061d2dcd130b2ab5e6c83",
+  "originalSourceStatesExact": 4047,
+  "allSourceMaterialStatesExact": true,
+  "newSkinsExact": 14,
+  "combinedGlbByteExact": true,
+  "addonGlbByteExact": true,
+  "reopened": [
+    {
+      "file": "full-rebuilt",
+      "objects": 4061,
+      "sha256": "408a57a3dd339c1ef50237c3d6d59a5f552145bc45eccfff0bb9f2af0851db50",
+      "unchangedOnReopen": true
+    },
+    {
+      "file": "exact-addon",
+      "objects": 14,
+      "sha256": "1f6f6bf4ec0f95dd2fd96bdd1c5d4d0ad18f00543f85f7e047c261824745a2e2",
+      "unchangedOnReopen": true
+    }
+  ],
+  "fullEditableBlendBinaryReplayClaimed": false,
+  "fullBlendQualification": "Rebuilt full-scene file may have different Blender serialization bytes; geometry, materials and source states are exact. Original d33 full blend remains in verified external backup.",
+  "noRenderingOrGpu": true
+}

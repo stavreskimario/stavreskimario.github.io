@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "status": "PASS external unquantized P5 geometry study; no promotion",
+  "candidate": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/p5-study-source-plus-finish.glb",
+    "bytes": 15471852,
+    "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f"
+  },
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/arrivals-module.glb",
+    "bytes": 15438492,
+    "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc"
+  },
+  "originalSourceBinaryAndJsonPrefixesExact": true,
+  "newSkinObjects": 14,
+  "newSkinTriangles": 264,
+  "closedPositiveVolumeComponents": 18,
+  "totalSkinVolumeM3": 0.09257280463435363,
+  "fullIntendedContactRules": 42,
+  "literalFullContactAreaPasses": 42,
+  "minimumMeasuredContactCoverage": 0.9999999999999993,
+  "maximumMeasuredPlaneGapM": 4.440892098500626e-16,
+  "numericalBoundaryAllowanceNeededForRules": 0,
+  "exposedCoplanarDuplicates": 0,
+  "retainedActualTriangleAdjacencies": 88,
+  "nominal8mmActualThicknessRangeM": [
+    0.007999420166015625,
+    0.00800323486328125
+  ],
+  "newNormalMinimumGeometricFaceDot": 0.9999999978937253,
+  "newNormalMaximumUnitLengthError": 5.585392925944177e-08,
+  "reviewerControls": 11,
+  "inputsAfterReviewByteExact": true,
+  "limits": [
+    "8mm skins are an explicit appearance interpretation, not authenticated sheet construction.",
+    "Surface contact areas use actual projected triangle intersections; plane coincidence uses the existing20micrometre source-coordinate bound and reports actual maximum gaps. No encoded/runtime contact tolerance was changed.",
+    "No engineering-capacity, new lighting, whole-route collision, encoded geometry, visual/GPU/browser/performance/publication acceptance is asserted."
+  ],
+  "files": [
+    {
+      "path": "review-p5-finish.mjs",
+      "bytes": 16076,
+      "sha256": "a7db4b6b6d12910ee072ece8e33c776129908cf5dd8499b527e04c6a3f00ec20"
+    },
+    {
+      "path": "reviewer-controls.mjs",
+      "bytes": 4149,
+      "sha256": "007ef39e1bed9b67e2894cbd32a99f13cbbaf2be09e1adaad8a252c22933d215"
+    },
+    {
+      "path": "reviewer-controls.json",
+      "bytes": 1632,
+      "sha256": "3a4ef62a4d03b7db7c657a791f03d522e56159bc1bebfe51c82b932c0523db41"
+    },
+    {
+      "path": "audit-new-skin-normals.mjs",
+      "bytes": 2818,
+      "sha256": "e9b122e7a164a0e16706cbe84c4628f64f005e32a90f2aaeee54f8072069065e"
+    },
+    {
+      "path": "candidate-v2/review.json",
+      "bytes": 164260,
+      "sha256": "009330c1f03b336b53e376d284c5f199556bc50c69afab4eebff70baa8bc38db"
+    },
+    {
+      "path": "candidate-v2/review.json.gz",
+      "bytes": 8988,
+      "sha256": "abad8447a623d062a7e7bf2310dcf190a731ad83838d0c3e3ee8c29b28692f46"
+    },
+    {
+      "path": "candidate-v2/new-normal-audit.json",
+      "bytes": 3173,
+      "sha256": "e80f557f141741edcf5751d2a88988dde8b9de9280fd0451b58c39b40d5a5607"
+    }
+  ],
+  "rootWrites": false,
+  "gpuRuns": 0
+}

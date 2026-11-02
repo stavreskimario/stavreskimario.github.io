@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "sourceReplay": {
+    "python": "3.11",
+    "bpy": "4.3.0",
+    "numpy": "1.26.4"
+  },
+  "independentReviewer": {
+    "three": {
+      "version": "0.180.0",
+      "packageJsonSha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+    },
+    "three-mesh-bvh": {
+      "version": "0.8.3",
+      "packageJsonSha256": "d66165aa7e1dc78da5093e0ba019b7b0e4daa6b68185c6c105387b9f5fe5c6a7"
+    },
+    "meshoptimizer": {
+      "version": "0.24.0",
+      "packageJsonSha256": "363cac4a2242f3bb46a41610c6bddd1c38e9c6ce5964529ef59337051c3a7869"
+    },
+    "@gltf-transform/core": {
+      "version": "4.5.1",
+      "packageJsonSha256": "624e185b6e6c6ab602f4419a3fafa422af20d6bb41c6fac2b3a4f7920137be41"
+    },
+    "@gltf-transform/cli": {
+      "version": "4.2.1",
+      "packageJsonSha256": "c34b2188c2be134c43fa586a5c87cc70f9b6d9594d1a584ce5af1cdbe0562c24"
+    }
+  },
+  "toolsPackageJsonSha256": "a299b70a17c2527d165d4411c8a18cf0127435f6107bab232c0575d8a31042d3",
+  "newDependencyInstallationPerformed": false,
+  "nodeToolRootEnvironment": "PENN_TOOLS points to an isolated directory with package.json and the listed installed dependencies."
+}

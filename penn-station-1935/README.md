@@ -35,6 +35,8 @@ The arrivals public stage fits the measured 240 MB internal allowance, preservin
 
 ## Remaining work
 
+An [unpublished P5 source study](../authoring/penn-station-1935/review/phase9/p5-finish-study/README.md) preserves editable flat-face work, actual before/after views and exact replay/geometry/walking checks. Curved stair and rail profiles, fresh lighting, encoded variants and live integration remain unfinished.
+
 The next geometry milestone is a coordinated **first eight gallery-edge, stair and underside finish**, starting with one P5 review bay. Primary photographs support open metal guards and exposed framing beside the tracks. Finish actual fascia, landing/stringer seats and guard/newel joins while retaining those open views; add no generic opaque side walls. The [qualified source plan](../authoring/penn-station-1935/review/phase9/arrivals-lighting-priority/next-checkpoint-v2.md) requires registered bearing and train-clearance checks before repeating the bay. The general 5 in beam-top rule does not establish a universal slab or gallery soffit datum.
 
 Northern P9/LIRR arrivals, streetward exits, western Main-floor openings/supports and the broader platform enclosure remain unfinished. Twenty-six upper transfer cases and two lower support positions remain held. Lift enclosures are visual models, not functioning elevators or authenticated assignments of the three Main-reaching lifts. Absolute placement retains at least ±1 m source-registration uncertainty.
