@@ -1,0 +1,24 @@
+{
+  "scope": "Retain failed whole-scene observations and the isolated loader experiment. This does not change the original strict native failure or qualify as public asset acceptance.",
+  "reports": [
+    {
+      "archive": "buffer-case-report.json.gz",
+      "decodedBytes": 441152,
+      "decodedSha256": "446f93a76775505358f79952ed6eba97aa3396e906362c834f1b5f07da1586d0"
+    },
+    {
+      "archive": "content-length-case-report.json.gz",
+      "decodedBytes": 451095,
+      "decodedSha256": "dfb66ae17c3553a0aa1d30433b48631ba45e8f7da21ef61e3febd9aa8c651965"
+    },
+    {
+      "archive": "isolated-fileloader-report.json.gz",
+      "decodedBytes": 93040,
+      "decodedSha256": "df7a353b4030fa2c979751a0c60204b4825ebe3e4a37358944f13180638f6546"
+    }
+  ],
+  "scripts": {
+    "network-material-diagnostic.cjs": "54bca3daa693651ff3fc203f04b335d53b32ec84290a81c221fe513fbaf8ba64",
+    "probe-fileloader-stream.cjs": "cb788205d7bfa102bce904eb8d132a670078f34f6a06882c508ec6bd76bd8d08"
+  }
+}

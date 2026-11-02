@@ -1,5 +1,5 @@
 {
-  "status": "Pre-publication checkpoint; geometry/physical/34native-route/material/freeze checks pass. LocalnetworkstrictFAIL retained; deployment/public check pending.",
+  "status": "Published checkpoint verified at 50f193384bd6cfa0827cdc6a1cb7deba414fd62e; first Platform 5 finish only. Original strict local network failure retained.",
   "revision": "9-p5-arrivals-finish-1",
   "bundleSha256": "786e4d7d58b4e4d4a229c3288812954de75bfede903339464dfaf9892a0daf40",
   "localReportSha256": "f50aebfb041b26222f6fbd84664a09e5b5b4ebeae8ecdb7a816d729930c4b043",
@@ -18,6 +18,14 @@
       "bytes": 1587003,
       "sha256": "bcf67610338ada73b47d628c5fd28abe0e2c93ab9e28a5b3e73f5f823a59a33d"
     },
+    "final-publication.json": {
+      "bytes": 905,
+      "sha256": "1859afa6318b86985817fa1b1640a7554e09e7951f5e2d3289342d9de0a84526"
+    },
+    "public-report.json.gz": {
+      "bytes": 36191,
+      "sha256": "33ac571d96751ef1716367159dece977592d3bd2c6be676ed506048488c577a7"
+    },
     "early-preview-receipt.json": {
       "bytes": 5672,
       "sha256": "dc8df91557f01ba8eba4d1026c3f1f0a0b78af6b34fca98a5fce1be17a55fb9d"
@@ -31,8 +39,8 @@
       "sha256": "9cbcc46b6e7ff8f2fb2c0cd0990f0a4dc0454685d585dc2e4b0b5470f144d3d3"
     },
     "site-checks.json": {
-      "bytes": 542,
-      "sha256": "d3d43006d0d6f15e75ce8fc195eb48d8810f409894d011fb65de0f28e12303f2"
+      "bytes": 912,
+      "sha256": "5e5a9463656bf3c87cec58b55d1ea6b6875e432e4739440694e10d2c95dd5f58"
     },
     "native-p5-wide-preview-v1.cjs": {
       "bytes": 26871,
@@ -43,8 +51,8 @@
       "sha256": "acb969bee364f4d5c8e7dd640d915fee3a614838c296930c91d6763625059da8"
     },
     "README.md": {
-      "bytes": 2805,
-      "sha256": "1f13b2b61b264e41da92bd2a360a27c0960f753eb8a5086824135f3100f6d6d6"
+      "bytes": 3950,
+      "sha256": "ad32fb481d7e05d145d7e2ef85040ce797e76e7c0e24e0f625265a44b3685799"
     },
     "bundle-equivalence.json": {
       "bytes": 875,
@@ -58,9 +66,46 @@
       "bytes": 15145,
       "sha256": "2e19845f5d075d5f234309f8fa1755d0118f180afa1ed64f82c45de49e476b75"
     },
+    "public-wide-platforms.png": {
+      "bytes": 1583229,
+      "sha256": "40501250e5fc280b074a137f69ba90f4ab80f8ccc8ab87a5300558987086c375"
+    },
+    "check-public-p5-arrivals.executed.cjs": {
+      "bytes": 22992,
+      "sha256": "6098bf286f039c25edd6d2b105a8c525fb43d23a480574cacce22460a79b0b63"
+    },
     "check-public-p5-arrivals.cjs": {
       "bytes": 20890,
       "sha256": "73b126c9fe36112246795d2b636d5fb4d84d9d06b3d190f51f17807bc6c1ce8f"
+    },
+    "network-observation/buffer-case-report.json.gz": {
+      "bytes": 37856,
+      "sha256": "ebad6b1d7e4047f7701406c48b233abab19ef04c9f40b3d7a8de822a4d6c24ec"
+    },
+    "network-observation/README.md": {
+      "bytes": 4038,
+      "sha256": "8629becdb97db0fd224630e4ff3e39e81977dde51ad014f8d7d1603f63d05a37"
+    },
+    "network-observation/network-material-diagnostic.cjs": {
+      "bytes": 17268,
+      "sha256": "54bca3daa693651ff3fc203f04b335d53b32ec84290a81c221fe513fbaf8ba64"
+    },
+    "network-observation/isolated-fileloader-report.json.gz": {
+      "bytes": 4693,
+      "sha256": "4aaacd1c5c490500c92cc8a8a7db82f694efb88bc692cf8335090ab999d95b8d"
+    },
+    "network-observation/content-length-case-report.json.gz": {
+      "bytes": 38741,
+      "sha256": "7ef5899edd1fab06a0a2e1cddc8236c89c19a1517281a8184a44e22e86fdac30"
+    },
+    "network-observation/recovery-index.json": {
+      "bytes": 990,
+      "sha256": "3c53968fda8cbf914de9a50ed631ad095697a516117c40c8d02707807c35bdc8"
+    },
+    "network-observation/probe-fileloader-stream.cjs": {
+      "bytes": 7428,
+      "sha256": "cb788205d7bfa102bce904eb8d132a670078f34f6a06882c508ec6bd76bd8d08"
     }
-  }
+  },
+  "publicEvidence": "final-publication.json"
 }
