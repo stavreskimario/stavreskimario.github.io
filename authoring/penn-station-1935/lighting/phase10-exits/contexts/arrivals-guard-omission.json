@@ -1,0 +1,372 @@
+{
+  "status": "PASS derived bake-only 24 leaf-node removal with node-index remapping; targeted native CPU import pending",
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/west-p5-curved-study.glb",
+  "sourceSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-preparation-v1/contexts/arrivals-without-north-research-guard.glb",
+  "outputSha256": "ca5a753a1c8f7cac5aaee47fdffd2fc977bc925ed0941b5ef17f6c48bd792fd7",
+  "entireBINExact": true,
+  "allNodesMeshesMaterialsAccessorsImagesExact": false,
+  "omittedSceneRootNodes": [
+    {
+      "name": "Temporary bounded-research end guard rail",
+      "node": 3999,
+      "triangles": 44,
+      "boundsMain0": [
+        -73.19999694824219,
+        -2.1033999919891357,
+        -36.02299880981445,
+        -54.9119987487793,
+        -2.0573999881744385,
+        -35.97700119018555
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard rail.001",
+      "node": 4000,
+      "triangles": 44,
+      "boundsMain0": [
+        -73.19999694824219,
+        -3.0604000091552734,
+        -36.0099983215332,
+        -54.9119987487793,
+        -3.0404000282287598,
+        -35.9900016784668
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright",
+      "node": 4001,
+      "triangles": 36,
+      "boundsMain0": [
+        -73.21045684814453,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -73.18953704833984,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.001",
+      "node": 4002,
+      "triangles": 36,
+      "boundsMain0": [
+        -72.339599609375,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -72.31867980957031,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.002",
+      "node": 4003,
+      "triangles": 36,
+      "boundsMain0": [
+        -71.46874237060547,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -71.44782257080078,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.003",
+      "node": 4004,
+      "triangles": 36,
+      "boundsMain0": [
+        -70.59788513183594,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -70.57696533203125,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.004",
+      "node": 4005,
+      "triangles": 36,
+      "boundsMain0": [
+        -69.7270278930664,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -69.70610809326172,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.005",
+      "node": 4006,
+      "triangles": 36,
+      "boundsMain0": [
+        -68.85617065429688,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -68.83525085449219,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.006",
+      "node": 4007,
+      "triangles": 36,
+      "boundsMain0": [
+        -67.98531341552734,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -67.96439361572266,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.007",
+      "node": 4008,
+      "triangles": 36,
+      "boundsMain0": [
+        -67.11445617675781,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -67.09353637695312,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.008",
+      "node": 4009,
+      "triangles": 36,
+      "boundsMain0": [
+        -66.24360656738281,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -66.22268676757812,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.009",
+      "node": 4010,
+      "triangles": 36,
+      "boundsMain0": [
+        -65.37274932861328,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -65.3518295288086,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.010",
+      "node": 4011,
+      "triangles": 36,
+      "boundsMain0": [
+        -64.50189208984375,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -64.48097229003906,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.011",
+      "node": 4012,
+      "triangles": 36,
+      "boundsMain0": [
+        -63.63103103637695,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -63.610111236572266,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.012",
+      "node": 4013,
+      "triangles": 36,
+      "boundsMain0": [
+        -62.76017379760742,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -62.739253997802734,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.013",
+      "node": 4014,
+      "triangles": 36,
+      "boundsMain0": [
+        -61.88931655883789,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -61.8683967590332,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.014",
+      "node": 4015,
+      "triangles": 36,
+      "boundsMain0": [
+        -61.01845932006836,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -60.99753952026367,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.015",
+      "node": 4016,
+      "triangles": 36,
+      "boundsMain0": [
+        -60.14760208129883,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -60.12668228149414,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.016",
+      "node": 4017,
+      "triangles": 36,
+      "boundsMain0": [
+        -59.2767448425293,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -59.25582504272461,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.017",
+      "node": 4018,
+      "triangles": 36,
+      "boundsMain0": [
+        -58.405887603759766,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -58.38496780395508,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.018",
+      "node": 4019,
+      "triangles": 36,
+      "boundsMain0": [
+        -57.535030364990234,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -57.51411056518555,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.019",
+      "node": 4020,
+      "triangles": 36,
+      "boundsMain0": [
+        -56.6641731262207,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -56.643253326416016,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.020",
+      "node": 4021,
+      "triangles": 36,
+      "boundsMain0": [
+        -55.79331588745117,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -55.772396087646484,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    },
+    {
+      "name": "Temporary bounded-research end guard grounded upright.021",
+      "node": 4022,
+      "triangles": 36,
+      "boundsMain0": [
+        -54.92245864868164,
+        -3.2504000663757324,
+        -36.01100158691406,
+        -54.90153884887695,
+        -2.080399990081787,
+        -35.98899841308594
+      ]
+    }
+  ],
+  "retainedSceneRoots": 4039,
+  "southernGuardOwnersRetained": 24,
+  "allRetainedNodePropertiesExactExceptChildIndexRemap": true,
+  "allMeshMaterialAccessorViewImageTextureDefinitionsExact": true,
+  "unusedNodeDefinitionsRemoved": 24,
+  "retainedNodes": 4039,
+  "indexMapOldToNew": {
+    "4023": 3999,
+    "4024": 4000,
+    "4025": 4001,
+    "4026": 4002,
+    "4027": 4003,
+    "4028": 4004,
+    "4029": 4005,
+    "4030": 4006,
+    "4031": 4007,
+    "4032": 4008,
+    "4033": 4009,
+    "4034": 4010,
+    "4035": 4011,
+    "4036": 4012,
+    "4037": 4013,
+    "4038": 4014,
+    "4039": 4015,
+    "4040": 4016,
+    "4041": 4017,
+    "4042": 4018,
+    "4043": 4019,
+    "4044": 4020,
+    "4045": 4021,
+    "4046": 4022,
+    "4047": 4023,
+    "4048": 4024,
+    "4049": 4025,
+    "4050": 4026,
+    "4051": 4027,
+    "4052": 4028,
+    "4053": 4029,
+    "4054": 4030,
+    "4055": 4031,
+    "4056": 4032,
+    "4057": 4033,
+    "4058": 4034,
+    "4059": 4035,
+    "4060": 4036,
+    "4061": 4037,
+    "4062": 4038
+  },
+  "previousSceneRootOnlySha256": "41d0a27b36b01c1e27e09a2d4af23ff30d053250c571fd02773af6d0c831f1cb"
+}

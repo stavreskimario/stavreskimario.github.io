@@ -1,4 +1,16 @@
-# First Platform 5 finish — 2 November 2026 (Melbourne)
+# Arrivals street connection — current checkpoint, 2 November 2026
+
+Runtime `10-arrivals-street-exit-1` connects the northward lower arrivals gallery to the lower passage under 33rd Street, a source-supported static Otis escalator and adjacent walking stair, and a supported private-way landing meeting the actual opposite sidewalk. Real floor, roof and paving openings are part of the construction; the route is not supplied by an invisible walking plane. This record does not yet establish publication.
+
+Raw and encoded geometry route checks each pass **6,252 samples**, covering the targeted forward/reverse routes and full/fallback variants. Minimum measured headroom is **1.885793 m**. These are scoped modeled-support and clearance checks, not a historical survey or native browser acceptance. The browser walking walkthrough was explicitly omitted at the user's request; no new native walking pass, FPS result, physical-mobile coverage or public-deployment verification is claimed.
+
+The [editable construction packet](../authoring/penn-station-1935/review/phase10/exit-construction/README.md) retains the V2 Blender addon, exact builders, registered route, primary references, cuts and raw CPU evidence. The [lighting archive](../authoring/penn-station-1935/lighting/phase10-exits/README.md) retains the accepted **4096 px / 128-sample Cycles Metal** bake, lossless raw/denoised HDR identities and transport evidence. Enameled-brick color, normal and roughness maps are Blender-generated PBR assets. Ten baked 15 W lamps, warm color and placement are interpreted appearance controls; no runtime punctual lights or authenticated historical photometry are claimed.
+
+Gibbs documents the under-street passage and midblock ascent, and the original Otis installation photograph supports the escalator beside a stone stair. The adjacent 8 ft clear stair width, 44 risers, full run, landing dimensions, profiles and absolute registration remain inferred. The adopted scene rise of 24.5 ft differs from the printed 25 ft escalator lift by 6 in. Opening-era evidence does not certify every 1935–1940 detail. The ambiguous northwestern service/fixture rectangle was rejected as a direct street-stair shortcut. Northern P9/LIRR connections, wider gallery finishing and the completed photorealistic station remain outside this checkpoint.
+
+# Previous first Platform 5 finish — 2 November 2026 (Melbourne)
+
+The records below describe earlier checkpoints and their separate acceptance/publication results.
 
 Runtime `9-p5-arrivals-finish-1` adds six smooth west handrail members, fourteen flat fascia members around the Platform 5 pair and two lower west-stair haunches. The upper haunch remains held. Primary photographs support open guards and exposed framing; the precise radius, fabrication and Platform 5 / 1935 registration are qualified reconstruction. [Editable source and replay](../authoring/penn-station-1935/review/phase9/p5-finish-study/README.md) and [encoding evidence](../authoring/penn-station-1935/review/phase9/p5-precision-repair/README.md) retain accepted and rejected results. The canonical base Blender file is unchanged; the versioned addon retains the new editable geometry.
 

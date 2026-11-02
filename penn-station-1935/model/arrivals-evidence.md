@@ -1,4 +1,18 @@
-# First eight ordinary arrival pairs
+# Arrivals onward route — Phase 10
+
+The current `10-arrivals-street-exit-1` checkpoint extends the ordinary lower Exit gallery northward into the lower passage under 33rd Street, then reaches a midblock ascent and a physical private-way landing connected to the opposite sidewalk. The Otis escalator is static; the adjacent stone stair is the walking route. Raw and encoded geometry checks each pass 6,252 targeted samples with minimum measured headroom 1.885793 m. The browser walking walkthrough was omitted at the user's request; no new native walking or deployment acceptance is asserted here.
+
+Gibbs' 1910 account, printed pp. 242/248/262, documents the passage and midblock escalator to the private street. Table 3 on p. 261 gives the escalator's 4 ft width and 25 ft lift. The original Otis advertisement in *Architecture*, November 1910, shows solid rounded paneled balustrades and a straight stone stair beside the escalator. The PRR's opening-era exit photograph corroborates a streetward stair family without proving its exact registration to a particular plan well. The ambiguous northwestern service/fixture rectangle was rejected as a direct street-stair location; no shortcut was inferred there.
+
+The current station's 24.5 ft rise is retained, explicitly 6 in short of the printed escalator lift. The adjacent 8 ft clear stair width, 44 risers, full run, landings, minor profiles and absolute placement are reconstructed. Opening-era installation evidence does not establish survival of every detail into 1935–1940. No exact later hardware inventory or moving-escalator simulation is claimed.
+
+Gibbs p. 254 supports enameled brick under 33rd Street. New Blender-generated 2K color/normal/roughness maps reconstruct its pale glaze, bond and module; those appearance values and mortar dimensions are inferred. Fresh 4096 px / 128-sample Cycles Metal lighting includes ten interpreted baked lamps, without claiming historical photometry.
+
+The [editable source and evidence packet](../../authoring/penn-station-1935/review/phase10/exit-construction/README.md) preserves the saved V2 Blender addon, exact route/builder files, original-source extracts, rejected-well qualification and physical opening checks. Its raw-export recovery record distinguishes verified external backups from repository-retained source. The [lighting source archive](../../authoring/penn-station-1935/lighting/phase10-exits/README.md) preserves accepted bake provenance. Broader P9/LIRR connections and the full platform/gallery finish remain unresolved.
+
+# Previous first eight ordinary arrival pairs
+
+The source record below predates Phase 10. Its temporary northern research boundary and unresolved streetward exit describe that earlier checkpoint, superseded only along the new route above.
 
 This source checkpoint reconstructs a separate platform-to-Exit route for the first eight ordinary platform correspondences. It does not complete P9, the Long Island arrangement, the streetward exits or the western Main floor correction.
 

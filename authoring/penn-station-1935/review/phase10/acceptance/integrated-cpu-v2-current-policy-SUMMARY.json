@@ -1,0 +1,119 @@
+{
+  "status": "PASS rawV2targetedroute4runs andcriticalsourceattributes",
+  "runs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-v2-current-policy-full-forward-v1/route-check.json",
+      "sha256": "93423f8ef43a82c9d352e0c0f667cc267e8997f352c3b9d113f8418b856efde6",
+      "variant": "full",
+      "direction": "forward",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 5,
+        "i": 115,
+        "x": -3.2,
+        "z": -85.24725308641976,
+        "floor": -2.0383381843566895,
+        "owner": "33rd Street public stone stair tread 32",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-v2-current-policy-full-reverse-v1/route-check.json",
+      "sha256": "f36465b7cc345e39bd8ad704f1f836067fe96a5b612d1f73a4321400c77ccf5a",
+      "variant": "full",
+      "direction": "reverse",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 3,
+        "i": 47,
+        "x": -3.2,
+        "z": -85.24725308641975,
+        "floor": -2.0383381843566895,
+        "owner": "33rd Street public stone stair tread 32",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-v2-current-policy-low-forward-v1/route-check.json",
+      "sha256": "236bdca7e66dd33b10a499e5e8851abca01daed08441c06568a142101383ebd1",
+      "variant": "low",
+      "direction": "forward",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 5,
+        "i": 115,
+        "x": -3.2,
+        "z": -85.24725308641976,
+        "floor": -2.0383381843566895,
+        "owner": "33rd Street public stone stair tread 32",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-v2-current-policy-low-reverse-v1/route-check.json",
+      "sha256": "45f482a79f087fe3a02a58107a94954f0667bcfe583110b04e3f8529959164dc",
+      "variant": "low",
+      "direction": "reverse",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 3,
+        "i": 47,
+        "x": -3.2,
+        "z": -85.24725308641975,
+        "floor": -2.0383381843566895,
+        "owner": "33rd Street public stone stair tread 32",
+        "headroom": 1.885793149471283
+      }
+    }
+  ],
+  "totalSamples": 6252,
+  "allInputsRehashedAfterRuns": true,
+  "inputs": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/construction-v1/candidate-v2/model-concourse-exits.glb": {
+      "bytes": 34802664,
+      "sha256": "3045d95af98afc40d7c9b64a569e98e82da9d7d6c5485d90ce07cfe4963711bb"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse.glb.gz": {
+      "bytes": 6698444,
+      "sha256": "45da359a564f02c599961807662bd8e6d14d3bdc9bf1d032261955cb37c6cefe"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context.glb.gz": {
+      "bytes": 506131,
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse-low.glb.gz": {
+      "bytes": 6388181,
+      "sha256": "e6f15fb4d5ea04501f320894e5216bac959b2e563a6c8f17bd91800f4d3ce8dd"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "bytes": 240418,
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context-low.glb.gz": {
+      "bytes": 686636,
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+    }
+  },
+  "script": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/check-integrated-route-v2-current-policy.mjs",
+    "sha256": "8e38d5cab69164fc08b5f0c882b3e5200042b14079748a3aa8fc3d95e0905124"
+  },
+  "criticalAttributeComparison": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-v2-source-comparison.json",
+    "sha256": "bd4e2143d4bb20421cf9ce4c81a87824558076f8f2dc73e697c8183c1e7b640c",
+    "objects": 51,
+    "positionsNormalsUV0IndicesWorldMatricesExact": true,
+    "commonObjectsExact": 80,
+    "qualification": "Ninewall/revealUV/positionchangesareintentional;previousmetal/wood/bronze/opalownersarebatchedinV2,notindividuallyclaimedunchangedbyname."
+  },
+  "currentContextPolicy": "ActualopaqueCitySidewalkStone/DarkGraniteCurb/PeriodAsphaltRoadSurfaceincluded;othercontext/trainsremainexcluded. No virtualfloors.",
+  "limits": "RawV2moduleisacceptedagainstcurrentfull/lowretainedgeometry. Finaloptimized/assembledencodedandnativebrowserchecksremainrequired. Centrelinepathonly,notfullstationorstructuralcertification."
+}

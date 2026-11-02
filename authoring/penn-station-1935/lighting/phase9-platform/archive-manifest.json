@@ -40,11 +40,22 @@
     "raw/lighting-platform-surfaces.json": {
       "sha256": "d82cdbee541ca1dcfae4373a0a34468aac6fa8ce2ed58bfe5114dba7e50a8787",
       "bytes": 8641
-    },
-    "raw/lighting-platform-surfaces-ao.png": {
-      "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f",
-      "bytes": 3782880
     }
   },
-  "totalSourceBytes": 21481852
+  "totalSourceBytes": 17698972,
+  "archivedGeneratedOutputs": {
+    "raw/lighting-platform-surfaces-ao.png": {
+      "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f",
+      "bytes": 3782880,
+      "retention": "Exact immutable Git blob and two verified external backups; omitted from current source tree",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitPath": "authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "gitBlob": "bbf179ec5dbeaa5f5fc63a70b83f2dcb53fbdbf9",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase10/storage/old-raw-ao-output-reserve.json"
+    }
+  },
+  "previousTotalSourceBytesBeforeRawAoReserve": 21481852,
+  "totalSourceBytesScope": "Physically retained files listed in files, excluding this manifest. Archived generated outputs are listed separately.",
+  "rawAoStorageNote": "Only the generated raw AO PNG was moved to exact Git-backed archival storage. HDR sources, retained denoised maps, runtime KTX2 and surface detail remain unchanged."
 }

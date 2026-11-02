@@ -6,3 +6,7 @@ The [historical source/raw reserve recovery](historical-source-reserve-recovery.
 
 
 The [historical Phase3 generated-QA image reserve](historical-phase3-generated-qa-reserve.json) ([recovery procedure](historical-phase3-generated-qa-recovery.md)) preserves 45 older render/browser images through immutable Git and verified external backups (46,973,507 bytes). JSON reports, archival references/comparison images, current Main/roof evidence, current Phase9 acceptance, runtime and all current source/lighting/material inputs remain present. This scope is separate from the previous 22-image receipt.
+
+## Final Phase 3 generated screenshot reserve
+
+Twelve additional obsolete generated QA PNGs (8,842,803 bytes) are archived through [exact immutable Git and independent backup recovery](historical-phase3-generated-qa-final-reserve.json). All three 0.18 calibration control images remain local and byte-exact. Existing rendered history links now use immutable source-commit URLs. Historical references, textures, HDRs, runtime assets and current previews are retained. This frees hosting storage without changing rendering quality or performance.

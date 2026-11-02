@@ -1,4 +1,19 @@
-# Pennsylvania Station — first Platform 5 finish
+# Pennsylvania Station — arrivals route to the street
+
+Runtime `10-arrivals-street-exit-1` adds the onward connection from the lower arrivals gallery: northward gallery extension → passage under 33rd Street → the source-supported midblock Otis escalator and adjacent stone stair → a physical private-way landing and the opposite sidewalk. The escalator is static; the adjacent stair provides the walking ascent. All spaces remain in the same continuously loaded station. This checkpoint is prepared for publication; deployment has not yet been verified.
+
+The passage has Blender-authored enameled-brick PBR surfaces and fresh 4096 px / 128-sample Cycles Metal illumination, including ten interpreted baked lamps. Raw and encoded route checks each pass 6,252 samples, with minimum measured headroom 1.885793 m. The browser walking walkthrough was omitted at the user's request; no new native walking, performance or public-deployment pass is claimed. See [current validation](VALIDATION.md), [editable construction and primary evidence](../authoring/penn-station-1935/review/phase10/exit-construction/README.md) and [lighting source](../authoring/penn-station-1935/lighting/phase10-exits/README.md).
+
+Opening-era plans document the passage and ascent; an original Otis photograph supports the paired escalator/stone-stair arrangement. The adjacent stair width, full run, minor profiles, finishes and registration remain inferred. The adopted rise is 24.5 ft against the source's 25 ft escalator lift; existing station levels were retained. Survival of every opening-era detail into 1935–1940 is unverified. An ambiguous northwestern plan rectangle was rejected as a direct street-stair shortcut. This is a bounded circulation checkpoint, with broader platform finishing and photographic realism still in progress.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Lower arrivals gallery ended at a research guard | A continuous modeled route through the north gallery and under-street passage to a real sidewalk | Give arrivals an onward exit |
+| Missing passage finish and ascent | Enameled-brick PBR, ten baked lamps and a photo-led static escalator beside walkable stone stairs | Reconstruct the documented architectural family |
+
+## Previous Platform 5 checkpoint
+
+The following record describes the earlier checkpoint. Its publication checks and remaining-work list predate the arrivals street connection above.
 
 This checkpoint adds paired flat fascia faces around Platform 5, smooth west-stair handrail transitions and two curved lower haunches authored in Blender. Fresh 4K/256-sample illumination follows the changed geometry. Source, physical contact and all 34 native walking steps pass with six continuously loaded zones and Walk as default. The strict local response observation remains recorded as failed. Independent public verification passes all 19 selected response bodies and eight native stair/gallery walking steps at `50f1933`. [Open the live update](https://stavreskimario.github.io/penn-station-1935/?preview=50f1933).
 

@@ -31,7 +31,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '9-p5-arrivals-finish-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '10-arrivals-street-exit-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -71,12 +71,27 @@ const irradianceCache = new Map();
 const reflectionCache = new Map();
 THREE.Cache.enabled = true;
 
+function registerExitViewpoint(route) {
+  const preset = route?.cameraPreset;
+  if (!preset) return;
+  for (const key of ['eye', 'target', 'walk', 'look']) {
+    if (!Array.isArray(preset[key]) || preset[key].length !== 3 || !preset[key].every(Number.isFinite)) throw new Error('The arrivals exit viewpoint is invalid.');
+  }
+  if (typeof preset.title !== 'string' || typeof preset.caption !== 'string') throw new Error('The arrivals exit description is invalid.');
+  framing.exits = { eye: preset.eye.slice(), target: preset.target.slice(), walk: preset.walk.slice(), look: preset.look.slice(), title: preset.title, caption: preset.caption };
+  if (!$('#arrivals-exit-viewpoint')) {
+    const button = document.createElement('button'); button.id = 'arrivals-exit-viewpoint'; button.type = 'button'; button.dataset.command = 'focus'; button.dataset.value = 'exits'; button.textContent = preset.title;
+    ($('.map-body > .map-places:last-child') || $('.map-body'))?.append(button);
+  }
+}
+
 async function loadManifest() {
   if (!manifestPromise) {
     manifestPromise = (async () => {
       const response = await fetch(assetURL('scene-manifest.json'));
       if (!response.ok) throw new Error('The architectural navigation data could not be loaded. Please try again.');
       modelManifest = await response.json();
+      registerExitViewpoint(modelManifest.arrivalsExitRoute);
       return modelManifest;
     })().catch(error => { manifestPromise = undefined; throw error; });
   }
@@ -89,6 +104,9 @@ async function loadManifest() {
 const vaultLightGlass = material => material?.name === 'SquareVaultLightGlass';
 const vaultLightConcrete = material => material?.name === 'ConcourseReinforcedVaultLightConcrete' || material?.name === 'ConcourseOpaqueCirculationConcrete';
 const collisionMaterialAt = hit => Array.isArray(hit.object.material) ? hit.object.material[hit.face.materialIndex] : hit.object.material;
+// Real pavement at the arrivals street exit participates in support/collision.
+// Other neighbourhood geometry retains its existing exclusion.
+const authoredContextPaving = material => ['CitySidewalkStone', 'DarkGraniteCurb', 'PeriodAsphaltRoadSurface'].includes(material?.name) && !material.transparent && !(material.transmission > 0);
 function decorativeCollisionMaterial(material) {
   if (vaultLightGlass(material) || closedArcadeGlazing(material?.name, material?.userData)) return false;
   return !material || material.transmission > 0 || material.transparent || /^(Railway (polished running head|worn steel web|embedded timber|tie plates|buffer timber)|Platform.?Nernst|ClockFace|Lettering)/i.test(material.name);
@@ -120,7 +138,7 @@ function buildCollisionIndex(model) {
     while (zone.parent && zone.parent !== model) zone = zone.parent;
     const materials = Array.isArray(object.material) ? object.material : [object.material];
     for (const material of materials) if (material && !vaultLightGlass(material) && !closedArcadeGlazing(material.name, material.userData) && (material.transmission > 0 || material.transparent)) ignoredGlazing.add(material.name);
-    if (zone.name === 'context' || zone.name === 'trains' || materials.every(decorativeCollisionMaterial)) {
+    if ((zone.name === 'context' && !materials.every(authoredContextPaving)) || zone.name === 'trains' || materials.every(decorativeCollisionMaterial)) {
       index.stats.excludedMeshes++;
       index.stats.excludedInstances += object.isInstancedMesh ? object.count : 0;
       return;
@@ -643,7 +661,8 @@ function Navigation({ current, model }) {
     // Departure stairs continue east beneath the adjoining passenger rooms.
     // Their lower levels belong to railway circulation even beyond the hall's
     // horizontal boundary; walking there must not select the waiting room.
-    const zone = feet.current < MAIN_FLOOR - .5 ? 'concourse' : camera.position.x > 18 ? 'exterior' : camera.position.x < -38 ? 'concourse' : 'waiting';
+    const atStreetOutside = feet.current > -.5 && (Math.abs(camera.position.z) > 65.532 || Math.abs(camera.position.x) > 119.4816);
+    const zone = atStreetOutside ? 'exterior' : feet.current < MAIN_FLOOR - .5 ? 'concourse' : camera.position.x > 18 ? 'exterior' : camera.position.x < -38 ? 'concourse' : 'waiting';
     if (zone !== state.view) update({ view: zone });
     invalidate();
   });
@@ -807,9 +826,9 @@ document.addEventListener('click', async event => {
     // button focus so they can continue through the viewpoint controls.
     if (event.detail > 0) $('#scene-root canvas')?.focus({ preventScroll: true });
   }
-  if (command === 'focus' && ['hotel', 'farley', 'platform', 'arrivals'].includes(value)) { stopTour(); const view = ['platform', 'arrivals'].includes(value) ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: value === 'arrivals' ? 'walk' : 'orbit', pose: state.pose + 1 }); }
+  if (command === 'focus' && ['hotel', 'farley', 'platform', 'arrivals', 'exits'].includes(value)) { stopTour(); const view = ['platform', 'arrivals', 'exits'].includes(value) ? 'concourse' : 'exterior'; update({ view, framing: value, entered: true, mode: ['arrivals', 'exits'].includes(value) ? 'walk' : 'orbit', pose: state.pose + 1 }); }
   if (command === 'reference' && framing[state.view]) update({ framing: state.view, mode: 'orbit', fov: framing[state.view].fov, pose: state.pose + 1 });
-  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: ['platform', 'arrivals'].includes(state.framing) ? state.framing : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
+  if (command === 'mode' && ['walk', 'orbit'].includes(value)) { update({ mode: value, framing: ['platform', 'arrivals', 'exits'].includes(state.framing) ? state.framing : '', entered: true, instant }); $('#scene-root canvas')?.focus({ preventScroll: true }); }
   if (command === 'light' && ['morning', 'afternoon', 'evening'].includes(value)) update({ light: value });
   if (command === 'annotations') update({ annotations: !state.annotations });
   if (command === 'tour') state.tour ? stopTour() : startTour();
@@ -817,7 +836,7 @@ document.addEventListener('click', async event => {
   if (command === 'sources') openDialog('#sources-dialog', button);
   if (command === 'help') openDialog('#help-dialog', button);
   if (command === 'retry') { useEnvironment.clear({ files: assetURL('sky.hdr') }); update({ revision: state.revision + 1, loading: true, error: '' }); }
-  if (command === 'reset') update({ mode: 'walk', framing: ['platform', 'arrivals'].includes(state.framing) ? state.framing : '', revision: state.revision + 1, fov: 50, annotations: false });
+  if (command === 'reset') update({ mode: 'walk', framing: ['platform', 'arrivals', 'exits'].includes(state.framing) ? state.framing : '', revision: state.revision + 1, fov: 50, annotations: false });
   if (command === 'fullscreen') {
     try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); } catch { $('#movement-help').textContent = 'Fullscreen is unavailable. The viewer still fills this window.'; }
   }

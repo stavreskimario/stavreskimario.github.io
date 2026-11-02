@@ -1,0 +1,300 @@
+{
+  "status": "PASS module texture/cache/geometry/pixel packaging; assembled/native/public acceptance remains required",
+  "scope": "New Blender exit module; no geometry simplification/quantization; exact retained KTX cache reuse where pre-encoding image bytes and transfer family match.",
+  "input": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/raw/model-concourse-exits.glb",
+    "sha256": "360ef9a74e941a1451047a31e4b21e554625cb9254b86698e9afb738f23165e8"
+  },
+  "commands": [
+    {
+      "args": [
+        "resize",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-normal-input.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-sized.glb",
+        "--width",
+        "2048",
+        "--height",
+        "2048"
+      ],
+      "status": 0,
+      "elapsedMs": 2411,
+      "stdout": "info: full-normal-input.glb (45.1 MB) → full-sized.glb (36.19 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-cache.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-normals.glb",
+        "--slots",
+        "*normal*",
+        "--level",
+        "4",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 11951,
+      "stdout": "info: full-cache.glb (58.46 MB) → full-normals.glb (38.75 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-normals.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/full-textured.glb",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 2081,
+      "stdout": "info: full-normals.glb (38.75 MB) → full-textured.glb (34.63 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "resize",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-normal-input.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-sized.glb",
+        "--width",
+        "512",
+        "--height",
+        "512"
+      ],
+      "status": 0,
+      "elapsedMs": 506,
+      "stdout": "info: low-normal-input.glb (40.01 MB) → low-sized.glb (3.6 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-cache.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-normals.glb",
+        "--slots",
+        "*normal*",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 560,
+      "stdout": "info: low-cache.glb (4.61 MB) → low-normals.glb (3.59 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-normals.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package-work/low-textured.glb",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 740,
+      "stdout": "info: low-normals.glb (3.59 MB) → low-textured.glb (3.38 MB)\n",
+      "stderr": ""
+    }
+  ],
+  "assets": [
+    {
+      "file": "model-concourse.glb",
+      "bytes": 906188,
+      "sha256": "5c81e6efd8d5985c64f9275912c7207c0b290a145ee0cb31530dddfea57af716",
+      "nodes": 5,
+      "meshes": 5,
+      "materials": 8,
+      "textures": [
+        {
+          "uri": "textures/b4a5b7165636466257b3.ktx2",
+          "bytes": 2348682
+        },
+        {
+          "uri": "textures/ddcf2fd7dbaf55312d00.ktx2",
+          "bytes": 1515423
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/22ec9e77de77cf98bd6a.ktx2",
+          "bytes": 2355148
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/71508f85f3c325538f05.ktx2",
+          "bytes": 3139363
+        },
+        {
+          "uri": "textures/00da3728f8d51a3696a3.ktx2",
+          "bytes": 33250
+        },
+        {
+          "uri": "textures/9a43cb8e4de4127a4ea6.ktx2",
+          "bytes": 147650
+        },
+        {
+          "uri": "textures/2aa7778a264d10851bba.ktx2",
+          "bytes": 22938
+        },
+        {
+          "uri": "textures/1e3fdca78d540b4c4a2d.ktx2",
+          "bytes": 2893842
+        },
+        {
+          "uri": "textures/e0cadb7862053a61b888.ktx2",
+          "bytes": 5398821
+        },
+        {
+          "uri": "textures/eb9e3d30e65af46f13f5.ktx2",
+          "bytes": 3643443
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 7,
+      "geometryProofSha256": "411b0e6f4d55de8b3bb275734d7cf4d5ebd83a483f1fd51477ea84fb191373c3"
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 906188,
+      "sha256": "1a092be64b1ffb662b7a4008a3900be4ddace81d216a072af459a27571a22ad0",
+      "nodes": 5,
+      "meshes": 5,
+      "materials": 8,
+      "textures": [
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/e017da17bfe8d12ca1ad.ktx2",
+          "bytes": 116743
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/1175f64bd9bfd85e57fd.ktx2",
+          "bytes": 244187
+        },
+        {
+          "uri": "textures/1f4069ad87e0ae46381e.ktx2",
+          "bytes": 13157
+        },
+        {
+          "uri": "textures/7d92ed7c51d7088bc0a1.ktx2",
+          "bytes": 46608
+        },
+        {
+          "uri": "textures/eedc5ffa9931125d2006.ktx2",
+          "bytes": 17251
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/a80e1021c4333a711be4.ktx2",
+          "bytes": 334014
+        },
+        {
+          "uri": "textures/2382d016a2ae9c07bc3a.ktx2",
+          "bytes": 239656
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 7,
+      "geometryProofSha256": "a27ca5f3b712510b40023baf535ce8961d87520ba069c21eb3b6d428981d849c"
+    }
+  ],
+  "cache": {
+    "entries": 25,
+    "inputs": [
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-textured.glb",
+        "normalLevel": 4,
+        "scalarSha256": "b37daa80d28b16568704657acd65fbc2651722eb5844bbf90389bb2f337f92c0",
+        "encodedSha256": "ba2e6bb41bbb9d5b41f5d3318b6a0dd247092852ad33b9766bab0efad2fdafa2"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-low-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-low-textured.glb",
+        "normalLevel": 1,
+        "scalarSha256": "05d42fb3f440fbfa94e575b074c88ebcfc8978121bef60e91104104ea9ec332a",
+        "encodedSha256": "9f804ead0afd020fc39453e8b9509e4cff4c6bc1460c55eedb3166837ef21849"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-textured.glb",
+        "normalLevel": 4,
+        "scalarSha256": "f5403d88edf8e5d6a9575a39953728daebabaa72b6791cfda8a1bf9f602f52bb",
+        "encodedSha256": "967d8ed2e2fcbb116c78b516caf33ef49c4bbd705d902a1905cc0d22b84c48ec"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-low-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-low-textured.glb",
+        "normalLevel": 1,
+        "scalarSha256": "0279cbee230545fd95ee28bb85558c9254c02c2e8cf3415499b5eb27126d3a37",
+        "encodedSha256": "319b403e933ce5a2d29aa65e650e7163c2ead83d16d60c6e6e16551de4c92dc5"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-textures-v1/scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-textures-v1/textured.glb",
+        "normalLevel": null,
+        "scalarSha256": "c624a0408e0c16f31100cceaad6ffb61162664b38f4a42702e8017caa7e148dd",
+        "encodedSha256": "3b0be543dc565a512a6db9e77c729f1b81b2ee985977511675379dbe442ea25b"
+      }
+    ],
+    "skipped": []
+  },
+  "radiance": {
+    "sourceReportSha256": "e8535acbc6ca5ed8c9dcb8f6375d498bb2a29f068dc15f527c0dbc7d9755412f",
+    "scale": 2,
+    "onlyMetadataScaleAdjusted": true
+  },
+  "inputSha256After": "360ef9a74e941a1451047a31e4b21e554625cb9254b86698e9afb738f23165e8",
+  "helpers": {
+    "package-exits-lossless.mjs": "1f7d9307217ed40457b7883a9bfd08739750747f768cc6bed18ba0d4e5e0bfa7",
+    "encode-lossless-meshopt.mjs": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f",
+    "reuse-texture-cache.mjs": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+  }
+}

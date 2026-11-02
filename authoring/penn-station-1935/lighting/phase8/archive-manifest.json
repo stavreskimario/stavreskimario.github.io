@@ -22,10 +22,6 @@
       "bytes": 6850275,
       "sha256": "ea130156867e91588d32f34afa57d0527b8a61591bb1314a174cfbcf1fc9a697"
     },
-    "raw/lighting-concourse-arrivals-ao.png": {
-      "bytes": 10681935,
-      "sha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2"
-    },
     "raw/lighting-concourse-arrivals-sky.hdr.gz": {
       "bytes": 41829335,
       "sha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca"
@@ -243,11 +239,26 @@
       "sha256": "d20cc034924b53d48117491cbdb748053f36d0549b8efcc50cb88608735b4c49"
     }
   },
-  "totalSourceBytes": 95366296,
+  "totalSourceBytes": 84684361,
   "rawSourceSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
   "bakeReportSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
   "retainedDecodedHdrSha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd",
   "authoringDirectory": "authoring/penn-station-1935/lighting/phase8/denoised",
   "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase8/raw",
-  "finalBrowserAcceptanceClaimed": false
+  "finalBrowserAcceptanceClaimed": false,
+  "archivedGeneratedOutputs": {
+    "raw/lighting-concourse-arrivals-ao.png": {
+      "bytes": 10681935,
+      "sha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+      "retention": "Exact immutable Git blob and two verified external backups; omitted from current source tree",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitPath": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "gitBlob": "c9fc1b4789340d7f790f0a6340c29415564c02a2",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase10/storage/old-raw-ao-output-reserve.json"
+    }
+  },
+  "previousTotalSourceBytesBeforeRawAoReserve": 95366296,
+  "totalSourceBytesScope": "Physically retained files listed in files, excluding this manifest. Archived generated outputs are listed separately.",
+  "rawAoStorageNote": "Only the generated raw AO PNG was moved to exact Git-backed archival storage. HDR sources, retained denoised maps, runtime KTX2 and surface detail remain unchanged."
 }

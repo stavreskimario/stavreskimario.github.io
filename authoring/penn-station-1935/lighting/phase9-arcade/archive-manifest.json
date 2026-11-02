@@ -22,10 +22,6 @@
       "bytes": 4447603,
       "sha256": "8fcf5b17dc2b19053070171097d6676b8a0ce55bdaf02bd16481af8316acc66b"
     },
-    "raw/lighting-arcade-enclosure-ao.png": {
-      "bytes": 8515064,
-      "sha256": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335"
-    },
     "raw/lighting-arcade-enclosure-sky.hdr.gz": {
       "bytes": 21970595,
       "sha256": "2b730440b2babfbcb020d11fa0144be0abaf451bf52358ad1113d3e3d0b6be35"
@@ -87,11 +83,26 @@
       "sha256": "0f45fa17060f6b3664f91aed27c7fb4e4878a0370c5d8f9fcca93f551aecd694"
     }
   },
-  "totalSourceBytes": 67015156,
+  "totalSourceBytes": 58500092,
   "rawSourceSha256": "2d1cb314546bc500a7cebb725fbe6fa38d9aaf931e1d45ad6ac17435492f0d21",
   "bakeReportSha256": "70ed5bfc29092e440c4acd8b7031e720944529dc774e2a7aca9b01b489675c1e",
   "retainedDecodedHdrSha256": "d4c6ff0c0dd94ec954a1bab2d366427a8f4af093e7993dbf58d5b331daf71e9f",
   "authoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/denoised",
   "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase9-arcade/raw",
-  "finalBrowserAcceptanceClaimed": false
+  "finalBrowserAcceptanceClaimed": false,
+  "archivedGeneratedOutputs": {
+    "raw/lighting-arcade-enclosure-ao.png": {
+      "bytes": 8515064,
+      "sha256": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335",
+      "retention": "Exact immutable Git blob and two verified external backups; omitted from current source tree",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitPath": "authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+      "gitBlob": "3c7bc5d21d35c04015deff9020338c7a641a8b46",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase10/storage/old-raw-ao-output-reserve.json"
+    }
+  },
+  "previousTotalSourceBytesBeforeRawAoReserve": 67015156,
+  "totalSourceBytesScope": "Physically retained files listed in files, excluding this manifest. Archived generated outputs are listed separately.",
+  "rawAoStorageNote": "Only the generated raw AO PNG was moved to exact Git-backed archival storage. HDR sources, retained denoised maps, runtime KTX2 and surface detail remain unchanged."
 }

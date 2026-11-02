@@ -1,0 +1,174 @@
+{
+  "status": "PASS actual CPU denoise, zero clipping, exact pixels and lossless cached module package; native/physical/sourcearchive acceptance separate",
+  "primarySha256": "3045d95af98afc40d7c9b64a569e98e82da9d7d6c5485d90ce07cfe4963711bb",
+  "rawBakeReportSha256": "da7e3152325bec3ad4c47b8473408d47d9a2db50b04e03eb95f9a99ae9d00e29",
+  "radianceScale": 2,
+  "rawRadianceMaximum": 0.9646090865135193,
+  "actualPointLights": 10,
+  "denoiseReportSha256": "e8535acbc6ca5ed8c9dcb8f6375d498bb2a29f068dc15f527c0dbc7d9755412f",
+  "packageProofSha256": "bc255e87c7b3edd7d4fa0f674d2234e8a320f28eeedc352f73749a0f7b40809b",
+  "seconds": 38.948330879211426,
+  "outputs": {
+    "lighting-concourse-exits-denoise.json": {
+      "sha256": "e8535acbc6ca5ed8c9dcb8f6375d498bb2a29f068dc15f527c0dbc7d9755412f",
+      "bytes": 2151
+    },
+    "model-concourse-low.glb": {
+      "sha256": "1a092be64b1ffb662b7a4008a3900be4ddace81d216a072af459a27571a22ad0",
+      "bytes": 906188
+    },
+    "model-concourse.glb": {
+      "sha256": "5c81e6efd8d5985c64f9275912c7207c0b290a145ee0cb31530dddfea57af716",
+      "bytes": 906188
+    },
+    "lighting-concourse-exits-sky-low.webp": {
+      "sha256": "86c5a1f54740a49cc512a3c4e829edeac278b16826254f2408aeb87c91d59843",
+      "bytes": 94950
+    },
+    "module-packaging-proof.json": {
+      "sha256": "bc255e87c7b3edd7d4fa0f674d2234e8a320f28eeedc352f73749a0f7b40809b",
+      "bytes": 10639
+    },
+    "lighting-concourse-exits-sky.webp": {
+      "sha256": "a406c3fa1f7583168614c3e82efcb409f12b3df6fe1d4829d5b9ee134863435a",
+      "bytes": 3138388
+    }
+  },
+  "packingAssets": [
+    {
+      "file": "model-concourse.glb",
+      "bytes": 906188,
+      "sha256": "5c81e6efd8d5985c64f9275912c7207c0b290a145ee0cb31530dddfea57af716",
+      "nodes": 5,
+      "meshes": 5,
+      "materials": 8,
+      "textures": [
+        {
+          "uri": "textures/b4a5b7165636466257b3.ktx2",
+          "bytes": 2348682
+        },
+        {
+          "uri": "textures/ddcf2fd7dbaf55312d00.ktx2",
+          "bytes": 1515423
+        },
+        {
+          "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
+          "bytes": 3849773
+        },
+        {
+          "uri": "textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "bytes": 3746211
+        },
+        {
+          "uri": "textures/22ec9e77de77cf98bd6a.ktx2",
+          "bytes": 2355148
+        },
+        {
+          "uri": "textures/4f684d7c526a22f95162.ktx2",
+          "bytes": 3935940
+        },
+        {
+          "uri": "textures/71508f85f3c325538f05.ktx2",
+          "bytes": 3139363
+        },
+        {
+          "uri": "textures/00da3728f8d51a3696a3.ktx2",
+          "bytes": 33250
+        },
+        {
+          "uri": "textures/9a43cb8e4de4127a4ea6.ktx2",
+          "bytes": 147650
+        },
+        {
+          "uri": "textures/2aa7778a264d10851bba.ktx2",
+          "bytes": 22938
+        },
+        {
+          "uri": "textures/1e3fdca78d540b4c4a2d.ktx2",
+          "bytes": 2893842
+        },
+        {
+          "uri": "textures/e0cadb7862053a61b888.ktx2",
+          "bytes": 5398821
+        },
+        {
+          "uri": "textures/eb9e3d30e65af46f13f5.ktx2",
+          "bytes": 3643443
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 7,
+      "geometryProofSha256": "411b0e6f4d55de8b3bb275734d7cf4d5ebd83a483f1fd51477ea84fb191373c3"
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 906188,
+      "sha256": "1a092be64b1ffb662b7a4008a3900be4ddace81d216a072af459a27571a22ad0",
+      "nodes": 5,
+      "meshes": 5,
+      "materials": 8,
+      "textures": [
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/e017da17bfe8d12ca1ad.ktx2",
+          "bytes": 116743
+        },
+        {
+          "uri": "textures/bd6e833fb5e2ae466373.ktx2",
+          "bytes": 251809
+        },
+        {
+          "uri": "textures/64fbedc702550bebf27f.ktx2",
+          "bytes": 250215
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
+          "bytes": 260085
+        },
+        {
+          "uri": "textures/1175f64bd9bfd85e57fd.ktx2",
+          "bytes": 244187
+        },
+        {
+          "uri": "textures/1f4069ad87e0ae46381e.ktx2",
+          "bytes": 13157
+        },
+        {
+          "uri": "textures/7d92ed7c51d7088bc0a1.ktx2",
+          "bytes": 46608
+        },
+        {
+          "uri": "textures/eedc5ffa9931125d2006.ktx2",
+          "bytes": 17251
+        },
+        {
+          "uri": "textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "bytes": 681
+        },
+        {
+          "uri": "textures/a80e1021c4333a711be4.ktx2",
+          "bytes": 334014
+        },
+        {
+          "uri": "textures/2382d016a2ae9c07bc3a.ktx2",
+          "bytes": 239656
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 7,
+      "geometryProofSha256": "a27ca5f3b712510b40023baf535ce8961d87520ba069c21eb3b6d428981d849c"
+    }
+  ],
+  "helperSha256": "0163cd132dfdd74cb7f6ad549fc8f99bf501a15c0db95cb302d3ecf971b141e2"
+}

@@ -19,7 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("input", type=Path)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--zone", required=True)
-parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "platform-surfaces", "arcade-enclosure"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
+parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "concourse-exits", "platform-surfaces", "arcade-enclosure"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
 parser.add_argument("--resolution", type=int, default=2048)
 parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
@@ -43,7 +43,7 @@ if args.artifact_name:
     if args.zone != expected_zone or args.surface_group != "all":
         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
-if artifact_zone in {"arcade-enclosure", "concourse-arrivals"} and not args.source_visibility_proof:
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits"} and not args.source_visibility_proof:
     raise ValueError("Arcade/arrivals transport requires the original source render-visibility proof")
 if args.preserve_authored_uv1 and (artifact_zone not in {"arcade-enclosure", "concourse-arrivals"} or args.surface_group != "all"):
     raise ValueError("Preserve-authored-UV1 is restricted to the arcade or Main0 arrivals authoring artifact")
@@ -93,7 +93,7 @@ for specification in args.occluder:
             obj.location.z += offset
         if zone == "trains" and obj.parent not in imported:
             obj.location.y -= 8.690045261
-    if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
+    if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits"}:
         from restore_imported_visibility import restore_source_render_visibility
         bpy.context.view_layer.update()
         source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof, frame_offset_z=-frames[args.zone]))
@@ -411,7 +411,7 @@ report = {
 }
 if arcade_normal_integrity is not None:
     report["arcadeNormalIntegrity" if artifact_zone == "arcade-enclosure" else "authoredNormalIntegrity"] = arcade_normal_integrity
-if artifact_zone in {"arcade-enclosure", "concourse-arrivals"}:
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits"}:
     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
 if authored_uv_integrity is not None:
     report["authoredUvIntegrity"] = authored_uv_integrity

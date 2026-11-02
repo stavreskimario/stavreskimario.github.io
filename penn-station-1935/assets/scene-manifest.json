@@ -114,7 +114,7 @@
         46.545500000000004,
         35.2044
       ],
-      "longAxis": "East–west",
+      "longAxis": "East\u2013west",
       "eaveAboveStreet": 0.15,
       "ridgeAboveStreet": 1.5,
       "monitorAboveStreet": 2.25,
@@ -702,6 +702,94 @@
       "floor": 0,
       "geometryBasedFloorRayRequired": true,
       "surface": "Permission bounds only; support and collision require actual authored mesh intersections."
+    },
+    {
+      "label": "Northward continuation of ordinary Exit gallery",
+      "bounds": [
+        -73.19999694824219,
+        -55.25630187988281,
+        -70.22799682617188,
+        -36.0
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd passage west landing",
+      "bounds": [
+        -73.19999694824219,
+        -55.25630187988281,
+        -79.37200164794922,
+        -70.2280044555664
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd passage retained deck north infill",
+      "bounds": [
+        -55.25630187988281,
+        -47.75630187988281,
+        -79.37199401855469,
+        -72.38999938964844
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd Street lower passenger passage",
+      "bounds": [
+        -47.75630187988281,
+        0.3799999952316284,
+        -79.37200164794922,
+        -70.2280044555664
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway north upper landing",
+      "bounds": [
+        -8.170000076293945,
+        0.3799999952316284,
+        -90.5,
+        -89.0
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway east walkout flank",
+      "bounds": [
+        -1.4500000476837158,
+        0.3799999952316284,
+        -89.0,
+        -87.78239440917969
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway west service flank",
+      "bounds": [
+        -8.170000076293945,
+        -7.150000095367432,
+        -89.0,
+        -87.78239440917969
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd Street photo-led public stair beside Otis escalator",
+      "bounds": [
+        -4.4192,
+        -1.9808000000000001,
+        -89.0,
+        -76.065
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Actual44treads and shared landing receivers; no virtual floor."
     }
   ],
   "mainStair": {
@@ -3014,6 +3102,21 @@
       "row": 8,
       "steps": 13,
       "route": "arrival"
+    },
+    {
+      "label": "33rd Street adjacent public stair",
+      "start": [
+        -3.2,
+        -7.4676,
+        -76.065
+      ],
+      "end": [
+        -3.2,
+        -0.0023649,
+        -89.0
+      ],
+      "width": 2.4384,
+      "steps": 44
     }
   ],
   "representativePlatform": {
@@ -3325,15 +3428,15 @@
   ],
   "uncertain": [
     "Nominalwholefootprint784x430versus788ft9x430ft6source outside-edge datums",
-    "Smallmainfloorgradients319ft11to320ft0¾;Seventhcurb registrationandexactriserdistribution",
+    "Smallmainfloorgradients319ft11to320ft0\u00be;Seventhcurb registrationandexactriserdistribution",
     "Upper-window E421.25 control crosses circular base features; their identity and exact sill offset remain unverified; glazing uses31m local approximation",
-    "Guérinmaps exactcolour andcompleteauthenticatedartworkreproductions",
+    "Gu\u00e9rinmaps exactcolour andcompleteauthenticatedartworkreproductions",
     "Clearfloor277/103versusroom314ft4/108ft8 endportico registration",
     "Individual1935 operationalsigns/timetables notinvented",
     "Materialcoloursrequirephysicalsamplecalibration;originalproceduralmapsarefallbacksourceassets",
     "Francis143ft highest-ceiling datum adopted; Gibbs150ft ceiling narrative remains conflicting",
     "Exact coffer count and360mm relief remain interpreted; nominal10ft module is documented by Gibbs255",
-    "Eastern street-level skylight pitch and exact room/roof registration are inferred, distinct from documented152ft8½x115ft6 plan dimensions",
+    "Eastern street-level skylight pitch and exact room/roof registration are inferred, distinct from documented152ft8\u00bdx115ft6 plan dimensions",
     "Detailed truss profiles and joint locations follow structural roles and primary photographs, not a full fabrication survey",
     "Concourse window dimensions, sash counts, reveals, lower office frontage and minor profiles are photographic reconstructions, not a complete fabrication survey",
     "Broad visible central open-court square-prism flooring is reconstructed from documented construction and photograph/plan registration; precise extent,pitch,module and underside mould profile remain inferred, with concrete circulation/bearing zones retained",
@@ -3425,7 +3528,7 @@
       "steps": 28,
       "riser": 0.1524,
       "tread": 0.38100000000000006,
-      "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
     },
     {
       "side": "south",
@@ -3456,7 +3559,7 @@
       "steps": 28,
       "riser": 0.1524,
       "tread": 0.38100000000000006,
-      "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
     }
   ],
   "waitingEndStairs": [
@@ -3489,7 +3592,7 @@
       "steps": 28,
       "riser": 0.1524,
       "tread": 0.38100000000000006,
-      "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
     },
     {
       "side": "south",
@@ -3520,7 +3623,7 @@
       "steps": 28,
       "riser": 0.1524,
       "tread": 0.38100000000000006,
-      "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
     }
   ],
   "waitingRoomBounds": {
@@ -3571,7 +3674,7 @@
       {
         "id": "S10",
         "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002223",
-        "pages": "254–256",
+        "pages": "254\u2013256",
         "controls": "Bedford stone; reinforced-concrete square interior prisms without lead rings"
       },
       {
@@ -30865,8 +30968,8 @@
         "timberCount": 31280,
         "plateCount": 31280,
         "railFootCount": 42,
-        "maximumTimberFoundationErrorMetres": 9.5367431640625e-7,
-        "maximumTimberPlateErrorMetres": 9.5367431640625e-7,
+        "maximumTimberFoundationErrorMetres": 9.5367431640625e-07,
+        "maximumTimberPlateErrorMetres": 9.5367431640625e-07,
         "maximumRailPlateErrorMetres": 0,
         "passed": true
       },
@@ -30875,7 +30978,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30883,7 +30986,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30891,7 +30994,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30899,7 +31002,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30907,7 +31010,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30915,7 +31018,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30923,7 +31026,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30931,7 +31034,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30939,7 +31042,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30947,7 +31050,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30955,7 +31058,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30963,7 +31066,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30971,7 +31074,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30979,7 +31082,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30987,7 +31090,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -30995,7 +31098,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31003,7 +31106,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31011,7 +31114,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31019,7 +31122,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31027,7 +31130,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31035,7 +31138,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       },
       {
@@ -31043,7 +31146,7 @@
         "surface": "documented core exit-slab underside",
         "meshFlangeTop": -3.5004000663757324,
         "ceilingMountHeight": -3.5004,
-        "contactErrorMetres": 6.637573246592865e-8,
+        "contactErrorMetres": 6.637573246592865e-08,
         "passed": true
       }
     ],
@@ -31433,8 +31536,8 @@
       "Opening-era railway plan, not a verified1935 track inventory; no invented revision date",
       "Literal numbered topology preserved, including platform9/10 sharing track18",
       "Individual asymmetric end contours were manually traced from the native raster as segmented envelopes; rounded coping profiles, exact end stations and centimetre fabrication remain uncertain (approximately3m end-tip tolerance).",
-      "Native platform9/10 edge widths remain outside the rounded narrative20–40ft range; conflict retained, not silently normalized.",
-      "Track1–4 eastern stub ends verified; station tracks continue straight only within this partial platform study",
+      "Native platform9/10 edge widths remain outside the rounded narrative20\u201340ft range; conflict retained, not silently normalized.",
+      "Track1\u20134 eastern stub ends verified; station tracks continue straight only within this partial platform study",
       "East and west switch throats, tunnel junctions and storage sidings are deliberately truncated; no schematic fan is presented as surveyed switchwork",
       "1935 AC overhead contact arrangement and third-rail sectioning need later primary drawings"
     ],
@@ -31501,7 +31604,7 @@
         "controls": [
           "PDF27: gently inclined stairs begin at Main gates and reach individual platforms.",
           "PDF28: descent ends on designated platform; intermediate auxiliary concourse is for incoming passengers/exit only.",
-          "PDF33 caption Train Platforms—Concourse Above: long straight stairs with intervening landings visible; no certification of exact flight counts or dimensions."
+          "PDF33 caption Train Platforms\u2014Concourse Above: long straight stairs with intervening landings visible; no certification of exact flight counts or dimensions."
         ]
       },
       {
@@ -31521,7 +31624,7 @@
       "offsetEastOfGate": 0.19999999999999574,
       "status": "Paired shaft/cabinet/card/numeral assemblies on supported flanks; exact placement interpreted for physical circulation, separate from stair gate/aperture registration."
     },
-    "registrationUncertainty": "Existing actual pier baseplates occupyX[-50.048698,-48.834301]; nominalX−50 stair envelopes intersect rows3/5/7/9. Gate moved east to−48.4 to preserve real current structural geometry. This unresolved~1.6m plan/frame discrepancy must remain visible in provenance.",
+    "registrationUncertainty": "Existing actual pier baseplates occupyX[-50.048698,-48.834301]; nominalX\u221250 stair envelopes intersect rows3/5/7/9. Gate moved east to\u221248.4 to preserve real current structural geometry. This unresolved~1.6m plan/frame discrepancy must remain visible in provenance.",
     "dimensionsStatus": [
       "Three flights of15 risers, their exact runs and1.2m landings are coordinated construction choices constrained by source orientation, photographs, adopted elevations and physical clearances. They are not copied dimensions.",
       "Departure landing heights are deliberately independent of provisional arrival Exit level; no source forces them to coincide.",
@@ -31614,12 +31717,12 @@
     "uncertainty": [
       "3ft major angle envelope is primary-supported; corner orientation is diagnosed mechanically, not a complete shop-detail tracing.",
       "Minor0.62m envelope remains interpreted;16originallegs at4close compound-edge piers are explicitly deferred.",
-      "Opening region primary-supported±0.75m;3.8m is removed wall-cell height, not measured unobstructed clearance. Retained sill iron crosses slightly below it.",
+      "Opening region primary-supported\u00b10.75m;3.8m is removed wall-cell height, not measured unobstructed clearance. Retained sill iron crosses slightly below it.",
       "Arrivals and platform mappings retain earlier limitations.",
-      "Exact southern jambs are reconstructed; raster region has at least±0.75m placement uncertainty. The3.8m removed wall-cell height is not an unobstructed passage height.",
+      "Exact southern jambs are reconstructed; raster region has at least\u00b10.75m placement uncertainty. The3.8m removed wall-cell height is not an unobstructed passage height.",
       "Approximately1.6m departure gate/pier registration difference remains unresolved; platform numbering is an existing interpreted fit.",
       "Western Main floor extent/open-to-tracks void and the separate lower arrivals corridor require coordinated follow-up. This correction does not verify the earlier whole-court prism extent.",
-      "Opening-era evidence does not prove every detail remained unchanged in1935–1940."
+      "Opening-era evidence does not prove every detail remained unchanged in1935\u20131940."
     ]
   },
   "arrivalAccess": {
@@ -31638,7 +31741,7 @@
         "id": "S10",
         "url": "https://ascelibrary.org/doi/10.1061/TACEAT.0002223",
         "controls": [
-          "Printed242–244: separate Exit arrivals on both sides of platforms; Fig3 provides individual plan positions.",
+          "Printed242\u2013244: separate Exit arrivals on both sides of platforms; Fig3 provides individual plan positions.",
           "Printed252: Exit60ft width; plateLXXXIV Fig2: two straight flights and intermediate landing family.",
           "Printed262: eleven lifts, eight Exit-only and three Main-reaching; individual identities are not established here."
         ]
@@ -34198,7 +34301,7 @@
       "All6northfixturesretainactualcloseddeck;16newpositionsinferredbutphysicallyseated, completecurrentruntimeinstanceproofpending.",
       "Newfloorfinishneutralinterpreted, notverifiedhistoricalmarble.",
       "No globalilluminationbake/nativeproductionbrowseracceptanceperformedbythisworker.",
-      "Registration retains at least ±1m uncertainty; minor stair/member dimensions are coordinated reconstruction choices.",
+      "Registration retains at least \u00b11m uncertainty; minor stair/member dimensions are coordinated reconstruction choices.",
       "Existing levels, railway, departure records and earlier evidence retain exact values; earlier provisional arrival statements remain chronological source evidence."
     ]
   },
@@ -34215,7 +34318,7 @@
       8
     ],
     "frame": "Main-relative exported geometry, runtime Y offset -4.2672m; all registered top outlines/heights and21tracks unchanged.",
-    "source": "Francis and O’Brien, ASCE69 printed201–202, Fig6. Opening-era construction evidence does not certify an unchanged1935inventory.",
+    "source": "Francis and O\u2019Brien, ASCE69 printed201\u2013202, Fig6. Opening-era construction evidence does not certify an unchanged1935inventory.",
     "documented": {
       "edgeSlabThicknessMetres": 0.2032,
       "centreThicknessRangeMetres": [
@@ -34234,12 +34337,12 @@
       "Joint width/depth,aggregate,colour,roughness andsurfacewear",
       "Existingcommonfoundation retained; fullsubgrade/drain/hatch schedule unfinished"
     ],
-    "lighting": "Independent platform-surfaces4096/512 sky atlas; newmoduleFloat32Meshopt attributes andindices losslesslycompressed. OlderP9–11lighting/staticprobes retained.",
+    "lighting": "Independent platform-surfaces4096/512 sky atlas; newmoduleFloat32Meshopt attributes andindices losslesslycompressed. OlderP9\u201311lighting/staticprobes retained.",
     "sourceProofSha256": "5a979afe6864894a6274045b7efcb15d16847cc97bb07c725ad2a7d9b910fd70",
     "bakedModuleSha256": "b53e75469857e37f5a559407fffc2ebc588a84abc52813d932703714e0645586",
     "losslessModuleSha256": "f2adad98c904f54d8b3b06787f364cc8d96698ed1fec541a95f31882cced06db",
     "limits": [
-      "P9–11 unchanged",
+      "P9\u201311 unchanged",
       "Nofullcanopy/westernMainfloorcut/northernstairshift",
       "No structural-capacity certificate or1:1historicalclaim"
     ]
@@ -34326,7 +34429,7 @@
           -10.5,
           -7
         ],
-        "source": "S2 plate300 widened vestibule plan; half-width10.5m ±0.4m manual registration, current public centre paving exact.",
+        "source": "S2 plate300 widened vestibule plan; half-width10.5m \u00b10.4m manual registration, current public centre paving exact.",
         "existingMeshUntouched": false
       },
       {
@@ -34345,7 +34448,7 @@
           7,
           10.5
         ],
-        "source": "S2 plate300 widened vestibule plan; half-width10.5m ±0.4m manual registration, current public centre paving exact.",
+        "source": "S2 plate300 widened vestibule plan; half-width10.5m \u00b10.4m manual registration, current public centre paving exact.",
         "existingMeshUntouched": false
       }
     ],
@@ -34356,12 +34459,12 @@
       "basis": "Protected original paving and independently sampled flat floor at |Z|6.95 bridge the100mm permission interval; actual floor rays remain mandatory."
     },
     "closedGlazingCollisionMaterial": "ArcadeShopAndClerestoryGlass",
-    "heightSource": "Independent071930photoarcfit, two40/45ftnormalisations; at least±.6mspring/±.8mcrownqualification. Notoldwallheight.",
+    "heightSource": "Independent071930photoarcfit, two40/45ftnormalisations; at least\u00b1.6mspring/\u00b1.8mcrownqualification. Notoldwallheight.",
     "limits": [
       "Connected source candidate: Main stair enclosure, Ionic loggia, formal arcade and widened vestibule; finite backed restaurant entrance bays, not full operational restaurants.",
       "OutsideporticoX111.1816..119.4816untouched; stairs/allpublicpavingandMain/arrivalsgeometryprotected.",
       "Photographedsmallarcade/loggiastepsremainheld; currentflatthresholdretainedexplicitly.",
-      "Sevenbaychainmanualplantrace±5pxandglobalregistrationuncertainty; no tenantpositionsor1935storefrontscheduleclaimed.",
+      "Sevenbaychainmanualplantrace\u00b15pxandglobalregistrationuncertainty; no tenantpositionsor1935storefrontscheduleclaimed.",
       "Finewindowprofile/revealdepth/membersectionsandshopdisplayrecessgeometryinferred; noauthenticoperatingretailinteriors.",
       "Fiveupperwindowsperwallhavematchedrealcourtapertures; twoendbaysfaceexistingannexspace, nofakeemissivedaylight.",
       "No new practical wall lamps or GI/reflection-probe update yet; old lightmaps must not be applied as final.",
@@ -34371,5 +34474,541 @@
       "Geometryclosureproofdoesnotestablishphysicalroutes/headroom/lighting/nativebrowseracceptance."
     ],
     "status": "Evidence-led opening-era reconstruction with qualified photographic registration; geometry, lighting and browser acceptance are separate records."
+  },
+  "arrivalsExitRoute": {
+    "schema": 1,
+    "status": "Blender construction source; mapped lighting, encoded and native acceptance pending",
+    "routeSha256": "5efaf82cb59f76ffc3efdf509f67ac6861d5dccbe4fedd55cc9478e1e17e2704",
+    "materialsSourceSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "builderSha256": "4bd6cf995d95abc2e54fe04aea4a917a5ede8b129ffe0efd63c3de385f974623",
+    "objectCount": 103,
+    "practicalLights": [
+      {
+        "name": "Exit pendant 1",
+        "floorPosition": [
+          -64.2,
+          -7.4676,
+          -43.0
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 2",
+        "floorPosition": [
+          -64.2,
+          -7.4676,
+          -54.0
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 3",
+        "floorPosition": [
+          -64.2,
+          -7.4676,
+          -65.0
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 4",
+        "floorPosition": [
+          -67.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 5",
+        "floorPosition": [
+          -57.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 6",
+        "floorPosition": [
+          -47.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 7",
+        "floorPosition": [
+          -37.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 8",
+        "floorPosition": [
+          -27.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 9",
+        "floorPosition": [
+          -17.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      },
+      {
+        "name": "Exit pendant 10",
+        "floorPosition": [
+          -9.0,
+          -7.4676,
+          -74.8
+        ],
+        "mountY": -4.7072,
+        "watts": 15.0,
+        "qualification": "Location/photometry interpreted; pendant family source-photographed."
+      }
+    ],
+    "surfaceProfiles": [
+      {
+        "material": "TravertineArrivalsExitRoute",
+        "asset": "Travertine009",
+        "tileMetres": 1.5,
+        "normalStrength": 0.035,
+        "roughnessFactor": 1.0,
+        "appearanceRevision": 4,
+        "colourProfile": "RomanTravertine",
+        "interiorShaftFinish": null
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsExitRoute",
+        "asset": "Marble018",
+        "tileMetres": 1.8,
+        "normalStrength": 0.018,
+        "roughnessFactor": 0.48,
+        "appearanceRevision": 4,
+        "colourProfile": "HonedMarble",
+        "interiorShaftFinish": null
+      },
+      {
+        "material": "InteriorGraniteArrivalsExitRoute",
+        "asset": "Granite005A",
+        "tileMetres": 1.0,
+        "normalStrength": 0.025,
+        "roughnessFactor": 1.0,
+        "appearanceRevision": 4,
+        "colourProfile": "InteriorFine",
+        "interiorShaftFinish": "Bounded 0.30\u20130.48 response interpreted from primary photographs; no measured polish/roughness specification"
+      }
+    ],
+    "coordinateSpace": "world-glTF",
+    "modelCoordinateSpace": "Main0-glTF: browserYoffset=-4.2672",
+    "passages": [
+      {
+        "name": "Northward continuation of ordinary Exit gallery",
+        "start": [
+          -73.19999694824219,
+          -7.467599868774414,
+          -53.11399841308594
+        ],
+        "end": [
+          -55.25630187988281,
+          -7.467599868774414,
+          -53.11399841308594
+        ],
+        "width": 34.227999999999994,
+        "length": 17.943695168193827,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "33rd passage west landing",
+        "start": [
+          -73.19999694824219,
+          -7.467599868774414,
+          -74.80000305175781
+        ],
+        "end": [
+          -55.25630187988281,
+          -7.467599868774414,
+          -74.80000305175781
+        ],
+        "width": 9.144000000000005,
+        "length": 17.943695168193827,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "33rd passage retained deck north infill",
+        "start": [
+          -55.25630187988281,
+          -7.467599868774414,
+          -75.88099670410156
+        ],
+        "end": [
+          -47.75630187988281,
+          -7.467599868774414,
+          -75.88099670410156
+        ],
+        "width": 6.981999999999999,
+        "length": 7.5,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "33rd Street lower passenger passage",
+        "start": [
+          -47.75630187988281,
+          -7.467599868774414,
+          -74.80000305175781
+        ],
+        "end": [
+          0.3799999952316284,
+          -7.467599868774414,
+          -74.80000305175781
+        ],
+        "width": 9.144000000000005,
+        "length": 48.13630396868485,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "Privateway north upper landing",
+        "start": [
+          -8.170000076293945,
+          -0.0023648999631404877,
+          -89.75
+        ],
+        "end": [
+          0.3799999952316284,
+          -0.0023648999631404877,
+          -89.75
+        ],
+        "width": 1.5,
+        "length": 8.55000005353961,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "Privateway east walkout flank",
+        "start": [
+          -1.4500000476837158,
+          -0.0023648999631404877,
+          -88.39119720458984
+        ],
+        "end": [
+          0.3799999952316284,
+          -0.0023648999631404877,
+          -88.39119720458984
+        ],
+        "width": 1.2176000000000045,
+        "length": 1.8300000217833805,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "Privateway west service flank",
+        "start": [
+          -8.170000076293945,
+          -0.0023648999631404877,
+          -88.39119720458984
+        ],
+        "end": [
+          -7.150000095367432,
+          -0.0023648999631404877,
+          -88.39119720458984
+        ],
+        "width": 1.2176000000000045,
+        "length": 1.0199999554017,
+        "clearHeight": 2.7604
+      },
+      {
+        "name": "Otis escalator and adjacent33rd Street public stair",
+        "start": [
+          -3.2,
+          -7.4676,
+          -76.065
+        ],
+        "end": [
+          -3.2,
+          -0.0023649,
+          -89.0
+        ],
+        "escalatorCenterX": -6.0,
+        "escalatorClearWidth": 1.2192,
+        "stairClearWidth": 2.4384,
+        "risers": 44,
+        "riser": 0.1696644340909091,
+        "going": 0.29397727272727275,
+        "inclinationDegrees": 29.990728273818274,
+        "staticEscalator": true,
+        "rootBuildsRealLowerAndUpperLandings": true
+      }
+    ],
+    "sources": [
+      {
+        "id": "Gibbs242-248-254-261-262",
+        "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+        "scope": "Lower33rd passage, enamelledbrick, privateway escalator,4ftclearwidth,25ftlift"
+      },
+      {
+        "id": "OtisPennArchitecture1910vii",
+        "url": "https://usmodernist.org/AM/AM-1910-11.pdf#page=4",
+        "scope": "Actual Penn installation with solidwoodenroundedbalustrades andadjacent stone staircase"
+      },
+      {
+        "id": "GibbsFig3Exit",
+        "sourceSummarySha256": "04f0fc1bd7f2c74d936ca276824d7e0fa473d1318a780524b73ac9cd398e9773",
+        "scope": "Registered lowerpassage andexternalmidblockprojection"
+      }
+    ],
+    "qualifications": [
+      "Opening-era primary evidence; exact1935retention unverified.",
+      "Fullflight inclination30degrees,riser count44,adjacentstairwidth andminorprofiles inferred.",
+      "WorkingExit-to-localstreetrise7.4652351m differsdocumented25ftlift byapproximately155mm; existingstationlevels retained.",
+      "Globalplanregistrationatleast\u00b11m; fullflight andlandings reconstructedwithindocumentedroute/projection.",
+      "Pavingapertures,actualreceiversandphysicalwalkingmustpassbeforepublication.",
+      "Newmembersections interpreted, not structuralcapacitycertification.",
+      "Enamelled-brick family documented; brick bond/module/hue/glaze and lamp spacing/photometry interpreted.",
+      "Street well reveals are flush with actualpaving; street/contextapertureownershiprecorded separately."
+    ],
+    "waypoints": [
+      {
+        "label": "Existing arrivals gallery",
+        "position": [
+          -64.2,
+          -7.4676,
+          -33.0
+        ]
+      },
+      {
+        "label": "North gallery continuation",
+        "position": [
+          -64.2,
+          -7.4676,
+          -68.0
+        ]
+      },
+      {
+        "label": "Turn into33rd Street passage",
+        "position": [
+          -64.2,
+          -7.4676,
+          -74.8
+        ]
+      },
+      {
+        "label": "Midblock passage",
+        "position": [
+          -20.0,
+          -7.4676,
+          -74.8
+        ]
+      },
+      {
+        "label": "Ascent foot approach",
+        "position": [
+          -3.2,
+          -7.4676,
+          -74.8
+        ]
+      },
+      {
+        "label": "Public stone stair foot",
+        "position": [
+          -3.2,
+          -7.4676,
+          -76.065
+        ]
+      },
+      {
+        "label": "Public stone stair head",
+        "position": [
+          -3.2,
+          -0.0023649,
+          -89.0
+        ]
+      },
+      {
+        "label": "Privateway upper landing",
+        "position": [
+          -3.2,
+          -0.0023649,
+          -89.7
+        ]
+      },
+      {
+        "label": "Upper landing east turn",
+        "position": [
+          -0.5,
+          -0.0023649,
+          -89.7
+        ]
+      },
+      {
+        "label": "33rd Street north sidewalk",
+        "position": [
+          -0.5,
+          -0.0023649,
+          -86.0
+        ]
+      }
+    ],
+    "cameraPreset": {
+      "eye": [
+        -4.5,
+        -4.8,
+        -72.5
+      ],
+      "target": [
+        -4.5,
+        -2.5,
+        -84
+      ],
+      "walk": [
+        -3.2,
+        -5.7876,
+        -73.8
+      ],
+      "look": [
+        -3.2,
+        -3,
+        -84
+      ],
+      "title": "The 33rd Street exit",
+      "caption": "From the lower arrivals gallery to street level"
+    },
+    "outputs": {
+      "arrivals-exit-addon.blend": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+      "model-concourse-exits.glb": "3045d95af98afc40d7c9b64a569e98e82da9d7d6c5485d90ce07cfe4963711bb"
+    },
+    "permissionBounds": [
+      {
+        "label": "Northward continuation of ordinary Exit gallery",
+        "bounds": [
+          -73.19999694824219,
+          -55.25630187988281,
+          -70.22799682617188,
+          -36.0
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "33rd passage west landing",
+        "bounds": [
+          -73.19999694824219,
+          -55.25630187988281,
+          -79.37200164794922,
+          -70.2280044555664
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "33rd passage retained deck north infill",
+        "bounds": [
+          -55.25630187988281,
+          -47.75630187988281,
+          -79.37199401855469,
+          -72.38999938964844
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "33rd Street lower passenger passage",
+        "bounds": [
+          -47.75630187988281,
+          0.3799999952316284,
+          -79.37200164794922,
+          -70.2280044555664
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "Privateway north upper landing",
+        "bounds": [
+          -8.170000076293945,
+          0.3799999952316284,
+          -90.5,
+          -89.0
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "Privateway east walkout flank",
+        "bounds": [
+          -1.4500000476837158,
+          0.3799999952316284,
+          -89.0,
+          -87.78239440917969
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "Privateway west service flank",
+        "bounds": [
+          -8.170000076293945,
+          -7.150000095367432,
+          -89.0,
+          -87.78239440917969
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Permission only; actual authored geometry supplies support."
+      },
+      {
+        "label": "33rd Street photo-led public stair beside Otis escalator",
+        "bounds": [
+          -4.4192,
+          -1.9808000000000001,
+          -89.0,
+          -76.065
+        ],
+        "geometryBasedFloorRayRequired": true,
+        "surface": "Actual44treads and shared landing receivers; no virtual floor."
+      }
+    ],
+    "stairs": [
+      {
+        "label": "33rd Street adjacent public stair",
+        "start": [
+          -3.2,
+          -7.4676,
+          -76.065
+        ],
+        "end": [
+          -3.2,
+          -0.0023649,
+          -89.0
+        ],
+        "width": 2.4384,
+        "steps": 44
+      }
+    ],
+    "routeSpecificationSha256": "a68aad0162068698b478298d8b5e1d7f7e7332f06231dd11398be42fd1281a3a",
+    "supportPolicy": "Every walking foot requires actual authored mesh support and body/head clearance; no analytic exit-route height planes."
   }
 }
