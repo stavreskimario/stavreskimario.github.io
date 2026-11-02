@@ -1,0 +1,507 @@
+{
+  "schema": 1,
+  "status": "PASS: actual Blender CPU imports preserve all opaque/unowned states and all seven material graphs",
+  "baseSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "assembledInputSha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
+  "baseObjects": 3904,
+  "candidateObjects": 3920,
+  "unownedObjectsExact": 3898,
+  "ownedRailFramesAndVisibilityExact": true,
+  "allSevenPbrGraphsPackedImagesPropertiesExact": true,
+  "architectureAllBuffersUv0Uv1NormalsMatricesVisibilityExact": true,
+  "newObjectFramesBlenderMain0": {
+    "P5Curve west lower haunch side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -78.33699798583984
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -11.527631759643555
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -6.156351566314697
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Curve west lower haunch side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -78.33699798583984
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -13.807632446289062
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -6.156351566314697
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east flight1 side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east flight1 side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east flight2 side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east flight2 side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east gallery fascia": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east landing side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish east landing side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west flight1 side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west flight1 side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west flight2 side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west flight2 side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west gallery fascia": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west landing side-minus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "P5Finish west landing side-plus": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "preservedArchitectureState": {
+    "positions": "824052804ca329da3ba4819725acf5765852fe2ca28358817057356a5d065010",
+    "loopVertexIndices": "3017de08730862d22512d4a5838a77577fc9ef9144087ef0fbafddb82a48b5dd",
+    "polygonLoopStarts": "be6b44677c4d3c7f3bc9938751d97efc1024f54278c03754b94d8e2a2dce31cb",
+    "polygonLoopCounts": "9d46e113140ab7829af90b930498aa52796c81205b7fe55417a83de7794ee619",
+    "materialIndices": "822a6b8ef365d405c52913e86441ba965418e6a4dd0fe7b348f3953131b5f724",
+    "smoothFlags": "6f7021b3448ac0c8111a76275ec7e5618a56d6abdbdd8e79e823d80b44ffb784",
+    "cornerNormals": "eb03fd3bd409209dceec2bbeea4f24d4002bb41e1da19e25fc7f007ed11c8dc3",
+    "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+    "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+    "UV0": "a7ea73bc79c2be879c3d2777889bf9dd03347a79b69376ee06277a1e7470326f",
+    "UV1": "c4661cb0f18e98a7c225b8f3be85b7d7ada596b14baa4aa6f669430d00a14e61"
+  },
+  "materialHashes": {
+    "TravertineArrivalsStairStone": "170ed517ca290ae4c0145d1e6d67778db1e1cdc454afca5daf86e6c82bf7ae22",
+    "PublicFloorMarbleArrivalsRetainedNorth": "8e219de51dfb62312de514404589ec34d00c1c9fc5b56772fd0067af5a3bf945",
+    "ConcourseOpaqueArrivalsConcrete": "0d509e2417b7423e161806f166578255a8bbfe6ea3a637d0695cd84d875ec1e7",
+    "ConcourseOpaqueArrivalsUpperSupports": "4626409d8000362450cba2eadc57a045ee421735e06ac5d9bf081b12edf3cbb1",
+    "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e",
+    "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7",
+    "PaintedStructuralIronArrivalsGroutJacket": "1eeabf26c04141021a7381870bdbffd7a89f3c1e80631ca7921aabfd3e85d563"
+  },
+  "elapsedSeconds": 6.877055832999758,
+  "ownedRailRealizedFaceMaterialBindings": {
+    "Arrival row5 west Arrival intermediate landing top rail": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    },
+    "Arrival row5 west Arrival intermediate landing top rail.001": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    },
+    "Arrival row5 west west flight1 rounded top rail": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    },
+    "Arrival row5 west west flight1 rounded top rail.001": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    },
+    "Arrival row5 west west flight2 rounded top rail": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    },
+    "Arrival row5 west west flight2 rounded top rail.001": {
+      "slots": [
+        "PaintedStructuralIronArrivalsGuard"
+      ],
+      "usedMaterials": [
+        "PaintedStructuralIronArrivalsGuard"
+      ]
+    }
+  },
+  "allNewIronFaceBindingsCorrect": true,
+  "noRenderBakeExportExecuted": true,
+  "blenderVersion": "4.3.0",
+  "generatorSha256": "fa1e320ec4682d279f0ae5da14330e2c52125081ef657e76f11de0b79d65d463"
+}

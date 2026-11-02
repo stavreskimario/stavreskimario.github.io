@@ -1,18 +1,17 @@
 {
   "schema": 1,
-  "status": "EXACT FULL BLEND OMITTED FROM HEAD; verified external source derivative retained",
   "source": {
-    "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/editable.blend",
-    "bytes": 6746252,
-    "sha256": "d33f8381f88228f86b431f4017d8cad10dceef5f6e62054084fbc96e245b7cf6"
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/editable-curves.blend",
+    "bytes": 6696874,
+    "sha256": "ece0c8bb92427407b2d977fe82f19c94d84aaf4a6c2c8761fd53760b8f60d98b"
   },
-  "losslessExternalBackup": {
-    "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-source-handoff-v1/measurements/editable.blend.gz",
-    "bytes": 6706956,
-    "sha256": "006cbe7cf26775009154393af34a216713752e78725593f395eb94f69bbb0087",
-    "decodedByteExact": true
+  "verifiedLosslessBackup": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/editable-curves-full.blend.gz",
+    "bytes": 6659574,
+    "sha256": "467fd9eefad0246a084ad03b8267d2917a05ff3c7049797538348932c4705dda",
+    "decodedBytesExact": true
   },
-  "reason": "Already compressed full-scene derivative adds6.7MB; its complete geometry/materials are preserved by the combined GLB, exact base-byte recovery, exact editable14-object addon.blend and replay builder. The complete scene can be regenerated and validated by logical component states. No exact full.blend binary replay is claimed.",
-  "sourceNotDeleted": true,
-  "rootOrRuntimeWrites": false
+  "exactFullBlendOmittedFromRepositoryProposal": true,
+  "logicalReplayOnly": true,
+  "originalNotDeleted": true
 }

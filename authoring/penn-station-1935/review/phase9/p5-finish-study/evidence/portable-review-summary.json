@@ -1,15 +1,19 @@
 {
-  "schema": 1,
-  "status": "PASS: source preservation,14closed/in-envelope appearance skins,positive mating contacts,no exposed coplanar duplicates,and88retained source adjacencies",
-  "scope": "Actual portable import-path adaptation was executed against the exact recovered base and byte-identical rebuilt combined GLB. All original strict geometry/contact logic is unchanged.",
-  "sourceSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
-  "candidateSha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
-  "newSkinObjects": 14,
-  "closedComponents": 18,
-  "literalFullContactRules": 42,
-  "allContactRules": 42,
-  "adjacencies": 88,
-  "detailedExternalReviewSha256": "a7e9155acb365c6a260e1229eb639b550910748c27204f84f70f30ac9a7ded7b",
-  "portableReviewerSha256": "477275eef840acc8d8355b439f1ddfcdce687de5fbd0d3f3e263e1de57f2c4f6",
-  "failures": []
+  "status": "PASS: actual contacts/closed geometry/normals/curve-envelope/profile/old adjacency source gates",
+  "candidateSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+  "counts": {
+    "closed": 8,
+    "normals": 8,
+    "flatContactRules": 42,
+    "haunches": 2,
+    "adjacencies": 88,
+    "railReceivers": 12,
+    "profileSamples": 562,
+    "meshJoints": 4
+  },
+  "failures": [],
+  "receiptSha256": "d18033d182d21fb248eb6f0db5cfde7eeff751433dde8ea454403e712a14b5f0",
+  "archiveSha256": "2928d4aa6f71dd1ae2b49800127c221c5e65352d2cd180080e29fd22bfa3b9f5",
+  "portableMathThresholdsUnchanged": true,
+  "noGpuRootCanonicalWrites": true
 }

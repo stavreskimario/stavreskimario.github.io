@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "status": "PASS qualified external source geometry and actual evaluated-material review; NOT LIVE/PROMOTED",
+  "candidate": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/west-p5-curved-study.glb",
+    "sha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+    "bytes": 15900100
+  },
+  "manifest": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/curve-study-manifest.json",
+    "sha256": "d776f343b9b7d40716601bc5bd0c0904702e5b131834c438659f43176513e347"
+  },
+  "editableBlendSha256": "ece0c8bb92427407b2d977fe82f19c94d84aaf4a6c2c8761fd53760b8f60d98b",
+  "ownership": {
+    "originalSourceNodeTransformsExact": 4061,
+    "unownedOriginalMeshesExact": 4055,
+    "ownedRailMeshes": 6,
+    "newLowerHaunchNodes": 2,
+    "flatFacesRetainedExact": 14,
+    "originalMaterialsImagesNormalUvIndexBytesExact": true
+  },
+  "geometry": {
+    "closedPositiveMeshes": 8,
+    "finiteOutwardNormalMeshes": 8,
+    "minimumGeometricCornerNormalDot": 0.9948338614198264,
+    "oldFlatContactRules": 42,
+    "newHaunchContactRules": 4,
+    "haunchEndRulesUsingExistingNumericalBoundaryAllowance": 2,
+    "minimumHaunchCoverageFraction": 0.9999999368520031,
+    "oldActualAdjacencies": 88,
+    "actualRailPostFinialChecks": 12,
+    "interiorProfileSamplesTwoSided": 562,
+    "maximumInteriorProfileRadiusResidualM": 6.174084481204434e-07,
+    "complete32VertexEndpointCaps": 12,
+    "maximumEndpointPlaneDeviationM": 6.61874248779077e-06,
+    "maximumEndpointVertexRadiusDeviationM": 2.742509806835658e-06,
+    "actualConnectingProfileRings": 4,
+    "maximumConnectingRingHausdorffM": 7.62939453125e-06,
+    "withinRailAnalyticC1Junctions": 8,
+    "maximumAnalyticPositionResidualM": 0,
+    "maximumAnalyticDerivativeResidualM": 1.3322676295501878e-14,
+    "minimumExistingP5HorizontalBoundaryMarginM": 1.207386765666893
+  },
+  "restoredFinialContact": [
+    {
+      "finial": "Arrival row5 west Arrival newel round finial.004",
+      "rail": "Arrival row5 west Arrival intermediate landing top rail",
+      "witnessMain0": [
+        -78.08449905395508,
+        -4.461973079633859,
+        13.702632427215576
+      ],
+      "verticalSolidOverlapM": 0.002212745761578816,
+      "finialSurfaceDistanceM": 0.001106372880789408,
+      "railSurfaceDistanceM": 0.0010777462481796353,
+      "commonSolidInteriorRadiusM": 0.0010777462481796353,
+      "bothActualClosedMeshInteriors": true
+    },
+    {
+      "finial": "Arrival row5 west Arrival newel round finial.006",
+      "rail": "Arrival row5 west Arrival intermediate landing top rail.001",
+      "witnessMain0": [
+        -78.08449905395508,
+        -4.461973079566623,
+        11.632631778717041
+      ],
+      "verticalSolidOverlapM": 0.002212745896050805,
+      "finialSurfaceDistanceM": 0.0011063729480254025,
+      "railSurfaceDistanceM": 0.001077775296188327,
+      "commonSolidInteriorRadiusM": 0.001077775296188327,
+      "bothActualClosedMeshInteriors": true
+    }
+  ],
+  "evaluatedMaterials": {
+    "all6ActualEvaluatedRailFacesUseOriginalGuard": true,
+    "all6RawRailPrimitiveBindingsMatchOriginalGuard": true,
+    "all7MaterialGraphsExact": true,
+    "identityCheck": "Evaluated material.original resolves to the actual original .blend material datablock, rather than Python/evaluated-ID identity or name-only comparison."
+  },
+  "rawWalking": {
+    "eachRetainedContext": {
+      "routes": 96,
+      "stairSamples": 39696,
+      "galleryConnectors": 4,
+      "gallerySamples": 9084,
+      "fixtureRays": 80,
+      "failures": 0
+    },
+    "bothFullAndFallbackContexts": true,
+    "all13InputFilesRehashed": true,
+    "newEncodedLodsTested": false
+  },
+  "retainedIssuesAndQualifications": [
+    "V1 top-strip Float32 normal jitter failed strict contact. The failure is retained. Local haunch coordinates corrected the geometry without changing any contact threshold.",
+    "V2 with inferred 250 mm bends separated finials .004/.006 from the rails by 1.719 mm. Inferred 150 mm bends restore 2.213 mm vertical overlap and approximately 1.078 mm common solid-interior radius; protected balls and posts were not moved.",
+    "Rays exactly on Float32 cap planes are ill-conditioned. Original failures remain retained. Interior probes require two distinct tube sides; all 12 endpoints use complete 32-vertex profile and closed-cap witnesses. Root explicitly accepted this endpoint-test approach.",
+    "The white default GN authoring output is corrected by explicit SetMaterial. Actual evaluated faces and raw primitive bindings were independently checked; preservation of seven global material graphs alone was insufficient.",
+    "The 150 mm radius, haunch polynomial and 8\u201368 mm lateral loft are inferred appearance choices. Primary photographs establish a family, not an authenticated P5 camera or exact dimensions/fabrication. The upper haunch and broader stair/rail profiles remain held.",
+    "This is a raw source study. Root visual acceptance, fresh GI/AO, full/fallback encoding, native browser/performance and publication are separate gates. The adopted platform-footprint margin does not certify historical registration or engineering train clearance."
+  ],
+  "archives": [
+    {
+      "file": "mesh-review.json.gz",
+      "bytes": 13214,
+      "sha256": "c4d78755cc2dcad0fe6a1dd8a64bd59d58f0065feb21a6feab1006ab19c1cda4",
+      "decodedBytes": 173230,
+      "decodedSha256": "514796958d696093cb1b11cf393359677d56169906eaf3324a5a68b5f35af6b1"
+    },
+    {
+      "file": "ownership.json.gz",
+      "bytes": 1426,
+      "sha256": "dd241019b865d94af1cdf2895f4694200c27329cc2141919d10d0364233540f8",
+      "decodedBytes": 3597,
+      "decodedSha256": "f48081e9e232f0841b84cd6adceb013a5f1e7503021714406989e59ad4acea68"
+    },
+    {
+      "file": "evaluated-material.json.gz",
+      "bytes": 1142,
+      "sha256": "48cfa5694b7440353d74346d9986f4a0434361a0e472acc3adc4ec38a78d6928",
+      "decodedBytes": 6035,
+      "decodedSha256": "687f47b23e086ed8114f376fdddb956183493df6dd9cd43a7f24cfa1b36643f1"
+    },
+    {
+      "file": "finial-contact-margin.json.gz",
+      "bytes": 457,
+      "sha256": "ec9cbaeb4b7221b5c61719c2671492eb802fe09296e990cdaf35bd62ced527eb",
+      "decodedBytes": 1215,
+      "decodedSha256": "7c3baa893404e2073685cdfe29847b796900e3d9cfa81566eeac18950262b6b2"
+    },
+    {
+      "file": "platform-envelope.json.gz",
+      "bytes": 989,
+      "sha256": "3c483917d5705dd379fc59897b2fc5f7c7a72c60473b0df9bee9d64c1b3d95c4",
+      "decodedBytes": 3911,
+      "decodedSha256": "37917492804851847fecd113709d00c7faaabcea030901c21a94100b136464e6"
+    },
+    {
+      "file": "raw-walking-provenance.json.gz",
+      "bytes": 1400,
+      "sha256": "701ad1e450c28254bc329512417ead9659f78d9b1b2961d2ba3e151bde690f84",
+      "decodedBytes": 4412,
+      "decodedSha256": "a7bfb0b715e2122a84c3c6218aac29721a4e5c2dbb76484be6b95f4825a66fce"
+    },
+    {
+      "file": "held-arrivals-p5-curvature-review-v1-contact-first-v1.json.gz",
+      "bytes": 1958,
+      "sha256": "e72e6c36ba5e049ca5ee0eb3b65cd51cf9d9e5126db4bd5f840c96991ff35d06",
+      "decodedBytes": 20459,
+      "decodedSha256": "5a28fa6dc7b7731f46c7fbc638d524b62dad27ed95a74df2caa7161baa8e771b",
+      "qualification": "Preserved diagnostic/failure; not promoted acceptance."
+    },
+    {
+      "file": "held-candidate-v2-mesh-review.json.gz",
+      "bytes": 12428,
+      "sha256": "ffcf75236c40d48f8d006fdb94a14c30e646d2a37233f63d88867479359bb3bb",
+      "decodedBytes": 165272,
+      "decodedSha256": "da7dc0f6928b40dd8cccbfd7c56bd69388446f860cbefe410c29ed36b3b88a9b",
+      "qualification": "Preserved diagnostic/failure; not promoted acceptance."
+    },
+    {
+      "file": "held-candidate-v2-caps-mesh-review.json.gz",
+      "bytes": 13176,
+      "sha256": "21b8de76be285e48c355d1ce374e5d965256572837e8080482f2201ee626456c",
+      "decodedBytes": 171753,
+      "decodedSha256": "6a517a13bc73934c0d93d5dba722f0e1d990a0efe12a901daab0eea65f2c7a41",
+      "qualification": "Preserved diagnostic/failure; not promoted acceptance."
+    },
+    {
+      "file": "held-arrivals-p5-curvature-review-v1-haunch-plane-diagnosis-v1.json.gz",
+      "bytes": 946,
+      "sha256": "d66527b18fd5641f66bd6e0288d2f5e20b8095a1e8e943623de2ba34286e0664",
+      "decodedBytes": 8529,
+      "decodedSha256": "dd271fbc848d2f842a10e785efaf5a3f01b370f21b6a6a9f6bf08bb5e49be39c",
+      "qualification": "Preserved diagnostic/failure; not promoted acceptance."
+    },
+    {
+      "file": "held-arrivals-p5-curvature-review-v1-rails-diagnosis-v2.json.gz",
+      "bytes": 1843,
+      "sha256": "ee16a08c731ef7523e34ce7d46881f730054319df5da019ad498d37fde9d136e",
+      "decodedBytes": 18083,
+      "decodedSha256": "5da2d83f4ddd95a0b51c5f456840e6ae9473b0191859a0c4e221a87e085c9274",
+      "qualification": "Preserved diagnostic/failure; not promoted acceptance."
+    }
+  ],
+  "reviewCode": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/verify-ownership.py",
+      "bytes": 4039,
+      "sha256": "679ccab062aeeab47ddd756ec3206028a2aaf370fb18c175e7803b9c4b324821"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/review-curves-with-cap-rings.mjs",
+      "bytes": 14515,
+      "sha256": "cf0e2f0cd4df3cb430d7484154bc79259f325ebdefed23f770c8809b6914a523"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/measure-finial-margin.mjs",
+      "bytes": 3168,
+      "sha256": "371c03a757fa288c4300ae11b7d988c5ad58973c6ac6791a8ed0abc69f65d4ba"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/audit-evaluated-material.py",
+      "bytes": 4217,
+      "sha256": "e6796765159a4d6cfd8d1614322de0923c23ba3fc55a6ff049251b8c7ad00c84"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/check-platform-envelope.mjs",
+      "bytes": 2569,
+      "sha256": "e10652470c40cda41ec7f4b6e8abbc198c881545b0be7b64bfac24a2a52db58b"
+    }
+  ],
+  "rootWrites": false,
+  "gpuOperations": 0
+}

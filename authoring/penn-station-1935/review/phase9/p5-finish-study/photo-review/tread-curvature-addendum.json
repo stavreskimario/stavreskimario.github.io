@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T03:47:24.858995+00:00",
+  "status": "BOUNDED SOURCE ADDENDUM; HISTORICAL FULL STEP COUNT UNVERIFIED",
+  "sourceGeometry": {
+    "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-silhouette-review-v1/tread-inspection/geometry-tread-census.json",
+    "sha256": "979d26117e908b0b8201e1833ea52a5da071b3cbec507263e72dba52154057f4",
+    "rawSourceSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+    "independentlyCountedFlightMeshes": 32,
+    "horizontalTreadSurfaceCount": 400,
+    "perStairInternalGoings": [
+      13,
+      12
+    ],
+    "perStairInternalGoingTotal": 25,
+    "generatorRisers": [
+      14,
+      13
+    ],
+    "generatorRiserTotal": 27,
+    "terminalSurfacesSeparate": true
+  },
+  "photographSelectedVisibleSegments": [
+    {
+      "crop": "071937-left-arrival-stair-detail.png",
+      "family": "central lower arrival stair, lower flight",
+      "clearSelectedInteriorEdges": 11,
+      "markedInspection": "tread-inspection/left-lower-arrival-flight-marked.png",
+      "selectedCoordinates": "tread-inspection/left-lower-arrival-flight-selected.json",
+      "extentInSourceCrop": [
+        245,
+        475,
+        645,
+        825
+      ],
+      "qualification": "Conservative traceable interior front-edge segment only. Foreground steelwork and endpoint/terminal surfaces prevent an authenticated whole-flight count here."
+    },
+    {
+      "crop": "071937-right-arrival-stair-detail.png",
+      "family": "central lower arrival stair, upper flight",
+      "clearSelectedInteriorEdges": 7,
+      "markedInspection": "tread-inspection/right-upper-arrival-flight-marked.png",
+      "selectedCoordinates": "tread-inspection/right-upper-arrival-flight-selected.json",
+      "extentInSourceCrop": [
+        450,
+        390,
+        850,
+        730
+      ],
+      "qualification": "Clear interior front edges only. The lower newel/rails obscure additional candidate edges; top gallery/landing boundaries excluded. Not a whole-flight count."
+    }
+  ],
+  "occludedFamilies": [
+    {
+      "crop": "071937-left-arrival-stair-detail.png",
+      "flight": "upper arrival flight",
+      "limit": "Steel lattice/crop boundary obstruct a complete flight trace."
+    },
+    {
+      "crop": "071937-right-arrival-stair-detail.png",
+      "flight": "lower arrival flight",
+      "limit": "Concrete pier, near guard and sign obscure parts; no complete flight count asserted."
+    }
+  ],
+  "comparisonConclusion": "The selected visible counts are lower bounds from different visible stair instances/segments. Do not sum them or infer hidden treads. They neither confirm nor demonstrate a contradiction with the authored25internalgoings/27risers. The historical complete count remains a plan/registered-photo review hold before treating the repeated stair family as verified.",
+  "curvature": {
+    "visibleSupport": "The lower visible stringer outline eases from rising diagonal into a horizontal landing band, reading as a fuller rounded haunch under the meeting rather than a discrete sharp notch. The rail has a separate smooth direction change.",
+    "lowerEdgeVersusCentreline": "The visible lower boundary/edge treatment is directly supported. The opposite edge is partly obscured by tread/rim/rail forms; no structural centroid or neutral axis is visible. Do not infer that the entire host I-section centreline bends, nor prove a lower-edge-only fabrication method.",
+    "constructionUnknown": [
+      "bent member versus varying-depth haunch versus cover/trim",
+      "exact radius and tangent lengths",
+      "exact sheet thickness",
+      "historical component section schedule"
+    ],
+    "studyImplication": "A silhouette-based face/edge curve study may preserve current tread seats and structural centres. Moving those centres or adopting the photographed curve as a measured radius is unsupported."
+  },
+  "limits": [
+    "No P5 instance is identified in the crops.",
+    "No hidden tread/riser count or exact dimension was invented.",
+    "Source geometry count is an authored-model fact, not historical authentication.",
+    "Inspection crops retain source pixels; numbered marks are explicitly analysis annotations, not original photographs.",
+    "No modelling, GPU, root/runtime or publication change performed."
+  ]
+}

@@ -1,7 +1,7 @@
 """Execute the exact frozen baker preparation path, stopping before rendering."""
 from pathlib import Path
-import json,sys,hashlib,struct,time
-D=Path(__file__).resolve().parent;packet=json.loads((D/'bake-command-preparation.json').read_text());H=lambda b:hashlib.sha256(b).hexdigest();out=D/'cpu-preflight-v1';assert not out.exists();started=time.monotonic()
+import json,sys,hashlib,struct,time,argparse
+D=Path(__file__).resolve().parent;parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--packet',type=Path,default=D/'bake-command-preparation.json');parser.add_argument('--out',type=Path,default=D/'cpu-preflight-v1');options=parser.parse_args();packet=json.loads(options.packet.read_text());H=lambda b:hashlib.sha256(b).hexdigest();out=options.out;assert not out.exists();started=time.monotonic()
 for row in packet['filePins']:assert H(Path(row['path']).read_bytes())==row['sha256'],row['path']
 source=Path(packet['argv'][0]);argv=packet['argv'].copy();argv[argv.index('--out')+1]=str(out);argv[argv.index('--device')+1]='CPU';sys.argv=argv;sys.path.insert(0,str(source.parent));text=source.read_text();assert text.count('mesh.calc_loop_triangles()')==1;prefix=text.split('mesh.calc_loop_triangles()',1)[0];namespace={'__name__':'__main__','__file__':str(source)};exec(compile(prefix,str(source),'exec'),namespace)
 state=namespace['authored_uv_integrity'];assert state['status']=='PASS'and state['allImportedPrimaryBuffersByteExactBeforeBake']and state['onlyArchitectureSelectedAndActiveBeforeBake'];assert namespace['device']['backend']=='CPU';bpy=namespace['bpy'];architecture=namespace['architecture'];assert set(bpy.context.selected_objects)=={architecture}and bpy.context.view_layer.objects.active==architecture

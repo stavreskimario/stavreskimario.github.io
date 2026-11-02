@@ -2,28 +2,32 @@
   "schema": 1,
   "derivations": [
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs",
-      "sourceSha256": "bd85df19cb8151236bcbb75cfcbfb5d8a8c40865e10e58745809d837f10a4030",
-      "file": "source/lib/decoded-geometry.mjs",
-      "outputSha256": "577dad4c5b7a08cd89c1111b65108609e0787b1973091a8fc56d9f6d263990fb",
-      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
+      "file": "source/build_curves.py",
+      "sourceFile": "source/build_curves.original.py",
+      "sourceSha256": "6936f56b3faa057d366299559c05e7f7f263bb58f83706830bfb490bbf5e32f1",
+      "outputSha256": "7c391fc9d6f7496c05993ba0f41b313e199566e7c11f1e47678f8e7b640bd80b",
+      "scope": "Only CLI portability and replacement of exact flat.blend serialization assertion by stronger frozen logical source/material-state assertions; geometry/material/export math unchanged.",
       "replacements": [
         [
-          "'../../penn-station-1935/model/gltf_hierarchy.mjs'",
-          "'./gltf_hierarchy.mjs'"
+          "ap.add_argument('--out',type=Path,required=True)",
+          "ap.add_argument('--out',type=Path,required=True);ap.add_argument('--expected-frozen-manifest',type=Path,required=True);ap.add_argument('--flat-reference-manifest',type=Path,required=True)"
         ],
         [
-          "'../../penn-station-1935/model/meshopt_patch_io.mjs'",
-          "'./meshopt_patch_io.mjs'"
+          "assert H(a.flat_blend.read_bytes())=='d33f8381f88228f86b431f4017d8cad10dceef5f6e62054084fbc96e245b7cf6'",
+          "assert a.flat_blend.is_file();expected_curve=json.loads(a.expected_frozen_manifest.read_text());expected_flat=json.loads(a.flat_reference_manifest.read_text())"
+        ],
+        [
+          "assert len(source_objects)==4055",
+          "assert len(source_objects)==4055;assert before==expected_curve['nonownedImportedSourceHashes'];assert material_before==expected_flat['importedSourceMaterialHashes']"
         ]
       ]
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/review-p5-finish.mjs",
-      "sourceSha256": "a7db4b6b6d12910ee072ece8e33c776129908cf5dd8499b527e04c6a3f00ec20",
-      "file": "source/review-p5-finish.mjs",
-      "outputSha256": "477275eef840acc8d8355b439f1ddfcdce687de5fbd0d3f3e263e1de57f2c4f6",
-      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
+      "file": "source/review-curves.mjs",
+      "sourceFile": "source/independent/review-curves-with-cap-rings.mjs",
+      "sourceSha256": "cf0e2f0cd4df3cb430d7484154bc79259f325ebdefed23f770c8809b6914a523",
+      "outputSha256": "73941eb8af1f97daffaa9e94d4fc82f7f5c80c13558b437e6b7040304080ed7a",
+      "scope": "Import/input-path portability only; all geometry/receiver/profile/area thresholds unchanged.",
       "replacements": [
         [
           "'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs'",
@@ -34,29 +38,24 @@
           "'./lib/decoded-geometry.mjs'"
         ],
         [
-          "createRequire('/Users/stavreskimario/Desktop/penn-station-work/tools/package.json')",
-          "createRequire(path.join(process.env.PENN_TOOLS,'package.json'))"
-        ]
-      ]
-    },
-    {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/audit-new-skin-normals.mjs",
-      "sourceSha256": "e9b122e7a164a0e16706cbe84c4628f64f005e32a90f2aaeee54f8072069065e",
-      "file": "source/audit-new-skin-normals.mjs",
-      "outputSha256": "c93c963f19dd14749b82a2674caa9995cfb546dde352cb76c3f0fe505903a375",
-      "scope": "Import/tool-path portability only; review geometry/math/threshold code unchanged",
-      "replacements": [
-        [
-          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs'",
-          "'./lib/meshopt_patch_io.mjs'"
-        ],
-        [
-          "'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs'",
-          "'./lib/decoded-geometry.mjs'"
+          "'/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/review-p5-finish.mjs'",
+          "'./review-p5-finish.mjs'"
         ],
         [
           "createRequire('/Users/stavreskimario/Desktop/penn-station-work/tools/package.json')",
           "createRequire(path.join(process.env.PENN_TOOLS,'package.json'))"
+        ],
+        [
+          "fs.readFileSync(m.source.path)",
+          "fs.readFileSync(process.env.P5_FLAT_GLB||m.source.path)"
+        ],
+        [
+          "fs.readFileSync(D+'/arrivals-p5-finish-study-v1/candidate-v2/study-manifest.json')",
+          "fs.readFileSync(process.env.P5_FLAT_MANIFEST||D+'/arrivals-p5-finish-study-v1/candidate-v2/study-manifest.json')"
+        ],
+        [
+          "fs.readFileSync(D+'/arrivals-p5-finish-proposal-v1/actual-p5-source-joints-v3.json')",
+          "fs.readFileSync(process.env.P5_ADJACENCIES||D+'/arrivals-p5-finish-proposal-v1/actual-p5-source-joints-v3.json')"
         ]
       ]
     }

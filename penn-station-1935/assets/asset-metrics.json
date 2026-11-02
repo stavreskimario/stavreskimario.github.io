@@ -383,11 +383,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 17713836,
+      "bytes": 19187980,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 5175444,
-      "sha256": "b005a1b2f93edafcb4319d36fa1401c5fcb7749df33a962a6529caf48d9d0563",
-      "transportSha256": "c74aa5be856e72689b8e62694fe0715a2edb736ab518dbd3c96e4e8fc2cb9673",
+      "transportBytes": 5384901,
+      "sha256": "abce07f9cc1b86473d118fd80cb13a953b46ef98f2c083e3dd73da5c509669a6",
+      "transportSha256": "ca7cc4f6b75a96479aadf3c960b96e28f2704f24045398b52eea60825f75133b",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -498,8 +498,8 @@
           "bytes": 2355148
         },
         {
-          "uri": "textures/5ac4f28aafa1a2c0c811.ktx2",
-          "bytes": 3033940
+          "uri": "textures/6973003abb78858f457c.ktx2",
+          "bytes": 3029067
         },
         {
           "uri": "textures/4f684d7c526a22f95162.ktx2",
@@ -522,8 +522,8 @@
           "bytes": 3746211
         }
       ],
-      "nodes": 21,
-      "meshes": 21,
+      "nodes": 24,
+      "meshes": 24,
       "materials": 31,
       "textures": 33,
       "extensionsUsed": [
@@ -538,11 +538,11 @@
     },
     {
       "file": "model-concourse-low.glb",
-      "bytes": 17061452,
+      "bytes": 17993800,
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 5345536,
-      "sha256": "831c0e4004eed5bed1a80ec2c180accd21aab378d9b43d79630a0efde79eb4d1",
-      "transportSha256": "9cd9b42d72caaefa74c1e5135af7f4304ad2dfef0b0685bdb7ad1988fff5da00",
+      "transportBytes": 5630294,
+      "sha256": "6d0a15974d0edf24cfa3b3bd7bd1c522abaa965adaf202baa55ab01a2d3a2638",
+      "transportSha256": "d42a831ac1f94dba2221c16ac65193de9f068fc00354f07b2cdd22f8d1803bbb",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -653,8 +653,8 @@
           "bytes": 681
         },
         {
-          "uri": "textures/53979fdafe89bc4df9ca.ktx2",
-          "bytes": 231923
+          "uri": "textures/a40f6754772a00403c3b.ktx2",
+          "bytes": 231785
         },
         {
           "uri": "textures/3cf7f05c5747ad2f4f03.ktx2",
@@ -677,8 +677,8 @@
           "bytes": 250215
         }
       ],
-      "nodes": 21,
-      "meshes": 21,
+      "nodes": 24,
+      "meshes": 24,
       "materials": 31,
       "textures": 33,
       "extensionsUsed": [
@@ -983,9 +983,9 @@
     }
   ],
   "sharedTextureFiles": 89,
-  "modelTextureAndLightingBytes": 219408187,
+  "modelTextureAndLightingBytes": 219877721,
   "navigationBytes": 693276,
-  "scope": "Connected station with preserved authored arcade and arrivals lighting allocation. Bounded lighting checkpoint; lower gallery construction and historical registration remain incomplete.",
+  "scope": "Connected station with a bounded first west Platform 5 finish and fresh arrivals illumination. Other ten model transports remain exact. Wider gallery construction and historical registration remain incomplete.",
   "arcadeIntegration": {
     "revision": 9,
     "scope": "Connected arcade/loggia/vestibule module appended only to Exterior after strict v12owned-source removal from Exterior+Waiting. Other four full/low zones remain byte-exact; top-level transfer/texture/navigation aggregates are refreshed; previous values are retained below.",
@@ -1235,5 +1235,83 @@
     "previousTreadAndLandingGiPixelsPerMetre": 42.3,
     "lightingAtlasResolution": 4096,
     "nativeNetworkQualification": "One intentional external font block and 22 ERR_ABORTED local requests retained in report; HTTP/server/page errors absent. No FPS claim."
+  },
+  "arrivalsP5Finish": {
+    "status": "PASS source, protected encoding, physical geometry and34native walking legs/material bindings/frozen files. Local CDP body/network check failed and remains qualified; final public acceptance pending.",
+    "previousMetricsSha256": "ee43fcbeec1e1d34da30cc41526df18ff3167d3d0984301bb0a393fd48d7ff4e",
+    "previousScope": "Connected station with preserved authored arcade and arrivals lighting allocation. Bounded lighting checkpoint; lower gallery construction and historical registration remain incomplete.",
+    "changedModelFiles": [
+      "model-concourse.glb",
+      "model-concourse-low.glb"
+    ],
+    "unchangedModels": [
+      {
+        "file": "model-exterior.glb.gz",
+        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+      },
+      {
+        "file": "model-exterior-low.glb.gz",
+        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+      },
+      {
+        "file": "model-platform-low.glb.gz",
+        "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+      },
+      {
+        "file": "model-trains-low.glb.gz",
+        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+      }
+    ],
+    "retainedPrefixExact": true,
+    "newMaterials": [
+      "TravertineArrivalsStairStone",
+      "PublicFloorMarbleArrivalsRetainedNorth",
+      "ConcourseOpaqueArrivalsConcrete",
+      "ConcourseOpaqueArrivalsUpperSupports",
+      "PaintedStructuralIronArrivalsStructure",
+      "PaintedStructuralIronArrivalsGuard",
+      "PaintedStructuralIronArrivalsGroutJacket"
+    ],
+    "sharedReferencedKtx": 89,
+    "aggregateBytes": 219877721,
+    "sourceModuleDirectory": "authoring/penn-station-1935/lighting/phase8",
+    "reviewDirectory": "authoring/penn-station-1935/review/phase9/p5-finish-study",
+    "protectedLosslessOwners": 8,
+    "newGeometryDrawCalls": 3,
+    "sourceBakeReportSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+    "sourceDenoiseReportSha256": "91fe87fbf30993b21136559050f5ce918c7f0e853a4952134a38b36f19c639d8",
+    "encodedPrecisionReviewSha256": "8c3063226d4304268c8ed913fc12b42311d360711cf4a72e7e2444445dcbf193",
+    "encodedPhysicalReviewSha256": "c77095401120b3e7a4f8ec5b3c960fb55fe7e4266627a293d7156cf368d4da80",
+    "newArchitectureScope": "First west Platform 5: six curved upper handrail members, fourteen flat paired fascia faces and two additive lower haunches. Upper haunch, remaining platform pairs and continuous full-gallery edge finish held.",
+    "historicalQualification": "Open guards and exposed framing are supported by primary photographs. Exact radius, fabrication and Platform 5 / 1935 registration remain inferred.",
+    "nativeBrowserReportSha256": "f50aebfb041b26222f6fbd84664a09e5b5b4ebeae8ecdb7a816d729930c4b043",
+    "nativeWalkingLegs": 34,
+    "nativeBrowserClosed": true,
+    "nativeFrozenInputs": 103,
+    "nativeNetworkQualification": "Strict native report FAILED:25localERR_ABORTED/NoDataFound body observations remain unexplained.0HTTPerrors,0bodymismatches,0pageerrors. Exact served/source inputs and actual mounted PBR/maps verified; not a network pass."
   }
 }

@@ -1,0 +1,23 @@
+{
+  "status": "PASS cache revision/content-addressed import-filename changes only",
+  "files": [
+    {
+      "file": "app.js",
+      "oldSha256": "616f91eb91fa62332987d1d3e9297d4cf183bbe7b32f9e690b812d7076a0bdb4",
+      "sha256": "786e4d7d58b4e4d4a229c3288812954de75bfede903339464dfaf9892a0daf40",
+      "normalizedBehaviorExact": true
+    },
+    {
+      "file": "chunks/three.webgpu-HASH.js",
+      "oldSha256": "1ad767acac8d8be480907e35f5894d67ea4c3e390e8142c06ccf1e4a625244cb",
+      "sha256": "1ad767acac8d8be480907e35f5894d67ea4c3e390e8142c06ccf1e4a625244cb",
+      "normalizedBehaviorExact": true
+    },
+    {
+      "file": "chunks/chunk-HASH.js",
+      "oldSha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393",
+      "sha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393",
+      "normalizedBehaviorExact": true
+    }
+  ]
+}

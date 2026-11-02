@@ -56,11 +56,6 @@ bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(args.input.resolve()))
 scene = bpy.context.scene
 primary_objects = list(scene.objects)
-primary_material_initial = None
-if args.occluder_materials:
-    from occluder_materials import material_fingerprint
-    primary_material_objects = {m for obj in primary_objects if obj.type == "MESH" for m in obj.data.materials if m}
-    primary_material_initial = {m.name: material_fingerprint(m) for m in primary_material_objects}
 authored_primary_snapshot = None
 if args.preserve_authored_uv1:
     from authored_lighting_uv_guard import snapshot_primary, verify_before_bake

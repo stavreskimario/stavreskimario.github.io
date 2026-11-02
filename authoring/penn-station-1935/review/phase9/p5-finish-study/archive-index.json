@@ -2,17 +2,23 @@
   "schema": 1,
   "archives": [
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/p5-study-source-plus-finish.glb",
-      "file": "artifacts/p5-study-source-plus-finish.glb.gz",
-      "bytes": 3385531,
-      "sha256": "a6e4280f95cf86be1806dde1ee1896cef036a39c7d828e40bd3ca58d4a33beba",
-      "decodedBytes": 15471852,
-      "decodedSha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+      "file": "artifacts/west-p5-curved-study.glb.gz",
+      "bytes": 3574010,
+      "sha256": "6f0163b8f25449b99ed13095dec29ae18b03fc458a0432a952f33d009bd95302",
+      "decodedBytes": 15900100,
+      "decodedSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
       "decodedByteExact": true
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/study-manifest.json",
-      "file": "artifacts/study-manifest.json.gz",
+      "file": "artifacts/curve-study-manifest.json.gz",
+      "bytes": 684943,
+      "sha256": "4af4600dcb5a69b521251118e5ef6bb5d6e7ea094d0bc5c301030f3f632fe300",
+      "decodedBytes": 5166095,
+      "decodedSha256": "d776f343b9b7d40716601bc5bd0c0904702e5b131834c438659f43176513e347",
+      "decodedByteExact": true
+    },
+    {
+      "file": "artifacts/flat-study-manifest.json.gz",
       "bytes": 684763,
       "sha256": "6ac8a8ff67ebda2487d619c172a0d9363516c1938d5f07b5028946df54245f14",
       "decodedBytes": 5194411,
@@ -20,7 +26,6 @@
       "decodedByteExact": true
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/source-proof.json",
       "file": "artifacts/source-proof.json.gz",
       "bytes": 45415,
       "sha256": "00633587d848988f28dff4eaa1215b0bda8ef72b73c318f44bd6fc67adb6334a",
@@ -29,39 +34,35 @@
       "decodedByteExact": true
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-proposal-v1/actual-p5-source-joints-v3.json",
-      "file": "proposal/source-adjacencies.json.gz",
-      "bytes": 24031,
-      "sha256": "f88a748630ce2fc0ffd6e4053f96e24284fb7dbf61a98171ec3b187076f505ac",
-      "decodedBytes": 298128,
-      "decodedSha256": "5ec73eeb9c56ce8054ea69f7ca9ab6ac8d67d15b9ddc704c832384648b736cb2",
+      "file": "artifacts/source-ba0-header-json.bin.gz",
+      "bytes": 288537,
+      "sha256": "57b212859b0eba334f13417b80d75052bd8bc3556a24736723fe3d491af4b4c5",
+      "decodedBytes": 3551308,
+      "decodedSha256": "8106d8944d75921d453be4263401960a91f657e46dcd603650213666f7db315b",
       "decodedByteExact": true
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/candidate-v2/review.json",
-      "file": "evidence/review.json.gz",
-      "bytes": 8988,
-      "sha256": "abad8447a623d062a7e7bf2310dcf190a731ad83838d0c3e3ee8c29b28692f46",
-      "decodedBytes": 164260,
-      "decodedSha256": "009330c1f03b336b53e376d284c5f199556bc50c69afab4eebff70baa8bc38db",
+      "file": "artifacts/source-flat-header-json.bin.gz",
+      "bytes": 290362,
+      "sha256": "498bcf37a9e608861d3bfce1c80a0dd877fa5510dcfc10e1fe5cbbb4ca4d80ad",
+      "decodedBytes": 3568060,
+      "decodedSha256": "57066a9932e88e17400ef750e00d1ef6e8b27fe568ccef497496d30843a1c07a",
       "decodedByteExact": true
     },
     {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/candidate-v2/new-normal-audit.json",
-      "file": "evidence/new-normal-audit.json.gz",
-      "bytes": 530,
-      "sha256": "391bad46322840549561ed1dcccf74638d2bbb6f2a8f54bd45f58f3cd166761d",
-      "decodedBytes": 3173,
-      "decodedSha256": "e80f557f141741edcf5751d2a88988dde8b9de9280fd0451b58c39b40d5a5607",
-      "decodedByteExact": true
-    },
-    {
-      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/cpu-routes-v1/routes.json",
       "file": "evidence/raw-walking-routes.json.gz",
-      "bytes": 2445,
-      "sha256": "08e4c6b8ce4fe4b198bffc49a5185382d800b9110b5477705d80a8db18901f10",
-      "decodedBytes": 60218,
-      "decodedSha256": "04569cbd26d3489ddb06851b3a19b1b4cff59ee6429b06db256b358f232f5af1",
+      "bytes": 2450,
+      "sha256": "0b6eedb735562937651332f2d362e390f51965c116ae5d308fa75825a2e7fdd1",
+      "decodedBytes": 60240,
+      "decodedSha256": "8e6287101c11d1e16a15b5355ce03b179ee0d5a789123067115f7eb1007e893c",
+      "decodedByteExact": true
+    },
+    {
+      "file": "evidence/rail-sections.json.gz",
+      "bytes": 26261,
+      "sha256": "538abba941d7dc96833e43ed92b608cc331ef19dae96d8170be844762ec4532b",
+      "decodedBytes": 400227,
+      "decodedSha256": "b8d9bbdfa50883210c1d31bee167913b73cf740ea37266e3295ce2f5d741f8bc",
       "decodedByteExact": true
     }
   ]

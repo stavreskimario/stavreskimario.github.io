@@ -1,8 +1,8 @@
-# Pennsylvania Station — arrivals lighting checkpoint
+# Pennsylvania Station — first Platform 5 finish
 
-The arrivals lighting checkpoint is live. A fresh 4K/256-sample bake and denser tread/landing lighting improve the existing arrivals stairs while preserving geometry, surface materials and walking routes. Source/pixel checks, both decoded variants and the 34-leg local native loop pass. Public Pages verification matches 19 actual response bodies and eight native stair/gallery walking legs, with all six zones continuously loaded. Walk remains default. Broader photographic fidelity and arrivals construction remain in progress.
+This checkpoint adds paired flat fascia faces around Platform 5, smooth west-stair handrail transitions and two curved lower haunches authored in Blender. Fresh 4K/256-sample illumination follows the changed geometry. Source, physical contact and all 34 native walking steps pass with six continuously loaded zones and Walk as default. The strict local network observation failed on cancelled response-body reads; that limitation remains recorded rather than reported as a pass. Public verification of this checkpoint is pending.
 
-[Open the live arrivals checkpoint](https://stavreskimario.github.io/penn-station-1935/?preview=ed4e00b). [Matching deployment and public evidence](../authoring/penn-station-1935/review/phase9/arrivals-lighting-priority/final-publication.json) binds the delivered files to immutable `ed4e00b`; [Validation](VALIDATION.md) retains the source, physical, local and public results.
+[Source study](../authoring/penn-station-1935/review/phase9/p5-finish-study/README.md), [precision repair](../authoring/penn-station-1935/review/phase9/p5-precision-repair/README.md) and [actual browser previews](../authoring/penn-station-1935/review/phase9/p5-finish-integration/README.md) retain the evidence. The upper haunch, other stair profiles and continuous gallery finishing remain unfinished. Primary photographs support open guards and exposed framing; exact radii, fabrication and the Platform 5 / 1935 registration remain inferred. Broader photographic fidelity is still in progress. [Validation](VALIDATION.md) separates current checks from the previous publicly verified lighting checkpoint.
 
 An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases connect eight ordinary platform correspondences to the lower Exit gallery. The first eight platforms now have source-controlled concrete overhangs, coved undersides, continuous supporting walls and a finer granolithic finish, with fresh illumination from the current station geometry.
 
@@ -14,6 +14,7 @@ The intended period is 1935–1940, using opening-era plans and photographs as a
 | Old deck and lamp positions conflict with the new stairs | Exact old-cell removal, closed northern retained portions and sixteen complete relocated lamp assemblies | Coordinate the floor, access and actual fixture supports |
 | Missing lower frame and lift enclosures | Individually traced supports and eight distinct lift enclosures, with unresolved transfers held | Add source-backed structure without cloning a regular generic grid |
 | Uniform lighting allocation on arrival stairs | Denser tread/landing charts, fresh 4K/256-sample illumination and AO on the existing geometry | Resolve stair lighting while preserving source circulation |
+| Angular provisional handrail transitions and unfinished framing faces at Platform 5 | Blender-authored curved west handrails, paired flat fascia and two lower haunches, with fresh lighting | Establish one reviewed finish before extending it through the gallery |
 
 ## Explore
 

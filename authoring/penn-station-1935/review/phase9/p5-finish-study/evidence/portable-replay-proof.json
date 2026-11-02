@@ -1,27 +1,32 @@
 {
   "schema": 1,
-  "status": "PASS: portable CPU replay reproduces both raw GLBs byte-for-byte and full source/component states",
-  "builderSha256": "f9894ce4957793cea7921342f00d3bb7cdb38208e32061d2dcd130b2ab5e6c83",
-  "originalSourceStatesExact": 4047,
+  "status": "PASS: portable CPU replay reproduces final raw GLB bytes and all source/owned/addon logical states",
+  "baseGlbSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+  "flatGlbSha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+  "curvedRawSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+  "all4055NonownedSourceStatesExact": true,
   "allSourceMaterialStatesExact": true,
-  "newSkinsExact": 14,
-  "combinedGlbByteExact": true,
-  "addonGlbByteExact": true,
   "reopened": [
     {
-      "file": "full-rebuilt",
-      "objects": 4061,
-      "sha256": "408a57a3dd339c1ef50237c3d6d59a5f552145bc45eccfff0bb9f2af0851db50",
-      "unchangedOnReopen": true
+      "file": "rebuilt-full",
+      "objects": 4063,
+      "componentStatesExact": 22,
+      "editableGNCurves": 6,
+      "actualExistingIronMaterialConfirmed": true,
+      "fileUnchanged": true,
+      "sha256": "d881b90e52265ada7cc774cea7371be1018032a0851b77c4d9aafa3441982562"
     },
     {
-      "file": "exact-addon",
-      "objects": 14,
-      "sha256": "1f6f6bf4ec0f95dd2fd96bdd1c5d4d0ad18f00543f85f7e047c261824745a2e2",
-      "unchangedOnReopen": true
+      "file": "exact22-object-addon",
+      "objects": 22,
+      "componentStatesExact": 22,
+      "editableGNCurves": 6,
+      "actualExistingIronMaterialConfirmed": true,
+      "fileUnchanged": true,
+      "sha256": "43af0aa5a7c55f837116075f788ddd1449ea52daa800b67fe545bfd412a3226c"
     }
   ],
-  "fullEditableBlendBinaryReplayClaimed": false,
-  "fullBlendQualification": "Rebuilt full-scene file may have different Blender serialization bytes; geometry, materials and source states are exact. Original d33 full blend remains in verified external backup.",
-  "noRenderingOrGpu": true
+  "exactFullBlendSerializationClaimed": false,
+  "qualification": "Regenerated full.blend serialization may differ. The exact accepted full.blend remains separately backed externally.",
+  "noRenderingGpuCanonicalOrRootChanges": true
 }

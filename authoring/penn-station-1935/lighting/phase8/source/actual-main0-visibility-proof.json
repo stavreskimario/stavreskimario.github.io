@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "status": "PASS",
-  "scope": "Extracted unchanged values from the actual raw bake report; original Street0 controls are retained separately. No geometry edit.",
-  "rawBakeReportSha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac",
-  "frozenCommandSha256": "1b61345bd84aebbc174b8f1cd07304e094c1ccf72ebbb6326395da181887293d",
+  "scope": "Unchanged values extracted from the executed new raw report; original Street0 controls remain separate.",
+  "rawBakeReportSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+  "frozenCommandSha256": "a5c2c7ffba1535cd7fafa7b730b9d34fd9f1b0376cd7c02756c55379eeeee34d",
   "frame": "Main0;glTFYup/BlenderZup",
   "visibility": {
     "proofSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
@@ -15,11 +15,11 @@
       },
       {
         "context": "retained-exterior-visible-occluder.glb",
-        "sourceVisibilityRule": "Doric column master \u2014 35ft",
+        "sourceVisibilityRule": "Doric column master — 35ft",
         "alreadyExcludedByImporter": false,
         "changedObjects": [
           {
-            "name": "Doric column master \u2014 35ft",
+            "name": "Doric column master — 35ft",
             "hideRenderBefore": false,
             "hideRenderAfter": true,
             "sourceHideRender": true,

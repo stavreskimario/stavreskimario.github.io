@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "scope": "Preparation only; no denoising, optimization, raw mutation, GPU or root writes executed. Frozen bake packet is untouched.",
+  "files": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-reuse-normal-cache-v2.mjs",
+      "sourceSha256": "1f3508da3a0f9ee00a8d6ad95e1682eadddd428a408a0b41fe665544acc57e9d",
+      "copy": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/p5-reuse-normal-cache.mjs",
+      "copySha256": "1f3508da3a0f9ee00a8d6ad95e1682eadddd428a408a0b41fe665544acc57e9d",
+      "byteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/denoise_lighting.py",
+      "sourceSha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "copy": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/denoise_lighting.py",
+      "copySha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "byteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimise-cached-v2.mjs",
+      "sourceSha256": "bceaeb95f874022135137ec1a7d4659dc87e786c16eb1800210fd059bd007f51",
+      "copy": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/p5-optimise-cached.mjs",
+      "copySha256": "9b13b61389d534f415d63bde9cc3bd02dade11f74ffb3c09cf3da57251766825",
+      "onlyChange": "Relative cache-helper import filename"
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/optimise.mjs",
+      "sha256": "d87dfd63f2a025e262fa05412dbcb1da34927dc3ac870eb7b190476ceb38b40e",
+      "role": "Read-only external pipeline dependency"
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/asset_io.mjs",
+      "sha256": "dd7c7b81b4830c5af84fdfabe84c18cbeb0f5d33462fa2446b1f519f15e2c1cd",
+      "role": "Read-only external pipeline dependency"
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/prepare-scalars.mjs",
+      "sha256": "d604e306d8471bef25e2226daff7476c9b34e623f124b0c4f653bc5aedc417dd",
+      "role": "Read-only external pipeline dependency"
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/preserve-order-ao.mjs",
+      "sha256": "f802cec0324921f9f7be9b9f15f73a3cf80a1709d1ab78a700cd24706af201d0",
+      "role": "Read-only external pipeline dependency"
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/preserve-normal-pixels.mjs",
+      "sha256": "a8a57408170f1a752fd34930b9d7576dbf1364c86366504a7b5f00f55fdded03",
+      "role": "Read-only external pipeline dependency"
+    }
+  ]
+}

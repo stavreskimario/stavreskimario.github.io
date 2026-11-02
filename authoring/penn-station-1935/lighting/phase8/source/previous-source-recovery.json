@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "status": "PASS: previous current-root Phase8 source fully recoverable before replacement",
+  "commit": "79111f9e5b21f43ddb88fb70ad954c65cae83d42",
+  "repositoryDirectory": "/Users/stavreskimario/Desktop/penn-station-reconstruction",
+  "repositoryRelativeDirectory": "authoring/penn-station-1935/lighting/phase8",
+  "externalBackupDirectory": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-source-archive-v2/authoring/penn-station-1935/lighting/phase8",
+  "externalBackupByteExact": true,
+  "currentRootByteExact": true,
+  "files": {
+    "README.md": {
+      "bytes": 1962,
+      "sha256": "7e74b24834cf0010946177940af6e5e4034244e29fbd869a480854ba29e41020",
+      "gitBlob": "905d22b7d7b30f34b4e22a6bfcab83e6bba51d7e"
+    },
+    "archive-manifest.json": {
+      "bytes": 6095,
+      "sha256": "89bad6c0699d77dcb73357ae46819a7d81e779715e010877bd06d7453d6e2970",
+      "gitBlob": "092282574e712bcb34d922b70b105bb2e7ebe213"
+    },
+    "denoised/lighting-concourse-arrivals-denoise.json": {
+      "bytes": 2567,
+      "sha256": "f821409c994f37693ef7e6401729d749bef993b4e6698a5c0f2aea720d86146f",
+      "gitBlob": "f5b61e4f3a76688d393f159aef92e90f06ac111c"
+    },
+    "denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz": {
+      "bytes": 30090391,
+      "sha256": "d1c341b6cb84041fd02387c331c3825c73cf4e76edb516bf2d00868a460eba36",
+      "gitBlob": "523a17be53c2e7ad61e378ef16a555b4dace454a"
+    },
+    "denoised/lighting-concourse-arrivals-sky-low.png": {
+      "bytes": 208177,
+      "sha256": "910d2fc877d3ac49cbc725f11ed452bd9d802b1a523927cb18e667ad63bd7d88",
+      "gitBlob": "a8561c2434ddeab69176f141c6b5a95a556f8569"
+    },
+    "denoised/lighting-concourse-arrivals-sky.png": {
+      "bytes": 6878594,
+      "sha256": "dce9d844508ae087af53b33245e99ac5674f4a3670b3d9c213e0dbee006e873d",
+      "gitBlob": "a6cfacd00d13458d3a9e89df8684668f252b56c2"
+    },
+    "raw/lighting-concourse-arrivals-ao.png": {
+      "bytes": 10710454,
+      "sha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+      "gitBlob": "c0c48ebf2b722eadfa365f0821c79acc2b99284a"
+    },
+    "raw/lighting-concourse-arrivals-sky.hdr.gz": {
+      "bytes": 41941911,
+      "sha256": "c01a6b36ba8b3a04a081660861c48dca7586787a8dbe538800159107e88844d3",
+      "gitBlob": "45c21701dfc95db09bbd74b5f06710d9ee0567da"
+    },
+    "raw/lighting-concourse-arrivals.json": {
+      "bytes": 3904713,
+      "sha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac",
+      "gitBlob": "6d8822917ac0ce1a61535b87d4df3c8c2b57af1d"
+    },
+    "source-provenance.json": {
+      "bytes": 13424,
+      "sha256": "04d97cb5d1ee3566b89775b9bef5b77c906d1cc5c94bd755a0973d35a4d9499f",
+      "gitBlob": "96bddaacd73eea79d8764c9ca1f9e7b4b7f9e54c"
+    },
+    "source/FROZEN-PACKET-MANIFEST.json": {
+      "bytes": 3688,
+      "sha256": "0ae327924eb57029616b79c2e82d32e383de3b8eeab404ba5151b5273861d01d",
+      "gitBlob": "a51b1ebf4946e4521a6d7bae65db0330c55addca"
+    },
+    "source/PREPARATION.json": {
+      "bytes": 879,
+      "sha256": "8e8875a9156a5b94ae098598fd020ae493671b6d877f6a5f411b13e40197cd5d",
+      "gitBlob": "6ab25dd8eee89b9294472a7743cf680095928607"
+    },
+    "source/actual-main0-visibility-proof.json": {
+      "bytes": 4441,
+      "sha256": "a6bc3e5bc5cde3e101f2b3a0e80bdadcbec6d3ae5b9a889509d67bd11cfac92c",
+      "gitBlob": "42718361c7064aa62d7696ac687bf5f19f9d9158"
+    },
+    "source/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567",
+      "gitBlob": "22f4254855f109cdab25447d6bf0055d0b38f7c8"
+    },
+    "source/arrivals-preserve-mode.patch": {
+      "bytes": 19540,
+      "sha256": "64ca66a977e6a0b256f3aec16c09340c84c34d26ea5bcc96947d996fe43315fe",
+      "gitBlob": "ae0936bbc27dc2609a7ffe964efcbced6cc6107f"
+    },
+    "source/authored_lighting_uv_guard.py": {
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf",
+      "gitBlob": "55c8a6350f67dd8ea6e3216aa033441e2c6326fa"
+    },
+    "source/bake-command-preparation.json": {
+      "bytes": 18585,
+      "sha256": "b79a06490ba79a0ac90d0974eee7075db57976aacee2c3d38283963394760a4b",
+      "gitBlob": "e76cc4d984e7cc8cd58dff478cf6b8f515023844"
+    },
+    "source/bake_lighting.py": {
+      "bytes": 24234,
+      "sha256": "d367ec0b757d62aaafdd33eb29279c307b323b15326336a001b0643cc3405a2f",
+      "gitBlob": "c91acccea5e598b44ad61bb6a39130983a9276a3"
+    },
+    "source/baked_occlusion_binding.py": {
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+      "gitBlob": "5586013df1a1e7e589a17df5877cbc1035924969"
+    },
+    "source/denoise_lighting.py": {
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "gitBlob": "c4a7ef1d3288d0b66b14226bc20e24a30f9626b3"
+    },
+    "source/freeze_bake_packet.py": {
+      "bytes": 7843,
+      "sha256": "b20561a2bbf3b4d0f94a31d17530cd542b77b4ebf3bdf92a790d007e2d4451e4",
+      "gitBlob": "c12f2a6bc91732bf21fc61f9011e1f5735eff3d5"
+    },
+    "source/frozen-bake-command.json": {
+      "bytes": 22942,
+      "sha256": "1b61345bd84aebbc174b8f1cd07304e094c1ccf72ebbb6326395da181887293d",
+      "gitBlob": "029a593d4186dbd96ffc8c1d6a3699590b84b7eb"
+    },
+    "source/full-context-preflight.json.gz": {
+      "bytes": 659198,
+      "sha256": "f5daac14e96f487a65bf5d488477a3b9bc0a2fb58dee73727845362af6d50a89",
+      "gitBlob": "b73678fc05d0f094fd50729de855f05e5878027e"
+    },
+    "source/material-library-pins.json": {
+      "bytes": 7573,
+      "sha256": "881b439ed745e19cfcbfcf3a7c99a8e53e1337fd6954f0821c75326f66a8019d",
+      "gitBlob": "4aad136d583d57c1023ad7ce503b50ccb7f73b46"
+    },
+    "source/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8",
+      "gitBlob": "ae09b591a6afcf17103dca012d33b6d0e06299b2"
+    },
+    "source/neighbor-profile-restoration.json": {
+      "bytes": 1773,
+      "sha256": "359c8770e42af67e3fe873c354169805f89de8f744f42742268e8a8c924ceda5",
+      "gitBlob": "5cfd35613a5a1d140c8bfb3442256ff1b4c29d6f"
+    },
+    "source/occluder_materials.py": {
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c",
+      "gitBlob": "620c36a9105014f7674d56b8b459018cbbae0c2a"
+    },
+    "source/order_lighting_uv.py": {
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c",
+      "gitBlob": "e3a4e4f47c5a278b0402bebabca1bfed5b5b5821"
+    },
+    "source/prepare_bake_packet.py": {
+      "bytes": 4895,
+      "sha256": "b5a118f9038ad4098902dc1f37ec8671ef317b7141a82036ff3342e0c1829217",
+      "gitBlob": "0d449b8b61b0b232514b6b2477a47550de8980e1"
+    },
+    "source/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "gitBlob": "8594b33a493b840cbd854898771c736bb1930577"
+    },
+    "source/restore_imported_visibility.py": {
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21",
+      "gitBlob": "4abbff121f840c252c66e640a2f6b094b9f8c696"
+    },
+    "source/reviewed-metal-bake.log": {
+      "bytes": 7319862,
+      "sha256": "32497132c1545899e0545aa7bdf4baa826aec08b8bfe037c42246b542f505139",
+      "gitBlob": "19e76d462291ce86fb57fcdcf73af89de62e1801"
+    },
+    "source/run_frozen_bake.py": {
+      "bytes": 1245,
+      "sha256": "c3a303821cd9c096ec3d667e32cd64750065bd70bab1122afde92ae5fea6ff28",
+      "gitBlob": "5da9328cb5d966bbe02a7a297c36e1a81dc2d8ca"
+    },
+    "source/run_full_context_preflight.py": {
+      "bytes": 5394,
+      "sha256": "706718d668a28e050cce2dbcdcaa1141d619930fb1543b38bd6971f4a94ff4da",
+      "gitBlob": "3ee1705800c929ab2a748628df5729200044e4ca"
+    },
+    "source/vault_lighting_uv.py": {
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee",
+      "gitBlob": "2e7ad10fb796630e9adf61712275e3c5e98f4682"
+    },
+    "source/visible-context-proof.json": {
+      "bytes": 5035,
+      "sha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+      "gitBlob": "8deaeab1233ad9390fdf6e511ff94e264d1d0c5c"
+    }
+  },
+  "totalBytes": 101922555,
+  "recovery": "Read the listed Git blobs from the immutable commit into a fresh directory, or copy the byte-exact external backup. Verify every SHA256 before any future root replacement. This packaging operation does not replace root files."
+}

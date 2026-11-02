@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "status": "PREPARED ONLY; WAITING FOR ROOT RAW ACCEPTANCE AND BAKE EXIT",
+  "scope": "New P5 arrivals module only. Seven existing material names. No runtime or retained-zone mutation. Root appends outputs to retained base D06, never to current already-integrated concourse.",
+  "sourceHelperPins": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/cloned-helper-pins.json",
+    "sha256": "d3010e390a643ef1c454e0bfd879cc35e8ab329579b118d993412d32ea0e6f3a"
+  },
+  "commands": [
+    {
+      "phase": "denoise",
+      "environment": {
+        "UV_CACHE_DIR": "/Users/stavreskimario/Desktop/penn-station-work/uv-cache",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "argv": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-project",
+        "--python",
+        "3.11",
+        "--with",
+        "bpy==4.3.0",
+        "--with",
+        "numpy<2",
+        "--with",
+        "pillow==13.0.0",
+        "python",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/denoise_lighting.py",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky.hdr",
+        "--input-transfer",
+        "linear",
+        "--input-scale",
+        "1",
+        "--radiance-scale",
+        "2",
+        "--zone",
+        "concourse-arrivals",
+        "--threads",
+        "4",
+        "--out",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1"
+      ],
+      "gate": "Root confirms Metal bake exited and actual raw geometry/UV/normals/PBR/AO audit passed; source HDR and raw hashes pinned before run.",
+      "CPUOnly": "Blender image-only compositor; no scene geometry bake/preview/browser."
+    },
+    {
+      "phase": "prepare",
+      "environment": {
+        "UV_CACHE_DIR": "/Users/stavreskimario/Desktop/penn-station-work/uv-cache",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "argv": [
+        "python",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/prepare_optimizer.py",
+        "--raw-sha256",
+        "ROOT_ACCEPTED_RAW_SHA256",
+        "--hdr-sha256",
+        "ROOT_ACCEPTED_HDR_SHA256",
+        "--acceptance",
+        "ROOT_ACCEPTED_RAW_AUDIT_JSON",
+        "--acceptance-sha256",
+        "ROOT_ACCEPTED_RAW_AUDIT_SHA256"
+      ],
+      "gates": [
+        "Exact root supplied raw/HDR/audit pins.",
+        "All 7 prior material names; exactly 4 illumination scales changed1\u21922; all other JSON and entire BIN exact.",
+        "Linear source/inputScale1/radianceScale2; exact0.18 test; zero full+low clips; finite mean change.",
+        "4096/512 PNG\u2013losslessWebP decoded RGB exact."
+      ]
+    },
+    {
+      "phase": "optimize",
+      "environment": {
+        "PENN_TOOLS": "/Users/stavreskimario/Desktop/penn-station-work/tools",
+        "PENN_RAW_DIR": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-input-v1",
+        "PENN_ASSET_WORK": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1",
+        "PENN_ASSET_OUT": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimized-v1"
+      },
+      "argv": [
+        "node",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/p5-optimise-cached.mjs",
+        "concourse"
+      ],
+      "full": [
+        "Simplification false.",
+        "Normal JPEG\u2192PNG decoded-original RGB exact before resize.",
+        "2048 surface images; four AO slots use actual accepted freshAO.",
+        "Normal cache eligibility requires exact postresize/scalarPNG SHA and decodedRGB SHA, exclusive normal role,2048RGB, original current KTX SHA/12mips/linear metadata, same pinned pipeline andUASTC4/zstd6/jobs2 contract. No name-only reuse.",
+        "Other roles UASTC1/zstd6/jobs2;Meshopt16position/16UV/12requestednormal. Actual effective codec drift must be independently audited.",
+        "Illumination4096losslessWebP exact PNGpixels."
+      ],
+      "low": [
+        "Existing branch unchanged: simplify.5/error.0003/lockborder;512surface+lighting;UASTC1/zstd6/jobs2.",
+        "No new mobile optimization or quality reduction."
+      ]
+    }
+  ],
+  "expectedOutputModels": [
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimized-v1/model-concourse.glb",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimized-v1/model-concourse-low.glb"
+  ],
+  "preparedHelperFiles": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/p5-optimise-cached.mjs",
+      "bytes": 7310,
+      "sha256": "9b13b61389d534f415d63bde9cc3bd02dade11f74ffb3c09cf3da57251766825"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/p5-reuse-normal-cache.mjs",
+      "bytes": 6434,
+      "sha256": "1f3508da3a0f9ee00a8d6ad95e1682eadddd428a408a0b41fe665544acc57e9d"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/prepare_optimizer.py",
+      "bytes": 6289,
+      "sha256": "8292b455855b53308428f588984c4a1800336df23c1b634d7e84ad0f732da4fb"
+    }
+  ],
+  "noExecution": true,
+  "frozenBake68PinsUnmodified": true
+}

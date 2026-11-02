@@ -1,8 +1,22 @@
 {
-  "schema": 1,
-  "status": "PASS: exact original ba0 and complete combined study/addon geometry recovered",
-  "sourceSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
-  "combinedSha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
-  "fullEditableBlendIncluded": false,
-  "scope": "Lossless original source recovery, not a claim of exact full.blend binary regeneration."
+  "status": "PASS",
+  "sources": [
+    {
+      "kind": "base",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/portable-replay-v1/source/arrivals-module.glb",
+      "bytes": 15438492,
+      "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+      "exactHeaderAndBinaryPrefixRecovery": true
+    },
+    {
+      "kind": "flat",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/portable-replay-v1/source/p5-flat-source.glb",
+      "bytes": 15471852,
+      "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+      "exactHeaderAndBinaryPrefixRecovery": true
+    }
+  ],
+  "acceptedCurvedRawSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+  "fullBlendBinaryReplayClaimed": false,
+  "scope": "Exact GLB bytes recovered; full editable serialization is separately backed externally."
 }

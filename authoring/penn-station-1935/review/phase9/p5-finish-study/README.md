@@ -1,48 +1,52 @@
-# Unpublished P5 flat-face appearance study — source checkpoint
+# P5 bounded source checkpoint: first west curves and paired flat faces
 
-This preserves **14 inferred flat finish objects** in existing P5 stringer, landing and gallery-edge recesses. All 4,047 original arrivals components, their positions, normals, surface UVs, materials, fixtures and source bindings remain exact. The nominal 8 mm thickness and cover-face fabrication are appearance interpretations. This is not a completed gallery or historically finished stair, and it changes no published station geometry, assets or canonical scene.
+This preserves **six editable west-P5 handrail curves, two west lower-haunch appearance volumes and the earlier 14 flat finish objects across the P5 stair pair and gallery edges**. The 22-object Blender addon contains six existing rail replacements and 16 additions. Only the six explicitly owned rail mesh definitions change in the complete raw GLB. All other original geometry, transforms, surface UVs, normals, materials, fixtures, treads, landings, newel anchors and structural members remain exact.
 
-Root accepts the limited flat-face comparison below. The existing angular landing/stringer and handrail transitions remain visibly different from the curved primary-photo family. Curved haunches, rail returns, ornament profiles and historically verified finish/fabrication remain held. The primary crops show a representative arrival-stair family; neither authenticates a P5 camera location. The rounded upper-Main fascia is a separate level from the lower Exit edge.
+This is the first **west** curved-profile checkpoint, not a completed gallery or a finished historical stair. Upper haunches remain held, and the east handrail curves are unchanged. The 150 mm nominal handrail bend radius, lower-haunch polynomial and fabrication are inferred. The photos support the lower arrival-stair outline family and smoother handrails; they do not identify P5, establish an exact radius or certify all 1935–1940 details. The upper Main-concourse fascia is a separate level and has not been copied onto the lower gallery.
 
-| Existing component geometry | With the 14 inferred flat faces |
-| --- | --- |
-| ![Before](visual/before.png) | ![After](visual/after.png) |
+![Accepted bounded lower-outline and handrail geometry study](visual/curved-detail.png)
 
-Both unedited CPU renders use the same camera and neutral review illumination. The before hides only the 14study objects. They omit the platform and surrounding station context because this is a component study; visible isolated supports are not a change to the live station. These are not final browser/PBR renders or calibrated historical camera matches. [Root visual qualification](visual/root-visual-review.json) and [independent primary-photo review](photo-review/README.md) retain the limits.
+The unedited image is an actual Blender Cycles CPU study with neutral review light, not a browser screenshot, final PBR render or calibrated historical camera match. [Root visual review](visual/root-visual-review.json) accepts this bounded source geometry for fresh lighting. It does not accept the remaining upper transition or claim complete historical construction. [Photo audit and tread/curvature addendum](photo-review/TREAD-CURVATURE-ADDENDUM.md) retain the evidence limits. Historical source-photo rasters are not redistributed.
 
-## Preserved authoring and exact recovery
+## Editable source and recovery
 
-- `artifacts/addon.blend` is the exact editable 14-object Blender scene; `finish-addon.glb` is its exact 264-triangle export.
-- The complete source-plus-study GLB is losslessly archived. The original ba096 GLB is recovered byte-for-byte using its archived original header/JSON and the unchanged original BIN prefix inside the combined GLB. The duplicate 3.38 MB source-GLB archive is omitted.
-- The complete 5.19 MB original study manifest, source proof, full contact review and detailed raw routes are retained as lossless gzip, not abridged statistics.
-- `source/build_study.py` is the exact frozen portable authoring CLI. Proposal, source/input pins, source-photo audit, reviewer helpers and both render receipts/helper are retained.
-- The original full `editable.blend` 6.75 MB derivative is retained externally with a verified lossless backup and exact identities in [full-editable-external.json](full-editable-external.json). It is explicitly omitted from the repository. Regenerating the complete scene reproduces both GLBs byte-for-byte and all source/new-component states, but **does not claim identical full.blend serialization bytes**.
+- `artifacts/p5-curved-editable-addon.blend` is the exact 22-object editable addon. Six Bezier spines retain Geometry Nodes Circle → Curve to Mesh → Set Material, using the existing guard iron. The 16 meshes are the original 14 flat faces plus two localized lower haunches. The haunch loft varies laterally from approximately 8 to 68 mm; it is not a claim of constant-thickness sheet construction.
+- The complete accepted raw GLB is archived losslessly. It preserves the original base and flat-study BIN prefixes, including the original six rail bytes. Archived original headers/JSON recover **both ba096 base and ba8516 flat GLBs byte-for-byte** without duplicating their large binary payloads.
+- Both complete frozen study manifests and the original source proof are lossless archives. The source files retain the exact original builders beside a narrowly derived portable curved builder. The latter replaces only a full.blend binary identity assumption with frozen component/material-state checks. It changes no geometry, material or export math.
+- The exact full `editable-curves.blend` remains external with a verified lossless backup in [full-editable-external.json](full-editable-external.json). Replaying the packet reproduces the final raw GLB exactly and the full scene logically. It **does not claim identical regenerated full.blend serialization bytes**.
 
-[Actual portable CPU replay](evidence/portable-replay-proof.json) reopens the rebuilt 4,061-object full scene and the exact packaged 14-object addon. All 4,047 source component/material states and all 14 skin records match the frozen study. No rendering, GPU operation, root modification or dependency installation was used for that replay. Rejected candidate-v1/all-scenes export, duplicate archives, voluminous import/render logs and historical-photo raster files are not redistributed; accepted outputs and full proof data remain retained.
+[Actual CPU replay](evidence/portable-replay-proof.json) rebuilds the flat scene and then the curved scene. It reopens the regenerated 4,063-object full scene and the exact 22-object addon, checking all 4,055 nonowned source objects, all original material graphs, all 22 component states and actual evaluated rail-face material bindings. The accepted raw GLB is reproduced byte-for-byte as `024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f`.
 
-## Reproduce outside the repository
+## Resume outside the repository
 
-Use Python 3.11 with bpy 4.3.0/numpy 1.26.4 for the CPU replay. Select a new external destination; recovery and replay refuse to overwrite an existing directory. From this handoff directory:
+Use Python 3.11 with bpy 4.3.0 and numpy 1.26.4. Recovery requires only Python's standard library; replay additionally requires the pinned Blender Python environment. Choose fresh external output directories. These commands refuse to overwrite existing output and never render, use the GPU or save the canonical scene.
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python source/recover.py --out /tmp/p5-source-recovery-unique
-PYTHONDONTWRITEBYTECODE=1 python source/replay.py --out /tmp/p5-authoring-replay-unique
+PYTHONDONTWRITEBYTECODE=1 python source/recover.py --out /tmp/p5-curved-recovery-unique
+PYTHONDONTWRITEBYTECODE=1 python source/replay.py --out /tmp/p5-curved-replay-unique
 ```
 
-The first command uses only the Python standard library and recovers the exact base, combined study, addon and source proof. The second requires the pinned Blender Python environment and rebuilds the editable scene, validating both raw GLBs and component/material states. Output directories contain their own recovery/replay receipts. Do not use the preserved historical absolute paths in JSON as required filesystem locations; they document the original run.
-
-For the independent CPU geometry review, set `PENN_TOOLS` to the isolated installed Node dependencies recorded in [toolchain.json](toolchain.json), then run against one fresh replay:
+For the portable independent geometry review, set `PENN_TOOLS` to an installed directory containing the versions in `toolchain.json`. The explicit inputs below point to a completed replay:
 
 ```sh
-node source/review-p5-finish.mjs --source /tmp/p5-authoring-replay-unique/source/arrivals-module.glb --candidate /tmp/p5-authoring-replay-unique/rebuilt/p5-study-source-plus-finish.glb --manifest /tmp/p5-authoring-replay-unique/rebuilt/study-manifest.json --proposal proposal/PROPOSAL.json --adjacency /tmp/p5-authoring-replay-unique/source/source-adjacencies.json --out /tmp/p5-review-unique
+P5_FLAT_GLB=/tmp/p5-curved-replay-unique/source/p5-flat-source.glb \
+P5_FLAT_MANIFEST=/tmp/p5-curved-replay-unique/frozen/flat-study-manifest.json \
+P5_ADJACENCIES=/tmp/p5-curved-replay-unique/source/source-adjacencies.json \
+node source/review-curves.mjs /tmp/p5-curved-replay-unique/rebuilt-curves /tmp/p5-curved-review-unique
 ```
 
-Portable reviewer copies change only import/tool paths; [source-derivations.json](source-derivations.json) pins the exact original and derived code. Original reviewer/control scripts are retained separately. The established whole-station walking harness additionally needs the exact retained-context assets identified in its receipt; those large unchanged runtime files are not duplicated here.
+[Source derivations](source-derivations.json) list every portability change beside exact original script hashes. The ownership checker accepts source/candidate/manifest paths directly. Full original walking and evaluation scripts remain provenance records; walking additionally requires the exact retained station context assets named in the receipt, which are not duplicated here. Preserved original absolute paths document their original run and are not required replay locations.
 
-## Evidence and remaining gates
+## Acceptance and remaining gates
 
-[Independent geometry controls](evidence/independent-summary.json): 14 objects, 18 closed positive-volume parts, 42 literal full-area contact rules, zero exposed coplanar duplicates and 88 preserved actual source adjacencies. No numerical boundary allowance was needed. New outward normals pass; all original geometry/normal/UV/material bytes stay exact through original BIN/JSON prefixes.
+[Independent review](evidence/independent-summary.json) passes 42 retained flat contact polygons, four haunch contact strips, 88 original adjacencies, 12 prior rail/newel/finial receiver checks, eight closed positive-volume owned/addon meshes with outward normals, 562 two-sided interior rail sections, 12 complete endpoint caps and four connecting profile rings. The two previously detached finials now have 2.213 mm vertical solid overlap. Two haunch end-strip checks use the established explicit numerical boundary allowance; this is not a claim of literal exact polygon-area coincidence. Analytic Bezier spines are C1; the exported 32-sided tessellated surface is finite geometry.
 
-[Raw walking regression](evidence/raw-walking-summary.json) passes 96 arrival routes/39,696 stair samples, 4 gallery connectors/9,084 samples and 80 fixture rays in each retained full/fallback context. Both contexts use the same **unencoded** new study geometry. This is not encoded-LOD or native-browser acceptance of the 14faces.
+[Raw walking](evidence/own-cpu-summary.json) passes 96 arrival routes/39,696 stair samples, four gallery routes/9,084 samples and 80 fixture rays per retained full/fallback neighbor context. Both use the same unencoded study geometry. All 13 actual input files were rehashed after checks. Earlier failed contact, finial and cap-plane diagnostic receipts remain in the independent evidence archive. They are not promoted acceptance.
 
-Fresh lighting/AO, full/fallback encoding, final route/contact and native visual checks are required before any web integration. Curved silhouettes and rails need a separate source-backed geometry stage before repeating beyond P5. Northern/LIRR registration, street exits, lift assignments, unresolved transfers and local soffit datums remain held. Opening-era photographs do not certify all 1935–1940 details, colours or construction. No final photorealism, performance, physical-mobile, WebGPU, historical-capacity or completed-gallery claim is made.
+Fresh lighting, full/fallback encoding, final assembled physical checks and native six-zone browser review are separate gates before any live integration. Upper haunches, remaining finish/fabrication interpretation, other stair bays, northern/LIRR registration, street exits, lift assignments, unresolved transfers and local soffit datums remain held. No final photorealism, performance, engineering-capacity or completed-gallery claim is made.
+
+## Canonical source and superseded packet
+
+[Read-only C4 compatibility](compatibility/SUMMARY.json) verifies the six existing owner names and Main0 → Street0 translation, retaining each new haunch's local transform. Existing canonical material graphs must be reused, including both Curve slots and GN Set Material. The historical full builder deletes the scene, and its MESH/FONT-only export omits Curve objects. A dedicated external six-replacement/16-addition patch and evaluated-copy export roundtrip are required. The 82 MB canonical file has not been modified, saved or exported.
+
+This proposed packet supersedes the earlier flat source packet at the same directory only after root review. [Supersession and recovery](SUPERSESSION.md) pins immutable commit `89035a4f09fcf43046c3651d6473de20f270e299` and a verified external backup of every prior file. The original flat sources and backup are retained. The replacement proposal avoids a second large base payload and duplicate before/after PNGs; no source history or evidence is silently deleted.

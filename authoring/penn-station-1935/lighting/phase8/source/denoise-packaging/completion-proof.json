@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "sourceHDR": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+  "scriptSha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 2,
+  "fullClippedRGBSamples": 0,
+  "lowClippedRGBSamples": 0,
+  "constant018MaximumError": 0,
+  "relativeMeanChange": -0.0005857499918864306,
+  "PNGWebPExactDecodedRGB": true,
+  "outputs": [
+    {
+      "file": "lighting-concourse-arrivals-denoise.json",
+      "bytes": 2175,
+      "sha256": "d33b5d941420b5163f4ec1637e6d853fc23e56ae250f02f73a32bcc7d13e838d"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky-denoised-linear.hdr",
+      "bytes": 67649587,
+      "sha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky-low.png",
+      "bytes": 208008,
+      "sha256": "d3ebb777f8a26dda70b76b1361f026f996e07fbf90d936e0445d72a2d9c75d66"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky-low.webp",
+      "bytes": 132542,
+      "sha256": "231773284c63cdb0380ef5e9712af9d8adff4991875959caba9ea59b20ba17e9"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky.png",
+      "bytes": 6850275,
+      "sha256": "ea130156867e91588d32f34afa57d0527b8a61591bb1314a174cfbcf1fc9a697"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky.webp",
+      "bytes": 4848142,
+      "sha256": "d830fb8445135b9cd0c5c09bfba77d52d789ba878c874d40493f03a4d82e2373"
+    }
+  ]
+}

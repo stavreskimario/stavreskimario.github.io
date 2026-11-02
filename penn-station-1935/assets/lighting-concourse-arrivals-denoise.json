@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "zone": "concourse-arrivals",
   "source": "lighting-concourse-arrivals-sky.hdr",
-  "sourceSha256": "ddbd8053412ce36ac942b63927927e6b59ee2686acb0fe9a84ea681b764dae8d",
+  "sourceSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
   "inputTransfer": "linear",
   "inputScale": 1.0,
   "radianceScale": 2.0,
   "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
   "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
   "sourceStored": {
-    "mean": 0.033210594207048416,
+    "mean": 0.03317305073142052,
     "minimum": 0.0,
     "maximum": 0.55859375
   },
   "originalLinear": {
-    "mean": 0.033210594207048416,
+    "mean": 0.03317305073142052,
     "minimum": 0.0,
     "maximum": 0.55859375
   },
   "denoisedLinear": {
-    "mean": 0.03319099172949791,
+    "mean": 0.03315361961722374,
     "minimum": 0.0,
-    "maximum": 0.607166051864624
+    "maximum": 0.6049910187721252
   },
-  "relativeMeanChange": -0.0005902477212029744,
+  "relativeMeanChange": -0.0005857499918864306,
   "negativeOutputSamplesClamped": 0,
   "constant018Test": {
     "before": 0.18,
@@ -34,13 +34,13 @@
   },
   "retainedHdr": {
     "file": "lighting-concourse-arrivals-sky-denoised-linear.hdr",
-    "sha256": "1a2d38e8955f38b1f3d6c52dda0a36ed9977ac9806e52fb1f53f24398ff086cb",
+    "sha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd",
     "decodedLinear": {
-      "mean": 0.03308010473847389,
+      "mean": 0.03304292634129524,
       "minimum": 0.0,
-      "maximum": 0.60546875
+      "maximum": 0.6015625
     },
-    "meanQuantizationError": 0.00011083023127866909,
+    "meanQuantizationError": 0.00011071062181144953,
     "archiveFile": "lighting-concourse-arrivals-sky-denoised-linear.hdr.gz"
   },
   "full": {
@@ -58,9 +58,17 @@
     "height": 512
   },
   "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
-  "elapsedSeconds": 11.836462332998053,
+  "elapsedSeconds": 11.637248915998498,
   "authoringDirectory": "authoring/penn-station-1935/lighting/phase8/denoised",
   "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase8/raw",
   "sourceArchiveFile": "lighting-concourse-arrivals-sky.hdr.gz",
-  "bakeReportSha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac"
+  "bakeReportSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+  "sourceReview": {
+    "scope": "Fresh GI/AO for the bounded first WEST P5 curved-rail/lower-haunch study; not complete historical gallery acceptance",
+    "rawPayloadAcceptanceSha256": "2135f63a05352cb5d09da5c0d0c0a62f62a954d0770b59d458b6fe25d2f34aa8",
+    "sourceGeometryInputSha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
+    "rootBoundedAppearanceReceiptSha256": "c1bf6bee1fdc6c0633078836855970978d9e957524b6b577c29f6c06427ea271",
+    "independentSourceReviewSha256": "9a7ec034fea5c15250d23aafdb8da1492a39f8d321913edfd1ae082904fd19d5",
+    "finalBrowserAcceptanceClaimed": false
+  }
 }

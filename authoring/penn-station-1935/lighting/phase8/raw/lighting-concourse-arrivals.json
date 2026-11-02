@@ -4,8 +4,8 @@
   "surfaceGroup": "all",
   "uvMarginPixels": 4.0,
   "uvMarginMethod": "FRACTION",
-  "source": "UV-ONLY-UNBAKED-arrivals-priority.glb",
-  "sourceSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "source": "p5-arrivals-preserved-input-v3.glb",
+  "sourceSha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
   "resolution": 4096,
   "samples": 256,
   "aoPathSamples": 4,
@@ -78,7 +78,7 @@
       "objects": 10736
     }
   ],
-  "unbakedPrimaryMeshes": 3903,
+  "unbakedPrimaryMeshes": 3919,
   "surfaceProfiles": [
     {
       "material": "BedfordLimestoneConcourse",
@@ -367,16 +367,16 @@
   "ambientOcclusion": {
     "minimum": 0.0,
     "maximum": 1.0,
-    "mean": 0.6212977766990662,
+    "mean": 0.6204718351364136,
     "coveredPixels": 16777216
   },
   "illumination": {
     "minimum": 0.0,
-    "maximum": 0.5599497556686401,
-    "mean": 0.03860512003302574,
+    "maximum": 0.5599496960639954,
+    "mean": 0.038561563938856125,
     "coveredPixels": 14478841
   },
-  "elapsedSeconds": 241.74745524999162,
+  "elapsedSeconds": 232.76600495900493,
   "architectureUv": "UVMap",
   "bakedUv": "UVMap.001",
   "artifact": "model-concourse-arrivals.glb",
@@ -544,7 +544,7 @@
     "schema": 1,
     "status": "PASS",
     "mode": "preserve-authored-uv1",
-    "primaryMeshObjects": 3904,
+    "primaryMeshObjects": 3920,
     "allImportedPrimaryBuffersByteExactBeforeBake": true,
     "onlyArchitectureSelectedAndActiveBeforeBake": true,
     "uv1Layer": "UVMap.001",
@@ -15747,16 +15747,16 @@
         "UV0": "3e73db8a276afbc7415c71520b40ad8ffa2087673bf1b078bf3275b6713781be"
       },
       "Arrival row5 west west flight1 rounded top rail": {
-        "positions": "903eb5d6bef8acbe8fc6e9b5bab58e4ceab766edfb93d4f2c125770198fb7d76",
-        "loopVertexIndices": "cf86c76b0ebae4203e081314808195919111c1e7710f43fe6724e24cf0dddd21",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "f1b9e71622adab6510d62a7b6f7d11e6fd1353b613fa7899f559a015292bff1f",
-        "cornerNormals": "5ad650a98c7034d214cba2696d4d65ecda95f694c2e6693d6f70dc4025c588e5",
+        "positions": "a5a448dc2dcc0f91dea395cc3eebbcac03ee34bae4ccf5a0a1f54db19f4d67c7",
+        "loopVertexIndices": "88db7df542eba2f5269b8f599453b38025b5fff89aebc59fd04eddf33f5a470d",
+        "polygonLoopStarts": "ef61e67ef4f1b69c95a04712b75cf72cadd865ad3bafc3f927ede23ca218b7d5",
+        "polygonLoopCounts": "a5c1e48bcb6870deb2a851a50b2958d7f0742e2ecc34de1fa4b27df771ec3bd6",
+        "materialIndices": "b5c14de2cfb6c0cdea368965d7cbc1522e77437953ffb303c859fa3fdcbceb40",
+        "smoothFlags": "641d1d92d6c2e71d1463e045e66fcbf1d64c43104e0986a8f50e0dd7c0c80837",
+        "cornerNormals": "3a4a56d3a062f17bbeb18134775507601b837cf777c1e0c5438f18b0ebb6ee79",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "c32d20d9a13ad65c6a57ad8b8fc730a4536bc1b3032b5d4e770e73d9d90d804a"
+        "UV0": "70690d409943d292ea1f14b9b3ed559cd80d910a9a063b3e3ccd88407a156ad6"
       },
       "Arrival row5 west west flight1 lower guard rail": {
         "positions": "d3f13f2af7116ae1f283b6ad9a4dfc0784aed2b88d4230a70867b737b01e42df",
@@ -16155,16 +16155,16 @@
         "UV0": "e3b98f9e14ee97e7e48e0d09a07815a904c6574f9a1e8124d22a62e6afd930b3"
       },
       "Arrival row5 west west flight1 rounded top rail.001": {
-        "positions": "b5010d382deda125bf95c92aeb0e67a96d6e6b071b6b493aa49689cacecf7804",
-        "loopVertexIndices": "c51da9e9b65b8de341cedb0ee4bc427a9027d66de51727c625359e61ee2cf6bb",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "b80c70777f6a63cfec56508df9f8eca2d803239e05a48b0e900098d2eaba26ab",
-        "cornerNormals": "d8dffe9274e7d17d600be7e42ed0797b33ddd97a49173cc89536c240e047c759",
+        "positions": "d6d889d4af57e737e406c52d7fd92c3a44a2f234ec605ad34c2cdcce37ac36e3",
+        "loopVertexIndices": "88db7df542eba2f5269b8f599453b38025b5fff89aebc59fd04eddf33f5a470d",
+        "polygonLoopStarts": "ef61e67ef4f1b69c95a04712b75cf72cadd865ad3bafc3f927ede23ca218b7d5",
+        "polygonLoopCounts": "a5c1e48bcb6870deb2a851a50b2958d7f0742e2ecc34de1fa4b27df771ec3bd6",
+        "materialIndices": "b5c14de2cfb6c0cdea368965d7cbc1522e77437953ffb303c859fa3fdcbceb40",
+        "smoothFlags": "68b8e0a15d5bd1e28e1803b3b6ea8b424995e45f784b79c9a807e0e130304134",
+        "cornerNormals": "153a7d35fd6ac4e3c2c1899de8526c1b5fae78bcfb7def9c47133c473fe3126e",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "8b97918d316f900a1dcbcdff385f85ddcb5c16315a8ec1b76e27c023b91f117a"
+        "UV0": "930570b688322b5829fd2e982151b67222b83a470a23eb901fe080c91c552853"
       },
       "Arrival row5 west west flight1 lower guard rail.001": {
         "positions": "9e17923e34e36f3cb60a2badf63860740e974ff7dbcb295efcd8f17bced61f20",
@@ -16563,16 +16563,16 @@
         "UV0": "fdb2ffe7323ba15f6472ec7ba9e937a79ec2afcb728f786a3ff2ae8aa2ea1643"
       },
       "Arrival row5 west west flight2 rounded top rail": {
-        "positions": "60c8cfa005e4bd01188cd7eab30a3e231ba02bb780b93ca4ab0d49846f5a3827",
-        "loopVertexIndices": "eef1a262c318f0d19cb804b9df0b02a86b9d96dd5a5b734c5312fccb7ecba730",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "0b72031fe2596e6d59a08ebe9e461c2de044ca5657df4ae5c8ee9a6befa49e52",
-        "cornerNormals": "82f95a73321e7450fe4b6db2a9f384d7fb6a6074af26bbecec5bb6d8df08cb54",
+        "positions": "6205e71b5a6159b9e701d1ca0efb6af35fd62b8d88f6473c150b9d7e0d23502c",
+        "loopVertexIndices": "88db7df542eba2f5269b8f599453b38025b5fff89aebc59fd04eddf33f5a470d",
+        "polygonLoopStarts": "ef61e67ef4f1b69c95a04712b75cf72cadd865ad3bafc3f927ede23ca218b7d5",
+        "polygonLoopCounts": "a5c1e48bcb6870deb2a851a50b2958d7f0742e2ecc34de1fa4b27df771ec3bd6",
+        "materialIndices": "b5c14de2cfb6c0cdea368965d7cbc1522e77437953ffb303c859fa3fdcbceb40",
+        "smoothFlags": "dc70798349e0a68649066c98da11aeacc4cdfbe078134d7cb96baec25425fc85",
+        "cornerNormals": "d0391be955691ebcfb23a4b26600b0e57245a84d51e6fb016596ac192a7468e6",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "c5842fe95b27e5b06a8830a9498a0992cf01d6282018061fde10f80e4947b0ef"
+        "UV0": "55c946c5cd73ec5763fdcbd16566f223bc7f63ca6fe24eb73b9e80d243093a6a"
       },
       "Arrival row5 west west flight2 lower guard rail": {
         "positions": "095db9f081b17e21c25b5464c3a09f087eac1f0363e543bd934abd0e89a67e2c",
@@ -16971,16 +16971,16 @@
         "UV0": "a7882c701ba9083c4051d2d413be468e04704b8e40388a05405fd7e987321aba"
       },
       "Arrival row5 west west flight2 rounded top rail.001": {
-        "positions": "1ed3a042309539ebc6703fbec9943991f1096b88fe01ade4eefa78183f2b5f2a",
-        "loopVertexIndices": "6af6d7594f3d37c93ff551b671db000296f49c585884935e9fc758516c477d44",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "1d8b48b7ddfe3c61bf9fae497146667b3ae8229679fc9e62675baff114281087",
-        "cornerNormals": "bd7180f41fff9ce235ee6ca319990a9905d0d95420b2d7a9e9e97965551ecd62",
+        "positions": "c17eb244269bf9af041085ec6778b6ca1c085b341164436b5a22d497c7d9e159",
+        "loopVertexIndices": "88db7df542eba2f5269b8f599453b38025b5fff89aebc59fd04eddf33f5a470d",
+        "polygonLoopStarts": "ef61e67ef4f1b69c95a04712b75cf72cadd865ad3bafc3f927ede23ca218b7d5",
+        "polygonLoopCounts": "a5c1e48bcb6870deb2a851a50b2958d7f0742e2ecc34de1fa4b27df771ec3bd6",
+        "materialIndices": "b5c14de2cfb6c0cdea368965d7cbc1522e77437953ffb303c859fa3fdcbceb40",
+        "smoothFlags": "bc5f63904b5723680a6bded9fab51b3f570c0a1cb80c6d86c196fa7997e3e5c0",
+        "cornerNormals": "766888f9fcb667cbde0b338e06b62a789bd34a0e60e091bb31c7e709cede8106",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "aae75e5be5dde41c5318cc38133550839a3fee5fdb4b4b86193b11f09d1ce110"
+        "UV0": "fa9d9ee3c28f78e2f84f9de7ac8aadbe5fc6ae7ab8f32666b3538255326b576e"
       },
       "Arrival row5 west west flight2 lower guard rail.001": {
         "positions": "02aaa7724e1f8ac2f6fb57ee2f2b58a06132194234cec305526feb955312b6f2",
@@ -17403,16 +17403,16 @@
         "UV0": "af9caa79a83a181efc03c5aa49a6d2c9dc0f64ab7b3739e5873251259fc62f2c"
       },
       "Arrival row5 west Arrival intermediate landing top rail": {
-        "positions": "4297fdf972ee57f0e1658972ef8e312e8720bb90b41573cfbce6cfe380a1fc5f",
-        "loopVertexIndices": "11b661b78a1837d1ae6c17c773e86f1de7725f375b42abd1826775f5f9ca08a1",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "377ebcbff9d5713d8d0aed964a068329db79e455ab28b8c0e7388b3d1407b465",
-        "cornerNormals": "75691552bd1d03cadd3bc5c9d21338fcdc951a602a7a253b45cd1ba28a1205cd",
+        "positions": "0a6ba3bf4e9b22da3fb7421886ee86f9f479e30583a6f1f0fc7eb10697c640fb",
+        "loopVertexIndices": "f2d489010a7c9a3e0d7d9b17c39db5f0b02e4c2ab1a86da23cb788d43f2bbf52",
+        "polygonLoopStarts": "0361d91e3c12b85c366411ca9e7500903219136ba8861a080e05a73554786b11",
+        "polygonLoopCounts": "4b5a405c157592ba96c59fa011bf345a166a091a1e2d77e2a7a4d871c4ae1727",
+        "materialIndices": "aa928f485c335e07fd0a725ab43f2c3da35a50d16cb460253c85250bea92f722",
+        "smoothFlags": "2113e5a7333c9ff5f35ea9943a28e9eb1e2952d8b320a6e11d9e8b832a4d15be",
+        "cornerNormals": "9020fa7aa5a55a7d90cc31c32e9e3b5227504233425421955cbe1edb81ed41e9",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "b5961f674db370bfa9ab4d2adccbed7734c2e6858997c0a147528c8371a0c537"
+        "UV0": "db9c7775a1e91643dc96bd68e10aef633878ab0c2d9abc39f0c5992b47809d83"
       },
       "Arrival row5 west Arrival intermediate landing lower rail": {
         "positions": "fe0972a591c9333989a871747ab1fcb8aeb22c4a2024698102ceec8924ca1441",
@@ -17499,16 +17499,16 @@
         "UV0": "89c160c1ce0a4d8ca0d3f9596fdfeed7b6c4059f616849a5d1777fba134779ca"
       },
       "Arrival row5 west Arrival intermediate landing top rail.001": {
-        "positions": "91f2fec368c101a5831294af5ef8175d02c1a4f0156e4232e0969fb32b51fe02",
-        "loopVertexIndices": "11b661b78a1837d1ae6c17c773e86f1de7725f375b42abd1826775f5f9ca08a1",
-        "polygonLoopStarts": "bd3a4b263a01f9481d7c5e6a4711e56a835426233402d3399f7be15da5692f8a",
-        "polygonLoopCounts": "d56f574e2729a4caa8a70738d89b0ea5adb951ced1317bd9d168a6a9796efddb",
-        "materialIndices": "2dfba633817046c7f559ed4b93076048435f7e1a90f14eb8035c04b9ebae2537",
-        "smoothFlags": "377ebcbff9d5713d8d0aed964a068329db79e455ab28b8c0e7388b3d1407b465",
-        "cornerNormals": "8e7c016c841a8615d65beb38e993b06a18f2a39d6e6b74c76b9c373e7141a7ef",
+        "positions": "7d825634eb0ef6d5f1449ef55b5fb5c16228abedd37d036ebe1206d21f0329f0",
+        "loopVertexIndices": "f2d489010a7c9a3e0d7d9b17c39db5f0b02e4c2ab1a86da23cb788d43f2bbf52",
+        "polygonLoopStarts": "0361d91e3c12b85c366411ca9e7500903219136ba8861a080e05a73554786b11",
+        "polygonLoopCounts": "4b5a405c157592ba96c59fa011bf345a166a091a1e2d77e2a7a4d871c4ae1727",
+        "materialIndices": "aa928f485c335e07fd0a725ab43f2c3da35a50d16cb460253c85250bea92f722",
+        "smoothFlags": "245a495fe9caef002451ca90c30fdbbdbf3298a4abc02b13c5e6a954bd442d37",
+        "cornerNormals": "e798df23b9771556c9f47d243570328528cdba716a79db2a3fcbd556d2587986",
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
-        "UV0": "bcc11c39234d5ff69f791188b77dd84f15416ed6d18946d8baaab9df1bd1eb53"
+        "UV0": "b177092ee68c8034dfaed0fc632196fe7186312e184ac352ea7b4307f8897762"
       },
       "Arrival row5 west Arrival intermediate landing lower rail.001": {
         "positions": "7ca149204891177fb3c64defc84f0ae46af100ceb75a0dbe3a85cff8f97ed201",
@@ -47401,6 +47401,198 @@
         "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
         "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
         "UV0": "b50ce84efe52fb9f59588e722c006f474f6bce8d90181e1a794ca2af86fd662a"
+      },
+      "P5Finish west flight1 side-plus": {
+        "positions": "f18629dffd27e5aa6442a3fd96b89259563978b727e8b9225da13150eb353854",
+        "loopVertexIndices": "97765ef2e569c4c54c5bd00fbd48de01b4641ba1f4848ae583fb4d0530f31969",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "c4f85049162f6a570afcb20cb8ae5ee3588f4ed0cb6a1860267eea7cbcfb839a",
+        "cornerNormals": "8f4ace99ce74a874773e854bbdfb76f48ab912854df5d29702a239f901d60794",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "fcba846a5ed0259116918150c634b51b0902c9f7411d2273221982fd6459f993"
+      },
+      "P5Finish west flight1 side-minus": {
+        "positions": "ab628e21d8794dd9c439d1eb6d4d88679677b9f0d569bf674131a5e22c26a3d4",
+        "loopVertexIndices": "9df88f2551503e8f118be65241cf7151a63c410319cf9216825316b142807e0d",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b",
+        "cornerNormals": "0582e5729202fbbbd11284ce5bf8d45718b3675f5375332565952e01dbc29750",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "42c54b72a190128dcb7e0e81c5c93f8504daa7cfa04bab0761590af85b0ae5d1"
+      },
+      "P5Finish west flight2 side-plus": {
+        "positions": "a741d3e9a3a93d33f9fd2e85b001575c8473c855841bf681b3832360b5fe570b",
+        "loopVertexIndices": "97765ef2e569c4c54c5bd00fbd48de01b4641ba1f4848ae583fb4d0530f31969",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "cf6caa3938beb3d58c5f54db09ff30c782fca10af28948af50ed250e63f93f94",
+        "cornerNormals": "99dc4c5571bbf935dd7beb44d92534232d6bbc764d3a595c08591913ca98f6a7",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "dc8514086fe88472a918681a6d00f77bb99b4c6ab4423eb2969e849ee065e8bd"
+      },
+      "P5Finish west flight2 side-minus": {
+        "positions": "9d1ba87d8f6d317734d1fe7d1cc8ac94c620b7d69e711431ce9b84d515a2872f",
+        "loopVertexIndices": "9df88f2551503e8f118be65241cf7151a63c410319cf9216825316b142807e0d",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "07a447078a3c4e6c4b713b31623ca8789562ded7e11fcc2b8e4d7df5cc6c577a",
+        "cornerNormals": "f8919d9e24ca91bd1d24fed806400a004b703ad82c34ade90db4ff3e85b997f1",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "2318c7dba6837330a270b8373bb9e6835abbbe63ff8170bb2e8a1a70d3d724a6"
+      },
+      "P5Finish west landing side-minus": {
+        "positions": "10beb925cc31c0106f002ca7839414da2388b64e12af05192ad9cc4ba5e41b9b",
+        "loopVertexIndices": "34e3024bb009d80ec55f41ea04e2fe49858d793d2442979412b6d35b7d71fb00",
+        "polygonLoopStarts": "608517e390b7d82c0064d9207399992891c758e6998ef4e9d2c456da4571b53c",
+        "polygonLoopCounts": "d50a9a3f75a7ad94c1f4b6b2b0cfc86d49aca925e8797f7bbd62975671c6f4cf",
+        "materialIndices": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4",
+        "smoothFlags": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+        "cornerNormals": "6ee8e5efbace8cb2e606128f184b6a9293489c677776ca00c33b1acd9035a586",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "91cd4513a8870843fdfddb2a51c185d2d338002bb9733473da13d92f7c4b1b9a"
+      },
+      "P5Finish west landing side-plus": {
+        "positions": "1635b566ed16b0f52362106387a3153b48c491347703b604c2e536aa15c16f23",
+        "loopVertexIndices": "34e3024bb009d80ec55f41ea04e2fe49858d793d2442979412b6d35b7d71fb00",
+        "polygonLoopStarts": "608517e390b7d82c0064d9207399992891c758e6998ef4e9d2c456da4571b53c",
+        "polygonLoopCounts": "d50a9a3f75a7ad94c1f4b6b2b0cfc86d49aca925e8797f7bbd62975671c6f4cf",
+        "materialIndices": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4",
+        "smoothFlags": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+        "cornerNormals": "6ee8e5efbace8cb2e606128f184b6a9293489c677776ca00c33b1acd9035a586",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "9c7fc04c3f1abe108f94c79e51fc9c0f716978d9360cb93aaa28273fc0b4893c"
+      },
+      "P5Finish east flight1 side-plus": {
+        "positions": "6ef649697e36b8e070c3688f584bd84bc5ac7433922bcfa692bcc8482e82a8cf",
+        "loopVertexIndices": "19239b1ae06e43a42a49d263103f0ce75f483f4312e013b44753cd13e0788ab4",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "c4f85049162f6a570afcb20cb8ae5ee3588f4ed0cb6a1860267eea7cbcfb839a",
+        "cornerNormals": "5d3b51cc417cb494ed14bb5c6e6447cde4cc6739ca228a2c04d75bbb942903db",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "f28a49f33795d572c860786d65c5418dbbbaf8661c9bcbfc2ca3eb988bd8c917"
+      },
+      "P5Finish east flight1 side-minus": {
+        "positions": "eb9030d2ec8497633e276c71c3446eda6490da455c8c57b5161a2f6b807bb21d",
+        "loopVertexIndices": "32f53fcb6ef40e3bcbb107522d11107314da5f443b80a7a0600c463d34cf28d5",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b",
+        "cornerNormals": "0dc7cabd656457f34a0763963de601fca0cc69679b56eb1e84177e52892fa329",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "b49404acd6ca8ad1d92fb15a03e21fa81de96a7af722c100dad414020379e927"
+      },
+      "P5Finish east flight2 side-plus": {
+        "positions": "a267323fd5c641ed4f267c531c6669a83a0b2860f98a4b91c9ec79798703b582",
+        "loopVertexIndices": "19239b1ae06e43a42a49d263103f0ce75f483f4312e013b44753cd13e0788ab4",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "9bf6b0320541017b21b4612bfcfafa17f6dfcc179b4e05c42ff2349d6f8a28d1",
+        "cornerNormals": "78fc0419e9458947d320c91c21c9c3850f7d6e7c701b791e2462a96cc9afb7f7",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "a20af788d36105d2da650073faf3edc528185df9f6390718904ccfea7718bed0"
+      },
+      "P5Finish east flight2 side-minus": {
+        "positions": "88807bcd5f97f0f3a30503c8482baf228331f0c7ba85310d0baad425056b940a",
+        "loopVertexIndices": "32f53fcb6ef40e3bcbb107522d11107314da5f443b80a7a0600c463d34cf28d5",
+        "polygonLoopStarts": "090fa035e07deccdee6bbe47a516d7e2be3993bf64d889656b7176f106677e29",
+        "polygonLoopCounts": "b886a876a05d91284ccc843786c3e1d18cac3eb22d804e3d6ed8d4f055e2b769",
+        "materialIndices": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+        "smoothFlags": "31190090408f837aa1dc44bf75404af354a0e5d5c965f1d407a97dd627554da5",
+        "cornerNormals": "4bb31dda21b02fdadd381e29d814856536533b08ecbb398dbdd5c7607bbe4cdf",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "de389f5da6e165ef143f5d526549326ffa24a5d684c53b68869327d6c05c25a3"
+      },
+      "P5Finish east landing side-minus": {
+        "positions": "d81e94cb5995bc980a9c84ed1fbc02a9cb1da4ebc7252ead61637d8ae9ae78e3",
+        "loopVertexIndices": "34e3024bb009d80ec55f41ea04e2fe49858d793d2442979412b6d35b7d71fb00",
+        "polygonLoopStarts": "608517e390b7d82c0064d9207399992891c758e6998ef4e9d2c456da4571b53c",
+        "polygonLoopCounts": "d50a9a3f75a7ad94c1f4b6b2b0cfc86d49aca925e8797f7bbd62975671c6f4cf",
+        "materialIndices": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4",
+        "smoothFlags": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+        "cornerNormals": "6ee8e5efbace8cb2e606128f184b6a9293489c677776ca00c33b1acd9035a586",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "126acfbbce9c2a8113dee1cc4efa4565561937f72474404d393f332b418b84de"
+      },
+      "P5Finish east landing side-plus": {
+        "positions": "1be0bd179245a8a84fe186527772cf5b908c903105cdf3f174b3860651010746",
+        "loopVertexIndices": "34e3024bb009d80ec55f41ea04e2fe49858d793d2442979412b6d35b7d71fb00",
+        "polygonLoopStarts": "608517e390b7d82c0064d9207399992891c758e6998ef4e9d2c456da4571b53c",
+        "polygonLoopCounts": "d50a9a3f75a7ad94c1f4b6b2b0cfc86d49aca925e8797f7bbd62975671c6f4cf",
+        "materialIndices": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4",
+        "smoothFlags": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+        "cornerNormals": "6ee8e5efbace8cb2e606128f184b6a9293489c677776ca00c33b1acd9035a586",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "b24aa2fd661fdde0f3da039d234ec1ca80618a1f43481a787a77ddd54cf7779a"
+      },
+      "P5Finish west gallery fascia": {
+        "positions": "fb28747ce8a7352515ec240dc3be75d2a4e699fd1c5a740b451c5081e0d3478d",
+        "loopVertexIndices": "ad65f5c240386a24d54917b8c03e0bc051cdf744aa93e88b3d5d7bebb52a0d96",
+        "polygonLoopStarts": "72f76943ad97c7441dd006c2856c4acb58ce33ff2ba1d3eb803f67de0f3f3dc2",
+        "polygonLoopCounts": "6a4e254d84b753b8f07baf08cf95e997edd9658fb997effaa67c327227ca9d2d",
+        "materialIndices": "b5fdab78d8947eacc864bfeecb4d2100780e5afe1cd8efafb124887913ac49fa",
+        "smoothFlags": "3addfb141cd7c9c4c6543a82191a3707ac29c7a041217782e61d4d91c691aee8",
+        "cornerNormals": "528b208794be9f2388dedee49f75e2307f3251c33f8b27be9e190bf70cc80d2f",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "ab44c4b3317d81e9a874f068dc39efcd0cce8b6beb6d906677d647da4f383507"
+      },
+      "P5Finish east gallery fascia": {
+        "positions": "eab4b4b2e7b9051dc3ba198b283029b172bbbe1301221ef1e82264e154e2b189",
+        "loopVertexIndices": "3d9fd1d67b3497d38a04a6cc1de9627ccbdb4888941c602997c11d8baa1ff1c5",
+        "polygonLoopStarts": "04fea0c0be3108f289aab97ed61320c5aa20472b373eb34c248ea898363d964a",
+        "polygonLoopCounts": "5a70a0aebbd05b28e67773503ede21fb6de208694851215911b00ca406dd3640",
+        "materialIndices": "86d2cf5b090f43ee54d8f7c1dcf746a853951191457ff6dac96269a9d24860b9",
+        "smoothFlags": "85759b3811ff7dc47b03792ac85317be51431a3f9e01dcafce317ed736a391b0",
+        "cornerNormals": "5116a9ad491c9a51770604a20bb6c9bb7732110e6ba0614d45efb914c577be7f",
+        "worldMatrix": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "4206f78f0eea0692b6814a627eaea2124c26eae7f7ad25d90f57fdb1c3b4f3aa"
+      },
+      "P5Curve west lower haunch side-plus": {
+        "positions": "b40112df978b7ac4cfec5adead19dc582979bf71289e4b6a60024a1a0ee7a18d",
+        "loopVertexIndices": "856ce88e78708bfc8a94308c9f10c66ffffd433943936181a5843444e4e92bbd",
+        "polygonLoopStarts": "469cbeb57ccbfdef901d69e210cf0be31289751d0b4006b911ce575a5503ad90",
+        "polygonLoopCounts": "a22138034dca3f8f24e2693526cae8c8288cf1a9afe5935e5bc0943f385a5ee2",
+        "materialIndices": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca",
+        "smoothFlags": "b7e4aac91e89f0862d72405e613e595fbd7fd9e4edf4751e320f3db27493ec07",
+        "cornerNormals": "3c8730407d366b65ea0371c2e0e3973ca83511e0170e34b947f32913a9c2d3d2",
+        "worldMatrix": "1b6644039d4899ef993490888f8c0fcd7acf4450bddbdd12efda0db3325ef60a",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "2f70df5042a3f4be112b2d1b4dc2cf0218bb44b727cf3e7d37102da4a060b664"
+      },
+      "P5Curve west lower haunch side-minus": {
+        "positions": "8de1a6b12d2073a1539d116608e575c2ef25e9ba66db759566435b9b55af7ac9",
+        "loopVertexIndices": "eb254489f79ae9b1205f7028e01239408c81113ddb8bf9fecfeb880f1566c8b6",
+        "polygonLoopStarts": "469cbeb57ccbfdef901d69e210cf0be31289751d0b4006b911ce575a5503ad90",
+        "polygonLoopCounts": "a22138034dca3f8f24e2693526cae8c8288cf1a9afe5935e5bc0943f385a5ee2",
+        "materialIndices": "80422bc3d307b4a25bdafcc84ac7fb01cb55a09810e8b0f37bb12e0edb5c48ca",
+        "smoothFlags": "68ebb404ebae60ef3b0828ecc9004d662f9ce78e1a50c1d309a5330bfb795f7b",
+        "cornerNormals": "ecf5cca82fa46ea12a6d8030a7a43dd5ae2a371e514180c5f791deb478ff5dac",
+        "worldMatrix": "1ba609ebec00e04d21185ee3332faa4a7c9594f576817aa6b319086cdf6c5335",
+        "renderVisibility": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "UV0": "a57261393abd46a0e573018ecd721bef11d4aef2440e2eabded29f88ee8631d1"
       }
     },
     "scope": "Post-import buffers including geometry, every UV, normals, material indices, smoothing, matrices and render/viewport visibility. Source GLB byte preservation is proven separately."
@@ -47462,22 +47654,22 @@
     "primaryAndOccluderMaterialPointerIntersection": 0,
     "primaryMaterialGraphsPackedImagesAndPropertiesExact": true,
     "primaryMaterialBeforeHashes": {
+      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e",
       "ConcourseOpaqueArrivalsUpperSupports": "4626409d8000362450cba2eadc57a045ee421735e06ac5d9bf081b12edf3cbb1",
       "ConcourseOpaqueArrivalsConcrete": "0d509e2417b7423e161806f166578255a8bbfe6ea3a637d0695cd84d875ec1e7",
       "PublicFloorMarbleArrivalsRetainedNorth": "8e219de51dfb62312de514404589ec34d00c1c9fc5b56772fd0067af5a3bf945",
       "TravertineArrivalsStairStone": "170ed517ca290ae4c0145d1e6d67778db1e1cdc454afca5daf86e6c82bf7ae22",
       "PaintedStructuralIronArrivalsGroutJacket": "1eeabf26c04141021a7381870bdbffd7a89f3c1e80631ca7921aabfd3e85d563",
-      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7",
-      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e"
+      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7"
     },
     "primaryMaterialAfterHashes": {
+      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e",
       "ConcourseOpaqueArrivalsUpperSupports": "4626409d8000362450cba2eadc57a045ee421735e06ac5d9bf081b12edf3cbb1",
       "ConcourseOpaqueArrivalsConcrete": "0d509e2417b7423e161806f166578255a8bbfe6ea3a637d0695cd84d875ec1e7",
       "PublicFloorMarbleArrivalsRetainedNorth": "8e219de51dfb62312de514404589ec34d00c1c9fc5b56772fd0067af5a3bf945",
       "TravertineArrivalsStairStone": "170ed517ca290ae4c0145d1e6d67778db1e1cdc454afca5daf86e6c82bf7ae22",
       "PaintedStructuralIronArrivalsGroutJacket": "1eeabf26c04141021a7381870bdbffd7a89f3c1e80631ca7921aabfd3e85d563",
-      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7",
-      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e"
+      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7"
     },
     "neighbourMaterialGraphsChanged": [
       "ArcadeOrnamentalMetal",
@@ -47558,22 +47750,22 @@
     ],
     "primaryMaterialGraphsExactSinceInitialImport": true,
     "primaryMaterialBeforeAllContextHashes": {
+      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e",
       "ConcourseOpaqueArrivalsUpperSupports": "4626409d8000362450cba2eadc57a045ee421735e06ac5d9bf081b12edf3cbb1",
       "ConcourseOpaqueArrivalsConcrete": "0d509e2417b7423e161806f166578255a8bbfe6ea3a637d0695cd84d875ec1e7",
       "PublicFloorMarbleArrivalsRetainedNorth": "8e219de51dfb62312de514404589ec34d00c1c9fc5b56772fd0067af5a3bf945",
       "TravertineArrivalsStairStone": "170ed517ca290ae4c0145d1e6d67778db1e1cdc454afca5daf86e6c82bf7ae22",
       "PaintedStructuralIronArrivalsGroutJacket": "1eeabf26c04141021a7381870bdbffd7a89f3c1e80631ca7921aabfd3e85d563",
-      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7",
-      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e"
+      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7"
     },
     "primaryMaterialAfterAllContextHashes": {
+      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e",
       "ConcourseOpaqueArrivalsUpperSupports": "4626409d8000362450cba2eadc57a045ee421735e06ac5d9bf081b12edf3cbb1",
       "ConcourseOpaqueArrivalsConcrete": "0d509e2417b7423e161806f166578255a8bbfe6ea3a637d0695cd84d875ec1e7",
       "PublicFloorMarbleArrivalsRetainedNorth": "8e219de51dfb62312de514404589ec34d00c1c9fc5b56772fd0067af5a3bf945",
       "TravertineArrivalsStairStone": "170ed517ca290ae4c0145d1e6d67778db1e1cdc454afca5daf86e6c82bf7ae22",
       "PaintedStructuralIronArrivalsGroutJacket": "1eeabf26c04141021a7381870bdbffd7a89f3c1e80631ca7921aabfd3e85d563",
-      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7",
-      "PaintedStructuralIronArrivalsStructure": "f3595d4ccf3d7f361e1ae1a6c7593f0215053501c1d84b2b66b9570c0370d06e"
+      "PaintedStructuralIronArrivalsGuard": "feab2f62377cfdb35bf33627a0835103388e1c1982610e16eb428e70d9aa52f7"
     }
   }
 }
