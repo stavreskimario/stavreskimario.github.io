@@ -1,3 +1,9 @@
+## Ordinary-gallery finish — 4 November 2026
+
+The new addon follows the period open-sided gallery family:98 fitted fascia/stringer/landing volumes across both107m edges and fourteen non-P5 stairs. P5 finish is retained once; no continuous enclosing wall or generic dropped ceiling is inferred. Full mating contacts and existing public stair clearances are checked against actual source geometry. Profiles and individual row registration remain reconstruction, not verified fabrication.
+
+The small `33rd STREET` sign follows PRR1910PDF53's destination-sign family. Exact position, board size, typeface and hue are inferred. Two stems bear on actual ceiling faces and provide2.2376m head clearance; the two outward lettering meshes are independently readable. The modern CC0 concrete texture is an interpretation for the already-qualified neutral floor; no original complete Exit floor finish is newly established. [Source and acceptance](../../authoring/penn-station-1935/review/phase11/gallery-finish/README.md).
+
 ## Street-wall interface correction — 4 November 2026
 
 The two side walls previously rose1.096m above the actual road surface. The corrected Blender source splits them north of the modeled curb and caps their under-road sections50mm below the asphalt slab underside. Northern landing walls, guards and all floor/tread geometry stay exact. This is a construction-interface repair, not new historical evidence for the inferred well footprint. [Source and proofs](../../authoring/penn-station-1935/review/phase11/exit-street-fix/README.md).

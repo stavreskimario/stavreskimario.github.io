@@ -10,7 +10,7 @@ function textureInfo(texture) {
     width: Number.isFinite(image?.width) ? image.width : null,
     height: Number.isFinite(image?.height) ? image.height : null,
     flipY: Boolean(texture.flipY), wrapS: texture.wrapS, wrapT: texture.wrapT,
-    colorSpace: texture.colorSpace,
+    colorSpace: texture.colorSpace, repeat: texture.repeat?.toArray(), offset: texture.offset?.toArray(), anisotropy: texture.anisotropy,
   };
 }
 
@@ -27,6 +27,7 @@ function materialInfo(material) {
     reflectionFile: material.envMap?.userData?.sourceFile ?? null,
     walkingCollision: material.userData?.walk_collision ?? null,
     ao: textureInfo(material.aoMap), lightmap: textureInfo(material.lightMap),
+    baseColorMap: textureInfo(material.map), normalMap: textureInfo(material.normalMap), roughnessMap: textureInfo(material.roughnessMap), normalScale: material.normalScale?.toArray(),
   };
 }
 

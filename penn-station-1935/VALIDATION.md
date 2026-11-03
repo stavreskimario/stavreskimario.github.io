@@ -1,4 +1,14 @@
-# Current checkpoint: clear street exit — 4 November 2026
+# Current checkpoint: gallery fascia, floor and wayfinding — 4 November 2026
+
+Runtime `11-gallery-finish-1` adds98 fitted stringer, landing and gallery fascia components across both107m edges, retaining P5's existing finish once. A small source-family `33rd STREET` sign hangs from actual ceiling receivers and reads correctly from both sides. The neutral floor gains physically scaled modern concrete color, normal and roughness maps while retaining its mean albedo, geometry, AO and GI. This appearance remains explicitly unverified as a historic floor material.
+
+Fresh4096px/128sample CyclesMetal transport includes all101 opaque source owners and ten registered neighboring lamps; only two lettering meshes remain outside the atlas. Authored corner normals survive join/UV preparation. Actual source comparison measures0.02857degree maximum normal encoding change (existing0.5degree bound),7.629micrometre position change and zeroUV0 change; lossless packing/mounting adds zero attribute drift. The earlier incorrect-normal candidate was rejected and never published.
+
+[Complete acceptance and source](../authoring/penn-station-1935/review/phase11/gallery-finish/acceptance/README.md) retain actual geometry, lighting, source-recovery and browser results. Walking walkthrough remains omitted at the owner's request; no new FPS or physical-mobile claim is made. Historical profiles, minor fabrication and1935 survival remain qualified. Publication is verified separately after deployment.
+
+Final model/source/geometry checks pass:12GLBs,107 shared KTX2 images, zero glTF errors;240,218,826 referenced render bytes across both variants. Actual3,168 stair samples and6,252 exit-route samples, road/curb checks and exact base geometry-prefix preservation pass. Actual Chrome static gallery/platform/sign views show six visible areas, two new4K GI bindings and correctly scaled2K color/normal/roughness on the floor; no page/HTTP/unexpected console errors. Local cancellations remain separately recorded. These checks use no keyboard movement or walking walkthrough. Wider railway enclosure and some street-roof transitions remain unfinished.
+
+# Previous street-exit correction — 4 November 2026
 
 Runtime `11-exit-street-wall-1` corrects the exit walls protruding through33rdStreet. The road sections are buried50mm below the actual asphalt slab, while the northern landing walls, guard rails and walking surfaces remain intact. Fresh4K/128sample lighting follows the corrected geometry.
 

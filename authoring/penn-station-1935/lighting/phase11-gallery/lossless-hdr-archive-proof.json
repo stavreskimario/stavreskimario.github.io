@@ -1,0 +1,23 @@
+{
+  "status": "PASS normal-preserved actual HDR archives; no root overwrite before independent normal acceptance",
+  "archives": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/lighting-concourse-gallery-finish-sky.hdr",
+      "bytes": 18796537,
+      "sha256": "f141aa600a82ab71bdd48b7500464321d952e254529118494c59ab5efcfcba2c",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/lossless-hdr-archives/lighting-concourse-gallery-finish-sky.hdr.gz",
+      "archiveBytes": 15337625,
+      "archiveSha256": "68c948988685c060ddeeea7b4bcd37bb1e18e5f6a9802769265f8fb59a192b0b",
+      "decompressedBytesExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/denoised/lighting-concourse-gallery-finish-sky-denoised-linear.hdr",
+      "bytes": 67649587,
+      "sha256": "b2c1db627568f14f18e03043533d2de858e17a5b4910c786804d849932c23ef4",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/lossless-hdr-archives/lighting-concourse-gallery-finish-sky-denoised-linear.hdr.gz",
+      "archiveBytes": 13411077,
+      "archiveSha256": "5fbd9849cf5a79650b3d21da9c5b6265c5e935b4c506b4ef5e585e081b026929",
+      "decompressedBytesExact": true
+    }
+  ]
+}

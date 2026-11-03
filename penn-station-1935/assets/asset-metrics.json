@@ -383,11 +383,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 24361316,
+      "bytes": 24485228,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 6896629,
-      "sha256": "b63550968433beebd37cfc771069975cf385a3ab0b2c1d41048900b88be75451",
-      "transportSha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
+      "transportBytes": 6959153,
+      "sha256": "ce212fbbf5d20ccf3b009980fc0fc5db08ce3f23c3ff078dad8394f721b20515",
+      "transportSha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -572,12 +572,28 @@
         {
           "uri": "textures/eb9e3d30e65af46f13f5.ktx2",
           "bytes": 3643443
+        },
+        {
+          "uri": "textures/74a8a5e6c4800f175503.ktx2",
+          "bytes": 901739
+        },
+        {
+          "uri": "textures/0aab5b4fc6e106416188.ktx2",
+          "bytes": 2537314
+        },
+        {
+          "uri": "textures/898482cc86badea310d6.ktx2",
+          "bytes": 1724012
+        },
+        {
+          "uri": "textures/8126d17f083801bd41b3.ktx2",
+          "bytes": 1631539
         }
       ],
-      "nodes": 29,
-      "meshes": 29,
-      "materials": 39,
-      "textures": 46,
+      "nodes": 32,
+      "meshes": 32,
+      "materials": 42,
+      "textures": 50,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -585,17 +601,18 @@
         "KHR_materials_transmission",
         "KHR_mesh_quantization",
         "KHR_texture_basisu",
-        "KHR_materials_emissive_strength"
+        "KHR_materials_emissive_strength",
+        "KHR_texture_transform"
       ],
       "geometryPolicy": "Shared reviewed full concourse geometry/PBR for this desktop-first checkpoint; low illumination/reflections/shadows/DPR remain; mobile geometry work deferred."
     },
     {
       "file": "model-concourse-low.glb",
-      "bytes": 21092420,
+      "bytes": 21216332,
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 6586218,
-      "sha256": "176caa968ac9365863364170a8f8a23f047916e700ebee7d5f267b465f832537",
-      "transportSha256": "63b977ed4db677f7fe3ba267dbf0520b6e0bd619053ce187fde84c7b6eb62b21",
+      "transportBytes": 6648546,
+      "sha256": "6daa8c611746c14949b20ca133b3c72a09b5df07c39a3befd4b75b395ecc55e6",
+      "transportSha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -780,12 +797,28 @@
         {
           "uri": "textures/2382d016a2ae9c07bc3a.ktx2",
           "bytes": 239656
+        },
+        {
+          "uri": "textures/a9cda2cf99d2c1344daf.ktx2",
+          "bytes": 89862
+        },
+        {
+          "uri": "textures/b590d654f0c91c88e11a.ktx2",
+          "bytes": 150098
+        },
+        {
+          "uri": "textures/bf44157f1d9e719d5bd1.ktx2",
+          "bytes": 106963
+        },
+        {
+          "uri": "textures/c10ccb6f6531eab32aa8.ktx2",
+          "bytes": 102148
         }
       ],
-      "nodes": 29,
-      "meshes": 29,
-      "materials": 39,
-      "textures": 46,
+      "nodes": 32,
+      "meshes": 32,
+      "materials": 42,
+      "textures": 50,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -793,7 +826,8 @@
         "KHR_materials_transmission",
         "KHR_mesh_quantization",
         "KHR_texture_basisu",
-        "KHR_materials_emissive_strength"
+        "KHR_materials_emissive_strength",
+        "KHR_texture_transform"
       ],
       "geometryPolicy": "Shared reviewed full concourse geometry/PBR for this desktop-first checkpoint; low illumination/reflections/shadows/DPR remain; mobile geometry work deferred."
     },
@@ -1088,8 +1122,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 99,
-  "modelTextureAndLightingBytes": 231306711,
+  "sharedTextureFiles": 107,
+  "modelTextureAndLightingBytes": 240218826,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1494,6 +1528,65 @@
     "newDenoiseReportSha256": "e3a7523944b6e4d06c134e58d85bdc2441d3e388bb3fe42b637ac5102d236df6",
     "lightingRevision": 11,
     "newSourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+    "runtimeNavigationUnchanged": true
+  },
+  "arrivalsGalleryFinish": {
+    "status": "Phase11 gallery and floor candidate; static browser acceptance remains separate",
+    "lightingRevision": 11,
+    "previousMetricsSha256": "978e8d7a6b0fa672b13cd32cd22c4f155b4140f74dc0a3bbf20f4cede7a6037a",
+    "newMaterialNames": [
+      "IvoryEnamel33rdStreetDestinationBoardGalleryFinish",
+      "PaintedStructuralIronArrivalsStructureGalleryFinish",
+      "Lettering33rdStreetDestinationGalleryFinish"
+    ],
+    "existingCutBaseBinaryPrefixesExact": true,
+    "unchangedOtherModels": [
+      {
+        "file": "model-exterior.glb.gz",
+        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+      },
+      {
+        "file": "model-exterior-low.glb.gz",
+        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+      },
+      {
+        "file": "model-platform-low.glb.gz",
+        "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+      },
+      {
+        "file": "model-trains-low.glb.gz",
+        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+      }
+    ],
+    "sharedReferencedKtx": 107,
+    "aggregateBytes": 240218826,
+    "newBakeReportSha256": "48b71a6412f03653705e20e84e9fa481e1ddf53c017c1165c17285d52cedc3c5",
+    "newDenoiseReportSha256": "2191180964cb1c1e49ee6787e420766bb7c2a1c62c89d5303b0a8ccd7df11888",
+    "newSourceSha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
     "runtimeNavigationUnchanged": true
   }
 }

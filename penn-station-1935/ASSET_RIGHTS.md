@@ -95,3 +95,10 @@ The new granolithic colour, OpenGL normal and roughness maps are original projec
 
 
 The connected-entrance geometry and rendered light/probe maps are original project work derived from the primary plan/photo controls in the [source checkpoint](../authoring/penn-station-1935/review/phase9/arcade/source/README.md). Historical source scans remain research-only outside the repository; no new historical photograph reproduction or invented tenant artwork is shipped. The new stone surfaces reuse the existing declared ambientCG CC0 appearance library. Material colours, glass optics, minor profiles and camera exposure remain explicit appearance interpretations.
+
+
+## Lower gallery surface and street-exit sign
+
+The lower gallery's neutral concrete appearance uses [ambientCGConcrete034](https://ambientcg.com/view?id=Concrete034), released under [CC0-1.0](https://docs.ambientcg.com/license/). Its modern material is an approximation, not a surviving historic sample. Original color, OpenGL normal and roughness source images are packed in the editable material Blender file; input hashes and original download identity are retained in the [gallery source packet](../authoring/penn-station-1935/review/phase11/gallery-finish/README.md). Physical texture scale, restrained normal strength and retained average albedo are appearance controls; the complete historic Exit floor finish remains unverified.
+
+The small physical `33rd STREET` sign follows the destination-sign family in the PRR1910booklet's PDF53 photograph. It uses original project-authored board/stems and Blender built-in font outlines converted to geometry. Exact placement, lettering style, board size and hue are inferred; no historic sign artwork or new historical raster is reproduced.

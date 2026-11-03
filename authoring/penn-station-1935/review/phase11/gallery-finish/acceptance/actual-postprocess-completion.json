@@ -1,0 +1,79 @@
+{
+  "status": "PASS actual CPU denoise, zero clipping, exact pixels and lossless cached module package; native/physical/sourcearchive acceptance separate",
+  "primarySha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+  "rawBakeReportSha256": "48b71a6412f03653705e20e84e9fa481e1ddf53c017c1165c17285d52cedc3c5",
+  "radianceScale": 2,
+  "rawRadianceMaximum": 1.2478710412979126,
+  "actualPrimaryPointLights": 0,
+  "actualNeighborPointLights": 10,
+  "denoiseReportSha256": "a58aaca27e977887a575af1324ef4d6d6990b41c8f19c58b61fc0bd5a416bfa5",
+  "packageProofSha256": "081a6718fba0473f92e0fa9ea0e4f549c6dd07ad35af6d096abee7a8fe234723",
+  "seconds": 14.828240156173706,
+  "outputs": {
+    "model-concourse-low.glb": {
+      "sha256": "3f8d1856437eb9e09e0d4d7e19e2228996cf25adb973340ad4046cd831469846",
+      "bytes": 123980
+    },
+    "model-concourse.glb": {
+      "sha256": "0224be1d02d910e0edd056434bef093e1b017cccd4d07cf18032abedb570d282",
+      "bytes": 123980
+    },
+    "lighting-concourse-gallery-finish-sky.webp": {
+      "sha256": "b5fc991bf757ee15349f86803728a5c11797b025aab7cd5836c3c16e7c4a7101",
+      "bytes": 1492568
+    },
+    "lighting-concourse-gallery-finish-denoise.json": {
+      "sha256": "a58aaca27e977887a575af1324ef4d6d6990b41c8f19c58b61fc0bd5a416bfa5",
+      "bytes": 2214
+    },
+    "module-packaging-proof.json": {
+      "sha256": "081a6718fba0473f92e0fa9ea0e4f549c6dd07ad35af6d096abee7a8fe234723",
+      "bytes": 8784
+    },
+    "lighting-concourse-gallery-finish-sky-low.webp": {
+      "sha256": "c6e1e2d10323b089e4144424e9e945fb8f41089a895c36da9c5e9b6502a21d8c",
+      "bytes": 51020
+    }
+  },
+  "packingAssets": [
+    {
+      "file": "model-concourse.glb",
+      "bytes": 123980,
+      "sha256": "0224be1d02d910e0edd056434bef093e1b017cccd4d07cf18032abedb570d282",
+      "nodes": 3,
+      "meshes": 3,
+      "materials": 3,
+      "textures": [
+        {
+          "uri": "textures/74a8a5e6c4800f175503.ktx2",
+          "bytes": 901739
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 0,
+      "geometryProofSha256": "a5300e16fb84f9b126cf560259e0c7f7c4569bcfa8472640da07bd45a3a921ea"
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 123980,
+      "sha256": "3f8d1856437eb9e09e0d4d7e19e2228996cf25adb973340ad4046cd831469846",
+      "nodes": 3,
+      "meshes": 3,
+      "materials": 3,
+      "textures": [
+        {
+          "uri": "textures/a9cda2cf99d2c1344daf.ktx2",
+          "bytes": 89862
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 0,
+      "geometryProofSha256": "31091175439398503d0813a458a2af3748f68cb1a1e223ca5d46fa3106d1e27b"
+    }
+  ],
+  "helperSha256": "77bc85b806391b04eeab301e3ea982b0c5d7f054934b86fc29b5273c5432c927"
+}

@@ -1,3 +1,5 @@
+> Gallery finish (`11-gallery-finish-1`): fitted fascia and stair-junction faces across the ordinary arrivals gallery, physically scaled concrete PBR and a supported, readable street-exit sign. The street-wall correction remains included. [Scope and validation](./VALIDATION.md). This is a phased reconstruction with final realism still in progress.
+
 > Current correction (`11-exit-street-wall-1`): exit side walls clear33rdStreet and its curb; northern landing/guards and walking surfaces are retained. Fresh4K lighting and automated/static-browser checks accompany the fix. [Details](./VALIDATION.md). The wider gallery finish follows separately.
 
 # Pennsylvania Station — arrivals route to the street

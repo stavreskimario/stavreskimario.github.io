@@ -1,0 +1,41 @@
+{
+  "status": "PASS normal loss reproduced BEFORE transport/export; existing corner attribute restore passes after UV",
+  "stages": [
+    {
+      "stage": "actual source import before join",
+      "maximumWorldNormalComponentDrift": 5.248522472189876e-08,
+      "minimumWorldNormalDot": 0.9999999672485287,
+      "corners": 6012
+    },
+    {
+      "stage": "after join and scale apply",
+      "maximumWorldNormalComponentDrift": 0.0020261627920297176,
+      "minimumWorldNormalDot": 0.999997106101799,
+      "corners": 6012
+    },
+    {
+      "stage": "after actual weld and UV, BEFORE any rendering or exporter",
+      "maximumWorldNormalComponentDrift": 1.3815272162642862,
+      "minimumWorldNormalDot": -0.001278175594692954,
+      "corners": 6012
+    }
+  ],
+  "restored": {
+    "schema": 1,
+    "scope": "arcade-enclosure authored corner normals",
+    "temporaryAttribute": "_PennArcadeWorldCornerNormal",
+    "sourceObjects": 101,
+    "sourceCorners": 6012,
+    "sourceNegativeHemisphereCorners": 0,
+    "sourceMinimumFaceAlignment": 0.9999999274087781,
+    "restoredCorners": 6012,
+    "minimumRestoredSourceNormalDot": 0.9999998713485192,
+    "maxEncodingAngleDegrees": 0.029063307009717657,
+    "maxAllowedEncodingAngleDegrees": 0.5,
+    "restoredNegativeHemisphereCorners": 0,
+    "restoredMinimumFaceAlignment": 0.9999998305290771,
+    "finiteUnitNormals": true,
+    "temporaryAttributeRemoved": true,
+    "status": "PASS"
+  }
+}

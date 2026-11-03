@@ -1,10 +1,70 @@
 {
-  "scope": "Exact editable/source preservation before final gallery lighting",
+  "scope": "Exact gallery source/material and acceptance records",
   "files": [
     {
       "file": "README.md",
-      "bytes": 2246,
-      "sha256": "621c175d815c506b741e0c775b9cad9a55e28f86f7dfa839de1ba0ca5db8e3f7"
+      "bytes": 2420,
+      "sha256": "ab98315ff824119820d466e6277e32a31b60fa82352d5eda68fbf241327227c9"
+    },
+    {
+      "file": "acceptance/FROZEN-FINAL-ACCEPTANCE.json",
+      "bytes": 14614,
+      "sha256": "3ad4236fd0f026529dc079a7dae3aeb7c6a230521b835e63562042b0c57e4443"
+    },
+    {
+      "file": "acceptance/README.md",
+      "bytes": 3209,
+      "sha256": "bee43ab18ffd795bc4afba80da12b58296c4c54febb4c9c33a530271a54f7190"
+    },
+    {
+      "file": "acceptance/actual-bake-completion.json",
+      "bytes": 2529,
+      "sha256": "90b14d4c6deac074a5405a8332a1af6252c07ff633f96e3b42f49920bf9f4c29"
+    },
+    {
+      "file": "acceptance/actual-module-acceptance.json",
+      "bytes": 4239,
+      "sha256": "c19a9e9a8106d062f86c8b3db6de937fb6d99805e20e1ca905f877c3f0515d57"
+    },
+    {
+      "file": "acceptance/actual-postprocess-completion.json",
+      "bytes": 2923,
+      "sha256": "a329508d308dbc65e9be7ce26e764b074d9e10212ad16ca769908e376850ed1d"
+    },
+    {
+      "file": "acceptance/asset-validation.json",
+      "bytes": 340325,
+      "sha256": "9df7832d4efaee30536e60d55c52df5a59ec84cc5c8aa444df8d494785254886"
+    },
+    {
+      "file": "acceptance/bake-scope-acceptance.json",
+      "bytes": 4594,
+      "sha256": "27f18b25864e5e5f3ad8f864b68184f4bbf8e742f9222ebebe306abb92c72279"
+    },
+    {
+      "file": "acceptance/gallery-arrivals.png",
+      "bytes": 868403,
+      "sha256": "98e97de1c06237766f0c61a47770b75cbc975b11086fd26b6e05b5ab4d3bd8bb"
+    },
+    {
+      "file": "acceptance/physical-sign-close.png",
+      "bytes": 785898,
+      "sha256": "c9899d7db50e460ebf6e1219ae41819d663871301a74161f07435593df214686"
+    },
+    {
+      "file": "acceptance/platform-wide.png",
+      "bytes": 1120024,
+      "sha256": "b3edfafdd351b20cdf1c1d369312e46c8e22b442dc2b7bf29d2bed7fdb28d827"
+    },
+    {
+      "file": "acceptance/promotion.json",
+      "bytes": 2703,
+      "sha256": "ed0aa3f2c99a67cd6a57492569a8f0dcf92606ab61b02ae25b87fc7dfdba5e5c"
+    },
+    {
+      "file": "acceptance/static-browser.json.gz",
+      "bytes": 8675,
+      "sha256": "7a09f903b84113e782bf0b8291f8009528de7e6c35b58cbf5410d416721fa67b"
     },
     {
       "file": "evidence/FROZEN-GEOMETRY-v3.json",
@@ -20,6 +80,26 @@
       "file": "evidence/historical-recommendations.md",
       "bytes": 8926,
       "sha256": "ac249d88a4d203f4e0189f38f04a01eac03e93f3cabda017e0555be6e4e00566"
+    },
+    {
+      "file": "evidence/rejected-normal-pass/HOLD-ACCEPTANCE-v1.json",
+      "bytes": 7261,
+      "sha256": "5fdb967ce67bd2ad20c7ffc263e8123cab9c6eeada47c830232109f11eec250c"
+    },
+    {
+      "file": "evidence/rejected-normal-pass/README.md",
+      "bytes": 889,
+      "sha256": "53029e5bd2b7f11f4829c317e39aa696f4af0ec3dcc7bd7f29b6006875cde8a3"
+    },
+    {
+      "file": "evidence/rejected-normal-pass/normal-stage-witness.json",
+      "bytes": 7225,
+      "sha256": "65e8fcd5db89702f4a20dcee50b30e9b4a5b8afae2c43ca4674686b5314ad5f6"
+    },
+    {
+      "file": "evidence/rejected-normal-pass/source-shading-flags.json",
+      "bytes": 6627,
+      "sha256": "4a657ee513d0e41bf45988eb190a7d1802c33969820b43a1a2c1cc46138ea939"
     },
     {
       "file": "evidence/sign-manifest.json",
