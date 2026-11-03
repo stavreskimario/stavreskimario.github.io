@@ -1,0 +1,42 @@
+{
+  "visualCommit": "7e035d1cea1cfda183143db0dfe37d2dd5fe6f23",
+  "scope": "Actual public HTTP bodies; browser mounting/static and physical geometry checked separately; no walking walkthrough.",
+  "status": "PASS",
+  "responses": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 18755,
+      "sha256": "1c6b3388f4c553c52c1e13f8b3e12ec591f44e0829082e909e4c7dd232fe00f9",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "dist/app.js",
+      "status": 200,
+      "bytes": 1047099,
+      "sha256": "66e3469063b3df4f0a6f19fe8455afce64815cd6ff07395171616e390f4b4643",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "status": 200,
+      "bytes": 6896629,
+      "sha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/lighting-concourse-exits-sky.webp",
+      "status": 200,
+      "bytes": 3122208,
+      "sha256": "42356ce11e10b31d48e53192f58a0fef59bfe80f7e4737e58d376f63ba15bdc8",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/lighting-concourse-exits-denoise.json",
+      "status": 200,
+      "bytes": 2551,
+      "sha256": "e3a7523944b6e4d06c134e58d85bdc2441d3e388bb3fe42b637ac5102d236df6",
+      "matchesCommittedRuntime": true
+    }
+  ]
+}

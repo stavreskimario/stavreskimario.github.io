@@ -1,0 +1,82 @@
+{
+  "status": "PASS 103 actual exported owners; all98 prior states exact; sign physically supported and readable both sides",
+  "before": 98,
+  "after": 103,
+  "oldGeometryChanges": [],
+  "newObjects": [
+    "33rd Street destination ivory board",
+    "33rd Street destination ceiling stem 1",
+    "33rd Street destination ceiling stem 2",
+    "33rd Street destination south readable lettering",
+    "33rd Street destination north readable lettering"
+  ],
+  "stems": [
+    {
+      "owner": "33rd Street destination ceiling stem 1",
+      "topWorldY": -4.7072000274181365,
+      "bottomWorldY": -4.890000022363663,
+      "actualCeilingContactAreaM2": 0.00032399997144239023,
+      "actualBoardContactAreaM2": 0.00032399997144239023
+    },
+    {
+      "owner": "33rd Street destination ceiling stem 2",
+      "topWorldY": -4.7072000274181365,
+      "bottomWorldY": -4.890000022363663,
+      "actualCeilingContactAreaM2": 0.00032399997144239023,
+      "actualBoardContactAreaM2": 0.00032399997144239023
+    }
+  ],
+  "lettering": [
+    {
+      "owner": "33rd Street destination south readable lettering",
+      "side": "south",
+      "areaM2": 0.05801798132581032,
+      "actualNormalZ": 0.99999999999999,
+      "localGlyphRightWorldVector": [
+        1,
+        0,
+        0
+      ],
+      "backedByOpaquePlate": true,
+      "mirroredDoubleSideText": false
+    },
+    {
+      "owner": "33rd Street destination north readable lettering",
+      "side": "north",
+      "areaM2": 0.058017996916271505,
+      "actualNormalZ": -0.9999999999999681,
+      "localGlyphRightWorldVector": [
+        -1.000000268717713,
+        4.3711397083446137e-8,
+        4.3711397083446137e-8
+      ],
+      "backedByOpaquePlate": true,
+      "mirroredDoubleSideText": false
+    }
+  ],
+  "textMaterial": {
+    "extras": {
+      "skip_lighting_atlas": true
+    },
+    "name": "Lettering33rdStreetDestination",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.017999999225139618,
+        0.02199999988079071,
+        0.019999999552965164,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8500000238418579
+    }
+  },
+  "actualPanelBottomHeadClearanceM": 2.23759998896122,
+  "actualCeilingUndersideWorldY": -4.707200057220459,
+  "sourceExitSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+  "addon": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-addon.glb",
+    "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+    "bytes": 270372
+  },
+  "qualification": "Destination sign family supported by PRR1910 booklet PDF53 photo. Exact location, board dimensions/material hue and built-in Bfont glyphs inferred. Actual source ceiling and board contacts verified by triangle intersections; both sides have separate outward-facing geometry and upright text right vectors, with opaque plate between."
+}

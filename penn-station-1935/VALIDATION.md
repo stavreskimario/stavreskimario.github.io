@@ -2,7 +2,7 @@
 
 Runtime `11-exit-street-wall-1` corrects the exit walls protruding through33rdStreet. The road sections are buried50mm below the actual asphalt slab, while the northern landing walls, guard rails and walking surfaces remain intact. Fresh4K/128sample lighting follows the corrected geometry.
 
-[Source and acceptance](../authoring/penn-station-1935/review/phase11/exit-street-fix/acceptance/README.md) record6,252 raw and6,252 encoded route samples, zero road/curb intrusion, unchanged1.885793m minimum headroom, twelve error-free model validations and actual static browser views from the street and stair foot. Ten other model transports and navigation remain exact. The browser walking walkthrough stays omitted at the owner's request. Publication is verified separately after deployment.
+[Source and acceptance](../authoring/penn-station-1935/review/phase11/exit-street-fix/acceptance/README.md) record6,252 raw and6,252 encoded route samples, zero road/curb intrusion, unchanged1.885793m minimum headroom, twelve error-free model validations and actual static browser views from the street and stair foot. Ten other model transports and navigation remain exact. The browser walking walkthrough stays omitted at the owner's request. Publication is verified at `7e035d1`: matching Pages41727852754 and sitechecks41727872262 pass; five actual public response bodies match HTML, renderer, corrected full concourse,4K illumination and metadata byte-for-byte. No native public browser or walking pass is claimed.
 
 The broader gallery fascia, stair-junction and surface finish is a separate following checkpoint. Historic exit registration, fabrication and1935 survival remain qualified.
 
