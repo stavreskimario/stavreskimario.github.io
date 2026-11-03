@@ -37,6 +37,8 @@ const phase11ExitsDenoisedDirectory = 'authoring/penn-station-1935/lighting/phas
 const phase11ExitsRawDirectory = 'authoring/penn-station-1935/lighting/phase11-exits/raw';
 const phase11GalleryDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase11-gallery/denoised';
 const phase11GalleryRawDirectory = 'authoring/penn-station-1935/lighting/phase11-gallery/raw';
+const phase12BridgeDenoisedDirectory = 'authoring/penn-station-1935/lighting/phase12-bridge/denoised';
+const phase12BridgeRawDirectory = 'authoring/penn-station-1935/lighting/phase12-bridge/raw';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
 function denoiseEntries(zone, file, record) {
@@ -68,7 +70,8 @@ function denoisePolicy(record, baseZone) {
   const phase11Exits = zone === 'concourse-exits' && authoringDirectory === phase11ExitsDenoisedDirectory;
   const exits = phase10Exits || phase11Exits;
   const gallery = zone === 'concourse-gallery-finish' && authoringDirectory === phase11GalleryDenoisedDirectory;
-  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade || exits || gallery, `${zone}: supported local authoring directory`);
+  const bridge = zone === 'platform-bridge' && authoringDirectory === phase12BridgeDenoisedDirectory;
+  assert([legacyDirectory, phase4DenoisedDirectory].includes(authoringDirectory) || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade || exits || gallery || bridge, `${zone}: supported local authoring directory`);
   if (zone === 'concourse-access') assert(phase6Access, `${zone}: requires its exact Phase6 source directory`);
   if (zone === 'concourse-circulation') assert(phase7Circulation, `${zone}: requires its exact Phase7 source directory`);
   if (zone === 'concourse-arrivals') assert(phase8Arrivals, `${zone}: requires its exact Phase8 source directory`);
@@ -76,13 +79,14 @@ function denoisePolicy(record, baseZone) {
   if (zone === 'arcade-enclosure') assert(phase9Arcade, `${zone}: requires its exact Phase9 arcade source directory`);
   if (zone === 'concourse-gallery-finish') assert(gallery, `${zone}: requires its exact Phase11 gallery source directory`);
   if (zone === 'concourse-exits') assert(exits, `${zone}: requires an exact versioned exits source directory`);
-  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade || exits || gallery;
+  if (zone === 'platform-bridge') assert(bridge, `${zone}: requires its exact Phase12 bridge source directory`);
+  const fresh = authoringDirectory === phase4DenoisedDirectory || phase5Vault || phase6Access || phase7Circulation || phase8Arrivals || phase9Platform || phase9Arcade || exits || gallery || bridge;
   if (zone !== baseZone) {
     assert.equal(baseZone, 'waiting-room', 'Only waiting-room children use atlas-specific zones');
     assert(['waiting-room-vault', 'waiting-room-masonry', 'waiting-room-order'].includes(zone));
     assert(fresh, `${zone}: split-atlas provenance must identify the new authored source directory`);
   }
-  const fullDimensions = gallery ? [4096] : exits ? [2048, 4096] : phase8Arrivals || phase9Platform || phase9Arcade ? [4096] : phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
+  const fullDimensions = gallery || bridge ? [4096] : exits ? [2048, 4096] : phase8Arrivals || phase9Platform || phase9Arcade ? [4096] : phase5Vault ? [8192] : zone === 'waiting-room-vault' ? [8192, 6144]
     : ['waiting-room-masonry', 'waiting-room-order'].includes(zone) ? [4096] : [2048];
   return { authoringDirectory, fresh, fullDimensions,
     inputTransfer: fresh || zone === 'platform' ? 'linear' : 'srgb' };
@@ -171,6 +175,16 @@ function checkBakeStatistics(bake, record, retained) {
     checkArcadeVisibility(bake.sourceRenderVisibility);
   }
   if (zone === 'platform-surfaces') assert.equal(bake.resolution, 4096, `${zone}: platform-surface source bake is exactly4096`);
+  if (zone === 'platform-bridge') {
+    assert.equal(bake.resolution, 4096, 'Bridge retains its 4K source bake');
+    assert(bake.samples >= 128, 'Bridge retains reviewed transport sampling');
+    assert.equal(bake.authoredNormalIntegrity?.status, 'PASS', 'Bridge preserves authored normals through atlas preparation');
+    assert.equal(bake.authoredNormalIntegrity.temporaryAttributeRemoved, true);
+    assert.equal(bake.authoredNormalIntegrity.finiteUnitNormals, true);
+    assert.equal(bake.primaryAtlasScope?.opaquePrimaryMeshesBeforeJoin, 7, 'All seven evaluated Blender bridge owners receive their atlas');
+    assert.equal(new Set(bake.primaryAtlasScope.primaryAtlasSourceNames).size, 7, 'Bridge owner census is distinct');
+    checkArcadeVisibility(bake.sourceRenderVisibility);
+  }
   if (zone === 'arcade-enclosure') {
     assert.equal(bake.resolution, 4096, `${zone}: arcade source bake is exactly4096`);
     const normals = bake.arcadeNormalIntegrity;
@@ -313,6 +327,31 @@ async function verifyGallerySource({ record, bakeBytes, repositoryDirectory }) {
     archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
 }
 
+async function verifyBridgeSource({ record, bakeBytes, repositoryDirectory }) {
+  assert.equal(record.zone, 'platform-bridge');
+  assert.equal(record.authoringDirectory, phase12BridgeDenoisedDirectory);
+  assert.equal(record.rawAuthoringDirectory, phase12BridgeRawDirectory);
+  assert.equal(record.inputTransfer, 'linear');
+  assert.equal(record.sourceArchiveFile, 'lighting-platform-bridge-sky.hdr.gz');
+  assert.equal(record.retainedHdr.archiveFile, 'lighting-platform-bridge-sky-denoised-linear.hdr.gz');
+  assert.equal(hash(bakeBytes), record.bakeReportSha256, 'Bridge runtime bake report matches its recorded SHA');
+  const rawBakeBytes = await fs.readFile(path.join(repositoryDirectory, phase12BridgeRawDirectory, 'lighting-platform-bridge.json'));
+  assert(rawBakeBytes.equals(bakeBytes), 'Bridge raw and runtime bake reports match exactly');
+  const archive = await fs.readFile(path.join(repositoryDirectory, phase12BridgeRawDirectory, record.sourceArchiveFile));
+  const source = gunzipSync(archive), bake = JSON.parse(bakeBytes);
+  assert.equal(hash(source), record.sourceSha256, 'Bridge raw linear HDR retains its source identity');
+  assert(source.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'));
+  const resolution = source.subarray(0, 4096).toString('ascii').match(/\n[+-]Y\s+(\d+)\s+[+-]X\s+(\d+)/);
+  assert(resolution && Number(resolution[1]) === 4096 && Number(resolution[2]) === 4096);
+  const editableRaw = await fs.readFile(path.join(repositoryDirectory, 'authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/model/bridge-addon.glb'));
+  assert.equal(bake.sourceSha256, hash(editableRaw), 'Bridge bake derives from the retained Blender export');
+  const sourceJson = JSON.parse(editableRaw.toString('utf8', 20, 20 + editableRaw.readUInt32LE(12)));
+  const sourceNames = sourceJson.nodes.filter(node => node.mesh !== undefined).map(node => node.name).sort();
+  assert.deepEqual(bake.primaryAtlasScope.primaryAtlasSourceNames.slice().sort(), sourceNames, 'The baked owner census matches the actual retained source nodes');
+  return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,
+    archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };
+}
+
 async function verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) {
   assert.equal(record.zone, 'platform-surfaces');
   assert.equal(record.authoringDirectory, phase9PlatformDenoisedDirectory, 'Platform surface denoised source uses its exact Phase9 platform directory');
@@ -396,10 +435,13 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
   const platformSurfaceMaps = ['lighting-platform-surfaces-sky.webp', 'lighting-platform-surfaces-sky-low.webp'];
   const platformSurfacesReferenced = platformSurfaceMaps.some(file => illumination.has(file));
   if (platformSurfacesReferenced) assert(platformSurfaceMaps.every(file => illumination.has(file)), 'Referenced platform-surface atlas requires both full and low maps');
+  const bridgeMaps = ['lighting-platform-bridge-sky.webp', 'lighting-platform-bridge-sky-low.webp'];
+  const bridgeReferenced = bridgeMaps.some(file => illumination.has(file));
+  if (bridgeReferenced) assert(bridgeMaps.every(file => illumination.has(file)), 'Bridge atlas requires both full and low maps');
   const arcadeMaps = ['lighting-arcade-enclosure-sky.webp', 'lighting-arcade-enclosure-sky-low.webp'];
   const arcadeReferenced = arcadeMaps.some(file => illumination.has(file));
   if (arcadeReferenced) assert(arcadeMaps.every(file => illumination.has(file)), 'Referenced arcade atlas requires both full and low maps');
-  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : []), ...(arrivalsReferenced ? ['concourse-arrivals'] : []), ...(exitsReferenced ? ['concourse-exits'] : []), ...(galleryReferenced ? ['concourse-gallery-finish'] : []), ...(platformSurfacesReferenced ? ['platform-surfaces'] : []), ...(arcadeReferenced ? ['arcade-enclosure'] : [])]) {
+  for (const baseZone of ['exterior', 'waiting-room', 'concourse', 'platform', ...(accessReferenced ? ['concourse-access'] : []), ...(circulationReferenced ? ['concourse-circulation'] : []), ...(arrivalsReferenced ? ['concourse-arrivals'] : []), ...(exitsReferenced ? ['concourse-exits'] : []), ...(galleryReferenced ? ['concourse-gallery-finish'] : []), ...(platformSurfacesReferenced ? ['platform-surfaces'] : []), ...(bridgeReferenced ? ['platform-bridge'] : []), ...(arcadeReferenced ? ['arcade-enclosure'] : [])]) {
     const indexFile = `lighting-${baseZone}-denoise.json`;
     const indexBytes = await fs.readFile(path.join(assetsDirectory, indexFile));
     const index = JSON.parse(indexBytes);
@@ -424,7 +466,8 @@ async function validateDenoising({ assetsDirectory, illumination, repositoryDire
           ? await verifyCirculationSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-arrivals'
             ? await verifyArrivalsSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-exits'
               ? await verifyExitsSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'concourse-gallery-finish'
-              ? await verifyGallerySource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'platform-surfaces'
+              ? await verifyGallerySource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'platform-bridge'
+              ? await verifyBridgeSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'platform-surfaces'
               ? await verifyPlatformSurfaceSource({ record, bakeBytes, repositoryDirectory }) : record.zone === 'arcade-enclosure'
                 ? await verifyArcadeSource({ record, bakeBytes, repositoryDirectory }) : null;
       const derivatives = [];

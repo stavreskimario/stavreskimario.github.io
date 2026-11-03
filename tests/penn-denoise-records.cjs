@@ -41,7 +41,7 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
     const waiting = JSON.parse(await fs.readFile(path.join(assets, 'lighting-waiting-room-denoise.json')));
     assert.equal(waiting.schemaVersion, 1, 'Archived maintenance record retains schema1 after runtime promotion');
     const illumination = new Set();
-    const derivatives = [];
+    const derivatives = [], restoredArchivedPngs = [];
     const legacySources = path.join(scratch, 'legacy-source-tree');
     const archivedHdrs = JSON.parse(await fs.readFile(path.join(repo, 'authoring/penn-station-1935/review/phase5/storage/archived-phase3-hdr.json')));
     const restoredArchivedHdrs = [];
@@ -76,9 +76,19 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
         const source = path.join(sourceDirectory, derivative.png);
         const retainedPng = path.join(retainedDirectory, derivative.png);
         const destination = path.join(assets, derivative.webp);
-        const sourceBytes = await fs.readFile(retainedPng);
         const sourceFixture = fixtureManifest.sourcePngs.find(item => item.file === path.relative(repo, retainedPng));
         assert(sourceFixture, `${zone}/${variant}: retained PNG fixture identity exists`);
+        let sourceBytes;
+        try { sourceBytes = await fs.readFile(retainedPng); }
+        catch (error) {
+          if (error.code !== 'ENOENT') throw error;
+          assert(/^[a-f0-9]{40}$/.test(fixtureManifest.sourceCommit));
+          assert(sourceFixture.file.startsWith('authoring/penn-station-1935/lighting/phase3/denoised/'));
+          const restored = spawnSync('git', ['cat-file', 'blob', `${fixtureManifest.sourceCommit}:${sourceFixture.file}`], { cwd: repo, maxBuffer: 64 * 1024 * 1024 });
+          assert.equal(restored.status, 0, `${zone}/${variant}: immutable fixture PNG is available in local Git`);
+          sourceBytes = restored.stdout;
+          restoredArchivedPngs.push({ file: sourceFixture.file, sourceCommit: fixtureManifest.sourceCommit, sha256: hash(sourceBytes) });
+        }
         assert.equal(sourceBytes.length, sourceFixture.bytes);
         assert.equal(hash(sourceBytes), sourceFixture.sha256, `${zone}/${variant}: retained PNG matches the exact maintenance source`);
         await fs.writeFile(source, sourceBytes);
@@ -92,8 +102,8 @@ const output = process.env.PENN_DENOISE_PROOF_REPORT;
     const legacy = await validateDenoising({ assetsDirectory: assets, illumination, repositoryDirectory: legacySources });
     assert.equal(legacy.atlases.length, 4);
     report.legacyCompatibility = { sourceCommit: fixtureManifest.sourceCommit, fixtureRecords: fixtureManifest.records, retainedSourcePngs: fixtureManifest.sourcePngs,
-      derivativeTreatment: 'Temporary lossless WebPs regenerated from retained Phase3 PNGs; missing historical HDR archives are restored only in the temporary source tree from SHA-verified immutable local Git blobs. These are not the earlier actual runtime WebP files. Earlier delivered-runtime proof and final model/browser acceptance are separate.',
-      restoredArchivedHdrs,
+      derivativeTreatment: 'Temporary lossless WebPs regenerated from exact Phase3 PNGs; missing historical HDR and PNG sources are restored only in the temporary source tree from SHA-verified immutable local Git. These are not the earlier actual runtime WebP files. Earlier delivered-runtime proof and final model/browser acceptance are separate.',
+      restoredArchivedHdrs, restoredArchivedPngs,
       regeneratedDerivatives: derivatives, validatedAtlases: legacy.atlases };
     report.checks.push('Four exact archived checkpoint records validate retained HDR hashes, 0.18 controls and bake coverage against regenerated lossless full/fallback derivatives; no current runtime dependency');
 

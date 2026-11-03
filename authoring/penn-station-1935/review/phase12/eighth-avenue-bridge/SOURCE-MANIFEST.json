@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "scope": "Accepted Blender source v3, corrected primary evidence and source controls; lighting/runtime validation follow separately.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1864,
+      "sha256": "f70bad40bdc52d71c54837b3fe30b54fec3acab564fc946a95626e362c0c5e5d"
+    },
+    {
+      "path": "acceptance/FROZEN-SOURCE-v3.json",
+      "bytes": 5306,
+      "sha256": "740095067697717aae1d06f4859fad4d9345a442fa49612ea648ce7cfad532d3"
+    },
+    {
+      "path": "acceptance/construction.json",
+      "bytes": 98383,
+      "sha256": "ca0d0cdfc6d27d5a8bdbd2c10b6c6af71faa22f002293ee0557b256d3e35e1d1"
+    },
+    {
+      "path": "acceptance/denoise-validator-controls.json",
+      "bytes": 29390,
+      "sha256": "4dd7cd8b003f632924d7c8ab1e26912625625049982d64d931fc0bb52d61aa4a"
+    },
+    {
+      "path": "acceptance/raw-physical.json",
+      "bytes": 15940,
+      "sha256": "f23f9f80d0296ec5f06fdd8ca21e47dda7c985a8086134c919ebb85804ff20ea"
+    },
+    {
+      "path": "evidence/MANIFEST.json",
+      "bytes": 2571,
+      "sha256": "a9b9211b46c34edbb39b3225b78cd8dfa834d411ccb6770de7bea67e0a4025b6"
+    },
+    {
+      "path": "evidence/README.md",
+      "bytes": 2675,
+      "sha256": "af7627c00d0e15533407dfd770065f51cd0471bb91127ae03219d22834d96b31"
+    },
+    {
+      "path": "evidence/controls-replay.json",
+      "bytes": 692,
+      "sha256": "56b242d776fbb16e1d02d32a0743619118ac0f150b0ea07e89dec4c5e8abcc92"
+    },
+    {
+      "path": "evidence/design-scope-v2.json",
+      "bytes": 13473,
+      "sha256": "ad451bec8ccdbd54ba4f0f13b9029c593c96cbc34bc88503035a073cbad4770e"
+    },
+    {
+      "path": "evidence/primary/cut-proof.json",
+      "bytes": 2246,
+      "sha256": "f044f67ac925febf5a26c2404fa036729f79d378bc7c933a265aa72383e6eaeb"
+    },
+    {
+      "path": "evidence/primary/plate-LIX-completed-section-native.png",
+      "bytes": 305076,
+      "sha256": "c1a1c2fd9cd5113671a5b5595ee72cd582a602c747e69ad1a41bff2efb9ec3e9"
+    },
+    {
+      "path": "evidence/primary/plate-LIX-permanent-rows-native.png",
+      "bytes": 220671,
+      "sha256": "7395a198a7d262186422f695ab2375083cad09607f9dab99b0b51e4e8bc25fb5"
+    },
+    {
+      "path": "evidence/primary/plate-LXI-north-section-native.png",
+      "bytes": 545032,
+      "sha256": "1f58e50818f729a26a3f979b2a30d6de3ffa66e8640bb65ee18b6cc68a203c24"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf296.txt",
+      "bytes": 2872,
+      "sha256": "30db24f887d4eee6029b9552ad0771dc91ed0102d23a18d8cc755acc252bb94e"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf299.txt",
+      "bytes": 3035,
+      "sha256": "c30d078b205a52256b9a00e20d1c24b7fe72363b8c12837a84015ce043cbd4d1"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf308.txt",
+      "bytes": 3029,
+      "sha256": "343a93c16175039b10ae56441f5446cb0247ed90f4913b2872abc145e01fb8ef"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf311.txt",
+      "bytes": 3010,
+      "sha256": "e1337593e5b2592c0e8f7fdfd0646a7e5677c723517e13c95081e300c9c873e1"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf344.txt",
+      "bytes": 2923,
+      "sha256": "b1f1e9456208bd8dd227a5ece419cb7f732c9a6e4be24c56753f594d65f4ff8b"
+    },
+    {
+      "path": "evidence/primary-text/asce-pdf445.txt",
+      "bytes": 2683,
+      "sha256": "edd75eec0a2c483266366305e0a7cf7848ee9ea0602c992b3c89de2a3041f839"
+    },
+    {
+      "path": "evidence/replay-controls.py",
+      "bytes": 1214,
+      "sha256": "324de63a0388aa7ae9b1fdbae5bca1b0c70fa65b691f85b619f9fea99092a8a3"
+    },
+    {
+      "path": "evidence/rights-and-primary-urls.json",
+      "bytes": 3212,
+      "sha256": "6b75f5fa8916d80f862c4a287a524ecaf87d6d0397f94b4b3a42b4d376d192c0"
+    },
+    {
+      "path": "model/bridge-addon.blend",
+      "bytes": 124069,
+      "sha256": "6df74c29b3aedfa4a4ae01e2d23e47caa5c4ff5456a0593c01b1e5dac577ddcf"
+    },
+    {
+      "path": "model/bridge-addon.glb",
+      "bytes": 585440,
+      "sha256": "5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54"
+    },
+    {
+      "path": "source/build_bridge.executed.py",
+      "bytes": 11508,
+      "sha256": "27b8cafead3da0e294f40452f4e5ae6d50cba390519eb13ae66aa4bd346e90ca"
+    },
+    {
+      "path": "source/check_bridge.executed.mjs",
+      "bytes": 4556,
+      "sha256": "dca35fe86fbc232ba179a291f4e66969f5cef631112415c33ff424a7198d3ffc"
+    }
+  ]
+}
