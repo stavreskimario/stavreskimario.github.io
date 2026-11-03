@@ -159,6 +159,17 @@ function checkBakeStatistics(bake, record, retained) {
     assert([2048, 4096].includes(bake.resolution), `${zone}: bounded exits source bake is 2K or 4K`);
     checkArcadeVisibility(bake.sourceRenderVisibility);
   }
+  if (zone === 'concourse-gallery-finish') {
+    assert.equal(bake.resolution, 4096, 'Gallery finish retains its 4K source bake');
+    assert(bake.samples >= 128, 'Gallery finish retains reviewed transport sampling');
+    assert.equal(bake.primaryAtlasScope?.opaquePrimaryMeshesBeforeJoin, 101, 'All gallery fascia, board and stems receive their atlas');
+    assert.equal(bake.primaryAtlasScope?.unbakedLetteringMeshes, 2, 'Only two lettering owners are unbaked');
+    assert.equal(new Set(bake.primaryAtlasScope.primaryAtlasSourceNames).size, 101, 'Complete distinct gallery source owner census');
+    assert.equal(bake.authoredNormalIntegrity?.status, 'PASS', 'Gallery carries the authored face normals through atlas preparation');
+    assert.equal(bake.authoredNormalIntegrity.temporaryAttributeRemoved, true);
+    assert.equal(bake.authoredNormalIntegrity.finiteUnitNormals, true);
+    checkArcadeVisibility(bake.sourceRenderVisibility);
+  }
   if (zone === 'platform-surfaces') assert.equal(bake.resolution, 4096, `${zone}: platform-surface source bake is exactly4096`);
   if (zone === 'arcade-enclosure') {
     assert.equal(bake.resolution, 4096, `${zone}: arcade source bake is exactly4096`);
@@ -295,6 +306,8 @@ async function verifyGallerySource({ record, bakeBytes, repositoryDirectory }) {
   assert(source.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), 'Gallery raw source is actual HDR radiance');
   const resolution = source.subarray(0, 4096).toString('ascii').match(/\n[+-]Y\s+(\d+)\s+[+-]X\s+(\d+)/);
   const bake = JSON.parse(bakeBytes);
+  const editableRaw = await fs.readFile(path.join(repositoryDirectory, 'authoring/penn-station-1935/review/phase11/gallery-finish/model/finish-addon.glb'));
+  assert.equal(bake.sourceSha256, hash(editableRaw), 'Gallery lighting derives from the exact retained raw addon including its sign');
   assert(resolution && Number(resolution[1]) === bake.resolution && Number(resolution[2]) === bake.resolution && [2048, 4096].includes(bake.resolution), 'Gallery raw HDR retains its declared 2K or 4K source resolution');
   return { authoringDirectory: record.rawAuthoringDirectory, archiveFile: record.sourceArchiveFile,
     archiveBytes: archive.length, decodedBytes: source.length, decodedSha256: hash(source), bakeReportSha256: hash(rawBakeBytes) };

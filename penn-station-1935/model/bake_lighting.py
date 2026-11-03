@@ -163,7 +163,12 @@ for obj in [obj for obj in scene.objects if obj.type == "MESH"]:
         # props retain their surface UVs and use room reflection/IBL probes;
         # they still occlude and reflect light during the Cycles bake.
         fine = ("PaintedStructuralIron", "AgedBronze", "WalnutBench", "ClockFace", "Lettering", "MonelRoof")
-        if obj.data.materials and all(material and (material.name.startswith(fine) or material.get("skip_lighting_atlas")) for material in obj.data.materials):
+        # Gallery fascia is substantial coated structure, with its own atlas.
+        # Fine lettering keeps its explicit exclusion; other artifacts retain
+        # the established small-prop policy.
+        gallery_surface = artifact_zone == "concourse-gallery-finish" and not any(
+            material and material.get("skip_lighting_atlas") for material in obj.data.materials)
+        if not gallery_surface and obj.data.materials and all(material and (material.name.startswith(fine) or material.get("skip_lighting_atlas")) for material in obj.data.materials):
             unbaked.append(obj)
         else:
             vault_materials = ("PaleVaultPlaster",)
@@ -177,6 +182,14 @@ for obj in [obj for obj in scene.objects if obj.type == "MESH"]:
                 solids.append(obj)
             # The other partition remains in the scene and participates in
             # transport; only selected opaque geometry is baked/exported.
+
+gallery_atlas_scope = None
+if artifact_zone == "concourse-gallery-finish":
+    assert len([obj for obj in primary_objects if obj.type == "MESH"]) == 103, "Reviewed gallery v4 has103 source mesh owners"
+    assert len(solids) == 101 and not glazing, "Gallery atlas must include98 fascia, board and2 stems"
+    assert len(unbaked) == 2 and all(all(m and m.name.startswith("Lettering") for m in obj.data.materials) for obj in unbaked), "Only2 lettering owners remain unbaked"
+    gallery_atlas_scope = {"sourceMeshes": 103, "opaquePrimaryMeshesBeforeJoin": 101, "unbakedLetteringMeshes": 2,
+                           "primaryAtlasSourceNames": [obj.name for obj in solids], "unbakedSourceNames": [obj.name for obj in unbaked]}
 
 if not solids:
     raise RuntimeError("No opaque architecture to bake")
@@ -200,7 +213,7 @@ if args.preserve_authored_uv1:
     authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture, artifact_zone=artifact_zone)
 else:
     arcade_normal_integrity = None
-    if artifact_zone == "arcade-enclosure":
+    if artifact_zone in {"arcade-enclosure", "concourse-gallery-finish"}:
         from arcade_corner_normals import preserve_arcade_corner_normals, restore_arcade_corner_normals
         arcade_normal_integrity = preserve_arcade_corner_normals(solids)
     bpy.ops.object.select_all(action="DESELECT")
@@ -415,6 +428,8 @@ if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits"
     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
 if authored_uv_integrity is not None:
     report["authoredUvIntegrity"] = authored_uv_integrity
+if gallery_atlas_scope is not None:
+    report["primaryAtlasScope"] = gallery_atlas_scope
 report["occlusionBindingIntegrity"] = occlusion_binding_integrity
 if occluder_material_integrity is not None:
     report["occluderMaterialIntegrity"] = occluder_material_integrity
