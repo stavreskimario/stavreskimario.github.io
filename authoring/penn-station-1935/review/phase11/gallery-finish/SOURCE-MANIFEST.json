@@ -1,5 +1,5 @@
 {
-  "scope": "Exact gallery source/material and acceptance records",
+  "scope": "Exact gallery source/material and final acceptance/publication records",
   "files": [
     {
       "file": "README.md",
@@ -13,8 +13,8 @@
     },
     {
       "file": "acceptance/README.md",
-      "bytes": 3209,
-      "sha256": "bee43ab18ffd795bc4afba80da12b58296c4c54febb4c9c33a530271a54f7190"
+      "bytes": 3865,
+      "sha256": "2ccbae036616aaf9608c8e12e2e7d1cc4b6da4cc411d9d7de9dbc60c109c94c8"
     },
     {
       "file": "acceptance/actual-bake-completion.json",
@@ -42,6 +42,11 @@
       "sha256": "27f18b25864e5e5f3ad8f864b68184f4bbf8e742f9222ebebe306abb92c72279"
     },
     {
+      "file": "acceptance/byte-budgets.json",
+      "bytes": 76,
+      "sha256": "111c6114a9b48471ade4dfc406df7968e2bab29fc3eae7b1a85d2d1c874fb367"
+    },
+    {
       "file": "acceptance/gallery-arrivals.png",
       "bytes": 868403,
       "sha256": "98e97de1c06237766f0c61a47770b75cbc975b11086fd26b6e05b5ab4d3bd8bb"
@@ -60,6 +65,11 @@
       "file": "acceptance/promotion.json",
       "bytes": 2703,
       "sha256": "ed0aa3f2c99a67cd6a57492569a8f0dcf92606ab61b02ae25b87fc7dfdba5e5c"
+    },
+    {
+      "file": "acceptance/publication.json",
+      "bytes": 3988,
+      "sha256": "17a5f796fb87765b3268feabbc5f67d25787dbdbf27a7401a0e456e272df1459"
     },
     {
       "file": "acceptance/static-browser.json.gz",

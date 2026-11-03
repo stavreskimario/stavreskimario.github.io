@@ -21,3 +21,5 @@ These current screenshots also show that the wider railway enclosure and some st
 ![Actual platform browser view](platform-wide.png)
 
 ![Actual street-exit sign view](physical-sign-close.png)
+
+Visual release `e8315ae5b563d3281fc9668f4a9b9d3c0bd4be29` is live: matching [Pages41734903984](https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41734903984) and [site checks41734920478](https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41734920478) pass. Fifteen actual public response bodies match the committed HTML, renderer, full/fallback concourse, both new GI maps, metadata and all eight new KTX files exactly. Local native static checks remain separate; no native public browser or walking walkthrough is claimed. [Open the update](https://stavreskimario.github.io/penn-station-1935/?preview=e8315ae).
