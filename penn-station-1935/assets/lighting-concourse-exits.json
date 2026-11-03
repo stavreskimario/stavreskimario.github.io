@@ -5,7 +5,7 @@
   "uvMarginPixels": 4.0,
   "uvMarginMethod": "FRACTION",
   "source": "model-concourse-exits.glb",
-  "sourceSha256": "3045d95af98afc40d7c9b64a569e98e82da9d7d6c5485d90ce07cfe4963711bb",
+  "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
   "resolution": 4096,
   "samples": 128,
   "aoPathSamples": 4,
@@ -18,7 +18,7 @@
       "Apple M5 Max (GPU - 32 cores)"
     ]
   },
-  "atlasSurfaceArea": 0.798965334892273,
+  "atlasSurfaceArea": 0.7688732743263245,
   "sky": "Neutral diffuse dome plus explicitly interpreted static electric lamps; six-bounce diffuse transport; no directional sun baked",
   "staticPracticalLights": [
     {
@@ -557,16 +557,16 @@
   "ambientOcclusion": {
     "minimum": 0.0,
     "maximum": 1.0,
-    "mean": 0.7149426341056824,
+    "mean": 0.6882238984107971,
     "coveredPixels": 16777216
   },
   "illumination": {
     "minimum": 0.0,
-    "maximum": 0.9646090865135193,
-    "mean": 0.11468612402677536,
-    "coveredPixels": 14372810
+    "maximum": 0.9748857021331787,
+    "mean": 0.11272308975458145,
+    "coveredPixels": 13857511
   },
-  "elapsedSeconds": 361.5016761250008,
+  "elapsedSeconds": 296.60121024999535,
   "architectureUv": "UVMap",
   "bakedUv": "BakedLightingUV",
   "artifact": "model-concourse-exits.glb",
@@ -774,24 +774,24 @@
     "primaryAndOccluderMaterialPointerIntersection": 0,
     "primaryMaterialGraphsPackedImagesAndPropertiesExact": true,
     "primaryMaterialBeforeHashes": {
-      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
-      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
-      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8",
-      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
       "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
-      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
       "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
-      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8"
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
     },
     "primaryMaterialAfterHashes": {
-      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
-      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
-      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8",
-      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
       "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
-      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
       "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
-      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8"
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
     },
     "neighbourMaterialGraphsChanged": [
       "ArcadeOrnamentalMetal",
@@ -879,24 +879,24 @@
     ],
     "primaryMaterialGraphsExactSinceInitialImport": true,
     "primaryMaterialBeforeAllContextHashes": {
-      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
-      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
-      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8",
-      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
       "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
-      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
       "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
-      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8"
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
     },
     "primaryMaterialAfterAllContextHashes": {
-      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
-      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
-      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8",
-      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
       "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
-      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
       "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
-      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8"
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
     }
   }
 }

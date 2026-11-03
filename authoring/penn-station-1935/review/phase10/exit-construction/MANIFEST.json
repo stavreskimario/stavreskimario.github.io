@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "status": "ExactV2authoring/evidence packet copied; finalruntime/bake/browser acceptance separate",
+  "status": "Phase10 evidence and builders retained; superseded editable addon recoverable through exact immutable Git/external identity after verified Phase11 source promotion.",
   "files": {
     "raw-source-recovery.json": {
       "bytes": 792,
       "sha256": "c2260fb8bb4587840f6b3e08321163820f9794971aca9c079e583ee3ff33e9ba"
     },
     "README.md": {
-      "bytes": 3673,
-      "sha256": "9707de0a9b22030489cb05d768a006f015a19fda4a1b1c699867ac3aaafd3471"
+      "bytes": 4008,
+      "sha256": "aa81c3558ead1f7ebf1ac833d244a0e8f80e6e6cca4e9a7b6f65b573a17d2d89"
     },
     "construction.json": {
       "bytes": 13669,
@@ -134,10 +134,6 @@
       "bytes": 3121,
       "sha256": "b0ce4b622c81980bb348f1e8a9794f76494d94270d52350b46db89e3281a4efd"
     },
-    "model/arrivals-exit-addon.blend": {
-      "bytes": 16107186,
-      "sha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a"
-    },
     "primary/PRR1910-exit-stair-to33rd.png": {
       "bytes": 391826,
       "sha256": "8d5e93d48d0a865eeb398bb96d4651a79d8448461a624d00d17c1fa92481ce0d"
@@ -145,6 +141,20 @@
     "primary/Otis-Penn-ad-native-essential.png": {
       "bytes": 726694,
       "sha256": "e1e82f7b86b477c9f59f3b1cf433693f74ff148fa3e153abe4c6a1d6624c3ccd"
+    }
+  },
+  "archivedAuthoringVersions": {
+    "model/arrivals-exit-addon.blend": {
+      "bytes": 16107186,
+      "sha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+      "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+      "gitBlob": "6d1f94105f772ceadbf8eab3f0fb181b63a62112",
+      "repositoryPath": "authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "archiveCondition": "Only after the new Phase11 full editable Blender scene has been copied into the repository and byte-verified. This is a versioned Phase10 addon, not canonical core c4.",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase11/exit-street-fix/phase10-addon-recovery.json",
+      "restoreHelper": "authoring/penn-station-1935/review/phase11/exit-street-fix/restore-phase10-addon.py"
     }
   }
 }

@@ -383,11 +383,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 24360296,
+      "bytes": 24361316,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 6896155,
-      "sha256": "6a6620542732b1689371e36024157332f233166188ed332e40ef175d00eec1c3",
-      "transportSha256": "f1da968dcb31986f131ae5dad71ebc0e9a492b181731498f8d53624360d04f49",
+      "transportBytes": 6896629,
+      "sha256": "b63550968433beebd37cfc771069975cf385a3ab0b2c1d41048900b88be75451",
+      "transportSha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -526,8 +526,8 @@
           "bytes": 2348682
         },
         {
-          "uri": "textures/ddcf2fd7dbaf55312d00.ktx2",
-          "bytes": 1515423
+          "uri": "textures/be769d91834b6d023ce1.ktx2",
+          "bytes": 1466743
         },
         {
           "uri": "textures/abfa7b3cab7953a6a5ae.ktx2",
@@ -591,11 +591,11 @@
     },
     {
       "file": "model-concourse-low.glb",
-      "bytes": 21091400,
+      "bytes": 21092420,
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 6585451,
-      "sha256": "767f4e565cc81c9a95b0e0dab44c76a5c71f2961315f77af64e69772eaa120fb",
-      "transportSha256": "fdec7a37bda1a1cfba68de0bffb02c36970bc8b00b27ec4079ff7c31fcbad404",
+      "transportBytes": 6586218,
+      "sha256": "176caa968ac9365863364170a8f8a23f047916e700ebee7d5f267b465f832537",
+      "transportSha256": "63b977ed4db677f7fe3ba267dbf0520b6e0bd619053ce187fde84c7b6eb62b21",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -734,8 +734,8 @@
           "bytes": 681
         },
         {
-          "uri": "textures/e017da17bfe8d12ca1ad.ktx2",
-          "bytes": 116743
+          "uri": "textures/36221716373bfa693079.ktx2",
+          "bytes": 112405
         },
         {
           "uri": "textures/bd6e833fb5e2ae466373.ktx2",
@@ -1089,7 +1089,7 @@
     }
   ],
   "sharedTextureFiles": 99,
-  "modelTextureAndLightingBytes": 231377422,
+  "modelTextureAndLightingBytes": 231306711,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1426,8 +1426,8 @@
     "publicBrowserClosed": true
   },
   "arrivalsExits": {
-    "status": "ASSEMBLED CANDIDATE; no runtime promotion or native acceptance claimed",
-    "previousMetricsSha256": "b2b43d69d5c1d778298a85b77795f54ae051b568f1c124cdc900396a7fba58a6",
+    "status": "Phase11 replacement candidate; static browser acceptance remains separate",
+    "previousMetricsSha256": "64a5468140e3e75f7be81fc6e74872244f7c3ebb9418d7672ce267ff8c9b9bd9",
     "interfaceCutInputs": {
       "model-concourse.glb.gz": "45da359a564f02c599961807662bd8e6d14d3bdc9bf1d032261955cb37c6cefe",
       "model-concourse-low.glb.gz": "e6f15fb4d5ea04501f320894e5216bac959b2e563a6c8f17bd91800f4d3ce8dd",
@@ -1463,6 +1463,14 @@
         "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
       },
       {
+        "file": "model-context.glb.gz",
+        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+      },
+      {
         "file": "model-platform.glb.gz",
         "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
       },
@@ -1480,9 +1488,12 @@
       }
     ],
     "sharedReferencedKtx": 99,
-    "aggregateBytes": 231377422,
+    "aggregateBytes": 231306711,
     "routeSpecificationSha256": "a68aad0162068698b478298d8b5e1d7f7e7332f06231dd11398be42fd1281a3a",
-    "newBakeReportSha256": "da7e3152325bec3ad4c47b8473408d47d9a2db50b04e03eb95f9a99ae9d00e29",
-    "newDenoiseReportSha256": "0723af32ecb95ad25c77d67a57d9517738921ef75063c87dc9f8dfe033cf94e9"
+    "newBakeReportSha256": "2d1e9a022986c3f407b109d317f8ccc4725c7c07b45d3e2ee6042317911adc3e",
+    "newDenoiseReportSha256": "e3a7523944b6e4d06c134e58d85bdc2441d3e388bb3fe42b637ac5102d236df6",
+    "lightingRevision": 11,
+    "newSourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+    "runtimeNavigationUnchanged": true
   }
 }

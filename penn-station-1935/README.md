@@ -1,3 +1,5 @@
+> Current correction (`11-exit-street-wall-1`): exit side walls clear33rdStreet and its curb; northern landing/guards and walking surfaces are retained. Fresh4K lighting and automated/static-browser checks accompany the fix. [Details](./VALIDATION.md). The wider gallery finish follows separately.
+
 # Pennsylvania Station — arrivals route to the street
 
 Runtime `10-arrivals-street-exit-1` adds the onward connection from the lower arrivals gallery: northward gallery extension → passage under 33rd Street → the source-supported midblock Otis escalator and adjacent stone stair → a physical private-way landing and the opposite sidewalk. The escalator is static; the adjacent stair provides the walking ascent. All spaces remain in the same continuously loaded station. This checkpoint is prepared for publication; deployment has not yet been verified.

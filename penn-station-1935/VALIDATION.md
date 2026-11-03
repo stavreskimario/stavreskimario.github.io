@@ -1,4 +1,12 @@
-# Arrivals street connection — current checkpoint, 2 November 2026
+# Current checkpoint: clear street exit — 4 November 2026
+
+Runtime `11-exit-street-wall-1` corrects the exit walls protruding through33rdStreet. The road sections are buried50mm below the actual asphalt slab, while the northern landing walls, guard rails and walking surfaces remain intact. Fresh4K/128sample lighting follows the corrected geometry.
+
+[Source and acceptance](../authoring/penn-station-1935/review/phase11/exit-street-fix/acceptance/README.md) record6,252 raw and6,252 encoded route samples, zero road/curb intrusion, unchanged1.885793m minimum headroom, twelve error-free model validations and actual static browser views from the street and stair foot. Ten other model transports and navigation remain exact. The browser walking walkthrough stays omitted at the owner's request. Publication is verified separately after deployment.
+
+The broader gallery fascia, stair-junction and surface finish is a separate following checkpoint. Historic exit registration, fabrication and1935 survival remain qualified.
+
+# Previous arrivals street connection — 2 November 2026
 
 Runtime `10-arrivals-street-exit-1` connects the northward lower arrivals gallery to the lower passage under 33rd Street, a source-supported static Otis escalator and adjacent walking stair, and a supported private-way landing meeting the actual opposite sidewalk. Real floor, roof and paving openings are part of the construction; the route is not supplied by an invisible walking plane. [Publication receipts](../authoring/penn-station-1935/review/phase10/acceptance/publication.json) establish the live visual checkpoint at `1646653` after matching Pages and site-check success.
 

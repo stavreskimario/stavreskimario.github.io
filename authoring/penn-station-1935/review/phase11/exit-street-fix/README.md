@@ -1,0 +1,11 @@
+# Exit street-wall correction: editable source
+
+This packet retains the actual corrected full Phase11 arrivals-exit addon, recipe and builders. It splits the two bearing walls into the visible private-way well portion and a buried road-foundation portion. The earlier sidewalls intruded into the real street paving; the new road foundations stop below its underside. Existing floor, tread, landing, guard, pier, lamp and route data remain retained by the scoped source proof.
+
+The editable model is model/arrivals-exit-addon.blend. Source-pin-manifest.json records its exact bytes/SHA and every copied input. The diagnostic retains the original fault; the separate corrected-source regression records the accepted repair. Raw CPU route evidence records6252samples across four forward/reverse full/fallback cases and minimum headroom1.885793149m. Encoding, fresh illumination, browser load and publication belong to later root acceptance; this packet does not establish them. The user omitted the browser walking walkthrough.
+
+The superseded Phase10 addon b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a was archived only after this new editable model was copied and verified. phase10-addon-recovery.json pins its immutable Git path/blob, independent fresh external copy and moved original. The Phase10 packet now documents exact recovery rather than claiming its addon remains physically embedded. Canonical core remains unchanged. The four proposed older lighting outputs remain held and physically retained at this source-only checkpoint.
+
+The actual builders retain their executed workstation paths. Existing enamel/PBR inputs are retained in the Phase10 packet and material-dependencies-phase10-retained.json; they were not copied again or changed. The new full source supersedes the earlier versioned addon, not the historical canonical core. This packet preserves an actual saved source; byte-identical fresh Blender serialization or stochastic rebaking is not promised.
+
+Historical qualifications remain: opening-era under33rdStreet topology and Otis/adjacent-stair photographic family; inferred full run, adjacent width, profiles, landings and finishes; adopted24.5ft scene rise versus25ft printed lift; unverified survival of every1910detail into1935–1940. The escalator remains static.

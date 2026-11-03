@@ -1,3 +1,7 @@
+## Street-wall interface correction — 4 November 2026
+
+The two side walls previously rose1.096m above the actual road surface. The corrected Blender source splits them north of the modeled curb and caps their under-road sections50mm below the asphalt slab underside. Northern landing walls, guards and all floor/tread geometry stay exact. This is a construction-interface repair, not new historical evidence for the inferred well footprint. [Source and proofs](../../authoring/penn-station-1935/review/phase11/exit-street-fix/README.md).
+
 # Arrivals onward route — Phase 10
 
 The current `10-arrivals-street-exit-1` checkpoint extends the ordinary lower Exit gallery northward into the lower passage under 33rd Street, then reaches a midblock ascent and a physical private-way landing connected to the opposite sidewalk. The Otis escalator is static; the adjacent stone stair is the walking route. Raw and encoded geometry checks each pass 6,252 targeted samples with minimum measured headroom 1.885793 m. The browser walking walkthrough was omitted at the user's request; no new native walking or deployment acceptance is asserted here.
