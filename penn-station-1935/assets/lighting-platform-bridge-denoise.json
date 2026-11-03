@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "zone": "platform-bridge",
+  "source": "lighting-platform-bridge-sky.hdr",
+  "sourceSha256": "52df460c3d0d358ddab7ebf75131088c91b924329331eadae3048fee15bc513b",
+  "inputTransfer": "linear",
+  "inputScale": 1.0,
+  "radianceScale": 2.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.012352146208286285,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "originalLinear": {
+    "mean": 0.012352146208286285,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "denoisedLinear": {
+    "mean": 0.012386384420096874,
+    "minimum": 0.0,
+    "maximum": 1.4371979236602783
+  },
+  "relativeMeanChange": 0.0027718431463854554,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-bridge-sky-denoised-linear.hdr",
+    "sha256": "ea734e8b085cd5362c9c7b26adb6749e1d49449ecbfcad2b1277c15042de76f1",
+    "decodedLinear": {
+      "mean": 0.012350774370133877,
+      "minimum": 0.0,
+      "maximum": 1.4296875
+    },
+    "meanQuantizationError": 3.560497862054035e-05,
+    "archiveFile": "lighting-platform-bridge-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-platform-bridge-sky.png",
+    "webp": "lighting-platform-bridge-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-platform-bridge-sky-low.png",
+    "webp": "lighting-platform-bridge-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 9.925013667001622,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase12-bridge/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase12-bridge/raw",
+  "sourceArchiveFile": "lighting-platform-bridge-sky.hdr.gz",
+  "bakeReportSha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff"
+}

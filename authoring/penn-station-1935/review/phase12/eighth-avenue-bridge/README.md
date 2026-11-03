@@ -4,7 +4,9 @@ The editable Blender addon uses Geometry Nodes for the eleven column/foundation 
 
 The bounded section lies between approximately Z 6.33 and 13.0, across the 100 ft avenue width. This is one bay of the 525 ft bridge. Plate LIX establishes the width, column spacing and member families; local member depths/thicknesses, minor fabrication, cover, world registration and material appearance remain qualified. The source under-clearance line is not treated as a uniform slab underside.
 
-`model/bridge-addon.blend` retains editable Geometry Nodes. `model/bridge-addon.glb` is the exact accepted export, SHA256 `5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54`. The Main0 coordinate frame receives the existing −4.2672 m runtime height translation once.
+`model/bridge-addon.blend` retains editable Geometry Nodes. The accepted material revision is `model/bridge-addon.glb`, SHA256 `e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b`. Its geometry and binary payload are identical to the first source export `5858205a`; only the painted coating changes. The Main0 coordinate frame receives the existing −4.2672 m runtime height translation once.
+
+The first browser view exposed an overly metallic, nearly black painted surface. The material-only correction uses a dielectric coating with linear color (0.18, 0.19, 0.17), metallic 0 and retained roughness 0.64. This is a calibrated appearance interpretation, not recovered historic paint. `source/material_v4.executed.py` derives the glTF material values from the updated Blender material while retaining every original geometry byte. The exact change proof is in `acceptance/material-change-proof.json`.
 
 `acceptance/raw-physical.json` checks all 22 column positions against real existing receivers, 30 roof/rail-clearance samples and 250 body samples on the adjacent Platform 5 paths. The first eight stair regions are disjoint. These are scoped geometry checks; no structural-capacity certification or native walking walkthrough is claimed.
 

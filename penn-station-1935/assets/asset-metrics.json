@@ -969,11 +969,11 @@
     },
     {
       "file": "model-platform.glb",
-      "bytes": 1150392,
+      "bytes": 1563352,
       "transportFile": "model-platform.glb.gz",
-      "transportBytes": 213970,
-      "sha256": "7f6e438f1836f33fd046bff40f2e4b090dde1e9b4b71e2ae09bcb532f249fe8d",
-      "transportSha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "transportBytes": 327461,
+      "sha256": "b1aca55ee3437f3250f80cfb25c496861574f35f548cefce9b003e1eddcf82e5",
+      "transportSha256": "1d78c5cb8a6e0c3f51b4378cc5736211b42afbbd925ec12d60f94a133de2a00e",
       "externalTextures": [
         {
           "uri": "textures/1171d79307cd9bf10880.ktx2",
@@ -994,12 +994,16 @@
         {
           "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
           "bytes": 2819507
+        },
+        {
+          "uri": "textures/6c26c61cd54d16a732de.ktx2",
+          "bytes": 1447796
         }
       ],
-      "nodes": 15,
-      "meshes": 15,
-      "materials": 12,
-      "textures": 5,
+      "nodes": 16,
+      "meshes": 16,
+      "materials": 16,
+      "textures": 6,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -1010,11 +1014,11 @@
     },
     {
       "file": "model-platform-low.glb",
-      "bytes": 963312,
+      "bytes": 1376256,
       "transportFile": "model-platform-low.glb.gz",
-      "transportBytes": 240418,
-      "sha256": "c9ebf9c36e177508375837e2e55b754c67edbd1b97773f70df1a3ae48a596202",
-      "transportSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "transportBytes": 353939,
+      "sha256": "af8159ef19bdbc44b86f77c88f1236fa5b91b625169acb113557c0fae818af2f",
+      "transportSha256": "533df54cb175010154b80dd2ea11d62ddb27a9467652d92850bdb6711f651b82",
       "externalTextures": [
         {
           "uri": "textures/6507df0100f8376d9e57.ktx2",
@@ -1035,12 +1039,16 @@
         {
           "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
           "bytes": 2819507
+        },
+        {
+          "uri": "textures/30dd933ca84527637a68.ktx2",
+          "bytes": 135718
         }
       ],
-      "nodes": 15,
-      "meshes": 15,
-      "materials": 12,
-      "textures": 5,
+      "nodes": 16,
+      "meshes": 16,
+      "materials": 16,
+      "textures": 6,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -1122,8 +1130,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 107,
-  "modelTextureAndLightingBytes": 240218826,
+  "sharedTextureFiles": 109,
+  "modelTextureAndLightingBytes": 244294808,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1587,6 +1595,66 @@
     "newBakeReportSha256": "48b71a6412f03653705e20e84e9fa481e1ddf53c017c1165c17285d52cedc3c5",
     "newDenoiseReportSha256": "2191180964cb1c1e49ee6787e420766bb7c2a1c62c89d5303b0a8ccd7df11888",
     "newSourceSha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+    "runtimeNavigationUnchanged": true
+  },
+  "eighthAvenueBridge": {
+    "status": "Phase12 bounded two-bent bridge candidate; static browser acceptance separate",
+    "lightingRevision": 12,
+    "previousMetricsSha256": "eabe09cac1d0447bd24854037a56a3fdb2b851969225b217d32bd5b1d507b745",
+    "newMaterialNames": [
+      "GraniteCapstoneEighthAvenueBridgePhase12Bridge",
+      "StructuralConcreteEighthAvenueBridgePhase12Bridge",
+      "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
+      "BuriedWaterproofingEighthAvenueBridgePhase12Bridge"
+    ],
+    "existingBaseBinaryPrefixesExact": true,
+    "unchangedOtherModels": [
+      {
+        "file": "model-exterior.glb.gz",
+        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+      },
+      {
+        "file": "model-exterior-low.glb.gz",
+        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+      },
+      {
+        "file": "model-concourse.glb.gz",
+        "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c"
+      },
+      {
+        "file": "model-concourse-low.glb.gz",
+        "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+      },
+      {
+        "file": "model-trains-low.glb.gz",
+        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+      }
+    ],
+    "sharedReferencedKtx": 109,
+    "aggregateBytes": 244294808,
+    "newBakeReportSha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff",
+    "newDenoiseReportSha256": "77f2d85a28c6cccf2ec0b227580c3626ebd7b974b6735cc233257ff4053f25a3",
+    "newSourceSha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
     "runtimeNavigationUnchanged": true
   }
 }

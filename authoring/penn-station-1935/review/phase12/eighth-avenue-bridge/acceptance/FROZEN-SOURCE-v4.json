@@ -1,0 +1,65 @@
+{
+  "status": "FROZEN sourcev4 material-only painted dielectric correction; physicalgeometry identical",
+  "supersedes": "candidate-v3 materialappearance ONLY; originalsource preserved",
+  "acceptedRaw": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.glb",
+    "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+    "bytes": 585436
+  },
+  "acceptedEditable": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.blend",
+    "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f",
+    "bytes": 123416
+  },
+  "surface": {
+    "material": "PaintedStructuralIronEighthAvenueBridge",
+    "linearBaseColor": [
+      0.18,
+      0.19,
+      0.17
+    ],
+    "metallic": 0,
+    "roughnessUnchanged": 0.6399999856948853,
+    "qualification": "Appearanceinterpretation, notsampledhistoricalhue."
+  },
+  "geometry": {
+    "all8256TrianglesExact": true,
+    "originalBINExact": true,
+    "all7MeshStateAndTransformsNormalsUvAndGeometryNodesExact": true,
+    "allOtherMaterialsExact": true,
+    "sourceV3PhysicalProofStillApplies": true
+  },
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.glb",
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+      "bytes": 585436
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.blend",
+      "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f",
+      "bytes": 123416
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/construction.json",
+      "sha256": "c00df95fbce7a8d2c60d9b590369812d8e58b1964fc006eecd3ac104483b100f",
+      "bytes": 101078
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/material-change-proof.json",
+      "sha256": "71054e6fb6256c8e6ffcd055713328364caa48b7208fbb649e99aeb54302c8bd",
+      "bytes": 2557
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/independent-material-only-proof.json",
+      "sha256": "2a7b5109bd399affc720a67c63eb0f608383d77c9c1ff7fb867737d8d2195a01",
+      "bytes": 1273
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/material_v4.py",
+      "sha256": "0dc656c1cad0e1375fa3f73594a8483bcac69049983d704e4d8451486a725f6d",
+      "bytes": 6011
+    }
+  ],
+  "lightingRequirement": "FreshGI/AO mustusev4dielectricmaterial; olddarkmetallicv3runtimeheld. Preserveallgeometry/sourcecornernormals anddisableweldartifactonly."
+}

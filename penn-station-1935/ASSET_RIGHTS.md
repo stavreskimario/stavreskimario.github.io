@@ -1,5 +1,7 @@
 # Asset provenance — material and interior checkpoint
 
+The first Eighth Avenue bridge bay is newly authored Blender/Geometry Nodes geometry. Its evidence packet retains mechanical crops from the 1910 ASCE engineering publication, with source URLs, image identities and the US public-domain basis. The painted steel calibration is authored PBR data, not sampled historical paint; no new third-party texture or human model is included. See [bridge source and qualifications](../authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/README.md).
+
 ## Newly authored assets
 
 The architectural, neighbourhood, vehicle and rolling-stock meshes, Blender authoring scripts, procedural surface maps, lighting atlases and synthesized ambience were created for this project. Geometry interprets historical evidence; it is not a scan of the demolished station. Names such as Milford granite, travertine and Tuscan red describe the intended appearance without certifying a sampled historic material or paint colour.

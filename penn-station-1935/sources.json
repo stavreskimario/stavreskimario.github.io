@@ -628,6 +628,38 @@
         "qualification": "Gibbs Fig. 2 registers court/cloisters/stair heads and LOC 071935 shows broad grid flooring. Exact panel edges, pitch, module, thickness and underside profile remain inferred. Reasoned complete visible central open-court grid, retaining concrete circulation/bearing zones; not the entire 155,000 sq ft station/surroundings system.",
         "geometryProof": "../authoring/penn-station-1935/review/phase4/concourse-details/floor-v3/floor-v3-actual-ray-audit.json"
       }
+    },
+    "eighthAvenueBridge": {
+      "sourceId": "S9",
+      "primary": "Francis/O’Brien printed pp.162–163 and Plate LIX, ASCE Transactions vol.69 (1910)",
+      "scope": "First finite two-bent bay; not the complete525ft bridge or lower station enclosure",
+      "documented": {
+        "bridgeWidthFt": 100,
+        "bridgeLengthFt": 525,
+        "columnsAcrossWidth": 11,
+        "columnPitchFt": 10,
+        "underClearanceLineAbsoluteFt": 306.08
+      },
+      "reconstructed": {
+        "bentRowsWorldZ": [
+          6.33,
+          13.0
+        ],
+        "houseLineWorldX": [
+          -152.0952,
+          -121.6152
+        ],
+        "columnCount": 22,
+        "localMemberDepthAndThicknessSchedule": "Interpreted within documented families/ranges",
+        "paint": "Dielectric gray-green appearance calibration; no measured historic sample"
+      },
+      "uncertain": [
+        "At least ±1m absolute plan registration",
+        "Local grade and source/scene datum differences",
+        "Exact minor fabrication, cover and footing adaptation",
+        "1935 survival and paint finish"
+      ],
+      "evidence": "../authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/evidence/README.md"
     }
   },
   "clockEvidence": {

@@ -1,11 +1,16 @@
 {
   "schema": 1,
-  "scope": "Accepted Blender source v3, corrected primary evidence and source controls; lighting/runtime validation follow separately.",
+  "scope": "Accepted Blender/material v4 source, primary evidence, actual geometry/light/static browser checks. Publication remains separate.",
   "files": [
     {
       "path": "README.md",
-      "bytes": 1864,
-      "sha256": "f70bad40bdc52d71c54837b3fe30b54fec3acab564fc946a95626e362c0c5e5d"
+      "bytes": 2497,
+      "sha256": "e29c3dd4fb03d6802971e339a9f3c467c2d82c5fe05ce78f985b3957588aecbb"
+    },
+    {
+      "path": "acceptance/FROZEN-FINAL-MATERIAL-v4.json",
+      "bytes": 11823,
+      "sha256": "4bb29a2ba0119281b154fa97ee3b58d66962102ba1dd4f7a5d2a0b19584001c1"
     },
     {
       "path": "acceptance/FROZEN-SOURCE-v3.json",
@@ -13,9 +18,29 @@
       "sha256": "740095067697717aae1d06f4859fad4d9345a442fa49612ea648ce7cfad532d3"
     },
     {
+      "path": "acceptance/FROZEN-SOURCE-v4.json",
+      "bytes": 3019,
+      "sha256": "ff16a240d3fe93579791e9669a289b34d9505eec525c6094477ea2443d900006"
+    },
+    {
+      "path": "acceptance/assets-validation.json",
+      "bytes": 346778,
+      "sha256": "38ad8552a5fdbd6b069ae3453c9cdd2956974a0993a204a7e8f5cbfcc78b8cfb"
+    },
+    {
+      "path": "acceptance/bridge-orbit-wide.png",
+      "bytes": 712044,
+      "sha256": "dd266e6fe77c419ebf2cc4c42bdec2a2f9fb5ff89f74dff1271cbf935da79aeb"
+    },
+    {
+      "path": "acceptance/bridge-walk.png",
+      "bytes": 678345,
+      "sha256": "e8bb67a685639471ede60022bbcca8db3cc09ee914947a9bbcce47cddef670e4"
+    },
+    {
       "path": "acceptance/construction.json",
-      "bytes": 98383,
-      "sha256": "ca0d0cdfc6d27d5a8bdbd2c10b6c6af71faa22f002293ee0557b256d3e35e1d1"
+      "bytes": 101078,
+      "sha256": "c00df95fbce7a8d2c60d9b590369812d8e58b1964fc006eecd3ac104483b100f"
     },
     {
       "path": "acceptance/denoise-validator-controls.json",
@@ -23,9 +48,19 @@
       "sha256": "4dd7cd8b003f632924d7c8ab1e26912625625049982d64d931fc0bb52d61aa4a"
     },
     {
+      "path": "acceptance/material-change-proof.json",
+      "bytes": 2557,
+      "sha256": "71054e6fb6256c8e6ffcd055713328364caa48b7208fbb649e99aeb54302c8bd"
+    },
+    {
       "path": "acceptance/raw-physical.json",
       "bytes": 15940,
       "sha256": "f23f9f80d0296ec5f06fdd8ca21e47dda7c985a8086134c919ebb85804ff20ea"
+    },
+    {
+      "path": "acceptance/static-report.json",
+      "bytes": 43682,
+      "sha256": "a012977af003320e2ade4024659f8453f9e961392b3cc0b44f60cfb1c2534461"
     },
     {
       "path": "evidence/MANIFEST.json",
@@ -109,13 +144,13 @@
     },
     {
       "path": "model/bridge-addon.blend",
-      "bytes": 124069,
-      "sha256": "6df74c29b3aedfa4a4ae01e2d23e47caa5c4ff5456a0593c01b1e5dac577ddcf"
+      "bytes": 123416,
+      "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f"
     },
     {
       "path": "model/bridge-addon.glb",
-      "bytes": 585440,
-      "sha256": "5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54"
+      "bytes": 585436,
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b"
     },
     {
       "path": "source/build_bridge.executed.py",
@@ -126,6 +161,11 @@
       "path": "source/check_bridge.executed.mjs",
       "bytes": 4556,
       "sha256": "dca35fe86fbc232ba179a291f4e66969f5cef631112415c33ff424a7198d3ffc"
+    },
+    {
+      "path": "source/material_v4.executed.py",
+      "bytes": 6011,
+      "sha256": "0dc656c1cad0e1375fa3f73594a8483bcac69049983d704e4d8451486a725f6d"
     }
   ]
 }
