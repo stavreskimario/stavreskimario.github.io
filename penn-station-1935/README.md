@@ -37,7 +37,7 @@ The intended period is 1935–1940, using opening-era plans and photographs as a
 
 ## Explore
 
-Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors and stairs. Shift walking is 15% faster than the previous checkpoint; ordinary walking and free-flight speeds are unchanged. Open **Station plan → The lower arrivals gallery** to reach the new viewpoint. **Environment → Orbit** enables free flight, with **Q/E** for height; switching back to Walk retains the arrivals viewpoint.
+Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors and stairs. Normal and Shift walking are each15% faster than the gallery-finish checkpoint:2.99m/s and6.6125m/s. Open **Station plan → The lower arrivals gallery** to reach the new viewpoint. **Environment → Orbit** enables free flight, with **Q/E** for height; switching back to Walk retains the arrivals viewpoint.
 
 The large location card has been removed so the architecture stays visible; viewpoint names remain in navigation. The main viewpoints move the camera around the same station. Daylight, field of view, shadows, quality, annotations, approximate archive comparisons and optional ambience remain available. Fields, dialogs and blur guard movement input. Fuller Manhattan and further mobile optimization are deferred.
 

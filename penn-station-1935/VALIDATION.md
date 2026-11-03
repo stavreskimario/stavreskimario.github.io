@@ -1,4 +1,8 @@
-# Current checkpoint: gallery fascia, floor and wayfinding — 4 November 2026
+# Current control adjustment — 4 November 2026
+
+Entry revision `12-walk-speed-1` increases both walking targets15% from the gallery-finish checkpoint: ordinary2.6→2.99m/s and Shift5.75→6.6125m/s. Both Shift keys use the same faster target. Acceleration/deceleration, diagonal normalization, eye height and the maximum12cm collision sweep are retained; the faster movement is divided into additional short sweeps. Free-flight speeds remain10/28m/s. The production bundle and three-app static validation pass. No browser walking walkthrough was run, as requested. Architectural assets remain the accepted `11-gallery-finish-1` set; enclosure and roof-transition construction is in progress. Publication follows the matching Pages deployment.
+
+# Previous checkpoint: gallery fascia, floor and wayfinding — 4 November 2026
 
 Runtime `11-gallery-finish-1` adds98 fitted stringer, landing and gallery fascia components across both107m edges, retaining P5's existing finish once. A small source-family `33rd STREET` sign hangs from actual ceiling receivers and reads correctly from both sides. The neutral floor gains physically scaled modern concrete color, normal and roughness maps while retaining its mean albedo, geometry, AO and GI. This appearance remains explicitly unverified as a historic floor material.
 
