@@ -1,0 +1,28 @@
+name: Site checks
+on:
+  pull_request:
+    paths:
+      - apps.json
+      - index.html
+      - shared/**
+      - hello-world/**
+      - la-trip/**
+      - penn-station-1935/**
+      - scripts/validate.py
+      - scripts/site-publishing/**
+      - tests/test_site_staging.py
+      - .github/workflows/site-*.yml
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Validate apps and shared publishing
+        run: |
+          python3 scripts/validate.py
+          python3 -m unittest discover -s tests -p 'test_site_staging.py'

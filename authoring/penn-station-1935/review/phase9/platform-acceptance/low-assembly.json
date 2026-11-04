@@ -1,0 +1,61 @@
+{
+  "scope": "Independent Blender access module appended; original retained station BIN and existing bindings exact",
+  "inputSha256": "cdab80929f5266c7f445827c7f979c574a1dbe31c71da692b5cc1e37197c40df",
+  "moduleSha256": "f2adad98c904f54d8b3b06787f364cc8d96698ed1fec541a95f31882cced06db",
+  "outputSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+  "decodedSha256": "c9ebf9c36e177508375837e2e55b754c67edbd1b97773f70df1a3ae48a596202",
+  "originalBinaryPrefixSha256": "b8d6970af91f67944a183bee49c4eec3e77207edbd380558a15f81c9fa0f6ef2",
+  "originalBinaryPrefixBytes": 854132,
+  "lightingArtifact": "platform-surfaces",
+  "addedMaterials": [
+    "RailwayPlatformRubbedConcretePhase9",
+    "RailwayPlatformStippledGranolithicPhase9"
+  ],
+  "addedNodes": 1,
+  "addedMeshes": 1,
+  "newTextures": [
+    {
+      "uri": "textures/1dbb4370dc80ba66e186.ktx2",
+      "sha256": "1dbb4370dc80ba66e186f4a6f15298037bbffe86b45d9e62e41076be4ac5165c",
+      "bytes": 950518
+    },
+    {
+      "uri": "textures/f46d86be9b939ee4beec.ktx2",
+      "sha256": "f46d86be9b939ee4beec53472e40cd7b115b201aeb0f4a744edf7a290c821f4b",
+      "bytes": 2553771
+    },
+    {
+      "uri": "textures/206a10b6a2d3fbbd05a1.ktx2",
+      "sha256": "206a10b6a2d3fbbd05a14cd2efc6c583322a78f751d7f120da78c61071998e0f",
+      "bytes": 2317428
+    },
+    {
+      "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
+      "sha256": "e31619f2b2a7a5ba20dd0bda7a06cd1e2530fef0c20aadd946fae3d80572ae7f",
+      "bytes": 2819507
+    }
+  ],
+  "newLighting": [
+    {
+      "file": "lighting-platform-surfaces-sky.webp",
+      "bytes": 1097856,
+      "sha256": "f00734514791ef9b8a922d8ad1974416667ac12e72c5052c1b0fe63033d9a9a3"
+    },
+    {
+      "file": "lighting-platform-surfaces-sky-low.webp",
+      "bytes": 57674,
+      "sha256": "46c3703740d499d4cfe28d9f332c7adcff66472688eac9d3cf8dcf5ce6514774"
+    },
+    {
+      "file": "lighting-platform-surfaces-sky.webp",
+      "bytes": 1097856,
+      "sha256": "f00734514791ef9b8a922d8ad1974416667ac12e72c5052c1b0fe63033d9a9a3"
+    },
+    {
+      "file": "lighting-platform-surfaces-sky-low.webp",
+      "bytes": 57674,
+      "sha256": "46c3703740d499d4cfe28d9f332c7adcff66472688eac9d3cf8dcf5ce6514774"
+    }
+  ],
+  "callerMustCopyExternalAssets": true
+}

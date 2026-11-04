@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "status": "Physically retained files and exact archived generated outputs are classified separately",
+  "retainedFiles": {
+    "module-gltf-validation.json": {
+      "bytes": 25255,
+      "sha256": "87c5c0297b2df060339f5f845198528965bba16b92a2c6080772e54aab90584a"
+    },
+    "frozen-bake-command.json": {
+      "bytes": 26029,
+      "sha256": "1d2dafee818236fdfa5708795535afb5c12961882ae7ed6ff19e31c032ee9353"
+    },
+    "actual-bake-completion.json": {
+      "bytes": 2066,
+      "sha256": "5852af07f8ffe7b6be31cad52c9a281d7884d786cb1a258857b44373b05025ed"
+    },
+    "actual-raw-output-inventory.json": {
+      "bytes": 3957,
+      "sha256": "fb2d482d6a3cc598fa1056616cb0dd445597494f6f909a1c8ebdd6d2cb1b5a8c"
+    },
+    "README.md": {
+      "bytes": 2406,
+      "sha256": "e057b1d50413156806428fc6d094ae20acd2f0adf64a9214bf764d4f74299931"
+    },
+    "module-packaging-proof.json": {
+      "bytes": 10639,
+      "sha256": "bc255e87c7b3edd7d4fa0f674d2234e8a320f28eeedc352f73749a0f7b40809b"
+    },
+    "actual-cpu-preflight.json": {
+      "bytes": 28743,
+      "sha256": "416dca3c45945708bd9416f1950f050e00f66cf9209832d49a11d9c5961dc10f"
+    },
+    "actual-postprocess-completion.json": {
+      "bytes": 5301,
+      "sha256": "db666c621d6f96b2d1114882089be617a3d9d1eff043324ec768a825b431d426"
+    },
+    "lossless-hdr-archive-proof.json": {
+      "bytes": 1326,
+      "sha256": "492740fd896ccaa087f4db4fd057e7cfd21503d05a2066d70c28a6c7e810730c"
+    },
+    "contexts/arrivals-guard-omission.json": {
+      "bytes": 9725,
+      "sha256": "e94c9fb34234c840b91995d2af6aaf336ced33fbc2eae9590ecf129893dbf9c4"
+    },
+    "denoised/lighting-concourse-exits-denoise.json": {
+      "bytes": 2549,
+      "sha256": "0723af32ecb95ad25c77d67a57d9517738921ef75063c87dc9f8dfe033cf94e9"
+    },
+    "denoised/lighting-concourse-exits-sky-low.png": {
+      "bytes": 141534,
+      "sha256": "f62c729af984e00e07d7b496318be18911ce0284e849edab37e423131c42ba5e"
+    },
+    "denoised/lighting-concourse-exits-sky.png": {
+      "bytes": 4304668,
+      "sha256": "c7fd321da20aba8bddb21951290615f0be29787a65b7159ed50743dd46a6939e"
+    },
+    "source/occluder_materials.py": {
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    "source/prepare-packet.py": {
+      "bytes": 3990,
+      "sha256": "0927c5a7b422643c62f44eba764ef7e261aaf0b94bfdf02b9ac3fd6459a07ad6"
+    },
+    "source/postprocess-approved.py": {
+      "bytes": 3887,
+      "sha256": "0163cd132dfdd74cb7f6ad549fc8f99bf501a15c0db95cb302d3ecf971b141e2"
+    },
+    "source/bake_lighting.py": {
+      "bytes": 27470,
+      "sha256": "c2b3a065331faf4ad98d8d885fff4a71848ce67443c13e7f28218f5a0e43159e"
+    },
+    "source/package-exits-lossless.mjs": {
+      "bytes": 7309,
+      "sha256": "1f7d9307217ed40457b7883a9bfd08739750747f768cc6bed18ba0d4e5e0bfa7"
+    },
+    "source/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    "source/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    "source/order_lighting_uv.py": {
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    },
+    "source/patch-exit-navigation.py": {
+      "bytes": 3961,
+      "sha256": "19ca7c80b0dfa65757a63f98ec5a6fb4f5efb86f659b590b5f289b61a01d10ee"
+    },
+    "source/assemble-exit-module.py": {
+      "bytes": 6637,
+      "sha256": "1d310976aff563a40f361a4aaec6bf5216052f9f05879322fa8498654f707ba4"
+    },
+    "source/authored_lighting_uv_guard.py": {
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    "source/vault_lighting_uv.py": {
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+    },
+    "source/reuse-texture-cache.mjs": {
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    },
+    "source/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "source/run-approved-bake.py": {
+      "bytes": 3094,
+      "sha256": "9393ec183ecb93429a0757f8f7012cda3f1eaeb5ba61b2921e55c194a44a12c6"
+    },
+    "source/continue-reviewed.py": {
+      "bytes": 3941,
+      "sha256": "e7d159ca6b11b235b7f46965f84bbdadf802ab79dd5b3f88623ff0770bab6a8d"
+    },
+    "source/restore_imported_visibility.py": {
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    "source/baked_occlusion_binding.py": {
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    "source/denoise_lighting.py": {
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    "source/encode-lossless-meshopt.mjs": {
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    "raw/lighting-concourse-exits.json": {
+      "bytes": 28715,
+      "sha256": "da7e3152325bec3ad4c47b8473408d47d9a2db50b04e03eb95f9a99ae9d00e29"
+    }
+  },
+  "archivedGeneratedOutputs": {
+    "raw/lighting-concourse-exits-sky.hdr.gz": {
+      "repositoryPath": "authoring/penn-station-1935/lighting/phase10-exits/raw/lighting-concourse-exits-sky.hdr.gz",
+      "bytes": 41013216,
+      "sha256": "254a5c1635302d25694ea18c2145aa3b6eddb2d68e3cdf488709a18f42c4cf61",
+      "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+      "gitBlob": "77e42bb62b0943b6b5e2335dcf2031dfe562cf7c",
+      "gitBytesExact": true,
+      "independentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/lossless-hdr-archives/lighting-concourse-exits-sky.hdr.gz",
+      "backupBytesExact": true,
+      "decodedBytes": 46438147,
+      "decodedSha256": "648a28b04fc0892d2182581a887a54100f235da0877e794e066a2c7957ff3e63",
+      "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/lighting/phase10-exits/raw/lighting-concourse-exits-sky.hdr.gz",
+      "freshExternalCopySha256": "254a5c1635302d25694ea18c2145aa3b6eddb2d68e3cdf488709a18f42c4cf61",
+      "immutableGitVerified": true,
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/lighting/phase10-exits/raw/lighting-concourse-exits-sky.hdr.gz",
+      "movedOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/originals-moved-after-phase11-light-promotion/authoring/penn-station-1935/lighting/phase10-exits/raw/lighting-concourse-exits-sky.hdr.gz",
+      "activeSourceValidatorRequiresFileAtInitialInspection": true,
+      "activeSourceValidatorRequiresFileAfterPhase11Promotion": false
+    },
+    "denoised/lighting-concourse-exits-sky-denoised-linear.hdr.gz": {
+      "repositoryPath": "authoring/penn-station-1935/lighting/phase10-exits/denoised/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "bytes": 21340922,
+      "sha256": "7c1d665c8bd2dd34cfa26a53c312b5d43453d2a76887772f7168639f5905bfd4",
+      "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+      "gitBlob": "34518f2c44348871fc8ff41e7e03d95486d06d77",
+      "gitBytesExact": true,
+      "independentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/lossless-hdr-archives/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "backupBytesExact": true,
+      "decodedBytes": 67649587,
+      "decodedSha256": "c5b80031dd27b12878f433260a184d0a860b226b025b4cde92439aaeafac8a73",
+      "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/lighting/phase10-exits/denoised/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "freshExternalCopySha256": "7c1d665c8bd2dd34cfa26a53c312b5d43453d2a76887772f7168639f5905bfd4",
+      "immutableGitVerified": true,
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/lighting/phase10-exits/denoised/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "movedOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/originals-moved-after-phase11-light-promotion/authoring/penn-station-1935/lighting/phase10-exits/denoised/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "activeSourceValidatorRequiresFileAtInitialInspection": true,
+      "activeSourceValidatorRequiresFileAfterPhase11Promotion": false
+    }
+  },
+  "recoveryReceipt": "authoring/penn-station-1935/review/phase11/storage/superseded-lighting-outputs.json",
+  "restoreHelper": "authoring/penn-station-1935/review/phase11/storage/restore-superseded-lighting.py"
+}

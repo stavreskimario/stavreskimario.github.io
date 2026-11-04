@@ -1,0 +1,38 @@
+{
+  "rawAcceptance": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-handoff-v1/proofs/actual-v2-raw-acceptance-v2.json",
+    "sha256": "88cd7d7aeaf58f7f7259081fa40abc5ffc075e57a4f5fb1e54a05194158ad7a0",
+    "bytes": 8532,
+    "status": "PASS: raw arrivals rebake preservation and fresh AO export"
+  },
+  "packaging": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-optimized-uv-priority-v2/packaging-proof.json",
+    "sha256": "db4077a72e118b8b1e06ab983d773a5b59e43499422352010130cd0eca70bf0b",
+    "bytes": 6698,
+    "status": "READY FOR ROOT INTEGRATION/INDEPENDENT ENCODED REVIEW"
+  },
+  "denoise": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-denoised-uv-priority-v2/completion-proof.json",
+    "sha256": "c907be3d285d332828fbe390451d699e769ff0c17e3f0a4f19551584a575d780",
+    "bytes": 1500,
+    "status": "PASS"
+  },
+  "physical": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-encoded-physical-v2/SUMMARY.json",
+    "sha256": "66a7bb6a392903997b80045bad1b09ad80efa8211ef5ef1e815c44851797f13e",
+    "bytes": 6259,
+    "status": "PASS: new full/low encoded ARR physical outcomes; native browser/append acceptance separate"
+  },
+  "browser": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-browser-uv-priority-v1/report.json",
+    "sha256": "caa2768abf0fdef3b69285a2c061466b13a8cf1e4342019009fed889332e806e",
+    "bytes": 10154630,
+    "status": "PASS: native Main\u2192departure\u2192platform\u2192Eastarrival\u2192ExitN/Saisles\u2192Westarrival\u2192platform\u2192Main"
+  },
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-source-archive-v2/verification.json",
+    "sha256": "027af38d78c32c6719861e4447688b3576d0c641faf67752b6774b40fde9ce45",
+    "bytes": 1902,
+    "status": "PASS"
+  }
+}

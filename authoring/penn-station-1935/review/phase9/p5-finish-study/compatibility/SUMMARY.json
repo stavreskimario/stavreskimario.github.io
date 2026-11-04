@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "status": "CONDITIONALLY COMPATIBLE: source names, frame and scalar material values verified; canonical integration and roundtrip remain unperformed.",
+  "canonicalSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+  "canonicalUnchanged": true,
+  "counts": {
+    "canonicalSceneObjects": 13319,
+    "existingArrivalsNamesVerified": 4047,
+    "ownedRailReplacements": 6,
+    "newObjects": 16,
+    "editableAddon": 22
+  },
+  "frameTranslationBlender": [
+    0,
+    0,
+    -4.2672
+  ],
+  "oldRailMain0PositionResidualM": 4.837036131632999e-07,
+  "materialScalarsExactlyMatch": true,
+  "materialGraphsDifferentRemapExistingCanonicalMaterials": true,
+  "exportHazards": [
+    "Historical full builder deletes source scene.",
+    "Historical MESH/FONT-only export omits CURVE/GN rails.",
+    "Whole4,063-node raw study import duplicates existing arrivals."
+  ],
+  "requiresDedicatedExternalIntegrationRoundtrip": true,
+  "compatibilityReport": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-canonical-compatibility-v1/compatibility.json",
+    "sha256": "85908fa27fb7a5ed9b4f16f2fafefa73439f6455100843d1806ea62fc0f4073a",
+    "bytes": 9330
+  },
+  "actualReadOnlyInspection": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-canonical-compatibility-v1/actual-source-inspection.json",
+    "sha256": "8bbfa96764ee8fef5bbd558ccf016a463557cea7617ded7b62b9eaf248c77406"
+  },
+  "noGPUExportSaveRootWrites": true
+}

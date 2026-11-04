@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "captured": "2026-10-30T03:03:28.349Z",
+  "scope": "Camera-only diagnostic of current5-stone-1 Platform5 stair/wall relationships; all six zones loaded. These are NOT regular UI preset poses and do NOT establish historical correctness, surveyed clearances or code compliance. No scene/material/light/production change; no FPS claim.",
+  "sourceReport": {
+    "sha256": "b682b4283fb6462d08b5713235dca9ef8a802e95db99c90eb56db4691bd73d02",
+    "retainedOutsideRepository": "phase5-platform-stair-visual/report.json"
+  },
+  "sourceAppSha256": "4172504c249336373e958ef5283607f9409b0a9b4f18c54542c4f1729cadee30",
+  "diagnosticBundleSha256": "2bf68b6b2009137dd179fd19a0cc87d17581df1bc44dc245ac5e98f4c442dafa",
+  "browser": "156.0.8078.74",
+  "poses": [
+    {
+      "name": "head",
+      "method": "Scratch camera-only Orbit preset, selected through real mode/view buttons; normal production shaders/materials/lighting",
+      "requestedWorldEye": [
+        -46,
+        -2.5872,
+        18
+      ],
+      "requestedWorldTarget": [
+        -41.5,
+        -4.2672,
+        13.32787
+      ],
+      "actualCamera": {
+        "position": [
+          -46,
+          -2.587200000000001,
+          18
+        ],
+        "quaternion": [
+          -0.11719978823463867,
+          -0.3710003700920104,
+          -0.04726243727861577,
+          0.9199941288137833
+        ],
+        "fov": 50
+      },
+      "mode": "orbit",
+      "view": "concourse",
+      "light": "afternoon",
+      "quality": "high",
+      "allSixZonesVisible": true,
+      "zoneIds": [
+        "40a51229-9f41-45ba-9309-b2f0f5926a47",
+        "e3b2eab0-2f9c-4434-95d6-5cf6a83ada95",
+        "d94dac03-927d-4a17-a37f-3f0695974224",
+        "9edea227-2705-4fc8-ba34-35702c14a2f3",
+        "f99195fd-b497-4ca5-a7a1-2ea6d1d751f9",
+        "526e0a1d-29d0-457c-9ac5-054d4acf53c5"
+      ],
+      "sixDecodedModelFiles": [
+        "model-context.glb",
+        "model-trains.glb",
+        "model-platform.glb",
+        "model-exterior.glb",
+        "model-concourse.glb",
+        "model-waiting-room.glb"
+      ],
+      "screenshot": {
+        "bytes": 2348696,
+        "sha256": "c26629b32ef3abbac5429c3187a1f71b700d119f0e8405d11284e9c99d1f34f2",
+        "retainedOutsideRepository": "phase5-platform-stair-visual/head.png"
+      },
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "pixelRatio": 2
+    },
+    {
+      "name": "bottom",
+      "method": "Scratch camera-only Orbit preset, selected through real mode/view buttons; normal production shaders/materials/lighting",
+      "requestedWorldEye": [
+        -46,
+        -10.305625,
+        16
+      ],
+      "requestedWorldTarget": [
+        -53,
+        -9.5,
+        13.32787
+      ],
+      "actualCamera": {
+        "position": [
+          -46,
+          -10.305625,
+          16
+        ],
+        "quaternion": [
+          0.044086820425906864,
+          0.5663587640725216,
+          -0.030360399458350517,
+          0.8224185970463637
+        ],
+        "fov": 50
+      },
+      "mode": "orbit",
+      "view": "concourse",
+      "light": "afternoon",
+      "quality": "high",
+      "allSixZonesVisible": true,
+      "zoneIds": [
+        "c48894aa-e6da-4fa4-a5bb-187f51986f5d",
+        "e6027e08-f270-4daa-819b-1c2da7390b10",
+        "e1b0645e-688c-42e0-b7df-bfd2e0e23a1f",
+        "cffa611b-095f-40a3-8fe0-23ae9ec71782",
+        "ddd182db-1689-485e-872f-2f5491b00781",
+        "1041eeea-4805-4aaa-877f-3935fdc1e566"
+      ],
+      "sixDecodedModelFiles": [
+        "model-trains.glb",
+        "model-context.glb",
+        "model-platform.glb",
+        "model-exterior.glb",
+        "model-concourse.glb",
+        "model-waiting-room.glb"
+      ],
+      "screenshot": {
+        "bytes": 4159287,
+        "sha256": "a67d6e22e31ee865753e7f97f487649c2a4fa327a568b7e78822158eb1479ce3",
+        "retainedOutsideRepository": "phase5-platform-stair-visual/bottom.png"
+      },
+      "canvasPixels": [
+        2880,
+        1832
+      ],
+      "pixelRatio": 2
+    }
+  ],
+  "actualSixAssetTransports": [
+    {
+      "file": "model-concourse.glb.gz",
+      "bytes": 4268512,
+      "servedTransportSha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748"
+    },
+    {
+      "file": "model-context.glb.gz",
+      "bytes": 504344,
+      "servedTransportSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "file": "model-exterior.glb.gz",
+      "bytes": 2711634,
+      "servedTransportSha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d"
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "bytes": 161587,
+      "servedTransportSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb"
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "bytes": 123231,
+      "servedTransportSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "bytes": 8274157,
+      "servedTransportSha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277"
+    }
+  ],
+  "errorCounts": {
+    "recordedTotal": 0,
+    "server": 0,
+    "pageErrors": 0,
+    "consoleAndNetworkFailures": null,
+    "qualification": "Harness recorded server failures and pageerror events; console/network-failure events were not separately collected."
+  },
+  "browserClosed": true,
+  "originalReceiptSha256": "2e782d86638edd38320b765d1b1cb497aed7379bc3ccefbdb1eeac39fc27051b"
+}

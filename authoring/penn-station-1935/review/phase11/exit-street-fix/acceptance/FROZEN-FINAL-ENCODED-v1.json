@@ -1,0 +1,116 @@
+{
+  "status": "FROZEN PASS actual final encoded wall correction and integrated full/low outbound/return route",
+  "cases": [
+    {
+      "case": "full-forward",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-final-encoded-v1/full-forward/route-check.json",
+      "sha256": "35b29dac3804dec91b40530dd04106353936bd243aa543315d0f4f393bab2b52"
+    },
+    {
+      "case": "full-reverse",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-final-encoded-v1/full-reverse/route-check.json",
+      "sha256": "2a1b4519afd49c9c70667e81c2eb947bf8971860827e84bc9eb778cb9e528d15"
+    },
+    {
+      "case": "low-forward",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-final-encoded-v1/low-forward/route-check.json",
+      "sha256": "709741e6da46469aa0151375b405af811e2a66d710494aabf7ef5b24e20a167a"
+    },
+    {
+      "case": "low-reverse",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-final-encoded-v1/low-reverse/route-check.json",
+      "sha256": "fedb5e1801049daafbdce648f5ec89c629a6d2d3e536fbed64d48ca7ca9da8d4"
+    }
+  ],
+  "totalActualWalkingSamples": 6252,
+  "minimumHeadroomM": 1.885793149471283,
+  "actualPromotedAssetsNotModuleOnly": true,
+  "roadCurbPrism": {
+    "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/final-encoded-road-prism-proof.json",
+    "sha256": "8576f9b4755489423033db3672f6fe87dfedbc5c384281859f6d522b4faf9c41",
+    "cases": 4,
+    "zeroIntrusions": true,
+    "standaloneTrianglesEach": 27896,
+    "actualMaximumRoadOverlapY": -0.30127096862792957,
+    "actualRoadSlabUndersideY": -0.2512710988999075,
+    "minimumWallCapToRoadSlabClearanceM": 0.04999986972802206
+  },
+  "allSourceFloorTreadOwnersExact": 51,
+  "unchangedCommonSourceOwners": 91,
+  "sourcePreservationReceipt": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/corrected-source-regression.json",
+    "sha256": "a9465eba0d45a7005dbf3a1c38fcf07dc82a6908798f964c0225b50c6fc658cc"
+  },
+  "routeV3": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/route-v3.json",
+    "sha256": "7b546fe1c9d9851749b0e438f8c085aba0740f024fc555d7204a172f1f758130",
+    "waypointsEqualOriginalCheckedRoute": true
+  },
+  "frozenInputFiles": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "sha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
+      "bytes": 6896629,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104",
+      "bytes": 506131,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "sha256": "63b977ed4db677f7fe3ba267dbf0520b6e0bd619053ce187fde84c7b6eb62b21",
+      "bytes": 6586218,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz",
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263",
+      "bytes": 686636,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/package/model-concourse.glb",
+      "sha256": "83d9fd6a81a5ce29db3b3b55fb952a06d377830e72ba1d43e2f414c672bf1c01",
+      "bytes": 907208,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/package/model-concourse-low.glb",
+      "sha256": "c903a7cc935a50172bec0105c5fa56d9ccd233593b2dfbef2bf83d7b2e260a38",
+      "bytes": 907208,
+      "rehashedExactAfterAllCases": true
+    }
+  ],
+  "limitations": [
+    "Native browser WASD walkthrough remains skipped at user request; these are automated decoded actual geometry casts.",
+    "New whole-gallery finish remains a separate frozen candidate, not claimed present in this exit-only wall package.",
+    "Final root asset validation/load proof is owned by parent/integration. No GPU, browser, root mutation or publishing performed by this check."
+  ]
+}

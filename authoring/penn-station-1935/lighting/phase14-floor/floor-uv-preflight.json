@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "inputScene": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/split-receivers-v1/split-prebake-scene.blend",
+  "inputSceneSha256": "404d135c64d03bcd39aea78647458f54735daadbb07579bd0c33df3406fe5d16",
+  "floorObject": "Continuity exact original floor receivers",
+  "floorTriangles": 600,
+  "walkingTopTriangles": 24,
+  "walkingTopAreaM2": 795.1974609445169,
+  "worldUpDefinition": "Blender Z-up; transformed geometric triangle normalZ>.95; source StippledGranolithic material family",
+  "walkingTopWeight": 4.0,
+  "minimumJacobianPixelsPerMetre": 63.96000086750335,
+  "maximumJacobianPixelsPerMetre": 63.96006701892331,
+  "materials": {
+    "RailwayTrackBaseConcreteEnclosure14": {
+      "surfaceArea": 2146.263261229993,
+      "uvArea": 0.03272646991536021,
+      "areaEquivalentPixelsPerMetre": 15.994402955037554
+    },
+    "RailwayPlatformRubbedConcreteEnclosure14": {
+      "surfaceArea": 2339.197319385992,
+      "uvArea": 0.03544778523935577,
+      "areaEquivalentPixelsPerMetre": 15.944873280325668
+    },
+    "RailwayPlatformStippledGranolithicEnclosure14": {
+      "surfaceArea": 1507.4778166307592,
+      "uvArea": 0.20486509219372806,
+      "areaEquivalentPixelsPerMetre": 47.749460024338575
+    }
+  },
+  "physicalCornerDigestBeforeAndAfter": "d62e4ec9d55a38aa944e77d98a1d1d03221124c790f5855ab32e9dc3aec0b94e",
+  "structureLightCornerDigestBeforeAndAfter": "11cbd5891402f80415892bce4a0aab16f1fb1e922e1c8d62c3cbfdbbe78f79f6",
+  "positionNormalUv0Exact": true,
+  "structureLightUvExact": true,
+  "selectedOnlyFloorObject": true,
+  "uvBounds": [
+    0.0009764863643795252,
+    0.9990234375
+  ],
+  "seconds": 6.889552125008777,
+  "preparedScene": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/independent-floor-prebake-scene.blend",
+  "preparedSceneSha256": "4540f65f8329d9ce677323d647bdc62eb0f344a90f585cd526888c55a3b0ce02"
+}

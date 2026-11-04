@@ -1,0 +1,4668 @@
+{
+  "created": "2026-10-29T05:48:50.339Z",
+  "deploymentPrefix": "/exhibition/",
+  "section": "full",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "requestedAngle": "metal",
+  "rendererNote": "ANGLE/metal requested; the actual driver is recorded per graphics context. Frame intervals describe browser scheduling, not a general hardware performance claim.",
+  "checks": [
+    "Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths",
+    "Four actual exterior-corner orbit views preserve the complete station; screenshots support visual face/roof/contact inspection",
+    "Core and railway floors retain calibrated baked illumination, ambient occlusion and atlas channels; local HDR reflections, context and period rolling stock decode locally",
+    "Exterior, waiting-room and concourse viewpoints render; drag orbit changes camera position",
+    "Hotel Pennsylvania and General Post Office controls reach distinct, correctly oriented neighbourhood viewpoints",
+    "WASD follows the real waiting-room end stair to street-level eye height and stops at the manifest-defined closed end door"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-T6DAFZRS.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-platform.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-trains.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/6243410b98d8c80a38ed.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f8f598c89017c5e01dd7.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4278ac4780ea6e5ef44e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3335d12c85f0a74be102.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/b64c55705256a5018846.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/547e3573b92e90adcd24.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/456394f60a7a3aaf94f3.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/06c5a58877219e6fe72d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-platform.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-platform-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-waiting-room.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reflection-concourse.hdr.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-concourse-sky.webp",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "driver": {
+        "api": "WebGL2",
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 116,
+            "triangles": 4985254,
+            "geometries": 113,
+            "textures": 44,
+            "exposure": 1.0394526356145444
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-southeast": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              326.4696215848662,
+              136.09609831651434,
+              254.37628910495488
+            ],
+            "quaternion": [
+              -0.16392082555875356,
+              0.33763675403433363,
+              0.059835769523651224,
+              0.9249600347900486
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 210,
+            "triangles": 8125538,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.0399659825124108
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-northeast": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              326.46960418636957,
+              136.09609831651431,
+              -264.3763037595045
+            ],
+            "quaternion": [
+              -0.059835764025893745,
+              0.924960046114082,
+              0.16392082756559148,
+              0.3376367230120036
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 210,
+            "triangles": 8125538,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.0399659825124108
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-northwest": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -167.84863772084861,
+              136.09609831651431,
+              -202.26267759726798
+            ],
+            "quaternion": [
+              0.07980569094521668,
+              0.875648431644601,
+              0.1551818547998038,
+              -0.4503215160216083
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 200,
+            "triangles": 7996650,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.0399659825124108
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-corner-southwest": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -167.8486244888217,
+              136.09609831651431,
+              192.26269610069906
+            ],
+            "quaternion": [
+              -0.15518185747641494,
+              -0.45032148665314564,
+              -0.0798056857405565,
+              0.8756484467479799
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 206,
+            "triangles": 8015802,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.0399659825124108
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-waiting": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 3,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 146,
+            "triangles": 6549978,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 3.993439403887942
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-concourse": {
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 4,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 148,
+            "triangles": 7122514,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.7264174344464793
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-hotel": {
+          "state": {
+            "view": "exterior",
+            "framing": "hotel",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 6,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              140,
+              5.9999999999999964,
+              65.00000000000003
+            ],
+            "quaternion": [
+              0.12043345465801152,
+              -0.2214327225883731,
+              0.02756892721267185,
+              0.9673175727849563
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 42,
+            "triangles": 2224444,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.2053699616346032
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-farley": {
+          "state": {
+            "view": "exterior",
+            "framing": "farley",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 7,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -130,
+              8.000000000000009,
+              71
+            ],
+            "quaternion": [
+              0.052976827836534165,
+              0.21754839714491386,
+              -0.011826128861932201,
+              0.9745390157855139
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 104,
+            "triangles": 5744262,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 1.1184345999260679
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 0,
+            "lastCandidates": 0,
+            "maximumCandidates": 0,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": 6.32
+          }
+        },
+        "desktop-waiting-end-landing": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "walk",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 8,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              0,
+              1.6773005428352326,
+              47.023265528369606
+            ],
+            "quaternion": [
+              0.07777655644170531,
+              0,
+              0,
+              0.9969708156551376
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 154,
+            "triangles": 6575802,
+            "geometries": 114,
+            "textures": 49,
+            "exposure": 3.7359122117743317
+          },
+          "assets": [
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 14,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": []
+            },
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 11,
+              "bakedMaterials": 3,
+              "occlusionMaterials": 3,
+              "reflectionMaterials": 11,
+              "reflectionFile": "reflection-platform.hdr.gz",
+              "atlasChannels": [
+                0
+              ]
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 11,
+              "bakedMaterials": 4,
+              "occlusionMaterials": 4,
+              "reflectionMaterials": 0,
+              "reflectionFile": null,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 15,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "reflectionMaterials": 15,
+              "reflectionFile": "reflection-waiting-room.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 9,
+              "bakedMaterials": 5,
+              "occlusionMaterials": 5,
+              "reflectionMaterials": 9,
+              "reflectionFile": "reflection-concourse.hdr.gz",
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ],
+          "scene": {
+            "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+            "zones": [
+              {
+                "name": "exterior",
+                "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+                "visible": true,
+                "meshes": 11
+              },
+              {
+                "name": "waiting",
+                "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+                "visible": true,
+                "meshes": 15
+              },
+              {
+                "name": "concourse",
+                "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+                "visible": true,
+                "meshes": 9
+              },
+              {
+                "name": "context",
+                "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+                "visible": true,
+                "meshes": 37
+              },
+              {
+                "name": "platform",
+                "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+                "visible": true,
+                "meshes": 17
+              },
+              {
+                "name": "trains",
+                "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+                "visible": true,
+                "meshes": 16
+              }
+            ]
+          },
+          "navigation": {
+            "sourceMeshes": 105,
+            "excludedMeshes": 75,
+            "excludedInstances": 76894,
+            "structuralInstances": 0,
+            "colliders": 30,
+            "cells": 2236,
+            "queries": 1861,
+            "lastCandidates": 8,
+            "maximumCandidates": 11,
+            "buildMilliseconds": 1.399999976158142,
+            "floorWorld": -0.0026994571615155394
+          }
+        }
+      },
+      "cornerInspection": [
+        {
+          "corner": "southeast",
+          "position": [
+            326.4696215848662,
+            136.09609831651434,
+            254.37628910495488
+          ],
+          "screenshot": "desktop-corner-southeast.png"
+        },
+        {
+          "corner": "northeast",
+          "position": [
+            326.46960418636957,
+            136.09609831651431,
+            -264.3763037595045
+          ],
+          "screenshot": "desktop-corner-northeast.png"
+        },
+        {
+          "corner": "northwest",
+          "position": [
+            -167.84863772084861,
+            136.09609831651431,
+            -202.26267759726798
+          ],
+          "screenshot": "desktop-corner-northwest.png"
+        },
+        {
+          "corner": "southwest",
+          "position": [
+            -167.8486244888217,
+            136.09609831651431,
+            192.26269610069906
+          ],
+          "screenshot": "desktop-corner-southwest.png"
+        }
+      ],
+      "bakedLighting": [
+        {
+          "file": "model-trains.glb",
+          "materials": 14,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "reflectionMaterials": 14,
+          "reflectionFile": "reflection-platform.hdr.gz",
+          "atlasChannels": []
+        },
+        {
+          "file": "model-context.glb",
+          "materials": 26,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "reflectionMaterials": 0,
+          "reflectionFile": null,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-platform.glb",
+          "materials": 11,
+          "bakedMaterials": 3,
+          "occlusionMaterials": 3,
+          "reflectionMaterials": 11,
+          "reflectionFile": "reflection-platform.hdr.gz",
+          "atlasChannels": [
+            0
+          ]
+        },
+        {
+          "file": "model-exterior.glb",
+          "materials": 11,
+          "bakedMaterials": 4,
+          "occlusionMaterials": 4,
+          "reflectionMaterials": 0,
+          "reflectionFile": null,
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-waiting-room.glb",
+          "materials": 15,
+          "bakedMaterials": 9,
+          "occlusionMaterials": 9,
+          "reflectionMaterials": 15,
+          "reflectionFile": "reflection-waiting-room.hdr.gz",
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-concourse.glb",
+          "materials": 9,
+          "bakedMaterials": 5,
+          "occlusionMaterials": 5,
+          "reflectionMaterials": 9,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "atlasChannels": [
+            1,
+            0
+          ]
+        }
+      ],
+      "walking": {
+        "before": [
+          0,
+          -2.5872,
+          25
+        ],
+        "afterForward": [
+          0,
+          -2.5841753145178483,
+          24.565621132419764
+        ],
+        "endStair": {
+          "side": "south",
+          "bounds": [
+            -2.7432000000000003,
+            2.7432000000000003,
+            31.546800000000005,
+            42.214800000000004
+          ],
+          "landingBounds": [
+            -16.5608,
+            16.5608,
+            42.214800000000004,
+            47.9044
+          ],
+          "bridgeBounds": [
+            -2.7432000000000003,
+            2.7432000000000003,
+            47.9044,
+            65.532
+          ],
+          "bottomWorld": -4.2672,
+          "topWorld": 0,
+          "startFloorWorld": -4.2672,
+          "endFloorWorld": 0,
+          "roomSideDoorPlaneZ": 47.324400000000004,
+          "innerEndWallPlaneZ": 47.4044,
+          "steps": 28,
+          "riser": 0.1524,
+          "tread": 0.38100000000000006,
+          "basis": "35x18ft footprint traced from plate300 scale bar, approximately±2ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+        },
+        "ascentSamples": [
+          {
+            "position": [
+              0,
+              -2.584174079137439,
+              24.568554042235057
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841740159229274,
+              24.59087229511549
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173968129165,
+              24.62294579469152
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173932743913,
+              24.662928709909107
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841739066801956,
+              24.70928845148014
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173887248702,
+              24.76159670234509
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173872862132,
+              24.81870225617979
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173862210692,
+              24.87986728608142
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417385436516,
+              24.9440618198443
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.582611960606399,
+              25.011973013158816
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5830360454499175,
+              25.08583815735676
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5833268833380645,
+              25.156659277858612
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5835467733053163,
+              25.23052667388083
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583709574089183,
+              25.305875567905435
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583830107534471,
+              25.382478105187097
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583918888862579,
+              25.459670620373586
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5839854181717685,
+              25.538702091343787
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5840330741481248,
+              25.615627558579387
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584070179758079,
+              25.6970202633829
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5840969522879043,
+              25.77703661259322
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584117014591153,
+              25.858483983720987
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584131690045984,
+              25.939347529528536
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841426311561384,
+              26.021028771900554
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841506900503743,
+              26.102497424954734
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841566982628086,
+              26.184693793973246
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584161169399145,
+              26.267585165109903
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584164440008646,
+              26.349657284805676
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584166764809028,
+              26.427903196079352
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584168590167436,
+              26.510232106161638
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841699510416154,
+              26.593160809582223
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584170958597285,
+              26.676177378379077
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841717007326315,
+              26.758770341698202
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172254022784,
+              26.84192383290081
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841726636643494,
+              26.92513061703079
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172966952258,
+              27.008382497866343
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841731914986985,
+              27.09167253951663
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5826194390267245,
+              27.17499487283352
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5830209266648563,
+              27.257845282256827
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5833187131518995,
+              27.340718572140435
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5835395836922848,
+              27.42361124253407
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5837134573439227,
+              27.512514920412
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5838299011057124,
+              27.593440367267895
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5839164295255665,
+              27.673877292705477
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.583986320318213,
+              27.76181946880656
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584034753092716,
+              27.844773272479692
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584070676056233,
+              27.927734142073227
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5840975953420524,
+              28.01170066415115
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841173883285333,
+              28.095172504210346
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841319672498457,
+              28.178148793890056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841428363906322,
+              28.261628609453386
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841508422744113,
+              28.34461161484983
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841568109654887,
+              28.428097147230357
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58416123002836,
+              28.511584904727215
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841644849778036,
+              28.594574597026014
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584166911666504,
+              28.67806582194778
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841686990927673,
+              28.76105843372855
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841700316870795,
+              28.844552143997138
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417097749712,
+              28.924047035819985
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841717374922846,
+              29.010042383535836
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841722756464582,
+              29.092538599237255
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417268587886,
+              29.17753530980982
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584172984925113,
+              29.261532561555782
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841732036756593,
+              29.34453026168937
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841733659246318,
+              29.427528313614424
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173487507765,
+              29.51152664662028
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841735741362073,
+              29.592025286964212
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417364241061,
+              29.67752406985238
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173691842623,
+              29.761523058675515
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173727439624,
+              29.843022225412753
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417375482142,
+              29.927521495938567
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173774918977,
+              30.011520882534985
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841737895441623,
+              30.09402037192001
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738005242445,
+              30.177519934838873
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738086118444,
+              30.260519566448323
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173814641458,
+              30.344019252931098
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738190826913,
+              30.427018989127106
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.58417382241078,
+              30.51101876339017
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173824807405,
+              30.592518577324388
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173826575722,
+              30.673018420642645
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173828004028,
+              30.76101827728778
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173828993812,
+              30.844018162484858
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173829727943,
+              30.927018065512147
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173830278073,
+              31.011017982505845
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738306637287,
+              31.090017915861416
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173830968097,
+              31.173517856141668
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738311922855,
+              31.25651780573056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738313594265,
+              31.340017763206365
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.5841738314831733,
+              31.423517726961055
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.584173831574792,
+              31.50701769628112
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.545525451553307,
+              31.590017670618806
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.516711613211341,
+              31.673517648611462
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.4954882023822176,
+              31.75651762995322
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.47966534168879,
+              31.84001761446015
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.4698584802118413,
+              31.92351760108857
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.422088491181398,
+              32.00651758970142
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.3850221448324946,
+              32.094017579782374
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.3601062155707,
+              32.17351757227385
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.3396894832478754,
+              32.26151756495902
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.2856279657933283,
+              32.3440175592866
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.2467192114832373,
+              32.42351755480281
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.214682578338787,
+              32.51201755039475
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.1932007858727727,
+              32.592517547146784
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.1770375184297093,
+              32.67351754420581
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.1234467537561454,
+              32.7615175414018
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.0865016679579345,
+              32.84401753931503
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.0600563957828926,
+              32.92301753766844
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -2.038228762351639,
+              33.0110175361938
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.984633334169492,
+              33.09101753495908
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.9431562360487593,
+              33.17401753369518
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.912233480473986,
+              33.25751753300987
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.8886377664425198,
+              33.34401753196655
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.8725629933745038,
+              33.42351753151435
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.8190227886340231,
+              33.51101753093133
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7820600374830653,
+              33.5930175303484
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7548345739579463,
+              33.67401752989923
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.7330003599055943,
+              33.76201752966352
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.677961640852108,
+              33.844517529381385
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.6383495823844392,
+              33.92401752903027
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.606204547757927,
+              34.011017528995836
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5837467718432146,
+              34.09351752882437
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5674083415196487,
+              34.17401752850313
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.5141040758198683,
+              34.2610175285526
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.4768636351641713,
+              34.3435175284486
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.448904803514656,
+              34.42701752829993
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.4282048153149407,
+              34.510517528164954
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.3749471535090962,
+              34.59401752804157
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.3330466174092734,
+              34.67751752822602
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.3021839368674364,
+              34.76051752800176
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.2791746337315306,
+              34.844017527903475
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.2628437595907522,
+              34.92351752805087
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.2088336500234749,
+              35.0115175278429
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1712125531050064,
+              35.0950175280579
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1446561236248498,
+              35.174017527800565
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.122842691814876,
+              35.26151752778298
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.1075470952416662,
+              35.34501752800719
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.056352733054726,
+              35.42751752799529
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -1.0181152470258281,
+              35.510517527806336
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9894615469384977,
+              35.59451752785726
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9685015367067211,
+              35.677517527969215
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.9143069550527173,
+              35.76051752778425
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8736956217684481,
+              35.8445175278386
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8442963293933361,
+              35.92651752771503
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8219548017506672,
+              36.01051752777086
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.8056121079081041,
+              36.09351752788691
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.7530261208847749,
+              36.17701752782462
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.714693991351965,
+              36.259017527703165
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.6852676399254913,
+              36.344017527701205
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.6640358673010907,
+              36.42701752781879
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.6093588046779091,
+              36.510517527757806
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5688773365935818,
+              36.594017527697034
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5398339863128375,
+              36.67451752781528
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5167158589218023,
+              36.761017527874024
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.5004558858827757,
+              36.843517527873324
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.44940049388109593,
+              36.92701752781312
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.41140656099618966,
+              37.01101752787221
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.38347070119689863,
+              37.09451752781218
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.3634281730984997,
+              37.17501752793104
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.35035546693051134,
+              37.26101752787112
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.29786818010161586,
+              37.344517527811256
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.26021127859097903,
+              37.42501752793025
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.2305327759652633,
+              37.51051752775125
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.20904495495703868,
+              37.594517527810694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.15637357658639744,
+              37.674517527810565
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.11414599821028149,
+              37.76101752787005
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.08413689520675664,
+              37.84451752781035
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.06191893968400626,
+              37.92801752775067
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              -0.045553858652489745,
+              38.01101752786981
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.007048818872305282,
+              38.09451752781015
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.04579437668416279,
+              38.17751752792931
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.0746806647676354,
+              38.26101752786966
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.09606731747033577,
+              38.34451752781002
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.1493396413584308,
+              38.42551752775039
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.19102659252487647,
+              38.51101752786957
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.22105476948214464,
+              38.59451752780994
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.24328684686171498,
+              38.67801752775032
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.25898029144077106,
+              38.75701752780991
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.3120385158566655,
+              38.8410175278695
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.35085028954806874,
+              38.92401752769067
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.3796372824558698,
+              39.00701752780987
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.40109908136013384,
+              39.09051752775026
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.45527842391954276,
+              39.174517527809854
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.49740198076222875,
+              39.261517527690636
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5262162050166509,
+              39.34201752780984
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5483559186489315,
+              39.42501752792904
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.5645217905996405,
+              39.50651752769062
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6175029173276635,
+              39.59051752775022
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6562582946410959,
+              39.67351752786943
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.6861835759387244,
+              39.76051752775022
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.7073077996592763,
+              39.84401752769061
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.758716279906555,
+              39.92701752780982
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.7998570859136108,
+              40.01051752775021
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.8301601722312498,
+              40.093517527869416
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.851700079892175,
+              40.17251752792902
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.8694788799778895,
+              40.2605175277502
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9219935107636705,
+              40.34351752786941
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9611451668281247,
+              40.4270175278098
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              0.9901320296803695,
+              40.510517527750196
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.011593145313169,
+              40.59401752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.026659407292968,
+              40.67251752792901
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.0798141247005324,
+              40.760517527750196
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.1168393924729403,
+              40.84401752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.1435452084199622,
+              40.92501752792901
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.163602224859493,
+              41.00651752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.220130813102805,
+              41.09151752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.2600711343112834,
+              41.17251752792901
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.2916370634110987,
+              41.25901752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.3144139550364295,
+              41.34401752769059
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.3300772615274337,
+              41.42251752792901
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.38372837926502,
+              41.510517527750196
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.4209074180025003,
+              41.5935175278694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.4486258064911228,
+              41.677017527809795
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.4691477768589207,
+              41.76051752775019
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.5227825523390088,
+              41.84451752780979
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.5620728011306995,
+              41.9260175278694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.5919889345591627,
+              42.00951752780979
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6143650339687643,
+              42.09401752769058
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6306207890513669,
+              42.17701752780979
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6428642671925409,
+              42.26151752769058
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6517128744117209,
+              42.34401752769058
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6580467026117511,
+              42.42301752775019
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6632997979663795,
+              42.511517527690586
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6669160820594513,
+              42.59451752780979
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6694584124357479,
+              42.672517527929
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.671598009435821,
+              42.7610175278694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6730709296953576,
+              42.84401752769058
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6741520920058324,
+              42.9260175278694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6749611052990663,
+              43.0085175278694
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.675571599331269,
+              43.092517527929004
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6760065786338374,
+              43.17301752775019
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6763562221582307,
+              43.26051752775019
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6766001328848352,
+              43.343517527869395
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6767744562520845,
+              43.42301752775018
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6769166107008275,
+              43.51051752775018
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6770157774019503,
+              43.59351752786939
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6770866519940577,
+              43.673017527750176
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6771441664557032,
+              43.76001752792899
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6771849740629021,
+              43.84401752769057
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772135813106441,
+              43.923017527750176
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772370792829772,
+              44.010517527750174
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772535560807191,
+              44.09401752769057
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772651869197,
+              44.173017527750176
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677274740482316,
+              44.260517527750174
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772814050313118,
+              44.34351752786938
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772861681946145,
+              44.42301752775017
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772898810539263,
+              44.506017527869375
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772926916429964,
+              44.591017527869376
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772947613231803,
+              44.67601752786938
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677296270053604,
+              44.76001752792898
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677297379380236,
+              44.84351752786937
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772981752644607,
+              44.92401752769056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772987993886528,
+              45.00901752769056
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772992566723408,
+              45.09351752786937
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772995785205087,
+              45.17351752786937
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6772998275963813,
+              45.256517527690555
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773000132919258,
+              45.34001752792897
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773001507760532,
+              45.423517527869365
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300252042746,
+              45.50651752769055
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773003275409204,
+              45.590017527928964
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773003831506155,
+              45.67301752775015
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.67730042460976,
+              45.75651752769054
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300455305027,
+              45.84001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773004780310004,
+              45.92351752786935
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300494770272,
+              46.006517527690534
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300507505353,
+              46.092017527809745
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005165844128,
+              46.17451752780975
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005235053375,
+              46.25951752780975
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005284731055,
+              46.34201752780975
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005321643757,
+              46.424517527809755
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005349923493,
+              46.510017527928966
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005369979572,
+              46.59201752780976
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005384830644,
+              46.673517527869365
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005396484841,
+              46.760017527928966
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005404467447,
+              46.840017527928964
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005410677029,
+              46.92351752786936
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005415415272,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005418765212,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300542126272,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.6773005423102312,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300542448083,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          },
+          {
+            "position": [
+              0,
+              1.677300542545249,
+              47.01001752792896
+            ],
+            "pose": 8,
+            "loading": false
+          }
+        ],
+        "landingStopSamples": [
+          [
+            0,
+            1.6773005410677029,
+            46.92351752786936
+          ],
+          [
+            0,
+            1.6773005418765212,
+            47.01001752792896
+          ],
+          [
+            0,
+            1.6773005423102312,
+            47.01001752792896
+          ],
+          [
+            0,
+            1.677300542545249,
+            47.01001752792896
+          ]
+        ]
+      }
+    }
+  ],
+  "manifestRevision": 3,
+  "browser": "156.0.8078.48",
+  "passed": false,
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at platformWalking (/private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:358:24)\n    at async /private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:533:5",
+  "failureState": {
+    "state": {
+      "view": "waiting",
+      "framing": "platform",
+      "mode": "walk",
+      "light": "afternoon",
+      "quality": "balanced",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 9,
+      "instant": false
+    },
+    "camera": {
+      "position": [
+        -14,
+        -10.305625000000001,
+        13.327870361
+      ],
+      "quaternion": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "fov": 50
+    },
+    "navigation": {
+      "sourceMeshes": 105,
+      "excludedMeshes": 75,
+      "excludedInstances": 76894,
+      "structuralInstances": 0,
+      "colliders": 30,
+      "cells": 2236,
+      "queries": 10898,
+      "lastCandidates": 5,
+      "maximumCandidates": 11,
+      "buildMilliseconds": 1.399999976158142,
+      "floorWorld": -11.985625
+    },
+    "scene": {
+      "id": "78c62995-ac1c-4d95-8290-b6aadab3d2ae",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "29a51dff-005d-41a3-b9c0-8e44b4e7f421",
+          "visible": true,
+          "meshes": 11
+        },
+        {
+          "name": "waiting",
+          "id": "edeed586-bf07-4707-a17f-3d179bf47df0",
+          "visible": true,
+          "meshes": 15
+        },
+        {
+          "name": "concourse",
+          "id": "72c1a0f4-084b-4707-b8bb-60c896464d3d",
+          "visible": true,
+          "meshes": 9
+        },
+        {
+          "name": "context",
+          "id": "4dba1a06-c67a-4eb4-bffa-a3558d235d45",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "8a781581-ec84-447f-9013-e2b850e115c2",
+          "visible": true,
+          "meshes": 17
+        },
+        {
+          "name": "trains",
+          "id": "9910dc02-9d47-441d-a6fe-a1a7e44da57c",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    }
+  }
+}

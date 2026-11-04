@@ -1,0 +1,1135 @@
+{
+  "commit": "d6d6cb169c2c109b08da6b956bf8e439e94ab8f6",
+  "url": "https://stavreskimario.github.io/penn-station-1935/",
+  "created": "2026-10-30T05:30:08.200Z",
+  "finished": "2026-10-30T05:31:29.650Z",
+  "status": "passed",
+  "scope": "Actual published production responses and native UI/WASD route, persistent six zones. No injected camera/material/asset responses, no FPS or physical-phone claim.",
+  "browser": "156.0.8078.74",
+  "renderer": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "checks": [
+    "Fresh default Walk; all six loaded zones; three baked access materials use the new 2K illumination atlas",
+    "Exact published bundle, manifest, six natural model bodies, access atlas and two new shared textures match b31036f",
+    "Immediate W after native viewpoint selection acts in the requested concourse pose",
+    "Actual published Main court to both outer platforms/down/up and return through restored opening; persistent six-zone identities"
+  ],
+  "responses": [
+    {
+      "path": "dist/app.js",
+      "bytes": 1044530,
+      "sha256": "0300d554eec34cd2dfe6fd8cfc53d84ec8abdf2d94d09d9706e69a456efcbd27"
+    },
+    {
+      "path": "assets/scene-manifest.json",
+      "bytes": 594687,
+      "sha256": "fdb502f1b0226f59f9102f9cea88493cd771b5d08323e074a7b9a19d0191de65"
+    },
+    {
+      "path": "assets/model-exterior.glb.gz",
+      "bytes": 2711634,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "decodedSha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035"
+    },
+    {
+      "path": "assets/model-waiting-room.glb.gz",
+      "bytes": 8274157,
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "decodedSha256": "cf0aad3568177a4fe4b1394541b5bccb9de35e1d8044cad84a693e8b9df8548c"
+    },
+    {
+      "path": "assets/model-concourse.glb.gz",
+      "bytes": 4543895,
+      "sha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "decodedSha256": "9b7221a4cecacf1401fe94561aab36dbcd97e6cbb373dc345e003bb4ca29bd75"
+    },
+    {
+      "path": "assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe"
+    },
+    {
+      "path": "assets/model-platform.glb.gz",
+      "bytes": 161587,
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1"
+    },
+    {
+      "path": "assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979"
+    },
+    {
+      "path": "assets/lighting-concourse-access-sky.webp",
+      "bytes": 2616680,
+      "sha256": "c1225d6f547d96297bcd8fa3faa781e0fbab554c340a85f76f591c65b05e7712"
+    },
+    {
+      "path": "assets/lighting-concourse-circulation-sky.webp",
+      "bytes": 707476,
+      "sha256": "62927652ca53e9a0cf4325896559dbddf5063ccb55db4ec3732adecdc146f5bb"
+    },
+    {
+      "path": "assets/textures/0f399333f7175f5e5afa.ktx2",
+      "bytes": 3331970,
+      "sha256": "0f399333f7175f5e5afa242c687131ea51951076a896d13ad3e5604f6a58c3d6"
+    },
+    {
+      "path": "assets/textures/71508f85f3c325538f05.ktx2",
+      "bytes": 3139363,
+      "sha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4"
+    },
+    {
+      "path": "assets/textures/9dd19af74e513b23a448.ktx2",
+      "bytes": 2757425,
+      "sha256": "9dd19af74e513b23a448e456cbb65f6c62d9585ea5801371dc39d8a9951b51c5"
+    }
+  ],
+  "accessMaterials": [
+    {
+      "id": "ff8da950-70ac-45e0-8a2f-a28ff8d0e378",
+      "name": "TravertineDepartureStairStone",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 1,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 3.141592653589793,
+      "skyFile": "lighting-concourse-access-sky.webp",
+      "skyScale": 1,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "concourse"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "76ec92d7-bab3-4c86-a6a6-236395e97cbb",
+      "name": "ConcourseOpaqueCirculationConcreteAccessInfill",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.8199999928474426,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 3.141592653589793,
+      "skyFile": "lighting-concourse-access-sky.webp",
+      "skyScale": 1,
+      "ao": {
+        "channel": 0,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 0,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "concourse"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "5f65e189-3316-4c6f-94b0-a895af869c34",
+      "name": "PublicFloorMarbleAccessInfill",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.47999998927116394,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 3.141592653589793,
+      "skyFile": "lighting-concourse-access-sky.webp",
+      "skyScale": 1,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "concourse"
+      ],
+      "meshes": 1
+    }
+  ],
+  "circulationMaterials": [
+    {
+      "id": "c60d8219-5a4a-4d24-817f-bdee6ca99c97",
+      "name": "BedfordLimestoneConcourseCirculation",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 1,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 3.141592653589793,
+      "skyFile": "lighting-concourse-circulation-sky.webp",
+      "skyScale": 1,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "concourse"
+      ],
+      "meshes": 1
+    }
+  ],
+  "pageErrors": [],
+  "httpErrors": [],
+  "requestFailures": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "blockedExternal": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "bodyObserverFailures": [],
+  "walks": [
+    {
+      "label": "native court eastward approach",
+      "key": "KeyW",
+      "axis": 0,
+      "target": -52.15,
+      "end": {
+        "camera": {
+          "position": [
+            -51.92521272611875,
+            -2.58719992246196,
+            32.77307309389497
+          ],
+          "quaternion": [
+            0.04986540099941909,
+            -0.7053463014571416,
+            0.0498653972920627,
+            0.7053463538977168
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 82,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 2682,
+          "lastCandidates": 52,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.26719992246196
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 57
+    },
+    {
+      "label": "through restored southern opening to Platform2",
+      "key": "KeyW",
+      "axis": 2,
+      "target": 54.791453,
+      "end": {
+        "camera": {
+          "position": [
+            -51.90875701459207,
+            -2.5872,
+            55.11135422860682
+          ],
+          "quaternion": [
+            -1.6435374084069032e-09,
+            -0.997510342771478,
+            0.07052032376505456,
+            -2.3247845104621074e-08
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 6072,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.2672
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 84
+    },
+    {
+      "label": "Platform2 descent",
+      "key": "KeyW",
+      "axis": 0,
+      "target": -29.8,
+      "end": {
+        "camera": {
+          "position": [
+            -29.52549321960551,
+            -10.302399144164443,
+            55.130807262334685
+          ],
+          "quaternion": [
+            0.04986540099941912,
+            -0.7053463014571412,
+            0.04986539729206267,
+            0.7053463538977172
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 9474,
+          "lastCandidates": 6,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -11.982399991334407
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 84
+    },
+    {
+      "label": "Platform2 ascent",
+      "key": "KeyS",
+      "axis": 0,
+      "target": -51.8,
+      "end": {
+        "camera": {
+          "position": [
+            -52.07313398277821,
+            -2.587200000000009,
+            55.130807262334685
+          ],
+          "quaternion": [
+            0.04986540099941912,
+            -0.7053463014571412,
+            0.04986539729206267,
+            0.7053463538977172
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 12708,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.2672
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 84
+    },
+    {
+      "label": "under-street approach to Platform1",
+      "key": "KeyW",
+      "axis": 2,
+      "target": 68.764528,
+      "end": {
+        "camera": {
+          "position": [
+            -52.09269323492795,
+            -2.5872,
+            69.23936832918251
+          ],
+          "quaternion": [
+            -1.6435373770895884e-09,
+            -0.997510342771478,
+            0.07052032376505456,
+            -2.3247844661637493e-08
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 14958,
+          "lastCandidates": 9,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.2672
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 53
+    },
+    {
+      "label": "Platform1 descent",
+      "key": "KeyW",
+      "axis": 0,
+      "target": -29.8,
+      "end": {
+        "camera": {
+          "position": [
+            -29.450463578209316,
+            -10.302399526555437,
+            69.25894148598215
+          ],
+          "quaternion": [
+            0.04986540099941914,
+            -0.7053463014571408,
+            0.049865397292062644,
+            0.7053463538977175
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 18396,
+          "lastCandidates": 6,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -11.982399991334407
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 85
+    },
+    {
+      "label": "Platform1 ascent",
+      "key": "KeyS",
+      "axis": 0,
+      "target": -51.8,
+      "end": {
+        "camera": {
+          "position": [
+            -52.031144335042534,
+            -2.5872000000000126,
+            69.25894148598215
+          ],
+          "quaternion": [
+            0.04986540099941914,
+            -0.7053463014571408,
+            0.049865397292062644,
+            0.7053463538977175
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 21660,
+          "lastCandidates": 9,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.2672
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 85
+    },
+    {
+      "label": "return through southern opening to Main court",
+      "key": "KeyW",
+      "axis": 2,
+      "target": 44,
+      "end": {
+        "camera": {
+          "position": [
+            -52.05070840226493,
+            -2.5872,
+            43.63056644883091
+          ],
+          "quaternion": [
+            0.07052032376505457,
+            6.085219408854644e-09,
+            -4.3020270015599645e-10,
+            0.9975103427714782
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 346,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 25362,
+          "lastCandidates": 12,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 8.700000002980232,
+          "floorWorld": -4.2672
+        },
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "scene": {
+          "id": "e1ec6340-4618-4906-876b-4453fb274470",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "41d783d1-2b36-4492-b8bb-05623915bebd",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "c8a44149-58fe-4398-9744-dad9da773410",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "2faf147a-17de-485e-b264-a04d652918fb",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "7fcf1635-01dd-4bff-82ab-1a0abcea628d",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "00674fef-3932-47e2-946a-a97348b7516c",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "4ea9d380-6050-4f8f-96ed-686ab95d950b",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        }
+      },
+      "samples": 97
+    }
+  ],
+  "publication": {
+    "pagesRun": 41008536333,
+    "siteChecksRun": 41008541879,
+    "conclusion": "success",
+    "publishingBranch": "feature/penn-station-1935-reconstruction",
+    "publishingPath": "/",
+    "mainSha": "c5b8065a880a7162c5d4a96a470449e00204d031",
+    "pr": 11,
+    "prState": "open draft, unmerged"
+  },
+  "captures": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/live-check/published-concourse.png",
+      "sha256": "0e66ffb61d26f3ecd33cb88e93e7aa19f6a7ceea69fac5d2dfc6ff82711d9c6c"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/live-check/published-platform1.png",
+      "sha256": "b89ef67aa6e82ed37d8983acd39bfece8d55b9a8beb65ca7da6bb70f881263ef"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/live-check/published-platform2.png",
+      "sha256": "1d02ef63af71ab2d9ca9fa87196d93496d3d30a7ab56604389dca8e2e2a6f5ed"
+    }
+  ],
+  "limits": [
+    "Arrivals stairs, western floor openings and platform enclosure remain unfinished.",
+    "Sixteen ambiguous secondary legs are deferred; minor dimensions and1935retention remain qualified.",
+    "No fresh FPS or physical-mobile claim."
+  ]
+}

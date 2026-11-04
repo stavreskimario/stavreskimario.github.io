@@ -1,0 +1,5254 @@
+{
+  "created": "2026-10-29T06:01:58.487Z",
+  "revision": 3,
+  "railway": {
+    "tracks": 21,
+    "platforms": 11
+  },
+  "platformNormalCorrection": {
+    "rawSha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
+    "upwardTopNormals": true,
+    "positionsAndUvUnchanged": true,
+    "lighting": "Platform-only Metal rebake and calibrated linear-input denoise; uses final corrected train occluder. Core bakes/HDR probes retain their recorded earlier hashes."
+  },
+  "assets": [
+    {
+      "file": "model-context.glb",
+      "bytes": 2204224,
+      "transportFile": "model-context.glb.gz",
+      "transportBytes": 493263,
+      "errors": 0,
+      "warnings": 19,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/3",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/30/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/10",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/11",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/12",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/13",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/14",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/15",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/16",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/17",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/18",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/19",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/20",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/21",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/22",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/23",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/24",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/25",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/26",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/27",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/28",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/29",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/30",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/31",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/32",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/33",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/34",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/35",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/36",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/37",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/38",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/39",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/40",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/111",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/112",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/113",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/115",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/116",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/117",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/119",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/120",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/121",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/123",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/124",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/125",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/127",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/128",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/129",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/131",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/132",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/133",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/135",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/136",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/137",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/139",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/140",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/141",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/147",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/148",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/150",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/151",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/152",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/154",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/155",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/156",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/158",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/159",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/160",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/162",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/163",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/164",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/166",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/167",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/168",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/170",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/171",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/172",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/177",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/178",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/179",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/181",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/182",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/183",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/185",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/186",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/187",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/189",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/190",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/191",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/193",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/194",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/195",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/197",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/198",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/199",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/201",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/202",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/203",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -373.7987976074219,
+          -1,
+          -169.99786370433668
+        ],
+        "max": [
+          340,
+          85.89968742190504,
+          169.99786370433668
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 37,
+      "instances": 22
+    },
+    {
+      "file": "model-context-low.glb",
+      "bytes": 1750700,
+      "transportFile": "model-context-low.glb.gz",
+      "transportBytes": 654827,
+      "errors": 0,
+      "warnings": 19,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/3",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/30/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/10",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/11",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/12",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/13",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/14",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/15",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/16",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/17",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/18",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/19",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/20",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/21",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/22",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/23",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/24",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/25",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/26",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/27",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/28",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/29",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/30",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/31",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/32",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/33",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/34",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/35",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/36",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/37",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/38",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/39",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/40",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/111",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/112",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/113",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/115",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/116",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/117",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/119",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/120",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/121",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/123",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/124",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/125",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/127",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/128",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/129",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/131",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/132",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/133",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/135",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/136",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/137",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/139",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/140",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/141",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/147",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/148",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/150",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/151",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/152",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/154",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/155",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/156",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/158",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/159",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/160",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/162",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/163",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/164",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/166",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/167",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/168",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/170",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/171",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/172",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/177",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/178",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/179",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/181",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/182",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/183",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/185",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/186",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/187",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/189",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/190",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/191",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/193",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/194",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/195",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/197",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/198",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/199",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/201",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/202",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/203",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -373.7987976074219,
+          -1,
+          -169.99786370433668
+        ],
+        "max": [
+          340,
+          85.89968742190504,
+          169.99786370433668
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 37,
+      "instances": 22
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "bytes": 10285776,
+      "transportFile": "model-waiting-room.glb.gz",
+      "transportBytes": 4482377,
+      "errors": 0,
+      "warnings": 29,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/10/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/10/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/11/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/11/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/2/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/4/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/8/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/10",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/11",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/10",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/11",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -18.14319380540365,
+          -0.39798335866639434,
+          -49.02939987182617
+        ],
+        "max": [
+          32.713193500227874,
+          43.58438243107507,
+          49.02939987182617
+        ]
+      },
+      "bakedMaterials": 9,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 7,
+      "instances": 0
+    },
+    {
+      "file": "model-waiting-room-low.glb",
+      "bytes": 8102492,
+      "transportFile": "model-waiting-room-low.glb.gz",
+      "transportBytes": 4128788,
+      "errors": 0,
+      "warnings": 29,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/10/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/10/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/11/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/11/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/2/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/4/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/1/primitives/8/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/10",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/11",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/10",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/11",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -18.14319380540365,
+          -0.39798335866639434,
+          -49.02939987182617
+        ],
+        "max": [
+          32.713193500227874,
+          43.58438243107507,
+          49.02939987182617
+        ]
+      },
+      "bakedMaterials": 9,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 7,
+      "instances": 0
+    },
+    {
+      "file": "model-exterior.glb",
+      "bytes": 8689696,
+      "transportFile": "model-exterior.glb.gz",
+      "transportBytes": 2585874,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/1/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -119.98159790039062,
+          -4.267562222771094,
+          -65.8879016272356
+        ],
+        "max": [
+          120.20540459199779,
+          46.849204850487155,
+          65.8879016272356
+        ]
+      },
+      "bakedMaterials": 4,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 8,
+      "instances": 0
+    },
+    {
+      "file": "model-exterior-low.glb",
+      "bytes": 7804964,
+      "transportFile": "model-exterior-low.glb.gz",
+      "transportBytes": 2668129,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/1/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -119.98159790039062,
+          -4.267562222771094,
+          -65.8879016272356
+        ],
+        "max": [
+          120.20540459199779,
+          46.849204850487155,
+          65.8879016272356
+        ]
+      },
+      "bakedMaterials": 4,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 8,
+      "instances": 0
+    },
+    {
+      "file": "model-concourse.glb",
+      "bytes": 8174188,
+      "transportFile": "model-concourse.glb.gz",
+      "transportBytes": 2742426,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/2/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -105.7171140756286,
+          -8.07373038584521,
+          -72.38999938964844
+        ],
+        "max": [
+          -16.000364329841325,
+          30.310019410198237,
+          72.38999938964844
+        ]
+      },
+      "bakedMaterials": 5,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 5,
+      "instances": 0
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 7432512,
+      "transportFile": "model-concourse-low.glb.gz",
+      "transportBytes": 2724591,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/4/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/4/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/5/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/5/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/6/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/6/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/7/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/7/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/8/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/8/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/9/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/9/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/0/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/2/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "severity": 1,
+          "pointer": "/meshes/0/primitives/3/material",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/4",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/5",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/6",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/7",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/8",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/9",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -105.7171140756286,
+          -8.07373038584521,
+          -72.38999938964844
+        ],
+        "max": [
+          -16.000364329841325,
+          30.310019410198237,
+          72.38999938964844
+        ]
+      },
+      "bakedMaterials": 5,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 5,
+      "instances": 0
+    },
+    {
+      "file": "model-trains.glb",
+      "bytes": 667464,
+      "transportFile": "model-trains.glb.gz",
+      "transportBytes": 123231,
+      "errors": 0,
+      "warnings": 8,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/3",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/40",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/44",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/45",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/46",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/48",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/49",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/50",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/52",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/53",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/54",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -91.58699798583984,
+          -1,
+          -1.597850103724933
+        ],
+        "max": [
+          1,
+          6.133440417810039,
+          1.597850103724933
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 16,
+      "instances": 4
+    },
+    {
+      "file": "model-trains-low.glb",
+      "bytes": 488976,
+      "transportFile": "model-trains-low.glb.gz",
+      "transportBytes": 157720,
+      "errors": 0,
+      "warnings": 8,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/3",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/1/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/1/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/2/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/2/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/3/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/3/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/40",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/44",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/45",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/46",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/48",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/49",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/50",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/52",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/53",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/54",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/1",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/2",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/3",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -91.58699798583984,
+          -1,
+          -1.5977420327821097
+        ],
+        "max": [
+          1,
+          6.131616792422129,
+          1.5977420327821097
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 16,
+      "instances": 4
+    },
+    {
+      "file": "model-platform.glb",
+      "bytes": 1051624,
+      "transportFile": "model-platform.glb.gz",
+      "transportBytes": 150634,
+      "errors": 0,
+      "warnings": 2,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/38",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/39",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/44",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/45",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/49",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/50",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/52",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/53",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/55",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/56",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/58",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/59",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/61",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/62",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/64",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/65",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/66",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/67",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -306.02386474609375,
+          -9.711127817428853,
+          -77.24371173204484
+        ],
+        "max": [
+          200.957275390625,
+          1,
+          76.25706317247453
+        ]
+      },
+      "bakedMaterials": 3,
+      "atlasChannels": [
+        0
+      ],
+      "meshCount": 14,
+      "instances": 10
+    },
+    {
+      "file": "model-platform-low.glb",
+      "bytes": 857484,
+      "transportFile": "model-platform-low.glb.gz",
+      "transportBytes": 176480,
+      "errors": 0,
+      "warnings": 2,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/1",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "severity": 2,
+          "pointer": "/extensionsUsed/4",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "severity": 1,
+          "pointer": "/images/0/mimeType",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "severity": 2,
+          "pointer": "/images/0/uri",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/1",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/2",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/3",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/4",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/5",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/6",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/7",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/8",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/9",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/38",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/39",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/41",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/42",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/44",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/45",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/49",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/50",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/52",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/53",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/55",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/56",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/58",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/59",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/61",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/62",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/64",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/65",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/66",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/accessors/67",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/buffers/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "severity": 2,
+          "pointer": "/images/0",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "severity": 1,
+          "pointer": "/images/0",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -306.02386474609375,
+          -9.711127817428853,
+          -77.24371173204484
+        ],
+        "max": [
+          200.957275390625,
+          1,
+          76.25706317247453
+        ]
+      },
+      "bakedMaterials": 3,
+      "atlasChannels": [
+        0
+      ],
+      "meshCount": 14,
+      "instances": 10
+    }
+  ],
+  "anchors": {
+    "nominalFootprint": [
+      238.9632,
+      131.064
+    ],
+    "waitingRoomClear": [
+      31.3944,
+      84.42960000000001,
+      43.586400000000005
+    ],
+    "waitingRoomWallExtent": [
+      33.1216,
+      95.8088
+    ],
+    "waitingLanternExterior": [
+      36.2712,
+      99.06
+    ],
+    "waitingLanternFrameWidth": 34.3916,
+    "waitingRoofAboveMain": 50.9016,
+    "waitingRoofAboveStreet": 46.6344,
+    "exteriorDoricColumnHeight": 10.668000000000001,
+    "exteriorDoricColumnDiameter": 1.3716000000000002,
+    "interiorColumn": {
+      "pedestal": 2.8448,
+      "base": 0.9906,
+      "shaft": 14.630400000000002,
+      "capital": 2.5146,
+      "totalAboveFloor": 20.980400000000003,
+      "entablatureHeight": 4.0894
+    },
+    "lowerWallArchRadius": 5.8674,
+    "concourse": {
+      "overall": [
+        64.2874,
+        97.536
+      ],
+      "ewBarrelSpans": [
+        26.162,
+        29.0576,
+        26.162
+      ],
+      "nsBarrelSpan": 29.8704,
+      "nsBarrelCenterX": -64.3767,
+      "roofCrownAboveMain": 29.727525,
+      "mainPierWidth": 0.9144000000000001,
+      "webSpacing": 0.6096,
+      "archCrownDepth": 0.6096,
+      "archHaunchDepth": 2.0066,
+      "passengerFloorNS": 144.78,
+      "branchJunctionAboveMain": 22.402800000000003,
+      "gutterTopAboveMain": 24.9174
+    },
+    "reportedGeneralRoomHeight": 45.72,
+    "waitingRoomEndPorticoDepth": 5.689599999999999,
+    "wingRoofAboveStreet": 19.2024,
+    "wingParapetAboveStreet": 19.812,
+    "easternCourtRoof": {
+      "plan": [
+        46.545500000000004,
+        35.2044
+      ],
+      "longAxis": "East–west",
+      "eaveAboveStreet": 0.15,
+      "ridgeAboveStreet": 1.5,
+      "monitorAboveStreet": 2.25,
+      "levelStatus": "Street-level roof role documented; minor rise and exact registration reconstructed from engineering description and Bain view"
+    },
+    "seventhAvenueClockAtticWidth": 30.2
+  },
+  "reflections": [
+    {
+      "file": "reflection-waiting-room.hdr.gz",
+      "bytes": 1324589,
+      "decodedBytes": 1635815,
+      "worldPosition": [
+        0,
+        -1.7672,
+        0
+      ]
+    },
+    {
+      "file": "reflection-waiting-room-low.hdr.gz",
+      "bytes": 344007,
+      "decodedBytes": 416224,
+      "worldPosition": [
+        0,
+        -1.7672,
+        0
+      ]
+    },
+    {
+      "file": "reflection-concourse.hdr.gz",
+      "bytes": 1325665,
+      "decodedBytes": 1698563,
+      "worldPosition": [
+        -70,
+        -2.2672,
+        4.5
+      ]
+    },
+    {
+      "file": "reflection-concourse-low.hdr.gz",
+      "bytes": 340207,
+      "decodedBytes": 431981,
+      "worldPosition": [
+        -70,
+        -2.2672,
+        4.5
+      ]
+    },
+    {
+      "file": "reflection-platform.hdr.gz",
+      "bytes": 932268,
+      "decodedBytes": 1517634,
+      "worldPosition": [
+        -65,
+        -10.1,
+        -0.341442588
+      ]
+    },
+    {
+      "file": "reflection-platform-low.hdr.gz",
+      "bytes": 239523,
+      "decodedBytes": 382917,
+      "worldPosition": [
+        -65,
+        -10.1,
+        -0.341442588
+      ]
+    }
+  ],
+  "exteriorEnvironment": {
+    "file": "sky.hdr",
+    "bytes": 705246,
+    "decodedSha256": "14c981583f6bf81ab8f28bf2a9ff70e247101cd914084cc2637cd80fc367b619",
+    "provenanceFile": "reflection-exterior-probe.json",
+    "provenanceBytes": 4956,
+    "worldPosition": [
+      142,
+      12,
+      0
+    ],
+    "orientation": "Centre east(+X); increasing U turns toward south(+Z in Three)",
+    "lighting": "Neutral dome and fixed afternoon reference sun; interpretation, not a dated historic exposure",
+    "limitation": "Static elevated Seventh Avenue approximation from the authored station and limited contextual buildings. Not a historical panorama, complete1935 streetscape, parallax-correct local reflection or time-varying indirect lighting. Sky is the neutral interpreted dome; no modern field/forest photograph is used.",
+    "sourceModelHashes": [
+      {
+        "zone": "exterior",
+        "file": "model-exterior.glb",
+        "sha256": "5ff73a639078fc06efb941a0141fd212261394acfbdee595545979cef702a193"
+      },
+      {
+        "zone": "context",
+        "file": "model-context.glb",
+        "sha256": "5d3722673b834eaf875342064230c197bf51647986f59e042038b03c970ff425"
+      },
+      {
+        "zone": "waiting",
+        "file": "model-waiting-room.glb",
+        "sha256": "66be79cd8c14b01213b8b4399e1035e3f6974f7a6b36d547c25004e7a2754286"
+      },
+      {
+        "zone": "concourse",
+        "file": "model-concourse.glb",
+        "sha256": "7e87da6a1ac77ec4915343da289bc4f04b004cd032cbfdf267d94e5c7f4db0bf"
+      },
+      {
+        "zone": "platform",
+        "file": "model-platform.glb",
+        "sha256": "d294eba796a3f7627ed71e37511bff97d14733ef7445d8880b7187d63fc581b0"
+      },
+      {
+        "zone": "trains",
+        "file": "model-trains.glb",
+        "sha256": "c5b8dec8a70fca2febe27938de9b784dc91abf51ee0d3084b154e54469ba4385"
+      }
+    ]
+  },
+  "validatorNoticesBySeverity": {
+    "information:UNSUPPORTED_EXTENSION": 30,
+    "warning:VALUE_NOT_IN_LIST": 92,
+    "information:URI_GLB": 92,
+    "warning:MESH_PRIMITIVE_GENERATED_TANGENT_SPACE": 24,
+    "information:UNUSED_OBJECT": 420,
+    "warning:IMAGE_UNRECOGNIZED_FORMAT": 92
+  },
+  "denoising": [
+    {
+      "file": "lighting-exterior-denoise.json",
+      "zone": "exterior",
+      "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+      "recordSha256": "7d8b840493d0a486571a7bae2e0142c579bd3f7756fd673deb7c4d25c85ce8c4",
+      "inputTransfer": "srgb",
+      "sourceSha256": "a4a74239965205d01c7de03b4a598e8b55e3c76e19cfe4fe1678fa5bbe696e2e",
+      "originalLinear": {
+        "mean": 0.0717393159866333,
+        "minimum": 0,
+        "maximum": 0.784324049949646
+      },
+      "denoisedLinear": {
+        "mean": 0.07217348366975784,
+        "minimum": 0,
+        "maximum": 1.183816909790039
+      },
+      "relativeMeanChange": 0.0060520187173995765,
+      "constant018Test": {
+        "before": 0.18,
+        "after": 0.18000005185604095,
+        "maximumError": 0,
+        "passed": true,
+        "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+      },
+      "retainedHdr": {
+        "file": "lighting-exterior-sky-denoised-linear.hdr",
+        "sha256": "49d06cd08c868d71839dfeeedb4854048383fde23922ad2ffe3673529e42c249",
+        "decodedLinear": {
+          "mean": 0.0719425156712532,
+          "minimum": 0,
+          "maximum": 1.1796875
+        },
+        "meanQuantizationError": 0.00023093329218681902
+      },
+      "derivatives": [
+        {
+          "variant": "full",
+          "file": "lighting-exterior-sky.webp",
+          "width": 2048,
+          "height": 2048,
+          "clippedRGBSamples": 31
+        },
+        {
+          "variant": "low",
+          "file": "lighting-exterior-sky-low.webp",
+          "width": 512,
+          "height": 512,
+          "clippedRGBSamples": 0
+        }
+      ],
+      "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+    },
+    {
+      "file": "lighting-waiting-room-denoise.json",
+      "zone": "waiting-room",
+      "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+      "recordSha256": "c13d00f84cc19a6dc89c696a5740e3521d8842ee2fb30eefe1a56c3ef46c85c1",
+      "inputTransfer": "srgb",
+      "sourceSha256": "d3cf7fb7c01ca50e8d0fa2e2a26aa6aeebf09d87b6ef14f1e3b5c50eb627d108",
+      "originalLinear": {
+        "mean": 0.012887709774076939,
+        "minimum": 0,
+        "maximum": 0.6735773086547852
+      },
+      "denoisedLinear": {
+        "mean": 0.012967550195753574,
+        "minimum": 0,
+        "maximum": 1.0037989616394043
+      },
+      "relativeMeanChange": 0.006195082219901504,
+      "constant018Test": {
+        "before": 0.18,
+        "after": 0.18000005185604095,
+        "maximumError": 0,
+        "passed": true,
+        "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+      },
+      "retainedHdr": {
+        "file": "lighting-waiting-room-sky-denoised-linear.hdr",
+        "sha256": "13d435f0dc4693e075a4100ea412074edc24d09656d6ff5b0e13702062e56001",
+        "decodedLinear": {
+          "mean": 0.012928016483783722,
+          "minimum": 0,
+          "maximum": 1
+        },
+        "meanQuantizationError": 0.00003953167833969928
+      },
+      "derivatives": [
+        {
+          "variant": "full",
+          "file": "lighting-waiting-room-sky.webp",
+          "width": 2048,
+          "height": 2048,
+          "clippedRGBSamples": 1
+        },
+        {
+          "variant": "low",
+          "file": "lighting-waiting-room-sky-low.webp",
+          "width": 512,
+          "height": 512,
+          "clippedRGBSamples": 0
+        }
+      ],
+      "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+    },
+    {
+      "file": "lighting-concourse-denoise.json",
+      "zone": "concourse",
+      "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/denoised",
+      "recordSha256": "c8e85287c4176bb093a356958689910d02282b431c0e4b9650af8a9d29a94a06",
+      "inputTransfer": "srgb",
+      "sourceSha256": "845e25622de75f648d7f935f5f1fb2c77526a962130a88d1d40215e143ce20bd",
+      "originalLinear": {
+        "mean": 0.050909530371427536,
+        "minimum": 0,
+        "maximum": 0.6877774000167847
+      },
+      "denoisedLinear": {
+        "mean": 0.05091196671128273,
+        "minimum": 0,
+        "maximum": 0.6950743198394775
+      },
+      "relativeMeanChange": 0.000047856262617607115,
+      "constant018Test": {
+        "before": 0.18,
+        "after": 0.18000005185604095,
+        "maximumError": 0,
+        "passed": true,
+        "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+      },
+      "retainedHdr": {
+        "file": "lighting-concourse-sky-denoised-linear.hdr",
+        "sha256": "002356a5be490378ee7582c95f821438dbc65e436c138a465bb2111f4b712fd5",
+        "decodedLinear": {
+          "mean": 0.050752878189086914,
+          "minimum": 0,
+          "maximum": 0.69140625
+        },
+        "meanQuantizationError": 0.00015907170018181205
+      },
+      "derivatives": [
+        {
+          "variant": "full",
+          "file": "lighting-concourse-sky.webp",
+          "width": 2048,
+          "height": 2048,
+          "clippedRGBSamples": 0
+        },
+        {
+          "variant": "low",
+          "file": "lighting-concourse-sky-low.webp",
+          "width": 512,
+          "height": 512,
+          "clippedRGBSamples": 0
+        }
+      ],
+      "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+    },
+    {
+      "file": "lighting-platform-denoise.json",
+      "zone": "platform",
+      "authoringDirectory": "authoring/penn-station-1935/lighting/phase3/platform-corrected",
+      "recordSha256": "d83732d8bf93bd9df696f4e2aafc40e487cee558468220869fe07658f9c214a6",
+      "inputTransfer": "linear",
+      "sourceSha256": "b02a611d5c1d2eaf3921ea293fe4be2b4110b16e1cab75370d8c4b4605b9771b",
+      "originalLinear": {
+        "mean": 0.25997987389564514,
+        "minimum": 0,
+        "maximum": 0.7578125
+      },
+      "denoisedLinear": {
+        "mean": 0.25994929671287537,
+        "minimum": 0,
+        "maximum": 1.0390487909317017
+      },
+      "relativeMeanChange": -0.00011761365336326879,
+      "constant018Test": {
+        "before": 0.18,
+        "after": 0.18000005185604095,
+        "maximumError": 0,
+        "passed": true,
+        "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+      },
+      "retainedHdr": {
+        "file": "lighting-platform-sky-denoised-linear.hdr",
+        "sha256": "1c9cb0ff0b0b6a82769e55100e15fc593af9b627972bca0b4d6b0b1ceecaca91",
+        "decodedLinear": {
+          "mean": 0.258939653635025,
+          "minimum": 0,
+          "maximum": 1.03125
+        },
+        "meanQuantizationError": 0.0010097749764099717
+      },
+      "derivatives": [
+        {
+          "variant": "full",
+          "file": "lighting-platform-sky.webp",
+          "width": 2048,
+          "height": 2048,
+          "clippedRGBSamples": 1
+        },
+        {
+          "variant": "low",
+          "file": "lighting-platform-sky-low.webp",
+          "width": 512,
+          "height": 512,
+          "clippedRGBSamples": 0
+        }
+      ],
+      "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported."
+    }
+  ],
+  "uniqueSharedTextures": 54,
+  "decodedGlbBytes": 57510100,
+  "modelTextureAndLightingTransferBytes": 82489883
+}

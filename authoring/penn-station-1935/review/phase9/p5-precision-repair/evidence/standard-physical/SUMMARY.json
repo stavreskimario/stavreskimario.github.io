@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "status": "PASS: bounded decoded P5 full/fallback physical outcomes; curved-owner/local contact and native acceptance separate",
+  "fullModuleSha256": "4f89ca69195586ab2bd59e54ba194be13a35976330a7e1fb6336aa6b939a1466",
+  "lowModuleSha256": "bde735db9438af4e44e8eb80f74c332487c1c32517465e650c8ef9475f31b544",
+  "retainedBaseSha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269",
+  "variants": [
+    {
+      "variant": "full",
+      "arrivalRoutes": 96,
+      "arrivalSamples": 39696,
+      "galleryRoutes": 4,
+      "gallerySamples": 9084,
+      "retainedDepartureRoutes": 18,
+      "retainedDepartureSamples": 8442,
+      "departureRearGuards": 3,
+      "publicTreadSurfaces": 416,
+      "treadProbes": 3744,
+      "treadSupported": 3744,
+      "maximumTreadResidualM": 0.0003561794304900445,
+      "guardRays": 864,
+      "guardHits": 864,
+      "guardBodyProbes": 864,
+      "guardBodyStops": 864,
+      "maximumGuardSurfaceDisplacementFromUncurvedRawM": 0.0009117228044388526,
+      "supports": 47,
+      "foundationRays": 1175,
+      "foundationSupported": 1175,
+      "lowerCapCentres": 47,
+      "lowerBearingRays": 235,
+      "lowerBearingWithinEncoding": 230,
+      "upperBuiltGroups": 21,
+      "upperBearingRays": 525,
+      "upperWithinEncoding": 525,
+      "fixtureGroups": 22,
+      "encodedFixtureRays": 110,
+      "encodedFixturesWithin2mm": 110,
+      "maximumFixtureGapM": 0.0008156503051237607,
+      "maximumComponentBoundDifferenceM": 0.0008229731742090962,
+      "sourceOnlyFixtureThresholdM": 2e-05,
+      "sourceOnlyFixtureFailures": 80,
+      "maximumSourceOnlyFixtureGapM": 0.0008156503051237607,
+      "sourceOnlyDiagnosticQualification": "Unchanged20\u00b5m raw-source diagnostic is preserved as failed on encoded\u22480.816mm displacement; independent existing2mmencoded fixture gate passes110actualrays.",
+      "failures": []
+    },
+    {
+      "variant": "low",
+      "arrivalRoutes": 96,
+      "arrivalSamples": 39696,
+      "galleryRoutes": 4,
+      "gallerySamples": 9084,
+      "retainedDepartureRoutes": 18,
+      "retainedDepartureSamples": 8442,
+      "departureRearGuards": 3,
+      "publicTreadSurfaces": 416,
+      "treadProbes": 3744,
+      "treadSupported": 3744,
+      "maximumTreadResidualM": 0.0003561794304900445,
+      "guardRays": 864,
+      "guardHits": 864,
+      "guardBodyProbes": 864,
+      "guardBodyStops": 864,
+      "maximumGuardSurfaceDisplacementFromUncurvedRawM": 0.006135919828064829,
+      "supports": 47,
+      "foundationRays": 1175,
+      "foundationSupported": 1175,
+      "lowerCapCentres": 47,
+      "lowerBearingRays": 235,
+      "lowerBearingWithinEncoding": 230,
+      "upperBuiltGroups": 21,
+      "upperBearingRays": 525,
+      "upperWithinEncoding": 525,
+      "fixtureGroups": 22,
+      "encodedFixtureRays": 110,
+      "encodedFixturesWithin2mm": 110,
+      "maximumFixtureGapM": 0.0008156503051237607,
+      "maximumComponentBoundDifferenceM": 0.0008229731742090962,
+      "sourceOnlyFixtureThresholdM": 2e-05,
+      "sourceOnlyFixtureFailures": 80,
+      "maximumSourceOnlyFixtureGapM": 0.0008156503051237607,
+      "sourceOnlyDiagnosticQualification": "Unchanged20\u00b5m raw-source diagnostic is preserved as failed on encoded\u22480.816mm displacement; independent existing2mmencoded fixture gate passes110actualrays.",
+      "failures": []
+    }
+  ],
+  "unchangedRules": {
+    "stepUpM": 0.24,
+    "stepDownM": 0.35,
+    "bodyRadiusM": 0.32,
+    "bodyHeightM": 1.85,
+    "leadingFootM": 0.25,
+    "arrivalSamplePitchM": 0.025,
+    "encodedContactToleranceM": 0.002,
+    "newColliderExclusions": false
+  },
+  "allInputsAndHelpersRehashedAtEnd": true,
+  "limits": [
+    "Actualworld uses exactD06retainedbase+standalone encodedmodule arrays; final append/nativevisual acceptance remains withroot.",
+    "Fallback maximumguard profile displacement6.136mmis measuredagainsttheoriginaluncurvedsource; sampledguard rays andbody stops pass. Local curved-finial/profile/panel/contact audit is separate and decisive.",
+    "No native performance, finalhistoricalcompletion, engineeringcapacity or live/deployment claim."
+  ],
+  "receipts": {
+    "routes.json": {
+      "sha256": "f30224011ee421b4418c2496a764c94a8dffd6c3eb92cd54d3b2419c0b634024",
+      "bytes": 289910
+    },
+    "treads-guards.json": {
+      "sha256": "3b69bfa45384e624bd4ac560ae04f3409b92f36cb4c84e3c5b9155e6048c3138",
+      "bytes": 9855
+    },
+    "departures.json": {
+      "sha256": "4d802d8afd82e4fe1daa381ef5e4b34f9178e7dc31a4ab94cab620a4f9bbcade",
+      "bytes": 81671
+    },
+    "contacts.json": {
+      "sha256": "16d02b493189a2fb0fe3854d221e52c37d9de53af76bba0cfa161c1258aeb8b7",
+      "bytes": 104059
+    },
+    "input-helper-pins-before.json": {
+      "sha256": "8262d85cdebef81199c9aabe75d391294cb04781bafea8eb892c0825124c7c70",
+      "bytes": 6152
+    },
+    "input-helper-pins-after.json": {
+      "sha256": "b40f7b10f62aeb32c9918925a5e388e76687ecfb7e06babfd2a7878f4fd5d01d",
+      "bytes": 6055
+    },
+    "input-path-adaptation.patch": {
+      "sha256": "626db63368efb25cae542b027d2cb4a0e10b3dd71f23b898eab9b84e836a1c3b",
+      "bytes": 12296
+    }
+  },
+  "gpuOperations": 0,
+  "rootWrites": 0
+}

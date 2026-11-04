@@ -1,0 +1,69 @@
+{
+  "status": "PASS actual frozen Phase11 clean Metal bake; no walkthrough or full reconstruction claim",
+  "packetSha256": "354509cfbc679a5cb652a7e9f7a10099c2350f59a17ddd4471c950da365dcab8",
+  "started": "2026-11-03T22:43:19.115996+00:00",
+  "closed": "2026-11-03T22:49:02.271244+00:00",
+  "seconds": 343.15498423576355,
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "staticPrimaryPointLights": 0,
+  "staticNeighborPointLights": 10,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 1.2478710412979126,
+    "mean": 0.02483414299786091,
+    "coveredPixels": 9050870
+  },
+  "atlasSurfaceArea": 0.4786994457244873,
+  "allInputPinsStillExact": true,
+  "inputPinCount": 54,
+  "runtimePointLightsExcluded": true,
+  "actualPrebakeAcceptanceSha256": "3f84c28e0f5db07c26b7d7be7a96811d922bbc9e2fb7aaef4a923fd85da5b76e",
+  "metalBinaryArchivesDisabled": false,
+  "outputs": {
+    "lighting-concourse-gallery-finish-sky.png": {
+      "bytes": 9032674,
+      "sha256": "264a189f0bfaa29d2ff77e61b0e7616e84ed9936fd24c86717572c3f7f6d6f08"
+    },
+    "lighting-concourse-gallery-finish-sky.hdr": {
+      "bytes": 18796537,
+      "sha256": "f141aa600a82ab71bdd48b7500464321d952e254529118494c59ab5efcfcba2c"
+    },
+    "lighting-concourse-gallery-finish-ao.png": {
+      "bytes": 3056147,
+      "sha256": "707ddbd4d180b69b6ca8ba13a4cb8131f9be1ed1fd5c958b67fbae76047c90e9"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 14904,
+      "sha256": "3f84c28e0f5db07c26b7d7be7a96811d922bbc9e2fb7aaef4a923fd85da5b76e"
+    },
+    "model-concourse-gallery-finish.glb": {
+      "bytes": 3267136,
+      "sha256": "d6aef96f59b23bb36475886956c854a995100a9f1c6b65d35d2004e7672beacb"
+    },
+    "gallery-prebake-scene.blend": {
+      "bytes": 207444046,
+      "sha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3"
+    },
+    "prepared-scene-control.json": {
+      "bytes": 34064,
+      "sha256": "f244b2d7765bb037747fa298dccd52a54b5bfa6421a51370e720b1e1a8b96edf"
+    },
+    "lighting-concourse-gallery-finish.json": {
+      "bytes": 34356,
+      "sha256": "48b71a6412f03653705e20e84e9fa481e1ddf53c017c1165c17285d52cedc3c5"
+    },
+    "lighting-concourse-gallery-finish-sky-low.png": {
+      "bytes": 108530,
+      "sha256": "68019064ffd4f67ed199f5117a1a540eb85f0178492ffcd17c7246c38cd3e3a9"
+    }
+  },
+  "runnerSha256": "23eec43c3cf6ee091596628217af36797a1ca83d9ee9794265e3e4b83b4208a1"
+}

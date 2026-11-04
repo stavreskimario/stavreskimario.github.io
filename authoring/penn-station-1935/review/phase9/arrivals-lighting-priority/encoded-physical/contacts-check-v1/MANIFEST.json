@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "role": "CPU physical contact review only",
+  "files": {
+    "README.md": {
+      "bytes": 1385,
+      "sha256": "87c4fc5b991949412f55cd03d5fea40773ec18e2f2ea90bc554c71bae577e2b7"
+    },
+    "check-optimized-contacts.mjs": {
+      "bytes": 8700,
+      "sha256": "9fe6a67b08afdd5631d900909b20c71b4a0d5024a49d8cab6dbcb6049d2f0f86"
+    },
+    "contacts-run.log": {
+      "bytes": 333,
+      "sha256": "3551cc9e781bf2de99d5a142c746d6af3c9c2e43f141350df7b14142ea8fa58d"
+    },
+    "contacts-summary.json": {
+      "bytes": 8810,
+      "sha256": "6779c2fe2bb15d45d8de9636b3ec104f50b80ae411a3aca354e2218902844a2c"
+    },
+    "contacts.json": {
+      "bytes": 104095,
+      "sha256": "9eaa0b597a1e593c8f14bb00565298518f77e77d053640a7ede6b9e3dc77ef2f"
+    },
+    "dependency-pins.json": {
+      "bytes": 1329,
+      "sha256": "be07f5b535d4875434ce3696e842311ec0a1305c4b9e73e19db190d995e1eb0a"
+    },
+    "input-helper-pins-before.json": {
+      "bytes": 2625,
+      "sha256": "9cbfb661f30ed70d874573bbe677c7f1bd348bf063348e613442dab07efdf59d"
+    },
+    "path-only-adaptation.patch": {
+      "bytes": 10663,
+      "sha256": "219538255c3eaa27bad21b5c661bfc7cd09ea9f87a34d512af785b0dc8bb56fb"
+    }
+  }
+}

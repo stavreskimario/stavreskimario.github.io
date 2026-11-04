@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@gltf-transform/cli": "4.2.1",
+    "@react-three/drei": "10.7.6",
+    "@react-three/fiber": "9.4.0",
+    "esbuild": "0.25.11",
+    "meshoptimizer": "0.24.0",
+    "playwright": "1.56.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "three": "0.180.0",
+    "three-mesh-bvh": "0.8.3"
+  },
+  "name": "penn-station-1935-authoring",
+  "version": "0.4.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "overrides": {
+    "sharp": "0.35.5"
+  }
+}

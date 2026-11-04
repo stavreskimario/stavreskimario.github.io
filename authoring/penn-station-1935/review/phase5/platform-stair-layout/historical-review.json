@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "reviewDate": "2026-10-30",
+  "scope": "Read-only primary-source review of the eastern train-platform departure stairs; no geometry repair or publication of new reference images.",
+  "sourceState": "Current stone/material checkpoint 907958343d4b39656123e75a7adcfed722c6aed9; actual geometry measurements are separately recorded in work/stair-wall-audit/report.json.",
+  "primarySources": [
+    {
+      "id": "Gibbs1910",
+      "author": "George Gibbs",
+      "title": "Station Construction, Road, Track, Yard Equipment, Electric Traction, and Locomotives",
+      "publication": "Transactions of the American Society of Civil Engineers, volume69, paper1165,1910",
+      "url": "https://archive.org/details/transactionsofam69amer",
+      "pdfUrl": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "doi": "https://doi.org/10.1061/TACEAT.0002223",
+      "file": {
+        "bytes": 34864081,
+        "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+        "retainedOutsideRepository": "next-visual-references/asce69.pdf"
+      },
+      "controls": [
+        {
+          "printedPage": 242,
+          "pdfPageOneBased": 426,
+          "use": "Main departure concourse for outgoing passengers; narrower exit concourse below with stairs from both sides of each platform for incoming passengers."
+        },
+        {
+          "printedPage": 243,
+          "figure": 2,
+          "pdfPageOneBased": 427,
+          "use": "Nine eastern departure stair symbols, court-facing entry ends and wall-side circulation strip."
+        },
+        {
+          "printedPage": 244,
+          "figure": 3,
+          "pdfPageOneBased": 428,
+          "use": "Separate exit-level circulation and stair arrangement; does not certify the current identical lower doglegs."
+        },
+        {
+          "plate": "LXXXIV",
+          "figure": 1,
+          "pdfPageOneBased": 439,
+          "caption": "Concourse, Showing Stairways to Platforms.",
+          "use": "Photographic context for open main-floor stairs and supporting lower circulation."
+        },
+        {
+          "plate": "LXXXIV",
+          "figure": 2,
+          "pdfPageOneBased": 439,
+          "caption": "Platforms and Stairway to Exit Concourse.",
+          "use": "Platform-to-exit stair relationship, distinct from departure entry."
+        }
+      ]
+    },
+    {
+      "id": "LOC2016815390",
+      "creator": "Detroit Publishing Company",
+      "title": "Concourse, Penn. [Pennsylvania] Station, New York, N.Y.",
+      "url": "https://www.loc.gov/item/2016815390/",
+      "catalogDate": "between1905and1915",
+      "negativeNumber": "071935",
+      "digitalId": "LC-DIG-det-4a23718",
+      "imageUrl": "https://cdn.loc.gov/master/pnp/det/4a20000/4a23000/4a23700/4a23718u.tif",
+      "file": {
+        "bytes": 20683858,
+        "sha256": "faf4ebd37b75bd6e9eae61f459440a256352cb9218cebbba4e78e0f58d5799e0",
+        "retainedOutsideRepository": "phase5-stair-evidence/det-4a23718-original.tif"
+      },
+      "dimensionsPixels": [
+        5064,
+        4078
+      ],
+      "rightsCatalog": "No known restrictions on publication; retained only in research scratch for this audit.",
+      "warning": "071935 is a negative number, not a1935 exposure date. Opening-era photograph does not establish all1935 alterations.",
+      "use": "East ticket/baggage wall, paired departure gates/indicators on court-facing ends, handrails descending behind toward wallside."
+    },
+    {
+      "id": "NYPL58514805",
+      "creator": "Berenice Abbott",
+      "title": "Penn. Station, Interior",
+      "url": "https://old-digitalcollections.nypl.org/items/434b8be0-eb3c-013a-9d4c-0242ac110003",
+      "catalogDate": "1930\u20131939",
+      "infoUrl": "https://iiif.nypl.org/iiif/3/58514805/info.json",
+      "imageUrl": "https://iiif.nypl.org/iiif/3/58514805/full/!2560,2560/0/default.jpg",
+      "file": {
+        "bytes": 788567,
+        "sha256": "55346d478caa6b93dbc48ec59b1fc000d6dc35633468f713160053a91d1a6f79",
+        "retainedOutsideRepository": "phase5-stair-evidence/nypl-58514805-study.jpg"
+      },
+      "use": "Target-decade context for layered concourse circulation, fences, stairs and bridge interfaces; not used to measure the eastern wall setback.",
+      "warning": "This item does not justify assigning14July1936 or certifying every east departure stair dimension."
+    }
+  ],
+  "registration": {
+    "method": "Manual edge reading in a direct pdftoppm raster of Gibbs figure2; no perspective correction or photogrammetric metre extraction.",
+    "render": {
+      "bytes": 1873256,
+      "sha256": "772432370193ec2dd7332571cb3636b4a73f82e3638bbadff1d55aa4ba0bb504",
+      "retainedOutsideRepository": "phase5-stair-evidence/gibbs-243-full-4000.png"
+    },
+    "renderDimensionsPixels": [
+      2462,
+      4000
+    ],
+    "crop": {
+      "bytes": 703884,
+      "sha256": "0f6146c65d60d23853c09169b25a8404a99b45c92798d95abdced2a8b8c6d82a",
+      "retainedOutsideRepository": "phase5-stair-evidence/gibbs-243-concourse.png"
+    },
+    "cropRectangleInFullPixels": {
+      "left": 100,
+      "top": 700,
+      "width": 2300,
+      "height": 1100
+    },
+    "orientation": {
+      "imageTop": "west / Eighth Avenue",
+      "imageBottom": "east / Seventh Avenue",
+      "imageLeft": "south /31st Street",
+      "imageRight": "north /33rd Street"
+    },
+    "wallsideStairEndCropYRange": [
+      813,
+      817
+    ],
+    "ordinaryCourtFacingMasonryFaceCropYRange": [
+      840,
+      846
+    ],
+    "estimatedGapPixelsRange": [
+      23,
+      33
+    ],
+    "scaleControl": {
+      "basis": "Waiting-room north\u2013south314ft4 room extent (95.8088m), distinguished from277ft clear floor and320ft concourse frame. Existing plan243 room-edge control519..1514 in2116px working raster is consistent with approximately604..1762 in2462px direct render.",
+      "roomExtentMetres": 95.8088,
+      "approximatelyFullImageXRange": [
+        604,
+        1762
+      ],
+      "approximatelySpanPixels": 1158,
+      "metresPerPixel": 0.0827364421416235
+    },
+    "computedApproximateMetresRange": [
+      1.9029381692573404,
+      2.730302590673575
+    ],
+    "reportableConclusion": "Approximately2\u20133m strip away from projecting piers; preliminary raster interpretation only, not a printed dimension or construction-ready target.",
+    "uncertainty": [
+      "Small schematic stair symbols, blurred scan edges, wall piers and unknown railing thickness limit precision.",
+      "Scale assumes locally similar horizontal and vertical scan scale; no surveyed E\u2013W stair dimension was found.",
+      "Gate/indicator courtward entry is a full flight farther west than the wallside aperture edge; do not confuse entry setback with rear strip."
+    ],
+    "annotatedStudy": {
+      "bytes": 273058,
+      "sha256": "32c2853e5f855419972bd261722363ed6c8b5ae6b4c2fe65227a1ce90d62fd77",
+      "retainedOutsideRepository": "phase5-stair-evidence/gibbs-edge-registration.png"
+    }
+  },
+  "findings": {
+    "supportedOpeningEra": [
+      "Nine eastern departure openings align along the east/subwaiting-room side.",
+      "Combined plan and original photo place the paired departure gates at courtward/west ends, with top flights descending east toward wallside.",
+      "Main departure and lower exit circulation are distinct in Gibbs242\u2013244."
+    ],
+    "currentModelDifference": "Decoded current top flights begin high on east/wallsideX\u221242.2563 and descend west toX\u221247.9563. This is opposite the primary plan/photo reading; current1.12519m ordinary stone-face clearance is an authored value, not historically verified.",
+    "inferredOrUnverified": [
+      "Exact metre setback, stair widths, riser counts, flight runs and receiving landings.",
+      "Current repeated lower doglegs and complete individual platform-number mapping.",
+      "Retention of every opening-era detail unchanged in1935.",
+      "Peripheral routes to heads1/2 beyond320ft glazed court need separate plan tracing."
+    ],
+    "recommendedScope": "Correct direction only through coordinated plan registration of gates, all flights, slab voids, fences, landings and walking supports. Do not translate or mirror tread geometry alone."
+  },
+  "repoDraftReview": {
+    "path": "penn-station-1935/model/platform-stair-audit.md",
+    "result": "No material historical-claim blocker found. The draft correctly qualifies the raster strip estimate, opening-era photograph, lower doglegs and1935 uncertainty. No repo edits made."
+  },
+  "originalReceiptSha256": "a0a88ede55a16eb212c7587efcabcd045fc60d35df8ccd219225a886cc0d570d"
+}

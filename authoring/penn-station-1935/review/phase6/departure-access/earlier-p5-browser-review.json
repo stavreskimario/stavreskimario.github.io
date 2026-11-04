@@ -1,0 +1,235 @@
+{
+  "scope": "Earlier camera-only initial-preset harness with actual W/S walking, normal six-zone shaders/materials. Not final production bundle, deployment, regular UI preset, FPS benchmark or complete circulation acceptance.",
+  "original": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/browser-v4/report.json",
+    "sha256": "c11ae12298f6871a25107aa9ff555302346af85b82321b384a9f3fa81a67db35",
+    "bytes": 331797
+  },
+  "created": "2026-10-30T03:58:25.919Z",
+  "sourceAppSha256": "4363255210719ffbde4d972832b85d5aba5c870f1fdca0dbf41cbc46aa6a8dc2",
+  "diagnosticBundleSha256": "928f086dd4ced3cff38127e463c241902967a6305315da3e5a551c47fdbe2caf",
+  "browser": "156.0.8078.74",
+  "poses": {
+    "head": {
+      "eye": [
+        -53,
+        -2.5872,
+        17
+      ],
+      "target": [
+        -43,
+        -5,
+        13.32787
+      ]
+    },
+    "bottom": {
+      "eye": [
+        -29.5,
+        -10.305625,
+        13.32787
+      ],
+      "target": [
+        -43,
+        -5,
+        13.32787
+      ]
+    },
+    "overview": {
+      "eye": [
+        -62,
+        2.3,
+        32
+      ],
+      "target": [
+        -44,
+        4,
+        -6
+      ]
+    }
+  },
+  "roundTrip": {
+    "down": {
+      "camera": {
+        "position": [
+          -29.48961482620613,
+          -10.302399884544071,
+          13.32787
+        ],
+        "quaternion": [
+          0,
+          -0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "fov": 50
+      },
+      "floorWorld": -11.982399991334407,
+      "mode": "walk",
+      "loading": false,
+      "error": "",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "64950256-42c6-4217-8250-097087c9f836",
+          "visible": true,
+          "meshes": 11
+        },
+        {
+          "name": "waiting",
+          "id": "97beedfa-0f95-47a4-9a2e-27f6d41c0ab9",
+          "visible": true,
+          "meshes": 19
+        },
+        {
+          "name": "concourse",
+          "id": "1f165fe0-a9ca-44f8-bba8-1ca85e5faa1a",
+          "visible": true,
+          "meshes": 20
+        },
+        {
+          "name": "context",
+          "id": "c3c1c8fe-72c7-4bea-9e64-32101db7b64b",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "fcfe4021-cad4-4e59-9e14-06b7b2cad6c7",
+          "visible": true,
+          "meshes": 17
+        },
+        {
+          "name": "trains",
+          "id": "2fbfac5c-9595-4eb1-8162-7afd43d05516",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    },
+    "back": {
+      "camera": {
+        "position": [
+          -52.066289320139155,
+          -2.5871999224621796,
+          13.32787
+        ],
+        "quaternion": [
+          0,
+          -0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "fov": 50
+      },
+      "floorWorld": -4.26719992246196,
+      "mode": "walk",
+      "loading": false,
+      "error": "",
+      "zones": [
+        {
+          "name": "exterior",
+          "id": "64950256-42c6-4217-8250-097087c9f836",
+          "visible": true,
+          "meshes": 11
+        },
+        {
+          "name": "waiting",
+          "id": "97beedfa-0f95-47a4-9a2e-27f6d41c0ab9",
+          "visible": true,
+          "meshes": 19
+        },
+        {
+          "name": "concourse",
+          "id": "1f165fe0-a9ca-44f8-bba8-1ca85e5faa1a",
+          "visible": true,
+          "meshes": 20
+        },
+        {
+          "name": "context",
+          "id": "c3c1c8fe-72c7-4bea-9e64-32101db7b64b",
+          "visible": true,
+          "meshes": 37
+        },
+        {
+          "name": "platform",
+          "id": "fcfe4021-cad4-4e59-9e14-06b7b2cad6c7",
+          "visible": true,
+          "meshes": 17
+        },
+        {
+          "name": "trains",
+          "id": "2fbfac5c-9595-4eb1-8162-7afd43d05516",
+          "visible": true,
+          "meshes": 16
+        }
+      ]
+    }
+  },
+  "actualSixZoneTransports": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "bytes": 161587,
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz",
+      "bytes": 2711634,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/runtime-v4/model-concourse.glb.gz",
+      "bytes": 4453491,
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz",
+      "bytes": 8274157,
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277"
+    }
+  ],
+  "errorCounts": {
+    "pageErrors": 0,
+    "serverErrors": 0,
+    "consoleErrors": 3,
+    "blockedExternalRequests": 3,
+    "requestFailures": 47,
+    "requestFailureReasons": {
+      "net::ERR_BLOCKED_BY_CLIENT.Inspector": 3,
+      "net::ERR_ABORTED": 44
+    }
+  },
+  "errorQualification": "All3console errors match intentionally blocked external Google Fonts; request-failure list also retains44ERR_ABORTED entries across harness page loads. Counts are not silently treated as zero or final production acceptance.",
+  "reportingLimit": "Earlier source predates final floor-contact and synchronous UI update wiring. Parent owns subsequent final bundle/browser/live evidence.",
+  "captureFiles": [
+    {
+      "workPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/browser-v4/bottom.png",
+      "bytes": 851370,
+      "sha256": "26a6836b613324d96090c11fc58d0a50e406f186e98d371fa7b03a82561bf3f1"
+    },
+    {
+      "workPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/browser-v4/head.png",
+      "bytes": 684554,
+      "sha256": "ee4337062ec879c4900f855a6e8235934f20cee93f3820ad054d05af958c8b25"
+    },
+    {
+      "workPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/browser-v4/overview.png",
+      "bytes": 1578813,
+      "sha256": "1e21b0de15153596ad77e30470280bc04500bb85ca83f55459145ac573db2ace"
+    },
+    {
+      "workPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/browser-v4/walk-platform.png",
+      "bytes": 637103,
+      "sha256": "f0288d614c20fe15932835510e51568e56da4787d790283c2138015b9cebf275"
+    }
+  ]
+}

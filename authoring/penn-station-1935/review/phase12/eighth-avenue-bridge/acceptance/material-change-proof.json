@@ -1,0 +1,67 @@
+{
+  "status": "PASS material-only dielectric coating v4; allsourcegeometry/transforms/normals/UV/GNexact",
+  "sourceBlend": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.blend",
+    "sha256": "6df74c29b3aedfa4a4ae01e2d23e47caa5c4ff5456a0593c01b1e5dac577ddcf"
+  },
+  "sourceGlb": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.glb",
+    "sha256": "5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54"
+  },
+  "materialIndex": 0,
+  "materialName": "PaintedStructuralIronEighthAvenueBridge",
+  "before": {
+    "baseColor": [
+      0.07500000298023224,
+      0.08299999684095383,
+      0.07800000160932541,
+      1.0
+    ],
+    "metallic": 0.7200000286102295,
+    "roughness": 0.6399999856948853,
+    "diffuse": [
+      0.07500000298023224,
+      0.08299999684095383,
+      0.07800000160932541,
+      1.0
+    ]
+  },
+  "after": {
+    "baseColor": [
+      0.18000000715255737,
+      0.1899999976158142,
+      0.17000000178813934,
+      1.0
+    ],
+    "metallic": 0.0,
+    "roughness": 0.6399999856948853,
+    "diffuse": [
+      0.18000000715255737,
+      0.1899999976158142,
+      0.17000000178813934,
+      1.0
+    ]
+  },
+  "all7SourceObjectGeometryAndGNStatesExact": true,
+  "allOtherBlenderMaterialsExact": true,
+  "originalBINExact": true,
+  "originalBinarySha256": "8f4090a6afe3fb72719faaf558eaf08c55ae7bf3233cce726ea1d0268f13a6e0",
+  "originalBinaryBytes": 574176,
+  "allJsonExceptOwnedMaterialExact": true,
+  "roughnessExact": true,
+  "rawNotGeometryReexported": true,
+  "qualification": "Painted steel represented asdielectriccoating:linearbase(.18,.19,.17),metallic0,roughnessretained.64. Hue/roughness areappearanceinterpretation, nothistoricsample. No geometry/light/transport/navchange.",
+  "sourceStateHash": "68be7cf4c1a29519a6a1236075d7d603b92458f4ddce133d034ab892ffff1335",
+  "outputs": {
+    "bridge-bay.blend": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.blend",
+      "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f",
+      "bytes": 123416
+    },
+    "bridge-bay.glb": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.glb",
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+      "bytes": 585436
+    }
+  }
+}

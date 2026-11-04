@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "PASS: independent v12 source, physical and transport contracts",
+  "candidateBlendSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+  "rawModuleSha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+  "originalSourceSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "receipts": {
+    "physical": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/v12-physical-v2/connected-physical-gates.json",
+      "sha256": "e65426c8b4f88d75c0507fc06b3c93c557b8e9ca99285e4c57911e45df2f36d6",
+      "bytes": 853746
+    },
+    "source": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/v12-source/source-ownership.json",
+      "sha256": "cc6ba801f45f5d1c1e4975b8692e3598548c37b3db438141ba1b27690e0df665",
+      "bytes": 30777
+    },
+    "export": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade-independent-v1/v12-export-contract.json",
+      "sha256": "7abd2126be0a1bdf27b5e9a360ba123efd9e082b77e3b9d313d1e56de38ac803",
+      "bytes": 5132
+    }
+  },
+  "counts": {
+    "routeFloorSamples": 21570,
+    "roofSamples": 564,
+    "endSeamRays": 160,
+    "portalRays": 105,
+    "IonicPedestalSamples": 200,
+    "IonicUpperSamples": 72,
+    "sideFloorSamples": 180,
+    "sourceCourtDaylightRays": 40,
+    "upperGlassRays": 56,
+    "lunetteShoulders": 28,
+    "ionicVerticalCapContacts": 80,
+    "qualifiedInnerSpanPoints": 18,
+    "exactInnerEdgeFacePairsBelowBevel": 54,
+    "actualNewSideFloorSamples": 180
+  },
+  "preserved": {
+    "originalObjectsExact": 11269,
+    "entirePublicFloorMeshesExact": 9,
+    "mainArchJambsAnd28TreadsExact": 31,
+    "outsidePorticoFacesExact": 33464,
+    "originalMaterialDatablocksExact": 51,
+    "independentNewMaterialsAndTrees": 13
+  },
+  "negativeControl": {
+    "v11SlitMisses": 20,
+    "v12SameSlitMisses": 0,
+    "oldBevelHarnessIssue": "At Y\u00b16.99 original top bevel is exactly Z\u2212.01. The revised gate tests flat paving at \u00b16.95 and both true original/new contact faces at \u00b17 below bevel; no geometry or acceptance tolerance changed."
+  },
+  "qualifications": [
+    "The vestibule inner 0.75 m of each side slab spans between existing central paving and the actual outer footing. Both interfaces were probed; no new foundation was introduced and member capacity/original support detailing is not certified.",
+    "The source photograph provides opening-era evidence with documented dimensional uncertainty; 1935 tenant/ornament inventory is not verified."
+  ],
+  "remainingGates": [
+    "Baked and encoded surface normals/contacts/metadata",
+    "Native browser camera/collision/lighting and real-frame review",
+    "Final runtime and asset provenance validation"
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "status": "FROZEN PASS actual normal-preserved v4 gallery source/raw/encoded/mounted geometry, existing-base preservation and physical routes",
+  "candidate": "candidate-finish-v2",
+  "acceptedSourceSha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+  "sourceMeshOwners": 103,
+  "actualOrientedTriangles": 2930,
+  "sourceToRaw": {
+    "maximumPositionComponentDriftM": 7.62939453125e-06,
+    "positionBoundM": 2e-05,
+    "maximumNormalAngleDegrees": 0.02856879347855923,
+    "maximumNormalComponentDriftMeasured": 0.0004203691319709657,
+    "maximumNormalAngleBoundDegrees": 0.5,
+    "minimumNormalDot": 0.9999998756892949,
+    "maximumUv0ComponentDrift": 0,
+    "normalCodecBoundSource": {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/gallery-lighting-v1/source/arcade_corner_normals.py",
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567",
+      "minimumRestoredDot": 0.9999619230641713,
+      "maximumAngleDegrees": 0.5
+    }
+  },
+  "packingAndMounting": {
+    "all4StagesExactZeroAdditionalPositionNormalUV0LightingUV1Drift": true,
+    "cases": [
+      {
+        "label": "full raw baked\u2192encoded module lossless pack",
+        "status": "PASS",
+        "trianglesBefore": 2930,
+        "trianglesAfter": 2930,
+        "matched": 2930,
+        "exactOrientedCorners": 2930,
+        "maxPositionComponentDriftM": 0,
+        "maxNormalComponentDrift": 0,
+        "maxNormalAngleDegrees": 0,
+        "minimumNormalDot": 1,
+        "maxUv0ComponentDrift": 0,
+        "maxLightingUv1ComponentDrift": 0,
+        "unmatched": 0,
+        "largestCases": [],
+        "failures": [],
+        "positionBoundM": 2e-05,
+        "normalAngleBoundDegrees": 0.5,
+        "minimumNormalDotBound": 0.9999619230641713,
+        "normalComponentDriftMeasuredOnly": true,
+        "uvComponentBound": 2e-06
+      },
+      {
+        "label": "full encoded module\u2192actual mounted",
+        "status": "PASS",
+        "trianglesBefore": 2930,
+        "trianglesAfter": 2930,
+        "matched": 2930,
+        "exactOrientedCorners": 2930,
+        "maxPositionComponentDriftM": 0,
+        "maxNormalComponentDrift": 0,
+        "maxNormalAngleDegrees": 0,
+        "minimumNormalDot": 1,
+        "maxUv0ComponentDrift": 0,
+        "maxLightingUv1ComponentDrift": 0,
+        "unmatched": 0,
+        "largestCases": [],
+        "failures": [],
+        "positionBoundM": 2e-05,
+        "normalAngleBoundDegrees": 0.5,
+        "minimumNormalDotBound": 0.9999619230641713,
+        "normalComponentDriftMeasuredOnly": true,
+        "uvComponentBound": 2e-06
+      },
+      {
+        "label": "low raw baked\u2192encoded module lossless pack",
+        "status": "PASS",
+        "trianglesBefore": 2930,
+        "trianglesAfter": 2930,
+        "matched": 2930,
+        "exactOrientedCorners": 2930,
+        "maxPositionComponentDriftM": 0,
+        "maxNormalComponentDrift": 0,
+        "maxNormalAngleDegrees": 0,
+        "minimumNormalDot": 1,
+        "maxUv0ComponentDrift": 0,
+        "maxLightingUv1ComponentDrift": 0,
+        "unmatched": 0,
+        "largestCases": [],
+        "failures": [],
+        "positionBoundM": 2e-05,
+        "normalAngleBoundDegrees": 0.5,
+        "minimumNormalDotBound": 0.9999619230641713,
+        "normalComponentDriftMeasuredOnly": true,
+        "uvComponentBound": 2e-06
+      },
+      {
+        "label": "low encoded module\u2192actual mounted",
+        "status": "PASS",
+        "trianglesBefore": 2930,
+        "trianglesAfter": 2930,
+        "matched": 2930,
+        "exactOrientedCorners": 2930,
+        "maxPositionComponentDriftM": 0,
+        "maxNormalComponentDrift": 0,
+        "maxNormalAngleDegrees": 0,
+        "minimumNormalDot": 1,
+        "maxUv0ComponentDrift": 0,
+        "maxLightingUv1ComponentDrift": 0,
+        "unmatched": 0,
+        "largestCases": [],
+        "failures": [],
+        "positionBoundM": 2e-05,
+        "normalAngleBoundDegrees": 0.5,
+        "minimumNormalDotBound": 0.9999619230641713,
+        "normalComponentDriftMeasuredOnly": true,
+        "uvComponentBound": 2e-06
+      }
+    ]
+  },
+  "glyphOutwardNormals": [
+    {
+      "stage": "accepted",
+      "side": "south",
+      "triangles": 463,
+      "minimumExpectedOutwardNormalDot": 0.9999999999999909
+    },
+    {
+      "stage": "accepted",
+      "side": "north",
+      "triangles": 463,
+      "minimumExpectedOutwardNormalDot": 0.99999999999999
+    },
+    {
+      "stage": "raw",
+      "side": "south",
+      "triangles": 463,
+      "minimumExpectedOutwardNormalDot": 0.9999999999999543
+    },
+    {
+      "stage": "raw",
+      "side": "north",
+      "triangles": 463,
+      "minimumExpectedOutwardNormalDot": 0.99999999999999
+    }
+  ],
+  "basePreservation": [
+    {
+      "quality": "full",
+      "originalBinPrefixBytes": 24259884,
+      "originalBinPrefixExact": true,
+      "originalJsonGeometryArrayPrefixesExact": true,
+      "oldMaterialChanges": [
+        {
+          "index": 26,
+          "name": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ]
+    },
+    {
+      "quality": "low",
+      "originalBinPrefixBytes": 20991008,
+      "originalBinPrefixExact": true,
+      "originalJsonGeometryArrayPrefixesExact": true,
+      "oldMaterialChanges": [
+        {
+          "index": 26,
+          "name": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ]
+    }
+  ],
+  "physicalChecks": [
+    {
+      "quality": "full",
+      "kind": "gallery stair/landing existing floor and new body/head clearance",
+      "samples": 1584,
+      "status": "PASS actual existing stair-floor support with no new body/head intrusion"
+    },
+    {
+      "quality": "full",
+      "direction": "forward",
+      "kind": "complete existing gallery to33rdStreet exit",
+      "samples": 1563,
+      "status": "PASS targeted one-direction actual geometry loop",
+      "minimumHeadroomM": 1.885793149471283
+    },
+    {
+      "quality": "full",
+      "direction": "reverse",
+      "kind": "complete existing gallery to33rdStreet exit",
+      "samples": 1563,
+      "status": "PASS targeted one-direction actual geometry loop",
+      "minimumHeadroomM": 1.885793149471283
+    },
+    {
+      "quality": "low",
+      "kind": "gallery stair/landing existing floor and new body/head clearance",
+      "samples": 1584,
+      "status": "PASS actual existing stair-floor support with no new body/head intrusion"
+    },
+    {
+      "quality": "low",
+      "direction": "forward",
+      "kind": "complete existing gallery to33rdStreet exit",
+      "samples": 1563,
+      "status": "PASS targeted one-direction actual geometry loop",
+      "minimumHeadroomM": 1.885793149471283
+    },
+    {
+      "quality": "low",
+      "direction": "reverse",
+      "kind": "complete existing gallery to33rdStreet exit",
+      "samples": 1563,
+      "status": "PASS targeted one-direction actual geometry loop",
+      "minimumHeadroomM": 1.885793149471283
+    }
+  ],
+  "totalGalleryStairSamples": 3168,
+  "totalExitSamples": 6252,
+  "totalPhysicalSamples": 9420,
+  "roadCurbPrismStatus": "PASS actual encoded module and assembled wall family clear road/curb prisms",
+  "frozenInputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-addon.glb",
+      "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+      "bytes": 270372,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/model-concourse-gallery-finish.glb",
+      "sha256": "d6aef96f59b23bb36475886956c854a995100a9f1c6b65d35d2004e7672beacb",
+      "bytes": 3267136,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package/model-concourse.glb",
+      "sha256": "0224be1d02d910e0edd056434bef093e1b017cccd4d07cf18032abedb570d282",
+      "bytes": 123980,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/candidate-finish-v2/model-concourse.glb.gz",
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "bytes": 6959153,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-concourse.glb.gz",
+      "sha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
+      "bytes": 6896629,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package/model-concourse-low.glb",
+      "sha256": "3f8d1856437eb9e09e0d4d7e19e2228996cf25adb973340ad4046cd831469846",
+      "bytes": 123980,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/candidate-finish-v2/model-concourse-low.glb.gz",
+      "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "bytes": 6648546,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-concourse-low.glb.gz",
+      "sha256": "63b977ed4db677f7fe3ba267dbf0520b6e0bd619053ce187fde84c7b6eb62b21",
+      "bytes": 6586218,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104",
+      "bytes": 506131,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418,
+      "rehashedExactAfterAllCases": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz",
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263",
+      "bytes": 686636,
+      "rehashedExactAfterAllCases": true
+    }
+  ],
+  "rootPromotedAssetIdentity": [
+    {
+      "quality": "full",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "matchesPhysicallyCheckedCandidate": true
+    },
+    {
+      "quality": "low",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "matchesPhysicallyCheckedCandidate": true
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-mounted-geometry.json",
+      "sha256": "80e06360bf6c3b48b6b5e32c87ac51958100fbb17abf10b2cd6ce1375d51fdbd",
+      "bytes": 7874
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-module-acceptance.json",
+      "sha256": "c19a9e9a8106d062f86c8b3db6de937fb6d99805e20e1ca905f877c3f0515d57",
+      "bytes": 4239
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-road-prisms.json",
+      "sha256": "72362c003afe8b4fa8a1c407e7a3571de1fb5972648f81ba7cba4a0adb67cb4f",
+      "bytes": 4847
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-stairs-full.json",
+      "sha256": "c4968f11abcd6e5aec4005277a163f3e1d8c6fab7c3e5471c1ba7b770f9c5ab6",
+      "bytes": 398612
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-exit-full-forward/route-check.json",
+      "sha256": "0dad47d0c7ccee869028e296ce9faec6a3b4e24a4e5c3f98f95e7dc265831cd7",
+      "bytes": 331921
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-exit-full-reverse/route-check.json",
+      "sha256": "d445cfb4458c2e85b844898e0ec63d050a2b2eb277017ae54c52a5c6241b1222",
+      "bytes": 332010
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-stairs-low.json",
+      "sha256": "433fba8bdf45655f8c8afd4f216d5dc3fb32d367de4eaaf57bc95ef91aeb3fe5",
+      "bytes": 398620
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-exit-low-forward/route-check.json",
+      "sha256": "603291664059bd9d153aa43378669904426e5165dff692a392b8d2738474c791",
+      "bytes": 331932
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-v4-exit-low-reverse/route-check.json",
+      "sha256": "408ac3fa4bd5e7c5b0bc2966418689b57816f71bd8d77c71772b2300b41256be",
+      "bytes": 332021
+    }
+  ],
+  "priorRejectedOutputPreserved": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/HOLD-ACCEPTANCE-v1.json",
+    "sha256": "5fdb967ce67bd2ad20c7ffc263e8123cab9c6eeada47c830232109f11eec250c",
+    "status": "HOLD retained unchanged, notaccepted"
+  },
+  "qualification": [
+    "Source\u2192Blender normal codec bounded by existing half-degree rule; measured0.02857degree is not claimed perfect zero.",
+    "Raw\u2192Meshopt\u2192actualmounted P/N/materialUV0/lightingUV1 corner data exact0additionaldrift.",
+    "First wall-fixed architecture BIN/geometry prefixes exact; only registered ordinary-gallery floor material metadata changed.",
+    "Actual native WASD walkthrough remains skipped at userrequest; theseare targeted decoded physical checks.",
+    "Publication/staticrender/assetvalidation ownedbyroot; no root edits, GPU, browser orpublishing performed by this acceptance."
+  ]
+}

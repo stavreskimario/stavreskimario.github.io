@@ -1,0 +1,220 @@
+{
+  "status": "PASS actual imported source lamp/guard/template/material/selection/UV checks before GPU transport",
+  "staticPointLights": 10,
+  "primaryStaticPointLights": 0,
+  "registeredNeighborStaticPointLights": 10,
+  "primaryAtlasScope": {
+    "sourceMeshes": 27,
+    "opaquePrimaryMeshesBeforeJoin": 27,
+    "unbakedLetteringMeshes": 0,
+    "primaryAtlasSourceNames": [
+      "Buried granite and concrete bearings row B3",
+      "Bay2 longitudinal girders and web connection returns",
+      "Bay2 embedded4intransverse floorplate beams",
+      "Bridge permanent row B4 built-up Icolumns",
+      "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+      "Permanent bent4 deep face-connected girders",
+      "Permanent bent1 deep face-connected girders",
+      "Bay4 longitudinal girders and web connection returns",
+      "Bay4 embedded4intransverse floorplate beams",
+      "Bridge permanent row B0 built-up Icolumns",
+      "Buried granite and concrete bearings row B1",
+      "Bay1 longitudinal girders and web connection returns",
+      "Bridge permanent row B3 built-up Icolumns",
+      "Permanent bent3 deep face-connected girders",
+      "Fresh true receiver Railway smooth concrete track base",
+      "Fresh true receiver RailwayPlatformStippledGranolithicPhase9",
+      "Bridge permanent row B2 built-up Icolumns",
+      "Bay3 longitudinal girders and web connection returns",
+      "Bay3 embedded4intransverse floorplate beams",
+      "Buried granite and concrete bearings row B0",
+      "Buried granite and concrete bearings row B4",
+      "Permanent bent5 deep face-connected girders",
+      "Bay1 embedded4intransverse floorplate beams",
+      "Bridge permanent row B1 built-up Icolumns",
+      "Documented composite opaque roofplate and waterproof protective",
+      "Buried granite and concrete bearings row B2",
+      "Permanent bent2 deep face-connected girders"
+    ],
+    "unbakedSourceNames": [],
+    "classification": "Every accepted opaque enclosure structural and receiver owner receives the fresh independent atlas; coated structural metal is included."
+  },
+  "authoredNormalIntegrity": {
+    "schema": 1,
+    "scope": "arcade-enclosure authored corner normals",
+    "temporaryAttribute": "_PennArcadeWorldCornerNormal",
+    "sourceObjects": 27,
+    "sourceCorners": 76194,
+    "sourceNegativeHemisphereCorners": 0,
+    "sourceMinimumFaceAlignment": 0.5944152727193834,
+    "restoredCorners": 76194,
+    "minimumRestoredSourceNormalDot": 0.9999999955792012,
+    "maxEncodingAngleDegrees": 0.005387508980701692,
+    "maxAllowedEncodingAngleDegrees": 0.5,
+    "restoredNegativeHemisphereCorners": 0,
+    "restoredMinimumFaceAlignment": 0.5944059909112784,
+    "finiteUnitNormals": true,
+    "temporaryAttributeRemoved": true,
+    "status": "PASS"
+  },
+  "removedNorthGuardOwners": 24,
+  "sourceVisibility": [
+    {
+      "context": "current-concourse-without-primary-arrivals.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "retained-exterior-visible-occluder.glb",
+      "sourceVisibilityRule": "Doric column master \u2014 35ft",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Doric column master \u2014 35ft",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              4.267199993133545
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              14.935199737548828
+            ]
+          ],
+          "sourceStreet0Bounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              0.0
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              10.668000221252441
+            ]
+          ],
+          "expectedBakeFrameBounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              4.2672
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              14.93520022125244
+            ]
+          ],
+          "sourceToBakeFrameOffsetZ": 4.2672,
+          "boundErrorM": 4.837036122751215e-07,
+          "meshMaterialAndMatrixExact": true
+        }
+      ]
+    },
+    {
+      "context": "retained-main-visible-occluder-main0.glb",
+      "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Fluted Corinthian shaft master.001",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -100.0
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -84.37899780273438
+            ]
+          ],
+          "sourceStreet0Bounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -104.26719665527344
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -88.64619445800781
+            ]
+          ],
+          "expectedBakeFrameBounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -99.99999665527343
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -84.37899445800781
+            ]
+          ],
+          "sourceToBakeFrameOffsetZ": 4.2672,
+          "boundErrorM": 3.344726565046585e-06,
+          "meshMaterialAndMatrixExact": true
+        }
+      ]
+    },
+    {
+      "context": "formal-arcade-module.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "platform-retained-occluder.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "platform-section-module.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "model-trains.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "model-context.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "arrivals-without-north-research-guard.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "model-concourse-exits.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    }
+  ],
+  "occluderMaterialIntegrity": {
+    "status": "PASS",
+    "primaryMaterialGraphsExactSinceInitialImport": true,
+    "primaryMaterialGraphsPackedImagesAndPropertiesExact": true,
+    "primaryAndOccluderMeshPointerIntersection": 0,
+    "primaryAndOccluderMaterialPointerIntersection": 0,
+    "cachedContextMaterialGraphsExact": true,
+    "cacheQualification": "Accepted normal-correct Phase11 prepared context, before transport. Far-away arrivals-gallery floor retains its calibrated neutral mean before the later concrete micro-normal/roughness binding. Fresh platform receiver PBR is authored separately and preserved."
+  },
+  "atlasUvRange": [
+    0.0,
+    1.0
+  ]
+}

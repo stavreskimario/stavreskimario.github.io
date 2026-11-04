@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "status": "Exact corrected Phase11 source packet; encoding/light/browser/public acceptance separate",
+  "copiedInputs": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/candidate-v1/arrivals-exit-addon.blend",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/model/arrivals-exit-addon.blend",
+      "bytes": 16105468,
+      "sha256": "44f71d582425af027aabcd3f15dc6b07c55566e7df50d5a23bc2797a55e29c25",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/candidate-v1/construction.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/construction.json",
+      "bytes": 13860,
+      "sha256": "634b760a791ba4cbeb1f68bc2069e847cc3ee7f26ed0e33b623a69306577936a",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/route-v3.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/source/route-v3.json",
+      "bytes": 31250,
+      "sha256": "7b546fe1c9d9851749b0e438f8c085aba0740f024fc555d7204a172f1f758130",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/route_builder.py",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/source/route_builder.py",
+      "bytes": 14300,
+      "sha256": "4bd6cf995d95abc2e54fe04aea4a917a5ede8b129ffe0efd63c3de385f974623",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/escalator_pair.py",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/source/escalator_pair.py",
+      "bytes": 9447,
+      "sha256": "479d12c1368ab2aaa2001434631f1f6364f0cbc28fcbdbbd2ca3e1ed9611f6c9",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/wall-change.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/evidence/wall-change.json",
+      "bytes": 2132,
+      "sha256": "b27d578ece4a112dc9bb35b1b22c09d29918b88274ce5c97b6f49fdba22be099",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/diagnose-street-walls.mjs",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/source/diagnose-street-walls.mjs",
+      "bytes": 4673,
+      "sha256": "ac101db693192aaad1e604a415aea4ac626bdf7597c99ca1e387bd623e6226e9",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/validate-corrected-source.mjs",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/source/validate-corrected-source.mjs",
+      "bytes": 5918,
+      "sha256": "88d9199b5a770f204241e5b0cb5b29af630ea7c1517179674d328e8a056a8b31",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-raw-v1-SUMMARY.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/evidence/integrated-cpu-raw-v1-SUMMARY.json",
+      "bytes": 5144,
+      "sha256": "8794e22a28b787a7ae0f09d182ad0354531276771a9f5c8444e31dbb2c4c26d6",
+      "copiedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/street-wall-proof.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/evidence/street-wall-proof.json.gz",
+      "sourceBytes": 35812,
+      "sourceSha256": "cb56f0838dc5eaa6bd8898b8ed280fa69b4196a0a1c24e3d4ff62348269b7bb7",
+      "bytes": 3002,
+      "sha256": "f520da84695dc2cf274ab7e8fde975a0af8b06f200f7017ed53d877b73509a4f",
+      "decompressedByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/corrected-source-regression.json",
+      "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/evidence/corrected-source-regression.json.gz",
+      "sourceBytes": 9175,
+      "sourceSha256": "a9465eba0d45a7005dbf3a1c38fcf07dc82a6908798f964c0225b50c6fc658cc",
+      "bytes": 1324,
+      "sha256": "ce3f4917b46e144c4c0985734f9f9d8eedd77b63258b6aac09cbe9ceb3a024ba",
+      "decompressedByteExact": true
+    }
+  ],
+  "files": {
+    "phase10-addon-recovery.json": {
+      "bytes": 2711,
+      "sha256": "97313a9728dff4ceec7dd97300d0f1ae3824572d4b5d0b2bbd99f819fb4f095b"
+    },
+    "README.md": {
+      "bytes": 2315,
+      "sha256": "c24db486c23104f8f5ac628659dc31e9c18014e8ed537f757efb5d702f0dc8b8"
+    },
+    "restore-phase10-addon.py": {
+      "bytes": 1119,
+      "sha256": "8ec983bdcc51ef818e112096d8f2f878ba3af9f758b0ee8808e31deee3b872d0"
+    },
+    "material-dependencies-phase10-retained.json": {
+      "bytes": 5340,
+      "sha256": "5d4ba2b0df6964ad5f9d1dbebf3936dd63f3570690ceceda8be6959e30424eef"
+    },
+    "construction.json": {
+      "bytes": 13860,
+      "sha256": "634b760a791ba4cbeb1f68bc2069e847cc3ee7f26ed0e33b623a69306577936a"
+    },
+    "evidence/corrected-source-regression.json.gz": {
+      "bytes": 1324,
+      "sha256": "ce3f4917b46e144c4c0985734f9f9d8eedd77b63258b6aac09cbe9ceb3a024ba"
+    },
+    "evidence/street-wall-proof.json.gz": {
+      "bytes": 3002,
+      "sha256": "f520da84695dc2cf274ab7e8fde975a0af8b06f200f7017ed53d877b73509a4f"
+    },
+    "evidence/integrated-cpu-raw-v1-SUMMARY.json": {
+      "bytes": 5144,
+      "sha256": "8794e22a28b787a7ae0f09d182ad0354531276771a9f5c8444e31dbb2c4c26d6"
+    },
+    "evidence/wall-change.json": {
+      "bytes": 2132,
+      "sha256": "b27d578ece4a112dc9bb35b1b22c09d29918b88274ce5c97b6f49fdba22be099"
+    },
+    "source/escalator_pair.py": {
+      "bytes": 9447,
+      "sha256": "479d12c1368ab2aaa2001434631f1f6364f0cbc28fcbdbbd2ca3e1ed9611f6c9"
+    },
+    "source/diagnose-street-walls.mjs": {
+      "bytes": 4673,
+      "sha256": "ac101db693192aaad1e604a415aea4ac626bdf7597c99ca1e387bd623e6226e9"
+    },
+    "source/validate-corrected-source.mjs": {
+      "bytes": 5918,
+      "sha256": "88d9199b5a770f204241e5b0cb5b29af630ea7c1517179674d328e8a056a8b31"
+    },
+    "source/route_builder.py": {
+      "bytes": 14300,
+      "sha256": "4bd6cf995d95abc2e54fe04aea4a917a5ede8b129ffe0efd63c3de385f974623"
+    },
+    "source/route-v3.json": {
+      "bytes": 31250,
+      "sha256": "7b546fe1c9d9851749b0e438f8c085aba0740f024fc555d7204a172f1f758130"
+    },
+    "model/arrivals-exit-addon.blend": {
+      "bytes": 16105468,
+      "sha256": "44f71d582425af027aabcd3f15dc6b07c55566e7df50d5a23bc2797a55e29c25"
+    }
+  },
+  "canonicalCoreUnchanged": {
+    "repositoryPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+    "sha256Before": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "sha256After": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "unchanged": true
+  },
+  "supersededPhase10Addon": {
+    "repositoryPath": "authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+    "bytes": 16107186,
+    "sha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+    "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+    "gitBlob": "6d1f94105f772ceadbf8eab3f0fb181b63a62112",
+    "archiveCondition": "Only after the new Phase11 full editable Blender scene has been copied into the repository and byte-verified. This is a versioned Phase10 addon, not canonical core c4.",
+    "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+    "freshExternalCopySha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+    "immutableGitVerified": true,
+    "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend"
+  },
+  "noRuntimeChangesByThisPacketTask": true
+}

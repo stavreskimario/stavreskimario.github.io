@@ -1,0 +1,786 @@
+{
+  "schema": 1,
+  "status": "PASS: both actual native browser routes",
+  "selected": "A: original .035 material strength; better compression only",
+  "visualAssessment": "Fine-relief preservation improves source fidelity. At normal public walking views the visual change is subtle. Broad column smudging and stair softness remain; these are not declared fixed. B strength1.0 did not provide a useful visible benefit and is not selected.",
+  "limitations": [
+    "Lighting atlases and AO retain current UV allocation and sampling.",
+    "No new FPS, WebGPU or physical-mobile claim.",
+    "The wall-facing closeup hit the closed dark shop glazing and is not useful stone acceptance evidence.",
+    "Natural-input matching poses have small position differences and are not exact pixel comparisons."
+  ],
+  "runs": [
+    {
+      "variant": "A",
+      "reportStatus": "PASS: native normal material review and actual arrivals descent",
+      "productionBundle": {
+        "sha256": "6c59bc672fae8a04d657549b194b3bf9c2ba4889cbc79be226d3b85f1c602241",
+        "bytes": 1046065
+      },
+      "manifest": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/normal-candidates-v1/candidate-A/scene-manifest.json",
+        "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+      },
+      "phases": [
+        {
+          "label": "enter vestibule",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              106.98438785377691,
+              1.6782692252059062,
+              0
+            ],
+            "quaternion": [
+              -0.04592956121326889,
+              0.7056135453679702,
+              0.04592956121326888,
+              0.7056135453679703
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "arcade wall approach",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.06245326762831,
+              1.6782692252059062,
+              0
+            ],
+            "quaternion": [
+              -0.04592956121326889,
+              0.7056135453679702,
+              0.04592956121326888,
+              0.7056135453679703
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "near arcade stone",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.000424018014385,
+              1.6782692252059062,
+              4.752771143738549
+            ],
+            "quaternion": [
+              -0.00042253569816806685,
+              0.9978671287968124,
+              0.06495287972253441,
+              0.006491390154620747
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "return arcade axis",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.00028210632252,
+              1.6782692252059062,
+              0.040305358405891174
+            ],
+            "quaternion": [
+              -0.06495407413905231,
+              0.002348741902328054,
+              0.00015288363137599134,
+              0.9978854785449129
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "Ionic screen approach",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              38.44150532169429,
+              1.6782692252059062,
+              6.424106570979403e-05
+            ],
+            "quaternion": [
+              -0.04597242436565618,
+              0.7049549213127956,
+              0.045886722683258496,
+              0.7062715510313323
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "west gallery alignment",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -69.01970686295746,
+              -5.787227535211418,
+              28
+            ],
+            "quaternion": [
+              -0.04592959494087436,
+              -0.705613521339789,
+              -0.04592959208651276,
+              0.7056135651911722
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "actual stair head",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -68.99996348612149,
+              -5.787227535211418,
+              12.725125797621493
+            ],
+            "quaternion": [
+              -0.06495424064814309,
+              -0.0006412972446288323,
+              -4.174313552846869e-05,
+              0.9978880366139168
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "descend actual arrivals stair",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -82.45634204149684,
+              -10.305624796872696,
+              12.667878962119714
+            ],
+            "quaternion": [
+              -0.04602729226011312,
+              0.7041094038595739,
+              0.045831686504735784,
+              0.7071144831467174
+            ],
+            "fov": 50
+          }
+        }
+      ],
+      "captures": [
+        {
+          "name": "arcade-stone",
+          "camera": {
+            "position": [
+              60.000424018014385,
+              1.6782692252059062,
+              4.752771143738549
+            ],
+            "quaternion": [
+              -3.6753992587128643e-10,
+              0.9996875166571324,
+              -0.02499738066069139,
+              -1.4698543049528071e-08
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 95,
+            "triangles": 5928272,
+            "geometries": 153,
+            "textures": 77,
+            "exposure": 4.156497639402819,
+            "renderFrame": 2211,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-A-v1/arcade-stone.png",
+          "screenshotBytes": 226327,
+          "screenshotSha256": "a5d61b1c2c65bebc0317abca2b1471274c10f08f8283670b8ce4c789fb3fce0f"
+        },
+        {
+          "name": "ionic-screen",
+          "camera": {
+            "position": [
+              38.44150532169429,
+              1.6782692252059062,
+              6.424106570979403e-05
+            ],
+            "quaternion": [
+              0.07762499522687516,
+              0.7028330637092907,
+              -0.07762498812009491,
+              0.7028331280555824
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 252,
+            "triangles": 22927918,
+            "geometries": 153,
+            "textures": 77,
+            "exposure": 4.159857236062932,
+            "renderFrame": 3060,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-A-v1/ionic-screen.png",
+          "screenshotBytes": 1222989,
+          "screenshotSha256": "c667449b08f47821314760245c20c229967166c98ac9dc20cdf953ca1a352ff5"
+        },
+        {
+          "name": "arrivals-down",
+          "camera": {
+            "position": [
+              -68.99996348612149,
+              -5.787227535211418,
+              12.725125797621493
+            ],
+            "quaternion": [
+              -0.17494100425492082,
+              0.6851245565103452,
+              0.17494100939928423,
+              0.6851245363633841
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 165,
+            "triangles": 19053930,
+            "geometries": 153,
+            "textures": 80,
+            "exposure": 1.5641042039961424,
+            "renderFrame": 3699,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-A-v1/arrivals-down.png",
+          "screenshotBytes": 730354,
+          "screenshotSha256": "aa1d35e17ae71d6129253f6081d3bb941bd7ca3b035b51b2d3e615caa3f19a8e"
+        },
+        {
+          "name": "arrivals-up",
+          "camera": {
+            "position": [
+              -82.45634204149684,
+              -10.305624796872696,
+              12.667878962119714
+            ],
+            "quaternion": [
+              0.07762499053215417,
+              -0.7028331062162889,
+              0.07762499281481604,
+              0.7028330855485856
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 266,
+            "triangles": 23247770,
+            "geometries": 153,
+            "textures": 80,
+            "exposure": 4.153156406232613,
+            "renderFrame": 4135,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-A-v1/arrivals-up.png",
+          "screenshotBytes": 1131332,
+          "screenshotSha256": "9b87e09088177acd7872c435ba6879cd86d24fe3ea1857bfed93cd35a26cecf2"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "serverErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/sky.hdr?revision=9-connected-entrance-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/7004a2a65ab65ac2eede.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/363923bafe6efcb2994c.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/9d2a7d4d29e9eafe3e55.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:50025/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "allSixZonesRetained": true
+    },
+    {
+      "variant": "B",
+      "reportStatus": "PASS: native normal material review and actual arrivals descent",
+      "productionBundle": {
+        "sha256": "6c59bc672fae8a04d657549b194b3bf9c2ba4889cbc79be226d3b85f1c602241",
+        "bytes": 1046065
+      },
+      "manifest": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/normal-candidates-v1/candidate-B/scene-manifest.json",
+        "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+      },
+      "phases": [
+        {
+          "label": "enter vestibule",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              107.05760798470081,
+              1.6782692252059062,
+              0
+            ],
+            "quaternion": [
+              -0.04592956121326889,
+              0.7056135453679702,
+              0.04592956121326888,
+              0.7056135453679703
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "arcade wall approach",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.03035079622273,
+              1.678269225205906,
+              0
+            ],
+            "quaternion": [
+              -0.04592956121326889,
+              0.7056135453679702,
+              0.04592956121326888,
+              0.7056135453679703
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "near arcade stone",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.000109526127254,
+              1.678269225205906,
+              4.754989399812109
+            ],
+            "quaternion": [
+              -0.0002053515136705128,
+              0.9978832557462672,
+              0.06495392945328313,
+              0.0031548027772721273
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "return arcade axis",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              60.000109526127254,
+              1.6782692252059062,
+              -0.0010028091375693174
+            ],
+            "quaternion": [
+              -0.06495425405703804,
+              1.1496611961015575e-05,
+              7.483341542885388e-07,
+              0.997888242613952
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "Ionic screen approach",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              38.470734793515504,
+              1.678269225205906,
+              -0.0008725345276656077
+            ],
+            "quaternion": [
+              -0.0457565981531539,
+              0.7082612875475849,
+              0.046101939721849464,
+              0.7029558260949055
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "west gallery alignment",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -69.05906861686145,
+              -5.787227535211419,
+              28
+            ],
+            "quaternion": [
+              -0.04592959494087436,
+              -0.705613521339789,
+              -0.04592959208651276,
+              0.7056135651911722
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "actual stair head",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -68.99994669129691,
+              -5.787227535211418,
+              12.677223155872852
+            ],
+            "quaternion": [
+              -0.06495413355454158,
+              -0.00192220052874146,
+              -0.00012511932314723914,
+              0.9978863913414499
+            ],
+            "fov": 50
+          }
+        },
+        {
+          "label": "descend actual arrivals stair",
+          "status": "PASS",
+          "endCamera": {
+            "position": [
+              -82.45720632208025,
+              -10.305624797016316,
+              12.667830371937521
+            ],
+            "quaternion": [
+              -0.04594590526239402,
+              0.7053628578351402,
+              0.04591327596986915,
+              0.705864139665685
+            ],
+            "fov": 50
+          }
+        }
+      ],
+      "captures": [
+        {
+          "name": "arcade-stone",
+          "camera": {
+            "position": [
+              60.000109526127254,
+              1.678269225205906,
+              4.754989399812109
+            ],
+            "quaternion": [
+              -3.6753992587128643e-10,
+              0.9996875166571324,
+              -0.02499738066069139,
+              -1.4698543049528071e-08
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 95,
+            "triangles": 5928272,
+            "geometries": 153,
+            "textures": 77,
+            "exposure": 4.156940552370845,
+            "renderFrame": 2217,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-B-v1/arcade-stone.png",
+          "screenshotBytes": 226575,
+          "screenshotSha256": "b86ccb743b5a1ad640b511380ef0bf5aecd807bf2767e97872629ea51e6fc655"
+        },
+        {
+          "name": "ionic-screen",
+          "camera": {
+            "position": [
+              38.470734793515504,
+              1.678269225205906,
+              -0.0008725345276656077
+            ],
+            "quaternion": [
+              0.07762499522687515,
+              0.7028330637092908,
+              -0.07762498812009493,
+              0.7028331280555823
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 252,
+            "triangles": 22927918,
+            "geometries": 153,
+            "textures": 77,
+            "exposure": 4.159875290171679,
+            "renderFrame": 3053,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-B-v1/ionic-screen.png",
+          "screenshotBytes": 1223654,
+          "screenshotSha256": "0b1d6cd25ee9da6581057caa38f6b993dceebdec8f5c9b5cb4692dde51f41f00"
+        },
+        {
+          "name": "arrivals-down",
+          "camera": {
+            "position": [
+              -68.99994669129691,
+              -5.787227535211418,
+              12.677223155872852
+            ],
+            "quaternion": [
+              -0.17494100425492082,
+              0.6851245565103452,
+              0.17494100939928423,
+              0.6851245363633841
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 165,
+            "triangles": 19053930,
+            "geometries": 153,
+            "textures": 80,
+            "exposure": 1.5643212242681903,
+            "renderFrame": 3692,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-B-v1/arrivals-down.png",
+          "screenshotBytes": 731362,
+          "screenshotSha256": "481bcc0b8cdf6db9515637e4683374058e8bd229c72f51a62ea3441644cb7c23"
+        },
+        {
+          "name": "arrivals-up",
+          "camera": {
+            "position": [
+              -82.45720632208025,
+              -10.305624797016316,
+              12.667830371937521
+            ],
+            "quaternion": [
+              0.07762499053215417,
+              -0.7028331062162889,
+              0.07762499281481604,
+              0.7028330855485856
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 266,
+            "triangles": 23247770,
+            "geometries": 153,
+            "textures": 80,
+            "exposure": 4.15448343325045,
+            "renderFrame": 4134,
+            "pixelRatio": 1,
+            "canvasPixels": [
+              1440,
+              916
+            ],
+            "reversedDepth": true
+          },
+          "screenshotExternalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/browser-B-v1/arrivals-up.png",
+          "screenshotBytes": 1134274,
+          "screenshotSha256": "029d3561ab0238d1ea008424380e2cd094e92b7475481b4fdfc53625b992723e"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "serverErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/sky.hdr?revision=9-connected-entrance-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:49685/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "allSixZonesRetained": true
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS actual frozen Phase13 clean Metal bake; no walkthrough or full reconstruction claim",
+  "packetSha256": "142ba5fe2bedfb6961700fb50f3663d5d651af3420ff0eb9c528d8ca38096706",
+  "started": "2026-11-04T02:21:56.830218+00:00",
+  "closed": "2026-11-04T02:23:09.871218+00:00",
+  "seconds": 73.04089713096619,
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "staticPrimaryPointLights": 0,
+  "staticNeighborPointLights": 10,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7600004076957703,
+    "mean": 0.011063477955758572,
+    "coveredPixels": 7970127
+  },
+  "atlasSurfaceArea": 0.1647704839706421,
+  "allInputPinsStillExact": true,
+  "inputPinCount": 63,
+  "runtimePointLightsExcluded": true,
+  "actualPrebakeAcceptanceSha256": "b1b7a9629279b022bc9413a5ec303fc1e5962398a905d108be03842e95494c40",
+  "metalBinaryArchivesDisabled": false,
+  "outputs": {
+    "lighting-platform-enclosure-sky.hdr": {
+      "bytes": 12733546,
+      "sha256": "cd0dbc691d11ce2abd8268ec296115c53fdd747c4eb38ccf5cbd1644bd4319d9"
+    },
+    "model-platform-enclosure.glb": {
+      "bytes": 11494424,
+      "sha256": "d6dbe7121695bc31c0b0e3c69c656b04fe0585316d95f114319c9dbf488afccb"
+    },
+    "lighting-platform-enclosure-sky.png": {
+      "bytes": 4261677,
+      "sha256": "7128dd24d5e7807940d4db747a06d376fce0613e186769582db2d20803b46ab7"
+    },
+    "lighting-platform-enclosure-ao.png": {
+      "bytes": 3875944,
+      "sha256": "12709557dab25f107990d12bd9994f9d67f9ace9d10e13a0508e5b912a5e23d4"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 7410,
+      "sha256": "b1b7a9629279b022bc9413a5ec303fc1e5962398a905d108be03842e95494c40"
+    },
+    "enclosure-prebake-scene.blend": {
+      "bytes": 213321823,
+      "sha256": "8f8c5c1ef42bb59e045bfcaf58fcb85b427732e891bdac7eacd52a7ba7fd4126"
+    },
+    "prepared-scene-control.json": {
+      "bytes": 31312,
+      "sha256": "4cd81d1a7a049f357b979a36186b0163a7e9fce078482b2fcde41fc3c41a64d5"
+    },
+    "lighting-platform-enclosure-sky-low.png": {
+      "bytes": 109234,
+      "sha256": "0139eafb90ecf2d2626066f6db338cd7767c2c529d7e42ba646289f454aa1f53"
+    },
+    "lighting-platform-enclosure.json": {
+      "bytes": 33957,
+      "sha256": "08cdde283a6f06008a48679c95683072654c83483cea613b0769bc35c7e39288"
+    }
+  },
+  "runnerSha256": "6edcd75459def0122c125579f6e744890ad1b525563a4659f014120af7626933"
+}

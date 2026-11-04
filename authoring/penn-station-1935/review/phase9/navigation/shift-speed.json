@@ -1,0 +1,267 @@
+{
+  "created": "2026-11-01T22:12:45.093Z",
+  "scope": "Actual local production bundle under a project-style prefix. Native normal walking and both Shift keys measured during sustained W on the real waiting-room floor; no camera injection or full-route/FPS claim.",
+  "status": "PASS",
+  "bundleSha256": "5ec949e64a921d6c54121e3cafdb389b25a61800afb225d65c0f0820b963def5",
+  "speedChecks": [
+    {
+      "modifier": null,
+      "expected": 2.6,
+      "measuredSpeed": 2.609316682203909,
+      "before": {
+        "position": [
+          0,
+          -2.587166440936036,
+          23.67916539167382
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.5871664008957493,
+          21.29685926084498
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 912.9999999910597,
+      "maximumRafGapMs": 16.800000000000182
+    },
+    {
+      "modifier": "ShiftLeft",
+      "expected": 5.75,
+      "measuredSpeed": 5.847891276053786,
+      "before": {
+        "position": [
+          0,
+          -2.5871664410888107,
+          22.14480560255356
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.5871664284005136,
+          16.874101195515994
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 901.2999999880794,
+      "maximumRafGapMs": 16.800000000000182
+    },
+    {
+      "modifier": "ShiftRight",
+      "expected": 5.75,
+      "measuredSpeed": 5.817067799137143,
+      "before": {
+        "position": [
+          0,
+          -2.5871664410473487,
+          22.12924924843397
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.5871664402452446,
+          16.86712971736918
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 904.5999999940395,
+      "maximumRafGapMs": 16.700000000000728
+    }
+  ],
+  "errors": [],
+  "requestFailures": [
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/sky.hdr?revision=8-arrivals-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "cancellations": [
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/sky.hdr?revision=8-arrivals-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55084/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "unexplainedRequestFailures": [],
+  "intentionallyBlocked": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "measurementLimit": "Short native-browser speed samples use RAF callback timestamps and read camera positions, so frame-phase quantization is present. Source speed changes exactly5\u21925.75m/s (+15%); ordinary2.6m/s and freeflight10/28m/s are unchanged. No FPS or sustained-performance claim."
+}

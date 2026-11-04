@@ -1,0 +1,219 @@
+{
+  "created": "2026-11-01T22:04:29.358Z",
+  "scope": "Actual local production bundle under a project-style prefix. Native view controls and a short supported walking movement; not full route or performance certification.",
+  "status": "PASS",
+  "bundleSha256": "e35a21c601a3c6ee063e4eec70eb4f54344372ab52d8206cd1a609e8e9536f59",
+  "checks": [
+    {
+      "view": "concourse",
+      "accessibleLocation": "The train concourse",
+      "removedCard": true
+    },
+    {
+      "view": "waiting",
+      "accessibleLocation": "The main waiting room",
+      "removedCard": true
+    },
+    {
+      "view": "exterior",
+      "accessibleLocation": "Seventh Avenue",
+      "removedCard": true
+    }
+  ],
+  "walk": {
+    "before": {
+      "position": [
+        0,
+        -2.5872,
+        25
+      ],
+      "quaternion": [
+        0.07777655644170531,
+        0,
+        0,
+        0.9969708156551376
+      ],
+      "fov": 50
+    },
+    "after": {
+      "position": [
+        0,
+        -2.587166440245261,
+        23.20406974672936
+      ],
+      "quaternion": [
+        0.07777655644170531,
+        0,
+        0,
+        0.9969708156551376
+      ],
+      "fov": 50
+    },
+    "distance": 1.7959302535841983,
+    "navigation": {
+      "sourceMeshes": 130,
+      "excludedMeshes": 79,
+      "excludedInstances": 76894,
+      "structuralInstances": 4976,
+      "colliders": 5025,
+      "vaultLightColliders": 2488,
+      "vaultLightSupports": 0,
+      "ignoredGlazingMaterials": [
+        "ConcourseRecessedWindowGlass",
+        "HistoricGlass",
+        "LunetteGlazing",
+        "OpalCandelabraGlass",
+        "TransparentPassengerCoachGlass"
+      ],
+      "cells": 2236,
+      "queries": 432,
+      "lastCandidates": 8,
+      "maximumCandidates": 9,
+      "buildMilliseconds": 7.699999988079071,
+      "floorWorld": -4.267166440245244
+    }
+  },
+  "errors": [],
+  "requestFailures": [
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/sky.hdr?revision=8-arrivals-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "cancellations": [
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/sky.hdr?revision=8-arrivals-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:53164/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "unexplainedRequestFailures": [],
+  "intentionallyBlocked": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "firstRun": {
+    "scope": "All native UI and short movement checks passed; a zero-cancellation harness assertion failed. The original failed report remains in external work storage. Second run separately records real successful responses for every canceled resource; no site change followed this assertion.",
+    "sha256": "86ce1ed4bfc3767b7d6eeb5e2b7cd96a9f65312d19d96a9dd9e17a605edbce3b"
+  },
+  "unchangedModelManifest": "f2d0e638a8db9b6b968c747bd69fb3f0e875a5ac4182607fad7835c88aeffe03",
+  "publication": "Pending feature-branch push and matching Pages verification."
+}

@@ -1,0 +1,437 @@
+{
+  "status": "FROZEN parent-approved independent4K128 floor transport; unchanged structureGI and physicalprobe",
+  "artifact": "platform-enclosure-floor",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+  "sourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "scene": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/independent-floor-prebake-scene.blend",
+  "sceneSha256": "f82c477cff0727e0e501f1ee02d7bf10ed5c55acb7623ed9b17c7305414aeb63",
+  "uvPreflight": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/independent-floor-uv-preflight-v2.json",
+  "uvPreflightSha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8",
+  "baseControl": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/raw/prepared-scene-control.json",
+  "out": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/raw",
+  "selectedSourceFloorOwners": [
+    "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+    "Fresh true receiver Railway smooth concrete track base",
+    "Fresh true receiver RailwayPlatformStippledGranolithicPhase9"
+  ],
+  "selectedTriangles": 402,
+  "retainedSourceStructuralOwners": 24,
+  "minimumVisibleTopDensity": 76.92764506513112,
+  "structureLightUvExact": true,
+  "physicalPositionNormalUv0Exact": true,
+  "inheritedJointPacketSha256": "142ba5fe2bedfb6961700fb50f3663d5d651af3420ff0eb9c528d8ca38096706",
+  "filePins": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/context-dedup-v1/current-concourse-without-primary-arrivals.glb",
+      "sha256": "35f726bf45a31227e4d6fe828d71e8f30913b51a778f386ed6dbaf6ba7b26b53",
+      "bytes": 90948868,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/visible-occluders-v1/retained-exterior-visible-occluder.glb",
+      "sha256": "9e342b9ca33d32284fd1e9466a7a5b40955c08d9a611d9233ab841620d1f625b",
+      "bytes": 49410228,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/visible-occluders-v1/retained-main-visible-occluder-main0.glb",
+      "sha256": "1c1fbfcebc204264050e16fbc179b8ab5e3186c6815dfcc48baade634ae8be9e",
+      "bytes": 54752384,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/connected-v12/formal-arcade-module.glb",
+      "sha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "bytes": 33546008,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "bytes": 13735708,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "bytes": 5510404,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "bytes": 7011560,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/raw-context-cut-v1/model-context.glb",
+      "sha256": "a6f0745d2b0afd2d763820ccab2b5248e968935b20129c90d7b8da9cf2ead5a4",
+      "bytes": 26208048,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-preparation-v1/contexts/arrivals-without-north-research-guard.glb",
+      "sha256": "ca5a753a1c8f7cac5aaee47fdffd2fc977bc925ed0941b5ef17f6c48bd792fd7",
+      "bytes": 15897180,
+      "role": "Registered neighbor context"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Granite005A/Granite005A_2K-JPG_Color.jpg",
+      "sha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c",
+      "bytes": 8537509,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Granite005A/Granite005A_2K-JPG_NormalGL.jpg",
+      "sha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b",
+      "bytes": 1742147,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Granite005A/Granite005A_2K-JPG_Roughness.jpg",
+      "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f",
+      "bytes": 2301486,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Marble018/Marble018_2K-JPG_Color.jpg",
+      "sha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06",
+      "bytes": 3945678,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Marble018/Marble018_2K-JPG_NormalGL.jpg",
+      "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+      "bytes": 1288531,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Marble018/Marble018_2K-JPG_Roughness.jpg",
+      "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235",
+      "bytes": 2097792,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Travertine009/Travertine009_2K-JPG_Color.jpg",
+      "sha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc",
+      "bytes": 3798875,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Travertine009/Travertine009_2K-JPG_NormalGL.jpg",
+      "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+      "bytes": 1312711,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/Travertine009/Travertine009_2K-JPG_Roughness.jpg",
+      "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc",
+      "bytes": 1135101,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/BedfordLimestoneConcourse-Color.png",
+      "sha256": "cd42e7dd2cd70cfcbb0628962fdd8522daa57299718b140c492645e15dcc6d5a",
+      "bytes": 1627960,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/BedfordLimestoneConcourse-NormalGL.png",
+      "sha256": "0e1659e0d1616d0dd9a07481574addcdd36f4fcabb4b903fcffe35b847124995",
+      "bytes": 4519322,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/BedfordLimestoneConcourse-Roughness.png",
+      "sha256": "10a506f7925250947afa5ef0137f86839656927e2de4ea19df5bb4d1299cb715",
+      "bytes": 1375067,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/HonedMarble-full.png",
+      "sha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+      "bytes": 4785562,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/HonedMarble-low.png",
+      "sha256": "8fd739db6c28858189512e890dc01ae0f35289494855db537d2c43591c52cabc",
+      "bytes": 335024,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/InteriorFine-full.png",
+      "sha256": "f38b17209705f3b2ab4c32871ecb12784e21de2e00afb8b735223b2abba3ea34",
+      "bytes": 8803704,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/InteriorFine-low.png",
+      "sha256": "29c42ffb7d87f340fa883105bc1ac0dc6c0747e68c0c11a2fd1de33d5521fd6e",
+      "bytes": 574077,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/MilfordFine-full.png",
+      "sha256": "cfdfe12098f4159874cea786cfb84b1593901be2cfbd47b1f0549ffed5339b25",
+      "bytes": 9191188,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/MilfordFine-low.png",
+      "sha256": "f032136c6015d37ba649d1b5d9676af5cb825adaacc49ab002b26ecef6b9b697",
+      "bytes": 600709,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/RomanTravertine-full.png",
+      "sha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+      "bytes": 4613837,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase4/RomanTravertine-low.png",
+      "sha256": "8779a6b404aaa8df09930dd73dd2f13275a9f91ef43ff73283e13c1b099687c3",
+      "bytes": 269538,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase5/InteriorGranite-roughness.png",
+      "sha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+      "bytes": 2252437,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase5/MilfordGranite-roughness.png",
+      "sha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+      "bytes": 2422436,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library/phase5/Travertine-roughness.png",
+      "sha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "bytes": 1885295,
+      "role": "Reviewed neighbor PBR map"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/candidate-v1/model-concourse-exits.glb",
+      "sha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "bytes": 34805936,
+      "role": "Registered corrected exit context with ten interpreted lamps"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/visible-occluders-v1/visible-context-proof.json",
+      "sha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+      "bytes": 5035,
+      "role": "Original unchanged template visibility proof"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/occluder_materials.py",
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c",
+      "bytes": 4289,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/bake_lighting.py",
+      "sha256": "bc8250fba3b4ca82ffbc683c6108292f93d21b29da63d6416d43a24f58701f92",
+      "bytes": 34504,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/material_library.py",
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8",
+      "bytes": 9855,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/floor_context_membership.py",
+      "sha256": "b989b40129ae8d244273e619eef9450e8152af5c8bcd405a1dae0010d4ecb528",
+      "bytes": 5129,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/render_device.py",
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "bytes": 1188,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/order_lighting_uv.py",
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c",
+      "bytes": 11793,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/authored_lighting_uv_guard.py",
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf",
+      "bytes": 4263,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/vault_lighting_uv.py",
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee",
+      "bytes": 6302,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/arcade_corner_normals.py",
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567",
+      "bytes": 5450,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/restore_imported_visibility.py",
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21",
+      "bytes": 2390,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/baked_occlusion_binding.py",
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+      "bytes": 3167,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/floor_clip.py",
+      "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a",
+      "bytes": 1479,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/source-v2/denoise_lighting.py",
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "bytes": 8443,
+      "role": "Frozen Phase13 lighting/geometry-membership helper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "bytes": 7132424,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/construction.json",
+      "sha256": "618cbd8fa83871b9e0a44b332d7160c307aa592fba0c1efa81b0a4bc3a5445ad",
+      "bytes": 369445,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-context-membership-v2.json",
+      "sha256": "06bae65d5126394ac4df69576ee21915bebf2d8b800cd1dcd4a89b15439cc5e7",
+      "bytes": 4259,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/primary-contract.json",
+      "sha256": "0ed2191daaec5d348554189d90135900a8205ca264fe126ef676f219be256a24",
+      "bytes": 2201,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/gallery-prebake-scene.blend",
+      "sha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3",
+      "bytes": 207444046,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/prepared-scene-control.json",
+      "sha256": "f244b2d7765bb037747fa298dccd52a54b5bfa6421a51370e720b1e1a8b96edf",
+      "bytes": 34064,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/run-reviewed-enclosure.py",
+      "sha256": "6edcd75459def0122c125579f6e744890ad1b525563a4659f014120af7626933",
+      "bytes": 4047,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/postprocess-enclosure.py",
+      "sha256": "deefa462f67e214c0ab554f8c322f8691d141fe27fbed7488898c04b00e7cab4",
+      "bytes": 3970,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/package-enclosure-lossless.mjs",
+      "sha256": "97fbe86d99a6578092775cca891acc3c59249a58703a372c653d9159c6b488e6",
+      "bytes": 7682,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/encode-lossless-meshopt.mjs",
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f",
+      "bytes": 8281,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/reuse-texture-cache.mjs",
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f",
+      "bytes": 7538,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/capture-local-reflection.py",
+      "sha256": "88187301a0ff0f6fdc8d8d1ee46ca28b752374c47dfad43d4cb0a76f8ae949e0",
+      "bytes": 8014,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/probe-glass-restore-census.json",
+      "sha256": "29bb09bd84474f090532b0fe28f47bdbbed47759800e7482483eafd23ba9a170",
+      "bytes": 7109,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "bytes": 3044,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+      "sha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+      "bytes": 3344,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bind-reviewed-enclosure-v2.py",
+      "sha256": "f0d439e6e7b6877b30382dfe44166d95e3acf53440640027f750bebd4635baff",
+      "bytes": 4436,
+      "role": "Reviewed source/cache/capture/pipeline input"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/independent-floor-prebake-scene.blend",
+      "sha256": "f82c477cff0727e0e501f1ee02d7bf10ed5c55acb7623ed9b17c7305414aeb63",
+      "bytes": 213427643,
+      "role": "Frozen floorUV/prepared physicalscene or actualbakehelper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/independent-floor-uv-preflight-v2.json",
+      "sha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8",
+      "bytes": 3292,
+      "role": "Frozen floorUV/prepared physicalscene or actualbakehelper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-independent-floor.py",
+      "sha256": "f42f1fbf0cd96f5a60bccf7e60581c2ef362d56113b2bfd814d89a4bf34e2bd9",
+      "bytes": 15291,
+      "role": "Frozen floorUV/prepared physicalscene or actualbakehelper"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/prepare-floor-only-uv-v2.py",
+      "sha256": "886d7c7944ffa6e11b5b44d81af36e916c34e7b9dafb435ba982b822dc51a66a",
+      "bytes": 6820,
+      "role": "Frozen floorUV/prepared physicalscene or actualbakehelper"
+    }
+  ],
+  "environment": {
+    "CYCLES_METAL_DISABLE_BINARY_ARCHIVES": "1"
+  },
+  "failedPredecessor": {
+    "packet": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/packet.json",
+    "packetSha256": "8a9629d0fc758ef231c75fe8ae61da310cf06f73d3582622767c7f25badc0c4a",
+    "log": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/actual-metal-bake.log",
+    "logSha256": "9865474b95dc26444cc3ee1870cc62eb9747d7bb8d79457094ca33d2b3735617",
+    "reason": "MetalKernelPipeline::compile NSURL nilstring nativebinary-archive crash; no atlas accepted"
+  }
+}

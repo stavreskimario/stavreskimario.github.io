@@ -1,0 +1,61 @@
+{
+  "zone": "exterior",
+  "source": "lighting-exterior-sky.hdr",
+  "sourceSha256": "a4a74239965205d01c7de03b4a598e8b55e3c76e19cfe4fe1678fa5bbe696e2e",
+  "inputTransfer": "srgb",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.14850254356861115,
+    "minimum": 0.0,
+    "maximum": 0.8984375
+  },
+  "originalLinear": {
+    "mean": 0.0717393159866333,
+    "minimum": 0.0,
+    "maximum": 0.784324049949646
+  },
+  "denoisedLinear": {
+    "mean": 0.07217348366975784,
+    "minimum": 0.0,
+    "maximum": 1.183816909790039
+  },
+  "relativeMeanChange": 0.0060520187173995765,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-exterior-sky-denoised-linear.hdr",
+    "sha256": "49d06cd08c868d71839dfeeedb4854048383fde23922ad2ffe3673529e42c249",
+    "decodedLinear": {
+      "mean": 0.0719425156712532,
+      "minimum": 0.0,
+      "maximum": 1.1796875
+    },
+    "meanQuantizationError": 0.00023093329218681902
+  },
+  "full": {
+    "png": "lighting-exterior-sky.png",
+    "webp": "lighting-exterior-sky.webp",
+    "clippedRGBSamples": 31,
+    "width": 2048,
+    "height": 2048
+  },
+  "low": {
+    "png": "lighting-exterior-sky-low.png",
+    "webp": "lighting-exterior-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 6.853295416047331,
+  "schemaVersion": 1
+}

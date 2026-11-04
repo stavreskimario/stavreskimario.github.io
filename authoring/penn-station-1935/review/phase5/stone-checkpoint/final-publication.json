@@ -1,0 +1,473 @@
+{
+  "checkpoint": "907958343d4b39656123e75a7adcfed722c6aed9",
+  "checkedAt": "2026-10-30T02:27:43.757Z",
+  "status": "passed",
+  "scope": "Actual published stone/material and two-fixture checkpoint. Immutable9079583 supplies expected bytes; scoped live Walk/view/material verification only, reusing the separate complete frozen production QA. No broad functional rerun or FPS measurement.",
+  "live": {
+    "url": "https://stavreskimario.github.io/penn-station-1935/",
+    "browser": "156.0.8078.74",
+    "driver": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)"
+    },
+    "bundleSha256": "ccb1e4611cbfaf2c16d79793e3e7b8b3a247e937333164272cb533d8dc0e8c30",
+    "models": [
+      {
+        "file": "model-exterior.glb.gz",
+        "transportSha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+        "decodedSha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035",
+        "evidence": "Natural application model response body"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "transportSha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+        "decodedSha256": "cf0aad3568177a4fe4b1394541b5bccb9de35e1d8044cad84a693e8b9df8548c",
+        "evidence": "Natural application model response body"
+      },
+      {
+        "file": "model-concourse.glb.gz",
+        "transportSha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+        "decodedSha256": "69747ba3addb8ea930a5f0f59481391402cbeda84d19161de64fb14ef080df76",
+        "evidence": "Natural application model response body"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "transportSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+        "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe",
+        "evidence": "Natural application model response body"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "transportSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+        "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1",
+        "evidence": "Natural application model response body"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "transportSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+        "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979",
+        "evidence": "Natural application model response body"
+      }
+    ],
+    "beforeEnter": {
+      "state": {
+        "view": "exterior",
+        "framing": "",
+        "mode": "walk",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": false,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 0,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          124,
+          1.68,
+          0
+        ],
+        "quaternion": [
+          0,
+          0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "fov": 50
+      }
+    },
+    "actualWalk": {
+      "start": [
+        124,
+        1.68,
+        0
+      ],
+      "end": [
+        122.85153821299502,
+        1.6800000000000002,
+        0
+      ],
+      "distanceMetres": 1.148461787004976,
+      "streetFloor": 0,
+      "eyeHeight": 1.6800000000000002,
+      "supportCollisionQueries": 348
+    },
+    "viewPersistence": [
+      {
+        "view": "waiting",
+        "mode": "walk",
+        "renderFrame": 219,
+        "loadedZones": [
+          {
+            "name": "exterior",
+            "id": "3a5f780d-0664-429a-b546-11b0871c5a72",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "id": "4baa3c34-7b3d-4aeb-ba50-679090a0ac66",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "id": "9d5b9110-e1bc-4e22-9e9c-4303b3fdf771",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "id": "cafc84dc-7d3b-453b-b295-1c056d00ce14",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "id": "eb6a632c-0019-448f-8f2f-70f87829aae9",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "id": "c1d0fbad-0885-4146-8ffe-5737bc7e5a6d",
+            "visible": true
+          }
+        ]
+      },
+      {
+        "view": "concourse",
+        "mode": "walk",
+        "renderFrame": 221,
+        "loadedZones": [
+          {
+            "name": "exterior",
+            "id": "3a5f780d-0664-429a-b546-11b0871c5a72",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "id": "4baa3c34-7b3d-4aeb-ba50-679090a0ac66",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "id": "9d5b9110-e1bc-4e22-9e9c-4303b3fdf771",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "id": "cafc84dc-7d3b-453b-b295-1c056d00ce14",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "id": "eb6a632c-0019-448f-8f2f-70f87829aae9",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "id": "c1d0fbad-0885-4146-8ffe-5737bc7e5a6d",
+            "visible": true
+          }
+        ]
+      },
+      {
+        "view": "exterior",
+        "mode": "walk",
+        "renderFrame": 223,
+        "loadedZones": [
+          {
+            "name": "exterior",
+            "id": "3a5f780d-0664-429a-b546-11b0871c5a72",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "id": "4baa3c34-7b3d-4aeb-ba50-679090a0ac66",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "id": "9d5b9110-e1bc-4e22-9e9c-4303b3fdf771",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "id": "cafc84dc-7d3b-453b-b295-1c056d00ce14",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "id": "eb6a632c-0019-448f-8f2f-70f87829aae9",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "id": "c1d0fbad-0885-4146-8ffe-5737bc7e5a6d",
+            "visible": true
+          }
+        ]
+      }
+    ],
+    "materialFactors": [
+      {
+        "name": "InteriorGranite",
+        "actual": [
+          {
+            "name": "InteriorGranite",
+            "roughness": 1,
+            "zones": [
+              "waiting"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MilfordGranite",
+        "actual": [
+          {
+            "name": "MilfordGranite",
+            "roughness": 1,
+            "zones": [
+              "exterior"
+            ]
+          },
+          {
+            "name": "MilfordGranite",
+            "roughness": 1,
+            "zones": [
+              "concourse"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Travertine",
+        "actual": [
+          {
+            "name": "Travertine",
+            "roughness": 1,
+            "zones": [
+              "exterior"
+            ]
+          },
+          {
+            "name": "Travertine",
+            "roughness": 1,
+            "zones": [
+              "waiting"
+            ]
+          },
+          {
+            "name": "Travertine",
+            "roughness": 1,
+            "zones": [
+              "waiting"
+            ]
+          },
+          {
+            "name": "Travertine",
+            "roughness": 1,
+            "zones": [
+              "concourse"
+            ]
+          }
+        ]
+      }
+    ],
+    "roughnessMaps": [
+      {
+        "uri": "textures/c7f8f448d11f12484907.ktx2",
+        "bindings": [
+          {
+            "zone": "exterior",
+            "material": "MilfordGranite"
+          },
+          {
+            "zone": "concourse",
+            "material": "MilfordGranite"
+          }
+        ],
+        "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+        "width": 2048,
+        "height": 2048,
+        "transferFunction": [
+          1
+        ],
+        "evidence": "Explicit completed same-page fetch of the material-bound URI; natural initial cancellations retained separately"
+      },
+      {
+        "uri": "textures/c7670262d7c33cc39671.ktx2",
+        "bindings": [
+          {
+            "zone": "exterior",
+            "material": "Travertine"
+          },
+          {
+            "zone": "waiting-room",
+            "material": "Travertine"
+          },
+          {
+            "zone": "waiting-room",
+            "material": "Travertine"
+          },
+          {
+            "zone": "concourse",
+            "material": "Travertine"
+          }
+        ],
+        "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+        "width": 2048,
+        "height": 2048,
+        "transferFunction": [
+          1
+        ],
+        "evidence": "Explicit completed same-page fetch of the material-bound URI; natural initial cancellations retained separately"
+      },
+      {
+        "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+        "bindings": [
+          {
+            "zone": "waiting-room",
+            "material": "InteriorGranite"
+          }
+        ],
+        "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+        "width": 2048,
+        "height": 2048,
+        "transferFunction": [
+          1
+        ],
+        "evidence": "Explicit completed same-page fetch of the material-bound URI; natural initial cancellations retained separately"
+      }
+    ],
+    "pageErrors": [],
+    "localHttpFailures": [],
+    "networkCancellations": [],
+    "bodyObservationFailures": [],
+    "nativeWaitingScreenshot": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/stone-checkpoint-live/published-waiting-room.png",
+      "sha256": "bc07c680966faeb5eda328ce5811daa008e607b45713bab090407b0dd3346556"
+    },
+    "sourceReportSha256": "3e47f3762e88f7af4d9a00eb70a5f3d97e8fdc8910ca68437cc2cf44a6ff5723",
+    "sourceReport": "stone-checkpoint-live/report.json"
+  },
+  "checks": [
+    {
+      "id": 123854917783,
+      "name": "report-build-status",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991460725/job/123854917783"
+    },
+    {
+      "id": 123854917762,
+      "name": "deploy",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991460725/job/123854917762"
+    },
+    {
+      "id": 123854899310,
+      "name": "CodeQL",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/runs/123854899310"
+    },
+    {
+      "id": 123854651408,
+      "name": "check",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991473776/job/123854651408"
+    },
+    {
+      "id": 123854644335,
+      "name": "Analyze (actions)",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991470163/job/123854644335"
+    },
+    {
+      "id": 123854644323,
+      "name": "Analyze (python)",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991470163/job/123854644323"
+    },
+    {
+      "id": 123854644148,
+      "name": "Analyze (javascript-typescript)",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991470163/job/123854644148"
+    },
+    {
+      "id": 123854617682,
+      "name": "build",
+      "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991460725/job/123854617682"
+    }
+  ],
+  "pages": {
+    "runId": 40991460725,
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40991460725",
+    "jobs": [
+      {
+        "id": 123854617682,
+        "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123854917762,
+        "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123854917783,
+        "head_sha": "907958343d4b39656123e75a7adcfed722c6aed9",
+        "name": "report-build-status",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "pullRequest": {
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/pull/11",
+    "head": "feature/penn-station-1935-reconstruction",
+    "headSha": "907958343d4b39656123e75a7adcfed722c6aed9",
+    "base": "main",
+    "baseSha": "c5b8065a880a7162c5d4a96a470449e00204d031",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergedAt": null,
+    "checkedAt": "2026-10-30T02:27:11.269Z"
+  },
+  "reusedProductionQa": "production-browser-summary.json",
+  "hosting": "Existing feature-branch/root Pages setup retained; no hosting settings changed and PR11 not merged.",
+  "remaining": "The existing vault geometry/all six Phase4 GI/AO atlases/static probes remain. The new ceiling UV/bake and final photographic target are unfinished.",
+  "limits": [
+    "Installed desktop Chrome/Metal only; no physical-phone coverage added.",
+    "Material colour-space evidence uses actual served GLB bindings and explicit completed same-page KTX2 reads with linear transfer, alongside actual readonly roughness factors. No API mutation or camera/shader injection.",
+    "No universal performance or final historical/photographic fidelity claim."
+  ]
+}

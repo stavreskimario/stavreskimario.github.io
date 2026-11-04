@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "status": "START: frozen reviewed Metal bake",
+  "packetSha256": "b08094547de89682202b97d61f65b5eb2e847a49231808b36a547cf0b19d1e70",
+  "validatedInputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-waiting-occluder.glb",
+      "sha256": "6b85f29ce1912314808c4c147f8b06918e68e96d5fba471042737d71135292a0"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-exterior-occluder.glb",
+      "sha256": "58bd1e9e76d1d7c16ed25e0c4e86d2e6430684d2a90c5d28ceb6825139427824"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-source-v1/bake_lighting.py",
+      "sha256": "8713c67c173357b9140ece3753b2702d8b28d38217139395a4dc4861698ef608"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-source-v1/material_library.py",
+      "sha256": "a6b9b83843038fa829867c7cfebc4958f1c0386bd1bb02c7e4237e9de4169dfc"
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-source-v1/render_device.py",
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    }
+  ],
+  "validatedMaterialFiles": 23,
+  "sourceSha256Before": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "command": [
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-source-v1/bake_lighting.py",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+    "--out",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/baked-v1",
+    "--zone",
+    "platform",
+    "--artifact-name",
+    "platform-surfaces",
+    "--resolution",
+    "4096",
+    "--samples",
+    "64",
+    "--device",
+    "METAL",
+    "--threads",
+    "4",
+    "--uv-margin-pixels",
+    "4",
+    "--materials",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library",
+    "--occluder",
+    "waiting=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-waiting-occluder.glb",
+    "--occluder",
+    "concourse=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+    "--occluder",
+    "exterior=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-exterior-occluder.glb",
+    "--occluder",
+    "platform=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+    "--occluder",
+    "trains=/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb"
+  ],
+  "unixTime": 1793571674.0857759
+}

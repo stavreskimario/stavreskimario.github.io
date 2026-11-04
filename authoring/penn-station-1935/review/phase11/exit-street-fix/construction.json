@@ -1,0 +1,535 @@
+{
+  "schema": 1,
+  "status": "Blender construction source; mapped lighting, encoded and native acceptance pending",
+  "routeSha256": "7b546fe1c9d9851749b0e438f8c085aba0740f024fc555d7204a172f1f758130",
+  "materialsSourceSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+  "builderSha256": "4bd6cf995d95abc2e54fe04aea4a917a5ede8b129ffe0efd63c3de385f974623",
+  "objectCount": 105,
+  "practicalLights": [
+    {
+      "name": "Exit pendant 1",
+      "floorPosition": [
+        -64.2,
+        -7.4676,
+        -43.0
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 2",
+      "floorPosition": [
+        -64.2,
+        -7.4676,
+        -54.0
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 3",
+      "floorPosition": [
+        -64.2,
+        -7.4676,
+        -65.0
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 4",
+      "floorPosition": [
+        -67.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 5",
+      "floorPosition": [
+        -57.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 6",
+      "floorPosition": [
+        -47.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 7",
+      "floorPosition": [
+        -37.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 8",
+      "floorPosition": [
+        -27.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 9",
+      "floorPosition": [
+        -17.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    },
+    {
+      "name": "Exit pendant 10",
+      "floorPosition": [
+        -9.0,
+        -7.4676,
+        -74.8
+      ],
+      "mountY": -4.7072,
+      "watts": 15.0,
+      "qualification": "Location/photometry interpreted; pendant family source-photographed."
+    }
+  ],
+  "surfaceProfiles": [
+    {
+      "material": "TravertineArrivalsExitRoute",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsExitRoute",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGraniteArrivalsExitRoute",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Bounded 0.30\u20130.48 response interpreted from primary photographs; no measured polish/roughness specification"
+    }
+  ],
+  "coordinateSpace": "world-glTF",
+  "modelCoordinateSpace": "Main0-glTF: browserYoffset=-4.2672",
+  "passages": [
+    {
+      "name": "Northward continuation of ordinary Exit gallery",
+      "start": [
+        -73.19999694824219,
+        -7.467599868774414,
+        -53.11399841308594
+      ],
+      "end": [
+        -55.25630187988281,
+        -7.467599868774414,
+        -53.11399841308594
+      ],
+      "width": 34.227999999999994,
+      "length": 17.943695168193827,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "33rd passage west landing",
+      "start": [
+        -73.19999694824219,
+        -7.467599868774414,
+        -74.80000305175781
+      ],
+      "end": [
+        -55.25630187988281,
+        -7.467599868774414,
+        -74.80000305175781
+      ],
+      "width": 9.144000000000005,
+      "length": 17.943695168193827,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "33rd passage retained deck north infill",
+      "start": [
+        -55.25630187988281,
+        -7.467599868774414,
+        -75.88099670410156
+      ],
+      "end": [
+        -47.75630187988281,
+        -7.467599868774414,
+        -75.88099670410156
+      ],
+      "width": 6.981999999999999,
+      "length": 7.5,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "33rd Street lower passenger passage",
+      "start": [
+        -47.75630187988281,
+        -7.467599868774414,
+        -74.80000305175781
+      ],
+      "end": [
+        0.3799999952316284,
+        -7.467599868774414,
+        -74.80000305175781
+      ],
+      "width": 9.144000000000005,
+      "length": 48.13630396868485,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "Privateway north upper landing",
+      "start": [
+        -8.170000076293945,
+        -0.0023648999631404877,
+        -89.75
+      ],
+      "end": [
+        0.3799999952316284,
+        -0.0023648999631404877,
+        -89.75
+      ],
+      "width": 1.5,
+      "length": 8.55000005353961,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "Privateway east walkout flank",
+      "start": [
+        -1.4500000476837158,
+        -0.0023648999631404877,
+        -88.39119720458984
+      ],
+      "end": [
+        0.3799999952316284,
+        -0.0023648999631404877,
+        -88.39119720458984
+      ],
+      "width": 1.2176000000000045,
+      "length": 1.8300000217833805,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "Privateway west service flank",
+      "start": [
+        -8.170000076293945,
+        -0.0023648999631404877,
+        -88.39119720458984
+      ],
+      "end": [
+        -7.150000095367432,
+        -0.0023648999631404877,
+        -88.39119720458984
+      ],
+      "width": 1.2176000000000045,
+      "length": 1.0199999554017,
+      "clearHeight": 2.7604
+    },
+    {
+      "name": "Otis escalator and adjacent33rd Street public stair",
+      "start": [
+        -3.2,
+        -7.4676,
+        -76.065
+      ],
+      "end": [
+        -3.2,
+        -0.0023649,
+        -89.0
+      ],
+      "escalatorCenterX": -6.0,
+      "escalatorClearWidth": 1.2192,
+      "stairClearWidth": 2.4384,
+      "risers": 44,
+      "riser": 0.1696644340909091,
+      "going": 0.29397727272727275,
+      "inclinationDegrees": 29.990728273818274,
+      "staticEscalator": true,
+      "rootBuildsRealLowerAndUpperLandings": true
+    }
+  ],
+  "walkable": [
+    {
+      "label": "Northward continuation of ordinary Exit gallery",
+      "bounds": [
+        -73.19999694824219,
+        -55.25630187988281,
+        -70.22799682617188,
+        -36.0
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd passage west landing",
+      "bounds": [
+        -73.19999694824219,
+        -55.25630187988281,
+        -79.37200164794922,
+        -70.2280044555664
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd passage retained deck north infill",
+      "bounds": [
+        -55.25630187988281,
+        -47.75630187988281,
+        -79.37199401855469,
+        -72.38999938964844
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd Street lower passenger passage",
+      "bounds": [
+        -47.75630187988281,
+        0.3799999952316284,
+        -79.37200164794922,
+        -70.2280044555664
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway north upper landing",
+      "bounds": [
+        -8.170000076293945,
+        0.3799999952316284,
+        -90.5,
+        -89.0
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway east walkout flank",
+      "bounds": [
+        -1.4500000476837158,
+        0.3799999952316284,
+        -89.0,
+        -87.78239440917969
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "Privateway west service flank",
+      "bounds": [
+        -8.170000076293945,
+        -7.150000095367432,
+        -89.0,
+        -87.78239440917969
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Permission only; actual authored geometry supplies support."
+    },
+    {
+      "label": "33rd Street photo-led public stair beside Otis escalator",
+      "bounds": [
+        -4.4192,
+        -1.9808000000000001,
+        -89.0,
+        -76.065
+      ],
+      "geometryBasedFloorRayRequired": true,
+      "surface": "Actual44treads and shared landing receivers; no virtual floor."
+    }
+  ],
+  "stairSupportFlights": [
+    {
+      "label": "33rd Street adjacent public stair",
+      "start": [
+        -3.2,
+        -7.4676,
+        -76.065
+      ],
+      "end": [
+        -3.2,
+        -0.0023649,
+        -89.0
+      ],
+      "width": 2.4384,
+      "steps": 44
+    }
+  ],
+  "sources": [
+    {
+      "id": "Gibbs242-248-254-261-262",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "scope": "Lower33rd passage, enamelledbrick, privateway escalator,4ftclearwidth,25ftlift"
+    },
+    {
+      "id": "OtisPennArchitecture1910vii",
+      "url": "https://usmodernist.org/AM/AM-1910-11.pdf#page=4",
+      "scope": "Actual Penn installation with solidwoodenroundedbalustrades andadjacent stone staircase"
+    },
+    {
+      "id": "GibbsFig3Exit",
+      "sourceSummarySha256": "04f0fc1bd7f2c74d936ca276824d7e0fa473d1318a780524b73ac9cd398e9773",
+      "scope": "Registered lowerpassage andexternalmidblockprojection"
+    }
+  ],
+  "qualifications": [
+    "Opening-era primary evidence; exact1935retention unverified.",
+    "Fullflight inclination30degrees,riser count44,adjacentstairwidth andminorprofiles inferred.",
+    "WorkingExit-to-localstreetrise7.4652351m differsdocumented25ftlift byapproximately155mm; existingstationlevels retained.",
+    "Globalplanregistrationatleast\u00b11m; fullflight andlandings reconstructedwithindocumentedroute/projection.",
+    "Pavingapertures,actualreceiversandphysicalwalkingmustpassbeforepublication.",
+    "Newmembersections interpreted, not structuralcapacitycertification.",
+    "Enamelled-brick family documented; brick bond/module/hue/glaze and lamp spacing/photometry interpreted.",
+    "Street well reveals are flush with actualpaving; street/contextapertureownershiprecorded separately.",
+    "Phase11 corrects two source-modeled sidewalls: street-facing sections capped50mm below actual asphalt slab underside; northern landing walls retained. Road clearance is a modeled interface correction, not newly authenticated historic fabrication."
+  ],
+  "waypoints": [
+    {
+      "label": "Existing arrivals gallery",
+      "position": [
+        -64.2,
+        -7.4676,
+        -33.0
+      ]
+    },
+    {
+      "label": "North gallery continuation",
+      "position": [
+        -64.2,
+        -7.4676,
+        -68.0
+      ]
+    },
+    {
+      "label": "Turn into33rdpassage",
+      "position": [
+        -64.2,
+        -7.4676,
+        -74.8
+      ]
+    },
+    {
+      "label": "Midblockpassage",
+      "position": [
+        -20.0,
+        -7.4676,
+        -74.8
+      ]
+    },
+    {
+      "label": "Ascent foot approach",
+      "position": [
+        -3.2,
+        -7.4676,
+        -74.8
+      ]
+    },
+    {
+      "label": "Public stone stair foot",
+      "position": [
+        -3.2,
+        -7.4676,
+        -76.065
+      ]
+    },
+    {
+      "label": "Public stone stair head",
+      "position": [
+        -3.2,
+        -0.0023649,
+        -89.0
+      ]
+    },
+    {
+      "label": "Privateway upper landing",
+      "position": [
+        -3.2,
+        -0.0023649,
+        -89.7
+      ]
+    },
+    {
+      "label": "Upper landing east turn",
+      "position": [
+        -0.5,
+        -0.0023649,
+        -89.7
+      ]
+    },
+    {
+      "label": "33rdnorthsidewalk",
+      "position": [
+        -0.5,
+        -0.0023649,
+        -86.0
+      ]
+    }
+  ],
+  "cameraPreset": {
+    "eye": [
+      -4.5,
+      -4.8,
+      -72.5
+    ],
+    "target": [
+      -4.5,
+      -2.5,
+      -84
+    ],
+    "walk": [
+      -3.2,
+      -5.7876,
+      -73.8
+    ],
+    "look": [
+      -3.2,
+      -3,
+      -84
+    ],
+    "title": "The 33rd Street exit",
+    "caption": "From the lower arrivals gallery to street level"
+  },
+  "outputs": {
+    "arrivals-exit-addon.blend": "44f71d582425af027aabcd3f15dc6b07c55566e7df50d5a23bc2797a55e29c25",
+    "model-concourse-exits.glb": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18"
+  }
+}

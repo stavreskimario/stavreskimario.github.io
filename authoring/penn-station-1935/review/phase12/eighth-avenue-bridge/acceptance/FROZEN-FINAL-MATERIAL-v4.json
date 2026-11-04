@@ -1,0 +1,310 @@
+{
+  "status": "FROZEN PASS painted-dielectricv4 source/raw/full-low encoded/mounted and inheritedexactphysicalgeometry",
+  "sourceOwners": 7,
+  "sourceTrianglesPreserved": 8256,
+  "sourceToRaw": {
+    "label": "source7/8256\u2192actual no-weld raw",
+    "status": "PASS",
+    "trianglesBefore": 8256,
+    "trianglesAfter": 8256,
+    "matched": 8256,
+    "exactOrientedCorners": 4754,
+    "maxPositionComponentDriftM": 9.5367431640625e-07,
+    "maxNormalComponentDrift": 0,
+    "maxNormalAngleDegrees": 0,
+    "minimumNormalDot": 1,
+    "maxUv0ComponentDrift": 0,
+    "maxLightingUv1ComponentDrift": 0,
+    "unmatched": 0,
+    "largestCases": [],
+    "failures": [],
+    "positionBoundM": 2e-05,
+    "normalAngleBoundDegrees": 0.5,
+    "minimumNormalDotBound": 0.9999619230641713,
+    "normalComponentDriftMeasuredOnly": true,
+    "uvComponentBound": 2e-06
+  },
+  "losslessAndMounted": [
+    {
+      "label": "full raw\u2192encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 8256,
+      "trianglesAfter": 8256,
+      "matched": 8256,
+      "exactOrientedCorners": 8256,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 2e-05,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 2e-06
+    },
+    {
+      "label": "full encoded\u2192mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 8256,
+      "trianglesAfter": 8256,
+      "matched": 8256,
+      "exactOrientedCorners": 8256,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 2e-05,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 2e-06
+    },
+    {
+      "label": "low raw\u2192encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 8256,
+      "trianglesAfter": 8256,
+      "matched": 8256,
+      "exactOrientedCorners": 8256,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 2e-05,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 2e-06
+    },
+    {
+      "label": "low encoded\u2192mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 8256,
+      "trianglesAfter": 8256,
+      "matched": 8256,
+      "exactOrientedCorners": 8256,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 2e-05,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 2e-06
+    }
+  ],
+  "paintMaterialVerified": [
+    {
+      "quality": "full",
+      "stage": "module",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ],
+      "interpretationNotHistoricSample": true
+    },
+    {
+      "quality": "full",
+      "stage": "mounted",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ],
+      "interpretationNotHistoricSample": true
+    },
+    {
+      "quality": "low",
+      "stage": "module",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ],
+      "interpretationNotHistoricSample": true
+    },
+    {
+      "quality": "low",
+      "stage": "mounted",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ],
+      "interpretationNotHistoricSample": true
+    }
+  ],
+  "originalPlatformExact": [
+    {
+      "quality": "full",
+      "originalBinPrefixExact": true,
+      "originalBinBytes": 1114684,
+      "allOldGeometryMaterialsImagesTexturesSamplersExact": true,
+      "originalSceneRootsExact": true,
+      "baseSha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "mountedSha256": "1d78c5cb8a6e0c3f51b4378cc5736211b42afbbd925ec12d60f94a133de2a00e"
+    },
+    {
+      "quality": "low",
+      "originalBinPrefixExact": true,
+      "originalBinBytes": 927648,
+      "allOldGeometryMaterialsImagesTexturesSamplersExact": true,
+      "originalSceneRootsExact": true,
+      "baseSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "mountedSha256": "533df54cb175010154b80dd2ea11d62ddb27a9467652d92850bdb6711f651b82"
+    }
+  ],
+  "currentInputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/bridge-bay.glb",
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+      "bytes": 585436,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/integration/bake-run-v3/raw/model-platform-bridge.glb",
+      "sha256": "0187cd04b333d106bb7a4df622a506070c750a662a0438bd3051be2f51cbbc3a",
+      "bytes": 5346804,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/integration/bake-run-v3/package/model-platform.glb",
+      "sha256": "a85b243819cb6d3e5ebf48c1cce2fa675575d9e4f8a9e64c9dc4859779494e51",
+      "bytes": 414356,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/integration/candidate-bridge-v3/model-platform.glb.gz",
+      "sha256": "1d78c5cb8a6e0c3f51b4378cc5736211b42afbbd925ec12d60f94a133de2a00e",
+      "bytes": 327461,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/integration/bake-run-v3/package/model-platform-low.glb",
+      "sha256": "3b0abc57c3ad64f2f917a6861e22151f26260e59cd2a2229bc745311e31841d2",
+      "bytes": 414356,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/integration/candidate-bridge-v3/model-platform-low.glb.gz",
+      "sha256": "533df54cb175010154b80dd2ea11d62ddb27a9467652d92850bdb6711f651b82",
+      "bytes": 353939,
+      "rehashedUnchangedAfterChecks": true
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform-low.glb.gz",
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418,
+      "rehashedUnchangedAfterChecks": true
+    }
+  ],
+  "rootPromotedIdentity": [
+    {
+      "quality": "full",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "1d78c5cb8a6e0c3f51b4378cc5736211b42afbbd925ec12d60f94a133de2a00e",
+      "matchesCheckedCandidate": true
+    },
+    {
+      "quality": "low",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "533df54cb175010154b80dd2ea11d62ddb27a9467652d92850bdb6711f651b82",
+      "matchesCheckedCandidate": true
+    }
+  ],
+  "physicalProofInheritance": {
+    "actualOldPhysicalReceipt": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/final-acceptance-v1/FROZEN-FINAL-BRIDGE-v1.json",
+      "sha256": "5f35ab5a350b89159a7e6d86e0b839e9f4796033d3f4a9c6499a48fe732001fa"
+    },
+    "exactOldEncodedToNewEncodedGeometry": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/final-acceptance-v1/physical-geometry-transfer-v4.json",
+      "sha256": "ab9d351259a338fc4c4bc49e1aaaa0e296cfef9d7e10b6402e367f7806fdf479"
+    },
+    "sourceV3ToV4WholeBINAndGeometryExact": true,
+    "retainedChecksPerQuality": {
+      "actualReceiverColumns": 22,
+      "roofRailClearancePoints": 30,
+      "existingP5SidepathBodySamples": 250
+    },
+    "rerunWalkingLoops": false,
+    "reason": "Independentoriented oldencoded/newencoded P/N/UV0 geometryexact0 inbothqualities, sourcewholeBIN/geometryexact; materialandfreshGIonlychanged."
+  },
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/final-acceptance-v1/actual-material-v4-mounted-chain.json",
+      "sha256": "fe17763a4838c563388fcd141288f9ea0d8ffa182d1c6fbc76a64842e2aad382",
+      "bytes": 8298
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/final-acceptance-v1/physical-geometry-transfer-v4.json",
+      "sha256": "ab9d351259a338fc4c4bc49e1aaaa0e296cfef9d7e10b6402e367f7806fdf479",
+      "bytes": 2750
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/FROZEN-SOURCE-v4.json",
+      "sha256": "ff16a240d3fe93579791e9669a289b34d9505eec525c6094477ea2443d900006",
+      "bytes": 3019
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/material-change-proof.json",
+      "sha256": "71054e6fb6256c8e6ffcd055713328364caa48b7208fbb649e99aeb54302c8bd",
+      "bytes": 2557
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v4/independent-material-only-proof.json",
+      "sha256": "2a7b5109bd399affc720a67c63eb0f608383d77c9c1ff7fb867737d8d2195a01",
+      "bytes": 1273
+    }
+  ],
+  "scope": [
+    "Paintedsteelmetallic0,roughnessretained.64,linearbase(.18,.19,.17); interpretedappearance,nothistoricsample.",
+    "Oneboundeddocumentedbridgebayonly; nofullstation/fullbridgecompletionclaim.",
+    "No nativeWASDwalkthrough,sourcephysicalsamplererun,GPU/browser/rootwriteorpublishingperformedbyauditor.",
+    "Allsource8256facesincludinginternalwebreturncontacts retained; no-weldartifactprep."
+  ]
+}

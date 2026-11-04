@@ -1,0 +1,453 @@
+{
+  "schema": 1,
+  "status": "FROZEN accepted geometry source packet; lighting chain pending higher-density floor bake",
+  "createdUTC": "2026-11-04T02:31:22.905640+00:00",
+  "sourceSHA256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "editableSHA256": "d3daeab9b4d046ddc2b9dfefa9ff8f258e6997d6db2e9252c536b274253033ad",
+  "coordinateSpace": "Main0glTF;worldY=Main0Y\u22124.2672 once",
+  "sourceObjects": 27,
+  "sourceTriangles": 25398,
+  "files": [
+    {
+      "path": "model/enclosure-addon.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "bytes": 7132424,
+      "role": "Accepted actual combined source Main0;27owners/25398triangles",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+      "sourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "sourceBytes": 7132424,
+      "encoding": "identity"
+    },
+    {
+      "path": "model/enclosure-addon.blend",
+      "sha256": "d3daeab9b4d046ddc2b9dfefa9ff8f258e6997d6db2e9252c536b274253033ad",
+      "bytes": 4398318,
+      "role": "Accepted editable Blender/GN with packed original granolithic PBR images",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.blend",
+      "sourceSha256": "d3daeab9b4d046ddc2b9dfefa9ff8f258e6997d6db2e9252c536b274253033ad",
+      "sourceBytes": 4398318,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/construction-v1/build_enclosure.py",
+      "sha256": "135f3ef6d390e73a8bc131940419e840697e4be27c44a33013148ab1d1be0367",
+      "bytes": 14158,
+      "role": "Exact executed Blender authoring builder",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/build_enclosure.py",
+      "sourceSha256": "135f3ef6d390e73a8bc131940419e840697e4be27c44a33013148ab1d1be0367",
+      "sourceBytes": 14158,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/extract-input.mjs",
+      "sha256": "2a3101c387d3f17310193ec4def6dabf45d2fdb69d0e6aa6a3b20e0fe843411b",
+      "bytes": 2780,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/extract-input.mjs",
+      "sourceSha256": "2a3101c387d3f17310193ec4def6dabf45d2fdb69d0e6aa6a3b20e0fe843411b",
+      "sourceBytes": 2780,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/partition_floor.py",
+      "sha256": "b7257d2e8bc78e6d3e237f42c5fafbef8465f647669ae48c2eaf3d9808a70a48",
+      "bytes": 3053,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition_floor.py",
+      "sourceSha256": "b7257d2e8bc78e6d3e237f42c5fafbef8465f647669ae48c2eaf3d9808a70a48",
+      "sourceBytes": 3053,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/floor_clip.py",
+      "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a",
+      "bytes": 1479,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor_clip.py",
+      "sourceSha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a",
+      "sourceBytes": 1479,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/pack-retained-base.mjs",
+      "sha256": "cd0a8157daa0b40b9a073e3a8ec48ed3dc2f981498b264eabbc2e92973c61331",
+      "bytes": 4609,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/pack-retained-base.mjs",
+      "sourceSha256": "cd0a8157daa0b40b9a073e3a8ec48ed3dc2f981498b264eabbc2e92973c61331",
+      "sourceBytes": 4609,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/floor_context_membership.py",
+      "sha256": "b989b40129ae8d244273e619eef9450e8152af5c8bcd405a1dae0010d4ecb528",
+      "bytes": 5129,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor_context_membership.py",
+      "sourceSha256": "b989b40129ae8d244273e619eef9450e8152af5c8bcd405a1dae0010d4ecb528",
+      "sourceBytes": 5129,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/floor-context-membership-v2.json",
+      "sha256": "06bae65d5126394ac4df69576ee21915bebf2d8b800cd1dcd4a89b15439cc5e7",
+      "bytes": 4259,
+      "role": "Exact executed ownership/cache helper or accepted specification",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor-context-membership-v2.json",
+      "sourceSha256": "06bae65d5126394ac4df69576ee21915bebf2d8b800cd1dcd4a89b15439cc5e7",
+      "sourceBytes": 4259,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/floor-ownership-v1/input-full.json.gz",
+      "sha256": "5a5e96d5f9e428a03c3e8df1a775d9ca3f0bd9bfe43aaa0bcf0c584362db3da8",
+      "bytes": 20828,
+      "role": "Exact actual runtime interpolation/partition replay data",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/input-full.json",
+      "sourceSha256": "d37cdfc923e86538ee7a4cdb45ed018b395dedd0d1676da0d5a7595aeb742d0e",
+      "sourceBytes": 339810,
+      "encoding": "gzip"
+    },
+    {
+      "path": "source/floor-ownership-v1/input-low.json.gz",
+      "sha256": "06c587ef705b0f6b2fe729ff0923b66310c9f1dac024d840c262edffc6044efd",
+      "bytes": 20835,
+      "role": "Exact actual runtime interpolation/partition replay data",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/input-low.json",
+      "sourceSha256": "117948594ab7d9efc7ebf3ed89d5c4c37d8271049f02558dc96c6ad61cb9db15",
+      "sourceBytes": 339813,
+      "encoding": "gzip"
+    },
+    {
+      "path": "source/floor-ownership-v1/partition-full.json.gz",
+      "sha256": "dcca6096215250f69ecd0f4f3f0b88f93a98000f0f0a1d18378a7b9f1920e494",
+      "bytes": 165687,
+      "role": "Exact actual runtime interpolation/partition replay data",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-full.json",
+      "sourceSha256": "f7261ea341d621a20fd897d076323c8f635e0bf03ea610e608979f54f7c46a49",
+      "sourceBytes": 3495252,
+      "encoding": "gzip"
+    },
+    {
+      "path": "source/floor-ownership-v1/partition-low.json.gz",
+      "sha256": "a6a399dfc3c15af1534ac28a81ee8c985131258a45c48546a14fc1a40c4c8e59",
+      "bytes": 165696,
+      "role": "Exact actual runtime interpolation/partition replay data",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-low.json",
+      "sourceSha256": "fd590ffdb987eb90cc284e23cdd71122b8b11bb0af77d04997ee21eba458a61b",
+      "sourceBytes": 3495255,
+      "encoding": "gzip"
+    },
+    {
+      "path": "replay/retained-base/model-platform.glb.gz",
+      "sha256": "ca06980ee4ebf77d60227893eab3f6f7b51f0109345c5afbd2e0f3d95e9ceaac",
+      "bytes": 260499,
+      "role": "Existing floor partitions removed; new primary MUST append once before runtime use",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/model-platform.glb.gz",
+      "sourceSha256": "ca06980ee4ebf77d60227893eab3f6f7b51f0109345c5afbd2e0f3d95e9ceaac",
+      "sourceBytes": 260499,
+      "encoding": "identity"
+    },
+    {
+      "path": "replay/pre-bridge-base/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970,
+      "role": "Exact original platform input before any Phase12 bridge; all old bridge removal by baseline",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform.glb.gz",
+      "sourceSha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "sourceBytes": 213970,
+      "encoding": "identity"
+    },
+    {
+      "path": "replay/retained-base/model-platform-low.glb.gz",
+      "sha256": "4acb97a454070409cd3bc2618293fce789e6847a1e92ccdc4550cfb68f026610",
+      "bytes": 286136,
+      "role": "Existing floor partitions removed; new primary MUST append once before runtime use",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/model-platform-low.glb.gz",
+      "sourceSha256": "4acb97a454070409cd3bc2618293fce789e6847a1e92ccdc4550cfb68f026610",
+      "sourceBytes": 286136,
+      "encoding": "identity"
+    },
+    {
+      "path": "replay/pre-bridge-base/model-platform-low.glb.gz",
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418,
+      "role": "Exact original platform input before any Phase12 bridge; all old bridge removal by baseline",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform-low.glb.gz",
+      "sourceSha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "sourceBytes": 240418,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/construction.json.gz",
+      "sha256": "db2aa003386aa45200441737cc7333225577d1757bea1913abbc67d0d8a6f7fb",
+      "bytes": 20382,
+      "role": "Exact source construction record; source-qualified rows and explicit local section choices",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/construction.json",
+      "sourceSha256": "618cbd8fa83871b9e0a44b332d7160c307aa592fba0c1efa81b0a4bc3a5445ad",
+      "sourceBytes": 369445,
+      "encoding": "gzip"
+    },
+    {
+      "path": "receipts/FROZEN-SOURCE-v1.json",
+      "sha256": "e8e63571e98a075dc684d9dda0aa97766210524d545c81d47227375171fa193d",
+      "bytes": 10106,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/FROZEN-SOURCE-v1.json",
+      "sourceSha256": "e8e63571e98a075dc684d9dda0aa97766210524d545c81d47227375171fa193d",
+      "sourceBytes": 10106,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/combined-source-floor-proof.json",
+      "sha256": "f3cfdea18c9bee3c3b4179763750eb3a7d5f48996145c01157e9337c61257710",
+      "bytes": 3329,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/combined-source-floor-proof.json",
+      "sourceSha256": "f3cfdea18c9bee3c3b4179763750eb3a7d5f48996145c01157e9337c61257710",
+      "sourceBytes": 3329,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/source-physical-proof.json.gz",
+      "sha256": "4fad5ecc66fa0107095fb9b7fb61fe32273c490f3c838fb10db67e9e58c45bd7",
+      "bytes": 2535,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-physical-proof.json",
+      "sourceSha256": "e07200fdbeb37c367d9175d3d9a9d05043eeecae407748da09e8e880d2e8f972",
+      "sourceBytes": 33841,
+      "encoding": "gzip"
+    },
+    {
+      "path": "receipts/source-cap-contact-proof.json",
+      "sha256": "50f361fda332629af4be1287bd80c1490d23620a4a5c1b1102a1471ecc3605aa",
+      "bytes": 18403,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-cap-contact-proof.json",
+      "sourceSha256": "50f361fda332629af4be1287bd80c1490d23620a4a5c1b1102a1471ecc3605aa",
+      "sourceBytes": 18403,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/partition-pack-proof.json",
+      "sha256": "dab71dc5c1eafc62c579493b0677f34eacba21ad4e20d83d8b6a6016042319f1",
+      "bytes": 3167,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/partition-pack-proof.json",
+      "sourceSha256": "dab71dc5c1eafc62c579493b0677f34eacba21ad4e20d83d8b6a6016042319f1",
+      "sourceBytes": 3167,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/bridge-bearing-train-fit-final.json",
+      "sha256": "d181fbeb5e29eae336be320d5083feb9375e60264e89f0102ddb45a8cacf6221",
+      "bytes": 12045,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/audit-v1/bridge-bearing-train-fit-final.json",
+      "sourceSha256": "d181fbeb5e29eae336be320d5083feb9375e60264e89f0102ddb45a8cacf6221",
+      "sourceBytes": 12045,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/actual-context-cut-preflight-v2.json",
+      "sha256": "27751cff5d037ad9a6e8ebc1a403813d26caeb3b0c267e98812185f96e18bc4c",
+      "bytes": 5655,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/actual-context-cut-preflight-v2.json",
+      "sourceSha256": "27751cff5d037ad9a6e8ebc1a403813d26caeb3b0c267e98812185f96e18bc4c",
+      "sourceBytes": 5655,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/cache-runtime-hidden-interface-reconciliation.json",
+      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "bytes": 3044,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+      "sourceSha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "sourceBytes": 3044,
+      "encoding": "identity"
+    },
+    {
+      "path": "receipts/phase9-hidden-interface-reconciliation.json",
+      "sha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+      "bytes": 3344,
+      "role": "Essential source/physical/floor/cache acceptance evidence",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+      "sourceSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+      "sourceBytes": 3344,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/acceptance-v1/check-source-floor.mjs",
+      "sha256": "31cb1929cb2635079229e31787944731a3504aa4ea958392167cc0b7338c9d92",
+      "bytes": 7495,
+      "role": "Executed source/floor/physical check or prepared final chain checker; final GI chain pending",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/check-source-floor.mjs",
+      "sourceSha256": "31cb1929cb2635079229e31787944731a3504aa4ea958392167cc0b7338c9d92",
+      "sourceBytes": 7495,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/acceptance-v1/check-source-physical.mjs",
+      "sha256": "49c5d790166f476bc6c94cc074c203306c35c8235f7768b7710379c545b483d2",
+      "bytes": 6137,
+      "role": "Executed source/floor/physical check or prepared final chain checker; final GI chain pending",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/check-source-physical.mjs",
+      "sourceSha256": "49c5d790166f476bc6c94cc074c203306c35c8235f7768b7710379c545b483d2",
+      "sourceBytes": 6137,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/acceptance-v1/check-source-cap-contact.mjs",
+      "sha256": "7d964958b49e119ba9c047c9f77bd98c56a6b440f97a25b044d57ffe6d3ae90c",
+      "bytes": 3167,
+      "role": "Executed source/floor/physical check or prepared final chain checker; final GI chain pending",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/check-source-cap-contact.mjs",
+      "sourceSha256": "7d964958b49e119ba9c047c9f77bd98c56a6b440f97a25b044d57ffe6d3ae90c",
+      "sourceBytes": 3167,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/acceptance-v1/check-final-chain.mjs",
+      "sha256": "e3199e51005bb06f9d894e1034d4aef7f1ca806443558d22b746d6b863c44366",
+      "bytes": 10928,
+      "role": "Executed source/floor/physical check or prepared final chain checker; final GI chain pending",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/check-final-chain.mjs",
+      "sourceSha256": "e3199e51005bb06f9d894e1034d4aef7f1ca806443558d22b746d6b863c44366",
+      "sourceBytes": 10928,
+      "encoding": "identity"
+    },
+    {
+      "path": "source/audit-v1/row-fit-final.mjs",
+      "sha256": "985295519af8706d0086420f81497696f15f257f309b80165fe63c1f25381892",
+      "bytes": 4251,
+      "role": "Executed final55 receiver/actual train presence census",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/audit-v1/row-fit-final.mjs",
+      "sourceSha256": "985295519af8706d0086420f81497696f15f257f309b80165fe63c1f25381892",
+      "sourceBytes": 4251,
+      "encoding": "identity"
+    },
+    {
+      "path": "research/FROZEN-ADJACENT-ROWS-v1.json",
+      "sha256": "f624be99c7b6f09245b716728ae110465268a3178a3e759cf161e8ee3d54d821",
+      "bytes": 10914,
+      "role": "Exact frozen primary source registration/section-family scope",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/FROZEN-ADJACENT-ROWS-v1.json",
+      "sourceSha256": "f624be99c7b6f09245b716728ae110465268a3178a3e759cf161e8ee3d54d821",
+      "sourceBytes": 10914,
+      "encoding": "identity"
+    },
+    {
+      "path": "research/phase12-FROZEN-DESIGN-SCOPE-v1.json",
+      "sha256": "bd7d4500fa720d844ea4733bfea618b83e9bcb25a19658ca69d13207e234e748",
+      "bytes": 12693,
+      "role": "Exact frozen primary source registration/section-family scope",
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/research/FROZEN-DESIGN-SCOPE-v1.json",
+      "sourceSha256": "bd7d4500fa720d844ea4733bfea618b83e9bcb25a19658ca69d13207e234e748",
+      "sourceBytes": 12693,
+      "encoding": "identity"
+    },
+    {
+      "path": "README.md",
+      "sha256": "361d9e4fad810fcea8a647fee5dac70abab293c599ee33cee57ff655dcb5262c",
+      "bytes": 3406,
+      "role": "Scope, held-lighting qualification and exact replay instructions",
+      "encoding": "identity"
+    }
+  ],
+  "intentionallyExternalInputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/next-visual-references/asce69.pdf",
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+      "bytes": 34864081,
+      "role": "Primary evidence check used by executed builder; retained external to avoid duplicate reference media",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf301.png",
+      "sha256": "c844c68568309169634c40c167c04ba8e126b94f6ffc80f4f514fa1c52ca759f",
+      "bytes": 2192353,
+      "role": "Primary evidence check used by executed builder; retained external to avoid duplicate reference media",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf309.png",
+      "sha256": "ca62f2c5d6090cac7d932f6a55c07f8a9a0ae57568a6ff3f0a287dcbb739a3a3",
+      "bytes": 1900042,
+      "role": "Primary evidence check used by executed builder; retained external to avoid duplicate reference media",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/source-route-v1/prr74-pdf53.png",
+      "sha256": "8d5e93d48d0a865eeb398bb96d4651a79d8448461a624d00d17c1fa92481ce0d",
+      "bytes": 391826,
+      "role": "Primary evidence check used by executed builder; retained external to avoid duplicate reference media",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/granolithic-basecolor.png",
+      "sha256": "6a3dcb0c18720c5a6e0b09d364a2f8dd78224519dae1cc4e001d74d9a487b8e2",
+      "bytes": 1473134,
+      "role": "Original author-created PBR image; already packed in editable/raw; external file required only for clean builder replay",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/granolithic-normal.png",
+      "sha256": "cabf112ba459e80f662edfaa9632b5cf7889dcc4e9b1b05609adb45627e278a2",
+      "bytes": 1501792,
+      "role": "Original author-created PBR image; already packed in editable/raw; external file required only for clean builder replay",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/granolithic-roughness.png",
+      "sha256": "53a1a584267eaad13c8eda604dbbf6535a30864609abce7efa5f0abcb8b1fb64",
+      "bytes": 1227466,
+      "role": "Original author-created PBR image; already packed in editable/raw; external file required only for clean builder replay",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/gallery-prebake-scene.blend",
+      "sha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3",
+      "bytes": 207444046,
+      "role": "Accepted external context cache; strict five-owner cut only; large scene intentionally omitted",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231,
+      "role": "Unchanged actual train geometry used by physical occupancy census",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs",
+      "sha256": "b5b1fb1ab8d73e2d39a990b18dcbaa399e44681568d387a1c693eec51ccb925d",
+      "bytes": 3200,
+      "role": "Existing repository replay dependency, intentionally reused",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs",
+      "sha256": "bd85df19cb8151236bcbb75cfcbfb5d8a8c40865e10e58745809d837f10a4030",
+      "bytes": 4950,
+      "role": "Existing repository replay dependency, intentionally reused",
+      "embeddedInPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/gltf_hierarchy.mjs",
+      "sha256": "adef6ab232c0b036a148ff81c8e40b2ebb5252630fc93eaeeb0604d813f0c835",
+      "bytes": 1397,
+      "role": "Existing repository replay dependency, intentionally reused",
+      "embeddedInPacket": false
+    }
+  ],
+  "payloadBytes": 13081279,
+  "qualifications": [
+    "No source geometry, PBR or UV0 changes in upcoming lightUV-only repack.",
+    "Copied executed scripts retain original absolute paths; mapping recorded per file.",
+    "Only accepted current source plus essential replay and evidence retained; no old candidate outputs.",
+    "Gzip records verify exact decompressed original SHA256.",
+    "Final higher-density lighting/raw/encoded/mounted acceptance must be supplied separately."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "status": "Phase10 evidence and builders retained; superseded editable addon recoverable through exact immutable Git/external identity after verified Phase11 source promotion.",
+  "files": {
+    "raw-source-recovery.json": {
+      "bytes": 792,
+      "sha256": "c2260fb8bb4587840f6b3e08321163820f9794971aca9c079e583ee3ff33e9ba"
+    },
+    "README.md": {
+      "bytes": 4008,
+      "sha256": "aa81c3558ead1f7ebf1ac833d244a0e8f80e6e6cca4e9a7b6f65b573a17d2d89"
+    },
+    "construction.json": {
+      "bytes": 13669,
+      "sha256": "c4c6e164858fa9272f30d72ffd26dbfc2cd9f2a345a09778c3b37a0686dfed67"
+    },
+    "material-dependencies.json": {
+      "bytes": 5340,
+      "sha256": "5d4ba2b0df6964ad5f9d1dbebf3936dd63f3570690ceceda8be6959e30424eef"
+    },
+    "materials/enamel/enameled-brick-roughness.png": {
+      "bytes": 64511,
+      "sha256": "4c26840a001e7d60552972900729dca8195310e2e75ec8bb4bc88f5b8a0ac684"
+    },
+    "materials/enamel/enameled-brick-normal.png": {
+      "bytes": 80993,
+      "sha256": "bad663d9afb39f8ac6124ad2370e30055b6bf7b515f668dcdc876c3217e3f636"
+    },
+    "materials/enamel/enameled-brick-color.png": {
+      "bytes": 139754,
+      "sha256": "40d21822d0288860dc09de3c4273c601d237df8b3e798b6befe843d1d8a3ada2"
+    },
+    "materials/enamel/map-readback.json": {
+      "bytes": 1536,
+      "sha256": "d8c0f5cfcec75fee70b64a8c8ad14d1e47247bc36ef750d8dedf64a3edeb9153"
+    },
+    "materials/enamel/material-proof.json": {
+      "bytes": 2589,
+      "sha256": "0da74dc502b69e2f1303496c4c5fcc798e393df179fed7dbf9dd6d2bd72493b2"
+    },
+    "materials/enamel/enamel-brick-procedural.blend": {
+      "bytes": 90978,
+      "sha256": "5c00a753142a3aa70cdfc2b245ebbf4ae92008f9f656ba6038a0e7d70f63132e"
+    },
+    "evidence/essential-photo-crop-proof.json": {
+      "bytes": 864,
+      "sha256": "bc44cd440721b5d14905633dbda2d5d7c94832c98e0f495fba371d551033e950"
+    },
+    "evidence/initial-pixel-registration.json": {
+      "bytes": 476,
+      "sha256": "abaa8a70533bb2516adec9419c09450e0d82efaf60d4edd5acd1f997b084eb30"
+    },
+    "evidence/context-route.json.gz": {
+      "bytes": 825,
+      "sha256": "32dd838a2cdc88462e3a10045657333bbb54782fceb17d41277a298da74bfdfb"
+    },
+    "evidence/source-route-summary.json": {
+      "bytes": 13158,
+      "sha256": "04f0fc1bd7f2c74d936ca276824d7e0fa473d1318a780524b73ac9cd398e9773"
+    },
+    "evidence/integrated-cpu-v2-source-comparison.json.gz": {
+      "bytes": 1255,
+      "sha256": "f1cddd97754c8d6c0804cd1b7cf8b10498b528313ec82a9ca0c865543c3be735"
+    },
+    "evidence/integrated-cpu-v2-current-policy-SUMMARY.json.gz": {
+      "bytes": 1685,
+      "sha256": "86b1bd710a629c6203ecb48f782bac13962360b0d47f0aec8a7cfa718bb4021b"
+    },
+    "evidence/editable-source-audit.json": {
+      "bytes": 6718,
+      "sha256": "728b32f377a9143cea0db9b4249a14c2c20b49f5e02516e04a1039d993c2bc64"
+    },
+    "evidence/north-probable-support-trace.json.gz": {
+      "bytes": 1411,
+      "sha256": "c43b323fa2f066fc2f0732d669c2883425325614a6323c19c2170e24e5097f45"
+    },
+    "evidence/context-north-sidewalk-precise.json.gz": {
+      "bytes": 580,
+      "sha256": "63057ae8f1e15fef3d40f1c9a888b5b8b7fa6dd9fe13c361718aaf9e1ee58318"
+    },
+    "evidence/ROUTE.md": {
+      "bytes": 1717,
+      "sha256": "fb6efe0c2f8ad136f288c80a4c51be875109f178762280e0088ad8613a6cf235"
+    },
+    "evidence/cuts/FROZEN-CUTS.json.gz": {
+      "bytes": 1858,
+      "sha256": "e7170eb52a9ff8baf6f83f3535af1632169820b413dad9ec74bed1d4630aa731"
+    },
+    "evidence/cuts/README.md": {
+      "bytes": 2223,
+      "sha256": "2c7e0a3aac3c35c19f2e4b23290dcb481eff11fac488628d27514d3c306d0d05"
+    },
+    "evidence/cuts/cut-receipt.json.gz": {
+      "bytes": 1820,
+      "sha256": "0ec7d6d191e82fbb08bf3ee450745c5cd487d0c4da4a43f592377f9b43f56cae"
+    },
+    "evidence/cuts/independent-cut-audit.json.gz": {
+      "bytes": 1110,
+      "sha256": "97fba46e169a1deb590b94576558ac991387f79c32eb42af73dfcebaab9e9486"
+    },
+    "source/cut-current-route-v5.mjs": {
+      "bytes": 12432,
+      "sha256": "4e668a96f23ac9167db44c2d67a2215dd77c7022ca75fccee3bac4e1ed6106f0"
+    },
+    "source/escalator_pair.py": {
+      "bytes": 9447,
+      "sha256": "479d12c1368ab2aaa2001434631f1f6364f0cbc28fcbdbbd2ca3e1ed9611f6c9"
+    },
+    "source/audit-cuts-final.mjs": {
+      "bytes": 4625,
+      "sha256": "f5a45260ed4455908fddb7f558bf1464a1e85b5fb41aacc72340aaf850859f30"
+    },
+    "source/route_builder.py": {
+      "bytes": 14300,
+      "sha256": "4bd6cf995d95abc2e54fe04aea4a917a5ede8b129ffe0efd63c3de385f974623"
+    },
+    "source/open-source-portably.py": {
+      "bytes": 792,
+      "sha256": "d143c9e73cfcf2fefeac63995d9e080480489309fb26776dc51f97196baad582"
+    },
+    "source/check-integrated-route-v2-current-policy.mjs": {
+      "bytes": 6147,
+      "sha256": "8e38d5cab69164fc08b5f0c882b3e5200042b14079748a3aa8fc3d95e0905124"
+    },
+    "source/route-v2.json": {
+      "bytes": 30437,
+      "sha256": "5efaf82cb59f76ffc3efdf509f67ac6861d5dccbe4fedd55cc9478e1e17e2704"
+    },
+    "source/build-enamel-material-v2.py": {
+      "bytes": 7783,
+      "sha256": "d037227ed8e5fcf5c4743a1d430e356cd260b9b49cbb8bd05c3b43e60801734b"
+    },
+    "source/compare-v1-v2-source.mjs": {
+      "bytes": 3121,
+      "sha256": "b0ce4b622c81980bb348f1e8a9794f76494d94270d52350b46db89e3281a4efd"
+    },
+    "primary/PRR1910-exit-stair-to33rd.png": {
+      "bytes": 391826,
+      "sha256": "8d5e93d48d0a865eeb398bb96d4651a79d8448461a624d00d17c1fa92481ce0d"
+    },
+    "primary/Otis-Penn-ad-native-essential.png": {
+      "bytes": 726694,
+      "sha256": "e1e82f7b86b477c9f59f3b1cf433693f74ff148fa3e153abe4c6a1d6624c3ccd"
+    }
+  },
+  "archivedAuthoringVersions": {
+    "model/arrivals-exit-addon.blend": {
+      "bytes": 16107186,
+      "sha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+      "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+      "gitBlob": "6d1f94105f772ceadbf8eab3f0fb181b63a62112",
+      "repositoryPath": "authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+      "archiveCondition": "Only after the new Phase11 full editable Blender scene has been copied into the repository and byte-verified. This is a versioned Phase10 addon, not canonical core c4.",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase11/exit-street-fix/phase10-addon-recovery.json",
+      "restoreHelper": "authoring/penn-station-1935/review/phase11/exit-street-fix/restore-phase10-addon.py"
+    }
+  }
+}

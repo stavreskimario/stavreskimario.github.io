@@ -1,0 +1,19 @@
+{
+  "engine": "4.3.0",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "worldRadiance": 1,
+  "surfaceAlbedo": 0.5,
+  "bakeColourPass": false,
+  "measuredBakeMean": 1.0,
+  "expectedHemisphereIrradiance": 3.141592653589793,
+  "conversionToThreeLightMap": 3.141592653589793,
+  "retainedHdr018Mean": 0.1796875,
+  "explanation": "Cycles lighting-only diffuse bake is unit-albedo outgoing radiance. Three.js lightMap enters Lambert irradiance, so multiply the decoded map by pi.",
+  "passed": true
+}

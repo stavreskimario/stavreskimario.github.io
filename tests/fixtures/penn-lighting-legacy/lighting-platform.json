@@ -1,0 +1,183 @@
+{
+  "zone": "platform",
+  "source": "model-platform.glb",
+  "sourceSha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
+  "resolution": 2048,
+  "samples": 64,
+  "aoPathSamples": 4,
+  "aoNodeSamples": 24,
+  "engine": "4.3.0 Cycles METAL",
+  "device": {
+    "requested": "AUTO",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "atlasSurfaceArea": 0.8741489052772522,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
+  "registeredOccluders": [
+    {
+      "zone": "exterior",
+      "source": "model-exterior.glb",
+      "sha256": "5ff73a639078fc06efb941a0141fd212261394acfbdee595545979cef702a193",
+      "heightOffset": 4.2672,
+      "objects": 14
+    },
+    {
+      "zone": "waiting-room",
+      "source": "model-waiting-room.glb",
+      "sha256": "66be79cd8c14b01213b8b4399e1035e3f6974f7a6b36d547c25004e7a2754286",
+      "heightOffset": 0.0,
+      "objects": 27
+    },
+    {
+      "zone": "concourse",
+      "source": "model-concourse.glb",
+      "sha256": "7e87da6a1ac77ec4915343da289bc4f04b004cd032cbfdf267d94e5c7f4db0bf",
+      "heightOffset": 0.0,
+      "objects": 81
+    },
+    {
+      "zone": "context",
+      "source": "model-context.glb",
+      "sha256": "5d3722673b834eaf875342064230c197bf51647986f59e042038b03c970ff425",
+      "heightOffset": 4.2672,
+      "objects": 10736
+    },
+    {
+      "zone": "trains",
+      "source": "model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "heightOffset": -8.886825000000002,
+      "objects": 66
+    }
+  ],
+  "unbakedPrimaryMeshes": 66212,
+  "surfaceProfiles": [
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.055,
+      "roughnessFactor": 0.58
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.14,
+      "roughnessFactor": 0.88
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.48
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.12,
+      "roughnessFactor": 0.95
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1.0,
+  "retainedHdrTransfer": "linear; separate Non-Color float buffer set before pixel assignment",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.6859079003334045,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7600002884864807,
+    "mean": 0.28840529918670654,
+    "coveredPixels": 3795346
+  },
+  "elapsedSeconds": 108.16325558297103,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-platform.glb"
+}

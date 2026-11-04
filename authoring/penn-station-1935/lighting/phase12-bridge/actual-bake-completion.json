@@ -1,0 +1,65 @@
+{
+  "status": "PASS actual frozen Phase12 clean Metal bake; no walkthrough or full reconstruction claim",
+  "packetSha256": "16e09eb44521dfc74b332a863be9ff08cea99ee0aab4770281f0cb0fe83e0d22",
+  "started": "2026-11-03T23:53:37.828146+00:00",
+  "closed": "2026-11-03T23:54:46.354916+00:00",
+  "seconds": 68.52653813362122,
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "staticPrimaryPointLights": 0,
+  "staticNeighborPointLights": 10,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7600003480911255,
+    "mean": 0.01751793548464775,
+    "coveredPixels": 11865967
+  },
+  "atlasSurfaceArea": 0.373148113489151,
+  "allInputPinsStillExact": true,
+  "inputPinCount": 70,
+  "runtimePointLightsExcluded": true,
+  "actualPrebakeAcceptanceSha256": "3705447714120a163c50195e8e75832b8822cbb88b9e8f7eb982f273029f3ea3",
+  "metalBinaryArchivesDisabled": false,
+  "outputs": {
+    "model-platform-bridge.glb": {
+      "bytes": 5346804,
+      "sha256": "0187cd04b333d106bb7a4df622a506070c750a662a0438bd3051be2f51cbbc3a"
+    },
+    "lighting-platform-bridge-ao.png": {
+      "bytes": 4628953,
+      "sha256": "daa993645861f23ce11297efa010967611a2a2b34857bd09df2f0321a2e08a9e"
+    },
+    "lighting-platform-bridge-sky-low.png": {
+      "bytes": 128701,
+      "sha256": "536daf6a3973ad7f686889240046eaa73bdf450e00b7bcfb19577e5906a6a614"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 6152,
+      "sha256": "3705447714120a163c50195e8e75832b8822cbb88b9e8f7eb982f273029f3ea3"
+    },
+    "prepared-scene-control.json": {
+      "bytes": 24563,
+      "sha256": "9eeac7254f1b906b9096061a36eb68d7c376a06ae92be4479dc0d3947d03a1a5"
+    },
+    "lighting-platform-bridge.json": {
+      "bytes": 26420,
+      "sha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff"
+    },
+    "lighting-platform-bridge-sky.hdr": {
+      "bytes": 18666535,
+      "sha256": "52df460c3d0d358ddab7ebf75131088c91b924329331eadae3048fee15bc513b"
+    },
+    "lighting-platform-bridge-sky.png": {
+      "bytes": 6796339,
+      "sha256": "28ec62a1b267750c9f9fb5d31d2378d0e2547fae2fc93b9a58b2d32c14c06c7a"
+    }
+  },
+  "runnerSha256": "e9e4220f7872400a609ccf50bb98c8a4cb46d93a0608e52db2cf1a2c2c28ae51"
+}

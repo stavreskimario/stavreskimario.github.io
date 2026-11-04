@@ -1,0 +1,44 @@
+# Phase 11: lower arrivals gallery finish recommendations
+
+Status: source review and external proposal only. No root, runtime, geometry, material, lighting or publishing edit was made. Browser walking walkthrough remains omitted at the user's request. This proposal prioritizes the street-exit obstruction repair, then coordinated gallery finish; roof flicker, mobile and fuller Manhattan stay later.
+
+## Buildable finish scope
+
+| Component | Primary support | Concrete next construction | Uncertainty / constraint |
+| --- | --- | --- | --- |
+| Ordinary 60 ft lower gallery edges and stair mouths | Gibbs p.242 / Fig.3; Plate LXXXIV Fig.2; LOC det.4a23720 | Complete actual slab fascia, girder/stringer seats, stair-head returns and underside junctions along the accepted P1–8 extent. Repeat a complete reviewed bay with its material/UV/joints, rather than adding isolated rails. Keep the two open gallery aisles and existing platform sightlines. | Ordinary Exit is open-sided. Do not enclose it with opaque continuous side walls. Exact fabrication and individual platform numbering remain reconstructed. |
+| Visible underside of the Main floor | PRR1910 PDF53 shows transverse beams, shallow bays and overhead glass-prism panels; Plate LXXXIV Fig.2 also shows framed prism fields | Finish the actual existing Main-floor underside and exposed ribs: close genuine construction seams, provide coherent edge returns and preserve the registered light-transmitting prism fields. Add local end closures only where a real receiver exists. | No universal solid dropped ceiling, classical coffer pattern or invented soffit datum. The 11 ft table entry is not a uniform modeled clearance plane. Do not block the real prism glazing with an opaque finishing sheet. |
+| Under-33rd passage retaining walls | Gibbs p.254 explicitly identifies enameled brick facing | Continue the existing Phase10 enamel PBR coherently across registered opaque retaining-wall faces and around actual jamb returns, with matched physical scale and intact apertures. Resolve wall-to-floor and wall-to-ceiling joints. | This material is documented under33rdStreet; it is not evidence for lining all ordinary gallery bays. Pale hue, bond, brick size, mortar and glaze remain interpreted. |
+| Plain bases, skirting and solid pier returns | PRR1910 PDF53 shows plain solid pier faces and restrained lower edge treatment; source scope does not identify a decorative Exit skirting specification | Use small, plain grounded returns only at existing enclosed wall/pier feet. A restrained 2–4 mm edge bevel is a rendering interpretation; avoid new patterned panels or ornamental cornices. If a skirting height is chosen, label it inferred and keep it inside the actual wall footprint. | The primary packet does not verify a universal stone skirting profile or height. Do not call it documented travertine/marble. Gibbs' broad interior-cut-stone paragraph does not identify every Exit finish. |
+| Gallery walking surface and tread material | The primary photos show a relatively plain, pale walking surface; exact composition is not resolved here | Refine the existing surface with coherent metre-scale UVs, subtle roughness/normal variation and sound physical tread/floor contacts. Reduce overlarge repeated veins if present. Preserve source-floor geometry and existing lit atlas ownership. | Marble, granite and granolithic finish are not interchangeable verified facts for the ordinary Exit floor. Preserve the material qualification; no luxury veined-marble design should be invented. |
+| Lower-area light fixtures | PRR1910 PDF53 shows shallow pale cone/bell pendants hung from the framed underside | Preserve complete physically supported fixtures; add further members only with real ceiling mounts, using the photographed shallow shade/stem family. Reconcile a fresh bake with actual glass daylight and current occluders. | Fixture count, spacing, wattage, warm tone and exact body material remain inferred. Do not clone Main-concourse candelabra into the lower ceiling. Opal glass versus an opaque enamel shade is unresolved in this photograph. |
+| Source-supported wayfinding | PRR1910 PDF53 shows a light-lettered dark rectangular `33rd STREET` sign on a transverse fascia above the exit approach | Add one small physically mounted sign at the actual under-street/street-ascent decision point, using the documented wording and dark-board/light-letter family. Place its face toward approaching walkers; test the readable side and avoid the earlier reversed-text defect. | Exact photograph-to-plan location, physical size, font and 1935 survival are not authenticated. Do not imply that the ambiguous northwest service/fixture rectangle is a street stair. A model placement at the selected route is reconstructed. |
+
+The largest useful visual change is the continuous finished structure above and beside the full lower route: physically joined fascia/ribs/returns, source-constrained wall material, coherent floor texture scale, and daylight through real prism fields. No new wall should hide the accepted open track views. New signs should be physically small; the removed location overlay should stay removed.
+
+## Do not fabricate
+
+- No continuous enclosing side walls through the open ordinary gallery, universal ceiling plate or invented regular support grid.
+- No verified stone species, universal skirting, decorative mural, platform-number assignment or exact 1935 fixture schedule from this packet.
+- No new LIRR/P9 connection or direct northwest public stair from the previously rejected service/fixture rectangle.
+- No fresh browser walking acceptance claim while the user has skipped that walkthrough.
+
+## Primary references inspected
+
+- Gibbs, ASCE69, p.242/PDF426: separate narrower Exit below Main and the two-deck under33rd passage. <https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=426>
+- Gibbs, Plate LXXXIV Fig.2/PDF439: actual lower stair/gallery framing and open edges. <https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=439>
+- LOC item2016815392, negative071937 / det.4a23720: track, Main and Exit concourses in one view. Negative071937 is not a1937 date. <https://www.loc.gov/item/2016815392/>
+- PRR, The New York Improvement and Tunnel Extension, issued October1910, PDF53: lower Exit, elevator, stair to33rdStreet, framed/prism underside, pendants and street sign. <https://upload.wikimedia.org/wikipedia/commons/4/4f/The_New_York_improvement_and_tunnel_extension_of_the_Pennsylvania_railroad._Issued_October%2C_1910_%28IA_newyorkimproveme00penn%29.pdf#page=53>
+- Gibbs p.254/PDF442: enameled brick under33rd and in elevator shafts; gray wire-cut brick in train-sheds is a distinct use. <https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=442>
+
+`inspected-source-identities.json` pins the cached actual images/text inspected. This is opening-era evidence, not a complete survey of1935–1940 survival.
+
+## Exact storage reserve proposal
+
+`storage-candidates.json` records four generated outputs totaling **67,618,527 bytes**, pinned to immutable commit `a13683d9fcd28cc91cf49afc0e04d8585208d566` and verified external recovery copies. No file has been moved or deleted.
+
+The Phase10 raw/denoised HDR pair alone reserves62,354,138bytes. At inspection both were active source-validator inputs: `tests/penn-assets.cjs` called `verifyExitsSource` for raw HDR and `retainedHdr` for denoised HDR. Root clarified that the new Phase11 module/report and explicit source policy will select fresh Phase11 roots before archival. Therefore the old HDRs can become historical generated outputs without adding a Git reader to the current validator; preserve exact Git/external restoration for historical replay. Keep all reports, existing PNG derivatives, runtime WebP/KTX2, input material maps and canonical Blender files.
+
+The two superseded Phase3 denoised concourse/waiting PNGs provide5,264,389bytes. Current selected runtime provenance usesPhase4 for concourse and the split waiting atlases, so these old PNGs are not the current pixel-validation sources. Their similarly named phase7 legacy backups were checked and differ; the proposal therefore records fresh immutable-Git-derived exact recovery copies instead. Historical full-source replay may require restoration.
+
+If approved within the current task scope, create a fresh non-overwriting external archive and recovery receipt before any root removal, retain byte identities in a root manifest/README, and distinguish published runtime assets from Git-backed historical authoring outputs. At a998.99MB current tree plus approximately67MB new sources this four-file reserve leaves little space for additional models/docs; measure the final complete tree again. This is a source-retention decision with zero runtime quality reduction, not texture downsampling or geometry simplification.

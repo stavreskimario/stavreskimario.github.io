@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "scope": "Actual immutable prepatch Exterior+Concourse transports, exact replay of selected canonicalA; eight rejection controls. No geometry generated.",
+  "helperSha256": "b726c4b0bc8e1121c1d918ea29aae0116eb6bd51cd513aff8dd35b71c9036d72",
+  "replay": [
+    {
+      "scope": "exterior",
+      "inputCommit": "0177ad20621a85fcf2ca476b549f73ec02761535",
+      "file": "model-exterior.glb.gz",
+      "inputSha256": "7ca9e045ac45a7b96253da50babe0759b33ae952abb2158270cf5e94d742b410",
+      "outputSha256": "81a5b1b03b3d2beeab26f38a4f1411aea7d2f85c816e28e71436a480e55b7866",
+      "exactFinalTransportReplay": true,
+      "proof": {
+        "schema": 1,
+        "scope": "exterior",
+        "inputSha256": "7ca9e045ac45a7b96253da50babe0759b33ae952abb2158270cf5e94d742b410",
+        "inputDecodedSha256": "e63b2211b9e96a50f0ade54e8cc9585d0c5e51e762a587e18852671e0adab32d",
+        "outputSha256": "81a5b1b03b3d2beeab26f38a4f1411aea7d2f85c816e28e71436a480e55b7866",
+        "outputDecodedSha256": "b8bea3799b5d1b576612249e3a7ee5e3a4c655629a963343a195a0640d94024a",
+        "inputBytes": 4273265,
+        "outputBytes": 4206073,
+        "outputDecodedBytes": 13809268,
+        "textureURI": "textures/57b74bfd6c788b7c2da2.ktx2",
+        "binaryTailBytes": 13753052,
+        "binaryTailSha256": "137e481fac4c67f9ba71b14bc0d2881fabe864aeeb25354a8ecd19e58bb2dfbe",
+        "entireBinaryTailExact": true,
+        "allOtherJsonExact": true,
+        "normalStrengthUnchanged": true,
+        "materialChanges": [
+          {
+            "materialIndex": 11,
+            "name": "TravertineArcadeCastComposition",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 16,
+            "name": "TravertineArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 17,
+            "name": "TravertineAshlar-2ArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 18,
+            "name": "TravertineAshlar-1ArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 19,
+            "name": "TravertineAshlar0ArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 20,
+            "name": "TravertineAshlar1ArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          },
+          {
+            "materialIndex": 21,
+            "name": "TravertineAshlar2ArcadeRepairPhase9",
+            "before": {
+              "index": 13,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 22,
+              "scale": 0.03500000014901161
+            }
+          }
+        ]
+      }
+    },
+    {
+      "scope": "arrivals",
+      "inputCommit": "0177ad20621a85fcf2ca476b549f73ec02761535",
+      "file": "model-concourse.glb.gz",
+      "inputSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "outputSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "exactFinalTransportReplay": true,
+      "proof": {
+        "schema": 1,
+        "scope": "arrivals",
+        "inputSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+        "inputDecodedSha256": "9fa941951423438496159f425ffb5455977727b7a92b04a14db9df02bd1c92ec",
+        "outputSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+        "outputDecodedSha256": "fd0bb8344c8ec0afb06de59531e841809aee60a9188f7b141db39c7c09ceb89b",
+        "inputBytes": 5171505,
+        "outputBytes": 5092816,
+        "outputDecodedBytes": 17710380,
+        "textureURI": "textures/57b74bfd6c788b7c2da2.ktx2",
+        "binaryTailBytes": 17635808,
+        "binaryTailSha256": "1cc13bb4504ced363d15500bd7475e3d60638eb4f567dacd6c3f017aec2d080e",
+        "entireBinaryTailExact": true,
+        "allOtherJsonExact": true,
+        "normalStrengthUnchanged": true,
+        "materialChanges": [
+          {
+            "materialIndex": 24,
+            "name": "TravertineArrivalsStairStone",
+            "before": {
+              "index": 27,
+              "scale": 0.03500000014901161
+            },
+            "after": {
+              "index": 33,
+              "scale": 0.03500000014901161
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "negativeControls": [
+    "exterior:wrong input pin",
+    "exterior:wrong scope",
+    "exterior:double application",
+    "exterior:missing exact target",
+    "arrivals:wrong input pin",
+    "arrivals:wrong scope",
+    "arrivals:double application",
+    "arrivals:missing exact target"
+  ]
+}

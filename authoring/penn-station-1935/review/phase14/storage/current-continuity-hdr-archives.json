@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "status": "ACTIVE exact Git-backed physical source retention; no runtime image or material change",
+  "sourceCheckpoint": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+  "createdUTC": "2026-11-04T06:32:36.260274+00:00",
+  "externalByteExactBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/parent/continuity-retention-v1/fresh-independent-copy",
+  "restoreFixture": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/parent/continuity-retention-v1/restore-fixture",
+  "files": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase14-continuity/raw/lighting-platform-continuity-sky.hdr.gz",
+      "commit": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+      "blob": "bace3f58d0ab472e02015d26fe818dbd527de2a2",
+      "bytes": 9294575,
+      "sha256": "b3a19ed5cdfe3702341017460abe10904ce94dd31275ec76745aa173d2d233cd",
+      "decodedBytes": 11811140,
+      "decodedSha256": "740560f2fa5bc37b41ba113aa8aa9d1c07305c4d32fdacff2ea27ae260fb0a67",
+      "width": 4096,
+      "height": 4096,
+      "observedRootPresent": true,
+      "externalFrozenSource": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/structure-bake-v1/root-source-candidate/raw/lighting-platform-continuity-sky.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase14-continuity/denoised/lighting-platform-continuity-sky-denoised-linear.hdr.gz",
+      "commit": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+      "blob": "e37c0abc9bec36bcdd9e84e1bdae556103d0fd52",
+      "bytes": 13227134,
+      "sha256": "1d89cb995558f9f6db2730d9710d0d2bf73dfe43a9988b3dcfb7247682bd7bb5",
+      "decodedBytes": 67649587,
+      "decodedSha256": "580fe531b4c89e3c3f6f88ac1a72ff062f6d9dce72c2d7af5a20d1bed3a15334",
+      "width": 4096,
+      "height": 4096,
+      "observedRootPresent": true,
+      "externalFrozenSource": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/structure-bake-v1/root-source-candidate/denoised/lighting-platform-continuity-sky-denoised-linear.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase14-floor/raw/lighting-platform-continuity-floor-sky.hdr.gz",
+      "commit": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+      "blob": "4902d66c201151926fc36db31d22917e1aef501e",
+      "bytes": 15436324,
+      "sha256": "cf6f4ef3bab342a2700497b7e7a0e52c757625d320248c40d152e585585f3334",
+      "decodedBytes": 19381763,
+      "decodedSha256": "2caa229408d72796b2c2c4fd09c47eb898d5c670ecfd1ea6ec3729c289b2ee18",
+      "width": 4096,
+      "height": 4096,
+      "observedRootPresent": true,
+      "externalFrozenSource": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-bake-v1/root-source-candidate/raw/lighting-platform-continuity-floor-sky.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase14-floor/denoised/lighting-platform-continuity-floor-sky-denoised-linear.hdr.gz",
+      "commit": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+      "blob": "85368fcd444df81507abf049f4859ef18917b3bc",
+      "bytes": 13647937,
+      "sha256": "f1cfc20ddaa46fe601b1089f6ad4ab76e9f900c0697bf7394f8098d62b64e8ef",
+      "decodedBytes": 67649587,
+      "decodedSha256": "c8991a875d8ecdba8624932d15d1a84a8446913350f566cce1391a9b3971df8c",
+      "width": 4096,
+      "height": 4096,
+      "observedRootPresent": true,
+      "externalFrozenSource": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-bake-v1/root-source-candidate/denoised/lighting-platform-continuity-floor-sky-denoised-linear.hdr.gz"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase14-continuity/reflections/reflection-platform-enclosure-linear.exr.gz",
+      "commit": "008c9d0b7d878ffbe35e12be1cbf5538401658b3",
+      "blob": "5773222d70d04459587cd858cb215b3552791a72",
+      "bytes": 24155706,
+      "sha256": "026df0d11d33c262037b2767a135a35e7de90f9ba8cecdc4cc2e76ef1c6d3036",
+      "decodedBytes": 24163582,
+      "decodedSha256": "342bb6416f87991cccd7986d92fedc6796216a987da1bd5f30cf9a4461954cd3",
+      "width": 2048,
+      "height": 1024,
+      "channels": {
+        "A": {
+          "pixelType": "FLOAT32",
+          "xSampling": 1,
+          "ySampling": 1
+        },
+        "B": {
+          "pixelType": "FLOAT32",
+          "xSampling": 1,
+          "ySampling": 1
+        },
+        "G": {
+          "pixelType": "FLOAT32",
+          "xSampling": 1,
+          "ySampling": 1
+        },
+        "R": {
+          "pixelType": "FLOAT32",
+          "xSampling": 1,
+          "ySampling": 1
+        }
+      },
+      "observedRootPresent": false,
+      "externalFrozenSource": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/reflection-v1/root-source-candidate/reflection-platform-enclosure-linear.exr.gz"
+    }
+  ],
+  "bytesFreedIfActivated": 75761676,
+  "runtimeFilesChanged": 0,
+  "qualification": "Exact compressed/decoded source hashes, HDR dimensions and Float32EXR channels, immutable ordinary checkpoint membership and fresh independent byte backups verified before moves."
+}

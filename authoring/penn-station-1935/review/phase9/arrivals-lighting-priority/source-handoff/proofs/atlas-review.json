@@ -1,0 +1,285 @@
+{
+  "schema": 1,
+  "status": "CANDIDATE: weighted UV packing completed; no bake",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/arrivals-module.glb",
+    "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc"
+  },
+  "baked": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/baked-v1/model-concourse-arrivals.glb",
+    "sha256": "f346aaa4177460c3b965217486d7f5d1944d9657c15281705b2735a096e8050d"
+  },
+  "opaqueTriangles": 4672,
+  "exactPositionTopologyVertices": 2559,
+  "uvCornerKeys": 7800,
+  "trueEdgeConnectedUVIslands": 1564,
+  "sharedUVEdges": 3108,
+  "islandsWithPublicAndLowPriorityFaces": 0,
+  "publicAreaInMixedIslands": 0.0,
+  "lowAreaInMixedIslands": 0.0,
+  "publicFloorContainingIslands": 442,
+  "weightRule": "Each complete existing UV island receives RMS(area-weighted requested linear weights), with minimum matching public-face priority for any chart containing an existing public tread, landing, retained floor or gallery top. No current seam is split. Classes are conservative actual geometric emphasis regions, not a certified visibility set.",
+  "before": {
+    "atlasSurfaceCoverage": 0.5450849075099187,
+    "classes": [
+      {
+        "class": "gallery_concrete_other_faces",
+        "triangles": 250,
+        "worldArea": 2150.6130935399297,
+        "uvArea": 0.2293163781506208,
+        "areaMeanGI4096TexelsPerMetre": 42.2957121847818,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.2956744912074,
+          "0.5": 42.29571280886481,
+          "0.95": 42.2957698713457
+        },
+        "sourceRequestedLinearWeight": 0.65
+      },
+      {
+        "class": "public_gallery_floor",
+        "triangles": 50,
+        "worldArea": 1905.5744269968523,
+        "uvArea": 0.20318831967276174,
+        "areaMeanGI4096TexelsPerMetre": 42.29571387123358,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.29568899577003,
+          "0.5": 42.2957134747929,
+          "0.95": 42.295731395730485
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "public_retained_floor",
+        "triangles": 6,
+        "worldArea": 20.035972595214844,
+        "uvArea": 0.002136402258340775,
+        "areaMeanGI4096TexelsPerMetre": 42.29570298655442,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.295510295690555,
+          "0.5": 42.295763355888965,
+          "0.95": 42.295765984403715
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "public_stair_risers",
+        "triangles": 928,
+        "worldArea": 195.28292632239015,
+        "uvArea": 0.020822678148132212,
+        "areaMeanGI4096TexelsPerMetre": 42.29568899238796,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.29536763465818,
+          "0.5": 42.29559103580545,
+          "0.95": 42.29627373597412
+        },
+        "sourceRequestedLinearWeight": 2.0
+      },
+      {
+        "class": "public_treads_landings",
+        "triangles": 832,
+        "worldArea": 284.1918396752121,
+        "uvArea": 0.03030302816431174,
+        "areaMeanGI4096TexelsPerMetre": 42.29579193791791,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.295266709223455,
+          "0.5": 42.295835837025834,
+          "0.95": 42.29608219736607
+        },
+        "sourceRequestedLinearWeight": 2.5
+      },
+      {
+        "class": "retained_floor_sides_and_undersides",
+        "triangles": 30,
+        "worldArea": 29.34461193633615,
+        "uvArea": 0.0031289760862527882,
+        "areaMeanGI4096TexelsPerMetre": 42.295765022937424,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.29563908160611,
+          "0.5": 42.29570769498797,
+          "0.95": 42.296122552458016
+        },
+        "sourceRequestedLinearWeight": 0.6
+      },
+      {
+        "class": "stair_other_faces",
+        "triangles": 1664,
+        "worldArea": 82.78515471319406,
+        "uvArea": 0.008827248409458477,
+        "areaMeanGI4096TexelsPerMetre": 42.29571682546184,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.29468173473936,
+          "0.5": 42.29571350521595,
+          "0.95": 42.29681484831408
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "stair_undersides",
+        "triangles": 96,
+        "worldArea": 323.25218174029044,
+        "uvArea": 0.030302917122091932,
+        "areaMeanGI4096TexelsPerMetre": 39.65805717938052,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 39.25914533169606,
+          "0.5": 39.25920239401909,
+          "0.95": 42.295677911712374
+        },
+        "sourceRequestedLinearWeight": 0.65
+      },
+      {
+        "class": "upper_supports",
+        "triangles": 816,
+        "worldArea": 159.98564971792803,
+        "uvArea": 0.017058959497948223,
+        "areaMeanGI4096TexelsPerMetre": 42.295649877352396,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 42.29511257906934,
+          "0.5": 42.295755512276656,
+          "0.95": 42.2960095556947
+        },
+        "sourceRequestedLinearWeight": 0.6
+      }
+    ]
+  },
+  "generatorSha256": "ca758434bfaed7171ffb9c694f110eadd264e6a69971891d0059765b3f4931ea",
+  "limits": [
+    "Input retained exactly; no source/runtime file is written.",
+    "A real UV repack invalidates old lighting and requires a fresh bake before any promotion.",
+    "Foundation and outer-face weights reduce atlas allocation only; all geometry remains and still participates in light transport."
+  ],
+  "after": {
+    "atlasSurfaceCoverage": 0.7242227792739868,
+    "classes": [
+      {
+        "class": "gallery_concrete_other_faces",
+        "triangles": 250,
+        "worldArea": 2150.6130935399297,
+        "uvArea": 0.11621051281690598,
+        "areaMeanGI4096TexelsPerMetre": 30.109359285340645,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 30.109337158222704,
+          "0.5": 30.10935414036216,
+          "0.95": 30.109445764961652
+        },
+        "sourceRequestedLinearWeight": 0.65
+      },
+      {
+        "class": "public_gallery_floor",
+        "triangles": 50,
+        "worldArea": 1905.5744269968523,
+        "uvArea": 0.2437150627374649,
+        "areaMeanGI4096TexelsPerMetre": 46.32209316897252,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 46.322063466283126,
+          "0.5": 46.3220924571419,
+          "0.95": 46.32210679120282
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "public_retained_floor",
+        "triangles": 6,
+        "worldArea": 20.035972595214844,
+        "uvArea": 0.0025625163689255714,
+        "areaMeanGI4096TexelsPerMetre": 46.322080568060194,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 46.32190153831968,
+          "0.5": 46.32211599237917,
+          "0.95": 46.322137036516224
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "public_stair_risers",
+        "triangles": 928,
+        "worldArea": 195.28292632239015,
+        "uvArea": 0.09990337491035461,
+        "areaMeanGI4096TexelsPerMetre": 92.64412644151236,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 92.64325891038801,
+          "0.5": 92.64399483488421,
+          "0.95": 92.64537631960766
+        },
+        "sourceRequestedLinearWeight": 2.0
+      },
+      {
+        "class": "public_treads_landings",
+        "triangles": 832,
+        "worldArea": 284.1918396752121,
+        "uvArea": 0.2271696925163269,
+        "areaMeanGI4096TexelsPerMetre": 115.80554142774201,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 115.80402522746003,
+          "0.5": 115.8056529480624,
+          "0.95": 115.80643342122991
+        },
+        "sourceRequestedLinearWeight": 2.5
+      },
+      {
+        "class": "retained_floor_sides_and_undersides",
+        "triangles": 30,
+        "worldArea": 29.34461193633615,
+        "uvArea": 0.0013511013239622116,
+        "areaMeanGI4096TexelsPerMetre": 27.793274863804562,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 27.79300348025863,
+          "0.5": 27.793250772605372,
+          "0.95": 27.793734698569203
+        },
+        "sourceRequestedLinearWeight": 0.6
+      },
+      {
+        "class": "stair_other_faces",
+        "triangles": 1664,
+        "worldArea": 82.78515471319406,
+        "uvArea": 0.010587885975837708,
+        "areaMeanGI4096TexelsPerMetre": 46.32211105043864,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 46.321006085098176,
+          "0.5": 46.32203197299794,
+          "0.95": 46.32342365342823
+        },
+        "sourceRequestedLinearWeight": 1.0
+      },
+      {
+        "class": "stair_undersides",
+        "triangles": 96,
+        "worldArea": 323.25218174029044,
+        "uvArea": 0.015356576070189476,
+        "areaMeanGI4096TexelsPerMetre": 28.23165988359831,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 27.947640650081073,
+          "0.5": 27.947722334420057,
+          "0.95": 30.109338844270102
+        },
+        "sourceRequestedLinearWeight": 0.65
+      },
+      {
+        "class": "upper_supports",
+        "triangles": 816,
+        "worldArea": 159.98564971792803,
+        "uvArea": 0.007366042584180832,
+        "areaMeanGI4096TexelsPerMetre": 27.793071578707625,
+        "areaWeightedDensityQuantiles": {
+          "0.05": 27.79245824041019,
+          "0.5": 27.793096044450603,
+          "0.95": 27.793447135782845
+        },
+        "sourceRequestedLinearWeight": 0.6
+      }
+    ]
+  },
+  "packArguments": {
+    "shape": "CONCAVE",
+    "margin": 0.0009765625,
+    "marginMethod": "FRACTION",
+    "scale": true,
+    "rotate": "ANY"
+  },
+  "candidateUvSha256": "772133f6db291022efb2215e0060a6327c2d10ddaf59b5a48de5d4e71dc5e510",
+  "uvRange": [
+    0.0009764378773979843,
+    0.9984201192855835
+  ],
+  "elapsedSeconds": 4.645754666009452
+}

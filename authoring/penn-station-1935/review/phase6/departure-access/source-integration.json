@@ -1,0 +1,117 @@
+{
+  "scope": "Authorized canonical editable-source integration only; filename preserved, backup verified before atomic replacement. No production changes in this operation.",
+  "canonicalPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+  "before": {
+    "sha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+    "bytes": 72553533,
+    "backup": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/input/penn-station-phase5-before-departure.blend",
+    "immutableCommit": "f7f4c23a68e8c59884a61ef48c048b85446d9a60",
+    "gitBlob": "29fb0e0013a8a35e36ab895bc63b62f27cfe4ae9",
+    "gitBlobContentSha256Verified": true,
+    "publicSource": "https://github.com/stavreskimario/stavreskimario.github.io/blob/f7f4c23a68e8c59884a61ef48c048b85446d9a60/authoring/penn-station-1935/penn-station-phase5.blend"
+  },
+  "after": {
+    "sha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d",
+    "bytes": 72422578,
+    "frozenWorkSource": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/penn-station-phase6-departure-candidate.blend"
+  },
+  "archive": [
+    {
+      "file": "layout-recipe.json",
+      "bytes": 14178,
+      "sha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/layout-recipe.json",
+      "uncompressedBytes": 14178,
+      "uncompressedSha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+      "losslessGzip": false
+    },
+    {
+      "file": "old-access-batched-census.json.gz",
+      "bytes": 208128,
+      "sha256": "1e1cf7a5b030ae25cfce1272fb170f09c04aade3a88bd6d56b527d5a74b62a33",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/old-access-batched-census.json",
+      "uncompressedBytes": 1310254,
+      "uncompressedSha256": "6c9c762752f20285bee4c759aac4f7837276067f077480856ef4d33f5a6ffa56",
+      "losslessGzip": true
+    },
+    {
+      "file": "departure-source-proof.json.gz",
+      "bytes": 393468,
+      "sha256": "bcda2a9f29d32332ac0aba250bd5f32da32298dac97fddf9be390926d4186e02",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/departure-source-proof.json",
+      "uncompressedBytes": 2272205,
+      "uncompressedSha256": "3fcd232027aacba11df1c7e86fa09cab233b7e1cd81cf545b6e89b82b8be1fe9",
+      "losslessGzip": true
+    },
+    {
+      "file": "indicator-only-proof.json.gz",
+      "bytes": 1065,
+      "sha256": "f509603c821359a67b61d534dc05e70ef19893878e96010621ddf2b0922f3ed0",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/indicator-only-proof.json",
+      "uncompressedBytes": 43297,
+      "uncompressedSha256": "a8b738756e3cb198d411c2edee7725a7dd8000c596c06ac49f40336cd1c303a5",
+      "losslessGzip": true
+    },
+    {
+      "file": "ready.json",
+      "bytes": 2105,
+      "sha256": "04754c66464b4679f0d99733e01935f7a56dbc2979404111b2622d864b623d86",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/ready.json",
+      "uncompressedBytes": 2105,
+      "uncompressedSha256": "04754c66464b4679f0d99733e01935f7a56dbc2979404111b2622d864b623d86",
+      "losslessGzip": false
+    },
+    {
+      "file": "initial-gate-pier-conflict.json",
+      "bytes": 4714,
+      "sha256": "db3cc3ed327bc843dfdc4b0253ff075143cfbab3eab38ece206e3c47b3b35c0c",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/gate-pier-conflict.json",
+      "uncompressedBytes": 4714,
+      "uncompressedSha256": "db3cc3ed327bc843dfdc4b0253ff075143cfbab3eab38ece206e3c47b3b35c0c",
+      "losslessGzip": false
+    },
+    {
+      "file": "raw-navigation-summary.json",
+      "bytes": 7974,
+      "sha256": "36179a8dd301a82770aaae48429e2fce2a5b361357813c1319bece39ed7d4033",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/navigation-v4-accepted/summary.json",
+      "uncompressedBytes": 7974,
+      "uncompressedSha256": "36179a8dd301a82770aaae48429e2fce2a5b361357813c1319bece39ed7d4033",
+      "losslessGzip": false
+    },
+    {
+      "file": "optimized-navigation-summary.json",
+      "bytes": 11368,
+      "sha256": "eff2c527510cbd937d752a8bb94aabe96007e048f57675bd6d253b47702684e3",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/navigation-v4-optimized-contact/summary.json",
+      "uncompressedBytes": 11368,
+      "uncompressedSha256": "eff2c527510cbd937d752a8bb94aabe96007e048f57675bd6d253b47702684e3",
+      "losslessGzip": false
+    },
+    {
+      "file": "retained-runtime-independent-proof.json",
+      "bytes": 5532,
+      "sha256": "61effbafc570de449692bb053dc5cfcee0d9ba2c95c9e84ddd5963b0774d3ab7",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/retained-runtime/independent-proof.json",
+      "uncompressedBytes": 5532,
+      "uncompressedSha256": "61effbafc570de449692bb053dc5cfcee0d9ba2c95c9e84ddd5963b0774d3ab7",
+      "losslessGzip": false
+    },
+    {
+      "file": "earlier-p5-browser-review.json",
+      "bytes": 7089,
+      "sha256": "e862a3041b038dfd53094b02e130462b27e232ccddb3f2952a399e8c34d923d4",
+      "derivedReceipt": true
+    },
+    {
+      "file": "geometry-review.json",
+      "bytes": 2848,
+      "sha256": "336c03dc81c97f08716c342a7a6950b4199fac2ad5846328d1df32d843e99c0b",
+      "derivedReceipt": true
+    }
+  ],
+  "helper": {
+    "path": "penn-station-1935/model/repair_departure_access.py",
+    "sha256": "3076a7cd1811a169db1f2cbaba43c72227f60c74760ee8bf9b7b05d27311e574"
+  }
+}

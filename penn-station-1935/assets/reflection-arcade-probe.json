@@ -1,0 +1,475 @@
+{
+  "engine": "4.3.0 Cycles",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "createdInputs": [
+    {
+      "zone": "exterior",
+      "file": "retained-exterior-visible-occluder.glb",
+      "sha256": "9e342b9ca33d32284fd1e9466a7a5b40955c08d9a611d9233ab841620d1f625b",
+      "objects": 15
+    },
+    {
+      "zone": "context",
+      "file": "model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "objects": 10736
+    },
+    {
+      "zone": "waiting",
+      "file": "retained-main-visible-occluder-main0.glb",
+      "sha256": "1c1fbfcebc204264050e16fbc179b8ab5e3186c6815dfcc48baade634ae8be9e",
+      "objects": 28
+    },
+    {
+      "zone": "concourse",
+      "file": "current-concourse-occluder.glb",
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce",
+      "objects": 11229
+    },
+    {
+      "zone": "platform",
+      "file": "platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "objects": 66376
+    },
+    {
+      "zone": "platform_detail",
+      "file": "platform-section-module.glb",
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "objects": 16
+    },
+    {
+      "zone": "trains",
+      "file": "model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "objects": 66
+    },
+    {
+      "zone": "arcade",
+      "file": "formal-arcade-module.glb",
+      "sha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "objects": 2041
+    }
+  ],
+  "width": 2048,
+  "samples": 64,
+  "hdrDitherIntensity": 0,
+  "surfaces": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BedfordLimestoneConcourseCirculation",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Bounded 0.30\u20130.48 response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGraniteArcadeRepairPhase9",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleAccessInfill",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsRetainedNorth",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArcadeCastComposition",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArrivalsStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineDepartureStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "probeOrientation": "Centre east(+X); increasing U turns toward south(+Z in Three)",
+  "lighting": "Neutral dome and fixed afternoon reference sun; interpretation, not a dated historic exposure",
+  "limitation": "Static arcade-centre approximation from the authored connected entrance, station and limited contextual buildings. Not a historical panorama, parallax-correct local reflection or time-varying indirect lighting. Sky and afternoon sunlight are appearance interpretations rather than a dated historic exposure.",
+  "probes": [
+    {
+      "zone": "arcade",
+      "worldPosition": [
+        67.0,
+        2.5,
+        0.0
+      ],
+      "fullFile": "reflection-arcade.hdr.gz",
+      "fullBytes": 4292934,
+      "decodedSha256": "ce87f82ec83525ef64ee1d506e3aeaab20af4b523902cd759e584e4ac98b21f8",
+      "lowFile": "reflection-arcade-low.hdr.gz",
+      "lowBytes": 294520,
+      "lowHdrRoundtripRelativeError": 0.0030791439204389225,
+      "maximumRadiance": 0.7622107863426208
+    }
+  ],
+  "elapsedSeconds": 224.1395760000014,
+  "sourceRenderVisibility": {
+    "proofSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+    "contexts": [
+      {
+        "context": "retained-exterior-visible-occluder.glb",
+        "sourceVisibilityRule": "Doric column master \u2014 35ft",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Doric column master \u2014 35ft",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                0.0
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                10.668000221252441
+              ]
+            ],
+            "boundErrorM": 0.0,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "model-context.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "retained-main-visible-occluder-main0.glb",
+        "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Fluted Corinthian shaft master.001",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -104.26719665527344
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -88.64619445800781
+              ]
+            ],
+            "boundErrorM": 0.0,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "current-concourse-occluder.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-retained-occluder.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-section-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-trains.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "formal-arcade-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      }
+    ]
+  }
+}

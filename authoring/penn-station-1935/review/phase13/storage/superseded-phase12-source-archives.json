@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "Active Git-backed exact source retention; all source bytes remain reachable through ordinary feature-branch history. No downsampling.",
+  "sourceCheckpoint": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+  "externalByteExactBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/retention-activation-v1",
+  "fullSourceValidationBeforeRetirement": "promotion-v1/assets-present-validation.json",
+  "zeroOldBridgeRuntimeReferences": true,
+  "files": [
+    {
+      "group": "preferred-superseded-hdr",
+      "path": "authoring/penn-station-1935/lighting/phase12-bridge/raw/lighting-platform-bridge-sky.hdr.gz",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "8ad2c21930522af4f4870c7932dcc0c8a18d8fd3",
+      "bytes": 15415933,
+      "sha256": "716f5b17aebfc2e7181f4793b409903df2cae37ea4f90b0bff3a22be28a59268",
+      "decodedBytes": 18666535,
+      "decodedSha256": "52df460c3d0d358ddab7ebf75131088c91b924329331eadae3048fee15bc513b"
+    },
+    {
+      "group": "preferred-superseded-hdr",
+      "path": "authoring/penn-station-1935/lighting/phase12-bridge/denoised/lighting-platform-bridge-sky-denoised-linear.hdr.gz",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "821da77bfcd5a32ef85acdebb9eb1a2db4f1872e",
+      "bytes": 18567132,
+      "sha256": "fb2f7fefdf1da7c1c73a364875e31e1758b47c0e5dac78ad734cde1c1c02fb1e",
+      "decodedBytes": 67649587,
+      "decodedSha256": "ea734e8b085cd5362c9c7b26adb6749e1d49449ecbfcad2b1277c15042de76f1"
+    },
+    {
+      "group": "preferred-superseded-addon",
+      "path": "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/model/bridge-addon.blend",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "c491202dd586a33fb3d51d0a6e69d9607b511bd1",
+      "bytes": 123416,
+      "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f"
+    },
+    {
+      "group": "preferred-superseded-addon",
+      "path": "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/model/bridge-addon.glb",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "d22a41e1d77939ac0f94afa4f7344493343ca198",
+      "bytes": 585436,
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b"
+    },
+    {
+      "group": "optional-old-derivative-after-validation",
+      "path": "authoring/penn-station-1935/lighting/phase12-bridge/denoised/lighting-platform-bridge-sky.png",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "fb289e7325e3e37e15ec3f0cca5fcbf9db407a6a",
+      "bytes": 3423261,
+      "sha256": "1138ce5db4aff06c5d26271c480a3c133e5059ab3d8b64611bb97316337a1512"
+    },
+    {
+      "group": "optional-old-derivative-after-validation",
+      "path": "authoring/penn-station-1935/lighting/phase12-bridge/denoised/lighting-platform-bridge-sky-low.png",
+      "commit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+      "blob": "7e1f63f6e751280b2a7ae6368024e08c9a044936",
+      "bytes": 109951,
+      "sha256": "ff00dd301e673fd4c861e357d482e84f40112dc52d25379b1637bd88b1a5fd19"
+    }
+  ]
+}

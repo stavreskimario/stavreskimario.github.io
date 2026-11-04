@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "scope": "Exactly three current Phase4 waiting-room raw source inputs archived reversibly for the upcoming Arcade delivery. Current source provenance, not obsolete atlases.",
+  "status": "ARCHIVED: three exact originals removed after byte-exact Git/backups verification",
+  "archivedBytes": 42644086,
+  "immutableCommit": "96641fd2fc9ca8906e74fe636fa950eab5354223",
+  "runtimePayloadChanged": false,
+  "canonicalModelChanged": false,
+  "classification": "These raw AO/HDR sources remain recoverable for source reproduction. All current runtime payloads, retained filtered/denoised derivatives, bake reports, prior receipts and the detailed-order AO source stay present.",
+  "entries": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-vault-ao.png",
+      "bytes": 26143052,
+      "sha256": "61e2f6a5040b1ab4970a26710a7ccd71e4949a8ee0cb6a563ccff827c98e0b75",
+      "immutableCommit": "96641fd2fc9ca8906e74fe636fa950eab5354223",
+      "gitBlob": "960a0c8b8f146ccb3256416641527f1e19813588",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/lighting-waiting-room-vault-ao.png",
+      "backupVerified": true,
+      "backupSha256": "61e2f6a5040b1ab4970a26710a7ccd71e4949a8ee0cb6a563ccff827c98e0b75",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/96641fd2fc9ca8906e74fe636fa950eab5354223/authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-vault-ao.png",
+      "classification": "Current raw lighting source provenance; restore before source reproduction that needs it. Not obsolete and not a runtime payload.",
+      "pngDimensions": [
+        8192,
+        8192
+      ]
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-ao.png",
+      "bytes": 5737076,
+      "sha256": "d128c76f8a365c6d2ccbf51bba306a15535e3efe9f12dc4649d40a041a5ba36b",
+      "immutableCommit": "96641fd2fc9ca8906e74fe636fa950eab5354223",
+      "gitBlob": "5f47f88a5afa095b0c1d51580650c22f4f153a86",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/lighting-waiting-room-masonry-ao.png",
+      "backupVerified": true,
+      "backupSha256": "d128c76f8a365c6d2ccbf51bba306a15535e3efe9f12dc4649d40a041a5ba36b",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/96641fd2fc9ca8906e74fe636fa950eab5354223/authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-ao.png",
+      "classification": "Current raw lighting source provenance; restore before source reproduction that needs it. Not obsolete and not a runtime payload.",
+      "pngDimensions": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-sky.hdr.gz",
+      "bytes": 10763958,
+      "sha256": "2f6eeb5feaf37a0df5e726bbb2748c9fb79672d63a9347a5915ccd987fc601d7",
+      "immutableCommit": "96641fd2fc9ca8906e74fe636fa950eab5354223",
+      "gitBlob": "f2b28da23413a0a8f7a9ed39f9673e405978520e",
+      "gitBytesMatch": true,
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/lighting-waiting-room-masonry-sky.hdr.gz",
+      "backupVerified": true,
+      "backupSha256": "2f6eeb5feaf37a0df5e726bbb2748c9fb79672d63a9347a5915ccd987fc601d7",
+      "recoveryUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/96641fd2fc9ca8906e74fe636fa950eab5354223/authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-sky.hdr.gz",
+      "classification": "Current raw lighting source provenance; restore before source reproduction that needs it. Not obsolete and not a runtime payload.",
+      "decodedBytes": 13665738,
+      "decodedSha256": "7dad0cacb4a00b151b091caf8bd02f5733fbbfbca6675cb0f4aabdbbbf608313",
+      "radianceHeader": "#?RADIANCE\nFORMAT=32-bit_rle_rgbe\n\n-Y 4096 +X 4096\n",
+      "activeSourceRecord": "penn-station-1935/assets/lighting-waiting-room-masonry-denoise.json",
+      "activeSourceSha256": "7dad0cacb4a00b151b091caf8bd02f5733fbbfbca6675cb0f4aabdbbbf608313",
+      "sourceArchiveFile": "../originals/lighting-waiting-room-masonry-sky.hdr.gz"
+    }
+  ],
+  "usageAudit": {
+    "activeChecksReadRetainedDerivatives": [
+      "tests/penn-assets.cjs:294-330",
+      "tests/penn-denoise-records.cjs:50-87"
+    ],
+    "orderAoExplicitlyRetained": "tests/penn-final-acceptance.cjs:31 uses PENN_FINAL_ORDER_DIR/orderAO; order original remains",
+    "rawPhase4TargetsNeededByActiveChecks": false,
+    "historicExternalAnalysis": "authoring/.../review/phase4/order-lighting/proof/analyse-ray-samples.py reads external work/phase4-baked-final/masonryAO, not proposed local originals",
+    "sourceReproduction": "Restore exact raw input from backup or immutable blob before reproducing original bake/denoise authoring job."
+  },
+  "preservationManifest": {
+    "externalAudit": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/archived-source/current-waiting-source-verification.json",
+    "sha256": "51429c38b39a54b01a00a8eccc785e3cf7475ee114c7cc23849f556a131d7e10",
+    "retainedOrderAoAndPhase4DenoisedFileCount": 26,
+    "retainedIdentityListSha256": "7863e8175d264b791a11c412a7d030d490a824e150fd4925f1aa35265184d36d",
+    "verifiedAfterArchival": true
+  },
+  "conservativeRootBefore": {
+    "bytes": 993944955,
+    "files": 1278,
+    "method": "Conservative sum of file logical sizes over complete working tree, excluding .git only; includes untracked/ignored files, no compression credit."
+  },
+  "recoveryReadme": "phase4-waiting-raw-source-recovery.md",
+  "legacyLimitBytes": 1000000000,
+  "estimateQualification": "Complete working tree excluding .git only, at the archive checkpoint; upcoming Arcade delivery files are not included unless already present.",
+  "originalsRemovedExactly": [
+    "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-ao.png",
+    "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-masonry-sky.hdr.gz",
+    "authoring/penn-station-1935/lighting/phase4/originals/lighting-waiting-room-vault-ao.png"
+  ],
+  "conservativeRootAfter": {
+    "bytes": 951315405,
+    "files": 1278,
+    "method": "Conservative sum of file logical sizes over complete working tree, excluding .git only; includes untracked/ignored files, no compression credit."
+  },
+  "remainingLegacyBytes": 48684595,
+  "postArchiveValidation": {
+    "report": "post-phase4-archive-assets.json.gz",
+    "decodedSha256": "24eb6213715166d00386dfa2677f58a50a3f2456c41bd5e061b2d71b076db3ac",
+    "scope": "All12current GLBs decode;80shared KTX2 textures and existing lighting/reflection provenance validate, no glTF validation errors. Runtime geometry is unchanged; this check follows the scoped archival."
+  }
+}

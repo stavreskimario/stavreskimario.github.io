@@ -1,0 +1,1160 @@
+{
+  "scope": "Quiet GPU actual Chrome Metal; all six zones remain loaded. Scratch-only performance variants, never delivered. Standard counters exclude shadow pass, total counters instrument actual draw submissions.",
+  "versions": {
+    "current": {
+      "sourceAppSha256": "3f5e2e8202cc690608c11dc1fe571affbf78b6994a6943d20c93bfd7837cf5a2"
+    }
+  },
+  "cases": [
+    {
+      "version": "current",
+      "view": "concourse",
+      "dpr": 2,
+      "variant": "baseline",
+      "renderedFrames": 65,
+      "elapsedMs": 1602,
+      "renderedFps": 40.574282147315856,
+      "frameIntervals": {
+        "mean": 24.639062500034925,
+        "p50": 22.899999998509884,
+        "p95": 39,
+        "max": 67.5
+      },
+      "renderSubmissionMs": {
+        "mean": 1.6307692307692307,
+        "p50": 1.6000000014901161,
+        "p95": 2,
+        "max": 2.199999999254942
+      },
+      "navigationCpuMs": {
+        "mean": 0.026153846257008038,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "gpuMs": {
+        "mean": 47.46625786666668,
+        "p50": 45.336791,
+        "p95": 67.186,
+        "max": 68.154541
+      },
+      "totalDrawCalls": {
+        "mean": 443.0923076923077,
+        "p50": 439,
+        "p95": 457,
+        "max": 457
+      },
+      "totalTriangles": {
+        "mean": 49925359.26153846,
+        "p50": 49474592,
+        "p95": 50639956,
+        "max": 50639956
+      },
+      "standardDrawCalls": {
+        "mean": 146.09230769230768,
+        "p50": 142,
+        "p95": 160,
+        "max": 160
+      },
+      "standardTriangles": {
+        "mean": 24998019.26153846,
+        "p50": 24547252,
+        "p95": 25712616,
+        "max": 25712616
+      },
+      "description": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "gpuTimers": true,
+        "transmissionScale": 1,
+        "prismMaterials": [
+          {
+            "name": "SquareVaultLightGlass",
+            "side": 2,
+            "transmission": 0.8999999761581421
+          }
+        ],
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ],
+        "cssPixels": [
+          1280,
+          816
+        ],
+        "shadowAutoUpdate": true,
+        "shadowEnabled": true,
+        "zones": [
+          {
+            "name": "exterior",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "visible": true
+          }
+        ],
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "castShadow": true,
+            "shadowSize": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          }
+        ]
+      },
+      "camera": [
+        {
+          "position": [
+            -64.00000086166095,
+            3.732800861660941,
+            37.99999619433083
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.1104452884527139,
+            -0.012049430351643943,
+            0.9879470275447471
+          ],
+          "fov": 50
+        },
+        {
+          "position": [
+            -67.23976942557974,
+            6.972569425579694,
+            23.691018370356353
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.11044528845271379,
+            -0.012049430351643933,
+            0.9879470275447471
+          ],
+          "fov": 50
+        }
+      ],
+      "metrics": {
+        "calls": 140,
+        "triangles": 24543004,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5572741721368064,
+        "renderFrame": 230,
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ]
+      }
+    },
+    {
+      "version": "current",
+      "view": "concourse",
+      "dpr": 2,
+      "variant": "cache-front",
+      "renderedFrames": 95,
+      "elapsedMs": 1601.800000000745,
+      "renderedFps": 59.30827818701199,
+      "frameIntervals": {
+        "mean": 16.84468085104798,
+        "p50": 16.699999999254942,
+        "p95": 19.399999998509884,
+        "max": 21.800000000745058
+      },
+      "renderSubmissionMs": {
+        "mean": 1.3042105262216768,
+        "p50": 1.1000000014901161,
+        "p95": 2,
+        "max": 2.100000001490116
+      },
+      "navigationCpuMs": {
+        "mean": 0.02315789457214506,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "gpuMs": {
+        "mean": 26.288074351063827,
+        "p50": 28.233124,
+        "p95": 39.584999,
+        "max": 41.507458
+      },
+      "totalDrawCalls": {
+        "mean": 146.13684210526316,
+        "p50": 141,
+        "p95": 159,
+        "max": 159
+      },
+      "totalTriangles": {
+        "mean": 20128397.136842106,
+        "p50": 19571252,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "standardDrawCalls": {
+        "mean": 146.13684210526316,
+        "p50": 141,
+        "p95": 159,
+        "max": 159
+      },
+      "standardTriangles": {
+        "mean": 20128397.136842106,
+        "p50": 19571252,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "description": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "gpuTimers": true,
+        "transmissionScale": 1,
+        "prismMaterials": [
+          {
+            "name": "SquareVaultLightGlass",
+            "side": 0,
+            "transmission": 0.8999999761581421
+          }
+        ],
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ],
+        "cssPixels": [
+          1280,
+          816
+        ],
+        "shadowAutoUpdate": false,
+        "shadowEnabled": true,
+        "zones": [
+          {
+            "name": "exterior",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "visible": true
+          }
+        ],
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "castShadow": true,
+            "shadowSize": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          }
+        ]
+      },
+      "camera": [
+        {
+          "position": [
+            -64,
+            3.7327999999999957,
+            38.000000000000014
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.1104452884527139,
+            -0.012049430351643943,
+            0.9879470275447471
+          ],
+          "fov": 50
+        },
+        {
+          "position": [
+            -67.22998324747091,
+            6.962783247470879,
+            23.73424065700353
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.11044528845271379,
+            -0.012049430351643933,
+            0.9879470275447471
+          ],
+          "fov": 50
+        }
+      ],
+      "metrics": {
+        "calls": 139,
+        "triangles": 19567004,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5599476030981818,
+        "renderFrame": 335,
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ]
+      }
+    },
+    {
+      "version": "current",
+      "view": "concourse",
+      "dpr": 2,
+      "variant": "cache-front-half",
+      "renderedFrames": 96,
+      "elapsedMs": 1600.300000000745,
+      "renderedFps": 59.98875210895164,
+      "frameIntervals": {
+        "mean": 16.666315789481526,
+        "p50": 16.699999999254942,
+        "p95": 17.5,
+        "max": 17.699999999254942
+      },
+      "renderSubmissionMs": {
+        "mean": 1.2479166666356225,
+        "p50": 1.199999999254942,
+        "p95": 1.6000000014901161,
+        "max": 1.800000000745058
+      },
+      "navigationCpuMs": {
+        "mean": 0.017708333286767203,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "gpuMs": {
+        "mean": 13.74525916842106,
+        "p50": 12.520291,
+        "p95": 23.410124,
+        "max": 24.717374
+      },
+      "totalDrawCalls": {
+        "mean": 146.3125,
+        "p50": 145,
+        "p95": 159,
+        "max": 159
+      },
+      "totalTriangles": {
+        "mean": 20134737.708333332,
+        "p50": 20648508,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "standardDrawCalls": {
+        "mean": 146.3125,
+        "p50": 145,
+        "p95": 159,
+        "max": 159
+      },
+      "standardTriangles": {
+        "mean": 20134737.708333332,
+        "p50": 20648508,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "description": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "gpuTimers": true,
+        "transmissionScale": 0.5,
+        "prismMaterials": [
+          {
+            "name": "SquareVaultLightGlass",
+            "side": 0,
+            "transmission": 0.8999999761581421
+          }
+        ],
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ],
+        "cssPixels": [
+          1280,
+          816
+        ],
+        "shadowAutoUpdate": false,
+        "shadowEnabled": true,
+        "zones": [
+          {
+            "name": "exterior",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "visible": true
+          }
+        ],
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "castShadow": true,
+            "shadowSize": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          }
+        ]
+      },
+      "camera": [
+        {
+          "position": [
+            -64,
+            3.7327999999999957,
+            38.000000000000014
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.1104452884527139,
+            -0.012049430351643943,
+            0.9879470275447471
+          ],
+          "fov": 50
+        },
+        {
+          "position": [
+            -67.22372665615505,
+            6.956526656155061,
+            23.761873935315133
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.11044528845271379,
+            -0.012049430351643933,
+            0.9879470275447471
+          ],
+          "fov": 50
+        }
+      ],
+      "metrics": {
+        "calls": 139,
+        "triangles": 19567004,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5599476030981818,
+        "renderFrame": 438,
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ]
+      }
+    },
+    {
+      "version": "current",
+      "view": "concourse",
+      "dpr": 2,
+      "variant": "walk-cache-front",
+      "renderedFrames": 97,
+      "elapsedMs": 1600.7999999970198,
+      "renderedFps": 60.59470264878848,
+      "frameIntervals": {
+        "mean": 16.657291666682188,
+        "p50": 16.699999999254942,
+        "p95": 17.5,
+        "max": 17.600000001490116
+      },
+      "renderSubmissionMs": {
+        "mean": 1.57835051570971,
+        "p50": 1.5999999977648258,
+        "p95": 1.9000000022351742,
+        "max": 2.199999999254942
+      },
+      "navigationCpuMs": {
+        "mean": 0.02886597946593442,
+        "p50": 0,
+        "p95": 0.10000000149011612,
+        "max": 0.10000000149011612
+      },
+      "gpuMs": {
+        "mean": 24.237734281250003,
+        "p50": 27.576666,
+        "p95": 35.096791,
+        "max": 45.586999
+      },
+      "totalDrawCalls": {
+        "mean": 146.2577319587629,
+        "p50": 141,
+        "p95": 159,
+        "max": 159
+      },
+      "totalTriangles": {
+        "mean": 20129311.67010309,
+        "p50": 19571252,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "standardDrawCalls": {
+        "mean": 146.2577319587629,
+        "p50": 141,
+        "p95": 159,
+        "max": 159
+      },
+      "standardTriangles": {
+        "mean": 20129311.67010309,
+        "p50": 19571252,
+        "p95": 20736616,
+        "max": 20736616
+      },
+      "description": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "gpuTimers": true,
+        "transmissionScale": 1,
+        "prismMaterials": [
+          {
+            "name": "SquareVaultLightGlass",
+            "side": 0,
+            "transmission": 0.8999999761581421
+          }
+        ],
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ],
+        "cssPixels": [
+          1280,
+          816
+        ],
+        "shadowAutoUpdate": false,
+        "shadowEnabled": true,
+        "zones": [
+          {
+            "name": "exterior",
+            "visible": true
+          },
+          {
+            "name": "waiting",
+            "visible": true
+          },
+          {
+            "name": "concourse",
+            "visible": true
+          },
+          {
+            "name": "context",
+            "visible": true
+          },
+          {
+            "name": "platform",
+            "visible": true
+          },
+          {
+            "name": "trains",
+            "visible": true
+          }
+        ],
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "castShadow": true,
+            "shadowSize": [
+              2048,
+              2048
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": false,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          },
+          {
+            "type": "SpotLight",
+            "castShadow": true,
+            "shadowSize": [
+              1024,
+              1024
+            ]
+          }
+        ]
+      },
+      "camera": [
+        {
+          "position": [
+            -64.00000021552293,
+            3.732800215522932,
+            37.99999904810704
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.1104452884527139,
+            -0.012049430351643943,
+            0.9879470275447471
+          ],
+          "fov": 50
+        },
+        {
+          "position": [
+            -67.25694760506032,
+            6.98974760506032,
+            23.61514807765027
+          ],
+          "quaternion": [
+            0.10778367340324127,
+            0.11044528845271379,
+            -0.012049430351643933,
+            0.9879470275447471
+          ],
+          "fov": 50
+        }
+      ],
+      "metrics": {
+        "calls": 139,
+        "triangles": 19567004,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5599476030981818,
+        "renderFrame": 543,
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2560,
+          1632
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "version": "current",
+      "path": "penn-station-1935/index.html",
+      "bytes": 17576,
+      "sha256": "828e3a80865f5280e8fcc45b72d6b885c1a1dd6e0be4c6989fcfe45898e849bd"
+    },
+    {
+      "version": "current",
+      "path": "shared/theme.css",
+      "bytes": 5390,
+      "sha256": "d83f0e1d47673cf497c6c55dd11790a3c2d7974fadddbfd519b5450036016fe8"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/styles.css",
+      "bytes": 28436,
+      "sha256": "66386dac0d4de321e6f2147be957e0c3f10c762aa50fd09577abec39ba1ece80"
+    },
+    {
+      "version": "current",
+      "path": "shared/ui.js",
+      "bytes": 13714,
+      "sha256": "5c6287b11e79f60bf76b3b6fd54bcf47996684e11c7eefeec797c70555f97013"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/dist/app.js",
+      "bytes": 1043217,
+      "sha256": "bf9900c68f046a0899d12ad3f42f9a1f04fd21cac62667e4eb1be96d09678c0a"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/dist/chunks/chunk-NMZTF4TX.js",
+      "bytes": 373510,
+      "sha256": "e3b04f9c38d4f052f5185e84f75d7fde359dccbdd13200207236c3860729af13"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/sky.hdr",
+      "bytes": 2513972,
+      "sha256": "d7258dc562c0050f4a619e5fa3fb8137c6f6af888e7438b8b2f51b2981d556c8"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/scene-manifest.json",
+      "bytes": 567295,
+      "sha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-exterior.glb.gz",
+      "bytes": 2711351,
+      "sha256": "2ee22c3f97822fcaf9cf0cfdd1d2f7e4466cf9056d97486dbeec8cfcc56be156"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-platform.glb.gz",
+      "bytes": 161495,
+      "sha256": "e8bc65707291601e614c91bc85a977d1ed632a077244fe42d842d6067231236f"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-concourse.glb.gz",
+      "bytes": 4129540,
+      "sha256": "6223de2aa248309762f266cd0a4190ba2216940e6f2a2dfb34f816b1b4bbe155"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/model-waiting-room.glb.gz",
+      "bytes": 7962777,
+      "sha256": "95baf8d757ea447dfeb7dd5b315858b64fd6b2a6ff6738e11a0d6c9825473197"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+      "bytes": 297484,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+      "bytes": 429110,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "bytes": 532453,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "bytes": 533240,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "bytes": 1755,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "bytes": 5419396,
+      "sha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "bytes": 3556449,
+      "sha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/9739cfbe8905aef069ff.ktx2",
+      "bytes": 1555718,
+      "sha256": "9739cfbe8905aef069ff9ac9556fde0ade7519982ea0b19ec85c4bc1762e8f6b"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "bytes": 3849773,
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "bytes": 3746211,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+      "bytes": 11104,
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "bytes": 3935940,
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "bytes": 4296,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "bytes": 2381311,
+      "sha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/1171d79307cd9bf10880.ktx2",
+      "bytes": 1231718,
+      "sha256": "1171d79307cd9bf108809bd0263e568753c8aa099270a2b380b5e4fb62d986a7"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "bytes": 862627,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "bytes": 794564,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/0fd52d7b147ba7546220.ktx2",
+      "bytes": 541708,
+      "sha256": "0fd52d7b147ba7546220fddf690a386f56656f749bc5c8774f6a09f3a45677bf"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+      "bytes": 863637,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+      "bytes": 842348,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/d2d09e30602bc72361bc.ktx2",
+      "bytes": 541669,
+      "sha256": "d2d09e30602bc72361bc86e6f4cf0e5ac417020c0a8e49a83ef3db4ef6d90c6e"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "bytes": 839153,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/6c6853f06bb64da5e12d.ktx2",
+      "bytes": 541497,
+      "sha256": "6c6853f06bb64da5e12db0042d3ef9a2c52fe8878952162f31fccf07567c56fe"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "bytes": 862446,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "bytes": 863104,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "bytes": 892516,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "bytes": 607982,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/4d7755d17754db4a2bd2.ktx2",
+      "bytes": 1499785,
+      "sha256": "4d7755d17754db4a2bd22a00f9f6e3b0f04e3b7bde0f367f9bab325e66a9ff46"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "bytes": 2104923,
+      "sha256": "1e3025f04821ca80c83addcfd0acf1f1a01c76264f08da0995edc89bd9138f94"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "bytes": 2816144,
+      "sha256": "54c4b6193c2de4abdc13391211c34050812afbc2c482e7cfd5303b7d46eac331"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "bytes": 3761640,
+      "sha256": "7be11436c1b7fe0e5ab786e16390559b43425abb178c8bc9ac5305ff0f5da37c"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/d9eecfa10ff0983f3de6.ktx2",
+      "bytes": 1793549,
+      "sha256": "d9eecfa10ff0983f3de66b6ac299f4975ec93f13b1c393a3d0b4d6d2a71209ad"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/63eed54d00a46de365de.ktx2",
+      "bytes": 2027922,
+      "sha256": "63eed54d00a46de365de7314c1258483464dd6f34a102c6cb47dfab881c4fdc0"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "bytes": 159620,
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "bytes": 5398821,
+      "sha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/textures/055d9229aa70a4e0f1b5.ktx2",
+      "bytes": 10853021,
+      "sha256": "055d9229aa70a4e0f1b58e66198a2e7598ec17775be078be39ac30de90c54a24"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/reflection-platform.hdr.gz",
+      "bytes": 4785625,
+      "sha256": "4608c994cfbf9e25018f26becc69a6f1d10ca5611c63066cb65e200bd17f9f2a"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-platform-sky.webp",
+      "bytes": 784546,
+      "sha256": "703d373a17fb7f678e249301fe1b65219c7b087fe67b244307e171c3c6884141"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-exterior-sky.webp",
+      "bytes": 1277026,
+      "sha256": "ddb86e5d31c414b905cd351cee102ca95311180fcc6fe646b8447688591381fa"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/reflection-waiting-room.hdr.gz",
+      "bytes": 4938120,
+      "sha256": "45fca575683f71ef604b608bd596673c59d9add0f8e6605a57560ccfd7309e0f"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/reflection-concourse.hdr.gz",
+      "bytes": 5537361,
+      "sha256": "425d4a24c5a17c7cd10311d171ba4fcd8524a9be64cbda3dc1eda1a84c245823"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-waiting-room-masonry-sky.webp",
+      "bytes": 3034802,
+      "sha256": "ecaddd63a134cb53a74b4b0c23f24e2ec9815d6a96a4e344013ee38fe11b29e4"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-waiting-room-order-sky.webp",
+      "bytes": 6066472,
+      "sha256": "fa9864c1e3bdac34c08d594f6191a0a9f0a8f4c03006f69160d4c8f0a766f290"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-waiting-room-vault-sky.webp",
+      "bytes": 14190378,
+      "sha256": "441974b64c6a1f123d1d3b8becf3b2082e7a5879d796ae2ddd385a532a157785"
+    },
+    {
+      "version": "current",
+      "path": "penn-station-1935/assets/lighting-concourse-sky.webp",
+      "bytes": 1170456,
+      "sha256": "74f0814660083668e92519d14cf73734b8408d28bcb97b65513e5af8a0305cc1"
+    }
+  ],
+  "browser": "156.0.8078.74"
+}

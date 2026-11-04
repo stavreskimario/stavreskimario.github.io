@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Compiled behavior is exact after only reviewed cache revision and content-addressed import-filename normalization; native34leg bundle coverage preserved.",
+  "revision": "9-arrivals-lighting-1",
+  "files": [
+    {
+      "file": "app.js",
+      "previousSha256": "5b9726ba469fa2904f36361a9fcec55ea3ad3947d9a27f05555b07b553a051dd",
+      "sha256": "616f91eb91fa62332987d1d3e9297d4cf183bbe7b32f9e690b812d7076a0bdb4",
+      "bytes": 1046064,
+      "onlyCacheRevisionAndImportHashesChanged": true
+    },
+    {
+      "file": "chunks/chunk-HASH.js",
+      "previousSha256": "f4e55a48d0a4cd077c049da1b7a3ef2f4de9295e4d57cdac39d75fae353dace4",
+      "sha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393",
+      "bytes": 373510,
+      "onlyCacheRevisionAndImportHashesChanged": true
+    },
+    {
+      "file": "chunks/three.webgpu-HASH.js",
+      "previousSha256": "30170e51ccf741831bc57ded3c2c4e1c9286001c9c59105bfad9dc01e52c95fa",
+      "sha256": "1ad767acac8d8be480907e35f5894d67ea4c3e390e8142c06ccf1e4a625244cb",
+      "bytes": 579894,
+      "onlyCacheRevisionAndImportHashesChanged": true
+    }
+  ]
+}

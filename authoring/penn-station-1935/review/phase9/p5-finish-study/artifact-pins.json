@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "artifacts": [
+    {
+      "file": "artifacts/west-p5-curved-study.glb.gz",
+      "bytes": 3574010,
+      "sha256": "6f0163b8f25449b99ed13095dec29ae18b03fc458a0432a952f33d009bd95302",
+      "decodedBytes": 15900100,
+      "decodedSha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+      "decodedByteExact": true,
+      "output": "frozen/west-p5-curved-study.glb",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/curve-study-manifest.json.gz",
+      "bytes": 684943,
+      "sha256": "4af4600dcb5a69b521251118e5ef6bb5d6e7ea094d0bc5c301030f3f632fe300",
+      "decodedBytes": 5166095,
+      "decodedSha256": "d776f343b9b7d40716601bc5bd0c0904702e5b131834c438659f43176513e347",
+      "decodedByteExact": true,
+      "output": "frozen/curve-study-manifest.json",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/flat-study-manifest.json.gz",
+      "bytes": 684763,
+      "sha256": "6ac8a8ff67ebda2487d619c172a0d9363516c1938d5f07b5028946df54245f14",
+      "decodedBytes": 5194411,
+      "decodedSha256": "a997cb4477c63ab144a309cb2e361c614f5ab62d134ba40ec0287acdf85a5007",
+      "decodedByteExact": true,
+      "output": "frozen/flat-study-manifest.json",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/source-proof.json.gz",
+      "bytes": 45415,
+      "sha256": "00633587d848988f28dff4eaa1215b0bda8ef72b73c318f44bd6fc67adb6334a",
+      "decodedBytes": 1034330,
+      "decodedSha256": "715435918224899607c4241bc41b80afc7c5141a1d243f8b6724a00de2035146",
+      "decodedByteExact": true,
+      "output": "source/source-proof.json",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/source-ba0-header-json.bin.gz",
+      "bytes": 288537,
+      "sha256": "57b212859b0eba334f13417b80d75052bd8bc3556a24736723fe3d491af4b4c5",
+      "decodedBytes": 3551308,
+      "decodedSha256": "8106d8944d75921d453be4263401960a91f657e46dcd603650213666f7db315b",
+      "decodedByteExact": true,
+      "output": "source/ba0-header-json.bin",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/source-flat-header-json.bin.gz",
+      "bytes": 290362,
+      "sha256": "498bcf37a9e608861d3bfce1c80a0dd877fa5510dcfc10e1fe5cbbb4ca4d80ad",
+      "decodedBytes": 3568060,
+      "decodedSha256": "57066a9932e88e17400ef750e00d1ef6e8b27fe568ccef497496d30843a1c07a",
+      "decodedByteExact": true,
+      "output": "source/flat-header-json.bin",
+      "gzip": true
+    },
+    {
+      "file": "artifacts/p5-curved-editable-addon.blend",
+      "output": "frozen/p5-curved-editable-addon.blend",
+      "gzip": false,
+      "bytes": 86996,
+      "sha256": "43af0aa5a7c55f837116075f788ddd1449ea52daa800b67fe545bfd412a3226c",
+      "decodedBytes": 86996,
+      "decodedSha256": "43af0aa5a7c55f837116075f788ddd1449ea52daa800b67fe545bfd412a3226c"
+    }
+  ],
+  "base": {
+    "bytes": 15438492,
+    "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+    "binaryBytes": 11887184,
+    "headerSha256": "8106d8944d75921d453be4263401960a91f657e46dcd603650213666f7db315b"
+  },
+  "flat": {
+    "bytes": 15471852,
+    "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f",
+    "binaryBytes": 11903792,
+    "headerSha256": "57066a9932e88e17400ef750e00d1ef6e8b27fe568ccef497496d30843a1c07a"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS exact lossless HDR archives; original actual outputs remain external",
+  "archives": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/raw/lighting-concourse-exits-sky.hdr",
+      "bytes": 44822793,
+      "sha256": "ad87f97e66b5dc6425318db65b54f78964d60a18c3ab3b3b47117dc84fc5bfd3",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/lossless-hdr-archives/lighting-concourse-exits-sky.hdr.gz",
+      "archiveBytes": 39588894,
+      "archiveSha256": "3f06750f7fd8b0df02558288a7a51db511f31506f846c50839746f92f7784943",
+      "decompressedBytesExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/denoised/lighting-concourse-exits-sky-denoised-linear.hdr",
+      "bytes": 67649587,
+      "sha256": "218d1e47f24f80c446c6d037e35da8d9722cc073704d2e5e79d8fcba929a35c4",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/bake-run-v1/lossless-hdr-archives/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "archiveBytes": 21222945,
+      "archiveSha256": "c1b7822811ce930a696387ad14704d067488145f3dc75ddc53d1e56eebe98742",
+      "decompressedBytesExact": true
+    }
+  ]
+}

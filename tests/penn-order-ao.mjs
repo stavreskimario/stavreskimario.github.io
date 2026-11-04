@@ -1,0 +1,71 @@
+// Dedicated-atlas preservation controls using the real general resize stage.
+import { createRequire } from 'node:module';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { preserveOrderAO } from '../penn-station-1935/preserve-order-ao.mjs';
+import { prepareScalarTextures } from '../penn-station-1935/prepare-scalars.mjs';
+import { readGlb, writeGlb } from '../penn-station-1935/asset_io.mjs';
+const tools = process.env.PENN_TOOLS || '/private/tmp/penn-station-tools', requireTools = createRequire(path.join(tools, 'package.json'));
+const { Document, NodeIO } = requireTools('@gltf-transform/core');
+const { ALL_EXTENSIONS, KHRTextureTransform } = requireTools('@gltf-transform/extensions');
+const sharp = requireTools('sharp'), io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
+const output = process.env.PENN_ORDER_AO_TEST_OUT || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../penn-station-work/order-ao-controls');
+await mkdir(output, { recursive: true });
+const doc = new Document(), buffer = doc.createBuffer();
+async function texture(name, size, scalar) {
+  const pixels = Buffer.alloc(size * size * 3);
+  for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) {
+    const at = (y * size + x) * 3;
+    pixels[at] = scalar ? (x * 7 + y * 13 + (x >> 5) * 29) % 256 : x % 256;
+    pixels[at + 1] = scalar ? pixels[at] : y % 256;
+    pixels[at + 2] = scalar ? pixels[at] : (x + y) % 256;
+  }
+  return doc.createTexture(name).setImage(await sharp(pixels, { raw: { width: size, height: size, channels: 3 } }).png().toBuffer()).setMimeType('image/png');
+}
+const ao = await texture('Dedicated order AO', 4096, true), colour = await texture('Other 4K colour', 4096, false), otherAO = await texture('Unmarked AO', 64, true);
+const normal = doc.createTexture('Constant normal').setImage(await sharp(Buffer.from([128, 128, 255]), { raw: { width: 1, height: 1, channels: 3 } }).png().toBuffer()).setMimeType('image/png');
+const transform = doc.createExtension(KHRTextureTransform);
+const materials = ['OrderCapitalFixture', 'OrderPilasterFixture', 'UnmarkedStoneFixture'].map((name, index) => {
+  const material = doc.createMaterial(name).setMetallicFactor(0).setRoughnessFactor(.83).setBaseColorTexture(colour).setNormalTexture(normal).setOcclusionTexture(index === 2 ? otherAO : ao).setOcclusionStrength(.72);
+  if (index !== 2) material.setExtras({ sky_illumination: 'lighting-waiting-room-order-sky.png', fixture: index });
+  material.getOcclusionTextureInfo().setTexCoord(1).setWrapS(33071).setMinFilter(9987).setExtension('KHR_texture_transform', transform.createTransform().setOffset([.2, .1]).setScale([.8, .9]).setTexCoord(1));
+  return material;
+});
+const position = doc.createAccessor().setType('VEC3').setArray(new Float32Array([0, 0, 0, 1, 0, 0, 0, 1, 0])).setBuffer(buffer);
+const normals = doc.createAccessor().setType('VEC3').setArray(new Float32Array([0, 0, 1, 0, 0, 1, 0, 0, 1])).setBuffer(buffer);
+const uv = doc.createAccessor().setType('VEC2').setArray(new Float32Array([0, 0, 1, 0, 0, 1])).setBuffer(buffer);
+const indices = doc.createAccessor().setType('SCALAR').setArray(new Uint16Array([0, 1, 2])).setBuffer(buffer), scene = doc.createScene();
+for (const material of materials) scene.addChild(doc.createNode().setMesh(doc.createMesh().addPrimitive(doc.createPrimitive().setAttribute('POSITION', position).setAttribute('NORMAL', normals).setAttribute('TEXCOORD_0', uv).setAttribute('TEXCOORD_1', uv).setIndices(indices).setMaterial(material))));
+const source = path.join(output, 'source-4k.glb'), sized = path.join(output, 'sized-2k.glb'), restored = path.join(output, 'restored.glb');
+await io.write(source, doc);
+const cli = path.join(tools, 'node_modules/@gltf-transform/cli/bin/cli.js');
+const resize = spawnSync(process.execPath, [cli, 'resize', source, sized, '--width', '2048', '--height', '2048'], { encoding: 'utf8' });
+assert.equal(resize.status, 0, resize.stdout + resize.stderr);
+const proof = await preserveOrderAO(source, sized, restored, path.join(output, 'restoration-proof.json'));
+assert.equal(proof.restoredImages, 1, 'Two material aliases retain one atlas');
+assert.equal(proof.materials.length, 2); assert.equal(proof.imageCount, 4); assert.equal(proof.textureCount, 4);
+assert(proof.materials.every(material => material.beforeSize.every(value => value === 2048) && material.restoredSize.every(value => value === 4096)));
+const decoded = await io.read(restored);
+assert.equal((await sharp(decoded.getRoot().listMaterials()[0].getBaseColorTexture().getImage()).metadata()).width, 2048, 'Other colour maps retain general 2K resizing');
+assert.equal((await sharp(decoded.getRoot().listMaterials()[0].getNormalTexture().getImage()).metadata()).width, 1, 'Constant normals remain');
+const repeat = await preserveOrderAO(source, restored, path.join(output, 'repeat.glb'), path.join(output, 'repeat-proof.json'));
+assert.equal(repeat.verbatimInput, true); assert.equal(repeat.input.sha256, repeat.output.sha256);
+const scalar = await prepareScalarTextures(restored, path.join(output, 'pre-uastc.glb'), path.join(output, 'pre-uastc-scalar-proof.json'));
+assert.equal(scalar.verbatimInput, true, 'Scalar preparation must preserve this canonical 4K AO verbatim before UASTC');
+assert.equal(scalar.inputSha256, scalar.outputSha256);
+const unmarked = readGlb(await readFile(sized));
+for (const material of unmarked.json.materials) if (material.extras) delete material.extras.sky_illumination;
+if (unmarked.json.bufferViews[0].byteOffset === 0) delete unmarked.json.bufferViews[0].byteOffset;
+const unmarkedPath = path.join(output, 'unmarked.glb'); await writeFile(unmarkedPath, writeGlb(unmarked.json, unmarked.binary));
+const noop = await preserveOrderAO(unmarkedPath, unmarkedPath, path.join(output, 'unmarked-noop.glb'), path.join(output, 'unmarked-proof.json'));
+assert.equal(noop.verbatimInput, true); assert.equal(noop.restoredImages, 0);
+await assert.rejects(() => preserveOrderAO(sized, sized, path.join(output, 'invalid-size.glb')), /4096 pixels wide/, 'A 2K source cannot masquerade as the dedicated original');
+const shared = readGlb(await readFile(source)); shared.json.materials[0].pbrMetallicRoughness.baseColorTexture = structuredClone(shared.json.materials[0].occlusionTexture);
+const sharedPath = path.join(output, 'shared-colour-control.glb'); await writeFile(sharedPath, writeGlb(shared.json, shared.binary));
+await assert.rejects(() => preserveOrderAO(sharedPath, sized, path.join(output, 'invalid-shared.glb')), /only the marked order occlusion roles/, 'An AO image serving colour must not be replaced');
+const controls = { status: 'passed', controls: ['real-CLI-2K-resize', '4K-original-bytes-restored', 'shared-order-one-atlas', 'all-other-binary-views-exact', 'other-colour-remains-2K', 'normal-preserved', 'UV-sampler-material-bindings-preserved', 'canonical-4K-AO-verbatim-before-UASTC', 'verbatim-repeat', 'unmarked-noop', '2K-source-rejected', 'shared-colour-image-rejected'], proof };
+await writeFile(path.join(output, 'controls.json'), JSON.stringify(controls, null, 2) + '\n');
+console.log(JSON.stringify(controls));

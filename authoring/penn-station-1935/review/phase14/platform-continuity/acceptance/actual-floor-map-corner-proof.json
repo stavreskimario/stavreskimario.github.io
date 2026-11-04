@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "status": "PASS independently reconstructed every actual floor triangle, no GPU or root writes",
+  "actualTriangles": 600,
+  "counts": {
+    "RailwayTrackBaseConcreteEnclosure14": 4,
+    "RailwayPlatformRubbedConcreteEnclosure14": 528,
+    "RailwayPlatformStippledGranolithicEnclosure14": 68
+  },
+  "sourceMeshPath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-bake-v1/raw/model-platform-continuity-floor.glb",
+  "sourceMeshBytes": 8855428,
+  "sourceMeshSha256": "95c6f41361c3faa071a15b2fc7f093036f362695f3e0274aca009640bfe5353c",
+  "sourcePartitionPath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/partition-full.json",
+  "sourcePartitionBytes": 5211246,
+  "sourcePartitionSha256": "0df7e730faf9ece5a8d43e8bb833f3274ee24d5be8f90ff5c0bbeebf6dd06572",
+  "maximumWorldReconstructionResidualM": 0.000004950522097146859,
+  "maximumAmbiguousOriginalUvDifference": 0,
+  "mappingFile": "600-floor-world-uv-map.json",
+  "mappingBytes": 599470,
+  "mappingSha256": "a95b13a98582cd4680d01dec32bf1904acd74bede13fee711731d1095b31867d"
+}

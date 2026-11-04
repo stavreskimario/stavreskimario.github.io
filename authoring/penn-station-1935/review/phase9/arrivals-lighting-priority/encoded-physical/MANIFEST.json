@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "status": "PASS: new full/low encoded ARR physical outcomes; native browser/append acceptance separate",
+  "files": {
+    "README.md": {
+      "sha256": "44fcfcc1756e2549c0415adbdc896c91be9263ff6f878298403a30d0d242aa2a",
+      "bytes": 2509
+    },
+    "SUMMARY.json": {
+      "sha256": "66a7bb6a392903997b80045bad1b09ad80efa8211ef5ef1e815c44851797f13e",
+      "bytes": 6259
+    },
+    "check-departures.mjs": {
+      "sha256": "431c9fb766d0ed3e6f8daa7687fce29608d7311697385c72ef8212407b44a991",
+      "bytes": 3961
+    },
+    "check-routes.mjs": {
+      "sha256": "4274d2ec17d0933872019d8e769fb603e2ba550b2eeee1a57ed91f2cc75ad903",
+      "bytes": 4512
+    },
+    "check-treads-guards.mjs": {
+      "sha256": "462f411a4f93072b845780a42f9bcc8b2c49701e2cedc895933bdeee94f66409",
+      "bytes": 6878
+    },
+    "contacts-check-v1/README.md": {
+      "sha256": "87c4fc5b991949412f55cd03d5fea40773ec18e2f2ea90bc554c71bae577e2b7",
+      "bytes": 1385
+    },
+    "contacts-check-v1/check-optimized-contacts.mjs": {
+      "sha256": "9fe6a67b08afdd5631d900909b20c71b4a0d5024a49d8cab6dbcb6049d2f0f86",
+      "bytes": 8700
+    },
+    "contacts-check-v1/contacts-run.log": {
+      "sha256": "3551cc9e781bf2de99d5a142c746d6af3c9c2e43f141350df7b14142ea8fa58d",
+      "bytes": 333
+    },
+    "contacts-check-v1/contacts-summary.json": {
+      "sha256": "6779c2fe2bb15d45d8de9636b3ec104f50b80ae411a3aca354e2218902844a2c",
+      "bytes": 8810
+    },
+    "contacts-check-v1/contacts.json": {
+      "sha256": "9eaa0b597a1e593c8f14bb00565298518f77e77d053640a7ede6b9e3dc77ef2f",
+      "bytes": 104095
+    },
+    "contacts-check-v1/dependency-pins.json": {
+      "sha256": "be07f5b535d4875434ce3696e842311ec0a1305c4b9e73e19db190d995e1eb0a",
+      "bytes": 1329
+    },
+    "contacts-check-v1/input-helper-pins-before.json": {
+      "sha256": "9cbfb661f30ed70d874573bbe677c7f1bd348bf063348e613442dab07efdf59d",
+      "bytes": 2625
+    },
+    "contacts-check-v1/path-only-adaptation.patch": {
+      "sha256": "219538255c3eaa27bad21b5c661bfc7cd09ea9f87a34d512af785b0dc8bb56fb",
+      "bytes": 10663
+    },
+    "departures.json": {
+      "sha256": "0fac4b2ec7877968dddb490aaaf84c68af919ad1b1945be50ed4d0e467ffc29c",
+      "bytes": 81689
+    },
+    "departures.log": {
+      "sha256": "62febef12eaeb6f941fbb149ba8b67ea8be6116c1595f8cb79e5039ad28827c9",
+      "bytes": 121
+    },
+    "input-and-helper-pins.json": {
+      "sha256": "edfbf14831a3a7ef15ea781afae4d56b1bfad2702b024c93d264fe11b9968f3a",
+      "bytes": 4853
+    },
+    "route-path-adaptation.patch": {
+      "sha256": "025046a4ff12866e18a68e96d389f47d3ad5beb3329c0208593e719e4aa9e941",
+      "bytes": 7006
+    },
+    "routes.json": {
+      "sha256": "b8a50d4a7c8647c15443c8f917e68399fceca2538fd925bdc1cd01e08134ffb9",
+      "bytes": 291368
+    },
+    "routes.log": {
+      "sha256": "26c4b3553550bfad9a37a456f83b06490d7d2421433c657a867b86e4caa7b03a",
+      "bytes": 691
+    },
+    "treads-guards.json": {
+      "sha256": "ad69e0bdf832da77d8aa0dd37de14176bc1150427d43abf12cb20733beecccfe",
+      "bytes": 9891
+    },
+    "treads-guards.log": {
+      "sha256": "2a1884d55ce1833478ad8d539fd3b40a2a7615bee8957cfb9dceba6d24137747",
+      "bytes": 812
+    }
+  }
+}

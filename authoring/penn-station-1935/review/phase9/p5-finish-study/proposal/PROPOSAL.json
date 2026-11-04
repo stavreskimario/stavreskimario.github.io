@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "status": "PROPOSAL ONLY: bounded P5 visual-finish study; root review before any geometry authoring",
+  "scopeEnvelopeWorld": {
+    "x": [
+      -81.6,
+      -46.5
+    ],
+    "z": [
+      10.5,
+      14.9
+    ],
+    "y": [
+      -13.54,
+      -6.24
+    ],
+    "qualification": "Review/ownership clip, not a historical room boundary. Existing full-source components remain uncut until a reviewed exact ownership split is available."
+  },
+  "sourceMeasurements": {
+    "p5StairComponents": 322,
+    "actualTriangleAdjacencyChecks": 88,
+    "all88SurfaceIntersections": true,
+    "structuralBearingCasesWithinThoseChecks": 24,
+    "sourceFrameTopWorldY": -7.767600066375732,
+    "sourceFrameBottomWorldY": -8.247600085449218,
+    "galleryFinishedWorldY": -7.4676,
+    "slabThicknessM": 0.3,
+    "frameDepthM": 0.48,
+    "frameFlangeWidthM": 0.18,
+    "frameFlangeThicknessM": 0.025,
+    "stringerDepthM": 0.3,
+    "stringerFlangeWidthM": 0.15,
+    "stringerFlangeThicknessM": 0.025,
+    "landingFinishedWorldY": -9.81027962962963,
+    "landingBeamTopWorldY": -10.00027962962963,
+    "landingBeamBottomWorldY": -10.30027962962963,
+    "newelPadTopBelowNominalFinishM": [
+      0.20749985656738268,
+      0.20750025482177747
+    ],
+    "newelInterpretation": "Buried structural anchors already intersect the post profiles; not a proven defect. Do not raise or replace pads/newels on this evidence.",
+    "precisionSeamsM": {
+      "westLandingToFlight2": 7.62939453125e-06,
+      "eastFlight1ToLanding": 3.814697265625e-06,
+      "qualification": "Float32 seam effects, already below existing source/encoded acceptance. Not visible gaps or walking defects and not the visual milestone."
+    }
+  },
+  "recommendedAppearanceStudy": {
+    "primarySilhouetteBasis": [
+      "LOC071937-right: continuous broad dark stair/stringer and landing band, flat lower-gallery fascia; exposed support shafts and open guards remain visible.",
+      "LOC071937-left: flat stringer face, continuous landing-side band and bounded gallery edge; no continuous opaque sidewall.",
+      "LXXXIV Fig2: open lower-deck/fascia/landing/support family."
+    ],
+    "historicalQualification": "Photographs support visible solid-face/continuous-band form. They do not establish a cover-sheet construction, exact thickness, profile schedule, paint colour or complete1935retention. Every new skin section is an explicit appearance interpretation.",
+    "construction": "Blender-authored closed appearance skins inside current host-flange extents. Use existing PaintedStructuralIronArrivalsStructure appearance initially; do not certify material/fabrication from monochrome pixels. Fuse only covered host cosmetic faces to eliminate duplicate coplanar surfaces; retain all accepted bearing/top/bottom interfaces.",
+    "newNominalSkinThicknessM": 0.008,
+    "thicknessQualification": "8mm is an authoring/encoding coordination choice, not a recovered historical dimension.",
+    "families": [
+      {
+        "family": "Flight stringer outer faces",
+        "count": 8,
+        "hostSectionCoordinates": {
+          "hostAcrossHalfWidthM": 0.075,
+          "skinAcrossRangeAbsM": [
+            0.067,
+            0.075
+          ],
+          "skinBetweenFlangesHeightRangeM": [
+            -0.125,
+            0.125
+          ],
+          "flanges": [
+            -0.15,
+            0.15
+          ]
+        },
+        "extent": "Use exact existing start/end sections of each of4P5flight\u00d72side stringers. Outward side only. No change to accepted flight/tread/rail/endpoints or outer flange envelope.",
+        "contact": "Full8mm strips seat on existing inner flange faces at section heights\u00b1125mm. Preserve the existing stringer-end bearing intersections."
+      },
+      {
+        "family": "Intermediate-landing side fascia",
+        "count": 4,
+        "dimensions": {
+          "lengthM": 1.2,
+          "heightM": 0.3,
+          "thicknessM": 0.008,
+          "outerLateralOffsetFromStairCentreM": 1.17,
+          "innerLateralOffsetM": 1.162,
+          "topWorldY": -10.00027962962963,
+          "bottomWorldY": -10.30027962962963
+        },
+        "xExtents": {
+          "west": [
+            -78.092,
+            -76.892
+          ],
+          "east": [
+            -51.22,
+            -50.02
+          ]
+        },
+        "extent": "Within existing three transverse landing-girder body/extents; cover gaps between their outer side faces, not a new support beam. Exact end faces follow current source section endpoints.",
+        "contact": "Seat/fuse at both existing end girders and central girder. Remove covered coplanar outer end-cap faces only; keep every top/bottom seat and cap/column contact unchanged. No new independent column or bearing."
+      },
+      {
+        "family": "Gallery-edge fascia within current I section",
+        "count": 2,
+        "section": {
+          "heightBetweenFlangesM": 0.43,
+          "thicknessM": 0.008,
+          "topWorldY": -7.7926,
+          "bottomWorldY": -8.2226,
+          "existingHostTopWorldY": -7.7676,
+          "existingHostBottomWorldY": -8.2476
+        },
+        "edgeExtents": [
+          {
+            "side": "west",
+            "host": "Exit bridge continuous edge girder",
+            "xOuter": -73.29,
+            "xInner": -73.282,
+            "zStart": 11.513488652376697,
+            "zEnd": 14.332006159848813
+          },
+          {
+            "side": "east",
+            "host": "Exit bridge continuous edge girder.001",
+            "xOuter": -54.822,
+            "xInner": -54.83,
+            "zStart": 10.616940049922068,
+            "zEnd": 14.581958024941919
+          }
+        ],
+        "extent": "Outer face of current180mm flange. Prototype panel ends follow current P5 transverse-frame centreline intersections; those panel seam positions are inferred ownership/review divisions, not authenticated historic joints. No added projecting slab cap or floor extension."
+      }
+    ],
+    "totalAppearanceSkins": 14,
+    "higherImpactPriority": "Prioritize continuous flat flight\u2192landing band and gallery-edge plane before tiny fasteners, newel ornament or cosmetic micro-seam edits. The primary evidence supports these silhouettes more clearly than exact decorative profiles."
+  },
+  "retainedAndHeld": {
+    "padsNewelsGuards": "All current anchors,16P5newel assemblies, balls, rail/guard returns and their88measured adjacencies retained. Visible shoe/panel profiles require a separate source silhouette trace before any reshaping; do not invent feet.",
+    "frameHeight": "Keep current frame/cap/pier heights for this promotable finish proposal. General127mm finish-to-beam rule is not a P5fabrication schedule. Conditional173.000066mm raise remains a separate nonpromotable section hypothesis.",
+    "frameHeightDependency": "Raising only the P5inner spans/caps breaks their four unchanged adjoining longitudinal spans. Both gallery edge girders run the full107m. No invented stepped seat/transition or blind99beam translation.",
+    "sharedAdjoiningBeams": [
+      "Unequal source support longitudinal transfer girder.008",
+      "Unequal source support longitudinal transfer girder.010",
+      "Unequal source support longitudinal transfer girder.029",
+      "Unequal source support longitudinal transfer girder.031"
+    ],
+    "p5LowerSourceSupports": [
+      "C016",
+      "C019",
+      "C044",
+      "C046"
+    ],
+    "p5UpperContinuations": "None built for these four supports; keep their upper-transfer holds. Do not turn that absence into an invented full-height column.",
+    "clearance": "Gibbs16ft2in is a yard/tunnel comparison, not an Exit ceiling. Keep tracks/grades/train/platform/coping envelopes unchanged; no new canopy or sidewall.",
+    "otherHolds": [
+      "C014/C025 lower paths",
+      "26arrivals upper transfers",
+      "20definite+6boundary westernMainpier feet",
+      "P9/LIRR/northern registration",
+      "streetward connections and individual lift assignments",
+      "temporary north/south review boundaries remain qualified"
+    ]
+  },
+  "acceptanceBeforePromotion": [
+    "Pin source/runtime/canonical inputs and prove all nonowned components, all public tread/landing/floor top surfaces, rail/guard geometry,21tracks/11platform outlines, lift keepouts and fixture origins unchanged. New skin vertices remain within declared current host-flange/crossgirder envelopes.",
+    "Each skin is a closed finite positive-volume Blender mesh. Exact shared host-section coordinates; no negative-scale/winding errors, duplicate coplanar exterior faces, zfighting or new material outside reviewed allowed names.",
+    "Prove actual positive contact strips for every new skin with its named host flanges/end/central girder receivers. Retain all88existingP5adjacency outcomes and all accepted actual lower47/upper21contacts. Surface intersection is not capacity certification.",
+    "Repeat all96arrival routes and3744tread samples per encoded variant,864guard rays/body stops, gallery aisles, platform detours and retained departures using unchanged collision/body/step bounds. All16+6fixture mounts and4practical glower origins remain exact.",
+    "Run full/low encoded contact checks at existing2mm bound, material/normal/UV preservation and no new source/runtime atlas regression. Any changed geometry/occlusion needs fresh supported lighting acceptance; current lighting bytes are not proof for a new geometry candidate.",
+    "Matched primary-photo/actual-model viewpoints must show the continuous flat fascia/stringer/landing band while retaining open track views. Review source/new silhouettes before repeating beyond P5; a sheet-metal construction or1935fittings claim remains unverified.",
+    "Native six-zone walking/visual/performance checks and publication remain separate root gates. No completion claim for northern/street/Main-transfer holds."
+  ],
+  "notPerformed": [
+    "No geometry authored/exported/rebuilt",
+    "No GPU/render/bake/browser run",
+    "No root/runtime/commit/publication changes"
+  ],
+  "measurementReceiptSha256": "5ec73eeb9c56ce8054ea69f7ca9ab6ac8d67d15b9ddc704c832384648b736cb2",
+  "sourcePinsSha256": "e3cf8bc379d539d741008e61f4a592ccdc509e5f559ccc786b223c6b07740745"
+}

@@ -1,0 +1,64 @@
+{
+  "scope": "V3actual exported mesh proofs plus exactV3\u2192finalV4 indicator-only comparison. Actual V4 navigation is recorded separately.",
+  "finalModule": {
+    "bytes": 13712952,
+    "sha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf"
+  },
+  "finalBlend": {
+    "bytes": 72422578,
+    "sha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d"
+  },
+  "newMaterialNames": [
+    "PaintedStructuralIronAccessIndicators",
+    "ClockFaceAccessIndicators",
+    "TravertineDepartureStairStone",
+    "PaintedStructuralIronAccess",
+    "PaintedStructuralIronAccessGuard",
+    "ConcourseOpaqueCirculationConcreteAccessInfill",
+    "PublicFloorMarbleAccessInfill"
+  ],
+  "v3GeometryValidation": {
+    "validatorErrors": 0,
+    "supportedTreadSamples": 1215,
+    "totalTreadSamples": 1215,
+    "minimumSampledTreadHeadroom": 2.132808276112541,
+    "coplanarPlatformSamples": 0,
+    "totalPlatformSamples": 81,
+    "regularClosedOutwardNodes": 2030,
+    "regularNonpositiveVolumes": 0,
+    "regularBadClosedEdges": 0,
+    "newStructuralDegenerateTriangles": 0,
+    "inheritedNumeralDegenerateTriangles": 32,
+    "actualExistingPlatformSupportSamples": 81,
+    "newDuplicateReceivingSlabs": 0,
+    "unrelatedSourceObjectsExact": 5034,
+    "retainedBatchCornerPositionsNormalsUvsExact": true
+  },
+  "finalIndicatorOnlyComparison": {
+    "scope": "Actual raw V3/V4 GLB comparison; only interpreted indicator assemblies move east. Stair/gate registration remains fixed.",
+    "gateX": -48.4,
+    "indicatorX": -48.2,
+    "nonIndicatorPrimitivesExact": 1904,
+    "indicatorPrimitivesShifted": 198,
+    "indicatorIntrinsicGeometryNormalsUvsTopologyExact": true,
+    "maximumEastShiftErrorMetres": 7.629394531138978e-07,
+    "maximumOtherDisplacementMetres": 0,
+    "oldRemovalByteExact": true,
+    "retainedOccluderByteExact": true
+  },
+  "unrelatedSourceObjectsExact": 5034,
+  "sourcePreservation": "Retained source mesh corners preserve positions, normal vectors and every available UV layer exactly; unrelated world transforms/material names unchanged. Retained runtime UV/buffer proof is a separate receipt.",
+  "inheritedLetteringLimit": "32collinear cap triangles are retained in existing vector numerals; all2030new non-letter structural meshes are closed and outward, with no newly authored degenerate triangles.",
+  "normalProof": {
+    "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v3/module-normal-proof.json",
+    "sha256": "b1a7d9b0fa67f19874019e70a39eef29be514e81630759677ca3df879f9592d7",
+    "summary": {
+      "regularNodes": 2030,
+      "nonpositiveVolumes": 0,
+      "badClosedEdges": 0,
+      "zeroAreaTriangles": 32,
+      "minimumFaceCornerNormalDot": 0.33848925402731717,
+      "maximumNormalUnitError": 3.258591380062015e-07
+    }
+  }
+}

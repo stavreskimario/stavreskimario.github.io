@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "weightedSourceSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "currentBakedSourceSha256": "b8ad4d2331609bae6ec8bd1dacb0d3184d83a9aed2cad370bf9d88743e52c957",
+  "allOpticalPbrValuesEqualExcludingDeclaredBakeMetadataAndAO": true,
+  "images": [
+    {
+      "name": "Travertine009_2K-JPG_NormalGL",
+      "equal": true,
+      "sourceSha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+      "bakedSha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+      "freshAoDifferenceExpected": false
+    },
+    {
+      "name": "lighting-concourse-arrivals-ao",
+      "equal": false,
+      "sourceSha256": "bc156681f6e96d3a0bed596be9a52fc24ba12bae9bc614372f9d2e3cc8d5b1e6",
+      "bakedSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+      "freshAoDifferenceExpected": true
+    },
+    {
+      "name": "RomanTravertine-full",
+      "equal": true,
+      "sourceSha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+      "bakedSha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+      "freshAoDifferenceExpected": false
+    },
+    {
+      "name": "Travertine-roughness",
+      "equal": true,
+      "sourceSha256": "f2cd0775a33f8902da65a4f33dc377585cf2b5e3cda82119c50035163eb2b346",
+      "bakedSha256": "f2cd0775a33f8902da65a4f33dc377585cf2b5e3cda82119c50035163eb2b346",
+      "freshAoDifferenceExpected": false
+    },
+    {
+      "name": "Marble018_2K-JPG_NormalGL",
+      "equal": true,
+      "sourceSha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+      "bakedSha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+      "freshAoDifferenceExpected": false
+    },
+    {
+      "name": "HonedMarble-full",
+      "equal": true,
+      "sourceSha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+      "bakedSha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+      "freshAoDifferenceExpected": false
+    },
+    {
+      "name": "Marble018_2K-JPG_Roughness",
+      "equal": true,
+      "sourceSha256": "06b1677bd2d4cef870487f27e1e1242286092ec35491420740d2364db09bed2f",
+      "bakedSha256": "06b1677bd2d4cef870487f27e1e1242286092ec35491420740d2364db09bed2f",
+      "freshAoDifferenceExpected": false
+    }
+  ],
+  "choice": "Use accepted pre-bake85bf to preserve original authored normals/UV1 and avoid accumulating Blender export normal re-encoding. Its old AO and lighting bookkeeping must be freshly replaced, never promoted."
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Replaces duplicate coplanar upward road/sidewalk top coverage; street footprint, heights, buried slabs and existing city inventory retained. No additional Manhattan parcel, vehicle or furniture inventory is authenticated or added.",
+  "editableContext": {
+    "file": "authoring/penn-station-1935/context-neighbourhood.blend",
+    "bytes": 16410511,
+    "sha256": "8b23fd7ea8deded368a33ba83b33a636f668e7e0f2353c474a77e06d43aefa7e",
+    "sourceByteIdentical": true,
+    "priorSha256": "de746b4efc8e443e63e76358d67d67c698ffbe3658318387b8d6138b56be89c8"
+  },
+  "rawContext": {
+    "bytes": 26204888,
+    "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd"
+  },
+  "audit": {
+    "file": "pavement-contact-audit.json",
+    "sha256": "1bc575e3828d662fd5545436de9c4c65d4968ea430ebcf530fa3feed8ee0aac4",
+    "removedDuplicateAreaM2": 891.8690083827823,
+    "remainingCoplanarOverlapAreaM2": 0
+  },
+  "qualification": "Geometry/source evidence only; final mapped browser paving review and asset promotion remain separate. Historic street widths and context registration retain their existing ledger qualifications."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "status": "PASS current source retained byte-exact in immutable local Git and two verified external copies; public PNG/WebP unchanged",
+  "path": "authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky-denoised-linear.hdr.gz",
+  "commit": "7e035d1cea1cfda183143db0dfe37d2dd5fe6f23",
+  "blob": "db651f3bc0cb679cc502e9ed531c78d2a591c5a0",
+  "bytes": 66952392,
+  "sha256": "66f34a8cdf5806b89955f941b6a8ca6eb1dbf4d4fafaf46c1267bdc9fa0dc69b",
+  "decodedBytes": 270565427,
+  "decodedSha256": "a21e1366a252834193fae1f7d8471766c73aca5fa2d6247ad4fa8b434e893e19",
+  "resolution": [
+    8192,
+    8192
+  ],
+  "freshIndependentCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/current-vault-hdr-reserve-v1/fresh-independent-copy/authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky-denoised-linear.hdr.gz",
+  "movedOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/current-vault-hdr-reserve-v1/moved-original/authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky-denoised-linear.hdr.gz",
+  "immutableCommitMembershipVerified": true,
+  "gitBlobBytesExact": true,
+  "decodedHdrBytesVerified": true,
+  "activeSourceValidation": "tests/source-archive.cjs recovers this single allowlisted path from the verified immutable Git blob, then unchanged gzip/decoded-HDR/statistics checks apply.",
+  "restoreHelper": "restore-current-vault-hdr.py",
+  "protectedUnchanged": {
+    "authoring/penn-station-1935/penn-station-phase5.blend": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky.png": "7b54d40b461ccb4a17435eda4007c6ccdad55bc75cf093acd5aa2f3ea13c494e",
+    "authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky-low.png": "bd67b8c0683e2186c4f606146bde6006497a23b9cd72664655d6c26433cb4750",
+    "penn-station-1935/assets/lighting-waiting-room-vault-sky.webp": "0f8063785603d0b5c7f08f537dbd6e7dabeb0d4eec835b75d979172b1176e86c",
+    "penn-station-1935/assets/lighting-waiting-room-vault-sky-low.webp": "8dead4d28a62c675f7739b89a97e2827854041931c22826acfc949522c18b8d0",
+    "penn-station-1935/assets/lighting-waiting-room-vault-denoise.json": "3a8ca6215811f19964c249c53f19d9497dbbf8becd06ce5eb417abe97841b768"
+  },
+  "qaImagesArchived": false
+}

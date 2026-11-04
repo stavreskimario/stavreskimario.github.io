@@ -1,0 +1,237 @@
+{
+  "created": "2026-10-29T20:42:28.127Z",
+  "purpose": "Scratch-only same-camera actual concourse DPR comparison; current visual-checkpoint candidate, not final repaired capital acceptance",
+  "runtimeBundleSha256": "dcf2e7721c6e871e47bdf690f671200407ba86646e6934de6d202700069e8d03",
+  "contexts": [
+    {
+      "deviceScaleFactor": 1,
+      "quality": "balanced",
+      "errors": [],
+      "failures": [],
+      "camera": {
+        "position": [
+          -64,
+          3.7327999999999957,
+          38.000000000000014
+        ],
+        "quaternion": [
+          0.10778367340324127,
+          0.1104452884527139,
+          -0.012049430351643943,
+          0.9879470275447471
+        ],
+        "fov": 50
+      },
+      "canvas": {
+        "cssWidth": 1440,
+        "cssHeight": 916,
+        "width": 1440,
+        "height": 916,
+        "pixelRatio": 1,
+        "antialias": true,
+        "samples": 4,
+        "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+      },
+      "metrics": {
+        "calls": 160,
+        "triangles": 25712616,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5595923702491237,
+        "renderFrame": 151,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1440,
+          916
+        ]
+      },
+      "clearsIntervalsMs": {
+        "samples": 21,
+        "median": 131.90000000037253,
+        "p95": 176.19999999925494,
+        "max": 190.09999999962747,
+        "mean": 111.38571428569655
+      },
+      "rafIntervalsMs": {
+        "samples": 22,
+        "median": 133.39999999999782,
+        "p95": 183.29999999999927,
+        "max": 183.39999999999782,
+        "mean": 106.81363636363643
+      }
+    },
+    {
+      "deviceScaleFactor": 1,
+      "quality": "high",
+      "errors": [],
+      "failures": [],
+      "camera": {
+        "position": [
+          -64,
+          3.7327999999999957,
+          38.000000000000014
+        ],
+        "quaternion": [
+          0.10778367340324127,
+          0.1104452884527139,
+          -0.012049430351643943,
+          0.9879470275447471
+        ],
+        "fov": 50
+      },
+      "canvas": {
+        "cssWidth": 1440,
+        "cssHeight": 916,
+        "width": 1440,
+        "height": 916,
+        "pixelRatio": 1,
+        "antialias": true,
+        "samples": 4,
+        "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+      },
+      "metrics": {
+        "calls": 160,
+        "triangles": 25712616,
+        "geometries": 122,
+        "textures": 59,
+        "exposure": 1.5596231850931437,
+        "renderFrame": 132,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1440,
+          916
+        ]
+      },
+      "clearsIntervalsMs": {
+        "samples": 13,
+        "median": 246.2999999988824,
+        "p95": 321.59999999962747,
+        "max": 321.59999999962747,
+        "mean": 185.7615384615671
+      },
+      "rafIntervalsMs": {
+        "samples": 13,
+        "median": 233.29999999999927,
+        "p95": 316.59999999999854,
+        "max": 316.59999999999854,
+        "mean": 184.60769230769242
+      }
+    },
+    {
+      "deviceScaleFactor": 2,
+      "quality": "balanced",
+      "errors": [],
+      "failures": [],
+      "camera": {
+        "position": [
+          -64,
+          3.7327999999999957,
+          38.000000000000014
+        ],
+        "quaternion": [
+          0.10778367340324127,
+          0.1104452884527139,
+          -0.012049430351643943,
+          0.9879470275447471
+        ],
+        "fov": 50
+      },
+      "canvas": {
+        "cssWidth": 1440,
+        "cssHeight": 916,
+        "width": 2160,
+        "height": 1374,
+        "pixelRatio": 2,
+        "antialias": true,
+        "samples": 4,
+        "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+      },
+      "metrics": {
+        "calls": 160,
+        "triangles": 25712616,
+        "geometries": 122,
+        "textures": 57,
+        "exposure": 1.5599387340051112,
+        "renderFrame": 134,
+        "pixelRatio": 1.5,
+        "canvasPixels": [
+          2160,
+          1374
+        ]
+      },
+      "clearsIntervalsMs": {
+        "samples": 50,
+        "median": 50.80000000074506,
+        "p95": 75.09999999962747,
+        "max": 111.89999999850988,
+        "mean": 49.08800000000745
+      },
+      "rafIntervalsMs": {
+        "samples": 52,
+        "median": 50,
+        "p95": 83.29999999999927,
+        "max": 100,
+        "mean": 47.75576923076922
+      }
+    },
+    {
+      "deviceScaleFactor": 2,
+      "quality": "high",
+      "errors": [],
+      "failures": [],
+      "camera": {
+        "position": [
+          -64,
+          3.7327999999999957,
+          38.000000000000014
+        ],
+        "quaternion": [
+          0.10778367340324127,
+          0.1104452884527139,
+          -0.012049430351643943,
+          0.9879470275447471
+        ],
+        "fov": 50
+      },
+      "canvas": {
+        "cssWidth": 1440,
+        "cssHeight": 916,
+        "width": 2880,
+        "height": 1832,
+        "pixelRatio": 2,
+        "antialias": true,
+        "samples": 4,
+        "driver": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+      },
+      "metrics": {
+        "calls": 160,
+        "triangles": 25712616,
+        "geometries": 122,
+        "textures": 59,
+        "exposure": 1.5594091328848578,
+        "renderFrame": 152,
+        "pixelRatio": 2,
+        "canvasPixels": [
+          2880,
+          1832
+        ]
+      },
+      "clearsIntervalsMs": {
+        "samples": 38,
+        "median": 77.20000000111759,
+        "p95": 93.90000000037253,
+        "max": 98.5,
+        "mean": 65.05526315793395
+      },
+      "rafIntervalsMs": {
+        "samples": 39,
+        "median": 83.19999999999891,
+        "p95": 99.89999999999964,
+        "max": 100,
+        "mean": 63.671794871794845
+      }
+    }
+  ],
+  "browser": "156.0.8078.74",
+  "status": "passed"
+}

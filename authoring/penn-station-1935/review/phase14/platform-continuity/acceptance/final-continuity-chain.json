@@ -1,0 +1,326 @@
+{
+  "status": "PASS31188source/splitraw/encoded/mounted and exactretainedbase/single5bay replacement",
+  "inputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/construction-v1/candidate-v2/model-platform-enclosure.glb",
+      "sha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+      "bytes": 7527360
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/structure-bake-v1/raw/model-platform-continuity.glb",
+      "sha256": "e6c61a3462a8f234fa2076f6636de13ab2f8564394bf9190abad3396140b2c27",
+      "bytes": 5845796
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-bake-v1/raw/model-platform-continuity-floor.glb",
+      "sha256": "95c6f41361c3faa071a15b2fc7f093036f362695f3e0274aca009640bfe5353c",
+      "bytes": 8855428
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/combined-raw/model-platform-continuity.glb",
+      "sha256": "677e61fe1a3f633e1471e0b8b284d51a2eaf46e4cb40b48eaed4ad6e6e376f22",
+      "bytes": 14699916
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/combined-package/model-platform.glb",
+      "sha256": "d299b4545828e4b689a242737e9fb7866180f8b49d34842f09ab64e2e98efddf",
+      "bytes": 1592636
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/model-platform.glb.gz",
+      "sha256": "85f85da7dfb413773660d70404d65d988ec45690ac5b4ba237476a7b4d34d906",
+      "bytes": 776983
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/retained-base-v1/model-platform.glb.gz",
+      "sha256": "fef38bec0dbd20110a0fb9688c40721df91da75a5b1084ab56a5eea194d61010",
+      "bytes": 272207
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/combined-package/model-platform-low.glb",
+      "sha256": "4ab76cd0221c69973f5af929a37ec284d0546d457d4ed1103a41a1ae322d7157",
+      "bytes": 1592636
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/model-platform-low.glb.gz",
+      "sha256": "4431f8e1b774f0fa1c3468d1a7ec56f8468e4f995d8068222f0e954c78c273dd",
+      "bytes": 802608
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/retained-base-v1/model-platform-low.glb.gz",
+      "sha256": "175294560c8d531fd6646c9abb858e2b7af3f91745684da96f9887feef55c324",
+      "bytes": 298060
+    }
+  ],
+  "cases": [
+    {
+      "label": "accepted33owners/31188source→combined actual raw",
+      "status": "PASS",
+      "trianglesBefore": 31188,
+      "trianglesAfter": 31188,
+      "matched": 31188,
+      "exactOrientedCorners": 3826,
+      "maxPositionComponentDriftM": 0.0000019073486328125,
+      "maxNormalComponentDrift": 0.00039905195709997315,
+      "maxNormalAngleDegrees": 0.022891266845124124,
+      "minimumNormalDot": 0.9999999201886991,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "30588fresh structure raw→combined exact provenance",
+      "status": "PASS",
+      "trianglesBefore": 30588,
+      "trianglesAfter": 30588,
+      "matched": 30588,
+      "exactOrientedCorners": 30588,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "600fresh floor raw→combined exact provenance",
+      "status": "PASS",
+      "trianglesBefore": 600,
+      "trianglesAfter": 600,
+      "matched": 600,
+      "exactOrientedCorners": 600,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "full raw→encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 31188,
+      "trianglesAfter": 31188,
+      "matched": 31188,
+      "exactOrientedCorners": 31188,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "full encoded→mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 31188,
+      "trianglesAfter": 31188,
+      "matched": 31188,
+      "exactOrientedCorners": 31188,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "low raw→encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 31188,
+      "trianglesAfter": 31188,
+      "matched": 31188,
+      "exactOrientedCorners": 31188,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "low encoded→mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 31188,
+      "trianglesAfter": 31188,
+      "matched": 31188,
+      "exactOrientedCorners": 31188,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    }
+  ],
+  "prefixProof": [
+    {
+      "quality": "full",
+      "retainedBaseSha256": "fef38bec0dbd20110a0fb9688c40721df91da75a5b1084ab56a5eea194d61010",
+      "mountedSha256": "85f85da7dfb413773660d70404d65d988ec45690ac5b4ba237476a7b4d34d906",
+      "originalRetainedBinAndAllTablesExact": true,
+      "newModuleOnceTriangles": 31188,
+      "oldEnclosureAliasesPresent": false
+    },
+    {
+      "quality": "low",
+      "retainedBaseSha256": "175294560c8d531fd6646c9abb858e2b7af3f91745684da96f9887feef55c324",
+      "mountedSha256": "4431f8e1b774f0fa1c3468d1a7ec56f8468e4f995d8068222f0e954c78c273dd",
+      "originalRetainedBinAndAllTablesExact": true,
+      "newModuleOnceTriangles": 31188,
+      "oldEnclosureAliasesPresent": false
+    }
+  ],
+  "paintProof": [
+    {
+      "quality": "full",
+      "stage": "module",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ]
+    },
+    {
+      "quality": "full",
+      "stage": "mounted",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ]
+    },
+    {
+      "quality": "low",
+      "stage": "module",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ]
+    },
+    {
+      "quality": "low",
+      "stage": "mounted",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+      "metallic": 0,
+      "roughness": 0.6399999856948853,
+      "linearBase": [
+        0.18000000715255737,
+        0.1899999976158142,
+        0.17000000178813934,
+        1
+      ]
+    }
+  ],
+  "otherModels": [],
+  "sourceOld4BayProof": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/actual-source-retention-floor-v2.json",
+    "sha256": "4fe69f4a760b9f695feac47e6c4e9b95c6ccf3c966531f31eaca531f0232c2e1",
+    "triangles24996Exact": {
+      "label": "accepted24996fourbaystructuralfaces→extendedsource exactretention",
+      "status": "PASS",
+      "trianglesBefore": 24996,
+      "trianglesAfter": 24996,
+      "matched": 24996,
+      "exactOrientedCorners": 24996,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    }
+  },
+  "newP3PhysicalTransfer": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/source-p3-physical-proof-v2.json",
+    "sha256": "0b618bbe8a58e9671d0388717f2ff1b97056aaa8f564346609eed62599bf15ce",
+    "receivers": 11,
+    "minimumMeasuredRailClearanceM": 4.9457606491088875,
+    "newSupportedBodySamples": 250,
+    "proof": "Accepted source compared at every oriented corner; no new or repeated walking loop."
+  },
+  "capAndFootprintTransfer": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/p3-cap-and-footprint-proof.json",
+    "sha256": "e5943764801118ccce160fff7aadd3876a9bfd23a4979b85cc312ca7b5833508",
+    "contacts": 11,
+    "maximumSeparationM": 0,
+    "supportedFootprintSamples": 2268
+  },
+  "qualification": "Original4baygeometry/materialUV0/normals exactly retained by independent source proof. NewP3source observed41.790/adopted41.040−.75m fit explicit.600realexistingfloorfaces replaceownedsource, no overlay. Source→raw20µm/.5°/UV0strict; rawsplitunion→encoded→mounted allP/N/UV0/UV1 exactzero additional."
+}

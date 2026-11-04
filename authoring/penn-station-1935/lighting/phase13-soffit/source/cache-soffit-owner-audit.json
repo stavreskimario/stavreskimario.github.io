@@ -1,0 +1,2154 @@
+{
+  "status": "PASS56cachedownersuniquelymatched",
+  "scene": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/independent-floor-prebake-scene.blend",
+    "sha256": "f82c477cff0727e0e501f1ee02d7bf10ed5c55acb7623ed9b17c7305414aeb63"
+  },
+  "objects": [
+    {
+      "name": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "candidateTriangles": 108,
+      "sourcePolygons": 5540,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.267199993133545
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Lower33rd north ceiling",
+      "candidateTriangles": 2,
+      "sourcePolygons": 12,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Lower33rd east ceiling west of ascent",
+      "candidateTriangles": 2,
+      "sourcePolygons": 12,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Lower33rd ceiling south of ascent",
+      "candidateTriangles": 2,
+      "sourcePolygons": 12,
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "candidateTriangles": 114,
+  "matches": [
+    {
+      "target": 0,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1342,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1342,
+      "vertices": [
+        1595,
+        1599,
+        1635
+      ],
+      "loops": [
+        4026,
+        4027,
+        4028
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -75.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -75.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 1,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1343,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1343,
+      "vertices": [
+        1595,
+        1635,
+        1631
+      ],
+      "loops": [
+        4029,
+        4030,
+        4031
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -75.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 2,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1390,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1390,
+      "vertices": [
+        1631,
+        1635,
+        1671
+      ],
+      "loops": [
+        4170,
+        4171,
+        4172
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 3,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1391,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1391,
+      "vertices": [
+        1631,
+        1671,
+        1667
+      ],
+      "loops": [
+        4173,
+        4174,
+        4175
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -73.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 4,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1438,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1438,
+      "vertices": [
+        1667,
+        1671,
+        1707
+      ],
+      "loops": [
+        4314,
+        4315,
+        4316
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 5,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1439,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1439,
+      "vertices": [
+        1667,
+        1707,
+        1703
+      ],
+      "loops": [
+        4317,
+        4318,
+        4319
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -72.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 6,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1486,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1486,
+      "vertices": [
+        1703,
+        1707,
+        1743
+      ],
+      "loops": [
+        4458,
+        4459,
+        4460
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 7,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1487,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1487,
+      "vertices": [
+        1703,
+        1743,
+        1739
+      ],
+      "loops": [
+        4461,
+        4462,
+        4463
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -71.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 8,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1534,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1534,
+      "vertices": [
+        1739,
+        1743,
+        1779
+      ],
+      "loops": [
+        4602,
+        4603,
+        4604
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -69.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 9,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1535,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1535,
+      "vertices": [
+        1739,
+        1779,
+        1775
+      ],
+      "loops": [
+        4605,
+        4606,
+        4607
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -70.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -69.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -69.0,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 10,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1582,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1582,
+      "vertices": [
+        1775,
+        1779,
+        1815
+      ],
+      "loops": [
+        4746,
+        4747,
+        4748
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -69.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -69.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 11,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1583,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1583,
+      "vertices": [
+        1775,
+        1815,
+        1811
+      ],
+      "loops": [
+        4749,
+        4750,
+        4751
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -69.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 12,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1630,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1630,
+      "vertices": [
+        1811,
+        1815,
+        1851
+      ],
+      "loops": [
+        4890,
+        4891,
+        4892
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 13,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1631,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1631,
+      "vertices": [
+        1811,
+        1851,
+        1847
+      ],
+      "loops": [
+        4893,
+        4894,
+        4895
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -67.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 14,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1678,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1678,
+      "vertices": [
+        1847,
+        1851,
+        1887
+      ],
+      "loops": [
+        5034,
+        5035,
+        5036
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 15,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1679,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1679,
+      "vertices": [
+        1847,
+        1887,
+        1883
+      ],
+      "loops": [
+        5037,
+        5038,
+        5039
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -66.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 16,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1726,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1726,
+      "vertices": [
+        1883,
+        1887,
+        1923
+      ],
+      "loops": [
+        5178,
+        5179,
+        5180
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 17,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1727,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1727,
+      "vertices": [
+        1883,
+        1923,
+        1919
+      ],
+      "loops": [
+        5181,
+        5182,
+        5183
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -65.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 18,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1774,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1774,
+      "vertices": [
+        1919,
+        1923,
+        1959
+      ],
+      "loops": [
+        5322,
+        5323,
+        5324
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -63.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 19,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1775,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1775,
+      "vertices": [
+        1919,
+        1959,
+        1955
+      ],
+      "loops": [
+        5325,
+        5326,
+        5327
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -64.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -63.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -63.0,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 20,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1822,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1822,
+      "vertices": [
+        1955,
+        1959,
+        1995
+      ],
+      "loops": [
+        5466,
+        5467,
+        5468
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -63.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -63.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 21,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1823,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1823,
+      "vertices": [
+        1955,
+        1995,
+        1991
+      ],
+      "loops": [
+        5469,
+        5470,
+        5471
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -63.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 22,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1870,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1870,
+      "vertices": [
+        1991,
+        1995,
+        2031
+      ],
+      "loops": [
+        5610,
+        5611,
+        5612
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 23,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1871,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1871,
+      "vertices": [
+        1991,
+        2031,
+        2027
+      ],
+      "loops": [
+        5613,
+        5614,
+        5615
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -61.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 24,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1918,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1918,
+      "vertices": [
+        2027,
+        2031,
+        2067
+      ],
+      "loops": [
+        5754,
+        5755,
+        5756
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 25,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1919,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1919,
+      "vertices": [
+        2027,
+        2067,
+        2063
+      ],
+      "loops": [
+        5757,
+        5758,
+        5759
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -60.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 26,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1966,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1966,
+      "vertices": [
+        2063,
+        2067,
+        2103
+      ],
+      "loops": [
+        5898,
+        5899,
+        5900
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 27,
+      "snapshotNode": 9,
+      "snapshotTriangle": 1967,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 1967,
+      "vertices": [
+        2063,
+        2103,
+        2099
+      ],
+      "loops": [
+        5901,
+        5902,
+        5903
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -59.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 28,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2014,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2014,
+      "vertices": [
+        2099,
+        2103,
+        2139
+      ],
+      "loops": [
+        6042,
+        6043,
+        6044
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -57.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 29,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2015,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2015,
+      "vertices": [
+        2099,
+        2139,
+        2135
+      ],
+      "loops": [
+        6045,
+        6046,
+        6047
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -58.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -57.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -57.0,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 30,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2062,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2062,
+      "vertices": [
+        2135,
+        2139,
+        2175
+      ],
+      "loops": [
+        6186,
+        6187,
+        6188
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -57.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -57.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 31,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2063,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2063,
+      "vertices": [
+        2135,
+        2175,
+        2171
+      ],
+      "loops": [
+        6189,
+        6190,
+        6191
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -57.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 32,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2110,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2110,
+      "vertices": [
+        2171,
+        2175,
+        2211
+      ],
+      "loops": [
+        6330,
+        6331,
+        6332
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 33,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2111,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2111,
+      "vertices": [
+        2171,
+        2211,
+        2207
+      ],
+      "loops": [
+        6333,
+        6334,
+        6335
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -55.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 34,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2158,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2158,
+      "vertices": [
+        2207,
+        2211,
+        2247
+      ],
+      "loops": [
+        6474,
+        6475,
+        6476
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 35,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2159,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2159,
+      "vertices": [
+        2207,
+        2247,
+        2243
+      ],
+      "loops": [
+        6477,
+        6478,
+        6479
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -54.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 36,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2206,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2206,
+      "vertices": [
+        2243,
+        2247,
+        2283
+      ],
+      "loops": [
+        6618,
+        6619,
+        6620
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 37,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2207,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2207,
+      "vertices": [
+        2243,
+        2283,
+        2279
+      ],
+      "loops": [
+        6621,
+        6622,
+        6623
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -53.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 38,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2254,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2254,
+      "vertices": [
+        2279,
+        2283,
+        2319
+      ],
+      "loops": [
+        6762,
+        6763,
+        6764
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -51.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 39,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2255,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2255,
+      "vertices": [
+        2279,
+        2319,
+        2315
+      ],
+      "loops": [
+        6765,
+        6766,
+        6767
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -52.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -51.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -51.0,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 40,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2326,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2326,
+      "vertices": [
+        2315,
+        2319,
+        2431
+      ],
+      "loops": [
+        6978,
+        6979,
+        6980
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -51.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -51.0,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 41,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2327,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2327,
+      "vertices": [
+        2315,
+        2431,
+        2427
+      ],
+      "loops": [
+        6981,
+        6982,
+        6983
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -51.0,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 42,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2710,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2710,
+      "vertices": [
+        2427,
+        2431,
+        3051
+      ],
+      "loops": [
+        8130,
+        8131,
+        8132
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 43,
+      "snapshotNode": 9,
+      "snapshotTriangle": 2711,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 2711,
+      "vertices": [
+        2427,
+        3051,
+        3047
+      ],
+      "loops": [
+        8133,
+        8134,
+        8135
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -49.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 44,
+      "snapshotNode": 9,
+      "snapshotTriangle": 3246,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 3246,
+      "vertices": [
+        3047,
+        3051,
+        3519
+      ],
+      "loops": [
+        9738,
+        9739,
+        9740
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 45,
+      "snapshotNode": 9,
+      "snapshotTriangle": 3247,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 3247,
+      "vertices": [
+        3047,
+        3519,
+        3513
+      ],
+      "loops": [
+        9741,
+        9742,
+        9743
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -48.65629959106445,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 46,
+      "snapshotNode": 9,
+      "snapshotTriangle": 3254,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 3254,
+      "vertices": [
+        3513,
+        3519,
+        3531
+      ],
+      "loops": [
+        9762,
+        9763,
+        9764
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 47,
+      "snapshotNode": 9,
+      "snapshotTriangle": 3255,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 3255,
+      "vertices": [
+        3513,
+        3531,
+        3524
+      ],
+      "loops": [
+        9765,
+        9766,
+        9767
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -44.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 48,
+      "snapshotNode": 9,
+      "snapshotTriangle": 4014,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 4014,
+      "vertices": [
+        3524,
+        3531,
+        4453
+      ],
+      "loops": [
+        12042,
+        12043,
+        12044
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -41.5,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 49,
+      "snapshotNode": 9,
+      "snapshotTriangle": 4015,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 4015,
+      "vertices": [
+        3524,
+        4453,
+        4449
+      ],
+      "loops": [
+        12045,
+        12046,
+        12047
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -42.25630187988281,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -41.5,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -41.5,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 50,
+      "snapshotNode": 9,
+      "snapshotTriangle": 4022,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 4022,
+      "vertices": [
+        4449,
+        4453,
+        4469
+      ],
+      "loops": [
+        12066,
+        12067,
+        12068
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -41.5,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -41.5,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 51,
+      "snapshotNode": 9,
+      "snapshotTriangle": 4023,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "polygon": 4023,
+      "vertices": [
+        4449,
+        4469,
+        4460
+      ],
+      "loops": [
+        12069,
+        12070,
+        12071
+      ],
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "corners": [
+        [
+          -41.5,
+          -4.707200057220459,
+          -45.5
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -45.5
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    },
+    {
+      "target": 52,
+      "snapshotNode": 24,
+      "snapshotTriangle": 0,
+      "owner": "Lower33rd north ceiling",
+      "polygon": 0,
+      "vertices": [
+        4,
+        7,
+        10
+      ],
+      "loops": [
+        0,
+        1,
+        2
+      ],
+      "material": "TravertineArrivalsExitRoute",
+      "corners": [
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -79.37199401855469
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -73.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 7.62939453125e-06
+    },
+    {
+      "target": 53,
+      "snapshotNode": 24,
+      "snapshotTriangle": 1,
+      "owner": "Lower33rd north ceiling",
+      "polygon": 1,
+      "vertices": [
+        4,
+        10,
+        1
+      ],
+      "loops": [
+        3,
+        4,
+        5
+      ],
+      "material": "TravertineArrivalsExitRoute",
+      "corners": [
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -79.37199401855469
+        ],
+        [
+          -73.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        [
+          -73.19999694824219,
+          -4.707200057220459,
+          -79.37199401855469
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 7.62939453125e-06
+    },
+    {
+      "target": 54,
+      "snapshotNode": 24,
+      "snapshotTriangle": 12,
+      "owner": "Lower33rd east ceiling west of ascent",
+      "polygon": 0,
+      "vertices": [
+        4,
+        7,
+        10
+      ],
+      "loops": [
+        0,
+        1,
+        2
+      ],
+      "material": "TravertineArrivalsExitRoute",
+      "corners": [
+        [
+          -7.150000095367432,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        [
+          -7.150000095367432,
+          -4.707200057220459,
+          -70.2280044555664
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -70.2280044555664
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 7.62939453125e-06
+    },
+    {
+      "target": 55,
+      "snapshotNode": 24,
+      "snapshotTriangle": 13,
+      "owner": "Lower33rd east ceiling west of ascent",
+      "polygon": 1,
+      "vertices": [
+        4,
+        10,
+        1
+      ],
+      "loops": [
+        3,
+        4,
+        5
+      ],
+      "material": "TravertineArrivalsExitRoute",
+      "corners": [
+        [
+          -7.150000095367432,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -70.2280044555664
+        ],
+        [
+          -40.856300354003906,
+          -4.707200057220459,
+          -79.37200164794922
+        ]
+      ],
+      "maximumCornerPositionDeltaM": 0.0
+    }
+  ],
+  "missing": [],
+  "seconds": 0.3767816670006141
+}

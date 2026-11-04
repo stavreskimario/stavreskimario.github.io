@@ -1,0 +1,221 @@
+{
+  "status": "PASS module texture/cache/geometry/pixel packaging; assembled/native/public acceptance remains required",
+  "scope": "New Blender exit module; no geometry simplification/quantization; exact retained KTX cache reuse where pre-encoding image bytes and transfer family match.",
+  "input": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/model-concourse-gallery-finish.glb",
+    "sha256": "d6aef96f59b23bb36475886956c854a995100a9f1c6b65d35d2004e7672beacb"
+  },
+  "commands": [
+    {
+      "args": [
+        "resize",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-normal-input.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-sized.glb",
+        "--width",
+        "2048",
+        "--height",
+        "2048"
+      ],
+      "status": 0,
+      "elapsedMs": 626,
+      "stdout": "info: full-normal-input.glb (3.27 MB) → full-sized.glb (1.29 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-cache.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-normals.glb",
+        "--slots",
+        "*normal*",
+        "--level",
+        "4",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 457,
+      "stdout": "info: full-cache.glb (1.29 MB) → full-normals.glb (1.29 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-normals.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/full-textured.glb",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 730,
+      "stdout": "info: full-normals.glb (1.29 MB) → full-textured.glb (1.11 MB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "resize",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-normal-input.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-sized.glb",
+        "--width",
+        "512",
+        "--height",
+        "512"
+      ],
+      "status": 0,
+      "elapsedMs": 511,
+      "stdout": "info: low-normal-input.glb (3.27 MB) → low-sized.glb (308.11 KB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-cache.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-normals.glb",
+        "--slots",
+        "*normal*",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 447,
+      "stdout": "info: low-cache.glb (308.11 KB) → low-normals.glb (308.11 KB)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "uastc",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-normals.glb",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package-work/low-textured.glb",
+        "--level",
+        "1",
+        "--zstd",
+        "6",
+        "--jobs",
+        "2"
+      ],
+      "status": 0,
+      "elapsedMs": 531,
+      "stdout": "info: low-normals.glb (308.11 KB) → low-textured.glb (300.64 KB)\n",
+      "stderr": ""
+    }
+  ],
+  "assets": [
+    {
+      "file": "model-concourse.glb",
+      "bytes": 123980,
+      "sha256": "0224be1d02d910e0edd056434bef093e1b017cccd4d07cf18032abedb570d282",
+      "nodes": 3,
+      "meshes": 3,
+      "materials": 3,
+      "textures": [
+        {
+          "uri": "textures/74a8a5e6c4800f175503.ktx2",
+          "bytes": 901739
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 0,
+      "geometryProofSha256": "a5300e16fb84f9b126cf560259e0c7f7c4569bcfa8472640da07bd45a3a921ea"
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 123980,
+      "sha256": "3f8d1856437eb9e09e0d4d7e19e2228996cf25adb973340ad4046cd831469846",
+      "nodes": 3,
+      "meshes": 3,
+      "materials": 3,
+      "textures": [
+        {
+          "uri": "textures/a9cda2cf99d2c1344daf.ktx2",
+          "bytes": 89862
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 0,
+      "geometryProofSha256": "31091175439398503d0813a458a2af3748f68cb1a1e223ca5d46fa3106d1e27b"
+    }
+  ],
+  "cache": {
+    "entries": 25,
+    "inputs": [
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-textured.glb",
+        "normalLevel": 4,
+        "scalarSha256": "b37daa80d28b16568704657acd65fbc2651722eb5844bbf90389bb2f337f92c0",
+        "encodedSha256": "ba2e6bb41bbb9d5b41f5d3318b6a0dd247092852ad33b9766bab0efad2fdafa2"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-low-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimizer-work-v1/concourse-low-textured.glb",
+        "normalLevel": 1,
+        "scalarSha256": "05d42fb3f440fbfa94e575b074c88ebcfc8978121bef60e91104104ea9ec332a",
+        "encodedSha256": "9f804ead0afd020fc39453e8b9509e4cff4c6bc1460c55eedb3166837ef21849"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-textured.glb",
+        "normalLevel": 4,
+        "scalarSha256": "f5403d88edf8e5d6a9575a39953728daebabaa72b6791cfda8a1bf9f602f52bb",
+        "encodedSha256": "967d8ed2e2fcbb116c78b516caf33ef49c4bbd705d902a1905cc0d22b84c48ec"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-low-scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/optimizer-work-uv-priority-v2/exterior-low-textured.glb",
+        "normalLevel": 1,
+        "scalarSha256": "0279cbee230545fd95ee28bb85558c9254c02c2e8cf3415499b5eb27126d3a37",
+        "encodedSha256": "319b403e933ce5a2d29aa65e650e7163c2ead83d16d60c6e6e16551de4c92dc5"
+      },
+      {
+        "scalar": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-textures-v1/scalars.glb",
+        "encoded": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-textures-v1/textured.glb",
+        "normalLevel": null,
+        "scalarSha256": "c624a0408e0c16f31100cceaad6ffb61162664b38f4a42702e8017caa7e148dd",
+        "encodedSha256": "3b0be543dc565a512a6db9e77c729f1b81b2ee985977511675379dbe442ea25b"
+      }
+    ],
+    "skipped": []
+  },
+  "materialAliases": [
+    {
+      "sourceName": "IvoryEnamel33rdStreetDestinationBoard",
+      "runtimeName": "IvoryEnamel33rdStreetDestinationBoardGalleryFinish",
+      "onlyNameChanged": true
+    },
+    {
+      "sourceName": "PaintedStructuralIronArrivalsStructure",
+      "runtimeName": "PaintedStructuralIronArrivalsStructureGalleryFinish",
+      "onlyNameChanged": true
+    },
+    {
+      "sourceName": "Lettering33rdStreetDestination",
+      "runtimeName": "Lettering33rdStreetDestinationGalleryFinish",
+      "onlyNameChanged": true
+    }
+  ],
+  "radiance": {
+    "sourceReportSha256": "a58aaca27e977887a575af1324ef4d6d6990b41c8f19c58b61fc0bd5a416bfa5",
+    "scale": 2,
+    "onlyMetadataScaleAdjusted": true
+  },
+  "inputSha256After": "d6aef96f59b23bb36475886956c854a995100a9f1c6b65d35d2004e7672beacb",
+  "helpers": {
+    "package-gallery-lossless.mjs": "bec9a880be9b4f5c34935503fbe11b006c55da234d9be42cbdc3d8f11db6842a",
+    "encode-lossless-meshopt.mjs": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f",
+    "reuse-texture-cache.mjs": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+  }
+}

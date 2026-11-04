@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "inputs": {
+    "rawSource": {
+      "filename": "arrivals-module.glb",
+      "bytes": 15438492,
+      "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/arrivals-module.glb"
+    },
+    "originalRawBake": {
+      "filename": "model-concourse-arrivals.glb",
+      "bytes": 44171296,
+      "sha256": "f346aaa4177460c3b965217486d7f5d1944d9657c15281705b2735a096e8050d",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/baked-v1/model-concourse-arrivals.glb"
+    },
+    "priorityUvInput": {
+      "filename": "UV-ONLY-UNBAKED-arrivals-priority.glb",
+      "bytes": 44171296,
+      "sha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/pack-v1/byte-patch/UV-ONLY-UNBAKED-arrivals-priority.glb"
+    },
+    "actualV2RawBake": {
+      "filename": "model-concourse-arrivals.glb",
+      "bytes": 47144224,
+      "sha256": "b8ad4d2331609bae6ec8bd1dacb0d3184d83a9aed2cad370bf9d88743e52c957",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/model-concourse-arrivals.glb"
+    },
+    "actualV2RawAo": {
+      "filename": "lighting-concourse-arrivals-ao.png",
+      "bytes": 10710454,
+      "sha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/lighting-concourse-arrivals-ao.png"
+    },
+    "actualV2RawHdr": {
+      "filename": "lighting-concourse-arrivals-sky.hdr",
+      "bytes": 49852600,
+      "sha256": "ddbd8053412ce36ac942b63927927e6b59ee2686acb0fe9a84ea681b764dae8d",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/lighting-concourse-arrivals-sky.hdr"
+    },
+    "actualV2RawReport": {
+      "filename": "lighting-concourse-arrivals.json",
+      "bytes": 3904713,
+      "sha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac",
+      "currentlyAvailableAt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/lighting-concourse-arrivals.json"
+    }
+  },
+  "qualification": "Exact large binary source inputs are pinned but not bundled. A clean clone needs those archived artifacts before byte-identical replay; the included data UV array alone is not the original GLB."
+}

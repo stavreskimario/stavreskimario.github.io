@@ -1,0 +1,559 @@
+{
+  "source": "Gibbs, ASCE Transactions 69 (1910), plate LXXVIII, original scan leaf 405",
+  "sourceUrl": "https://archive.org/details/transactionsofam69amer",
+  "registration": {
+    "eighthAvenueAxisPixelU": 1990,
+    "seventhAvenueAxisPixelU": 2875,
+    "eighthAvenueAxisWorldX": -136.8552,
+    "seventhAvenueAxisWorldX": 140.5128,
+    "axialPassagePixelV": 575.1240445301415,
+    "northSouthMetresPerPixel": 0.30376250996555176,
+    "status": "Raster least-squares registration of nine platform centres against Gibbs plan243 stair-head centres. The strong axial-passage control anchors plan243; the foldout uses working avenue/setback controls. This is an interpreted opening-era plan, not a surveyed1935 inventory.",
+    "estimatedPositionToleranceMetres": 1.0
+  },
+  "levels": {
+    "main": 0,
+    "rail": -8.886825,
+    "platform": -7.718425,
+    "chunkWorldOffsetY": -4.2672
+  },
+  "trackCentreRowsSouthToNorth": [
+    816.267931188024,
+    786.732068811976,
+    770.267931188024,
+    740.732068811976,
+    724.267931188024,
+    694.732068811976,
+    679.267931188024,
+    649.732068811976,
+    634.267931188024,
+    603.732068811976,
+    588.267931188024,
+    559.732068811976,
+    545.267931188024,
+    515.732068811976,
+    500.2679311880241,
+    470.7320688119759,
+    454.2679311880241,
+    430.5,
+    376.7320688119759,
+    361.2679311880241,
+    330.7320688119759
+  ],
+  "platforms": [
+    {
+      "number": 1,
+      "tracks": [
+        1,
+        2
+      ],
+      "westTipU": 2018,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2786,
+      "nativeStraightEdgesV": [
+        792,
+        811
+      ],
+      "outlineUV": [
+        [
+          2018,
+          792
+        ],
+        [
+          2786,
+          792
+        ],
+        [
+          2786,
+          811
+        ],
+        [
+          2190,
+          811
+        ],
+        [
+          2018,
+          800
+        ]
+      ]
+    },
+    {
+      "number": 2,
+      "tracks": [
+        3,
+        4
+      ],
+      "westTipU": 2005,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2786,
+      "nativeStraightEdgesV": [
+        746,
+        765
+      ],
+      "outlineUV": [
+        [
+          2005,
+          746
+        ],
+        [
+          2786,
+          746
+        ],
+        [
+          2786,
+          765
+        ],
+        [
+          2170,
+          765
+        ],
+        [
+          2005,
+          752
+        ]
+      ]
+    },
+    {
+      "number": 3,
+      "tracks": [
+        5,
+        6
+      ],
+      "westTipU": 1720,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2645,
+      "nativeStraightEdgesV": [
+        700,
+        719
+      ],
+      "outlineUV": [
+        [
+          1720,
+          700
+        ],
+        [
+          2610,
+          700
+        ],
+        [
+          2645,
+          705
+        ],
+        [
+          2645,
+          711
+        ],
+        [
+          2550,
+          719
+        ],
+        [
+          2080,
+          719
+        ],
+        [
+          1720,
+          710
+        ]
+      ]
+    },
+    {
+      "number": 4,
+      "tracks": [
+        7,
+        8
+      ],
+      "westTipU": 1555,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2653,
+      "nativeStraightEdgesV": [
+        655,
+        674
+      ],
+      "outlineUV": [
+        [
+          1555,
+          655
+        ],
+        [
+          2590,
+          655
+        ],
+        [
+          2653,
+          661
+        ],
+        [
+          2635,
+          669
+        ],
+        [
+          2550,
+          674
+        ],
+        [
+          2080,
+          674
+        ],
+        [
+          1570,
+          662
+        ]
+      ]
+    },
+    {
+      "number": 5,
+      "tracks": [
+        9,
+        10
+      ],
+      "westTipU": 1720,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2725,
+      "nativeStraightEdgesV": [
+        609,
+        629
+      ],
+      "outlineUV": [
+        [
+          1720,
+          609
+        ],
+        [
+          2698,
+          609
+        ],
+        [
+          2725,
+          614
+        ],
+        [
+          2720,
+          622
+        ],
+        [
+          2670,
+          629
+        ],
+        [
+          2090,
+          629
+        ],
+        [
+          1720,
+          621
+        ]
+      ]
+    },
+    {
+      "number": 6,
+      "tracks": [
+        11,
+        12
+      ],
+      "westTipU": 1625,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2750,
+      "nativeStraightEdgesV": [
+        565,
+        583
+      ],
+      "outlineUV": [
+        [
+          1625,
+          565
+        ],
+        [
+          2738,
+          565
+        ],
+        [
+          2750,
+          569
+        ],
+        [
+          2750,
+          579
+        ],
+        [
+          2720,
+          583
+        ],
+        [
+          2090,
+          583
+        ],
+        [
+          1625,
+          572
+        ]
+      ]
+    },
+    {
+      "number": 7,
+      "tracks": [
+        13,
+        14
+      ],
+      "westTipU": 1718,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2745,
+      "nativeStraightEdgesV": [
+        521,
+        540
+      ],
+      "outlineUV": [
+        [
+          1718,
+          521
+        ],
+        [
+          2715,
+          521
+        ],
+        [
+          2745,
+          526
+        ],
+        [
+          2745,
+          535
+        ],
+        [
+          2700,
+          540
+        ],
+        [
+          2090,
+          540
+        ],
+        [
+          1718,
+          534
+        ]
+      ]
+    },
+    {
+      "number": 8,
+      "tracks": [
+        15,
+        16
+      ],
+      "westTipU": 1530,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2696,
+      "nativeStraightEdgesV": [
+        476,
+        495
+      ],
+      "outlineUV": [
+        [
+          1530,
+          476
+        ],
+        [
+          2650,
+          476
+        ],
+        [
+          2696,
+          482
+        ],
+        [
+          2696,
+          487
+        ],
+        [
+          2650,
+          495
+        ],
+        [
+          2030,
+          495
+        ],
+        [
+          1530,
+          484
+        ]
+      ]
+    },
+    {
+      "number": 9,
+      "tracks": [
+        17,
+        18
+      ],
+      "westTipU": 2000,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2655,
+      "nativeStraightEdgesV": [
+        436,
+        449
+      ],
+      "outlineUV": [
+        [
+          2000,
+          436
+        ],
+        [
+          2620,
+          436
+        ],
+        [
+          2655,
+          439
+        ],
+        [
+          2655,
+          447
+        ],
+        [
+          2620,
+          449
+        ],
+        [
+          2220,
+          449
+        ],
+        [
+          2090,
+          445
+        ],
+        [
+          2000,
+          443
+        ]
+      ]
+    },
+    {
+      "number": 10,
+      "tracks": [
+        18,
+        19
+      ],
+      "westTipU": 2145,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 2840,
+      "nativeStraightEdgesV": [
+        382,
+        425
+      ],
+      "outlineUV": [
+        [
+          2145,
+          382
+        ],
+        [
+          2770,
+          382
+        ],
+        [
+          2840,
+          400
+        ],
+        [
+          2820,
+          415
+        ],
+        [
+          2775,
+          425
+        ],
+        [
+          2360,
+          425
+        ],
+        [
+          2145,
+          391
+        ]
+      ]
+    },
+    {
+      "number": 11,
+      "tracks": [
+        20,
+        21
+      ],
+      "westTipU": 2148,
+      "westFullU": 2200,
+      "eastFullU": 2600,
+      "eastTipU": 3020,
+      "nativeStraightEdgesV": [
+        336,
+        356
+      ],
+      "outlineUV": [
+        [
+          2148,
+          344
+        ],
+        [
+          2300,
+          336
+        ],
+        [
+          2970,
+          336
+        ],
+        [
+          3020,
+          340
+        ],
+        [
+          2970,
+          356
+        ],
+        [
+          2300,
+          356
+        ],
+        [
+          2148,
+          349
+        ]
+      ]
+    }
+  ],
+  "eastHeadsPlan243": {
+    "source": "Gibbs printed243, figure2, plan at waiting-room level; high raster2116x3439",
+    "axisPixelU": 1016,
+    "wallExtentPixels": [
+      519,
+      1514
+    ],
+    "wallExtentMetres": 95.8088,
+    "centresSouthToNorthPixels": [
+      306,
+      450,
+      587,
+      735,
+      878,
+      1014,
+      1150,
+      1298,
+      1444
+    ],
+    "status": "Approximate raster centres; first two southern heads are peripheral to the glazed concourse, not nine identical staircases inside the roof."
+  },
+  "limits": [
+    "Opening-era railway plan, not a verified1935 track inventory; no invented revision date",
+    "Literal numbered topology preserved, including platform9/10 sharing track18",
+    "Individual asymmetric end contours were manually traced from the native raster as segmented envelopes; rounded coping profiles, exact end stations and centimetre fabrication remain uncertain (approximately3m end-tip tolerance).",
+    "Native platform9/10 edge widths remain outside the rounded narrative20\u201340ft range; conflict retained, not silently normalized.",
+    "Track1\u20134 eastern stub ends verified; station tracks continue straight only within this partial platform study",
+    "East and west switch throats, tunnel junctions and storage sidings are deliberately truncated; no schematic fan is presented as surveyed switchwork",
+    "1935 AC overhead contact arrangement and third-rail sectioning need later primary drawings"
+  ],
+  "traceMethod": "Read heavy platform coping edges at native U2305..2340, then derive rail centre rows from documented5ft3 horizontal clearance. Sharedtrack18 is the mean of both adjacent edge estimates (about7cm clearance residual). Outer rail strokes must not be mistaken for track centre lines."
+}

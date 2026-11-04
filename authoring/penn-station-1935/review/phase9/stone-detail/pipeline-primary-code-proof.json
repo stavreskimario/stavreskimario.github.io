@@ -1,0 +1,45 @@
+{
+  "status": "PASS for installed primary behavior and syntax; no whole-station rebuild",
+  "cli": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/tools/node_modules/@gltf-transform/cli/dist/cli.esm.js",
+    "sha256": "bdcd02c0981cbdc5176332d9e95071dd002a120945c8c937f0d52db4dfa5f7a9",
+    "normalRoleSelection": [
+      {
+        "slot": "normalTexture",
+        "selected": true
+      },
+      {
+        "slot": "clearcoatNormalTexture",
+        "selected": true
+      },
+      {
+        "slot": "baseColorTexture",
+        "selected": false
+      },
+      {
+        "slot": "occlusionTexture",
+        "selected": false
+      },
+      {
+        "slot": "metallicRoughnessTexture",
+        "selected": false
+      },
+      {
+        "slot": "transmissionTexture",
+        "selected": false
+      }
+    ],
+    "secondPassSkipsAlreadyKtx": true,
+    "normalNoncolourArgs": [
+      "--assign-oetf",
+      "linear",
+      "--assign-primaries",
+      "none"
+    ],
+    "normalRdo": "Disabled for normal roles by existing CLI",
+    "lowBranch": "Exact existing UASTClevel1/zstd6/jobs2 command"
+  },
+  "limits": [
+    "Real2048pixel encoder comparison and helper replay are separate evidence. This does not claim all future assets were regenerated."
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "status": "PASS final high-density desktop floor lighting + exact source/raw/encoded/mounted geometry and retained-base ownership",
+  "frozenUTC": "2026-11-04T02:52:03.862316+00:00",
+  "sourceSHA256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "sourcePacket": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/root-source-packet/manifest.json",
+    "sha256": "c397f406a9c57acdc57d967bd21d6d351943cd5f29281485491a32bb4337888c",
+    "bytes": 24755
+  },
+  "finalInputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "bytes": 7132424
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-raw/model-platform-enclosure.glb",
+      "sha256": "79a17d114f8ae4ca2c06fa158e86078452e3935c259c41cdb4982032b5bd58ae",
+      "bytes": 20716108
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/raw/model-platform-enclosure.glb",
+      "sha256": "d6dbe7121695bc31c0b0e3c69c656b04fe0585316d95f114319c9dbf488afccb",
+      "bytes": 11494424
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/raw/model-platform-enclosure-floor.glb",
+      "sha256": "2647455bca48022e0effaaa746636482f49d5418c8b17f614d19d8a111bfed79",
+      "bytes": 9225608
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-package/model-platform.glb",
+      "sha256": "ea02fd3ef6f97ac8e8be4848bf95e1de678a6ab2ce8e2ac6c4e1bbf0bd88408a",
+      "bytes": 1314084
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-platform.glb.gz",
+      "sha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
+      "bytes": 648051
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/model-platform.glb.gz",
+      "sha256": "ca06980ee4ebf77d60227893eab3f6f7b51f0109345c5afbd2e0f3d95e9ceaac",
+      "bytes": 260499
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-package/model-platform-low.glb",
+      "sha256": "5c7f46abd11e830e1839258aa936c7716af3c68a90bf6b9260c4916767887458",
+      "bytes": 1314084
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-platform-low.glb.gz",
+      "sha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e",
+      "bytes": 673454
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/model-platform-low.glb.gz",
+      "sha256": "4acb97a454070409cd3bc2618293fce789e6847a1e92ccdc4550cfb68f026610",
+      "bytes": 286136
+    }
+  ],
+  "triangleCounts": {
+    "sourceAndMountedAddon": 25398,
+    "unchangedStructure": 24996,
+    "newLightUVFloor": 402,
+    "visibleStippledTop": 16
+  },
+  "sourceToRawBounds": {
+    "label": "accepted27owners/25398source\u2192actual no-weld fresh bridge+floor raw",
+    "status": "PASS",
+    "trianglesBefore": 25398,
+    "trianglesAfter": 25398,
+    "matched": 25398,
+    "exactOrientedCorners": 2378,
+    "maxPositionComponentDriftM": 1.9073486328125e-06,
+    "maxNormalComponentDrift": 0.000126484970423002,
+    "maxNormalAngleDegrees": 0.009921588834269501,
+    "minimumNormalDot": 0.9999999850070467,
+    "maxUv0ComponentDrift": 0,
+    "maxLightingUv1ComponentDrift": 0,
+    "unmatched": 0,
+    "largestCases": [],
+    "failures": [],
+    "positionBoundM": 2e-05,
+    "normalAngleBoundDegrees": 0.5,
+    "minimumNormalDotBound": 0.9999619230641713,
+    "normalComponentDriftMeasuredOnly": true,
+    "uvComponentBound": 2e-06
+  },
+  "losslessAdditionalDrift": {
+    "positionM": 0,
+    "normalComponent": 0,
+    "materialUV0": 0,
+    "lightingUV1": 0,
+    "splitRawProvenanceAlsoExact": true
+  },
+  "retainedBaseAndSingleReplacement": [
+    {
+      "quality": "full",
+      "retainedBaseBinPrefixExact": true,
+      "retainedBinBytes": 1241284,
+      "allRetainedGeometryMaterialsImagesTexturesSamplersExact": true,
+      "retainedSceneRootsExact": true,
+      "baseSha256": "ca06980ee4ebf77d60227893eab3f6f7b51f0109345c5afbd2e0f3d95e9ceaac",
+      "mountedSha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
+      "newModuleTriangleCount": 25398,
+      "oldPhase12BridgePresent": false
+    },
+    {
+      "quality": "low",
+      "retainedBaseBinPrefixExact": true,
+      "retainedBinBytes": 1054248,
+      "allRetainedGeometryMaterialsImagesTexturesSamplersExact": true,
+      "retainedSceneRootsExact": true,
+      "baseSha256": "4acb97a454070409cd3bc2618293fce789e6847a1e92ccdc4550cfb68f026610",
+      "mountedSha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e",
+      "newModuleTriangleCount": 25398,
+      "oldPhase12BridgePresent": false
+    }
+  ],
+  "densityGate": {
+    "desktopTargetMinimumDirectionalPixelsPerMetre": 60,
+    "actualMinimumDirectionalPixelsPerMetre": 76.92765371586495,
+    "actualAreaEquivalentPixelsPerMetre": 76.97801468248394,
+    "actualVisibleFloorAreaM2": 536.4153657125225,
+    "baselineMinimumDirectionalPixelsPerMetre": 12.239487932762245,
+    "improvementRatioMinimumDirection": 6.2852019740096825,
+    "perPlatform": {
+      "P4": {
+        "triangles": 8,
+        "areaM2": 260.8267269322005,
+        "minimumDirectionalPixelsPerMetre": 76.9276540713277
+      },
+      "P5": {
+        "triangles": 8,
+        "areaM2": 275.58863878032207,
+        "minimumDirectionalPixelsPerMetre": 76.92765371586495
+      }
+    },
+    "actualResolution": [
+      4096,
+      4096
+    ],
+    "actualUvChannel": 1,
+    "rawEncodedMountedDensityExact": true,
+    "selector": "Actual geometric world-up normalY>.95, Stippled source family; exclude undersides and hidden rubbed floor.",
+    "method": "Minimum singular value of actual pixelUV tangent-space Jacobian; area density reported separately. Actual sky image dimensions/identity AOtransform verified."
+  },
+  "structureQualityPreserved": {
+    "metricsExactToBaseline": true,
+    "uv1ExactToPriorRaw": true,
+    "sameSkyImageSHA256": "33f401c5fdeb8ba12a1f092ba303662f0d0c805a46453c87542bd2696b02699e",
+    "resolution": [
+      4096,
+      4096
+    ],
+    "areaDensity": 12.24750254156052,
+    "minimumDirectionalDensity": 12.204424103737601
+  },
+  "physicalProofReuse": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-physical-proof.json",
+    "sha256": "e07200fdbeb37c367d9175d3d9a9d05043eeecae407748da09e8e880d2e8f972",
+    "receivers": 55,
+    "roofSamples": 54,
+    "minimumMeasuredRailClearanceM": 4.9457606491088875,
+    "qualifiedNominalVehicleMinimumLateralClearanceM": 0.5085799980988873,
+    "P4P5SupportedBodySamples": 500,
+    "proof": "Accepted actual source is compared at every oriented corner here; packing/mounting adds zero geometry drift. Physical source receipt reused, no repeated nativewalkthrough."
+  },
+  "capContacts": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-cap-contact-proof.json",
+    "sha256": "50f361fda332629af4be1287bd80c1490d23620a4a5c1b1102a1471ecc3605aa",
+    "contacts": 55,
+    "maximumSeparationM": 0
+  },
+  "sourceFloorProof": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/combined-source-floor-proof.json",
+    "sha256": "f3cfdea18c9bee3c3b4179763750eb3a7d5f48996145c01157e9337c61257710",
+    "triangles": 402,
+    "status": "PASS"
+  },
+  "qualifications": [
+    "This supersedes the held initial joint4K floor lighting candidate. Sourcegeometry/PBR/materialUV0 remain frozen.",
+    "Full desktop balanced/high rendering passes the60px/m gate. Deliberately downsampled low-quality lighting is not claimed to meet that desktop density target.",
+    "Physical55receiver/55cap/54roof/500supported-body source proof is transferred by exact final corner comparison; not rerun and no nativewalking walkthrough.",
+    "Source-read vs adopted row offsets, local section/paint/footing/vertical datum qualifications remain in the immutable source packet. No full525ftbridge or fullstation completion claim.",
+    "Parent/integration retain final static visual, site asset/build validation and publication responsibility."
+  ],
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/FROZEN-SOURCE-v1.json",
+      "sha256": "e8e63571e98a075dc684d9dda0aa97766210524d545c81d47227375171fa193d",
+      "bytes": 10106
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/root-source-packet/manifest.json",
+      "sha256": "c397f406a9c57acdc57d967bd21d6d351943cd5f29281485491a32bb4337888c",
+      "bytes": 24755
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/actual-high-density-source-raw-encoded-mounted.json",
+      "sha256": "e0b22c57b1f955ba670342d6c53fd8fffcf46e1dbaf8e0a6e2951b2c117cb18a",
+      "bytes": 12169
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/actual-high-density-raw-source-split.json",
+      "sha256": "d2704e476156912cf0b515688a4f9b7d4c60327b423ea9ba50712b20ff2b1ea9",
+      "bytes": 2793
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/check-final-chain-v4.mjs",
+      "sha256": "0bc2b61f583a0b8187143b207ec22e26244c405286298daf611a4cceb2c10641",
+      "bytes": 12060
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/BASELINE-GATE-v1.json",
+      "sha256": "b6d1f03157733da14c9def1f67b8c8d1067d2d47c28194d4e43ac69d6b79207a",
+      "bytes": 2095
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/baseline-joint-mounted.json",
+      "sha256": "5f8de2f53a98d07f6cf74ba86ac2bc64851595d3df83b4736dd05b3177b5c01b",
+      "bytes": 29310
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/actual-prepared-floor-density-gate.json",
+      "sha256": "27f443447b593fe2459c05391a74639bc7fa96501296ffd2161b29a32eff54e9",
+      "bytes": 8202
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/high-density-actual-floor-raw.json",
+      "sha256": "f94a0c108c51ece2088089f032e6aa176d26e4e538ae4a9dde69dc535111a1f4",
+      "bytes": 22777
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/high-density-combined-encoded.json",
+      "sha256": "fe69b10211b1bdd3e4494d97eb2e6958f8179126403b5a89a955cc78fb1690fc",
+      "bytes": 29666
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/high-density-final-mounted.json",
+      "sha256": "81d5665203c52559c6c1f52be80fd12c65f96747d4bda8afc449eb2bf83ad03f",
+      "bytes": 29462
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/light-density-v1/measure-visible-floor-density-v2.mjs",
+      "sha256": "8d41085eb427acfa6152cae127c7c4d7f71b872476660553fddc1295e7e113d2",
+      "bytes": 7448
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-physical-proof.json",
+      "sha256": "e07200fdbeb37c367d9175d3d9a9d05043eeecae407748da09e8e880d2e8f972",
+      "bytes": 33841
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-cap-contact-proof.json",
+      "sha256": "50f361fda332629af4be1287bd80c1490d23620a4a5c1b1102a1471ecc3605aa",
+      "bytes": 18403
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-raw/raw-union-proof.json",
+      "sha256": "5d15165115f3e263a2135f788daba93e9dc36aa008130bb7c0661c647a662aee",
+      "bytes": 483
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-raw/structure-subset.json",
+      "sha256": "d25ddccd1d24e3609533a019e315a64c887d1ffd24f67435bce0d67163751194",
+      "bytes": 620
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v2/combined-package/combined-package-proof.json",
+      "sha256": "276014dc9545e35703a03acaadec39a925f38e0b625f09cc434b5381e3d3695f",
+      "bytes": 1955
+    }
+  ]
+}

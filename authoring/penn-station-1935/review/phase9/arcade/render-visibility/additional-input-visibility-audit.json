@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "PASS: exact active raw bake inputs contain no additional directly hidden source object names",
+  "sourceVisibilityInventorySha256": "b6ea9225593b9e7a7f325e8b254e1087ae251dd62f076f63db566607fd7676ae",
+  "inputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce",
+      "sourceVisibility": "core-c96",
+      "sourceHiddenCount": 2,
+      "exactHiddenObjectNameMatchesInInput": [],
+      "nodeCount": 11229
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "sourceVisibility": "railway-current",
+      "sourceHiddenCount": 0,
+      "exactHiddenObjectNameMatchesInInput": [],
+      "nodeCount": 66376
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "sourceVisibility": "railway-current",
+      "sourceHiddenCount": 0,
+      "exactHiddenObjectNameMatchesInInput": [],
+      "nodeCount": 16
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-context/model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "sourceVisibility": "context-current",
+      "sourceHiddenCount": 35,
+      "exactHiddenObjectNameMatchesInInput": [],
+      "nodeCount": 10736
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "sourceVisibility": "trains-current",
+      "sourceHiddenCount": 13,
+      "exactHiddenObjectNameMatchesInInput": [],
+      "nodeCount": 66
+    }
+  ],
+  "builderReceipts": {
+    "build_station.py": "6c6d8bc313f5a52a680e7f5e6f554c43687d344601236ec61060746f39ecb3eb",
+    "build_railway.py": "0c95e45e75e838f59eaf94d3cc9f8b681296e4b17ed26b1ecbf56a7cc685054e",
+    "build_context.py": "fb826965b339a8b683110bacaef8e72661954f26bd2c7ea1f8e85272996ba89f",
+    "build_rolling_stock.py": "d956a2b833959cea594ffc04ff6646749a7ba0d1d9342528224149f6192367a2"
+  },
+  "qualification": "Core/railway/context/trains actual source flags inventoried. Normal context/train exporters exclude hide_render objects; no fuzzy filter applied to input nodes. Two known core template nodes are handled separately by visible-context-proof."
+}

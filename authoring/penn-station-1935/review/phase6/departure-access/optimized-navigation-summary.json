@@ -1,0 +1,349 @@
+{
+  "status": "PASS for actual decoded optimized departure geometry with bounded numerical floor contact; browser acceptance recorded separately",
+  "scope": "CPU actual decoded OPTIMIZED assembled concourse support, upright-body and headroom checks with retained delivered full/low platforms. No browser walking or historical certification.",
+  "sources": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/departure-access-module.glb": {
+      "sha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+      "bytes": 13712952
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/candidate-v4-final/retained-concourse-occluder.glb": {
+      "sha256": "b326e3e3f80e10c3b7fcad233b938de861cb3bb4ea35fc480e3929320712acf5",
+      "bytes": 55467716
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/runtime-v4/model-concourse.glb.gz": {
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "bytes": 4453491
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/runtime-v4/model-concourse-low.glb.gz": {
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "bytes": 4453491
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "bytes": 188633
+    }
+  },
+  "optimizedDecodedGLBSha256": "f807a497737745a93bb3cbff25ebfa1d9b6d4be37d86a1bbdd3609cfeb00a5db",
+  "transportPolicy": "Both concourse transport variants are byte-identical full geometry/PBR. Other retained platform variants are tested independently; no low concourse simplification.",
+  "recipeSha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+  "rawSourceModuleSha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+  "bodyAndSupport": {
+    "bodyRadius": 0.32,
+    "bodyVerticalAboveFoot": [
+      0.35,
+      1.85
+    ],
+    "eyeHeight": 1.68,
+    "footprintRadius": 0.25,
+    "routeStep": 0.04,
+    "sideLanes": [
+      -0.55,
+      0,
+      0.55
+    ],
+    "maximumStepUp": 0.24,
+    "maximumStepDown": 0.35,
+    "virtualIndicatorShift": 0
+  },
+  "checks": {
+    "routeCount": 18,
+    "passingRoutes": 18,
+    "approachCount": 9,
+    "passingApproaches": 9,
+    "seamSamples": 3690,
+    "passingSeamRows": 9,
+    "minimumRouteHeadroom": 1.9618758857250214,
+    "endpointSamples": 148,
+    "supportedEndpointSamples": 148,
+    "blockedPeripheralCrossings": 9,
+    "precisionContactEnabled": true,
+    "boundedPrecisionContacts": 243,
+    "acceptedAsWholeStationWalk": false,
+    "browserAcceptance": "Pending scheduled actual optimized-runtime keyboard tests",
+    "bodyRouteSamples": 51732,
+    "passingOriginalReferencePolylines": 9,
+    "maximumActualStep": 0.1714930534362793,
+    "maximumNominalSupportDifference": 0.003225052642822135
+  },
+  "sampledOverheadMinimum": {
+    "clearance": 1.9618758857250214,
+    "x": -43.34,
+    "z": 68.214528,
+    "floor": -2.401610851287842,
+    "hit": {
+      "y": -0.43973496556282043,
+      "distance": 1.6118758857250213,
+      "point": [
+        -43.34,
+        -0.43973496556282043,
+        68.214528
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "material": "ConcourseOpaqueCirculationConcreteAccessInfill",
+      "node": 12,
+      "primitive": 1,
+      "instance": 0,
+      "source": "actual optimized full concourse"
+    }
+  },
+  "headroomQualification": "Finite footprint at Main slab lip before first landing; full1.85m body clears. No building-code or whole-volume certification.",
+  "localApproaches": [
+    {
+      "workingPlatform": 3,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 305
+    },
+    {
+      "workingPlatform": 9,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 276
+    },
+    {
+      "workingPlatform": 1,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    },
+    {
+      "workingPlatform": 2,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    },
+    {
+      "workingPlatform": 4,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    },
+    {
+      "workingPlatform": 5,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    },
+    {
+      "workingPlatform": 6,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    },
+    {
+      "workingPlatform": 7,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 260
+    },
+    {
+      "workingPlatform": 8,
+      "pass": true,
+      "bodyRadius": 0.32,
+      "bodyHeight": 1.85,
+      "samples": 258
+    }
+  ],
+  "mainInfill": {
+    "samples": 3690,
+    "passingRows": 9,
+    "missing": 0,
+    "duplicateCoplanarFloorOwners": 0,
+    "classification": "Actual named floor surfaces; retained CofferRecess base trim is not a coplanar second floor. Early broader trim classification was rejected and rerun."
+  },
+  "numericalContact": {
+    "strictRayBaseline": {
+      "passingApproachGrids": 5,
+      "totalApproachGrids": 9,
+      "all18StairRoutesPass": true,
+      "allNewInfillSeamsPass": true
+    },
+    "join": {
+      "prismWebEndX": -49.80000150203705,
+      "opaqueFloorStartX": -49.79999923706055,
+      "intervalMetres": 2.2649765014648438e-06,
+      "surfaceHeightDifferenceMetres": 7.75380401552006e-08
+    },
+    "helper": "penn-station-1935/src/floor-contact.mjs",
+    "helperSha256": "9d543855b33c33e054dd82e5416e96021a16902e8dd346d843530f3c49b9ca69",
+    "rule": "After central ray miss only, probe actual surfaces0.0001m each side ofX orZ; both upward normalY>.98, coplanarwithin2mm, original+.24/\u2212.35mstepbounds. Return an actual sampled height, never a plane/average. Body and void guards unchanged.",
+    "contactsDuringSearchAndRouteProbes": 243,
+    "strictCentralMissesDuringSearchAndRouteProbes": 244,
+    "countQualification": "Diagnostic query counts include A* search and intentionally blocked/void probes; they are not user steps or separate architectural defects.",
+    "controlsPassed": 19,
+    "negativeControls": [
+      "1mm and0.3mm holes",
+      "Unsupported edge on either side",
+      "Vertical and steep faces",
+      "Downward undersides",
+      "Real171.52mm step discontinuity",
+      "Original rise/drop violations",
+      "2.1mm non-coplanarity",
+      "Separate axes cannot invent a pair"
+    ],
+    "actualContactExamples": [
+      {
+        "central": [
+          -49.8,
+          0,
+          -39.42146
+        ],
+        "contact": {
+          "height": 0,
+          "axis": "x",
+          "offset": 0.0001,
+          "samples": [
+            {
+              "position": [
+                -49.8001,
+                0,
+                -39.42146
+              ],
+              "height": 7.753803998866715e-08,
+              "normalY": 0.9999999999999999
+            },
+            {
+              "position": [
+                -49.799899999999994,
+                0,
+                -39.42146
+              ],
+              "height": 0,
+              "normalY": 1
+            }
+          ]
+        },
+        "actual": {
+          "y": 0,
+          "distance": 0.25,
+          "point": [
+            -49.799899999999994,
+            0,
+            -39.42146
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "node": 9,
+          "primitive": 0,
+          "instance": 0,
+          "source": "actual optimized full concourse"
+        }
+      },
+      {
+        "central": [
+          -49.8,
+          0,
+          -39.42146
+        ],
+        "contact": {
+          "height": 0,
+          "axis": "x",
+          "offset": 0.0001,
+          "samples": [
+            {
+              "position": [
+                -49.8001,
+                0,
+                -39.42146
+              ],
+              "height": 7.753803998866715e-08,
+              "normalY": 0.9999999999999999
+            },
+            {
+              "position": [
+                -49.799899999999994,
+                0,
+                -39.42146
+              ],
+              "height": 0,
+              "normalY": 1
+            }
+          ]
+        },
+        "actual": {
+          "y": 0,
+          "distance": 0.25,
+          "point": [
+            -49.799899999999994,
+            0,
+            -39.42146
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "node": 9,
+          "primitive": 0,
+          "instance": 0,
+          "source": "actual optimized full concourse"
+        }
+      }
+    ]
+  },
+  "retainedPlatforms": {
+    "endpointSamples": 148,
+    "supported": 148,
+    "insetMetres": 0.3,
+    "actualVariants": "Both retained delivered full and low meshes; all11manifest endpoint polygons remain exact."
+  },
+  "negativeActualGeometryControls": {
+    "actualPier": {
+      "material": "PaintedStructuralIron",
+      "node": 3,
+      "primitive": 0,
+      "instance": 0,
+      "source": "actual optimized full concourse",
+      "triangle": 15200,
+      "point": [
+        -48.780879974365234,
+        0.35,
+        -40.23429870605469
+      ],
+      "floor": 0
+    },
+    "activeUpperVoidAtMainPlane": null,
+    "firstLandingRoofTooTallBody": {
+      "actualClearance": 2.1330733677701796,
+      "rejectsHeight2_3": true
+    }
+  },
+  "qualifications": [
+    "Existing actual pier baseplates occupyX[-50.048698,-48.834301]; nominalX\u221250 stair envelopes intersect rows3/5/7/9. Gate moved east to\u221248.4 to preserve real current structural geometry. This unresolved~1.6m plan/frame discrepancy must remain visible in provenance.",
+    "Provisional old arrival deck and22lamp supports intentionally retained pending separate arrival reconstruction; no departure landing joins it.",
+    "P3 is physically usable with32cm radius, but stricter37cm comfort grid fails even without indicators. No further indicator drift selected.",
+    "Retained transverse opaque wall blocks all9tested Main-floor crossings toward peripheralP1/P2. Their local approach pass does not certify global Main-court connectivity.",
+    "Opening-era topology evidence does not certify complete1935as-built dimensions or all48passenger stairs."
+  ],
+  "manifest": {
+    "sha256": "29d2ea781cf5b6996e23d839fa05239139dffa26af7d78a04bae3e3d78e376ef",
+    "canonicalHelperSha256": "40911f8df7b38417bd841638cb1c438ee3bc010ca6d96a33dc81638940ec0265",
+    "controlsPassed": 15,
+    "retainedOtherFieldsExact": true,
+    "gateX": -48.4,
+    "indicatorX": -48.2
+  },
+  "browserPolylines": "browser-route-polylines.json",
+  "browserStatus": "Parent owns actual keyboard/camera walking acceptance; no GPU/browser ran for this CPU receipt."
+}

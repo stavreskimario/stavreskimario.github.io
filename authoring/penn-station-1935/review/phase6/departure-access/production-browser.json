@@ -1,0 +1,282 @@
+{
+  "created": "2026-10-30T04:15:29.421Z",
+  "finished": "2026-10-30T04:16:34.361Z",
+  "scope": "Exact production bundle, unmodified native UI camera presets, real pointer/WASD input, all six zones. Desktop Chrome/Metal; no physical mobile or FPS claim.",
+  "bundleSha256": "f336505d0ee206d75079180b630170276019649e62527c7f5057d2608c6e3ea7",
+  "browser": "156.0.8078.74",
+  "checks": [
+    "Fresh entry defaults to Walk",
+    "Immediate WASD after viewpoint selection preserves the requested pose",
+    "Native camera preset, court approach, train descent and ascent use real movement with persistent six zones",
+    "Desktop low-quality fallback retains a usable complete stair route",
+    "Daylight controls stay usable",
+    "Source/accuracy panel opens and dismisses with keyboard"
+  ],
+  "walks": [
+    {
+      "label": "native court eastward leg",
+      "endCamera": {
+        "position": [
+          -51.92930931554904,
+          -2.58719992246196,
+          32.771637219161384
+        ],
+        "quaternion": [
+          0.04986540099941909,
+          -0.7053463014571416,
+          0.0498653972920627,
+          0.7053463538977168
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "balanced",
+      "zoneCount": 6
+    },
+    {
+      "label": "native court northward leg",
+      "endCamera": {
+        "position": [
+          -51.909752216602264,
+          -2.5915816579731885,
+          13.158792670143027
+        ],
+        "quaternion": [
+          0.07052032376505457,
+          6.085218412141589e-09,
+          -4.30202629692038e-10,
+          0.9975103427714782
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "balanced",
+      "zoneCount": 6
+    },
+    {
+      "label": "native preset to Platform5",
+      "endCamera": {
+        "position": [
+          -29.35648703186746,
+          -10.302399735272546,
+          13.14223921618337
+        ],
+        "quaternion": [
+          0.049865400999419086,
+          -0.7053463014571416,
+          0.0498653972920627,
+          0.7053463538977167
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "balanced",
+      "zoneCount": 6
+    },
+    {
+      "label": "Platform5 back to native main court",
+      "endCamera": {
+        "position": [
+          -52.20930339183837,
+          -2.587970666663014,
+          13.14223921618337
+        ],
+        "quaternion": [
+          0.049865400999419086,
+          -0.7053463014571416,
+          0.0498653972920627,
+          0.7053463538977167
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "balanced",
+      "zoneCount": 6
+    },
+    {
+      "label": "low-quality Platform5 descent",
+      "endCamera": {
+        "position": [
+          -29.41150716141192,
+          -10.3023996349886,
+          13.14223921618337
+        ],
+        "quaternion": [
+          0.049865400999419086,
+          -0.7053463014571416,
+          0.0498653972920627,
+          0.7053463538977167
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "low",
+      "zoneCount": 6
+    },
+    {
+      "label": "low-quality Platform5 ascent",
+      "endCamera": {
+        "position": [
+          -52.251359791702114,
+          -2.5915871101137786,
+          13.14223921618337
+        ],
+        "quaternion": [
+          0.049865400999419086,
+          -0.7053463014571416,
+          0.0498653972920627,
+          0.7053463538977167
+        ],
+        "fov": 50
+      },
+      "mode": "walk",
+      "view": "concourse",
+      "quality": "low",
+      "zoneCount": 6
+    }
+  ],
+  "servedModels": [
+    {
+      "file": "model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "model-context.glb.gz",
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "bytes": 4453491
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "bytes": 188633
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "bytes": 2805415
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+      "bytes": 4453491
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "sha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "bytes": 7239871
+    }
+  ],
+  "pageErrors": [],
+  "localHttpErrors": [],
+  "requestFailures": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/sky.hdr?revision=6-access-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:61086/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "blockedExternal": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+  ],
+  "sourceReportSha256": "4be8f63a9bfd5693cee2f12110ac376b4895cf5bea1c2e3fa9ecec43348ccb8f",
+  "fullTraceRetainedOutsideRepository": "phase6-platform-access/production-check/report.json",
+  "deploymentStatus": "Local exact production build verified; published deployment verification is separate."
+}

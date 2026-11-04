@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "status": "PASS: raw arrivals rebake preservation and fresh AO export",
+  "inputs": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/baked-v1/model-concourse-arrivals.glb": "f346aaa4177460c3b965217486d7f5d1944d9657c15281705b2735a096e8050d",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/pack-v1/byte-patch/UV-ONLY-UNBAKED-arrivals-priority.glb": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/model-concourse-arrivals.glb": "b8ad4d2331609bae6ec8bd1dacb0d3184d83a9aed2cad370bf9d88743e52c957",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/lighting-concourse-arrivals.json": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-baked-uv-priority-v2/lighting-concourse-arrivals-ao.png": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3"
+  },
+  "actualReport": {
+    "authoredImportedBuffersExact": true,
+    "onlyArchitectureSelectedActive": true,
+    "primaryShaderImageStatesExactSinceInitialImport": true,
+    "eightContextsAndVisibilityReceiptsPresent": true,
+    "neighborSurfaceProfiles": 28,
+    "actualRadianceScale": 1.0,
+    "engine": "4.3.0 Cycles METAL",
+    "elapsedBakeSeconds": 241.74745524999162
+  },
+  "geometry": {
+    "triangleCorners": 1124556,
+    "rawIndexPayloadsExact": 3131,
+    "primitiveCount": 3907,
+    "nodeJsonExact": true,
+    "positionsExact": true,
+    "maximumPositionComponentDeltaM": 0.0,
+    "rawNormalsExact": false,
+    "maximumNormalRoundtripAngleDegrees": 0.03858220708227037,
+    "allowedNormalRoundtripAngleDegrees": 0.5,
+    "surfaceUv0Exact": true,
+    "maximumSurfaceUv0Delta": 0.0,
+    "priorityUv1Exact": false,
+    "maximumPriorityUv1Delta": 2.9802322387695312e-08,
+    "allowedUvFloat32RoundtripDelta": 2e-07,
+    "qualification": "All oriented triangle corners must retain positions exactly. Index renumbering is reported, never substituted for the corner comparison. Normal re-encoding and UV V-flip Float32 round-trip, if present, are measured rather than called byte-exact."
+  },
+  "materials": {
+    "materialCount": 7,
+    "allPbrScalarsExtensionsAndNonLightingExtrasExact": true,
+    "allowedChangedExtra": "sky_illumination_scale (must equal the actual report)",
+    "sourceImages": [
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "normalTexture",
+        "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+        "bytes": 1312711,
+        "imagePayloadExact": true,
+        "sourceImageName": "Travertine009_2K-JPG_NormalGL",
+        "exportImageName": "Travertine009_2K-JPG_NormalGL"
+      },
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "baseColorTexture",
+        "sha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+        "bytes": 4613837,
+        "imagePayloadExact": true,
+        "sourceImageName": "RomanTravertine-full",
+        "exportImageName": "RomanTravertine-full"
+      },
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "metallicRoughnessTexture",
+        "sha256": "f2cd0775a33f8902da65a4f33dc377585cf2b5e3cda82119c50035163eb2b346",
+        "bytes": 2855859,
+        "imagePayloadExact": true,
+        "sourceImageName": "Travertine-roughness",
+        "exportImageName": "Travertine-roughness"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "normalTexture",
+        "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+        "bytes": 1288531,
+        "imagePayloadExact": true,
+        "sourceImageName": "Marble018_2K-JPG_NormalGL",
+        "exportImageName": "Marble018_2K-JPG_NormalGL"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "baseColorTexture",
+        "sha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+        "bytes": 4785562,
+        "imagePayloadExact": true,
+        "sourceImageName": "HonedMarble-full",
+        "exportImageName": "HonedMarble-full"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "metallicRoughnessTexture",
+        "sha256": "06b1677bd2d4cef870487f27e1e1242286092ec35491420740d2364db09bed2f",
+        "bytes": 3547440,
+        "imagePayloadExact": true,
+        "sourceImageName": "Marble018_2K-JPG_Roughness",
+        "exportImageName": "Marble018_2K-JPG_Roughness"
+      }
+    ]
+  },
+  "freshAo": {
+    "freshStandalonePngSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "litMaterialCount": 4,
+    "allOcclusionRedChannelPixelsFreshExact": true,
+    "bindings": [
+      {
+        "material": "TravertineArrivalsStairStone",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "ConcourseOpaqueArrivalsConcrete",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "ConcourseOpaqueArrivalsUpperSupports",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "de9e56dd9a1bd175f60d333ebde898607f89ff143228fb241541a646540ad7c3",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      }
+    ]
+  },
+  "physicalLightingDensity": {
+    "publicFacesNeverLoseDensity": true,
+    "classes": [
+      {
+        "class": "public_treads_landings",
+        "triangles": 832,
+        "worldAreaM2": 284.1918396752121,
+        "oldGi4096TexelsPerM": 42.29579193791791,
+        "newGi4096TexelsPerM": 115.80554001816226,
+        "newAo2048TexelsPerMIfDownsized": 57.90277000908113,
+        "minimumPerTriangleLinearDensityRatio": 2.7379745539250906
+      },
+      {
+        "class": "public_stair_risers",
+        "triangles": 928,
+        "worldAreaM2": 195.28292632239015,
+        "oldGi4096TexelsPerM": 42.29568899238796,
+        "newGi4096TexelsPerM": 92.64411312415959,
+        "newAo2048TexelsPerMIfDownsized": 46.322056562079794,
+        "minimumPerTriangleLinearDensityRatio": 2.1903764567022397
+      },
+      {
+        "class": "public_retained_floor",
+        "triangles": 6,
+        "worldAreaM2": 20.035972595214844,
+        "oldGi4096TexelsPerM": 42.29570298655442,
+        "newGi4096TexelsPerM": 46.3221123740899,
+        "newAo2048TexelsPerMIfDownsized": 23.16105618704495,
+        "minimumPerTriangleLinearDensityRatio": 1.0951956003842145
+      },
+      {
+        "class": "public_gallery_floor",
+        "triangles": 50,
+        "worldAreaM2": 1905.5744269968523,
+        "oldGi4096TexelsPerM": 42.29571387123358,
+        "newGi4096TexelsPerM": 46.322095099650596,
+        "newAo2048TexelsPerMIfDownsized": 23.161047549825298,
+        "minimumPerTriangleLinearDensityRatio": 1.0951951797923305
+      }
+    ]
+  },
+  "limits": [
+    "This gate reads unquantized raw export; it does not certify compression or runtime UV channel remapping.",
+    "Byte-exact source UV-only proof and preflight buffers are separate from measured export round-trip drift.",
+    "The material library and reconstructed geometry are appearance/architecture interpretations; no new historic verification is claimed.",
+    "Denoising, actual browser appearance, walking routes, performance and deployment remain required parent gates."
+  ],
+  "generatorSha256": "2fec0eab457aeeb077341568bba240fa124ad297f13f89a5a9c59ab4d8c32575"
+}

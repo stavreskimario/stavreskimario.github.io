@@ -1,0 +1,59 @@
+{
+  "status": "PASS actual frozen Metal bake; source/encoded/native checks remain separate",
+  "packetSha256": "1d2dafee818236fdfa5708795535afb5c12961882ae7ed6ff19e31c032ee9353",
+  "preflightSha256": "416dca3c45945708bd9416f1950f050e00f66cf9209832d49a11d9c5961dc10f",
+  "started": "2026-11-02T06:31:28.984042+00:00",
+  "closed": "2026-11-02T06:37:32.151509+00:00",
+  "seconds": 363.1675069332123,
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "staticPointLights": 10,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.9646090865135193,
+    "mean": 0.11468612402677536,
+    "coveredPixels": 14372810
+  },
+  "atlasSurfaceArea": 0.798965334892273,
+  "allInputPinsStillExact": true,
+  "inputPinCount": 51,
+  "runtimePointLightsExcluded": true,
+  "outputs": {
+    "lighting-concourse-exits-sky-low.png": {
+      "bytes": 235324,
+      "sha256": "21985904093588e9ad15c3560bfcebaa422f2fd9909373242e869796d0d48ef0"
+    },
+    "lighting-concourse-exits-sky.hdr": {
+      "bytes": 46438147,
+      "sha256": "648a28b04fc0892d2182581a887a54100f235da0877e794e066a2c7957ff3e63"
+    },
+    "lighting-concourse-exits.json": {
+      "bytes": 28715,
+      "sha256": "da7e3152325bec3ad4c47b8473408d47d9a2db50b04e03eb95f9a99ae9d00e29"
+    },
+    "lighting-concourse-exits-sky.png": {
+      "bytes": 22367606,
+      "sha256": "c969b1f63091ae5fb588d3595ac9afcd276737019ae1598c51a851429b0442ac"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 11208,
+      "sha256": "281fbf534cdf360238cd7cfc4df8789825b37d665f1d0ec1a6424df7c9d1b6f6"
+    },
+    "lighting-concourse-exits-ao.png": {
+      "bytes": 5237202,
+      "sha256": "fabc3e94cde21d11befc2129807fe7e796810a9032d7dd2dbe375c3f7b4607cb"
+    },
+    "model-concourse-exits.glb": {
+      "bytes": 40013852,
+      "sha256": "360ef9a74e941a1451047a31e4b21e554625cb9254b86698e9afb738f23165e8"
+    }
+  },
+  "runnerSha256": "9393ec183ecb93429a0757f8f7012cda3f1eaeb5ba61b2921e55c194a44a12c6"
+}

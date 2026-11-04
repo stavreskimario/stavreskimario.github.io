@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "scope": "Actual CPU source/visibility/shadow/collision controls; no native walking",
+  "reports": [
+    {
+      "variant": "full",
+      "totalInstances": 4976,
+      "sourceGeometryExact": true,
+      "fullCollisionAndShadowMatricesExact": true,
+      "views": [
+        {
+          "name": "arrivals",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "platform",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 8407072,
+          "visibleInstances": 4871,
+          "visibleCalls": 2
+        },
+        {
+          "name": "waiting",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 13808,
+          "visibleInstances": 8,
+          "visibleCalls": 2
+        },
+        {
+          "name": "concourse",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 6469048,
+          "visibleInstances": 3748,
+          "visibleCalls": 2
+        },
+        {
+          "name": "offscreen",
+          "reversed": false,
+          "beforeTriangles": 0,
+          "afterTriangles": 0,
+          "visibleInstances": 0,
+          "visibleCalls": 0
+        },
+        {
+          "name": "return",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "arrivals",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "platform",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 8407072,
+          "visibleInstances": 4871,
+          "visibleCalls": 2
+        },
+        {
+          "name": "waiting",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 13808,
+          "visibleInstances": 8,
+          "visibleCalls": 2
+        },
+        {
+          "name": "concourse",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 6469048,
+          "visibleInstances": 3748,
+          "visibleCalls": 2
+        },
+        {
+          "name": "offscreen",
+          "reversed": true,
+          "beforeTriangles": 0,
+          "afterTriangles": 0,
+          "visibleInstances": 0,
+          "visibleCalls": 0
+        },
+        {
+          "name": "return",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        }
+      ]
+    },
+    {
+      "variant": "-low",
+      "totalInstances": 4976,
+      "sourceGeometryExact": true,
+      "fullCollisionAndShadowMatricesExact": true,
+      "views": [
+        {
+          "name": "arrivals",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "platform",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 8407072,
+          "visibleInstances": 4871,
+          "visibleCalls": 2
+        },
+        {
+          "name": "waiting",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 13808,
+          "visibleInstances": 8,
+          "visibleCalls": 2
+        },
+        {
+          "name": "concourse",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 6469048,
+          "visibleInstances": 3748,
+          "visibleCalls": 2
+        },
+        {
+          "name": "offscreen",
+          "reversed": false,
+          "beforeTriangles": 0,
+          "afterTriangles": 0,
+          "visibleInstances": 0,
+          "visibleCalls": 0
+        },
+        {
+          "name": "return",
+          "reversed": false,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "arrivals",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        },
+        {
+          "name": "platform",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 8407072,
+          "visibleInstances": 4871,
+          "visibleCalls": 2
+        },
+        {
+          "name": "waiting",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 13808,
+          "visibleInstances": 8,
+          "visibleCalls": 2
+        },
+        {
+          "name": "concourse",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 6469048,
+          "visibleInstances": 3748,
+          "visibleCalls": 2
+        },
+        {
+          "name": "offscreen",
+          "reversed": true,
+          "beforeTriangles": 0,
+          "afterTriangles": 0,
+          "visibleInstances": 0,
+          "visibleCalls": 0
+        },
+        {
+          "name": "return",
+          "reversed": true,
+          "beforeTriangles": 8588576,
+          "afterTriangles": 5930536,
+          "visibleInstances": 3436,
+          "visibleCalls": 2
+        }
+      ]
+    }
+  ]
+}

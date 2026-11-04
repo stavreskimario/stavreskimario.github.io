@@ -1,0 +1,2328 @@
+{
+  "created": "2026-10-29T09:44:21.143Z",
+  "helperSha256": "d604e306d8471bef25e2226daff7476c9b34e623f124b0c4f653bc5aedc417dd",
+  "toolLockSha256": "a4559e2631142b4459080ee7601f2d7e07640a186c245c5b0879ff90a97ca1c3",
+  "node": "v24.22.1",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/scalar-optimization/waiting-masonry-desktop-2k.glb",
+  "inputSha256": "621218ad1088cf6d4658eadacf58daaca2df82959507f246039fa121a6720da4",
+  "policy": {
+    "resolution": "unchanged",
+    "ao": "original red values copied into RGB carrier only when not already grayscale",
+    "roughness": "green values preserved with unused R/B fixed at255 only for named stone with metallicFactor exactly zero; already-canonical images retained",
+    "metal": "all factors unchanged; nonzero-metal MR images unchanged",
+    "prune": "unreferenced textures only; single-colour textures retained",
+    "prefixes": [
+      "MilfordGranite",
+      "InteriorGranite",
+      "Travertine",
+      "PublicFloorMarble",
+      "TennesseeMarble",
+      "BotticinoMarble",
+      "BedfordLimestone",
+      "IndianaLimestoneContext",
+      "HotelBuffBrick",
+      "CitySidewalkStone",
+      "FarleyGranite"
+    ]
+  },
+  "inventory": [
+    {
+      "name": "Marble018_2K-JPG_NormalGL",
+      "mimeType": "image/jpeg",
+      "imageSha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+      "slots": [
+        "normalTexture"
+      ]
+    },
+    {
+      "name": "lighting-waiting-room-masonry-ao",
+      "mimeType": "image/png",
+      "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+      "slots": [
+        "occlusionTexture"
+      ]
+    },
+    {
+      "name": "HonedMarble-full",
+      "mimeType": "image/png",
+      "imageSha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+      "slots": [
+        "baseColorTexture"
+      ]
+    },
+    {
+      "name": "textures-publicfloormarble-roughness-Marble018_2K-JPG_Roughness",
+      "mimeType": "image/png",
+      "imageSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+      "slots": [
+        "metallicRoughnessTexture"
+      ]
+    },
+    {
+      "name": "Travertine009_2K-JPG_NormalGL",
+      "mimeType": "image/jpeg",
+      "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+      "slots": [
+        "normalTexture"
+      ]
+    },
+    {
+      "name": "RomanTravertine-full",
+      "mimeType": "image/png",
+      "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+      "slots": [
+        "baseColorTexture"
+      ]
+    },
+    {
+      "name": "textures-travertine-roughness-Travertine009_2K-JPG_Roughness",
+      "mimeType": "image/png",
+      "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "slots": [
+        "metallicRoughnessTexture"
+      ]
+    },
+    {
+      "name": "Granite005A_2K-JPG_NormalGL",
+      "mimeType": "image/jpeg",
+      "imageSha256": "af28388d08abd769292ef231889676db11facb9ca1b1e6743cb56b14bb2d289d",
+      "slots": [
+        "normalTexture"
+      ]
+    },
+    {
+      "name": "InteriorFine-full",
+      "mimeType": "image/png",
+      "imageSha256": "4dbf3e0542247e5be3a0c70aeb998574ea3f21c1ff409017c0d24443bbfbaf9b",
+      "slots": [
+        "baseColorTexture"
+      ]
+    },
+    {
+      "name": "textures-milfordgranite-roughness-Granite005A_2K-JPG_Roughness",
+      "mimeType": "image/png",
+      "imageSha256": "2f51cc43776ee676def9d1508910b3718b6bb872c2ed89f107e65adf05dd9f1e",
+      "slots": [
+        "metallicRoughnessTexture"
+      ]
+    },
+    {
+      "name": "Travertine009_2K-JPG_Roughness",
+      "mimeType": "image/png",
+      "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "slots": [
+        "metallicRoughnessTexture"
+      ]
+    },
+    {
+      "name": "mural-north-archival",
+      "mimeType": "image/png",
+      "imageSha256": "c017cbbac8977f5c7e02223cd2d1234d04fd4de44a0f67f9c6d4b29275246c07",
+      "slots": [
+        "baseColorTexture"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "material": "TravertineAshlar-2",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "metallicFactor": 0
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "metallicFactor": 0
+    },
+    {
+      "material": "TravertineAshlar0",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "metallicFactor": 0
+    },
+    {
+      "material": "TravertineAshlar1",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "metallicFactor": 0
+    },
+    {
+      "material": "TravertineAshlar2",
+      "slot": "metallicRoughnessTexture",
+      "channel": "G",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "metallicFactor": 0
+    }
+  ],
+  "skippedMR": [
+    {
+      "material": "PublicFloorMarble",
+      "metallicFactor": 0,
+      "reason": "already canonical unused channels",
+      "sourceSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a"
+    },
+    {
+      "material": "Travertine",
+      "metallicFactor": 0,
+      "reason": "already canonical unused channels",
+      "sourceSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa"
+    },
+    {
+      "material": "BotticinoMarble",
+      "metallicFactor": 0,
+      "reason": "already canonical unused channels",
+      "sourceSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a"
+    },
+    {
+      "material": "InteriorGranite",
+      "metallicFactor": 0,
+      "reason": "already canonical unused channels",
+      "sourceSha256": "2f51cc43776ee676def9d1508910b3718b6bb872c2ed89f107e65adf05dd9f1e"
+    }
+  ],
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/scalar-optimization/waiting-masonry-constant-scalars.glb",
+  "outputSha256": "4210a4576a03baaff7b2822f171a020a684a27bf9c4ae83d6d474e68dd137c30",
+  "beforeBytes": 91100216,
+  "afterBytes": 89371936,
+  "beforeTextureCount": 12,
+  "afterTextureCount": 11,
+  "verbatimInput": false,
+  "uniqueScalarCarriers": 4,
+  "newScalarImages": 0,
+  "geometry": {
+    "beforeAccessorSha256": "d12cf5eef8677b3d2948c8c251e0a0476fe7394c35a20d2b23db348b779cb051",
+    "afterAccessorSha256": "d12cf5eef8677b3d2948c8c251e0a0476fe7394c35a20d2b23db348b779cb051",
+    "accessorCount": 114
+  },
+  "materialSceneMetadata": {
+    "beforeSha256": "f89a1b010f6274ff1caa2db89c8703eff02860bffb4fbc272173691c58737c1d",
+    "afterSha256": "f89a1b010f6274ff1caa2db89c8703eff02860bffb4fbc272173691c58737c1d"
+  },
+  "roleProofs": [
+    {
+      "before": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "PublicFloorMarble",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+        "pixels": "41904b02518dc772480221cb250202fa51c1bde11c1d85d24954e13dfbb50a6a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7f4c9a874df4f9dc9020be7a9825eace6341d7855fb1cf6370b1b211772faf43",
+        "greenSha256": "9fcc750c56119549d0dfa6703a9b131792c30458b50b695e975bd330f0c2ef76"
+      },
+      "after": {
+        "key": "1:pbrMetallicRoughness.baseColorTexture",
+        "material": "PublicFloorMarble",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+        "pixels": "41904b02518dc772480221cb250202fa51c1bde11c1d85d24954e13dfbb50a6a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7f4c9a874df4f9dc9020be7a9825eace6341d7855fb1cf6370b1b211772faf43",
+        "greenSha256": "9fcc750c56119549d0dfa6703a9b131792c30458b50b695e975bd330f0c2ef76"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "PublicFloorMarble",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+        "pixels": "f404f7f75643afe88d44ea7ebd68b6432f00c5e5cb3e61c49bd3d4584ee6490c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "9eed5df6e0703095ed4d00421bf8f94b409320a4271614e6464b487c212f24bc"
+      },
+      "after": {
+        "key": "1:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "PublicFloorMarble",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+        "pixels": "f404f7f75643afe88d44ea7ebd68b6432f00c5e5cb3e61c49bd3d4584ee6490c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "9eed5df6e0703095ed4d00421bf8f94b409320a4271614e6464b487c212f24bc"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:normalTexture",
+        "material": "PublicFloorMarble",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.017999999225139618
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+        "pixels": "e5c0c8f090fc1ad8b66383345d8b5d0e59f7d9e9519d2e9baf9a307033575015",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "9d7aa3fa6a8f2bd4ed6c221993b60af5ee47e46f2eee3a303f3b6af7ae9170e8",
+        "greenSha256": "6e3c4035da2d159b18003f4f6834e79e85d4424881a2e98586a75255456c61fb"
+      },
+      "after": {
+        "key": "1:normalTexture",
+        "material": "PublicFloorMarble",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.017999999225139618
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+        "pixels": "e5c0c8f090fc1ad8b66383345d8b5d0e59f7d9e9519d2e9baf9a307033575015",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "9d7aa3fa6a8f2bd4ed6c221993b60af5ee47e46f2eee3a303f3b6af7ae9170e8",
+        "greenSha256": "6e3c4035da2d159b18003f4f6834e79e85d4424881a2e98586a75255456c61fb"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "1:occlusionTexture",
+        "material": "PublicFloorMarble",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "1:occlusionTexture",
+        "material": "PublicFloorMarble",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "2:occlusionTexture",
+        "material": "CofferRecess",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "2:occlusionTexture",
+        "material": "CofferRecess",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:pbrMetallicRoughness.baseColorTexture",
+        "material": "Travertine",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "3:pbrMetallicRoughness.baseColorTexture",
+        "material": "Travertine",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "Travertine",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "3:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "Travertine",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:normalTexture",
+        "material": "Travertine",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "3:normalTexture",
+        "material": "Travertine",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "3:occlusionTexture",
+        "material": "Travertine",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "3:occlusionTexture",
+        "material": "Travertine",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "4:occlusionTexture",
+        "material": "GuerinMuralField1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "4:occlusionTexture",
+        "material": "GuerinMuralField1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "5:pbrMetallicRoughness.baseColorTexture",
+        "material": "BotticinoMarble",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+        "pixels": "41904b02518dc772480221cb250202fa51c1bde11c1d85d24954e13dfbb50a6a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7f4c9a874df4f9dc9020be7a9825eace6341d7855fb1cf6370b1b211772faf43",
+        "greenSha256": "9fcc750c56119549d0dfa6703a9b131792c30458b50b695e975bd330f0c2ef76"
+      },
+      "after": {
+        "key": "5:pbrMetallicRoughness.baseColorTexture",
+        "material": "BotticinoMarble",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+        "pixels": "41904b02518dc772480221cb250202fa51c1bde11c1d85d24954e13dfbb50a6a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7f4c9a874df4f9dc9020be7a9825eace6341d7855fb1cf6370b1b211772faf43",
+        "greenSha256": "9fcc750c56119549d0dfa6703a9b131792c30458b50b695e975bd330f0c2ef76"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "5:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "BotticinoMarble",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+        "pixels": "f404f7f75643afe88d44ea7ebd68b6432f00c5e5cb3e61c49bd3d4584ee6490c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "9eed5df6e0703095ed4d00421bf8f94b409320a4271614e6464b487c212f24bc"
+      },
+      "after": {
+        "key": "5:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "BotticinoMarble",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+        "pixels": "f404f7f75643afe88d44ea7ebd68b6432f00c5e5cb3e61c49bd3d4584ee6490c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "9eed5df6e0703095ed4d00421bf8f94b409320a4271614e6464b487c212f24bc"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "5:normalTexture",
+        "material": "BotticinoMarble",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.02500000037252903
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+        "pixels": "e5c0c8f090fc1ad8b66383345d8b5d0e59f7d9e9519d2e9baf9a307033575015",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "9d7aa3fa6a8f2bd4ed6c221993b60af5ee47e46f2eee3a303f3b6af7ae9170e8",
+        "greenSha256": "6e3c4035da2d159b18003f4f6834e79e85d4424881a2e98586a75255456c61fb"
+      },
+      "after": {
+        "key": "5:normalTexture",
+        "material": "BotticinoMarble",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.02500000037252903
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+        "pixels": "e5c0c8f090fc1ad8b66383345d8b5d0e59f7d9e9519d2e9baf9a307033575015",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "9d7aa3fa6a8f2bd4ed6c221993b60af5ee47e46f2eee3a303f3b6af7ae9170e8",
+        "greenSha256": "6e3c4035da2d159b18003f4f6834e79e85d4424881a2e98586a75255456c61fb"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "5:occlusionTexture",
+        "material": "BotticinoMarble",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "5:occlusionTexture",
+        "material": "BotticinoMarble",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "6:occlusionTexture",
+        "material": "GuerinMuralField2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "6:occlusionTexture",
+        "material": "GuerinMuralField2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "7:occlusionTexture",
+        "material": "GuerinMuralField3",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "7:occlusionTexture",
+        "material": "GuerinMuralField3",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "8:occlusionTexture",
+        "material": "GuerinMuralField4",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "8:occlusionTexture",
+        "material": "GuerinMuralField4",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "9:pbrMetallicRoughness.baseColorTexture",
+        "material": "InteriorGranite",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "4dbf3e0542247e5be3a0c70aeb998574ea3f21c1ff409017c0d24443bbfbaf9b",
+        "pixels": "b4ee79b0bc59363b6af547c1c38b4b2cf1bffc7b90266ba073b966feffdc02a4",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "50cd03ed9084380df9f0ffbf4d0e7ef4d3a59c4ea4d14c8d806c1347334ed76a",
+        "greenSha256": "bf2692aa4f00bbb0d67d2bb3f3abf0ea64647f2f956fd4739612a5dfb8550f36"
+      },
+      "after": {
+        "key": "9:pbrMetallicRoughness.baseColorTexture",
+        "material": "InteriorGranite",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "4dbf3e0542247e5be3a0c70aeb998574ea3f21c1ff409017c0d24443bbfbaf9b",
+        "pixels": "b4ee79b0bc59363b6af547c1c38b4b2cf1bffc7b90266ba073b966feffdc02a4",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "50cd03ed9084380df9f0ffbf4d0e7ef4d3a59c4ea4d14c8d806c1347334ed76a",
+        "greenSha256": "bf2692aa4f00bbb0d67d2bb3f3abf0ea64647f2f956fd4739612a5dfb8550f36"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "9:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "InteriorGranite",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "2f51cc43776ee676def9d1508910b3718b6bb872c2ed89f107e65adf05dd9f1e",
+        "pixels": "92d652c55724a78cdbc0c3aa9fc7aa74b1bb33f9752cfca1abcd0b4f86414f8a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "845c5a70deb92ed16970d6661f7425664ee4b35ac77cbcfb06f9cceaab65c154"
+      },
+      "after": {
+        "key": "9:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "InteriorGranite",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "2f51cc43776ee676def9d1508910b3718b6bb872c2ed89f107e65adf05dd9f1e",
+        "pixels": "92d652c55724a78cdbc0c3aa9fc7aa74b1bb33f9752cfca1abcd0b4f86414f8a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "845c5a70deb92ed16970d6661f7425664ee4b35ac77cbcfb06f9cceaab65c154"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "9:normalTexture",
+        "material": "InteriorGranite",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.02500000037252903
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "af28388d08abd769292ef231889676db11facb9ca1b1e6743cb56b14bb2d289d",
+        "pixels": "68db826adb054c7288e889b2b5b10beadcc41e318919e546e1b5fefcec79c8c1",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "144485fa33bbe353fe25d75b0f244e9882303e85f6b6354e09ca101fdb0a985c",
+        "greenSha256": "9b7156ac07674797fe8cb30b2b6f8e1d3be1df66e8323373e861ebc4a48f9dc5"
+      },
+      "after": {
+        "key": "9:normalTexture",
+        "material": "InteriorGranite",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.02500000037252903
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "af28388d08abd769292ef231889676db11facb9ca1b1e6743cb56b14bb2d289d",
+        "pixels": "68db826adb054c7288e889b2b5b10beadcc41e318919e546e1b5fefcec79c8c1",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "144485fa33bbe353fe25d75b0f244e9882303e85f6b6354e09ca101fdb0a985c",
+        "greenSha256": "9b7156ac07674797fe8cb30b2b6f8e1d3be1df66e8323373e861ebc4a48f9dc5"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "9:occlusionTexture",
+        "material": "InteriorGranite",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "9:occlusionTexture",
+        "material": "InteriorGranite",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "10:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "10:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "10:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "10:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "10:normalTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "10:normalTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "10:occlusionTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "10:occlusionTexture",
+        "material": "TravertineAshlar-2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "11:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "11:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "11:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "11:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "11:normalTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "11:normalTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "11:occlusionTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "11:occlusionTexture",
+        "material": "TravertineAshlar-1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "12:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar0",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "12:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar0",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "12:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar0",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "12:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar0",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "12:normalTexture",
+        "material": "TravertineAshlar0",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "12:normalTexture",
+        "material": "TravertineAshlar0",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "12:occlusionTexture",
+        "material": "TravertineAshlar0",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "12:occlusionTexture",
+        "material": "TravertineAshlar0",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "13:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar1",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "13:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar1",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "13:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar1",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "13:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar1",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "13:normalTexture",
+        "material": "TravertineAshlar1",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "13:normalTexture",
+        "material": "TravertineAshlar1",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "13:occlusionTexture",
+        "material": "TravertineAshlar1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "13:occlusionTexture",
+        "material": "TravertineAshlar1",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "14:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar2",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "after": {
+        "key": "14:pbrMetallicRoughness.baseColorTexture",
+        "material": "TravertineAshlar2",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+        "pixels": "aa90034cb4ae5caa4e0b3bea5637ac387bbb7d55155c4e0bb9376b5fa45e4e8c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "70843f38c7f00249803c91b23252c0de6df4cd3654b587cca6f88f99182effb4",
+        "greenSha256": "48ad996d24ad36482e0f94eff8b846f7662ad43f7b983b5a69dd893f064314bd"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "14:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar2",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "after": {
+        "key": "14:pbrMetallicRoughness.metallicRoughnessTexture",
+        "material": "TravertineAshlar2",
+        "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+        "pixels": "bdea4a14520cb65090bcc8e8d0fc9bc0faa36fb9c8516553339dca94016b5d11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "greenSha256": "3c540e2bf649bc1bbeb9cc352cea100ee8601241cd914aea1a5ff7ab2073601d"
+      },
+      "sampledChannelsPreserved": "G"
+    },
+    {
+      "before": {
+        "key": "14:normalTexture",
+        "material": "TravertineAshlar2",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "after": {
+        "key": "14:normalTexture",
+        "material": "TravertineAshlar2",
+        "slot": "normalTexture",
+        "textureInfo": {
+          "index": 0,
+          "scale": 0.03500000014901161
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+        "pixels": "c8267a7a1a4202cb02bf34d1526d897a756d4276fd525b14115515e986d8cc9d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "7751a1f0ccfa609ed668895f47f79333eec869158d4223de108120aa19868881",
+        "greenSha256": "aebd3115a3360747ea00978eb3efc7b4dce64da4e3b2706ca14c1a1bb9b38c51"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "14:occlusionTexture",
+        "material": "TravertineAshlar2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "14:occlusionTexture",
+        "material": "TravertineAshlar2",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "15:occlusionTexture",
+        "material": "GuerinMuralField5",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "15:occlusionTexture",
+        "material": "GuerinMuralField5",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "16:pbrMetallicRoughness.baseColorTexture",
+        "material": "GuerinMuralField6",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "c017cbbac8977f5c7e02223cd2d1234d04fd4de44a0f67f9c6d4b29275246c07",
+        "pixels": "0bacfd9c3bf996c3e444b78c4e19062d27cb5abb4bcfb1385dc6d43725778ec7",
+        "width": 728,
+        "height": 260,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cf8034fd5d3bb387c43738a84da6ea5616e155bbabca482ed209142fb46f17a6",
+        "greenSha256": "cf8034fd5d3bb387c43738a84da6ea5616e155bbabca482ed209142fb46f17a6"
+      },
+      "after": {
+        "key": "16:pbrMetallicRoughness.baseColorTexture",
+        "material": "GuerinMuralField6",
+        "slot": "pbrMetallicRoughness.baseColorTexture",
+        "textureInfo": {
+          "index": 0
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "c017cbbac8977f5c7e02223cd2d1234d04fd4de44a0f67f9c6d4b29275246c07",
+        "pixels": "0bacfd9c3bf996c3e444b78c4e19062d27cb5abb4bcfb1385dc6d43725778ec7",
+        "width": 728,
+        "height": 260,
+        "channels": 3,
+        "depth": "uchar",
+        "redSha256": "cf8034fd5d3bb387c43738a84da6ea5616e155bbabca482ed209142fb46f17a6",
+        "greenSha256": "cf8034fd5d3bb387c43738a84da6ea5616e155bbabca482ed209142fb46f17a6"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    },
+    {
+      "before": {
+        "key": "16:occlusionTexture",
+        "material": "GuerinMuralField6",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "after": {
+        "key": "16:occlusionTexture",
+        "material": "GuerinMuralField6",
+        "slot": "occlusionTexture",
+        "textureInfo": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "sampler": {
+          "magFilter": 9729,
+          "minFilter": 9987,
+          "wrapS": 10497,
+          "wrapT": 10497
+        },
+        "imageSha256": "b01d4c32e6e40b9af4be3b2ff429cb9a0f0bf349ccc308c46745db80addc9e8b",
+        "pixels": "d9e77b169b4acc1dedfc1615a7958372753e4be7cc37778b227017d6467df74c",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "depth": "uchar",
+        "redSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44",
+        "greenSha256": "5764257df232e4bf296ecebb84ac41a8f25348e742fed64ad42e44b9f1f80a44"
+      },
+      "sampledChannelsPreserved": "all encoded bytes and decoded pixels"
+    }
+  ],
+  "status": "passed"
+}

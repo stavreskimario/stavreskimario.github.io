@@ -1,0 +1,21 @@
+{
+  "status": "PASS actual immutable-Git fallback for both missing4K sources, exact compressed/decoded identities and corrupted-receipt rejection",
+  "scope": "Only external candidate module; fs missing-file simulation in this process; actual root files remain unchanged",
+  "results": [
+    {
+      "file": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-sky.hdr.gz",
+      "bytes": 41829335,
+      "sha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca",
+      "decodedSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+      "strictFallbackRead": true
+    },
+    {
+      "file": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+      "bytes": 30046400,
+      "sha256": "8d49bb51330830fee59c6c07c0fc91284c92e3044c01589c1c23f3dbb27298e2",
+      "decodedSha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd",
+      "strictFallbackRead": true
+    }
+  ],
+  "corruptedReceiptRejected": true
+}

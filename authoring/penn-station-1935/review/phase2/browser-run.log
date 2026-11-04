@@ -1,0 +1,50 @@
+START installed Chrome; local project-prefix server is ready
+BROWSER 156.0.8078.48
+OPEN desktop
+DOCUMENT desktop; waiting for app bootstrap
+BOOTSTRAP desktop
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+OPEN mobile emulation 390 × 844, touch, reduced motion
+DOCUMENT mobile emulation 390 × 844, touch, reduced motion; waiting for app bootstrap
+BOOTSTRAP mobile emulation 390 × 844, touch, reduced motion
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+AssertionError [ERR_ASSERTION]: Sources panel remains readable without horizontal overflow at 200% text
+    at /private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:455:5

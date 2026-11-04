@@ -1,0 +1,4533 @@
+{
+  "schema": 1,
+  "purpose": "Exact existing underside face ownership for finish/GI partition only",
+  "snapshotSource": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+    "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c"
+  },
+  "identityInput": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/audit-v1/roof-face-identity.json",
+    "sha256": "53d45573e545e9f3be51f6af0e48d0039a40d89d865b6f598f2f675a1b13ffb1"
+  },
+  "snapshotNodeIdsOnly": true,
+  "remapRule": "Node/primitive IDs are historical snapshot identifiers. Before editing current assembly, remap oriented world-corner positions/normals/UV0 and available UV1; validate every triangle and source hashes. Fail if topology differs; do not select a material globally or fill group bounds.",
+  "totalTriangles": 56,
+  "groups": [
+    {
+      "snapshotNode": 9,
+      "snapshotPrimitive": 0,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "triangleCount": 52,
+      "triangleOffsets": [
+        1342,
+        1343,
+        1390,
+        1391,
+        1438,
+        1439,
+        1486,
+        1487,
+        1534,
+        1535,
+        1582,
+        1583,
+        1630,
+        1631,
+        1678,
+        1679,
+        1726,
+        1727,
+        1774,
+        1775,
+        1822,
+        1823,
+        1870,
+        1871,
+        1918,
+        1919,
+        1966,
+        1967,
+        2014,
+        2015,
+        2062,
+        2063,
+        2110,
+        2111,
+        2158,
+        2159,
+        2206,
+        2207,
+        2254,
+        2255,
+        2326,
+        2327,
+        2710,
+        2711,
+        3246,
+        3247,
+        3254,
+        3255,
+        4014,
+        4015,
+        4022,
+        4023
+      ],
+      "areaM2": 918.1240626411745,
+      "boundsWorld": {
+        "min": [
+          -75,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -45.5
+        ]
+      }
+    },
+    {
+      "snapshotNode": 24,
+      "snapshotPrimitive": 1,
+      "material": "TravertineArrivalsExitRoute",
+      "triangleCount": 4,
+      "triangleOffsets": [
+        0,
+        1,
+        12,
+        13
+      ],
+      "areaM2": 534.0340827912714,
+      "boundsWorld": {
+        "min": [
+          -73.19999694824219,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -7.150000095367432,
+          -4.707200057220459,
+          -70.22799682617188
+        ]
+      }
+    }
+  ],
+  "triangles": [
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1342,
+      "vertexIndices": [
+        4026,
+        4027,
+        4028
+      ],
+      "boundsWorld": {
+        "min": [
+          -75,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -73.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4026,
+          "world": [
+            -75,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.21176283061504364,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4027,
+          "world": [
+            -75,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.21176283061504364,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4028,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923368632793427,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1343,
+      "vertexIndices": [
+        4029,
+        4030,
+        4031
+      ],
+      "boundsWorld": {
+        "min": [
+          -75,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -73.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4029,
+          "world": [
+            -75,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.21176283061504364,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4030,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923368632793427,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4031,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923368632793427,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1390,
+      "vertexIndices": [
+        4170,
+        4171,
+        4172
+      ],
+      "boundsWorld": {
+        "min": [
+          -73.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -72.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4170,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923370122909546,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4171,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923370122909546,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4172,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1391,
+      "vertexIndices": [
+        4173,
+        4174,
+        4175
+      ],
+      "boundsWorld": {
+        "min": [
+          -73.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -72.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4173,
+          "world": [
+            -73.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20923370122909546,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4174,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4175,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1438,
+      "vertexIndices": [
+        4314,
+        4315,
+        4316
+      ],
+      "boundsWorld": {
+        "min": [
+          -72.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -71.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4314,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4315,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4316,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1439,
+      "vertexIndices": [
+        4317,
+        4318,
+        4319
+      ],
+      "boundsWorld": {
+        "min": [
+          -72.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -71.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4317,
+          "world": [
+            -72.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20668460428714752,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4318,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4319,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1486,
+      "vertexIndices": [
+        4458,
+        4459,
+        4460
+      ],
+      "boundsWorld": {
+        "min": [
+          -71.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -70.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4458,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4459,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4460,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1487,
+      "vertexIndices": [
+        4461,
+        4462,
+        4463
+      ],
+      "boundsWorld": {
+        "min": [
+          -71.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -70.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4461,
+          "world": [
+            -71.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20413553714752197,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4462,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4463,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1534,
+      "vertexIndices": [
+        4602,
+        4603,
+        4604
+      ],
+      "boundsWorld": {
+        "min": [
+          -70.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -69,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4602,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4603,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4604,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1535,
+      "vertexIndices": [
+        4605,
+        4606,
+        4607
+      ],
+      "boundsWorld": {
+        "min": [
+          -70.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -69,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4605,
+          "world": [
+            -70.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.20158645510673523,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4606,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4607,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1582,
+      "vertexIndices": [
+        4746,
+        4747,
+        4748
+      ],
+      "boundsWorld": {
+        "min": [
+          -69,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -67.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4746,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4747,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4748,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648832082748413,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1583,
+      "vertexIndices": [
+        4749,
+        4750,
+        4751
+      ],
+      "boundsWorld": {
+        "min": [
+          -69,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -67.80000305175781,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4749,
+          "world": [
+            -69,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19903738796710968,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4750,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648832082748413,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4751,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648832082748413,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1630,
+      "vertexIndices": [
+        4890,
+        4891,
+        4892
+      ],
+      "boundsWorld": {
+        "min": [
+          -67.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -66.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4890,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648833572864532,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4891,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648833572864532,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4892,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395917654037476,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1631,
+      "vertexIndices": [
+        4893,
+        4894,
+        4895
+      ],
+      "boundsWorld": {
+        "min": [
+          -67.80000305175781,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -66.5999984741211,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 4893,
+          "world": [
+            -67.80000305175781,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19648833572864532,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 4894,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395917654037476,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 4895,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395917654037476,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1678,
+      "vertexIndices": [
+        5034,
+        5035,
+        5036
+      ],
+      "boundsWorld": {
+        "min": [
+          -66.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -65.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5034,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395919144153595,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5035,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395919144153595,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5036,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1679,
+      "vertexIndices": [
+        5037,
+        5038,
+        5039
+      ],
+      "boundsWorld": {
+        "min": [
+          -66.5999984741211,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -65.4000015258789,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5037,
+          "world": [
+            -66.5999984741211,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.19395919144153595,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5038,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5039,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1726,
+      "vertexIndices": [
+        5178,
+        5179,
+        5180
+      ],
+      "boundsWorld": {
+        "min": [
+          -65.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -64.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5178,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5179,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5180,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1727,
+      "vertexIndices": [
+        5181,
+        5182,
+        5183
+      ],
+      "boundsWorld": {
+        "min": [
+          -65.4000015258789,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -64.19999694824219,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5181,
+          "world": [
+            -65.4000015258789,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1914101094007492,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5182,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5183,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1774,
+      "vertexIndices": [
+        5322,
+        5323,
+        5324
+      ],
+      "boundsWorld": {
+        "min": [
+          -64.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -63,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5322,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5323,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5324,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1775,
+      "vertexIndices": [
+        5325,
+        5326,
+        5327
+      ],
+      "boundsWorld": {
+        "min": [
+          -64.19999694824219,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -63,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5325,
+          "world": [
+            -64.19999694824219,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18886102735996246,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5326,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5327,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1822,
+      "vertexIndices": [
+        5466,
+        5467,
+        5468
+      ],
+      "boundsWorld": {
+        "min": [
+          -63,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -61.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5466,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5467,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5468,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1823,
+      "vertexIndices": [
+        5469,
+        5470,
+        5471
+      ],
+      "boundsWorld": {
+        "min": [
+          -63,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -61.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5469,
+          "world": [
+            -63,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18631196022033691,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5470,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5471,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1870,
+      "vertexIndices": [
+        5610,
+        5611,
+        5612
+      ],
+      "boundsWorld": {
+        "min": [
+          -61.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -60.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5610,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5611,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5612,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121381103992462,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1871,
+      "vertexIndices": [
+        5613,
+        5614,
+        5615
+      ],
+      "boundsWorld": {
+        "min": [
+          -61.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -60.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5613,
+          "world": [
+            -61.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18376287817955017,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5614,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121381103992462,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5615,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121381103992462,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1918,
+      "vertexIndices": [
+        5754,
+        5755,
+        5756
+      ],
+      "boundsWorld": {
+        "min": [
+          -60.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -59.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5754,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121382594108582,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5755,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121382594108582,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5756,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868468165397644,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1919,
+      "vertexIndices": [
+        5757,
+        5758,
+        5759
+      ],
+      "boundsWorld": {
+        "min": [
+          -60.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -59.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5757,
+          "world": [
+            -60.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.18121382594108582,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5758,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868468165397644,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5759,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868468165397644,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1966,
+      "vertexIndices": [
+        5898,
+        5899,
+        5900
+      ],
+      "boundsWorld": {
+        "min": [
+          -59.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -58.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5898,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868469655513763,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5899,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868469655513763,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5900,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 1967,
+      "vertexIndices": [
+        5901,
+        5902,
+        5903
+      ],
+      "boundsWorld": {
+        "min": [
+          -59.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -58.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 5901,
+          "world": [
+            -59.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17868469655513763,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 5902,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 5903,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2014,
+      "vertexIndices": [
+        6042,
+        6043,
+        6044
+      ],
+      "boundsWorld": {
+        "min": [
+          -58.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -57,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6042,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6043,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6044,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2015,
+      "vertexIndices": [
+        6045,
+        6046,
+        6047
+      ],
+      "boundsWorld": {
+        "min": [
+          -58.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -57,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6045,
+          "world": [
+            -58.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1761356145143509,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6046,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6047,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2062,
+      "vertexIndices": [
+        6186,
+        6187,
+        6188
+      ],
+      "boundsWorld": {
+        "min": [
+          -57,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -55.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6186,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6187,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6188,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2063,
+      "vertexIndices": [
+        6189,
+        6190,
+        6191
+      ],
+      "boundsWorld": {
+        "min": [
+          -57,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -55.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6189,
+          "world": [
+            -57,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.17358653247356415,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6190,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6191,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2110,
+      "vertexIndices": [
+        6330,
+        6331,
+        6332
+      ],
+      "boundsWorld": {
+        "min": [
+          -55.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -54.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6330,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6331,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6332,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2111,
+      "vertexIndices": [
+        6333,
+        6334,
+        6335
+      ],
+      "boundsWorld": {
+        "min": [
+          -55.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -54.599998474121094,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6333,
+          "world": [
+            -55.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1710374653339386,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6334,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6335,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2158,
+      "vertexIndices": [
+        6474,
+        6475,
+        6476
+      ],
+      "boundsWorld": {
+        "min": [
+          -54.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -53.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6474,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6475,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6476,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2159,
+      "vertexIndices": [
+        6477,
+        6478,
+        6479
+      ],
+      "boundsWorld": {
+        "min": [
+          -54.599998474121094,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -53.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6477,
+          "world": [
+            -54.599998474121094,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16848838329315186,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6478,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6479,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2206,
+      "vertexIndices": [
+        6618,
+        6619,
+        6620
+      ],
+      "boundsWorld": {
+        "min": [
+          -53.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -52.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6618,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6619,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6620,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2207,
+      "vertexIndices": [
+        6621,
+        6622,
+        6623
+      ],
+      "boundsWorld": {
+        "min": [
+          -53.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -52.20000076293945,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6621,
+          "world": [
+            -53.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16594401001930237,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6622,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6623,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2254,
+      "vertexIndices": [
+        6762,
+        6763,
+        6764
+      ],
+      "boundsWorld": {
+        "min": [
+          -52.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -51,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6762,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6763,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6764,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2255,
+      "vertexIndices": [
+        6765,
+        6766,
+        6767
+      ],
+      "boundsWorld": {
+        "min": [
+          -52.20000076293945,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -51,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6765,
+          "world": [
+            -52.20000076293945,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16339492797851562,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6766,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6767,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2326,
+      "vertexIndices": [
+        6978,
+        6979,
+        6980
+      ],
+      "boundsWorld": {
+        "min": [
+          -51,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -49.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6978,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6979,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6980,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2327,
+      "vertexIndices": [
+        6981,
+        6982,
+        6983
+      ],
+      "boundsWorld": {
+        "min": [
+          -51,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -49.79999923706055,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 6981,
+          "world": [
+            -51,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.16086110472679138,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 6982,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 6983,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2710,
+      "vertexIndices": [
+        8130,
+        8131,
+        8132
+      ],
+      "boundsWorld": {
+        "min": [
+          -49.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -48.65629959106445,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 8130,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 8131,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 8132,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 2711,
+      "vertexIndices": [
+        8133,
+        8134,
+        8135
+      ],
+      "boundsWorld": {
+        "min": [
+          -49.79999923706055,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -48.65629959106445,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 8133,
+          "world": [
+            -49.79999923706055,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15831203758716583,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 8134,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 8135,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 3246,
+      "vertexIndices": [
+        9738,
+        9739,
+        9740
+      ],
+      "boundsWorld": {
+        "min": [
+          -48.65629959106445,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -44.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 9738,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 9739,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 9740,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 3247,
+      "vertexIndices": [
+        9741,
+        9742,
+        9743
+      ],
+      "boundsWorld": {
+        "min": [
+          -48.65629959106445,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -44.400001525878906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 9741,
+          "world": [
+            -48.65629959106445,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.15588730573654175,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 9742,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 9743,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 3254,
+      "vertexIndices": [
+        9762,
+        9763,
+        9764
+      ],
+      "boundsWorld": {
+        "min": [
+          -44.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -42.25630187988281,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 9762,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 9763,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 9764,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 3255,
+      "vertexIndices": [
+        9765,
+        9766,
+        9767
+      ],
+      "boundsWorld": {
+        "min": [
+          -44.400001525878906,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -42.25630187988281,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 9765,
+          "world": [
+            -44.400001525878906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.14685583114624023,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 9766,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 9767,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 4014,
+      "vertexIndices": [
+        12042,
+        12043,
+        12044
+      ],
+      "boundsWorld": {
+        "min": [
+          -42.25630187988281,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -41.5,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 12042,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 12043,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 12044,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 4015,
+      "vertexIndices": [
+        12045,
+        12046,
+        12047
+      ],
+      "boundsWorld": {
+        "min": [
+          -42.25630187988281,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -41.5,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 12045,
+          "world": [
+            -42.25630187988281,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1423071026802063,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 12046,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 12047,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 4022,
+      "vertexIndices": [
+        12066,
+        12067,
+        12068
+      ],
+      "boundsWorld": {
+        "min": [
+          -41.5,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 12066,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 12067,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 12068,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.13932828605175018,
+            0.7859464287757874
+          ]
+        }
+      ]
+    },
+    {
+      "node": 9,
+      "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+      "primitive": 0,
+      "materialIndex": 4,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "primitiveTriangleOffset": 4023,
+      "vertexIndices": [
+        12069,
+        12070,
+        12071
+      ],
+      "boundsWorld": {
+        "min": [
+          -41.5,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -45.5
+        ]
+      },
+      "corners": [
+        {
+          "index": 12069,
+          "world": [
+            -41.5,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.1406978964805603,
+            0.8428286910057068
+          ]
+        },
+        {
+          "index": 12070,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.13932828605175018,
+            0.7859464287757874
+          ]
+        },
+        {
+          "index": 12071,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -45.5
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            0.13932828605175018,
+            0.8428286910057068
+          ]
+        }
+      ]
+    },
+    {
+      "node": 24,
+      "owner": "concourse-exits baked static architecture",
+      "primitive": 1,
+      "materialIndex": 32,
+      "material": "TravertineArrivalsExitRoute",
+      "primitiveTriangleOffset": 0,
+      "vertexIndices": [
+        24,
+        4,
+        7
+      ],
+      "boundsWorld": {
+        "min": [
+          -73.19999694824219,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      },
+      "corners": [
+        {
+          "index": 24,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -79.37200164794922
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -51.9146614074707
+          ],
+          "uv1": [
+            0.30287331342697144,
+            0.25637948513031006
+          ]
+        },
+        {
+          "index": 4,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -47.2599983215332
+          ],
+          "uv1": [
+            0.2186339795589447,
+            0.2563794255256653
+          ]
+        },
+        {
+          "index": 7,
+          "world": [
+            -73.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -48.79999923706055,
+            -47.2599983215332
+          ],
+          "uv1": [
+            0.21863394975662231,
+            0.6167318820953369
+          ]
+        }
+      ]
+    },
+    {
+      "node": 24,
+      "owner": "concourse-exits baked static architecture",
+      "primitive": 1,
+      "materialIndex": 32,
+      "material": "TravertineArrivalsExitRoute",
+      "primitiveTriangleOffset": 1,
+      "vertexIndices": [
+        24,
+        7,
+        1
+      ],
+      "boundsWorld": {
+        "min": [
+          -73.19999694824219,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -72.38999938964844
+        ]
+      },
+      "corners": [
+        {
+          "index": 24,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -79.37200164794922
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -51.9146614074707
+          ],
+          "uv1": [
+            0.30287331342697144,
+            0.25637948513031006
+          ]
+        },
+        {
+          "index": 7,
+          "world": [
+            -73.19999694824219,
+            -4.707200057220459,
+            -72.38999938964844
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -48.79999923706055,
+            -47.2599983215332
+          ],
+          "uv1": [
+            0.21863394975662231,
+            0.6167318820953369
+          ]
+        },
+        {
+          "index": 1,
+          "world": [
+            -73.19999694824219,
+            -4.707200057220459,
+            -79.37199401855469
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -48.79999923706055,
+            -51.9146614074707
+          ],
+          "uv1": [
+            0.3028732240200043,
+            0.6167318820953369
+          ]
+        }
+      ]
+    },
+    {
+      "node": 24,
+      "owner": "concourse-exits baked static architecture",
+      "primitive": 1,
+      "materialIndex": 32,
+      "material": "TravertineArrivalsExitRoute",
+      "primitiveTriangleOffset": 12,
+      "vertexIndices": [
+        29,
+        74,
+        33
+      ],
+      "boundsWorld": {
+        "min": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -7.150000095367432,
+          -4.707200057220459,
+          -70.22799682617188
+        ]
+      },
+      "corners": [
+        {
+          "index": 29,
+          "world": [
+            -7.150000095367432,
+            -4.707200057220459,
+            -79.37200164794922
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -4.766666889190674,
+            -51.914669036865234
+          ],
+          "uv1": [
+            0.6650509238243103,
+            0.9999999403953552
+          ]
+        },
+        {
+          "index": 74,
+          "world": [
+            -7.150000095367432,
+            -4.707200057220459,
+            -70.22799682617188
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -4.766666889190674,
+            -45.818668365478516
+          ],
+          "uv1": [
+            0.7753753662109375,
+            0.9999999403953552
+          ]
+        },
+        {
+          "index": 33,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -70.2280044555664
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -45.818668365478516
+          ],
+          "uv1": [
+            0.7753751873970032,
+            0.6244663000106812
+          ]
+        }
+      ]
+    },
+    {
+      "node": 24,
+      "owner": "concourse-exits baked static architecture",
+      "primitive": 1,
+      "materialIndex": 32,
+      "material": "TravertineArrivalsExitRoute",
+      "primitiveTriangleOffset": 13,
+      "vertexIndices": [
+        29,
+        33,
+        25
+      ],
+      "boundsWorld": {
+        "min": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -7.150000095367432,
+          -4.707200057220459,
+          -70.2280044555664
+        ]
+      },
+      "corners": [
+        {
+          "index": 29,
+          "world": [
+            -7.150000095367432,
+            -4.707200057220459,
+            -79.37200164794922
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -4.766666889190674,
+            -51.914669036865234
+          ],
+          "uv1": [
+            0.6650509238243103,
+            0.9999999403953552
+          ]
+        },
+        {
+          "index": 33,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -70.2280044555664
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -45.818668365478516
+          ],
+          "uv1": [
+            0.7753751873970032,
+            0.6244663000106812
+          ]
+        },
+        {
+          "index": 25,
+          "world": [
+            -40.856300354003906,
+            -4.707200057220459,
+            -79.37200164794922
+          ],
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "uv0": [
+            -27.237533569335938,
+            -51.914669036865234
+          ],
+          "uv1": [
+            0.6650509238243103,
+            0.6244663000106812
+          ]
+        }
+      ]
+    }
+  ]
+}

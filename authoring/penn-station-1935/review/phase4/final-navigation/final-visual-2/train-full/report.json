@@ -1,0 +1,1079 @@
+{
+  "created": "2026-10-29T22:24:37.635Z",
+  "section": "train",
+  "checks": [
+    "Continuous real-keyboard waiting-room–concourse–exit–both dogleg flights–Platform5 route and reverse in full geometry, with no platform shortcut or pose reset"
+  ],
+  "contexts": [
+    {
+      "label": "continuous waiting-room to Platform 5 route · full geometry",
+      "errors": [],
+      "requestsFailed": [],
+      "renderer": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)"
+      },
+      "geometryVariant": "full",
+      "legs": [
+        {
+          "label": "waiting-room centre",
+          "before": {
+            "position": [
+              0,
+              -2.5872,
+              25
+            ],
+            "quaternion": [
+              0.07777655644170531,
+              0,
+              0,
+              0.9969708156551376
+            ],
+            "fov": 50
+          },
+          "target": [
+            0,
+            0
+          ],
+          "after": {
+            "position": [
+              0,
+              -2.5871664402452446,
+              -0.023726381314733976
+            ],
+            "quaternion": [
+              2.1323497561426263e-8,
+              0,
+              0,
+              0.9999999999999998
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 3666,
+            "lastCandidates": 8,
+            "maximumCandidates": 9,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.267166440245244
+          }
+        },
+        {
+          "label": "axial passage west",
+          "before": {
+            "position": [
+              0,
+              -2.5871664402452446,
+              -0.023726381314733976
+            ],
+            "quaternion": [
+              2.1323497561426263e-8,
+              0,
+              0,
+              0.9999999999999998
+            ],
+            "fov": 50
+          },
+          "target": [
+            -41.88,
+            0
+          ],
+          "after": {
+            "position": [
+              -41.92797688062428,
+              -2.5882403112565235,
+              -0.0001245937273618657
+            ],
+            "quaternion": [
+              1.507371818879106e-8,
+              0.7073070450376971,
+              -1.5082260050040955e-8,
+              0.7069064606014297
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 15474,
+            "lastCandidates": 8,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.268240311256523
+          }
+        },
+        {
+          "label": "east concourse aisle",
+          "before": {
+            "position": [
+              -41.92797688062428,
+              -2.5882403112565235,
+              -0.0001245937273618657
+            ],
+            "quaternion": [
+              1.507371818879106e-8,
+              0.7073070450376971,
+              -1.5082260050040955e-8,
+              0.7069064606014297
+            ],
+            "fov": 50
+          },
+          "target": [
+            -41.88,
+            13.32787
+          ],
+          "after": {
+            "position": [
+              -41.88002800903857,
+              -2.5882403112565235,
+              13.366071481507726
+            ],
+            "quaternion": [
+              -3.8378899873992126e-11,
+              0.9999983802853228,
+              -2.13234630234443e-8,
+              -0.0017998407514261967
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 19470,
+            "lastCandidates": 8,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.268240311256523
+          }
+        },
+        {
+          "label": "main flight to exit landing",
+          "before": {
+            "position": [
+              -41.88002800903857,
+              -2.5882403112565235,
+              13.366071481507726
+            ],
+            "quaternion": [
+              -3.8378899873992126e-11,
+              0.9999983802853228,
+              -2.13234630234443e-8,
+              -0.0017998407514261967
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5,
+            13.32787
+          ],
+          "after": {
+            "position": [
+              -48.53178128496392,
+              -5.787211561524831,
+              13.327853377852378
+            ],
+            "quaternion": [
+              1.5121430626588436e-8,
+              0.7050636632105723,
+              -1.503442330312091e-8,
+              0.709144012750646
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 21624,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -7.4672124208854465
+          }
+        },
+        {
+          "label": "upper dogleg alignment",
+          "before": {
+            "position": [
+              -48.53178128496392,
+              -5.787211561524831,
+              13.327853377852378
+            ],
+            "quaternion": [
+              1.5121430626588436e-8,
+              0.7050636632105723,
+              -1.503442330312091e-8,
+              0.709144012750646
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5,
+            14.15787
+          ],
+          "after": {
+            "position": [
+              -48.499444296795645,
+              -5.787212420885327,
+              14.175473039577595
+            ],
+            "quaternion": [
+              -4.080135862907312e-10,
+              0.9998169194833227,
+              -2.1319593644475355e-8,
+              -0.019134458834221393
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 22242,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -7.4672124208854465
+          }
+        },
+        {
+          "label": "first lower flight to turning landing",
+          "before": {
+            "position": [
+              -48.499444296795645,
+              -5.787212420885327,
+              14.175473039577595
+            ],
+            "quaternion": [
+              -4.080135862907312e-10,
+              0.9998169194833227,
+              -2.1319593644475355e-8,
+              -0.019134458834221393
+            ],
+            "fov": 50
+          },
+          "target": [
+            -53.9563,
+            14.15787
+          ],
+          "after": {
+            "position": [
+              -53.98077936590352,
+              -8.047258649409638,
+              14.157955756227922
+            ],
+            "quaternion": [
+              1.5102289970402646e-8,
+              0.7059653421482882,
+              -1.5053650251750485e-8,
+              0.708246380637028
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 24048,
+            "lastCandidates": 2,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -9.727259705519693
+          }
+        },
+        {
+          "label": "turning landing",
+          "before": {
+            "position": [
+              -53.98077936590352,
+              -8.047258649409638,
+              14.157955756227922
+            ],
+            "quaternion": [
+              1.5102289970402646e-8,
+              0.7059653421482882,
+              -1.5053650251750485e-8,
+              0.708246380637028
+            ],
+            "fov": 50
+          },
+          "target": [
+            -53.9563,
+            12.49787
+          ],
+          "after": {
+            "position": [
+              -53.9555942096786,
+              -8.047259705519693,
+              12.441802369246867
+            ],
+            "quaternion": [
+              2.1322918088324776e-8,
+              -0.007372240041983858,
+              1.5720194255749187e-10,
+              0.9999728246691322
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 24876,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -9.727259705519693
+          }
+        },
+        {
+          "label": "return flight to platform landing",
+          "before": {
+            "position": [
+              -53.9555942096786,
+              -8.047259705519693,
+              12.441802369246867
+            ],
+            "quaternion": [
+              2.1322918088324776e-8,
+              -0.007372240041983858,
+              1.5720194255749187e-10,
+              0.9999728246691322
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5063,
+            12.49787
+          ],
+          "after": {
+            "position": [
+              -48.4761124899362,
+              -10.30239859367995,
+              12.498005911895747
+            ],
+            "quaternion": [
+              1.500022563560653e-8,
+              -0.7107349419097113,
+              1.5155354800632167e-8,
+              0.7034599081316568
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 26724,
+            "lastCandidates": 7,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -11.982399991334407
+          }
+        },
+        {
+          "label": "Platform 5",
+          "before": {
+            "position": [
+              -48.4761124899362,
+              -10.30239859367995,
+              12.498005911895747
+            ],
+            "quaternion": [
+              1.500022563560653e-8,
+              -0.7107349419097113,
+              1.5155354800632167e-8,
+              0.7034599081316568
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5063,
+            13.32787
+          ],
+          "after": {
+            "position": [
+              -48.50674032439339,
+              -10.302399991334209,
+              13.343677015434016
+            ],
+            "quaternion": [
+              -3.876446941162897e-10,
+              -0.9998347442053376,
+              2.131997372989177e-8,
+              -0.018179226601996584
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 27342,
+            "lastCandidates": 7,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -11.982399991334407
+          }
+        },
+        {
+          "label": "platform return alignment",
+          "before": {
+            "position": [
+              -48.50674032439339,
+              -10.302399991334209,
+              13.343677015434016
+            ],
+            "quaternion": [
+              -3.876446941162897e-10,
+              -0.9998347442053376,
+              2.131997372989177e-8,
+              -0.018179226601996584
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5063,
+            12.49787
+          ],
+          "after": {
+            "position": [
+              -48.50636169970813,
+              -10.302399991334408,
+              12.450221652258607
+            ],
+            "quaternion": [
+              -2.1323496838660785e-8,
+              0.00026036612162163425,
+              -5.551916359476933e-12,
+              -0.9999999661047405
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 27792,
+            "lastCandidates": 7,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -11.982399991334407
+          }
+        },
+        {
+          "label": "return flight ascent",
+          "before": {
+            "position": [
+              -48.50636169970813,
+              -10.302399991334408,
+              12.450221652258607
+            ],
+            "quaternion": [
+              -2.1323496838660785e-8,
+              0.00026036612162163425,
+              -5.551916359476933e-12,
+              -0.9999999661047405
+            ],
+            "fov": 50
+          },
+          "target": [
+            -53.9563,
+            12.49787
+          ],
+          "after": {
+            "position": [
+              -53.98459237986727,
+              -8.047259834593472,
+              12.497949005918414
+            ],
+            "quaternion": [
+              -1.501193474626249e-8,
+              -0.7101910246546909,
+              1.5143756582371122e-8,
+              -0.7040090258653791
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 29634,
+            "lastCandidates": 2,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -9.727259705519693
+          }
+        },
+        {
+          "label": "turning landing return",
+          "before": {
+            "position": [
+              -53.98459237986727,
+              -8.047259834593472,
+              12.497949005918414
+            ],
+            "quaternion": [
+              -1.501193474626249e-8,
+              -0.7101910246546909,
+              1.5143756582371122e-8,
+              -0.7040090258653791
+            ],
+            "fov": 50
+          },
+          "target": [
+            -53.9563,
+            14.15787
+          ],
+          "after": {
+            "position": [
+              -53.95551839901423,
+              -8.047259705519693,
+              14.211195935972803
+            ],
+            "quaternion": [
+              1.8170339834108018e-10,
+              -0.9999636932724388,
+              2.1322723375009656e-8,
+              0.008521275546736647
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 30462,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -9.727259705519693
+          }
+        },
+        {
+          "label": "first flight ascent",
+          "before": {
+            "position": [
+              -53.95551839901423,
+              -8.047259705519693,
+              14.211195935972803
+            ],
+            "quaternion": [
+              1.8170339834108018e-10,
+              -0.9999636932724388,
+              2.1322723375009656e-8,
+              0.008521275546736647
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5,
+            14.15787
+          ],
+          "after": {
+            "position": [
+              -48.47288626069268,
+              -5.78721259412577,
+              14.157768296573241
+            ],
+            "quaternion": [
+              1.51514982863052e-8,
+              -0.7036425890463113,
+              1.5004121031644683e-8,
+              0.7105540844159602
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 32316,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -7.4672124208854465
+          }
+        },
+        {
+          "label": "exit landing return",
+          "before": {
+            "position": [
+              -48.47288626069268,
+              -5.78721259412577,
+              14.157768296573241
+            ],
+            "quaternion": [
+              1.51514982863052e-8,
+              -0.7036425890463113,
+              1.5004121031644683e-8,
+              0.7105540844159602
+            ],
+            "fov": 50
+          },
+          "target": [
+            -48.5,
+            13.32787
+          ],
+          "after": {
+            "position": [
+              -48.50040152411453,
+              -5.787212420885471,
+              13.31125028573167
+            ],
+            "quaternion": [
+              2.1320654544189474e-8,
+              0.016329054833687805,
+              -3.481925609265377e-10,
+              0.999866672095954
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 32928,
+            "lastCandidates": 4,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -7.4672124208854465
+          }
+        },
+        {
+          "label": "main stair ascent",
+          "before": {
+            "position": [
+              -48.50040152411453,
+              -5.787212420885471,
+              13.31125028573167
+            ],
+            "quaternion": [
+              2.1320654544189474e-8,
+              0.016329054833687805,
+              -3.481925609265377e-10,
+              0.999866672095954
+            ],
+            "fov": 50
+          },
+          "target": [
+            -41.88,
+            13.32787
+          ],
+          "after": {
+            "position": [
+              -41.850396918119934,
+              -2.5882406869808916,
+              13.327777364359097
+            ],
+            "quaternion": [
+              1.5059050881424118e-8,
+              -0.7079938347452934,
+              1.5096904808696096e-8,
+              0.7062186134354247
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 35046,
+            "lastCandidates": 8,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.268240311256523
+          }
+        },
+        {
+          "label": "concourse aisle return",
+          "before": {
+            "position": [
+              -41.850396918119934,
+              -2.5882406869808916,
+              13.327777364359097
+            ],
+            "quaternion": [
+              1.5059050881424118e-8,
+              -0.7079938347452934,
+              1.5096904808696096e-8,
+              0.7062186134354247
+            ],
+            "fov": 50
+          },
+          "target": [
+            -41.88,
+            0
+          ],
+          "after": {
+            "position": [
+              -41.8799125384449,
+              -2.5882403112565235,
+              -0.03762797919119083
+            ],
+            "quaternion": [
+              2.1323484411344766e-8,
+              0.0011105802160377859,
+              -2.3681454528449984e-11,
+              0.9999993833056015
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 39018,
+            "lastCandidates": 8,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.268240311256523
+          }
+        },
+        {
+          "label": "waiting-room return",
+          "before": {
+            "position": [
+              -41.8799125384449,
+              -2.5882403112565235,
+              -0.03762797919119083
+            ],
+            "quaternion": [
+              2.1323484411344766e-8,
+              0.0011105802160377859,
+              -2.3681454528449984e-11,
+              0.9999993833056015
+            ],
+            "fov": 50
+          },
+          "target": [
+            0,
+            0
+          ],
+          "after": {
+            "position": [
+              0.04455846675740162,
+              -2.587166440245243,
+              -0.0001275326024535322
+            ],
+            "quaternion": [
+              1.507121420533673e-8,
+              -0.7074243874155492,
+              1.5084762199948936e-8,
+              0.706789032236448
+            ],
+            "fov": 50
+          },
+          "navigation": {
+            "sourceMeshes": 112,
+            "excludedMeshes": 77,
+            "excludedInstances": 76894,
+            "structuralInstances": 4976,
+            "colliders": 5009,
+            "vaultLightColliders": 2488,
+            "vaultLightSupports": 0,
+            "ignoredGlazingMaterials": [
+              "ConcourseRecessedWindowGlass",
+              "HistoricGlass",
+              "LunetteGlazing",
+              "OpalCandelabraGlass",
+              "TransparentPassengerCoachGlass"
+            ],
+            "cells": 2236,
+            "queries": 50850,
+            "lastCandidates": 8,
+            "maximumCandidates": 10,
+            "buildMilliseconds": 7.899999998509884,
+            "floorWorld": -4.267166440245244
+          }
+        }
+      ],
+      "final": {
+        "position": [
+          0.04455846675740162,
+          -2.587166440245243,
+          -0.0001275326024535322
+        ],
+        "quaternion": [
+          1.507121420533673e-8,
+          -0.7074243874155492,
+          1.5084762199948936e-8,
+          0.706789032236448
+        ],
+        "fov": 50
+      },
+      "navigation": {
+        "sourceMeshes": 112,
+        "excludedMeshes": 77,
+        "excludedInstances": 76894,
+        "structuralInstances": 4976,
+        "colliders": 5009,
+        "vaultLightColliders": 2488,
+        "vaultLightSupports": 0,
+        "ignoredGlazingMaterials": [
+          "ConcourseRecessedWindowGlass",
+          "HistoricGlass",
+          "LunetteGlazing",
+          "OpalCandelabraGlass",
+          "TransparentPassengerCoachGlass"
+        ],
+        "cells": 2236,
+        "queries": 50850,
+        "lastCandidates": 8,
+        "maximumCandidates": 10,
+        "buildMilliseconds": 7.899999998509884,
+        "floorWorld": -4.267166440245244
+      },
+      "sampleSummary": {
+        "count": 4936,
+        "first": {
+          "p": [
+            0,
+            -2.5872,
+            25
+          ],
+          "pose": 1
+        },
+        "last": {
+          "p": [
+            0.04455846675740162,
+            -2.587166440245243,
+            -0.0001275326024535322
+          ],
+          "pose": 1
+        },
+        "poseTokens": [
+          1
+        ],
+        "minPosition": [
+          -53.98459237986727,
+          -10.302399991334408,
+          -0.03762797919119083
+        ],
+        "maxPosition": [
+          0.04455846675740162,
+          -2.5743590019839733,
+          25
+        ]
+      }
+    }
+  ],
+  "scope": "Installed desktop Chrome and 390 px touch emulation; no physical-phone certification.",
+  "runtimeBundleSha256": "67be7080829be131857745192d7f08af499b43396f601ee3240c2e70d220e1e4",
+  "modelSha256": {
+    "model-exterior.glb.gz": "570308ab4f0f5f609564bed7dd6fb32ee1fe7b4f388c0ed17b53b283e1758381",
+    "model-exterior-low.glb.gz": "83779ef15f18ac98c7455cd34e1be52b9408c978028006b71dbf63ce07b622b8",
+    "model-waiting-room.glb.gz": "15ab0975b7376621227f67899efa843fe5adc547e92df4028715f84eff06977f",
+    "model-waiting-room-low.glb.gz": "73970ca45dd112baca9f22b1a06c5939cca58517f7b13fde1997d85bc79b902d",
+    "model-concourse.glb.gz": "0505d04338aacb21df6d47ed07cdd4dca6af976e22743eba5f93ac83f6d8c79c",
+    "model-concourse-low.glb.gz": "eeafebb05ee86f0f8a3f18a4b15120dce9696b2eb6cc7b1bfc73947a0cd08403",
+    "model-context.glb.gz": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+    "model-context-low.glb.gz": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+    "model-platform.glb.gz": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+    "model-platform-low.glb.gz": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+    "model-trains.glb.gz": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+    "model-trains-low.glb.gz": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+    "scene-manifest.json": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+  },
+  "requestedAngle": "metal",
+  "browser": "156.0.8078.74",
+  "status": "passed",
+  "nativeArtifactsPath": "/Users/stavreskimario/Desktop/penn-station-work/phase4-final-navigation-visual-2/train-full"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS actual frozen Phase11 clean Metal bake; no walkthrough or full reconstruction claim",
+  "packetSha256": "b6b6647c87a11d79754eba250cd1b58c8f1777faf2ff6d08fefe08023843a724",
+  "started": "2026-11-03T21:55:27.302417+00:00",
+  "closed": "2026-11-03T22:00:29.623312+00:00",
+  "seconds": 302.32065200805664,
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "staticPointLights": 10,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.9748857021331787,
+    "mean": 0.11272308975458145,
+    "coveredPixels": 13857511
+  },
+  "atlasSurfaceArea": 0.7688732743263245,
+  "allInputPinsStillExact": true,
+  "inputPinCount": 54,
+  "runtimePointLightsExcluded": true,
+  "actualPrebakeAcceptanceSha256": "00b0df554f96eb448a65059ab7ee15310d50708ebf0806f7f66f4cc8536aa241",
+  "metalBinaryArchivesDisabled": false,
+  "outputs": {
+    "lighting-concourse-exits-sky-low.png": {
+      "bytes": 227844,
+      "sha256": "e4123a1968c0734d9fa52dc5bcc7fb5e913ce5bb48f265410ae0811ce7330638"
+    },
+    "lighting-concourse-exits-sky.hdr": {
+      "bytes": 44822793,
+      "sha256": "ad87f97e66b5dc6425318db65b54f78964d60a18c3ab3b3b47117dc84fc5bfd3"
+    },
+    "lighting-concourse-exits.json": {
+      "bytes": 28717,
+      "sha256": "2d1e9a022986c3f407b109d317f8ccc4725c7c07b45d3e2ee6042317911adc3e"
+    },
+    "lighting-concourse-exits-sky.png": {
+      "bytes": 21638473,
+      "sha256": "7e2d84844114a5be552a6c3f0c46dbe40e08439021063a1db94772395cbcbdac"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 11208,
+      "sha256": "00b0df554f96eb448a65059ab7ee15310d50708ebf0806f7f66f4cc8536aa241"
+    },
+    "lighting-concourse-exits-ao.png": {
+      "bytes": 5027630,
+      "sha256": "318ddfd03fce27da0b04dfdebe407245d23ff7594393a846bb80e8e1d084e9a4"
+    },
+    "model-concourse-exits.glb": {
+      "bytes": 39806224,
+      "sha256": "83d71e9a9f9b94268c5016719b14d67f6fae74a54b148169406c15c4bc186059"
+    }
+  },
+  "runnerSha256": "2f8622419bfba9001417b64315a2ff06d85ef48a6ae22b007d2d490878a25997"
+}

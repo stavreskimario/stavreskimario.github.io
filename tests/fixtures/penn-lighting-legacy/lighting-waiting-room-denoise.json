@@ -1,0 +1,61 @@
+{
+  "zone": "waiting-room",
+  "source": "lighting-waiting-room-sky.hdr",
+  "sourceSha256": "d3cf7fb7c01ca50e8d0fa2e2a26aa6aeebf09d87b6ef14f1e3b5c50eb627d108",
+  "inputTransfer": "srgb",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.05613766610622406,
+    "minimum": 0.0,
+    "maximum": 0.83984375
+  },
+  "originalLinear": {
+    "mean": 0.012887709774076939,
+    "minimum": 0.0,
+    "maximum": 0.6735773086547852
+  },
+  "denoisedLinear": {
+    "mean": 0.012967550195753574,
+    "minimum": 0.0,
+    "maximum": 1.0037989616394043
+  },
+  "relativeMeanChange": 0.006195082219901504,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-waiting-room-sky-denoised-linear.hdr",
+    "sha256": "13d435f0dc4693e075a4100ea412074edc24d09656d6ff5b0e13702062e56001",
+    "decodedLinear": {
+      "mean": 0.012928016483783722,
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "meanQuantizationError": 3.953167833969928e-05
+  },
+  "full": {
+    "png": "lighting-waiting-room-sky.png",
+    "webp": "lighting-waiting-room-sky.webp",
+    "clippedRGBSamples": 1,
+    "width": 2048,
+    "height": 2048
+  },
+  "low": {
+    "png": "lighting-waiting-room-sky-low.png",
+    "webp": "lighting-waiting-room-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 6.662142875022255,
+  "schemaVersion": 1
+}

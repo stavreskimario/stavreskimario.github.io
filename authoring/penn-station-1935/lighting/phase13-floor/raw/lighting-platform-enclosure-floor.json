@@ -1,0 +1,1037 @@
+{
+  "zone": "platform-enclosure-floor",
+  "frameZone": "platform",
+  "surfaceGroup": "all",
+  "uvMarginPixels": 4,
+  "uvMarginMethod": "FRACTION",
+  "source": "bridge-bay.glb",
+  "sourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "floorUvDensity": {
+    "walkingTopWeight": 4,
+    "visibleTopTriangles": 16,
+    "minimumJacobianPixelsPerMetre": 76.92764506513112,
+    "maximumJacobianPixelsPerMetre": 76.92768162453672,
+    "materials": {
+      "RailwayTrackBaseConcreteEnclosure13": {
+        "area": 1734.915665016597,
+        "uvArea": 0.03829761384986341,
+        "areaPixelsPerMetre": 19.244499545293632
+      },
+      "RailwayPlatformRubbedConcreteEnclosure13": {
+        "area": 1572.0278996348868,
+        "uvArea": 0.03448870962247952,
+        "areaPixelsPerMetre": 19.18528681333969
+      },
+      "RailwayPlatformStippledGranolithicEnclosure13": {
+        "area": 1026.5999502307586,
+        "uvArea": 0.2002793783507002,
+        "areaPixelsPerMetre": 57.21072427760795
+      }
+    },
+    "physicalPositionNormalUV0Exact": true,
+    "structureLightUVExact": true,
+    "uvBounds": [
+      0.0009765034192241728,
+      0.9990235567092896
+    ]
+  },
+  "floorUvPreflightSha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8",
+  "structureLightUvTransferredExact": true,
+  "contextMembership": {
+    "status": "PASS",
+    "roi": {
+      "x": [
+        -162.2857,
+        -111.4247
+      ],
+      "z": [
+        3.1014,
+        37.212321
+      ]
+    },
+    "objects": [
+      {
+        "owner": "Continuous station railway concrete foundation",
+        "sourceFamily": "Railway smooth concrete track base",
+        "oldFaces": 12,
+        "retainedFaces": 20,
+        "changedOldPolygons": 2,
+        "removedActualAreaM2": 1734.9155529809993,
+        "retainedClippedAreaM2": 76080.40015644694,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": -9.22337532043457,
+        "runtimePlaneMain0Y": -9.223750092452303,
+        "planeDifferenceQualified": "Uniqueauthoritativefoundationowner/rawplane differsby0.374772mmfromquantizedruntime representation; no runtimeheight or tolerance changed."
+      },
+      {
+        "owner": "Platform 04 continuous30-inch-gridded granolithic dressing",
+        "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+        "oldFaces": 24,
+        "retainedFaces": 48,
+        "changedOldPolygons": 12,
+        "removedActualAreaM2": 523.5914909508641,
+        "retainedClippedAreaM2": 2667.483754804865,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 04 source-section continuous walls and coved slab",
+        "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+        "oldFaces": 304,
+        "retainedFaces": 480,
+        "changedOldPolygons": 88,
+        "removedActualAreaM2": 771.2544912127388,
+        "retainedClippedAreaM2": 2601.1633796203364,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+        "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+        "oldFaces": 24,
+        "retainedFaces": 48,
+        "changedOldPolygons": 12,
+        "removedActualAreaM2": 553.1153047969322,
+        "retainedClippedAreaM2": 2908.8716942514015,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 05 source-section continuous walls and coved slab",
+        "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+        "oldFaces": 304,
+        "retainedFaces": 480,
+        "changedOldPolygons": 88,
+        "removedActualAreaM2": 800.7731989119729,
+        "retainedClippedAreaM2": 2514.6625587301737,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      }
+    ],
+    "removedAreaBySourceFamily": {
+      "Railway smooth concrete track base": 1734.9155529809993,
+      "RailwayPlatformStippledGranolithicPhase9": 1076.7067957477961,
+      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247116
+    },
+    "runtimeOwnedAreaBySourceFamily": {
+      "Railway smooth concrete track base": 1734.9155529809996,
+      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
+      "RailwayPlatformStippledGranolithicPhase9": 1026.5997759210595
+    },
+    "explicitCacheOnlyHiddenInterface": {
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "oldPhase9ReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+      "sourceTriangleIndex": 3,
+      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+      "clippedAreaM2": 50.10701982673692,
+      "orientation": "DOWNWARD",
+      "role": "CachedrawclosedgranolithicundersidecoincidentwithRubbedtop; alreadyomittedfrommountedruntimebyPhase9hidden-interfacecleanup. RemovefromcacheinsideownedROIaswellduringtruefloorswap; no newprimaryfaceadded.",
+      "visibleTopAndSideAreaExact": true,
+      "areaToleranceUnchanged": true
+    },
+    "otherCachedObjectsChanged": 0,
+    "newHiddenObjects": 0,
+    "newCapFaces": 0,
+    "clippingCore": "floor_clip.py sharedwithruntimepartition",
+    "qualification": "The trackbase cache usesitsown exact rawsourceupperplane; ~0.375mm runtimequantization difference recorded, not a raised runtime tolerance orheightmove. RuntimefloorP/N/UV0authority unchanged.",
+    "detail": "PASS exact mapped cached-floor receiver membership removed before primary import"
+  },
+  "resolution": 4096,
+  "samples": 128,
+  "aoPathSamples": 4,
+  "aoNodeSamples": 24,
+  "engine": "4.3.0 Cycles METAL",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "atlasSurfaceArea": 0.2730656862258911,
+  "sky": "Neutral diffuse dome plus explicitly interpreted static electric lamps; six-bounce diffuse transport; no directional sun baked",
+  "staticPracticalLights": [],
+  "primaryAtlasScope": {
+    "sourceMeshes": 3,
+    "sourceFileMeshOwners": 27,
+    "opaquePrimaryMeshesBeforeJoin": 3,
+    "unbakedLetteringMeshes": 0,
+    "primaryAtlasSourceNames": [
+      "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+      "Fresh true receiver Railway smooth concrete track base",
+      "Fresh true receiver RailwayPlatformStippledGranolithicPhase9"
+    ],
+    "retainedSourceStructuralOwners": 24,
+    "selectedTriangles": 402,
+    "currentBlenderObjects": 1,
+    "classification": "Exactly the three original floor receiver owners; new lightUV only. All physical structure/context retained."
+  },
+  "registeredStaticPracticalLights": [
+    {
+      "name": "Exit pendant 8",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -27.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 3",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -64.19999694824219,
+        65.0,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 9",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -17.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 4",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -67.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 10",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -9.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 5",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -57.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 6",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -47.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 7",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -37.0,
+        74.80000305175781,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 1",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -64.19999694824219,
+        43.0,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    },
+    {
+      "name": "Exit pendant 2",
+      "type": "POINT",
+      "source": "model-concourse-exits.glb",
+      "sourceSha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "locationMain0Blender": [
+        -64.19999694824219,
+        54.0,
+        -0.9900000095367432
+      ],
+      "energyBlenderWatts": 15.0,
+      "colorLinear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "shadowSoftSizeM": 0.0
+    }
+  ],
+  "electricLightingQualification": "Positions, energy and warm color are interpreted appearance controls for documented electric-lit public accommodation; not measured historic photometry.",
+  "registeredOccluders": [
+    {
+      "zone": "concourse",
+      "source": "current-concourse-without-primary-arrivals.glb",
+      "sha256": "35f726bf45a31227e4d6fe828d71e8f30913b51a778f386ed6dbaf6ba7b26b53",
+      "heightOffset": 0.0,
+      "objects": 7182
+    },
+    {
+      "zone": "exterior",
+      "source": "retained-exterior-visible-occluder.glb",
+      "sha256": "9e342b9ca33d32284fd1e9466a7a5b40955c08d9a611d9233ab841620d1f625b",
+      "heightOffset": 4.2672,
+      "objects": 15
+    },
+    {
+      "zone": "waiting",
+      "source": "retained-main-visible-occluder-main0.glb",
+      "sha256": "1c1fbfcebc204264050e16fbc179b8ab5e3186c6815dfcc48baade634ae8be9e",
+      "heightOffset": 0.0,
+      "objects": 28
+    },
+    {
+      "zone": "exterior",
+      "source": "formal-arcade-module.glb",
+      "sha256": "4cd4dbbf7f20652953f764ba50de4cb73afed5862460270ab8eeb4c7c15b442f",
+      "heightOffset": 4.2672,
+      "objects": 2041
+    },
+    {
+      "zone": "platform",
+      "source": "platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "heightOffset": 0.0,
+      "objects": 66376
+    },
+    {
+      "zone": "platform",
+      "source": "platform-section-module.glb",
+      "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+      "heightOffset": 0.0,
+      "objects": 16
+    },
+    {
+      "zone": "trains",
+      "source": "model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "heightOffset": -8.886825000000002,
+      "objects": 66
+    },
+    {
+      "zone": "context",
+      "source": "model-context.glb",
+      "sha256": "a6f0745d2b0afd2d763820ccab2b5248e968935b20129c90d7b8da9cf2ead5a4",
+      "heightOffset": 4.2672,
+      "objects": 10736
+    },
+    {
+      "zone": "concourse",
+      "source": "arrivals-without-north-research-guard.glb",
+      "sha256": "ca5a753a1c8f7cac5aaee47fdffd2fc977bc925ed0941b5ef17f6c48bd792fd7",
+      "heightOffset": 0.0,
+      "objects": 4039
+    },
+    {
+      "zone": "concourse",
+      "source": "model-concourse-exits.glb",
+      "sha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "heightOffset": 0.0,
+      "objects": 105
+    },
+    {
+      "zone": "concourse",
+      "source": "finish-addon.glb",
+      "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+      "heightOffset": 0,
+      "objects": 103,
+      "cachePrimaryJoined": true
+    },
+    {
+      "zone": "platform",
+      "source": "bridge-bay.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "objects": 24,
+      "role": "The unchanged remaining source structural owners retained as physical context"
+    }
+  ],
+  "unbakedPrimaryMeshes": 0,
+  "surfaceProfiles": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BedfordLimestoneConcourseCirculation",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Bounded 0.30\u20130.48 response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "InteriorGraniteArrivalsExitRoute",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Bounded 0.30\u20130.48 response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGraniteArcadeRepairPhase9",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleAccessInfill",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsExitRoute",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsRetainedNorth",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArcadeCastComposition",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArrivalsExitRoute",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineArrivalsStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2ArcadeRepairPhase9",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineDepartureStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1.0,
+  "retainedHdrTransfer": "linear; separate Non-Color float buffer set before pixel assignment",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.2461261749267578,
+    "coveredPixels": 16777216
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.2511001229286194,
+    "mean": 0.011396902613341808,
+    "coveredPixels": 5843586
+  },
+  "elapsedSeconds": 55.65614020801149,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-platform-enclosure-floor.glb",
+  "orderSeparation": null,
+  "orderUv": null,
+  "vaultNormalIntegrity": null,
+  "authoredNormalIntegrity": {
+    "schema": 1,
+    "scope": "Three original receiver owners; authored source normals transferred byte-exact through UV-only separation/repacking",
+    "temporaryAttribute": "_PennArcadeWorldCornerNormal",
+    "sourceObjects": 3,
+    "sourceCorners": 1206,
+    "sourceNegativeHemisphereCorners": 0,
+    "sourceMinimumFaceAlignment": 0.5944152727193834,
+    "restoredCorners": 1206,
+    "minimumRestoredSourceNormalDot": 0.9999999955792012,
+    "maxEncodingAngleDegrees": 0.005387508980701692,
+    "maxAllowedEncodingAngleDegrees": 0.5,
+    "restoredNegativeHemisphereCorners": 0,
+    "restoredMinimumFaceAlignment": 0.5944059909112784,
+    "finiteUnitNormals": true,
+    "temporaryAttributeRemoved": true,
+    "status": "PASS",
+    "additionalRepackNormalDrift": 0,
+    "physicalCornerDigest": "6ac4183b1b73172daea430c11258f3519861a0804b48f17d3fb7c01f08ae05fc",
+    "uvPreflightSha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8"
+  },
+  "sourceRenderVisibility": {
+    "proofSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+    "contexts": [
+      {
+        "context": "current-concourse-without-primary-arrivals.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "retained-exterior-visible-occluder.glb",
+        "sourceVisibilityRule": "Doric column master \u2014 35ft",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Doric column master \u2014 35ft",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                4.267199993133545
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                14.935199737548828
+              ]
+            ],
+            "sourceStreet0Bounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                0.0
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                10.668000221252441
+              ]
+            ],
+            "expectedBakeFrameBounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                4.2672
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                14.93520022125244
+              ]
+            ],
+            "sourceToBakeFrameOffsetZ": 4.2672,
+            "boundErrorM": 4.837036122751215e-07,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "retained-main-visible-occluder-main0.glb",
+        "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Fluted Corinthian shaft master.001",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -100.0
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -84.37899780273438
+              ]
+            ],
+            "sourceStreet0Bounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -104.26719665527344
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -88.64619445800781
+              ]
+            ],
+            "expectedBakeFrameBounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -99.99999665527343
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -84.37899445800781
+              ]
+            ],
+            "sourceToBakeFrameOffsetZ": 4.2672,
+            "boundErrorM": 3.344726565046585e-06,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "formal-arcade-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-retained-occluder.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-section-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-trains.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-context.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "arrivals-without-north-research-guard.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-concourse-exits.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      }
+    ]
+  },
+  "occlusionBindingIntegrity": {
+    "schema": 1,
+    "status": "PASS",
+    "method": "Reuse/update every recognized Occlusion settings input; create only when absent",
+    "freshAoImage": "platform-enclosure-floor-ao",
+    "materials": [
+      {
+        "material": "RailwayTrackBaseConcreteEnclosure13",
+        "existingSettingsGroups": 0,
+        "updatedSettingsGroups": 1,
+        "aoImage": "platform-enclosure-floor-ao",
+        "uvName": "BakedLightingUV",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      },
+      {
+        "material": "RailwayPlatformRubbedConcreteEnclosure13",
+        "existingSettingsGroups": 0,
+        "updatedSettingsGroups": 1,
+        "aoImage": "platform-enclosure-floor-ao",
+        "uvName": "BakedLightingUV",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      },
+      {
+        "material": "RailwayPlatformStippledGranolithicEnclosure13",
+        "existingSettingsGroups": 0,
+        "updatedSettingsGroups": 1,
+        "aoImage": "platform-enclosure-floor-ao",
+        "uvName": "BakedLightingUV",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      }
+    ]
+  },
+  "occluderMaterialIntegrity": {
+    "status": "PASS",
+    "primaryMaterialGraphsExactSinceInitialImport": true,
+    "primaryMaterialGraphsPackedImagesAndPropertiesExact": true,
+    "primaryAndOccluderMeshPointerIntersection": 0,
+    "primaryAndOccluderMaterialPointerIntersection": 0,
+    "cachedContextMaterialGraphsExact": true,
+    "cacheQualification": "Accepted normal-correct Phase11 prepared context, before transport. Far-away arrivals-gallery floor retains its calibrated neutral mean before the later concrete micro-normal/roughness binding. Fresh platform receiver PBR is authored separately and preserved."
+  }
+}

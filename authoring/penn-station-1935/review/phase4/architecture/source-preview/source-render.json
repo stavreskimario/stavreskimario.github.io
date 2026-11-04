@@ -1,0 +1,138 @@
+{
+  "kind": "Actual final Blender-source preview, not a browser screenshot; browser GI is baking separately",
+  "sourceScene": "penn-station-study.blend",
+  "sourceSceneSha256": "b036cfa82a3d7ab6d43e455f44b9a4c599b7586105ed9ac205c3bb448f690a19",
+  "materialHelperSha256": "e5ebbde29009f7f4e18da725f825e59f8d179c6574e72fac9a7e17268af86f08",
+  "device": {
+    "requested": "CPU",
+    "backend": "CPU",
+    "devices": [
+      "CPU"
+    ]
+  },
+  "samples": 32,
+  "resolution": [
+    1280,
+    900
+  ],
+  "viewTransform": "AgX / Medium High Contrast",
+  "exposureStops": 3.1,
+  "cameraBlenderWorld": [
+    8.0,
+    -37.0,
+    3.732800006866455
+  ],
+  "targetBlenderWorld": [
+    -2.0,
+    17.0,
+    19.732799530029297
+  ],
+  "lensMillimetres": 30,
+  "lighting": "Neutral dome strength0.55 and directional sun strength3.8 from vector95,-65,125; reconstructed daylight study, not a dated historic exposure",
+  "clearGlassShadowTreatment": "Camera-visible physical clear-glass shader retained; shadow rays pass the thin architectural panes. Opal globes retain their milky shader.",
+  "surfaces": [
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.5,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "file": "waiting-room-daylight.png",
+  "sha256": "9e082dd59b828dbdcda36d4f1f2883ee60a6c1a7cfba1d7d226b7e508c1c29a4",
+  "elapsedSeconds": 37.110680624999986
+}

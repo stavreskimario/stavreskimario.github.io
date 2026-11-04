@@ -1,0 +1,118 @@
+{
+  "scope": "CPU only: exact runtime collider bounds/BVH reconstructed from decoded delivered source geometry; actual new collision-query helper compared with original broad phase. Cardinal body/floor probes replay positions from prior34-leg real-input route. No complete native trace replay or end-to-end frame benchmark is implied.",
+  "created": "2026-11-01T22:07:14.354Z",
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "bytes": 5171505
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "sha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+      "bytes": 160991
+    }
+  ],
+  "trace": {
+    "sha256": "9c02cc5c8cf7c1a9102db126f72b0b0507f152b5b06328f849c775fb582b1ea6",
+    "cameraSamples": 1536
+  },
+  "colliders": 5025,
+  "cells": 2236,
+  "queries": 26112,
+  "oldCandidates": {
+    "sum": 155444,
+    "mean": 5.95297181372549,
+    "p50": 5,
+    "p95": 9,
+    "max": 67
+  },
+  "tightCandidates": {
+    "sum": 122820,
+    "mean": 4.703584558823529,
+    "p50": 4,
+    "p95": 7,
+    "max": 12
+  },
+  "independentRemovedBoxChecks": 32624,
+  "broadphaseTimings": [
+    {
+      "tight": false,
+      "ms": 6.114916999999878,
+      "count": 155444
+    },
+    {
+      "tight": true,
+      "ms": 5.843041000000085,
+      "count": 122820
+    },
+    {
+      "tight": false,
+      "ms": 7.091625000000022,
+      "count": 155444
+    },
+    {
+      "tight": true,
+      "ms": 5.703208999999788,
+      "count": 122820
+    },
+    {
+      "tight": false,
+      "ms": 5.85004200000003,
+      "count": 155444
+    },
+    {
+      "tight": true,
+      "ms": 5.5674159999998665,
+      "count": 122820
+    }
+  ],
+  "raycastComparison": {
+    "queries": 26112,
+    "hitQueries": 1535,
+    "hitCount": 1574,
+    "exactOriginalHitsAndOrder": true
+  },
+  "rayTimings": [
+    {
+      "tight": false,
+      "ms": 42.782250000000204,
+      "count": 1574
+    },
+    {
+      "tight": true,
+      "ms": 39.931082999999944,
+      "count": 1574
+    },
+    {
+      "tight": false,
+      "ms": 46.93083299999989,
+      "count": 1574
+    },
+    {
+      "tight": true,
+      "ms": 41.220208000000184,
+      "count": 1574
+    },
+    {
+      "tight": false,
+      "ms": 46.229041999999936,
+      "count": 1574
+    },
+    {
+      "tight": true,
+      "ms": 40.87875000000031,
+      "count": 1574
+    }
+  ]
+}

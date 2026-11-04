@@ -1,0 +1,286 @@
+{
+  "status": "PASS independent actual prepared floor minimum-direction density at planned4096 bake resolution",
+  "scene": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/independent-floor-prebake-scene.blend",
+    "sha256": "4540f65f8329d9ce677323d647bdc62eb0f344a90f585cd526888c55a3b0ce02"
+  },
+  "extraction": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/prepared-floor-loop-extraction.json",
+    "sha256": "2c15dad99adf506bdee2a73ff4de5413af4002150687a32fa734cc8eee71f36e"
+  },
+  "floorObject": "Continuity exact original floor receivers",
+  "lightUVLayer": "BakedLightingUV",
+  "plannedResolution": [
+    4096,
+    4096
+  ],
+  "requiredMinimumDirectionalPixelsPerMetre": 60,
+  "selector": "Actual copied preparedfloor mesh; independentlyrecomputed transformedgeometricworldnormalY>.95 inMain0glTF, Stippled family; no local-height selector",
+  "method": "Independent JS tangent-basis pixel UV Jacobian singular minimum and area density; Bpy only extracts actual frozen positions/UVs.600floortriangles, exactly24visibleupwardStippled tops.",
+  "summary": {
+    "visibleTopTriangles": 24,
+    "worldAreaM2": 795.1974609445169,
+    "minimumDirectionalPixelsPerMetre": 63.95999976333799,
+    "areaEquivalentPixelsPerMetre": 63.97760342732372,
+    "perPlatform": {
+      "P3": {
+        "triangles": 8,
+        "worldAreaM2": 258.78203488333384,
+        "minimumDirectionalPixelsPerMetre": 63.95999976333799
+      },
+      "P4": {
+        "triangles": 8,
+        "worldAreaM2": 260.8267562761466,
+        "minimumDirectionalPixelsPerMetre": 63.96002807481147
+      },
+      "P5": {
+        "triangles": 8,
+        "worldAreaM2": 275.5886697850365,
+        "minimumDirectionalPixelsPerMetre": 63.96002373956185
+      }
+    }
+  },
+  "triangles": [
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 60.8563023879542,
+      "minimumDirectionalPixelsPerMetre": 63.960040757803505,
+      "maximumDirectionalPixelsPerMetre": 63.99518481136317,
+      "areaEquivalentPixelsPerMetre": 63.97761037142569,
+      "actualPixelArea": 249093.03868716932
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 46.770788827416254,
+      "minimumDirectionalPixelsPerMetre": 63.96004293285825,
+      "maximumDirectionalPixelsPerMetre": 63.99493622507968,
+      "areaEquivalentPixelsPerMetre": 63.97748720012081,
+      "actualPixelArea": 191438.39824139606
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 38.3999211123446,
+      "minimumDirectionalPixelsPerMetre": 63.960046968791055,
+      "maximumDirectionalPixelsPerMetre": 63.995545769205165,
+      "areaEquivalentPixelsPerMetre": 63.97779390688444,
+      "actualPixelArea": 157176.94864691762
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 20.65316546492977,
+      "minimumDirectionalPixelsPerMetre": 63.96004087116961,
+      "maximumDirectionalPixelsPerMetre": 63.99475399154839,
+      "areaEquivalentPixelsPerMetre": 63.97739507701044,
+      "actualPixelArea": 84535.61780626171
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 8.506196209578775,
+      "minimumDirectionalPixelsPerMetre": 63.96002929774049,
+      "maximumDirectionalPixelsPerMetre": 63.994620572073465,
+      "areaEquivalentPixelsPerMetre": 63.977322597054695,
+      "actualPixelArea": 34816.6930486813
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 15.815390058065532,
+      "minimumDirectionalPixelsPerMetre": 63.95999976333799,
+      "maximumDirectionalPixelsPerMetre": 63.995326727780885,
+      "areaEquivalentPixelsPerMetre": 63.97766080721929,
+      "actualPixelArea": 64734.62278027291
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 44.074987011030316,
+      "minimumDirectionalPixelsPerMetre": 63.96003563952486,
+      "maximumDirectionalPixelsPerMetre": 63.99553909737188,
+      "areaEquivalentPixelsPerMetre": 63.97778490568825,
+      "actualPixelArea": 180405.83990951075
+    },
+    {
+      "platform": "P3",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 23.705283812014386,
+      "minimumDirectionalPixelsPerMetre": 63.960044672948364,
+      "maximumDirectionalPixelsPerMetre": 63.994923433140585,
+      "areaEquivalentPixelsPerMetre": 63.97748167617714,
+      "actualPixelArea": 97028.52769744498
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 36.1097167407861,
+      "minimumDirectionalPixelsPerMetre": 63.96006254174343,
+      "maximumDirectionalPixelsPerMetre": 63.99514498483733,
+      "areaEquivalentPixelsPerMetre": 63.977601358585915,
+      "actualPixelArea": 147801.89038607792
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 27.506559362562257,
+      "minimumDirectionalPixelsPerMetre": 63.96004001504359,
+      "maximumDirectionalPixelsPerMetre": 63.994870427241,
+      "areaEquivalentPixelsPerMetre": 63.977452850858825,
+      "actualPixelArea": 112587.49623714534
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 43.68500812363345,
+      "minimumDirectionalPixelsPerMetre": 63.9600468090332,
+      "maximumDirectionalPixelsPerMetre": 63.994694679375776,
+      "areaEquivalentPixelsPerMetre": 63.97736839869754,
+      "actualPixelArea": 178807.26695349588
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 29.53866949782241,
+      "minimumDirectionalPixelsPerMetre": 63.96003796457533,
+      "maximumDirectionalPixelsPerMetre": 63.99512841871924,
+      "areaEquivalentPixelsPerMetre": 63.97758078584369,
+      "actualPixelArea": 120905.63918889842
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 15.547061301214853,
+      "minimumDirectionalPixelsPerMetre": 63.96002807481147,
+      "maximumDirectionalPixelsPerMetre": 63.99504693223522,
+      "areaEquivalentPixelsPerMetre": 63.97753510752538,
+      "actualPixelArea": 63636.06526419833
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 22.992699255453772,
+      "minimumDirectionalPixelsPerMetre": 63.96005532811936,
+      "maximumDirectionalPixelsPerMetre": 63.9954445206145,
+      "areaEquivalentPixelsPerMetre": 63.97774747743231,
+      "actualPixelArea": 94112.61690418152
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 50.977419298607856,
+      "minimumDirectionalPixelsPerMetre": 63.96003184149555,
+      "maximumDirectionalPixelsPerMetre": 63.995206435474714,
+      "areaEquivalentPixelsPerMetre": 63.9776167211318,
+      "actualPixelArea": 208657.48163796024
+    },
+    {
+      "platform": "P4",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 34.469622696065926,
+      "minimumDirectionalPixelsPerMetre": 63.96005059717038,
+      "maximumDirectionalPixelsPerMetre": 63.9951176458942,
+      "areaEquivalentPixelsPerMetre": 63.97758171893702,
+      "actualPixelArea": 141088.67992651963
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 74.79736854467774,
+      "minimumDirectionalPixelsPerMetre": 63.960035289691035,
+      "maximumDirectionalPixelsPerMetre": 63.99523390583065,
+      "areaEquivalentPixelsPerMetre": 63.97763217710515,
+      "actualPixelArea": 306155.9080321283
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 59.415708736749366,
+      "minimumDirectionalPixelsPerMetre": 63.96004381659288,
+      "maximumDirectionalPixelsPerMetre": 63.99529414672581,
+      "areaEquivalentPixelsPerMetre": 63.977666553886856,
+      "actualPixelArea": 243196.9220575035
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 35.80665852082893,
+      "minimumDirectionalPixelsPerMetre": 63.960065838048074,
+      "maximumDirectionalPixelsPerMetre": 63.9953297317346,
+      "areaEquivalentPixelsPerMetre": 63.97769535525127,
+      "actualPixelArea": 146561.86330088976
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 19.258336127189978,
+      "minimumDirectionalPixelsPerMetre": 63.960051678307636,
+      "maximumDirectionalPixelsPerMetre": 63.99500490790874,
+      "areaEquivalentPixelsPerMetre": 63.97752590608201,
+      "actualPixelArea": 78826.75435624705
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 7.739140721358126,
+      "minimumDirectionalPixelsPerMetre": 63.96002373956185,
+      "maximumDirectionalPixelsPerMetre": 63.99478814611099,
+      "areaEquivalentPixelsPerMetre": 63.97740358152627,
+      "actualPixelArea": 31677.140107890682
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 14.389202343372745,
+      "minimumDirectionalPixelsPerMetre": 63.9600479359863,
+      "maximumDirectionalPixelsPerMetre": 63.99513525194718,
+      "areaEquivalentPixelsPerMetre": 63.97758918859376,
+      "actualPixelArea": 58896.90339175158
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 41.73525920115935,
+      "minimumDirectionalPixelsPerMetre": 63.96004264841169,
+      "maximumDirectionalPixelsPerMetre": 63.99519989424154,
+      "areaEquivalentPixelsPerMetre": 63.97761885635725,
+      "actualPixelArea": 170828.07999140373
+    },
+    {
+      "platform": "P5",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14",
+      "normalUpDot": 1,
+      "worldAreaM2": 22.446995589700236,
+      "minimumDirectionalPixelsPerMetre": 63.960031127437276,
+      "maximumDirectionalPixelsPerMetre": 63.995604056385005,
+      "areaEquivalentPixelsPerMetre": 63.97781511950479,
+      "actualPixelArea": 91879.16304205265
+    }
+  ],
+  "qualification": "This gates actual frozen preparedUVs BEFOREGPU; it does not approve yet-unbaked images. Finalraw/encoded density andsource P/N/materialUV0 preservation remain required. No scene/source modified."
+}

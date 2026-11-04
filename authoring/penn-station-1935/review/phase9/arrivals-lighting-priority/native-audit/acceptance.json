@@ -1,0 +1,985 @@
+{
+  "schema": 1,
+  "status": "PASS: bounded native arrivals navigation and tested-asset identity; network caveat retained",
+  "auditedReportSha256": "caa2768abf0fdef3b69285a2c061466b13a8cf1e4342019009fed889332e806e",
+  "servedFileIndependentRehashSha256": "b5a7a43a06b7e119a79c35c4ef33709d23768b8c24a8ec9d999f30c9d2fdc75e",
+  "servedFileIndependentRehashTimeUtc": "2026-11-02T03:04:54.586563+00:00",
+  "servedFileCount": 81,
+  "all12InputModelsPinned": true,
+  "productionBundleSha256": "5b9726ba469fa2904f36361a9fcec55ea3ad3947d9a27f05555b07b553a051dd",
+  "fullConcourseSha256": "c74aa5be856e72689b8e62694fe0715a2edb736ab518dbd3c96e4e8fc2cb9673",
+  "nativeRenderer": "WebGL 2 / Chrome 156.0.8078.74",
+  "nativeLegsPassed": 34,
+  "routeTraceAndEndSnapshots": 1626,
+  "allPresetRouteSnapshotsInspected": 1631,
+  "sixZonesRemainVisibleWithSameSceneAndZoneIds": true,
+  "inputActions": {
+    "pointer-drag": 62,
+    "keyboard": 1558
+  },
+  "arrivalsOrbitWalkModeAndXzRestorePassed": true,
+  "immediatePostToggleCameraDeltaFromWalkPresetM": [
+    0,
+    0.120000000000001,
+    0
+  ],
+  "settledArrivalEyeHeightAfterModeToggleProven": false,
+  "actualPracticalLightsMatchedToGlowers": 4,
+  "actualLiveArrivalsAtlasMaterials": [
+    {
+      "material": "TravertineArrivalsStairStone",
+      "actualEncodedAndLiveAtlasChannel": 1,
+      "aoDimensions": [
+        2048,
+        2048
+      ],
+      "lightDimensions": [
+        4096,
+        4096
+      ],
+      "actualSkyScale": 2,
+      "flipY": false
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsRetainedNorth",
+      "actualEncodedAndLiveAtlasChannel": 1,
+      "aoDimensions": [
+        2048,
+        2048
+      ],
+      "lightDimensions": [
+        4096,
+        4096
+      ],
+      "actualSkyScale": 2,
+      "flipY": false
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsConcrete",
+      "actualEncodedAndLiveAtlasChannel": 0,
+      "aoDimensions": [
+        2048,
+        2048
+      ],
+      "lightDimensions": [
+        4096,
+        4096
+      ],
+      "actualSkyScale": 2,
+      "flipY": false
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsUpperSupports",
+      "actualEncodedAndLiveAtlasChannel": 0,
+      "aoDimensions": [
+        2048,
+        2048
+      ],
+      "lightDimensions": [
+        4096,
+        4096
+      ],
+      "actualSkyScale": 2,
+      "flipY": false
+    }
+  ],
+  "phases": [
+    {
+      "label": "main-east-approach",
+      "traceSnapshots": 52,
+      "terminalDistanceM": 0.022525701548190113,
+      "pass": true
+    },
+    {
+      "label": "main-p5-court",
+      "traceSnapshots": 62,
+      "terminalDistanceM": 0.02609809533691242,
+      "pass": true
+    },
+    {
+      "label": "p5-departure-down",
+      "traceSnapshots": 81,
+      "terminalDistanceM": 0.010282052844689207,
+      "pass": true
+    },
+    {
+      "label": "departure-foot-north-detour",
+      "traceSnapshots": 9,
+      "terminalDistanceM": 0.03940068901609346,
+      "pass": true
+    },
+    {
+      "label": "platform-west-toward-arrival",
+      "traceSnapshots": 51,
+      "terminalDistanceM": 0.020157790901511673,
+      "pass": true
+    },
+    {
+      "label": "east-arrival-foot-alignment",
+      "traceSnapshots": 13,
+      "terminalDistanceM": 0.05171957305901592,
+      "pass": true
+    },
+    {
+      "label": "east-arrival-up-to-exit",
+      "traceSnapshots": 39,
+      "terminalDistanceM": 0.00014917323734850373,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle",
+      "traceSnapshots": 12,
+      "terminalDistanceM": 0.022913298007963122,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-north-1",
+      "traceSnapshots": 50,
+      "terminalDistanceM": 0.049478302236580333,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-north-2",
+      "traceSnapshots": 47,
+      "terminalDistanceM": 0.03384894856555719,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-north-3",
+      "traceSnapshots": 52,
+      "terminalDistanceM": 0.00612981712910438,
+      "pass": true
+    },
+    {
+      "label": "exit-north-cross-aisle",
+      "traceSnapshots": 36,
+      "terminalDistanceM": 0.011411407795446494,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-1",
+      "traceSnapshots": 58,
+      "terminalDistanceM": 0.01578683645975353,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-2",
+      "traceSnapshots": 57,
+      "terminalDistanceM": 0.0617691462612318,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-3",
+      "traceSnapshots": 59,
+      "terminalDistanceM": 0.035584744534783344,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-4",
+      "traceSnapshots": 57,
+      "terminalDistanceM": 0.008463451600088549,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-5",
+      "traceSnapshots": 59,
+      "terminalDistanceM": 0.03489618246828157,
+      "pass": true
+    },
+    {
+      "label": "exit-west-aisle-south-6",
+      "traceSnapshots": 60,
+      "terminalDistanceM": 0.031003825442908715,
+      "pass": true
+    },
+    {
+      "label": "exit-south-cross-aisle",
+      "traceSnapshots": 35,
+      "terminalDistanceM": 0.04899078085924853,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-return-p5-1",
+      "traceSnapshots": 52,
+      "terminalDistanceM": 0.05630649959455605,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-return-p5-2",
+      "traceSnapshots": 51,
+      "terminalDistanceM": 0.028142509012895247,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-return-p5-3",
+      "traceSnapshots": 52,
+      "terminalDistanceM": 0.025360877304345116,
+      "pass": true
+    },
+    {
+      "label": "exit-east-aisle-return-p5-4",
+      "traceSnapshots": 55,
+      "terminalDistanceM": 0.016219314273493407,
+      "pass": true
+    },
+    {
+      "label": "exit-p5-clear-of-lift-crossing",
+      "traceSnapshots": 33,
+      "terminalDistanceM": 0.018571618258676217,
+      "pass": true
+    },
+    {
+      "label": "west-arrival-head-alignment",
+      "traceSnapshots": 15,
+      "terminalDistanceM": 0.03870270975627641,
+      "pass": true
+    },
+    {
+      "label": "west-arrival-down-platform",
+      "traceSnapshots": 46,
+      "terminalDistanceM": 0.03271596787426853,
+      "pass": true
+    },
+    {
+      "label": "west-arrival-foot-north-detour",
+      "traceSnapshots": 14,
+      "terminalDistanceM": 0.005085613280823924,
+      "pass": true
+    },
+    {
+      "label": "platform-east-return-bypass-stairs-1",
+      "traceSnapshots": 61,
+      "terminalDistanceM": 0.014888401786906445,
+      "pass": true
+    },
+    {
+      "label": "platform-east-return-bypass-stairs-2",
+      "traceSnapshots": 59,
+      "terminalDistanceM": 0.01402817522048173,
+      "pass": true
+    },
+    {
+      "label": "platform-east-return-bypass-stairs-3",
+      "traceSnapshots": 59,
+      "terminalDistanceM": 0.051291957918429894,
+      "pass": true
+    },
+    {
+      "label": "p5-departure-foot-return",
+      "traceSnapshots": 11,
+      "terminalDistanceM": 0.040710739898140995,
+      "pass": true
+    },
+    {
+      "label": "p5-departure-up-main",
+      "traceSnapshots": 80,
+      "terminalDistanceM": 0.03167255366686291,
+      "pass": true
+    },
+    {
+      "label": "main-original-row",
+      "traceSnapshots": 63,
+      "terminalDistanceM": 0.004159536857017062,
+      "pass": true
+    },
+    {
+      "label": "main-native-return",
+      "traceSnapshots": 52,
+      "terminalDistanceM": 0.018103679998382746,
+      "pass": true
+    }
+  ],
+  "roundtripTerminalDistanceM": 0.018103679998382746,
+  "pageErrors": 0,
+  "serverErrors": 0,
+  "consoleFontBlockedErrors": 1,
+  "intentionallyBlockedFontRequests": 1,
+  "localAbortedRequests": 22,
+  "allAbortedLocalResourcesServedPinnedBytes": true,
+  "all21AbortedTexturesBindLoadedFullModelMaterials": true,
+  "abortedLocalResources": [
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/sky.hdr?revision=9-arcade-lighting-1",
+      "filename": "sky.hdr",
+      "independentServedSha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+      "filename": "206a10b6a2d3fbbd05a1.ktx2",
+      "independentServedSha256": "206a10b6a2d3fbbd05a14cd2efc6c583322a78f751d7f120da78c61071998e0f",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-platform.glb.gz",
+          "material": "RailwayPlatformStippledGranolithicPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+      "filename": "e31619f2b2a7a5ba20dd.ktx2",
+      "independentServedSha256": "e31619f2b2a7a5ba20dd0bda7a06cd1e2530fef0c20aadd946fae3d80572ae7f",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-platform.glb.gz",
+          "material": "RailwayPlatformStippledGranolithicPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+      "filename": "f46d86be9b939ee4beec.ktx2",
+      "independentServedSha256": "f46d86be9b939ee4beec53472e40cd7b115b201aeb0f4a744edf7a290c821f4b",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-platform.glb.gz",
+          "material": "RailwayPlatformStippledGranolithicPhase9",
+          "role": "normalTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "filename": "abfa7b3cab7953a6a5ae.ktx2",
+      "independentServedSha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "PublicFloorMarbleArcadeRecessBearingPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "BotticinoMarble",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleAccessInfill",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleArrivalsRetainedNorth",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "filename": "c7f8f448d11f12484907.ktx2",
+      "independentServedSha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "MilfordGranite",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "MilfordGranite",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "filename": "f20239dbf2c1e548d747.ktx2",
+      "independentServedSha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "MilfordGranite",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "MilfordGraniteArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "MilfordGranite",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "filename": "4ad8c3e9c3cab52c1b64.ktx2",
+      "independentServedSha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "PublicFloorMarbleArcadeRecessBearingPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "BotticinoMarble",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleAccessInfill",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleArrivalsRetainedNorth",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "filename": "4f684d7c526a22f95162.ktx2",
+      "independentServedSha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineArcadeCastComposition",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar-2ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar-1ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar0ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar1ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar2ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineDepartureStairStone",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineArrivalsStairStone",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "filename": "71508f85f3c325538f05.ktx2",
+      "independentServedSha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineArcadeCastComposition",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar-2ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar-1ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar0ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar1ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "TravertineAshlar2ArcadeRepairPhase9",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineDepartureStairStone",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineArrivalsStairStone",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/b4a5b7165636466257b3.ktx2",
+      "filename": "b4a5b7165636466257b3.ktx2",
+      "independentServedSha256": "b4a5b7165636466257b3b5be471c62f8b017b285012c020f9f0792b79c6f3dbd",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "PublicFloorMarbleArcadeRecessBearingPhase9",
+          "role": "normalTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleArrivalsRetainedNorth",
+          "role": "normalTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/9af10c675e67054369ce.ktx2",
+      "filename": "9af10c675e67054369ce.ktx2",
+      "independentServedSha256": "9af10c675e67054369cec80e5046f905d7c03dddc28fd54d49c4d0a2b819e7f1",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarble",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "CofferRecess",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "MilfordGranite",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "Travertine",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PaleVaultPlaster",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourse",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "ConcourseUnmodelledOfficeBacking",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+      "filename": "1e3fdca78d540b4c4a2d.ktx2",
+      "independentServedSha256": "1e3fdca78d540b4c4a2d75bcd145bbb37c3b7e1a320b9574ead0b4b08266db10",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "MilfordGraniteArcadeRepairPhase9",
+          "role": "normalTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "filename": "c7670262d7c33cc39671.ktx2",
+      "independentServedSha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-exterior.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "Travertine",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "filename": "54c4b6193c2de4abdc13.ktx2",
+      "independentServedSha256": "54c4b6193c2de4abdc13391211c34050812afbc2c482e7cfd5303b7d46eac331",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourse",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourseCirculation",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "filename": "7be11436c1b7fe0e5ab7.ktx2",
+      "independentServedSha256": "7be11436c1b7fe0e5ab786e16390559b43425abb178c8bc9ac5305ff0f5da37c",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourse",
+          "role": "normalTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourseCirculation",
+          "role": "normalTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "filename": "0f399333f7175f5e5afa.ktx2",
+      "independentServedSha256": "0f399333f7175f5e5afa242c687131ea51951076a896d13ad3e5604f6a58c3d6",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineDepartureStairStone",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "ConcourseOpaqueCirculationConcreteAccessInfill",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleAccessInfill",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "filename": "9dd19af74e513b23a448.ktx2",
+      "independentServedSha256": "9dd19af74e513b23a448e456cbb65f6c62d9585ea5801371dc39d8a9951b51c5",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "BedfordLimestoneConcourseCirculation",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/5ac4f28aafa1a2c0c811.ktx2",
+      "filename": "5ac4f28aafa1a2c0c811.ktx2",
+      "independentServedSha256": "5ac4f28aafa1a2c0c81115a0d2f63b7f0e7226103a3c42448f133b0c45cdb806",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "TravertineArrivalsStairStone",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "PublicFloorMarbleArrivalsRetainedNorth",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "ConcourseOpaqueArrivalsConcrete",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        },
+        {
+          "zoneModel": "model-concourse.glb.gz",
+          "material": "ConcourseOpaqueArrivalsUpperSupports",
+          "role": "occlusionTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": true,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "filename": "e0cadb7862053a61b888.ktx2",
+      "independentServedSha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "InteriorGranite",
+          "role": "pbrMetallicRoughness.baseColorTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "filename": "02474452a0e7a2da0cfb.ktx2",
+      "independentServedSha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "InteriorGranite",
+          "role": "pbrMetallicRoughness.metallicRoughnessTexture",
+          "texCoord": 0
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    },
+    {
+      "url": "http://127.0.0.1:61859/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "filename": "08b0fe03227cf7eec1cc.ktx2",
+      "independentServedSha256": "08b0fe03227cf7eec1cc85b80e1fe6779cb7712ac14b751b05e0d35c47090113",
+      "serverServedPinnedBytes": true,
+      "loadedModelMaterialBindings": [
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "InteriorGranite",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        },
+        {
+          "zoneModel": "model-waiting-room.glb.gz",
+          "material": "Travertine",
+          "role": "occlusionTexture",
+          "texCoord": 1
+        }
+      ],
+      "directLiveBindingProven": false,
+      "qualification": "Server byte receipt and loaded model references do not independently prove eventual completion of each specific aborted browser request; request timestamps/retry completion events are absent."
+    }
+  ],
+  "runtimePhysicalLinkSha256": "b81e5c9de247073319f511bfac8edc66923bca9830852e9d9d0af831aca9c318",
+  "physicalSummarySha256": "66a7bb6a392903997b80045bad1b09ad80efa8211ef5ef1e815c44851797f13e",
+  "harnessSourceSha256": "e0838d1a0e05a3b8322b93ddca879cbb944afd721dad6e487a0d33297cf3c902",
+  "browserClosedAtUtc": "2026-11-02T03:03:32.295Z",
+  "browserClosed": true,
+  "limits": [
+    "Independent after-close source-file rehash is separate from the harness, which cached first-served bytes and did not rehashatclose.",
+    "This audit inspected existing native-input evidence and read-only scene-light inspection; it did not launch a browser/GPU or write root.",
+    "The22localERR_ABORTED events remain qualified: all expected bytes were served and their textures are referenced by loaded models, but per-request retry completion and timing were not recorded. Only the freshARRAO has explicit live dimensions/channel evidence in this report.",
+    "The immediate Orbit\u2192Walk snapshot restoresX/Zbut has+0.12mY, matching the orbit/walk preset height difference. The driver did not wait for settled arrivalYbefore selectingMain; exact arrival eye-height restoration is not proven by this receipt.",
+    "No new zero-network-failure, FPS, performance, physical-device/mobile, complete1935inventory, full historical accuracy or completed-arrivals claim.",
+    "Native balanced quality actually served the full six models; fallback variants are linked to prior decoded physical acceptance, not separately browsed in this run."
+  ],
+  "generatorSha256": "ab0d184376894ed492f7abc7e90cfb4cb0924768e13c8500c8fac3f75ef833c5"
+}

@@ -1,0 +1,11 @@
+{
+  "engine": "4.3.0",
+  "worldRadiance": 1,
+  "surfaceAlbedo": 0.5,
+  "bakeColourPass": false,
+  "measuredBakeMean": 0.9999864101409912,
+  "expectedHemisphereIrradiance": 3.141592653589793,
+  "conversionToThreeLightMap": 3.141592653589793,
+  "explanation": "Cycles lighting-only diffuse bake is unit-albedo outgoing radiance. Three.js lightMap enters Lambert irradiance, so multiply the decoded map by pi.",
+  "passed": true
+}

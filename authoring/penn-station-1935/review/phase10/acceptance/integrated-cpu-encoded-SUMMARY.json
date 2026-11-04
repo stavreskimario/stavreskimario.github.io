@@ -1,0 +1,136 @@
+{
+  "status": "PASS actual encoded module plus retained full/low scene geometry, outward and return physical paths",
+  "runs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-encoded-full-forward-v1/route-check.json",
+      "sha256": "a11ed3677f252fd4afe74312292efdf8f5e7d5f9bf8eae9e61680ae90a5efb6d",
+      "variant": "full",
+      "direction": "forward",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 5,
+        "i": 115,
+        "x": -3.2,
+        "z": -85.24725308641976,
+        "floor": -2.0383381843566895,
+        "owner": "concourse-exits baked static architecture",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-encoded-full-reverse-v1/route-check.json",
+      "sha256": "d661382c5973231a13239a7cd18fb3a30a244457615ce39faaa09917cd6333da",
+      "variant": "full",
+      "direction": "reverse",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 3,
+        "i": 47,
+        "x": -3.2,
+        "z": -85.24725308641975,
+        "floor": -2.0383381843566895,
+        "owner": "concourse-exits baked static architecture",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-encoded-low-forward-v1/route-check.json",
+      "sha256": "4860ece6113c4437d2ee2ce4ba2ad536ce968a6dc3c915df2c06b96519d7915c",
+      "variant": "low",
+      "direction": "forward",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 5,
+        "i": 115,
+        "x": -3.2,
+        "z": -85.24725308641976,
+        "floor": -2.0383381843566895,
+        "owner": "concourse-exits baked static architecture",
+        "headroom": 1.885793149471283
+      }
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/integrated-cpu-encoded-low-reverse-v1/route-check.json",
+      "sha256": "0e2018c291050f997486620ea3bc3e52d1e7599f1ebf546bc46af5371552c293",
+      "variant": "low",
+      "direction": "reverse",
+      "samples": 1563,
+      "minimumHeadroomM": 1.885793149471283,
+      "minimumHeadroomSample": {
+        "leg": 3,
+        "i": 47,
+        "x": -3.2,
+        "z": -85.24725308641975,
+        "floor": -2.0383381843566895,
+        "owner": "concourse-exits baked static architecture",
+        "headroom": 1.885793149471283
+      }
+    }
+  ],
+  "totalSamples": 6252,
+  "allInputsRehashedAfterRuns": true,
+  "inputs": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package/model-concourse.glb": {
+      "bytes": 906188,
+      "sha256": "5c81e6efd8d5985c64f9275912c7207c0b290a145ee0cb31530dddfea57af716"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse.glb.gz": {
+      "bytes": 6698444,
+      "sha256": "45da359a564f02c599961807662bd8e6d14d3bdc9bf1d032261955cb37c6cefe"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz": {
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context.glb.gz": {
+      "bytes": 506131,
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/package/model-concourse-low.glb": {
+      "bytes": 906188,
+      "sha256": "1a092be64b1ffb662b7a4008a3900be4ddace81d216a072af459a27571a22ad0"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse-low.glb.gz": {
+      "bytes": 6388181,
+      "sha256": "e6f15fb4d5ea04501f320894e5216bac959b2e563a6c8f17bd91800f4d3ce8dd"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz": {
+      "bytes": 240418,
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context-low.glb.gz": {
+      "bytes": 686636,
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+    }
+  },
+  "script": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/check-integrated-encoded-route.mjs",
+    "sha256": "7979efffafe6beae9b778d2aaabc1bd454357c4c4ca2ffc8f31f1eec86a3153c"
+  },
+  "minimumHeadroomM": 1.885793149471283,
+  "gates": {
+    "sampleStepM": 0.08,
+    "floorRayStartAboveFeetM": 0.25,
+    "floorRayLengthM": 0.65,
+    "maximumRiseM": 0.24,
+    "maximumDropM": 0.35,
+    "minimumHeadroomM": 1.85,
+    "horizontalRayHeightsM": [
+      0.35,
+      0.55,
+      1,
+      1.6
+    ],
+    "horizontalSweepM": 0.4
+  },
+  "contextPolicy": "Actual opaque CitySidewalkStone/DarkGraniteCurb/PeriodAsphaltRoadSurface supply collision/support; other context/trains excluded. No analytic floor or duplicate receiver.",
+  "qualifications": [
+    "Automated CPU physical route checks only; not a native browser walk or rendered-load verification. User explicitly deferred browser WASD walkthrough.",
+    "Actual assembled append must preserve tested module/base transformations and attributes; complete app load/asset validation remain root gates.",
+    "Opening-era route/layout evidence, inferred44riser schedule/landing registration/sections retain source qualifications.",
+    "Centreline route is checked in both directions throughall10waypoints; not whole-station or structural-capacity certification."
+  ]
+}

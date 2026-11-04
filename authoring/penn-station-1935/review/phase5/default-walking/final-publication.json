@@ -1,0 +1,217 @@
+{
+  "checkpoint": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+  "checkedAt": "2026-10-30T00:53:15.953Z",
+  "scope": "Actual published Pages checkpoint: fresh default walking, human street eye height, Enter Station focus and supported real keyboard input. Immutable cd6d06c bytes supply expectations independently of later local candidate promotion. No FPS or throughput measurement.",
+  "passed": true,
+  "live": {
+    "url": "https://stavreskimario.github.io/penn-station-1935/",
+    "browser": "156.0.8078.74",
+    "driver": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)"
+    },
+    "bundleSha256": "2a925da8a33ad307e0a9014641a74f08871f1446b2da43cffe5cb2e55c6aa581",
+    "models": [
+      {
+        "file": "model-exterior.glb.gz",
+        "decodedSha256": "69e506de4c2c35e540ca2bd3b6a869ed89d48cf1059d119bfb95923e28efc2e9"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "decodedSha256": "79ec5eaa6672ae75deb67fd591247eaa112a8e6555329d139b79669f16c40317"
+      },
+      {
+        "file": "model-concourse.glb.gz",
+        "decodedSha256": "2d4ac7520a86510baf26482b2f9fec1468f6a806cac22dea960019471d8cca9e"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979"
+      }
+    ],
+    "modelsRemainFloorCheckpoint4218962": true,
+    "beforeEnter": {
+      "mode": "walk",
+      "entered": false,
+      "camera": {
+        "position": [
+          124,
+          1.68,
+          0
+        ],
+        "quaternion": [
+          0,
+          0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "fov": 50
+      }
+    },
+    "afterEnter": {
+      "mode": "walk",
+      "entered": true,
+      "camera": {
+        "position": [
+          124,
+          1.68,
+          0
+        ],
+        "quaternion": [
+          0,
+          0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "fov": 50
+      },
+      "streetFloor": 0,
+      "colliders": 5009
+    },
+    "realWalk": {
+      "key": "W",
+      "start": [
+        124,
+        1.68,
+        0
+      ],
+      "end": [
+        122.8516652281877,
+        1.6799999999999997,
+        0
+      ],
+      "distanceMetres": 1.1483347718123014,
+      "eyeHeight": 1.6799999999999997,
+      "streetFloor": 0,
+      "collisionSupportQueries": 300,
+      "renderFrameBefore": 176,
+      "renderFrameAfter": 228
+    },
+    "checks": [
+      "Fresh default Walk, street support/eye height, actual WASD and drag, preserved viewpoint mode, Walk reset and explicit cinematic tour"
+    ],
+    "pageErrors": [],
+    "resourceFailures": [],
+    "sourceReportSha256": "1f0f9e9e46e578d806b00d4a2c800db3a8aab69a6274d56323c2476238cf6e22",
+    "testSourceSha256": "b8b79efc088e1195ae01b00d813eba1d7fe8a375132562b55de35ae4d045e683",
+    "sourceReport": "default-walk-live/report.json"
+  },
+  "checks": [
+    {
+      "id": 123824603571,
+      "name": "report-build-status",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982091412/job/123824603571"
+    },
+    {
+      "id": 123824603563,
+      "name": "deploy",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982091412/job/123824603563"
+    },
+    {
+      "id": 123824597114,
+      "name": "CodeQL",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/runs/123824597114"
+    },
+    {
+      "id": 123824355612,
+      "name": "check",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982100256/job/123824355612"
+    },
+    {
+      "id": 123824354588,
+      "name": "Analyze (python)",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982098995/job/123824354588"
+    },
+    {
+      "id": 123824354559,
+      "name": "Analyze (actions)",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982098995/job/123824354559"
+    },
+    {
+      "id": 123824354340,
+      "name": "Analyze (javascript-typescript)",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982098995/job/123824354340"
+    },
+    {
+      "id": 123824330044,
+      "name": "build",
+      "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982091412/job/123824330044"
+    }
+  ],
+  "pages": {
+    "runId": 40982091412,
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/40982091412",
+    "jobs": [
+      {
+        "id": 123824330044,
+        "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123824603563,
+        "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123824603571,
+        "head_sha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+        "name": "report-build-status",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "pullRequest": {
+    "url": "https://github.com/stavreskimario/stavreskimario.github.io/pull/11",
+    "head": "feature/penn-station-1935-reconstruction",
+    "headSha": "cd6d06cc1e65fae90d4461b17388c2ccf12aebb9",
+    "base": "main",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergedAt": null,
+    "checkedAt": "2026-10-30T00:52:48.720Z"
+  },
+  "hosting": "Existing feature-branch/root Pages configuration retained; no settings changed and no pull request merged by this verification.",
+  "limitations": [
+    "Actual desktop Chrome/Metal only; no physical-phone coverage added.",
+    "Functional/hash checks do not certify every navigation route or final Phase5 visual assets.",
+    "No performance claim: other bounded authoring/comparison work may overlap."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "scope": "CPU reconstruction of the exact captured optimized V3 room: all opaque/window materials, actual material culling, nearest triangle across every room primitive; native halfCSS-pixel grid over5noisy windows",
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/merged-runtime-v3/model-waiting-room.glb",
+  "sourceSha256": "f7abd61e4136bb3516ebf523807b566b0c1d00056ec7e325bd328bdbcbef0ab3",
+  "capturedResponseHashMatches": true,
+  "camera": {
+    "position": [
+      8,
+      3.732800000000001,
+      37
+    ],
+    "quaternion": [
+      0.14068191942738867,
+      0.09051058880350103,
+      -0.012916300639636422,
+      0.9858243251403649
+    ],
+    "fov": 50
+  },
+  "windows": [
+    {
+      "label": "upper-left-coffer-band",
+      "centreScreenCSS": [
+        590,
+        150
+      ],
+      "sampleCount": 169,
+      "closestMaterialCounts": {
+        "PaleVaultPlaster": 169
+      },
+      "centreClosestHit": {
+        "screen": [
+          590,
+          150
+        ],
+        "node": 9,
+        "primitive": 0,
+        "material": "PaleVaultPlaster",
+        "skyFile": "lighting-waiting-room-vault-sky.webp",
+        "atlasChannel": 0,
+        "literalControlReplaced": true,
+        "hasAo": true,
+        "hasNormal": false,
+        "world": [
+          -3.3600125502908647,
+          38.97941781864357,
+          -7.455878509810304
+        ],
+        "uv": [
+          0.42795667062080195,
+          0.07292129644345795
+        ],
+        "distance": 57.859304237739515,
+        "face": 71434,
+        "nextDifferentMaterial": null
+      }
+    },
+    {
+      "label": "central-coffer-band",
+      "centreScreenCSS": [
+        635,
+        205
+      ],
+      "sampleCount": 169,
+      "closestMaterialCounts": {
+        "PaleVaultPlaster": 143,
+        "Travertine": 26
+      },
+      "centreClosestHit": {
+        "screen": [
+          635,
+          205
+        ],
+        "node": 9,
+        "primitive": 0,
+        "material": "PaleVaultPlaster",
+        "skyFile": "lighting-waiting-room-vault-sky.webp",
+        "atlasChannel": 0,
+        "literalControlReplaced": true,
+        "hasAo": true,
+        "hasNormal": false,
+        "world": [
+          -1.6856306648417387,
+          38.90845423545433,
+          -13.445929792414049
+        ],
+        "uv": [
+          0.02476570852867811,
+          0.025801572839436217
+        ],
+        "distance": 62.25696687832717,
+        "face": 81139,
+        "nextDifferentMaterial": "Travertine"
+      }
+    },
+    {
+      "label": "rib-intersection-window",
+      "centreScreenCSS": [
+        645,
+        205
+      ],
+      "sampleCount": 169,
+      "closestMaterialCounts": {
+        "PaleVaultPlaster": 76,
+        "Travertine": 93
+      },
+      "centreClosestHit": {
+        "screen": [
+          645,
+          205
+        ],
+        "node": 9,
+        "primitive": 0,
+        "material": "PaleVaultPlaster",
+        "skyFile": "lighting-waiting-room-vault-sky.webp",
+        "atlasChannel": 0,
+        "literalControlReplaced": true,
+        "hasAo": true,
+        "hasNormal": false,
+        "world": [
+          -1.038889505321265,
+          38.978816905882255,
+          -13.670192677715562
+        ],
+        "uv": [
+          0.9080631978307644,
+          0.40200896261084146
+        ],
+        "distance": 62.381500921474824,
+        "face": 81483,
+        "nextDifferentMaterial": "Travertine"
+      }
+    },
+    {
+      "label": "lower-central-coffer-band",
+      "centreScreenCSS": [
+        635,
+        230
+      ],
+      "sampleCount": 169,
+      "closestMaterialCounts": {
+        "PaleVaultPlaster": 169
+      },
+      "centreClosestHit": {
+        "screen": [
+          635,
+          230
+        ],
+        "node": 9,
+        "primitive": 0,
+        "material": "PaleVaultPlaster",
+        "skyFile": "lighting-waiting-room-vault-sky.webp",
+        "atlasChannel": 0,
+        "literalControlReplaced": true,
+        "hasAo": true,
+        "hasNormal": false,
+        "world": [
+          -2.3219545768032095,
+          39.175032309523516,
+          -16.77754252955946
+        ],
+        "uv": [
+          0.4340847934995381,
+          0.08095782271326318
+        ],
+        "distance": 65.22820446621537,
+        "face": 87258,
+        "nextDifferentMaterial": null
+      }
+    },
+    {
+      "label": "left-haunch-coffer-band",
+      "centreScreenCSS": [
+        510,
+        330
+      ],
+      "sampleCount": 169,
+      "closestMaterialCounts": {
+        "PaleVaultPlaster": 169
+      },
+      "centreClosestHit": {
+        "screen": [
+          510,
+          330
+        ],
+        "node": 9,
+        "primitive": 0,
+        "material": "PaleVaultPlaster",
+        "skyFile": "lighting-waiting-room-vault-sky.webp",
+        "atlasChannel": 0,
+        "literalControlReplaced": true,
+        "hasAo": true,
+        "hasNormal": false,
+        "world": [
+          -15.93985997555344,
+          38.89298428863623,
+          -29.562509257177226
+        ],
+        "uv": [
+          0.7754094494468634,
+          0.9957419546080359
+        ],
+        "distance": 78.99318384184657,
+        "face": 103742,
+        "nextDifferentMaterial": null
+      }
+    }
+  ],
+  "totalPaleVaultPlaster": 726,
+  "totalTravertine": 119,
+  "attribution": "Only PaleVaultPlaster was changed to MeshBasic in previous literal controls. Travertine and all other material names remained standard-lit.",
+  "qualification": "The three all-Pale windows are genuinely isolated by the Pale-only literal control. The mixed rib window is not a Travertine GI-only control."
+}

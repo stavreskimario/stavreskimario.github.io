@@ -1,0 +1,25 @@
+{
+  "zone": "concourse",
+  "source": "model-concourse.glb",
+  "resolution": 2048,
+  "samples": 64,
+  "engine": "4.3.0 Cycles CPU",
+  "atlasSurfaceArea": 0.04150427505373955,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked; adjacent city occluders not included",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.14379915595054626,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.8244389295578003,
+    "mean": 0.1671101152896881,
+    "coveredPixels": 1660895
+  },
+  "elapsedSeconds": 29.816953250032384,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-concourse.glb"
+}

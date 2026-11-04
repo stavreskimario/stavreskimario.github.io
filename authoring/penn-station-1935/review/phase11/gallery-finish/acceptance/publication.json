@@ -1,0 +1,115 @@
+{
+  "status": "PASS actual public response bodies",
+  "visualCommit": "e8315ae5b563d3281fc9668f4a9b9d3c0bd4be29",
+  "checkedUTC": "2026-11-03T22:59:00.874628+00:00",
+  "pagesRun": 41734903984,
+  "siteChecksRun": 41734920478,
+  "scope": "Public HTML/bundle/full+fallback models/GI/provenance and all eight new KTX bodies. Local native static mounting and physical checks are separate. No native public browser or walking walkthrough claimed.",
+  "responses": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 19033,
+      "sha256": "88345e5e31dd0a2034d14bf5e71cf832f22c80e31d563a5e82fab04ea7a3ba02",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "dist/app.js",
+      "status": 200,
+      "bytes": 1047293,
+      "sha256": "905d943d3197b0154cd210bef5cbf601b42060731eb3aa31d80a37ada5172c8a",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "status": 200,
+      "bytes": 6959153,
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/model-concourse-low.glb.gz",
+      "status": 200,
+      "bytes": 6648546,
+      "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/lighting-concourse-gallery-finish-sky.webp",
+      "status": 200,
+      "bytes": 1492568,
+      "sha256": "b5fc991bf757ee15349f86803728a5c11797b025aab7cd5836c3c16e7c4a7101",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/lighting-concourse-gallery-finish-sky-low.webp",
+      "status": 200,
+      "bytes": 51020,
+      "sha256": "c6e1e2d10323b089e4144424e9e945fb8f41089a895c36da9c5e9b6502a21d8c",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/lighting-concourse-gallery-finish-denoise.json",
+      "status": 200,
+      "bytes": 2634,
+      "sha256": "2191180964cb1c1e49ee6787e420766bb7c2a1c62c89d5303b0a8ccd7df11888",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/0aab5b4fc6e106416188.ktx2",
+      "status": 200,
+      "bytes": 2537314,
+      "sha256": "0aab5b4fc6e106416188220a65e26ff2748d44a499697bc6fe2dc15f31054bf1",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/74a8a5e6c4800f175503.ktx2",
+      "status": 200,
+      "bytes": 901739,
+      "sha256": "74a8a5e6c4800f175503074dbc1d0eb715938c8a853a0ea9ae871ba5d25958e3",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/8126d17f083801bd41b3.ktx2",
+      "status": 200,
+      "bytes": 1631539,
+      "sha256": "8126d17f083801bd41b3b8283fe82ab4c96f992017dfaaca463a9d5f5449c349",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/898482cc86badea310d6.ktx2",
+      "status": 200,
+      "bytes": 1724012,
+      "sha256": "898482cc86badea310d6bdfe55e74fb4ef3ce68d2f39988e1661e3d4829d6b7f",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/a9cda2cf99d2c1344daf.ktx2",
+      "status": 200,
+      "bytes": 89862,
+      "sha256": "a9cda2cf99d2c1344dafbfbd071656d68fcb1bbbc208c4d88d25fc1725420068",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/b590d654f0c91c88e11a.ktx2",
+      "status": 200,
+      "bytes": 150098,
+      "sha256": "b590d654f0c91c88e11a6286b768cf3607341c118185c31209d78abae1b41346",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/bf44157f1d9e719d5bd1.ktx2",
+      "status": 200,
+      "bytes": 106963,
+      "sha256": "bf44157f1d9e719d5bd188e8e0101e6050c8886a210af2708b5a8fb271b5d5e1",
+      "matchesCommittedRuntime": true
+    },
+    {
+      "file": "assets/textures/c10ccb6f6531eab32aa8.ktx2",
+      "status": 200,
+      "bytes": 102148,
+      "sha256": "c10ccb6f6531eab32aa8a7ac8cb143350c345e1c93441d5ac85ba9626cd0876f",
+      "matchesCommittedRuntime": true
+    }
+  ]
+}

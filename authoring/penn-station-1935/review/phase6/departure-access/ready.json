@@ -1,0 +1,49 @@
+{
+  "status": "FINAL IMMUTABLE RAW GEOMETRY; export workers closed; final body/browser/lighting acceptance remains with root/nav",
+  "module": {
+    "bytes": 13712952,
+    "sha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf"
+  },
+  "blend": {
+    "bytes": 72422578,
+    "sha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d"
+  },
+  "oldRemoval": {
+    "bytes": 3958388,
+    "sha256": "11866a4fa90280e2a777d50c500862a86475c05418a73ef88d08490ed411317e"
+  },
+  "retainedConcourse": {
+    "bytes": 55467716,
+    "sha256": "b326e3e3f80e10c3b7fcad233b938de861cb3bb4ea35fc480e3929320712acf5"
+  },
+  "retainedExterior": {
+    "sha256": "138684e4794b39eb740019fe194f5cc23837d9de1aab22e7978d1f193f7854ca",
+    "bytes": 34224196,
+    "coordinateContract": "ExteriorStreet/world0; copied exact from V3; unrelated exterior source objects exact"
+  },
+  "sourceSha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+  "recipeSha256": "1e9820c4d5ab3a6295d30dfd38ffe822b9da7099b253d212bcbcd403d18285fd",
+  "indicatorRegistration": {
+    "gateX": -48.4,
+    "indicatorX": -48.2,
+    "status": "Indicator placement interpreted independently; stair registration unchanged"
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "proof": {
+    "scope": "Actual raw V3/V4 GLB comparison; only interpreted indicator assemblies move east. Stair/gate registration remains fixed.",
+    "gateX": -48.4,
+    "indicatorX": -48.2,
+    "nonIndicatorPrimitivesExact": 1904,
+    "indicatorPrimitivesShifted": 198,
+    "indicatorIntrinsicGeometryNormalsUvsTopologyExact": true,
+    "maximumEastShiftErrorMetres": 7.629394531138978e-7,
+    "maximumOtherDisplacementMetres": 0,
+    "oldRemovalByteExact": true,
+    "retainedOccluderByteExact": true
+  },
+  "helperSha256": "3076a7cd1811a169db1f2cbaba43c72227f60c74760ee8bf9b7b05d27311e574",
+  "scope": "Only198indicator primitives translate+.20m east. All1904non-indicator primitives exact; indicator attributes/topology exact. Stairs,gates,apertures,landings,infills and5034unrelated source objects unchanged."
+}

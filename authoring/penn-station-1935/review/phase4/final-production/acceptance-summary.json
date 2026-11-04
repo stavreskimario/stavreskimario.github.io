@@ -1,0 +1,64 @@
+{
+  "technicalAcceptance": "PASS",
+  "bundleSha256": "67be7080829be131857745192d7f08af499b43396f601ee3240c2e70d220e1e4",
+  "manifestSha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+  "orderSource": {
+    "sourceSha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945",
+    "samples": 512,
+    "resolution": 4096,
+    "atlasArea": 0.4290689527988434
+  },
+  "allSixZonesPersisted": true,
+  "viewPerformance": [
+    {
+      "view": "exterior",
+      "renderedFPS": 60.33935214592367,
+      "canvasPixels": [
+        1920,
+        1224
+      ],
+      "pixelRatio": 1.5,
+      "reversedDepth": true
+    },
+    {
+      "view": "waiting",
+      "renderedFPS": 60.325667891343464,
+      "canvasPixels": [
+        1920,
+        1224
+      ],
+      "pixelRatio": 1.5,
+      "reversedDepth": true
+    },
+    {
+      "view": "concourse",
+      "renderedFPS": 60.07226738934056,
+      "canvasPixels": [
+        1920,
+        1224
+      ],
+      "pixelRatio": 1.5,
+      "reversedDepth": true
+    },
+    {
+      "view": "platform",
+      "renderedFPS": 60.363999455342,
+      "canvasPixels": [
+        1920,
+        1224
+      ],
+      "pixelRatio": 1.5,
+      "reversedDepth": true
+    }
+  ],
+  "actualWalkMetres": 3.4212765824995657,
+  "actualWalkRenderedFPS": 60.2281584356122,
+  "originalDarkSamplesPositiveAOandGI": 20,
+  "originalDarkSampleCount": 20,
+  "curlSamplesPositiveAOandGI": 5,
+  "curlSampleCount": 6,
+  "visualQualification": "Major prior black capital blotches and broken ceiling/rib appearance improved. One extreme-left curl sample retains zero AO/GI; close plaster mottling and shaft highlight specks remain visible. This is not certification of complete photorealism or surveyed carving. Distant prism-floor grid moir\u00e9 remains in the concourse capture.",
+  "errors": [],
+  "failures": []
+}

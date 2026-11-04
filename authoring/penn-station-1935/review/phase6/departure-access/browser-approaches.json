@@ -1,0 +1,246 @@
+{
+  "created": "2026-10-30T04:09:30.500Z",
+  "scope": "One Chrome/Metal job, real WASD and pointer drag, camera-only INITIAL court walk presets, all six zones visible, production navigation/materials/shaders. No camera setter, teleport, collision change or FPS claim.",
+  "sourceAppSha256": "c39e22bb7fcd7905423afedd714a745a7d06f800aee5b5e5f5ac9f20e178233e",
+  "diagnosticBundleSha256": "340ebcf7eb9323d1419c5afe0b35822ffe1438f120eb7bf9cc7a0b8f3d010dd7",
+  "assetConcourseSha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4",
+  "browser": "156.0.8078.74",
+  "closed": "2026-10-30T04:11:35.349Z",
+  "browserClosed": true,
+  "status": "PASS: both actual P3/P9 court-platform-court roundtrips",
+  "routes": [
+    {
+      "workingPlatform": 3,
+      "status": "PASS",
+      "initialCourtEye": [
+        -52,
+        -2.5872,
+        40.818378
+      ],
+      "worldId": "4cbfe03b-2c1d-411d-9f12-76bb6b042004",
+      "zoneIds": {
+        "exterior": "f52f95b0-278b-4921-9607-707bef36b2ee",
+        "waiting": "c0eac356-460f-4740-82b6-648a665d6d6d",
+        "concourse": "4b723e4c-9eb1-4e5d-b7d3-2b2f35c594a0",
+        "context": "6cec7f4b-ab84-4ce9-a371-a2b4556dee1c",
+        "platform": "5d37613a-45cc-4932-8112-9bc829c0f9b1",
+        "trains": "e8dc696e-e525-410e-b804-660ca7de60ec"
+      },
+      "phases": [
+        {
+          "phase": "court-to-gate",
+          "status": "PASS",
+          "sampleCount": 91,
+          "durationMilliseconds": 20275,
+          "eyeEnd": [
+            -48.23462976332891,
+            -2.5879137850904215,
+            40.87272423112296
+          ],
+          "physicalFloorEnd": -4.267913785090421,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0.016612870066444865,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "stairs-down",
+          "status": "PASS",
+          "sampleCount": 87,
+          "durationMilliseconds": 7292,
+          "eyeEnd": [
+            -29.450415533204712,
+            -10.302399888072173,
+            40.87272423112296
+          ],
+          "physicalFloorEnd": -11.982399991334407,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "stairs-up",
+          "status": "PASS",
+          "sampleCount": 87,
+          "durationMilliseconds": 7253,
+          "eyeEnd": [
+            -48.28719643727561,
+            -2.5882595172266853,
+            40.87272423112296
+          ],
+          "physicalFloorEnd": -4.267913785090421,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "gate-to-court",
+          "status": "PASS",
+          "sampleCount": 101,
+          "durationMilliseconds": 22471,
+          "eyeEnd": [
+            -51.96354640684725,
+            -2.5872,
+            40.81859586226592
+          ],
+          "physicalFloorEnd": -4.2672,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0.04281302257877684,
+          "sixZonesVisible": true
+        }
+      ]
+    },
+    {
+      "workingPlatform": 9,
+      "status": "PASS",
+      "initialCourtEye": [
+        -52,
+        -2.5872,
+        -40.32146
+      ],
+      "worldId": "3e60de5a-f0b2-4415-ad30-709a802159fd",
+      "zoneIds": {
+        "exterior": "e59ba484-ddeb-4e97-b00e-6f2fe7303288",
+        "waiting": "271674bf-6c48-48fc-88e5-eb17db0c5755",
+        "concourse": "b9893845-f732-4036-b043-f7957d4d61db",
+        "context": "7a56c7b5-dd1c-4895-83d2-f49dd0a71e99",
+        "platform": "1a02f2f5-e70f-4d0f-94e5-892bac5a490f",
+        "trains": "f46a1086-95e4-49f4-86d8-b2f0d6d78786"
+      },
+      "phases": [
+        {
+          "phase": "court-to-gate",
+          "status": "PASS",
+          "sampleCount": 83,
+          "durationMilliseconds": 18117,
+          "eyeEnd": [
+            -48.19619391637571,
+            -2.5879137850904215,
+            -40.32787597095857
+          ],
+          "physicalFloorEnd": -4.267913785090421,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0.013707334860775688,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "stairs-down",
+          "status": "PASS",
+          "sampleCount": 87,
+          "durationMilliseconds": 7296,
+          "eyeEnd": [
+            -29.412596679324967,
+            -10.302399914604235,
+            -40.32787597095857
+          ],
+          "physicalFloorEnd": -11.982399991334407,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "stairs-up",
+          "status": "PASS",
+          "sampleCount": 87,
+          "durationMilliseconds": 7207,
+          "eyeEnd": [
+            -48.3187621373449,
+            -2.588166976685586,
+            -40.32787597095857
+          ],
+          "physicalFloorEnd": -4.267913785090421,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0,
+          "sixZonesVisible": true
+        },
+        {
+          "phase": "gate-to-court",
+          "status": "PASS",
+          "sampleCount": 88,
+          "durationMilliseconds": 19310,
+          "eyeEnd": [
+            -51.93661427914874,
+            -2.5872,
+            -40.32106421095549
+          ],
+          "physicalFloorEnd": -4.2672,
+          "observedRejectedMoves": 0,
+          "lastBlocked": null,
+          "maximumLateralDriverError": 0.09335834925340093,
+          "sixZonesVisible": true
+        }
+      ]
+    }
+  ],
+  "totalActualStateSamples": 711,
+  "loadedModelFiles": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz",
+      "bytes": 2711634,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "bytes": 161587,
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "bytes": 4453491,
+      "sha256": "b17bbb24232f16a73634411bb34293a25f5be14d1555e222542609599c01baf4"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz",
+      "bytes": 8274157,
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277"
+    }
+  ],
+  "errors": {
+    "pageErrors": [],
+    "localServerErrors": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    ],
+    "requestFailureCount": 29,
+    "intentionalRemoteFontBlocks": 2,
+    "localAbortedRequests": 27,
+    "qualification": "Request cancellations are retained in full report. There were no page exceptions or local server failures; loading completed before either real walking route."
+  },
+  "controls": "Normal WASD input and trusted pointer drags. Short normal W pulses follow narrow checked approach; continuous W descends, S ascends; reverse approach uses normal turning/W. No camera setter or mode/view jump during any route.",
+  "evidence": [
+    "platform3-court-start.png",
+    "platform3-gate.png",
+    "platform3-below.png",
+    "platform3-returned-gate.png",
+    "platform3-court-return.png",
+    "platform9-court-start.png",
+    "platform9-gate.png",
+    "platform9-below.png",
+    "platform9-returned-gate.png",
+    "platform9-court-return.png"
+  ],
+  "limitations": [
+    "Camera-only INITIAL court presets in a scratch-compiled current-source bundle; parent owns final production-bundle acceptance.",
+    "P3 remains a narrow approach requiring a turn around its preserved pier; no spacious-clearance claim.",
+    "Peripheral P1/P2 global connectivity remains unresolved.",
+    "No FPS, mobile, complete1935or1:1claim."
+  ],
+  "fullReportSha256": "4345a91abbb40d10285c6bad4c48dc9a9b9ff6dbc5cb3d25e9b05e947cc29ce7"
+}

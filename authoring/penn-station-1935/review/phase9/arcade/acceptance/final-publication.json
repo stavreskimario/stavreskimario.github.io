@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T00:59:04.545Z",
+  "status": "PASS",
+  "runtimeCommit": "0177ad20621a85fcf2ca476b549f73ec02761535",
+  "runtimeRevision": "9-connected-entrance-1",
+  "url": "https://stavreskimario.github.io/penn-station-1935/?preview=0177ad2",
+  "scope": "Actual Pages production response hashes, full six-zone mount, new material bindings and native street-to-arcade walking. Local21-leg full roundtrip is recorded separately. No physical mobile, new WebGPU or universal FPS claim.",
+  "pagesRun": 41369786223,
+  "siteChecksRun": 41369792079,
+  "workflows": [
+    {
+      "conclusion": "success",
+      "databaseId": 41369786223,
+      "headSha": "0177ad20621a85fcf2ca476b549f73ec02761535",
+      "status": "completed",
+      "updatedAt": "2026-11-02T00:57:48Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41369786223",
+      "workflowName": "pages-build-deployment"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 41369792079,
+      "headSha": "0177ad20621a85fcf2ca476b549f73ec02761535",
+      "status": "completed",
+      "updatedAt": "2026-11-02T00:56:45Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41369792079",
+      "workflowName": "Site checks"
+    }
+  ],
+  "naturalBodies": [
+    {
+      "file": "index.html",
+      "bytes": 18278,
+      "sha256": "4b3519a419bd4542a3774b7d4ea951b58b3f7982f6cc48e7274a4cf29565e916",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 1046065,
+      "sha256": "6c59bc672fae8a04d657549b194b3bf9c2ba4889cbc79be226d3b85f1c602241",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/scene-manifest.json",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-platform.glb.gz",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-exterior.glb.gz",
+      "bytes": 4273265,
+      "sha256": "7ca9e045ac45a7b96253da50babe0759b33ae952abb2158270cf5e94d742b410",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "bytes": 5171505,
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/model-waiting-room.glb.gz",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/textures/363923bafe6efcb2994c.ktx2",
+      "bytes": 1731155,
+      "sha256": "363923bafe6efcb2994c3c9af760bc144583e38bfcf66f7030a8f792648be08a",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/textures/d027c562b48d63001b53.ktx2",
+      "bytes": 3847041,
+      "sha256": "d027c562b48d63001b53f41b3151cc4b1f9c159b7827baf27b3e325a071ce372",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/lighting-arcade-enclosure-sky.webp",
+      "bytes": 2076130,
+      "sha256": "cc5c592848851cc5ec977717177d0f2fe9b6602aa4b96fa25793d63e84fe307d",
+      "immutableCommitExact": true
+    },
+    {
+      "file": "assets/reflection-arcade.hdr.gz",
+      "bytes": 4292934,
+      "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5",
+      "immutableCommitExact": true
+    }
+  ],
+  "bundleSha256": "6c59bc672fae8a04d657549b194b3bf9c2ba4889cbc79be226d3b85f1c602241",
+  "manifestSha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+  "browserReport": {
+    "file": "public-browser.json.gz",
+    "archiveSha256": "37408b13f1bc0e680cae065d2897bdc6f7b952a024e43dd1b0a88e323fafb1ef",
+    "archiveBytes": 4377,
+    "decodedSha256": "61e4822f9cd9bbd85289d21d5d853636b59558bc588b28726ff65dc566ee882d",
+    "decodedBytes": 27975
+  },
+  "nativeWalking": {
+    "input": "Actual pointer/keyboard from street into arcade; no camera injection",
+    "startPosition": [
+      124,
+      1.68,
+      0
+    ],
+    "endPosition": [
+      89.49561253609336,
+      1.6782692252059062,
+      0
+    ],
+    "horizontalDistanceM": 34.50438746390664,
+    "walkDefault": true,
+    "eyeHeightM": 1.68,
+    "sixPersistentZones": true,
+    "zoneIdentities": {
+      "exterior": "b73dfdf3-7cac-454e-ad6b-103520abb225",
+      "waiting": "4ea5bb2c-8fe9-4e9f-afd8-88897a0d1e22",
+      "concourse": "a6c961fc-2201-4d74-a058-38cda61d35c6",
+      "context": "38b4d9bc-a35a-4b47-af38-d26b9b80b7fa",
+      "platform": "e3c8d157-6525-4edf-9616-3cd644934687",
+      "trains": "a43a76ef-7b3b-4c5c-b133-2edc7e27b639"
+    },
+    "full21LegRoundtrip": "native-summary.json (separate local production-bundle check)"
+  },
+  "arcadeMaterials": [
+    {
+      "name": "TravertineArcadeCastComposition",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "ArcadeNeutralUnassignedShopBacking",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "ArcadeVaultCastComposition",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "MilfordGraniteArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineAshlar-2ArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineAshlar-1ArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineAshlar0ArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineAshlar1ArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "TravertineAshlar2ArcadeRepairPhase9",
+      "type": "MeshStandardMaterial",
+      "skyFile": "lighting-arcade-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    },
+    {
+      "name": "ArcadeShopAndClerestoryGlass",
+      "type": "MeshPhysicalMaterial",
+      "skyFile": null,
+      "skyScale": null,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": "closed-glazing",
+      "transmission": 1
+    },
+    {
+      "name": "ArcadeOrnamentalMetal",
+      "type": "MeshStandardMaterial",
+      "skyFile": null,
+      "skyScale": null,
+      "reflectionFile": "reflection-arcade.hdr.gz",
+      "walkingCollision": null,
+      "transmission": 0
+    }
+  ],
+  "pageErrors": [],
+  "requestFailures": [],
+  "unexplainedRequestFailures": [],
+  "intentionalBlocks": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "browserClosed": true,
+  "publicScreenshot": {
+    "externalRetainedFile": "phase9-interiors/arcade/public-v5/public-arcade.png",
+    "bytes": 1118038,
+    "sha256": "0e2507471ebb61f74faa468f36bc225a43eddbb091b26b7d2a79c571c24277f1",
+    "copiedIntoRepository": false,
+    "reason": "Avoid duplicate large screenshot; existing local acceptance images remain in this folder."
+  },
+  "limits": [
+    "Public test covers actual14loaded response bodies,13material bindings and native street-to-arcade walking. The separate21-leg local roundtrip is not relabelled as a public route test.",
+    "No new universal FPS, physical-mobile or native-WebGPU certification.",
+    "First usable connected entrance checkpoint; higher-sample lighting, retained paving calibration, fine ornament, tenant furnishings/signage and further photographic fidelity remain unfinished.",
+    "PR11 remains draft and unmerged."
+  ]
+}

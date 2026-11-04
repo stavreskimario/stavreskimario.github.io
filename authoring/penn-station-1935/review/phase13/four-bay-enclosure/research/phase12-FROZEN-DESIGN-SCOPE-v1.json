@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "status": "FROZEN evidence-led first-bay design scope; research only, no authored/runtime geometry or GPU work",
+  "baselineCommit": "1455aa1081d915f92b9511d102d5758814089529",
+  "coordinateSpace": "Existing world glTF; X east,Y up,Z south. Source absolute feet use mean-high-water engineering datum.",
+  "sources": [
+    {
+      "label": "complete-primary-PDF",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/next-visual-references/asce69.pdf",
+      "bytes": 34864081,
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3"
+    },
+    {
+      "label": "PlateLIX-native",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf301.png",
+      "bytes": 2192353,
+      "sha256": "c844c68568309169634c40c167c04ba8e126b94f6ffc80f4f514fa1c52ca759f"
+    },
+    {
+      "label": "PlateLXI-native",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf309.png",
+      "bytes": 1900042,
+      "sha256": "ca62f2c5d6090cac7d932f6a55c07f8a9a0ae57568a6ff3f0a287dcbb739a3a3"
+    },
+    {
+      "label": "primary-PRR-exit-photo",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/source-route-v1/prr74-pdf53.png",
+      "bytes": 391826,
+      "sha256": "8d5e93d48d0a865eeb398bb96d4651a79d8448461a624d00d17c1fa92481ce0d"
+    }
+  ],
+  "primaryUrl": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+  "firstVisibleNewEnclosure": {
+    "name": "One Eighth Avenue bridge roof/framing bay at source P5-corresponding bent",
+    "reason": "Finite primary-defined road bridge with actual structural section, member ranges and permanent support rows; can improve a westward platform horizon without enclosing the ordinary gallery.",
+    "sourceWidthFt": 100,
+    "sourceLengthFt": 525,
+    "sourceOverallOutToOutRoofAndRetainingFt": 101.25,
+    "adoptedAvenueCenterWorldX": -136.8552,
+    "houseLineWorldX": [
+      -152.0952,
+      -121.6152
+    ],
+    "outerOverallWorldX": [
+      -152.2857,
+      -121.4247
+    ],
+    "sourceColumnCountAcross100ft": 11,
+    "sourceColumnSpacingFt": 10,
+    "columnStationsWorldX": [
+      -152.0952,
+      -149.0472,
+      -145.9992,
+      -142.9512,
+      -139.9032,
+      -136.8552,
+      -133.8072,
+      -130.7592,
+      -127.71119999999999,
+      -124.66319999999999,
+      -121.6152
+    ],
+    "bentDirection": "E-W/worldX, parallel to current track axes; rows vary N-S/worldZ.",
+    "longitudinalGirderDirection": "N-S/worldZ between bents.",
+    "floorPlateBeamDirection": "Transverse E-W/worldX, spanning at least three longitudinal girders.",
+    "nativePlanReading": {
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf301.png",
+      "imageSizePx": [
+        2067,
+        1629
+      ],
+      "orientation": "NativeU increases toward33rdStreet/north/worldZnegative; nativeV increases east/worldXpositive.",
+      "terminalAxisNativeU": 1051.0,
+      "westHouseLineNativeV": 1154.5,
+      "eastHouseLineNativeV": 1472.5,
+      "knownCrossAvenueWidthM": 30.48,
+      "scaleMPerNativePixel": 0.09584905660377359,
+      "rows": [
+        {
+          "label": "adjacent-south permanent bent",
+          "nativeU": 843.3,
+          "worldZ": 19.90784905660378
+        },
+        {
+          "label": "P5-corresponding permanent bent",
+          "nativeU": 915.3,
+          "worldZ": 13.00671698113208
+        },
+        {
+          "label": "adjacent-north permanent bent",
+          "nativeU": 985.0,
+          "worldZ": 6.326037735849057
+        }
+      ],
+      "minimumReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1,
+      "method": "Manual permanent-column/bent center observations; dense continuous timber-trestle strokes are excluded. Scale from100ft cross-avenue house-line width, origin from labeled terminalaxis. This is a qualified1D registration, not a survey or a full datum correction.",
+      "independentFit": "Geometry agent reports selectedZ13.0 falls within currentP5platform andZ6.33 matches the actual inter-trackgap; this corroborates correspondence, not exact historical fabrication."
+    },
+    "boundedAuthoringFootprintWorld": {
+      "x": [
+        -152.0952,
+        -121.6152
+      ],
+      "z": [
+        6.33,
+        13.0
+      ],
+      "roundingQualification": "Construction coordinates rounded within the manual reading envelope; source-derived rows are approximately6.3260 and13.0067m.",
+      "optionalActualRoofOutToOutX": [
+        -152.2857,
+        -121.4247
+      ],
+      "noOpaqueSideWalls": true,
+      "noWhole525ftBridgeCompletionClaim": true
+    },
+    "verifiedProfileFamilies": {
+      "column": {
+        "shape": "Riveted built-up I-type",
+        "webWidthM": 0.4064,
+        "anglesM": [
+          0.2032,
+          0.1524
+        ],
+        "coverPlateWidthM": 0.4572,
+        "coverPlateCountRange": [
+          2,
+          6
+        ],
+        "plateAndAngleThicknesses": "Not specified here; inferred local fabrication if authored."
+      },
+      "transverseBentGirder": {
+        "depthRangeM": [
+          1.524,
+          2.1971
+        ],
+        "sourceDepthRange": "5ft to7ft2.5in",
+        "flangeAnglesM": [
+          0.1524,
+          0.1524
+        ],
+        "faceConnected": true
+      },
+      "longitudinalGirder": {
+        "depthRangeM": [
+          0.7239,
+          1.3335
+        ],
+        "sourceDepthRange": "2ft4.5in to4ft4.5in",
+        "internalSpacingM": 1.524,
+        "outerBaySpacingM": 1.016,
+        "flangeAngleOptionsM": [
+          [
+            0.1524,
+            0.1524
+          ],
+          [
+            0.2032,
+            0.1524
+          ]
+        ],
+        "faceConnected": true
+      },
+      "floorPlate": {
+        "IBeamDepthM": 0.1016,
+        "spacingRangeM": [
+          0.1524,
+          0.2032
+        ],
+        "minimumGirderSpans": 3,
+        "materialFamily": "4in I-beams embedded in concrete; waterproofing/protecting cover and real backfill above.",
+        "exactConcreteCoverThickness": "Not fixed by this local section; do not label an arbitrary uniform slab thickness as recovered."
+      },
+      "bearing": {
+        "documented": "Cut granite capstones underpinned to solid rock with concrete piers.",
+        "capstoneTopSourceFt": 287,
+        "exactPierDepthsAndRockSurface": "Unresolved local conditions; current receiver adaptation must be labeled inferred."
+      }
+    },
+    "verticalControls": {
+      "sourceUnderClearanceLineFt": 306.08,
+      "sourceMainControlFt": 319.01,
+      "workingMainY": -4.2672,
+      "underClearanceComparisonWorldY": -8.208264,
+      "interpretation": "UNDER-CLEARANCE LINE, not a uniform roof-slab underside. Choose member tops/roofplate from documented depth ranges; do not make a solid box to street.",
+      "sourceRailEndpointsFt": [
+        289.52,
+        289.02
+      ],
+      "sourceRailGradePercent": 0.4,
+      "workingRailY": -13.154025,
+      "currentRailToComparisonM": 4.945761,
+      "sourceMinimumRailClearanceM": 4.9276,
+      "nominalCapstoneTopFromMainDatumWorldY": -14.023848,
+      "qualification": "Source railgrade/localdatum and current flat adopted railway differ. Do not move accepted tracks/floors to force agreement. Granite bases are buried below rail/platform, not decorative passenger-floor pedestals.",
+      "cover": "At least19ft from street to top of structure in the source; fill is a separate material volume, not8m of solid concrete."
+    },
+    "confidence": {
+      "high": "Bridge existence, finite100ft width/525ft length,11column count,10ft across-avenue spacing, permanent-vs-temporary distinction, member families/ranges, source labeled elevations.",
+      "medium": "P5row/adjacentgap correspondence and provisional world alignment.",
+      "inferred": "One local member-depth/thickness schedule, minor fabrication, exact roofcover and foundation/receiver adaptation, material color/weathering and1935survival."
+    }
+  },
+  "galleryAnd33rdPassage": {
+    "ordinaryGallery": {
+      "boundsWorldXZ": [
+        -73.2,
+        -54.912,
+        -36,
+        71
+      ],
+      "rule": "Retain open sides, real stair gaps and prism/daylight fields. No new full sidewalls or universal dropped ceiling."
+    },
+    "existingGrayBand": {
+      "findingFromGeometryAgent": "Continuous Main soffit, real roof atY-4.7072; node9/primitive0 hasmissingUV1 despite lighting_atlas_uv1.",
+      "action": "Exact owned-face material/UV/GI repair; no added roof slab.",
+      "materialEvidence": "Francis188/PDF344 reinforced-concrete floors/haunches; Gibbs255/PDF445 below-street stone concrete. PRRPDF53 pale plain beam/bay undersides. Exact exposed-concrete/paint/plaster finish and hue remain unverified."
+    },
+    "sourceHouseLineCrossSection": {
+      "stationNorthFacadeWorldZ": -65.532,
+      "documentedFacadeSetbackM": 3.9624,
+      "southHouseLineWorldZ": -69.4944,
+      "northHouseLineWorldZ": -87.7824,
+      "sourceStreetWidthM": 18.288,
+      "sourceSidewalkEachM": 4.572,
+      "sourceRoadWidthM": 9.144,
+      "southRoadCurbWorldZ": -74.0664,
+      "northRoadCurbWorldZ": -83.2104,
+      "upperEntranceGalleryWidthM": 4.572,
+      "upperEntranceGalleryLengthM": 139.2936,
+      "upperGalleryUnderClearM": 2.6924,
+      "roadDeckClearAboveMainM": 2.4384,
+      "roadDeckComparisonWorldY": -1.8288,
+      "streetToBridgeSeatM": 1.9812,
+      "datumQualification": "The section dimensions imply street14.5ft aboveMain, while current scene adopts14ft; the known6in street/Exit qualification remains. A typical section is not a universal local opening/wall schedule.",
+      "currentContextMismatch": "Current context uses approximately40ft road+10ft sidewalks inside same60ft envelope; primary typical section uses30ft road+15ft sidewalks. Do not silently revise current context or regard current curbs as historical proof."
+    },
+    "higherRoadwayVolume": {
+      "region": "Northofupper-gallery outeredge nearZ-74.0664, within actual source road-deck/retaining outline.",
+      "rule": "Do not extend a low2.76m roof across the full lower30ftpassage. The section shows a taller volume under the roadway roof; true bridge arch/girder family belongs higher.",
+      "sourceRoadGirderDepthM": 0.6096,
+      "sourceDrawingApproxGirderSpacingM": 1.6764,
+      "exactFullRibAndArchSchedule": "Not recovered for every33rdStreet bay."
+    },
+    "retainingWalls": {
+      "material": "Enameled-brick facing under33rdStreet from Gibbs254; lower ledge uses concrete facing and terra-cotta-block drains in PlateLXI.",
+      "rule": "Register actual retaining/ledge batter and northern tracks; no wall at generated common-foundation bounds, no vertical extruded facade across railway.",
+      "confidence": "Family high, local full3Dprofile and northern rail registration held."
+    },
+    "ascentMouth": {
+      "currentCandidateWorldXZ": [
+        -7.15,
+        -1.45,
+        -76.065,
+        -72.39
+      ],
+      "rule": "The primary plan marker does not dimension the complete incline/roofopening; routeZ-74.8 lies just north oftypical upper15ftgallery. Any lowroof infill requires actual upper-floor/source footprint, preserved bodyheadroom and explicit inferred status. Do not fill a taller under-road volume merely to hide sky."
+    }
+  },
+  "heldLater": {
+    "TServiceGallery": "Real pierced T footprint,5\u20137ft serviceheight and transfergirder family are documented; precise lowerfloor/soffit and receiver schedule remain unresolved. Do not create an arbitrary slab below the waiting room or extend8straight supports.",
+    "westernMainFloorCorrection": "Separate20definite+6boundary-pier coordination hold; do not cut or fill based on this bay.",
+    "approachPortals": "No black endwalls or21identical arches at current straight-track truncations.",
+    "northernLirr": "P9/LIRR correspondence and northretaining geometry remain distinct unresolved tasks."
+  },
+  "acceptanceBeforePromotion": [
+    "Current actual22receivers and track/train clearance verified by geometry agent must be retained in the construction proof.",
+    "Author with Blender/GN using named ownership, closed grounded meshes and material/UV preservation.",
+    "No new visible floating bases, no opaque gallerysidewalls, no hidden geometry masks.",
+    "Fresh geometry-dependent light/AO required; preserve texture scale and real contact shadows.",
+    "Browser walking walkthrough remains skipped by user; do not claim a new nativewalking pass.",
+    "Mobile, fullerManhattan and exteriorroof flicker remain deferred."
+  ]
+}

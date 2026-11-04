@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "scope": "Portable independent floor-derived-radiance consumer and actual executed proofs; no root changes",
+  "files": [
+    {
+      "path": "verify-floor-delivery-transform.cjs",
+      "bytes": 12423,
+      "sha256": "d5014e700fad0652349e94d4ed48de58c3c0748a9da1f4097d7651079a607885"
+    },
+    {
+      "path": "replay-floor-transition.cjs",
+      "bytes": 8073,
+      "sha256": "0d1fd78dc3d13dd86e6d036d24a8e3afb3cc8ec862f1a48d2067f10bfdff76d9"
+    },
+    {
+      "path": "repository-floor-delivery-adapter.cjs",
+      "bytes": 3068,
+      "sha256": "dd2045ef906ace72e96f1d77a478c2d1604507cfc5f297c791bd2d0457cfd2e4"
+    },
+    {
+      "path": "402-floor-world-uv-map.json.gz",
+      "bytes": 57479,
+      "sha256": "18b475d01233548779fe68b0dd76f3871a5537547ee75a71ce1f8ae835990bcb"
+    },
+    {
+      "path": "actual-floor-map-corner-proof.json",
+      "bytes": 1147,
+      "sha256": "dbd4fee134ec5dae4b3f08dc88c4d1df2a4f1457f96045d677b1c4c5b7818843"
+    },
+    {
+      "path": "actual-every-pixel-replay.json",
+      "bytes": 1856,
+      "sha256": "d8744afec3dab87edd5c7a3bf1a505e88d5139541ee5bef203e9b5af1adb273e"
+    },
+    {
+      "path": "actual-every-pixel-replay-png-absent.json",
+      "bytes": 1858,
+      "sha256": "293da99a6cdb4a93b08d49ffdcbbbb08c4c60277783981eb1bd4192af0d3f526"
+    },
+    {
+      "path": "negative-consumer-proofs.json",
+      "bytes": 1006,
+      "sha256": "de32a3956ceb9d60114f20c8d81db8dab4fa69fc4f1c9f6b366971b994fb26bb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3489,
+      "sha256": "d22ef3dfe587628ec27b922794471c2c6ae2abfabac8df7ae23083ec6695a8d6"
+    }
+  ],
+  "totalBytes": 90399,
+  "mapDecodedSha256": "b0f979395ee2bc3db61440030883fd52e067ccf53b6a04749d236340f682e1af",
+  "copyPolicy": "Copy only the listed files. Place map gzip in lighting/phase13-floor/transition; retain the three helpers together so sibling requires remain valid. Reports/README can be retained in review source scope. External generator and runners are not required at runtime.",
+  "invariants": "Original physical PNG/HDR/denoise record retained; actual mounted402orientedPNUV source proof; all full/low RGB replay; physical underroof invariance; outeredge weight0; lossless WebP exact; deterministic derivedPNG hash even when file absent; all legacy validation unchanged."
+}

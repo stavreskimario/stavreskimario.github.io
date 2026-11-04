@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "same original face chart for every triangle corner",
+    "shared position expands at UV seam",
+    "1mm projected source plane accepted",
+    "world triangle/normal/position bytes preserved",
+    "exposed gap above3mm rejected",
+    "exposed triangle crossing a real atlas seam rejected",
+    "buried wall nearest-chart fallback bounded",
+    "buried gap above225mm rejected"
+  ]
+}

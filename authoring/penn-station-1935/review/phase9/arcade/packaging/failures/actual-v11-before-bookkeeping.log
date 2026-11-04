@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Unexplained old MilfordGranite surfaces: {"sourceTriangles":2024,"examined":292276,"removed":1994,"protectedAmbiguous":0,"quantizedSliversRemoved":0,"quantizedSliverArea":0,"maximumSliverAltitude":0,"orientationOnlyProtected":762,"maximumOrientedProtectionResidual":0.0026818234593272683,"orientationOnlyRetained":0,"orientationOnlyArea":0,"maximumOrientationOnlyAltitude":0,"maximumRemovalResidual":0.0025464049480310607,"sourceCentroidsCovered":2014,"sourceCentroidsProtected":0,"sourceCentroidCoverage":0.9950592885375494}
+    at removePlatformAccess (file:///Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/remove_platform_access.mjs:266:5)
+    at main (file:///Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/remove_platform_access.mjs:329:18)
+    at async file:///Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/remove_platform_access.mjs:337:90 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

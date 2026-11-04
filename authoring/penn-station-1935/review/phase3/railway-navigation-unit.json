@@ -1,0 +1,122 @@
+{
+  "scope": "Focused actual railway GLB + synthetic structural-instance collision checks; no browser or final baked world performance claim",
+  "passed": true,
+  "checks": [
+    {
+      "label": "Platform 1 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 2 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 3 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 4 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 5 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 6 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 7 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 8 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 9 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 10 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "Platform 11 surface",
+      "passed": true,
+      "height": -11.985624797058104,
+      "region": true
+    },
+    {
+      "label": "P10 taper void is excluded by polygon and actual floor",
+      "passed": true
+    },
+    {
+      "label": "P5 walking spawn inside actual outline",
+      "passed": true
+    },
+    {
+      "label": "Track below platform cannot be used as a same-level floor",
+      "passed": true
+    },
+    {
+      "label": "Substantial instanced column still blocks walking",
+      "passed": true
+    },
+    {
+      "label": "No whole fitting or structural instance batch raycast",
+      "passed": true
+    },
+    {
+      "label": "Distant column omitted from local candidates",
+      "passed": true
+    }
+  ],
+  "index": {
+    "sourceMeshes": 17,
+    "excludedMeshes": 14,
+    "excludedInstances": 66158,
+    "structuralInstances": 0,
+    "colliders": 3,
+    "cells": 2236,
+    "queries": 1013,
+    "lastCandidates": 3,
+    "maximumCandidates": 3,
+    "buildMilliseconds": 3.078833000000003
+  },
+  "structuralIndex": {
+    "sourceMeshes": 18,
+    "excludedMeshes": 14,
+    "excludedInstances": 66158,
+    "structuralInstances": 2,
+    "colliders": 5,
+    "cells": 2236,
+    "queries": 1,
+    "lastCandidates": 1,
+    "maximumCandidates": 1,
+    "buildMilliseconds": 0.4851670000000041
+  },
+  "thousandGroundQueriesMilliseconds": 8.313249999999996,
+  "groundHits": 1000
+}

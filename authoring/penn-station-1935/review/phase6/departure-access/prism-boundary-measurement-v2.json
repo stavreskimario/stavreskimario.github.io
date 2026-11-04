@@ -1,0 +1,156 @@
+{
+  "scope": "Actual decoded upward floor triangle intersections along each exact Z; no source or geometry change.",
+  "x": -49.8,
+  "rows": [
+    {
+      "z": 27.149065,
+      "leftMaximumX": -49.80000150203705,
+      "rightMinimumX": -49.79999923706055,
+      "gapMetres": 2.2649765014648438e-06,
+      "supportAtNominalBoundary": false,
+      "nearbyIntervals": [
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.802383655905565,
+            -49.80000150203705
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.817506919768086,
+            -49.802383655905565
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "x": [
+            -49.79999923706055,
+            -49.370220646844714
+          ],
+          "y": 0
+        }
+      ]
+    },
+    {
+      "z": -0.341443,
+      "leftMaximumX": -49.80000150203705,
+      "rightMinimumX": -49.79999923706055,
+      "gapMetres": 2.2649765014648438e-06,
+      "supportAtNominalBoundary": false,
+      "nearbyIntervals": [
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.80021736612696,
+            -49.80000150203705
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.817506919768086,
+            -49.80021736612696
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "x": [
+            -49.79999923706055,
+            -49.47457571813518
+          ],
+          "y": 0
+        }
+      ]
+    },
+    {
+      "z": -27.224425,
+      "leftMaximumX": -49.80000150203705,
+      "rightMinimumX": -49.79999923706055,
+      "gapMetres": 2.2649765014648438e-06,
+      "supportAtNominalBoundary": false,
+      "nearbyIntervals": [
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -50.93396212995342,
+            -49.80000150203705
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "x": [
+            -49.79999923706055,
+            -49.01425388917639
+          ],
+          "y": 0
+        }
+      ]
+    },
+    {
+      "z": -39.42146,
+      "leftMaximumX": -49.80000150203705,
+      "rightMinimumX": -49.79999923706055,
+      "gapMetres": 2.2649765014648438e-06,
+      "supportAtNominalBoundary": false,
+      "nearbyIntervals": [
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.817506919768086,
+            -49.80845391070798
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -49.80845391070798,
+            -49.80000150203705
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "x": [
+            -49.79999923706055,
+            -48.87620885597089
+          ],
+          "y": 0
+        }
+      ]
+    },
+    {
+      "z": 13.07787,
+      "leftMaximumX": -49.80000150203705,
+      "rightMinimumX": -49.79999923706055,
+      "gapMetres": 2.2649765014648438e-06,
+      "supportAtNominalBoundary": false,
+      "nearbyIntervals": [
+        {
+          "material": "ConcourseReinforcedVaultLightConcrete",
+          "x": [
+            -50.327039112952995,
+            -49.80000150203705
+          ],
+          "y": 7.75380401552006e-08
+        },
+        {
+          "material": "ConcourseOpaqueCirculationConcrete",
+          "x": [
+            -49.79999923706055,
+            -49.6835993688742
+          ],
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "calculationCorrection": "Earlier interval classification incorrectly excluded final split triangles; corrected to union all intervals ending left / beginning right of exact X. Raw nearby triangle intervals are unchanged."
+}

@@ -1,0 +1,357 @@
+{
+  "status": "PASS functional native UI and complete continuous walking loop; performance qualification separate",
+  "scope": "UNMODIFIED production bundle and native Main-concourse Walk preset. Actual six-zone Main\u2192P5departure\u2192platformdetour\u2192Eastarrival\u2192Exitaisles\u2192Westarrival\u2192platform\u2192Main walking. No camera injection/teleport/hidden geometry/collision changes. No FPS or complete1935claim.",
+  "bundle": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/app.js",
+    "sha256": "03c2f0a578c6ed7291eb4f4bd7dd7c413f45271e0f9630957b939d02f9ac6d37",
+    "bytes": 1045549,
+    "modified": false
+  },
+  "manifest": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/scene-manifest.json",
+    "sha256": "f2d0e638a8db9b6b968c747bd69fb3f0e875a5ac4182607fad7835c88aeffe03",
+    "bytes": 684470
+  },
+  "actual12Models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior-low.glb.gz",
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "bytes": 2805415
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room-low.glb.gz",
+      "sha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "bytes": 7239871
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "bytes": 5171505
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "bytes": 5171505
+    },
+    {
+      "file": "model-context.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz",
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+      "bytes": 160991
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "14c9c2fe3bd482eebc0aaee71b93dd761e8cd25552cc702dbde08a0ab21f12ba",
+      "bytes": 187321
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    }
+  ],
+  "browser": "156.0.8078.74",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "deviceScaleFactor": 1,
+  "quality": "balanced",
+  "nativeInitialPreset": "Mainconcourse Walk through actualUI, after separate arrivals-preset checks",
+  "route": "Main\u2192P5departure\u2192platformdetour\u2192eastarrival\u2192Exitnorth/southaisles+connectors\u2192westarrival\u2192platformdetour\u2192P5departureup\u2192originalMain",
+  "completedLegs": 34,
+  "sampledStates": 1575,
+  "allSixOriginalZoneIDsAlwaysPresentVisible": [
+    "b4160cbe-5cd0-4e27-a6c1-bfd27f96fbe1",
+    "ed0dd0ff-9499-45be-b3f5-1ec662861929",
+    "784087f4-b691-48fd-a032-decbaa602bea",
+    "982bde52-b976-4c6c-921d-3e6c4df2fa62",
+    "93a67f39-542c-453e-978c-ff3bfcfece52",
+    "aab72a09-c9cd-4172-8558-10906b6a1219"
+  ],
+  "startCamera": {
+    "position": [
+      -67,
+      -2.5872,
+      33
+    ],
+    "quaternion": [
+      0.07035477920879099,
+      0.06830896187069595,
+      -0.004829193142792126,
+      0.9951687141707278
+    ],
+    "fov": 50
+  },
+  "endCamera": {
+    "position": [
+      -66.95609126852118,
+      -2.58719992246196,
+      33.00037274576123
+    ],
+    "quaternion": [
+      0.04595704401587019,
+      -0.7051912112283238,
+      -0.04590207965878307,
+      -0.706035625726246
+    ],
+    "fov": 50
+  },
+  "startAndEndHumanEyeHeightChecked": true,
+  "arrivalsPreset": {
+    "walkCamera": {
+      "position": [
+        -70,
+        -5.7876,
+        28
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "fov": 50
+    },
+    "orbitFraming": "arrivals",
+    "walkRestoredFraming": "arrivals",
+    "loadedNew4KMaterials": 4,
+    "actualFourPracticalOrigins": [
+      {
+        "position": [
+          -68.628,
+          -8.091600066375733,
+          13.327870360660988
+        ],
+        "world": [
+          -68.628,
+          -8.091600066375733,
+          13.327870360660988
+        ],
+        "intensity": 60,
+        "target": [
+          -68.628,
+          -11.985625,
+          13.327870360660988
+        ]
+      },
+      {
+        "position": [
+          -68.628,
+          -8.091600066375733,
+          -0.34144258778884096
+        ],
+        "world": [
+          -68.628,
+          -8.091600066375733,
+          -0.34144258778884096
+        ],
+        "intensity": 60,
+        "target": [
+          -68.628,
+          -11.985625,
+          -0.34144258778884096
+        ]
+      },
+      {
+        "position": [
+          -59.484,
+          -8.091600543212891,
+          13.327870360660988
+        ],
+        "world": [
+          -59.484,
+          -8.091600543212891,
+          13.327870360660988
+        ],
+        "intensity": 60,
+        "target": [
+          -59.484,
+          -11.985625,
+          13.327870360660988
+        ]
+      },
+      {
+        "position": [
+          -59.484,
+          -8.091600066375733,
+          -0.34144258778884096
+        ],
+        "world": [
+          -59.484,
+          -8.091600066375733,
+          -0.34144258778884096
+        ],
+        "intensity": 60,
+        "target": [
+          -59.484,
+          -11.985625,
+          -0.34144258778884096
+        ]
+      }
+    ],
+    "expectedAuthoredPracticalOrigins": [
+      [
+        -68.628,
+        -8.091600066375733,
+        13.327870360660988
+      ],
+      [
+        -68.628,
+        -8.091600066375733,
+        -0.34144258778884096
+      ],
+      [
+        -59.484,
+        -8.091600543212891,
+        13.327870360660988
+      ],
+      [
+        -59.484,
+        -8.091600066375733,
+        -0.34144258778884096
+      ]
+    ]
+  },
+  "actualInputActions": 1560,
+  "pageErrors": [],
+  "localServerErrors": [],
+  "requestFailures": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/sky.hdr?revision=8-arrivals-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:62520/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "externalBlocked": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "browserClosed": true,
+  "performanceQualification": "Functionalpass doesNOTcertifyperformance. Fourtimingpauses1.446\u202611.702s occurredwithlowframeprogress; causeunassigned. Subsequentindependentheartbeatdiagnosis supports sharedhost/clock-domain suspension but providesonly35.3sactivebrowserdata. See operation-pauses.json and ../performance-diagnosis-v1/summary.json.",
+  "failedEarlierReceipts": "browser-native-v1 preservesclosedEnvironmentpanelharnessfailure; browser-native-v2 preservesincomplete35swall-clocktimeout. Nophysics/camera/scenechangesorroute shortcutsusedtoobtainthispass.",
+  "evidence": {
+    "report.json": {
+      "sha256": "9c02cc5c8cf7c1a9102db126f72b0b0507f152b5b06328f849c775fb582b1ea6",
+      "bytes": 8940085
+    },
+    "arrivals-preview.json": {
+      "sha256": "64d3b29241deed3f78b84f178d60001623cff0d88b071564f6a6e3ab2940c6ee",
+      "bytes": 18161
+    },
+    "operation-pauses.json": {
+      "sha256": "705e0436d24116fc440338b6eeebfc6e73d96c40cc9ee38a56eba20f112a7321",
+      "bytes": 4120
+    },
+    "arrivals-native-walk.png": {
+      "sha256": "900a11bb2b19a2e1945566d2c4f82be98241ee23b6fefa5e945279708fa077cb",
+      "bytes": 616327
+    },
+    "east-arrival-exit.png": {
+      "sha256": "7295026ecdd5b8a909b5d6c72dfe4f381aef14d7caa0c53a262570c811d6a091",
+      "bytes": 863532
+    },
+    "west-arrival-platform.png": {
+      "sha256": "2d13b32d034980286f484a7c84a29fe8e2370f56220b25eafd2a91a401d0288b",
+      "bytes": 481487
+    },
+    "main-roundtrip-return.png": {
+      "sha256": "0ffb81bf14a75dcc21ffad9ed55055764427a98e0e37f6e4ee7578e376404adb",
+      "bytes": 1475123
+    }
+  }
+}

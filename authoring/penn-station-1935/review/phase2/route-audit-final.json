@@ -1,0 +1,183 @@
+{
+  "world_levels": {
+    "main": -4.2672,
+    "exit": -7.4676,
+    "platform": -11.985624999999999,
+    "rail": -13.154025
+  },
+  "stairs": [
+    {
+      "centerZ": -44,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": -33,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": -22,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": -11,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": 0,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": 11,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": 22,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": 33,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    },
+    {
+      "centerZ": 44,
+      "missing_floor_samples": 0,
+      "max_first_dogleg_riser": 0.14060306549072266,
+      "passes_024m_step": true
+    }
+  ],
+  "main_flights": [
+    {
+      "centerZ": -44,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": -33,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": -22,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": -11,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": 0,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": 11,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": 22,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": 33,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    },
+    {
+      "centerZ": 44,
+      "missing": 0,
+      "max_floor_error": 0.15844502250269876
+    }
+  ],
+  "representative_platform_continuity": [
+    {
+      "x": -54,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": -52,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": -50,
+      "Z": 11,
+      "floor": -11.81805419921875,
+      "material_mesh": "03 Glass and iron concourse \u2014 PaintedStructuralIron"
+    },
+    {
+      "x": -48.5,
+      "Z": 11,
+      "floor": -11.985624313354492,
+      "material_mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -45,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": -40,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": -30,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": -15,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": 0,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    },
+    {
+      "x": 20,
+      "Z": 11,
+      "floor": -11.987625122070312,
+      "material_mesh": "04 Representative platform \u2014 PlatformConcrete"
+    }
+  ],
+  "platform_bounds": [
+    -85,
+    25,
+    8.8664,
+    13.1336
+  ],
+  "track_centerZ": 7.2662,
+  "near_edge_offset": 1.6002,
+  "platform_above_rail": 1.1684,
+  "proof": "Sourcegeometryafterworldregistration;validated floors and stairs preserved through the final architecture pass."
+}

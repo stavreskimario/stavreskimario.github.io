@@ -1,0 +1,300 @@
+{
+  "main_floor_world": -4.2672,
+  "world_collection_bounds": {
+    "01 Exterior and context": {
+      "min": [
+        -119.83159637451172,
+        -65.88200378417969,
+        -4.267199993133545
+      ],
+      "max": [
+        120.20559692382812,
+        65.88200378417969,
+        46.6343994140625
+      ]
+    },
+    "02 Main waiting room": {
+      "min": [
+        -18.139999389648438,
+        -45.400001525878906,
+        -4.667200088500977
+      ],
+      "max": [
+        32.709999084472656,
+        45.400001525878906,
+        41.45280075073242
+      ]
+    },
+    "03 Glass and iron concourse": {
+      "min": [
+        -105.6937026977539,
+        -49.31800079345703,
+        -12.341806411743164
+      ],
+      "max": [
+        -16.0,
+        49.31800079345703,
+        25.88315773010254
+      ]
+    },
+    "04 Representative platform": {
+      "min": [
+        -85.10160064697266,
+        -13.133600234985352,
+        -13.72402572631836
+      ],
+      "max": [
+        25.0,
+        -5.59119987487793,
+        -11.985624313354492
+      ]
+    }
+  },
+  "east_to_west_route_errors": [],
+  "east_to_west_samples": 1059,
+  "selected_route_samples": [
+    {
+      "x": 119.3,
+      "expected": 0,
+      "actual": 0.0,
+      "mesh": "01 Exterior and context \u2014 TennesseeMarble"
+    },
+    {
+      "x": 99.95,
+      "expected": 0,
+      "actual": 0.0,
+      "mesh": "01 Exterior and context \u2014 TennesseeMarble"
+    },
+    {
+      "x": 33.05,
+      "expected": 0,
+      "actual": 0.0,
+      "mesh": "01 Exterior and context \u2014 TennesseeMarble"
+    },
+    {
+      "x": 24.95,
+      "expected": 0,
+      "actual": 0.0,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": 24.8,
+      "expected": 0.0,
+      "actual": 0.0,
+      "mesh": "02 Main waiting room \u2014 Travertine"
+    },
+    {
+      "x": 20.0,
+      "expected": -2.4384,
+      "actual": -2.4384,
+      "mesh": "02 Main waiting room \u2014 Travertine"
+    },
+    {
+      "x": 16.7,
+      "expected": -4.1148,
+      "actual": -4.1148,
+      "mesh": "02 Main waiting room \u2014 Travertine"
+    },
+    {
+      "x": 15.95,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": 0.05,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": -15.85,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": -16.15,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": -16.45,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "02 Main waiting room \u2014 TennesseeMarble"
+    },
+    {
+      "x": -25.0,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -38.95,
+      "expected": -4.2672,
+      "actual": -4.2672,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    }
+  ],
+  "main_court_bypass": [
+    {
+      "x": -40.5,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -42,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -44,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -46,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -48,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -50,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -60,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -73,
+      "Z": 3.7,
+      "actual": -4.267199993133545,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    }
+  ],
+  "nine_real_main_floor_voids": [
+    {
+      "centerZ": -44,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": -33,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": -22,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": -11,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": 0,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": 11,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": 22,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": 33,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    },
+    {
+      "centerZ": 44,
+      "main_head_midflight_floor": -5.793179988861084,
+      "expected_below_main": true
+    }
+  ],
+  "lower_flight_receiving_landing": [
+    {
+      "x": -48.106300000000005,
+      "Z": 0.83,
+      "floor": -7.467599868774414,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -48.3063,
+      "Z": 0.83,
+      "floor": -7.467599868774414,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -48.606300000000005,
+      "Z": 0.83,
+      "floor": -7.467599868774414,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -48.9063,
+      "Z": 0.83,
+      "floor": -7.667599678039551,
+      "mesh": "03 Glass and iron concourse \u2014 TennesseeMarble"
+    },
+    {
+      "x": -49.106300000000005,
+      "Z": 0.83,
+      "floor": -7.677599906921387,
+      "mesh": "03 Glass and iron concourse \u2014 Travertine"
+    },
+    {
+      "x": -49.4063,
+      "Z": 0.83,
+      "floor": -7.828200817108154,
+      "mesh": "03 Glass and iron concourse \u2014 Travertine"
+    },
+    {
+      "x": -50.5063,
+      "Z": 0.83,
+      "floor": -8.430603981018066,
+      "mesh": "03 Glass and iron concourse \u2014 Travertine"
+    },
+    {
+      "x": -52.9563,
+      "Z": 0.83,
+      "floor": -9.63541030883789,
+      "mesh": "03 Glass and iron concourse \u2014 Travertine"
+    }
+  ],
+  "doorway_sweep_blockers": [],
+  "platform_registration": {
+    "rail_local_Main": -8.886825,
+    "platform_local_Main": -7.718425,
+    "rise": 1.1684,
+    "central_lower_landing_Z_bounds": [
+      -1.65,
+      1.65
+    ],
+    "raw_track_center_Z": 7.2662,
+    "finding": "Representative rail center Z7.2662 registers to the Z11 platform and its lower access landing."
+  }
+}

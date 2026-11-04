@@ -1,0 +1,676 @@
+{
+  "scope": "Scratch-only actual browser same-camera lighting isolation. No geometry or runtime mutations; candidate phase4-runtime-final data, preliminary old probes.",
+  "sourceAppSha256": "4822c14f76467393e0cea7ff3e87e0d99b2a6cfbec99ac53071d7b1ccbef3a9b",
+  "diagnosticBundleSha256": "5f85204433e710efd499b58b1cb650b0a187dfb36a29ad81aeef5fc69ec31128",
+  "variants": [
+    {
+      "name": "baseline",
+      "options": {},
+      "materials": 85,
+      "exposure": 4.153373611617231,
+      "lights": [
+        {
+          "type": "HemisphereLight",
+          "intensity": 0.05,
+          "castShadow": false
+        },
+        {
+          "type": "DirectionalLight",
+          "intensity": 3.8,
+          "castShadow": true,
+          "normalBias": 0.015,
+          "bias": -2e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        }
+      ],
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 144,
+        "triangles": 7958522,
+        "geometries": 112,
+        "textures": 52,
+        "exposure": 4.153373611617231
+      }
+    },
+    {
+      "name": "white-no-atlases",
+      "options": {
+        "mode": "ao-only",
+        "ao": false
+      },
+      "materials": 85,
+      "exposure": 4.153373611617231,
+      "lights": [
+        {
+          "type": "HemisphereLight",
+          "intensity": 1,
+          "castShadow": false
+        },
+        {
+          "type": "DirectionalLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.015,
+          "bias": -2e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        }
+      ],
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 144,
+        "triangles": 7958522,
+        "geometries": 112,
+        "textures": 52,
+        "exposure": 4.153373611617231
+      }
+    },
+    {
+      "name": "lightmap-no-mips",
+      "options": {
+        "mode": "lightmap-only",
+        "noAtlasMips": true
+      },
+      "materials": 85,
+      "exposure": 4.153373611617231,
+      "lights": [
+        {
+          "type": "HemisphereLight",
+          "intensity": 0,
+          "castShadow": false
+        },
+        {
+          "type": "DirectionalLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.015,
+          "bias": -2e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        }
+      ],
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 144,
+        "triangles": 7958522,
+        "geometries": 112,
+        "textures": 52,
+        "exposure": 4.153373611617231
+      }
+    },
+    {
+      "name": "ao-no-mips",
+      "options": {
+        "mode": "ao-only",
+        "noAtlasMips": true
+      },
+      "materials": 85,
+      "exposure": 4.153373611617231,
+      "lights": [
+        {
+          "type": "HemisphereLight",
+          "intensity": 1,
+          "castShadow": false
+        },
+        {
+          "type": "DirectionalLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.015,
+          "bias": -2e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 0,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        }
+      ],
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 144,
+        "triangles": 7958522,
+        "geometries": 112,
+        "textures": 52,
+        "exposure": 4.153373611617231
+      }
+    },
+    {
+      "name": "baseline-no-atlas-mips",
+      "options": {
+        "noAtlasMips": true
+      },
+      "materials": 85,
+      "exposure": 4.153373611617231,
+      "lights": [
+        {
+          "type": "HemisphereLight",
+          "intensity": 0.05,
+          "castShadow": false
+        },
+        {
+          "type": "DirectionalLight",
+          "intensity": 3.8,
+          "castShadow": true,
+          "normalBias": 0.015,
+          "bias": -2e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": false,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        },
+        {
+          "type": "SpotLight",
+          "intensity": 60,
+          "castShadow": true,
+          "normalBias": 0.012,
+          "bias": -5e-05
+        }
+      ],
+      "camera": {
+        "position": [
+          8,
+          3.732800000000001,
+          37
+        ],
+        "quaternion": [
+          0.14068191942738867,
+          0.09051058880350103,
+          -0.012916300639636422,
+          0.9858243251403649
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 144,
+        "triangles": 7958522,
+        "geometries": 112,
+        "textures": 52,
+        "exposure": 4.153373611617231
+      }
+    }
+  ],
+  "requests": [
+    {
+      "file": "repo/penn-station-1935/index.html",
+      "bytes": 17576,
+      "sha256": "828e3a80865f5280e8fcc45b72d6b885c1a1dd6e0be4c6989fcfe45898e849bd"
+    },
+    {
+      "file": "repo/shared/theme.css",
+      "bytes": 5390,
+      "sha256": "d83f0e1d47673cf497c6c55dd11790a3c2d7974fadddbfd519b5450036016fe8"
+    },
+    {
+      "file": "repo/penn-station-1935/styles.css",
+      "bytes": 28436,
+      "sha256": "66386dac0d4de321e6f2147be957e0c3f10c762aa50fd09577abec39ba1ece80"
+    },
+    {
+      "file": "work/waiting-material-diagnostics-atlas/dist/app.js",
+      "bytes": 1042280,
+      "sha256": "5f85204433e710efd499b58b1cb650b0a187dfb36a29ad81aeef5fc69ec31128"
+    },
+    {
+      "file": "repo/shared/ui.js",
+      "bytes": 13714,
+      "sha256": "5c6287b11e79f60bf76b3b6fd54bcf47996684e11c7eefeec797c70555f97013"
+    },
+    {
+      "file": "work/waiting-material-diagnostics-atlas/dist/chunks/chunk-NMZTF4TX.js",
+      "bytes": 373510,
+      "sha256": "e3b04f9c38d4f052f5185e84f75d7fde359dccbdd13200207236c3860729af13"
+    },
+    {
+      "file": "work/phase4-runtime-final/sky.hdr",
+      "bytes": 705246,
+      "sha256": "14c981583f6bf81ab8f28bf2a9ff70e247101cd914084cc2637cd80fc367b619"
+    },
+    {
+      "file": "work/phase4-runtime-final/scene-manifest.json",
+      "bytes": 293010,
+      "sha256": "3a84ac64aed3f53fa244e1ba69c131b7e6fd0c17b52c685369b3e1df4227a8c3"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-exterior.glb.gz",
+      "bytes": 2711384,
+      "sha256": "eeaa897e90e5ffe5c50625ec80509691e0974713368ef1da7cffa4e19e4f378e"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-context.glb.gz",
+      "bytes": 493263,
+      "sha256": "41574bb9422c9ebed739cade30fa5b6c0e38003faa034a6bad22399e3893d501"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-platform.glb.gz",
+      "bytes": 150634,
+      "sha256": "609e4c2b33ff3c9c19aa315424ae2adf6a44000f938f9efbf3e9249e49776454"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-concourse.glb.gz",
+      "bytes": 4651564,
+      "sha256": "c62b8630e7a65ecedb99bd6990755988ef7defeb888330641f41e33b923bbd08"
+    },
+    {
+      "file": "work/phase4-runtime-final/model-waiting-room.glb.gz",
+      "bytes": 7804722,
+      "sha256": "bd8e87215a6a430e977ee028e6f6870f6736f90d9d5134d7e119826c9e69430b"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/96c2452f554cdcc0f0cc.ktx2",
+      "bytes": 1755,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/3c0da04621655d4f3d2e.ktx2",
+      "bytes": 1555763,
+      "sha256": "3c0da04621655d4f3d2ed1107cc51506c79bbf96a2ef7cf1e299104d06784ffe"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/874c9b76b9241a66b55d.ktx2",
+      "bytes": 3677701,
+      "sha256": "874c9b76b9241a66b55dd98cee774365c7fed228a2812fadee15a558e34d2175"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/f20239dbf2c1e548d747.ktx2",
+      "bytes": 5419396,
+      "sha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/99506050512319470358.ktx2",
+      "bytes": 3925529,
+      "sha256": "995060505123194703585dd16bb1e855e71ac6e35355e90af1b28602ca0efc19"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "bytes": 3849773,
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/a2ee0eb44659d956bcb7.ktx2",
+      "bytes": 11104,
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/4f684d7c526a22f95162.ktx2",
+      "bytes": 3935940,
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/fe04d608a501570c70fd.ktx2",
+      "bytes": 2621310,
+      "sha256": "fe04d608a501570c70fdfaee251b8ecd8b5322710a93dad65e5e2f74e938252e"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/3d6f4a3323017ae4bc57.ktx2",
+      "bytes": 4296,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/3f048a6c06cf38b8262f.ktx2",
+      "bytes": 794564,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/f20a20acf02f7ce2462f.ktx2",
+      "bytes": 862627,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/de511a781294895dfd20.ktx2",
+      "bytes": 863637,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/a39f7640085f37632425.ktx2",
+      "bytes": 842348,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/69568bc9b65cd706ace5.ktx2",
+      "bytes": 839153,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/ebad7b61f035b595fc1f.ktx2",
+      "bytes": 862446,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/90e6455c8ad02ae0eefb.ktx2",
+      "bytes": 892516,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "bytes": 863104,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/4d7a733aa9e3a117b76b.ktx2",
+      "bytes": 607982,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/225e6d23dc7049ed4904.ktx2",
+      "bytes": 1771894,
+      "sha256": "225e6d23dc7049ed490438e7623f88800f5f7a6da65195979feb8022a9a3165c"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/3fd19ca7c33c82238530.ktx2",
+      "bytes": 297484,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "bytes": 532453,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/5be97a02f824d013360b.ktx2",
+      "bytes": 429110,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/5c6c2c7409337af4cd71.ktx2",
+      "bytes": 533240,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/547e3573b92e90adcd24.ktx2",
+      "bytes": 1895977,
+      "sha256": "547e3573b92e90adcd2496b43f6aa5a1558512237657be4c541a7628a1b5dc6e"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/4210287e358bb2da10ee.ktx2",
+      "bytes": 3849018,
+      "sha256": "4210287e358bb2da10ee349f0c96584be6dbaafb98946db905dcf46f2703d3b1"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "bytes": 3746211,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/9a2a57aafe53d16676d3.ktx2",
+      "bytes": 5419454,
+      "sha256": "9a2a57aafe53d16676d31a2fb36aa3a015dd6d877bb70b19c7eebf74000a9f1c"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/13c4f61beb144394cd73.ktx2",
+      "bytes": 3556449,
+      "sha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/cfa5d8f301774c078a0c.ktx2",
+      "bytes": 3934923,
+      "sha256": "cfa5d8f301774c078a0cc207057c45a2591a3f74972d7daadd95aeb9bffde1e0"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/79410fc7f29b67cf4e8c.ktx2",
+      "bytes": 2381311,
+      "sha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344"
+    },
+    {
+      "file": "work/phase4-runtime-final/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "file": "work/phase4-runtime-final/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/63eed54d00a46de365de.ktx2",
+      "bytes": 2027922,
+      "sha256": "63eed54d00a46de365de7314c1258483464dd6f34a102c6cb47dfab881c4fdc0"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/01d3655d53762280c6a4.ktx2",
+      "bytes": 1854520,
+      "sha256": "01d3655d53762280c6a4a10d8f93d184d6f3122494669dac4daa1ba47379b7a1"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/8714963ae3c33593ef07.ktx2",
+      "bytes": 159620,
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd"
+    },
+    {
+      "file": "work/phase4-runtime-final/textures/e0cadb7862053a61b888.ktx2",
+      "bytes": 5398821,
+      "sha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee"
+    },
+    {
+      "file": "work/phase4-runtime-final/reflection-platform.hdr.gz",
+      "bytes": 932268,
+      "sha256": "3a695c565b18102e96ff6061c92da225deecb2a204785e40f2d53416248a3142"
+    },
+    {
+      "file": "work/phase4-runtime-final/reflection-concourse.hdr.gz",
+      "bytes": 1325665,
+      "sha256": "60d40fee2999a98441779a1ec782f462066effba76d684e58cfa2f12e640ce1a"
+    },
+    {
+      "file": "work/phase4-runtime-final/lighting-platform-sky.webp",
+      "bytes": 877570,
+      "sha256": "e1c1c3a171307d0cfa16c70b9a7a830c81a291b3ca06ff040c83b3b63804cf5c"
+    },
+    {
+      "file": "work/phase4-runtime-final/reflection-waiting-room.hdr.gz",
+      "bytes": 1324589,
+      "sha256": "8f1e0b851f399cade8b44704a02cf7bfc7ebebeea5b373a47db88b80eaa9862c"
+    },
+    {
+      "file": "work/phase4-runtime-final/lighting-exterior-sky.webp",
+      "bytes": 1276802,
+      "sha256": "d3acd25c22db510643f3ba5de8c39232fbc102c283ae980cbb20d60391367021"
+    },
+    {
+      "file": "work/phase4-runtime-final/lighting-concourse-sky.webp",
+      "bytes": 1788830,
+      "sha256": "83fab9a377428e1d243dee9287e24f61d0130407ddb6e5a979487c6cd3cd0386"
+    },
+    {
+      "file": "work/phase4-runtime-final/lighting-waiting-room-masonry-sky.webp",
+      "bytes": 3150842,
+      "sha256": "f4f08bf68331ac90cd4776b8b6a25de8eea0f2b254c3bd05156a69576a1020c5"
+    },
+    {
+      "file": "work/phase4-runtime-final/lighting-waiting-room-vault-sky.webp",
+      "bytes": 14199582,
+      "sha256": "bb7a4e92ee16edbb8a01d40a1f82bc29c0ac592167aecf722123dda68f0efaec"
+    }
+  ],
+  "pageErrors": [],
+  "browser": "156.0.8078.48",
+  "camera": {
+    "position": [
+      8,
+      3.732800000000001,
+      37
+    ],
+    "quaternion": [
+      0.14068191942738867,
+      0.09051058880350103,
+      -0.012916300639636422,
+      0.9858243251403649
+    ],
+    "fov": 50
+  }
+}

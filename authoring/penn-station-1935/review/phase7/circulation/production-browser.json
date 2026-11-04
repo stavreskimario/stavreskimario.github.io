@@ -1,0 +1,3527 @@
+{
+  "created": "2026-10-30T05:03:39.890Z",
+  "closed": "2026-10-30T05:05:24.555Z",
+  "status": "PASS: native Main -> P2 -> P1 -> Main, both physical down/up routes",
+  "scope": "UNMODIFIED production bundle and native Main-concourse Walk preset. Actual six-zone movement through the source-supported southern passage, no camera injection/teleport/hidden geometry/collision changes. No FPS or complete1935claim.",
+  "browser": "156.0.8078.74",
+  "productionBundle": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/app.js",
+    "sha256": "0300d554eec34cd2dfe6fd8cfc53d84ec8abdf2d94d09d9706e69a456efcbd27",
+    "bytes": 1044530,
+    "modified": false
+  },
+  "inputModels": [
+    {
+      "file": "model-exterior.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior-low.glb.gz",
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "bytes": 2805415
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room-low.glb.gz",
+      "sha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "bytes": 7239871
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/model-concourse.glb.gz",
+      "sha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "bytes": 4543895
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/model-concourse-low.glb.gz",
+      "sha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "bytes": 4543895
+    },
+    {
+      "file": "model-context.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context-low.glb.gz",
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "bytes": 188633
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    }
+  ],
+  "servedFiles": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/index.html",
+      "sha256": "44eb0d427d70c9b561746bdebd9573b02983ba94c53934b7e2421281c8b0433a",
+      "bytes": 18050
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/shared/theme.css",
+      "sha256": "d83f0e1d47673cf497c6c55dd11790a3c2d7974fadddbfd519b5450036016fe8",
+      "bytes": 5390
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/styles.css",
+      "sha256": "66386dac0d4de321e6f2147be957e0c3f10c762aa50fd09577abec39ba1ece80",
+      "bytes": 28436
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/app.js",
+      "sha256": "0300d554eec34cd2dfe6fd8cfc53d84ec8abdf2d94d09d9706e69a456efcbd27",
+      "bytes": 1044530
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/shared/ui.js",
+      "sha256": "5c6287b11e79f60bf76b3b6fd54bcf47996684e11c7eefeec797c70555f97013",
+      "bytes": 13714
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+      "sha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393",
+      "bytes": 373510
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/sky.hdr",
+      "sha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1",
+      "bytes": 2513408
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/scene-manifest.json",
+      "sha256": "fdb502f1b0226f59f9102f9cea88493cd771b5d08323e074a7b9a19d0191de65",
+      "bytes": 594687
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-context.glb.gz",
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "bytes": 161587
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/model-concourse.glb.gz",
+      "sha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "bytes": 4543895
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829",
+      "bytes": 297484
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1",
+      "bytes": 429110
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf",
+      "bytes": 532453
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce",
+      "bytes": 533240
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/1171d79307cd9bf10880.ktx2",
+      "sha256": "1171d79307cd9bf108809bd0263e568753c8aa099270a2b380b5e4fb62d986a7",
+      "bytes": 1231718
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/0fd52d7b147ba7546220.ktx2",
+      "sha256": "0fd52d7b147ba7546220fddf690a386f56656f749bc5c8774f6a09f3a45677bf",
+      "bytes": 541708
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f",
+      "bytes": 794564
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85",
+      "bytes": 842348
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88",
+      "bytes": 862627
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6",
+      "bytes": 863637
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/d2d09e30602bc72361bc.ktx2",
+      "sha256": "d2d09e30602bc72361bc86e6f4cf0e5ac417020c0a8e49a83ef3db4ef6d90c6e",
+      "bytes": 541669
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016",
+      "bytes": 839153
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c",
+      "bytes": 862446
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/6c6853f06bb64da5e12d.ktx2",
+      "sha256": "6c6853f06bb64da5e12db0042d3ef9a2c52fe8878952162f31fccf07567c56fe",
+      "bytes": 541497
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd",
+      "bytes": 892516
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b",
+      "bytes": 863104
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23",
+      "bytes": 607982
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892",
+      "bytes": 1755
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/7004a2a65ab65ac2eede.ktx2",
+      "sha256": "7004a2a65ab65ac2eede66f864a47166c1ac11041de8bbd56fc0da1cd603bf62",
+      "bytes": 1555732
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "sha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88",
+      "bytes": 5419396
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b",
+      "bytes": 3849773
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+      "bytes": 3716906
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e",
+      "bytes": 11104
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db",
+      "bytes": 3746211
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a",
+      "bytes": 3935940
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+      "bytes": 3106230
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360",
+      "bytes": 4296
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/basis/basis_transcoder.js",
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "bytes": 57529
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "bytes": 527333
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/9af10c675e67054369ce.ktx2",
+      "sha256": "9af10c675e67054369cec80e5046f905d7c03dddc28fd54d49c4d0a2b819e7f1",
+      "bytes": 1499779
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/textures/1e3025f04821ca80c83a.ktx2",
+      "sha256": "1e3025f04821ca80c83addcfd0acf1f1a01c76264f08da0995edc89bd9138f94",
+      "bytes": 2104923
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/textures/54c4b6193c2de4abdc13.ktx2",
+      "sha256": "54c4b6193c2de4abdc13391211c34050812afbc2c482e7cfd5303b7d46eac331",
+      "bytes": 2816144
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "sha256": "7be11436c1b7fe0e5ab786e16390559b43425abb178c8bc9ac5305ff0f5da37c",
+      "bytes": 3761640
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "sha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4",
+      "bytes": 3139363
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "sha256": "0f399333f7175f5e5afa242c687131ea51951076a896d13ad3e5604f6a58c3d6",
+      "bytes": 3331970
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/textures/9dd19af74e513b23a448.ktx2",
+      "sha256": "9dd19af74e513b23a448e456cbb65f6c62d9585ea5801371dc39d8a9951b51c5",
+      "bytes": 2757425
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd",
+      "bytes": 159620
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/63eed54d00a46de365de.ktx2",
+      "sha256": "63eed54d00a46de365de7314c1258483464dd6f34a102c6cb47dfab881c4fdc0",
+      "bytes": 2027922
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/4741dad316808fb38922.ktx2",
+      "sha256": "4741dad316808fb3892285b89cdd3fc0ef2f07d13875b4b57a06ffe1b09797ba",
+      "bytes": 1793501
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "sha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee",
+      "bytes": 5398821
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+      "bytes": 3734401
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "sha256": "08b0fe03227cf7eec1cc85b80e1fe6779cb7712ac14b751b05e0d35c47090113",
+      "bytes": 10905637
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/reflection-platform.hdr.gz",
+      "sha256": "5a3fc2b3dbe5c7390f2bbbbbf80858b377140d188f3c9df5f3520d371ffc00e0",
+      "bytes": 4785576
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-exterior-sky.webp",
+      "sha256": "9fced6e69fc9d34c9e01ba0b6d5f48abe451aad85852fdb4836795550f64f6f3",
+      "bytes": 1276008
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/reflection-concourse.hdr.gz",
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d",
+      "bytes": 5537345
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-platform-sky.webp",
+      "sha256": "98ba14e32f3bd6c3bcae69fa3941bc977bf66eb986c38a3daba725ef36c6a113",
+      "bytes": 783758
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-concourse-sky.webp",
+      "sha256": "b8c23d8c48c2d627e76384d1bdd8e67ce2165fb673028b88c96a6b26a487861e",
+      "bytes": 1170636
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-concourse-access-sky.webp",
+      "sha256": "c1225d6f547d96297bcd8fa3faa781e0fbab554c340a85f76f591c65b05e7712",
+      "bytes": 2616680
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/runtime-v2/lighting-concourse-circulation-sky.webp",
+      "sha256": "62927652ca53e9a0cf4325896559dbddf5063ccb55db4ec3732adecdc146f5bb",
+      "bytes": 707476
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/reflection-waiting-room.hdr.gz",
+      "sha256": "2852344887b0f51174341b452c1fb2122787fd3924db60b910f71fbc527a4844",
+      "bytes": 4936342
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-waiting-room-masonry-sky.webp",
+      "sha256": "9db43579186eaedb86be3c1ea4c313c920cc5fe8f765c73fbcfa9f5396baefa0",
+      "bytes": 3033948
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-waiting-room-order-sky.webp",
+      "sha256": "100bd6a739b62feaf40ff3f03dd2d2375cca60d345f1d3d4097c978868249df0",
+      "bytes": 5611270
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/lighting-waiting-room-vault-sky.webp",
+      "sha256": "0f8063785603d0b5c7f08f537dbd6e7dabeb0d4eec835b75d979172b1176e86c",
+      "bytes": 14189900
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+  ],
+  "requestFailures": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/sky.hdr?revision=7-circulation-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/63eed54d00a46de365de.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/4741dad316808fb38922.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:50840/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "externalBlocked": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "serverErrors": [],
+  "browserClosed": true,
+  "phases": [
+    {
+      "label": "Main east toward source-supported passage",
+      "target": [
+        -52,
+        33
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -52.03099245917906,
+            -2.58719992246196,
+            33
+          ],
+          "quaternion": [
+            -0.04592957176674312,
+            -0.705613518561941,
+            -0.045929568352004894,
+            0.705613571022383
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 0,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 2898,
+          "lastCandidates": 52,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.26719992246196
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 211,
+          "triangles": 21308250,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5513167812420854,
+          "renderFrame": 614,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 52
+    },
+    {
+      "label": "Main side of southern portal",
+      "target": [
+        -52,
+        44
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -51.999836293567675,
+            -2.5872,
+            43.99639692031991
+          ],
+          "quaternion": [
+            -9.150683766881809e-05,
+            -0.9978872545901122,
+            -0.06495415643495461,
+            0.0014058146857622836
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 6834,
+          "lastCandidates": 12,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 123,
+          "triangles": 17692674,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5536987231680992,
+          "renderFrame": 955,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 37
+    },
+    {
+      "label": "Cross southern enclosure",
+      "target": [
+        -52,
+        49.5
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -51.999836293567675,
+            -2.5872,
+            49.447207714444644
+          ],
+          "quaternion": [
+            9.648858112441824e-07,
+            -0.997888241755762,
+            -0.06495426656446404,
+            -1.482347898920478e-05
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 8010,
+          "lastCandidates": 12,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 111,
+          "triangles": 17580498,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5570151416714602,
+          "renderFrame": 1155,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 21
+    },
+    {
+      "label": "Peripheral P2court",
+      "target": [
+        -52,
+        54.791453
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -51.999836293567675,
+            -2.5872,
+            54.75265823959196
+          ],
+          "quaternion": [
+            9.648858112441824e-07,
+            -0.997888241755762,
+            -0.06495426656446404,
+            -1.482347898920478e-05
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 9162,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 111,
+          "triangles": 17580498,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.558659245809202,
+          "renderFrame": 1348,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 20
+    },
+    {
+      "label": "P2court-to-gate",
+      "target": [
+        -48.2,
+        54.791453
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -48.24154513556575,
+            -2.5879137850904095,
+            54.791217469706844
+          ],
+          "quaternion": [
+            -0.045694519548157786,
+            -0.7092062270534332,
+            -0.04616342377836508,
+            0.702002476275516
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 11250,
+          "lastCandidates": 11,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.267913785090421
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 175,
+          "triangles": 20969266,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.558659245809202,
+          "renderFrame": 1531,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 18
+    },
+    {
+      "label": "P2stairs-down",
+      "status": "PASS",
+      "threshold": -29.8,
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -29.545267007949768,
+            -10.302399799572761,
+            54.791217469706844
+          ],
+          "quaternion": [
+            -0.08464932163766443,
+            -0.7020217238109108,
+            -0.08464932309409517,
+            0.7020217117323024
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 13968,
+          "lastCandidates": 6,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -11.982399991334407
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 164,
+          "triangles": 8594602,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 4.150916565714177,
+          "renderFrame": 1986,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 87
+    },
+    {
+      "label": "P2stairs-up",
+      "status": "PASS",
+      "threshold": -47.92,
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -48.29958774707105,
+            -2.588181162852227,
+            54.791217469706844
+          ],
+          "quaternion": [
+            -0.08464932163766443,
+            -0.7020217238109108,
+            -0.08464932309409517,
+            0.7020217117323024
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 16728,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.267913785090421
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 175,
+          "triangles": 20969266,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.551274598452645,
+          "renderFrame": 2446,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 87
+    },
+    {
+      "label": "P2gate-to-court",
+      "target": [
+        -52,
+        54.791453
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -51.97499569497172,
+            -2.5871999999999997,
+            54.791217469706844
+          ],
+          "quaternion": [
+            0.04592810424449514,
+            -0.7056360633096098,
+            -0.04593103582747383,
+            -0.70559102555605
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 17904,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 137,
+          "triangles": 18311506,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5529561246846013,
+          "renderFrame": 2649,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 18
+    },
+    {
+      "label": "Under-street P1court",
+      "target": [
+        -52,
+        68.764528
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -52.00007496810202,
+            -2.5872,
+            68.70796479697853
+          ],
+          "quaternion": [
+            5.811598881821288e-05,
+            -0.9978878454204292,
+            -0.0649541948930917,
+            -0.0008928328487749781
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 22980,
+          "lastCandidates": 9,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 99,
+          "triangles": 17293002,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5548883692132938,
+          "renderFrame": 3086,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 47
+    },
+    {
+      "label": "P1court-to-gate",
+      "target": [
+        -48.2,
+        68.764528
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -48.24465992619111,
+            -2.587913785081426,
+            68.76410369941253
+          ],
+          "quaternion": [
+            -0.04558650150501182,
+            -0.7108450115142669,
+            -0.04627009500975174,
+            0.7003430008171738
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 24864,
+          "lastCandidates": 10,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.267913785090421
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 168,
+          "triangles": 8623594,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5560831863078661,
+          "renderFrame": 3251,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 16
+    },
+    {
+      "label": "P1stairs-down",
+      "status": "PASS",
+      "threshold": -29.8,
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -29.38959308389901,
+            -10.30239993456544,
+            68.76410369941253
+          ],
+          "quaternion": [
+            -0.0846493255126028,
+            -0.7020216916749068,
+            -0.08464931921915671,
+            0.7020217438683056
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 27606,
+          "lastCandidates": 6,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -11.982399991334407
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 152,
+          "triangles": 7004682,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 4.150696100541949,
+          "renderFrame": 3710,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 88
+    },
+    {
+      "label": "P1stairs-up",
+      "status": "PASS",
+      "threshold": -47.92,
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -48.225221216788675,
+            -2.588531605379306,
+            68.76410369941253
+          ],
+          "quaternion": [
+            -0.0846493255126028,
+            -0.7020216916749068,
+            -0.08464931921915671,
+            0.7020217438683056
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 30384,
+          "lastCandidates": 9,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.267913785090421
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 168,
+          "triangles": 8623594,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5508776755110303,
+          "renderFrame": 4173,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 88
+    },
+    {
+      "label": "P1gate-to-court",
+      "target": [
+        -52,
+        68.764528
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -51.947920060876264,
+            -2.587199999999977,
+            68.7642306056378
+          ],
+          "quaternion": [
+            0.04583432518839522,
+            -0.7070737586102499,
+            -0.0460246178278792,
+            -0.7041503028992434
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 31512,
+          "lastCandidates": 9,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 129,
+          "triangles": 18199706,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5517760991721663,
+          "renderFrame": 4360,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 17
+    },
+    {
+      "label": "Return through southern opening",
+      "target": [
+        -52,
+        44
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -52.00006888548575,
+            -2.5872,
+            43.98571524920919
+          ],
+          "quaternion": [
+            0.06495418498204282,
+            -0.0010493012445181615,
+            -6.830077934187152e-05,
+            -0.9978876931575117
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 508,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 40218,
+          "lastCandidates": 12,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.2672
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 183,
+          "triangles": 20374708,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5551729059059405,
+          "renderFrame": 5101,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 82
+    },
+    {
+      "label": "Return Main centre",
+      "target": [
+        -52,
+        33
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -52.000082604443875,
+            -2.5872122099155055,
+            32.99390302479939
+          ],
+          "quaternion": [
+            0.06495383571965599,
+            0.0034365295418424665,
+            0.00022368947636861646,
+            -0.9978823274580176
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 1194,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 44712,
+          "lastCandidates": 52,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.26719992246196
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 183,
+          "triangles": 20374708,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.556408519008898,
+          "renderFrame": 5496,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 41
+    },
+    {
+      "label": "Return original native Main start",
+      "target": [
+        -67,
+        33
+      ],
+      "status": "PASS",
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "balanced",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 1,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -66.9868197686913,
+            -2.58719992246196,
+            32.99956023982831
+          ],
+          "quaternion": [
+            0.04592023370339819,
+            -0.705756949582341,
+            -0.04593890451788319,
+            -0.7054701108513038
+          ],
+          "fov": 50
+        },
+        "navigation": {
+          "sourceMeshes": 123,
+          "excludedMeshes": 79,
+          "excludedInstances": 76894,
+          "structuralInstances": 4976,
+          "colliders": 5018,
+          "vaultLightColliders": 2488,
+          "vaultLightSupports": 1194,
+          "ignoredGlazingMaterials": [
+            "ConcourseRecessedWindowGlass",
+            "HistoricGlass",
+            "LunetteGlazing",
+            "OpalCandelabraGlass",
+            "TransparentPassengerCoachGlass"
+          ],
+          "cells": 2236,
+          "queries": 49992,
+          "lastCandidates": 66,
+          "maximumCandidates": 67,
+          "buildMilliseconds": 7.600000001490116,
+          "floorWorld": -4.26719992246196
+        },
+        "scene": {
+          "id": "e6795a66-368d-4174-b4c0-3222d9bc4416",
+          "zones": [
+            {
+              "name": "exterior",
+              "id": "164171da-34fe-4841-9179-aeda6a5c8dab",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "name": "waiting",
+              "id": "656f2edd-4747-4797-b7e2-4b952333ce51",
+              "visible": true,
+              "meshes": 19
+            },
+            {
+              "name": "concourse",
+              "id": "4ed59466-57a1-4650-ae40-3482ef707e7e",
+              "visible": true,
+              "meshes": 23
+            },
+            {
+              "name": "context",
+              "id": "e38c6fdd-705e-4efe-b80f-00abadd8c775",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "name": "platform",
+              "id": "3b86ab38-03c0-457a-a4b4-a61fe6659fa3",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "name": "trains",
+              "id": "c77688c4-741d-4247-a194-4f9f470cf51d",
+              "visible": true,
+              "meshes": 16
+            }
+          ]
+        },
+        "metrics": {
+          "calls": 147,
+          "triangles": 18335714,
+          "geometries": 131,
+          "textures": 65,
+          "exposure": 1.5573928839472289,
+          "renderFrame": 5981,
+          "pixelRatio": 1,
+          "canvasPixels": [
+            1440,
+            916
+          ],
+          "reversedDepth": true
+        },
+        "assets": [
+          {
+            "file": "model-context.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-trains.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "reflectionMaterials": 14,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior.glb",
+            "materials": 11,
+            "bakedMaterials": 4,
+            "occlusionMaterials": 4,
+            "reflectionMaterials": 0,
+            "reflectionFile": null,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-platform.glb",
+            "materials": 11,
+            "bakedMaterials": 3,
+            "occlusionMaterials": 3,
+            "reflectionMaterials": 11,
+            "reflectionFile": "reflection-platform.hdr.gz",
+            "atlasChannels": [
+              0
+            ]
+          },
+          {
+            "file": "model-concourse.glb",
+            "materials": 22,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "reflectionMaterials": 22,
+            "reflectionFile": "reflection-concourse.hdr.gz",
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-waiting-room.glb",
+            "materials": 15,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "reflectionMaterials": 15,
+            "reflectionFile": "reflection-waiting-room.hdr.gz",
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "traceSamples": 52
+    }
+  ],
+  "inputActionCount": 438,
+  "driverScope": "Chrome launched with Metal requested; actual driver is checked again during live publication verification. No FPS or physical-phone claim."
+}

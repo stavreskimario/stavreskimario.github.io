@@ -1,0 +1,139 @@
+{
+  "status": "PASS exact mapped cached-floor receiver membership removed before primary import",
+  "roi": {
+    "x": [
+      -162.2857,
+      -111.4247
+    ],
+    "z": [
+      3.1014,
+      37.212321
+    ]
+  },
+  "objects": [
+    {
+      "owner": "Continuous station railway concrete foundation",
+      "sourceFamily": "Railway smooth concrete track base",
+      "oldFaces": 12,
+      "retainedFaces": 20,
+      "changedOldPolygons": 2,
+      "removedActualAreaM2": 1734.9155529809993,
+      "retainedClippedAreaM2": 76080.40015644694,
+      "originalUVLayerNamesRetained": [
+        "UVMap"
+      ],
+      "visibilityUnchanged": true,
+      "originalWorldMatrixRetained": true,
+      "cacheExpectedPlaneMain0Y": -9.22337532043457,
+      "runtimePlaneMain0Y": -9.223750092452303,
+      "planeDifferenceQualified": "Uniqueauthoritativefoundationowner/rawplane differsby0.374772mmfromquantizedruntime representation; no runtimeheight or tolerance changed."
+    },
+    {
+      "owner": "Platform 04 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "oldFaces": 24,
+      "retainedFaces": 48,
+      "changedOldPolygons": 12,
+      "removedActualAreaM2": 523.5914909508641,
+      "retainedClippedAreaM2": 2667.483754804865,
+      "originalUVLayerNamesRetained": [
+        "UVMap"
+      ],
+      "visibilityUnchanged": true,
+      "originalWorldMatrixRetained": true,
+      "cacheExpectedPlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualified": null
+    },
+    {
+      "owner": "Platform 04 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "oldFaces": 304,
+      "retainedFaces": 480,
+      "changedOldPolygons": 88,
+      "removedActualAreaM2": 771.2544912127388,
+      "retainedClippedAreaM2": 2601.1633796203364,
+      "originalUVLayerNamesRetained": [
+        "UVMap"
+      ],
+      "visibilityUnchanged": true,
+      "originalWorldMatrixRetained": true,
+      "cacheExpectedPlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualified": null
+    },
+    {
+      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "oldFaces": 24,
+      "retainedFaces": 48,
+      "changedOldPolygons": 12,
+      "removedActualAreaM2": 553.1153047969322,
+      "retainedClippedAreaM2": 2908.8716942514015,
+      "originalUVLayerNamesRetained": [
+        "UVMap"
+      ],
+      "visibilityUnchanged": true,
+      "originalWorldMatrixRetained": true,
+      "cacheExpectedPlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualified": null
+    },
+    {
+      "owner": "Platform 05 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "oldFaces": 304,
+      "retainedFaces": 480,
+      "changedOldPolygons": 88,
+      "removedActualAreaM2": 800.7731989119729,
+      "retainedClippedAreaM2": 2514.6625587301737,
+      "originalUVLayerNamesRetained": [
+        "UVMap"
+      ],
+      "visibilityUnchanged": true,
+      "originalWorldMatrixRetained": true,
+      "cacheExpectedPlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualified": null
+    }
+  ],
+  "removedAreaBySourceFamily": {
+    "Railway smooth concrete track base": 1734.9155529809993,
+    "RailwayPlatformStippledGranolithicPhase9": 1076.7067957477961,
+    "RailwayPlatformRubbedConcretePhase9": 1572.0276901247116
+  },
+  "runtimeOwnedAreaBySourceFamily": {
+    "Railway smooth concrete track base": 1734.9155529809996,
+    "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
+    "RailwayPlatformStippledGranolithicPhase9": 1026.5997759210595
+  },
+  "explicitCacheOnlyHiddenInterface": {
+    "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+    "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+    "oldPhase9ReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+    "sourceTriangleIndex": 3,
+    "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+    "clippedAreaM2": 50.10701982673692,
+    "orientation": "DOWNWARD",
+    "role": "CachedrawclosedgranolithicundersidecoincidentwithRubbedtop; alreadyomittedfrommountedruntimebyPhase9hidden-interfacecleanup. RemovefromcacheinsideownedROIaswellduringtruefloorswap; no newprimaryfaceadded.",
+    "visibleTopAndSideAreaExact": true,
+    "areaToleranceUnchanged": true
+  },
+  "otherCachedObjectsChanged": 0,
+  "newHiddenObjects": 0,
+  "newCapFaces": 0,
+  "clippingCore": "floor_clip.py sharedwithruntimepartition",
+  "qualification": "The trackbase cache usesitsown exact rawsourceupperplane; ~0.375mm runtimequantization difference recorded, not a raised runtime tolerance orheightmove. RuntimefloorP/N/UV0authority unchanged.",
+  "actualChangedObjectNames": [
+    "Continuous station railway concrete foundation",
+    "Platform 04 continuous30-inch-gridded granolithic dressing",
+    "Platform 04 source-section continuous walls and coved slab",
+    "Platform 05 continuous30-inch-gridded granolithic dressing",
+    "Platform 05 source-section continuous walls and coved slab"
+  ],
+  "actualObjectsBefore": 90607,
+  "allOtherObjectPointersMatricesVisibilityExact": true,
+  "sourceCacheSha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3",
+  "membershipSha256": "06bae65d5126394ac4df69576ee21915bebf2d8b800cd1dcd4a89b15439cc5e7",
+  "seconds": 6.410299917013617
+}

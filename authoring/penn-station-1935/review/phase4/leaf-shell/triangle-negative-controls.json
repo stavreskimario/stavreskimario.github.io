@@ -1,0 +1,140 @@
+{
+  "sourceSha256": "010b42068b71bb6a152de0b5b582516e3d970f487c7f1ccd5781a128cf7071eb",
+  "intersectionMethod": "Actual float32 Blender loop triangles, BVHTree triangle overlap excluding any shared-vertex adjacent pair",
+  "candidates": [
+    {
+      "rank": 0,
+      "candidate": "old",
+      "selfIntersectionPairs": 84,
+      "examplePairs": [
+        [
+          1516,
+          3355
+        ],
+        [
+          1517,
+          3355
+        ],
+        [
+          1517,
+          3354
+        ],
+        [
+          1515,
+          3354
+        ],
+        [
+          1515,
+          3359
+        ],
+        [
+          1512,
+          3359
+        ],
+        [
+          1514,
+          3354
+        ],
+        [
+          1473,
+          3359
+        ]
+      ],
+      "badWindingEdges": 0,
+      "signedVolume": 0.047472845093850316,
+      "frontUnchanged": true,
+      "bounds": [
+        0.7436363697052002,
+        -0.5331889986991882,
+        0.10000000149011612,
+        1.3581000566482544,
+        0.5331889986991882,
+        1.3021448850631714
+      ]
+    },
+    {
+      "rank": 0,
+      "candidate": "clipped-profile",
+      "selfIntersectionPairs": 0,
+      "examplePairs": [],
+      "badWindingEdges": 0,
+      "signedVolume": 0.053143182466811684,
+      "frontUnchanged": true,
+      "bounds": [
+        0.7485679984092712,
+        -0.5331889986991882,
+        0.10000000149011612,
+        1.3581000566482544,
+        0.5331889986991882,
+        1.357033610343933
+      ]
+    },
+    {
+      "rank": 1,
+      "candidate": "old",
+      "selfIntersectionPairs": 84,
+      "examplePairs": [
+        [
+          1516,
+          3355
+        ],
+        [
+          1517,
+          3355
+        ],
+        [
+          1517,
+          3354
+        ],
+        [
+          1515,
+          3354
+        ],
+        [
+          1515,
+          3359
+        ],
+        [
+          1512,
+          3359
+        ],
+        [
+          1514,
+          3354
+        ],
+        [
+          1473,
+          3359
+        ]
+      ],
+      "badWindingEdges": 0,
+      "signedVolume": 0.04747280509968721,
+      "frontUnchanged": true,
+      "bounds": [
+        0.9713999629020691,
+        -0.5331889986991882,
+        0.8600000143051147,
+        1.5383332967758179,
+        0.5331889986991882,
+        2.0621449947357178
+      ]
+    },
+    {
+      "rank": 1,
+      "candidate": "clipped-profile",
+      "selfIntersectionPairs": 0,
+      "examplePairs": [],
+      "badWindingEdges": 0,
+      "signedVolume": 0.05198262041301418,
+      "frontUnchanged": true,
+      "bounds": [
+        0.9773699045181274,
+        -0.5331889986991882,
+        0.8600000143051147,
+        1.5383332967758179,
+        0.5331889986991882,
+        2.1170358657836914
+      ]
+    }
+  ]
+}

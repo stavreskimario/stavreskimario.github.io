@@ -1,0 +1,1243 @@
+{
+  "scope": "Targeted fixed-camera moulding windows only:486closest-vault halfCSS-pixel samples; authored normals explicitly interpolated without camera-facing flips; no render or asset changes",
+  "sourceModelSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+  "sourceHdrSha256": "084078b1e4743b144ff3416e6f2a74fd94d5db6c3fd8812d86ba8c354f6dcd2b",
+  "camera": {
+    "position": [
+      8,
+      3.732800000000001,
+      37
+    ],
+    "quaternion": [
+      0.14068191942738867,
+      0.09051058880350103,
+      -0.012916300639636422,
+      0.9858243251403649
+    ],
+    "fov": 50
+  },
+  "nearZeroThresholdLinear": 0.0001,
+  "regions": [
+    {
+      "centreScreen": [
+        635,
+        125
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 0,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.01310068285398633,
+      "maximumRadiance": 0.05154977789273034,
+      "minimumFaceDotToCamera": 0.6247525382864608,
+      "minimumFaceDotAuthored": 0.9999205919921699
+    },
+    {
+      "centreScreen": [
+        635,
+        205
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 0,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.006127999262397643,
+      "maximumRadiance": 0.058479590977312534,
+      "minimumFaceDotToCamera": 0.10765002343740962,
+      "minimumFaceDotAuthored": 0.9999481524760573
+    },
+    {
+      "centreScreen": [
+        635,
+        220
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 0,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.015110708857989938,
+      "maximumRadiance": 0.043919892093672086,
+      "minimumFaceDotToCamera": 0.34387992561834035,
+      "minimumFaceDotAuthored": 0.9999241224510437
+    },
+    {
+      "centreScreen": [
+        635,
+        230
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 0,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.014680032537811732,
+      "maximumRadiance": 0.03658605835642767,
+      "minimumFaceDotToCamera": 0.5550466221965618,
+      "minimumFaceDotAuthored": 0.9998998352517863
+    },
+    {
+      "centreScreen": [
+        645,
+        205
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 39,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.0,
+      "maximumRadiance": 0.04417121490032283,
+      "minimumFaceDotToCamera": 0.5703212540940832,
+      "minimumFaceDotAuthored": 0.9998711528572776
+    },
+    {
+      "centreScreen": [
+        645,
+        220
+      ],
+      "samples": 81,
+      "nearZeroBilinearSamples": 0,
+      "backFacingSamples": 0,
+      "opposedAuthoredNormals": 0,
+      "minimumRadiance": 0.01944281565919833,
+      "maximumRadiance": 0.051997637153878985,
+      "minimumFaceDotToCamera": 0.3597785784106001,
+      "minimumFaceDotAuthored": 0.9999911461259389
+    }
+  ],
+  "darkestSamplesWithLitPairs": [
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        647,
+        203.5
+      ],
+      "faceIndex": 80729,
+      "world": [
+        -0.9037132055732666,
+        39.089172976908415,
+        -13.68525926812616
+      ],
+      "uv": [
+        0.9091046978048076,
+        0.4028405973654573
+      ],
+      "geometricNormal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "authoredInterpolatedNormal": [
+        0.6419549139697012,
+        -0.48123592401345333,
+        0.596913623457424
+      ],
+      "faceDotToCamera": 0.8487001487783509,
+      "authoredDotToCamera": 0.8486233121405651,
+      "faceDotAuthored": 0.9999999778764068,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -0.9621824622154236,
+          39.231842041015625,
+          -13.507328987121582
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.910388171672821,
+          0.4015975594520569
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7446,
+            4891
+          ],
+          "bilinearWeight": 0.06517972954209847,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9035343644434786,
+                39.076907721865474,
+                -13.695343384156454
+              ],
+              "faceDotToCamera": 0.848683570862303,
+              "authoredDotToCamera": 0.8485528462815624,
+              "faceDotAuthored": 0.9999998925364932
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7447,
+            4891
+          ],
+          "bilinearWeight": 0.5049938882840869,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.8983538013361896,
+                39.09103645814357,
+                -13.689519077695097
+              ],
+              "faceDotToCamera": 0.848649153790868,
+              "authoredDotToCamera": 0.8486040118356452,
+              "faceDotAuthored": 0.9999999211587174
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7446,
+            4892
+          ],
+          "bilinearWeight": 0.04913585347382457,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.914625319635695,
+                39.076329938554444,
+                -13.683883830341223
+              ],
+              "faceDotToCamera": 0.8487929818779415,
+              "authoredDotToCamera": 0.8486113637138708,
+              "faceDotAuthored": 0.9999998798864836
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7447,
+            4892
+          ],
+          "bilinearWeight": 0.3806905286999901,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9094447565284058,
+                39.09045867483254,
+                -13.678059523879863
+              ],
+              "faceDotToCamera": 0.848758551249755,
+              "authoredDotToCamera": 0.8486625206676048,
+              "faceDotAuthored": 0.9999999232100893
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          647,
+          203
+        ],
+        "faceIndex": 80729,
+        "world": [
+          -0.9004773148455936,
+          39.11570163629861,
+          -13.667343529984358
+        ],
+        "rawBilinearLinearMean": 0.031539499270607306,
+        "faceDotToCamera": 0.8486998005532689,
+        "authoredDotToCamera": 0.848755394463854,
+        "faceDotAuthored": 0.9999999917128664
+      },
+      "pairedWorldSeparationMetres": 0.032174748344129096
+    },
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        647,
+        204
+      ],
+      "faceIndex": 80729,
+      "world": [
+        -0.9069501944986662,
+        39.06263531421247,
+        -13.70318108651746
+      ],
+      "uv": [
+        0.9088724364828236,
+        0.40291345891545316
+      ],
+      "geometricNormal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "authoredInterpolatedNormal": [
+        0.6421531312793266,
+        -0.48109691026576074,
+        0.5968124654536752
+      ],
+      "faceDotToCamera": 0.8487002716328287,
+      "authoredDotToCamera": 0.8484909816415829,
+      "faceDotAuthored": 0.9999998951990705,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -0.9621824622154236,
+          39.231842041015625,
+          -13.507328987121582
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.910388171672821,
+          0.4015975594520569
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7444,
+            4890
+          ],
+          "bilinearWeight": 0.0028399979825755417,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9028045354658405,
+                39.049228032620306,
+                -13.718451550894404
+              ],
+              "faceDotToCamera": 0.8486427962897901,
+              "authoredDotToCamera": 0.8483918421343795,
+              "faceDotAuthored": 0.9999997785322368
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7445,
+            4890
+          ],
+          "bilinearWeight": 0.16421543740970976,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.8976239723585513,
+                39.0633567688984,
+                -13.712627244433046
+              ],
+              "faceDotToCamera": 0.8486084977606654,
+              "authoredDotToCamera": 0.8484431216585088,
+              "faceDotAuthored": 0.9999998450015137
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7444,
+            4891
+          ],
+          "bilinearWeight": 0.014160334726782648,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9138954906580568,
+                39.04865024930926,
+                -13.706991997079168
+              ],
+              "faceDotToCamera": 0.8487522474761786,
+              "authoredDotToCamera": 0.8484503570635761,
+              "faceDotAuthored": 0.999999756469386
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7445,
+            4891
+          ],
+          "bilinearWeight": 0.818784229880932,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9087149275507678,
+                39.06277898558737,
+                -13.701167690617813
+              ],
+              "faceDotToCamera": 0.8487179354306774,
+              "authoredDotToCamera": 0.848501628022994,
+              "faceDotAuthored": 0.9999998376400512
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          646.5,
+          203.5
+        ],
+        "faceIndex": 80729,
+        "world": [
+          -0.9340466059382084,
+          39.07736605684316,
+          -13.6621655050075
+        ],
+        "rawBilinearLinearMean": 0.022240459492255508,
+        "faceDotToCamera": 0.8489870343048636,
+        "authoredDotToCamera": 0.8487254827361898,
+        "faceDotAuthored": 0.9999998736288065
+      },
+      "pairedWorldSeparationMetres": 0.051317523497853436
+    },
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        646.5,
+        204.5
+      ],
+      "faceIndex": 80729,
+      "world": [
+        -0.9405298123906363,
+        39.0242954502007,
+        -13.697995413122996
+      ],
+      "uv": [
+        0.9085501430503434,
+        0.40269441439299575
+      ],
+      "geometricNormal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "authoredInterpolatedNormal": [
+        0.642592839777626,
+        -0.48105246051459605,
+        0.5963748590436881
+      ],
+      "faceDotToCamera": 0.8489871529467377,
+      "authoredDotToCamera": 0.8484605631693146,
+      "faceDotAuthored": 0.9999995018857366,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -0.9621824622154236,
+          39.231842041015625,
+          -13.507328987121582
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.910388171672821,
+          0.4015975594520569
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7442,
+            4892
+          ],
+          "bilinearWeight": 0.24491127034809568,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9353475720648512,
+                39.01981499344203,
+                -13.70718105618665
+              ],
+              "faceDotToCamera": 0.8489301789702531,
+              "authoredDotToCamera": 0.8484062087568218,
+              "faceDotAuthored": 0.9999994438498312
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7443,
+            4892
+          ],
+          "bilinearWeight": 0.1277314370735233,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9301670089575623,
+                39.033943729720136,
+                -13.701356749725296
+              ],
+              "faceDotToCamera": 0.8488959585498392,
+              "authoredDotToCamera": 0.8484575765600729,
+              "faceDotAuthored": 0.9999995922703192
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7442,
+            4893
+          ],
+          "bilinearWeight": 0.41231686123853917,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9464385272570677,
+                39.01923721013101,
+                -13.695721502371418
+              ],
+              "faceDotToCamera": 0.8490396308732512,
+              "authoredDotToCamera": 0.8484647801243027,
+              "faceDotAuthored": 0.9999993524043287
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7443,
+            4893
+          ],
+          "bilinearWeight": 0.21504043133984185,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9412579641497786,
+                39.033365946409106,
+                -13.68989719591006
+              ],
+              "faceDotToCamera": 0.8490053969708315,
+              "authoredDotToCamera": 0.8485161393718492,
+              "faceDotAuthored": 0.9999995155261986
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          646,
+          204
+        ],
+        "faceIndex": 80729,
+        "world": [
+          -0.967604865582187,
+          39.039043075121484,
+          -13.65698918161862
+        ],
+        "rawBilinearLinearMean": 0.02959720244302148,
+        "faceDotToCamera": 0.8492738933579491,
+        "authoredDotToCamera": 0.848695358031929,
+        "faceDotAuthored": 0.9999993691273732
+      },
+      "pairedWorldSeparationMetres": 0.051303625294125105
+    },
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        647,
+        204.5
+      ],
+      "faceIndex": 80729,
+      "world": [
+        -0.9101882821811724,
+        39.03608864362708,
+        -13.721108988253498
+      ],
+      "uv": [
+        0.9086400963225358,
+        0.40298634519741994
+      ],
+      "geometricNormal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "authoredInterpolatedNormal": [
+        0.6423513716540873,
+        -0.48095781618090816,
+        0.5967112319946762
+      ],
+      "faceDotToCamera": 0.8487001688868336,
+      "authoredDotToCamera": 0.8483584028697206,
+      "faceDotAuthored": 0.9999997436107388,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -0.9621824622154236,
+          39.231842041015625,
+          -13.507328987121582
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.910388171672821,
+          0.4015975594520569
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7443,
+            4890
+          ],
+          "bilinearWeight": 0.7032615422661826,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9079850985731296,
+                39.0350992963422,
+                -13.724275857355764
+              ],
+              "faceDotToCamera": 0.8486770422954488,
+              "authoredDotToCamera": 0.8483405099264518,
+              "faceDotAuthored": 0.9999996857887405
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7444,
+            4890
+          ],
+          "bilinearWeight": 0.060878314997943814,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9028045354658405,
+                39.049228032620306,
+                -13.718451550894404
+              ],
+              "faceDotToCamera": 0.8486427962897901,
+              "authoredDotToCamera": 0.8483918421343795,
+              "faceDotAuthored": 0.9999997785322368
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7443,
+            4891
+          ],
+          "bilinearWeight": 0.21706938352021943,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.919076053765346,
+                39.034521513031166,
+                -13.712816303540528
+              ],
+              "faceDotToCamera": 0.8487865069790198,
+              "authoredDotToCamera": 0.8483990334069783,
+              "faceDotAuthored": 0.9999996490244993
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7444,
+            4891
+          ],
+          "bilinearWeight": 0.018790759215654106,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80729,
+              "world": [
+                -0.9138954906580568,
+                39.04865024930926,
+                -13.706991997079168
+              ],
+              "faceDotToCamera": 0.8487522474761786,
+              "authoredDotToCamera": 0.8484503570635761,
+              "faceDotAuthored": 0.999999756469386
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          646.5,
+          203.5
+        ],
+        "faceIndex": 80729,
+        "world": [
+          -0.9340466059382084,
+          39.07736605684316,
+          -13.6621655050075
+        ],
+        "rawBilinearLinearMean": 0.022240459492255508,
+        "faceDotToCamera": 0.8489870343048636,
+        "authoredDotToCamera": 0.8487254827361898,
+        "faceDotAuthored": 0.9999998736288065
+      },
+      "pairedWorldSeparationMetres": 0.07581146794171476
+    },
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        646,
+        205
+      ],
+      "faceIndex": 80677,
+      "world": [
+        -0.9762153316930977,
+        38.99428421629571,
+        -13.704769597241004
+      ],
+      "uv": [
+        0.908232174991559,
+        0.4025351969462875
+      ],
+      "geometricNormal": [
+        0.38312175908251145,
+        -0.8623196156237026,
+        0.33109303560798736
+      ],
+      "authoredInterpolatedNormal": [
+        0.38651960340026675,
+        -0.8601464315096312,
+        0.3327922964080566
+      ],
+      "faceDotToCamera": 0.8113160109411147,
+      "authoredDotToCamera": 0.8119574333634353,
+      "faceDotAuthored": 0.999990422218766,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.9042196869850159,
+          38.939453125,
+          -13.93088436126709
+        ],
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.907366931438446,
+          0.404155969619751
+        ],
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7439,
+            4893
+          ],
+          "bilinearWeight": 0.017904881997589123,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9737312370952143,
+                38.98832767793354,
+                -13.723157632953692
+              ],
+              "faceDotToCamera": 0.811170189360426,
+              "authoredDotToCamera": 0.8116955381678413,
+              "faceDotAuthored": 0.9999938221414624
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7440,
+            4893
+          ],
+          "bilinearWeight": 0.05042850198942104,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9630592064833303,
+                38.9970931526358,
+                -13.712677335086266
+              ],
+              "faceDotToCamera": 0.8112364390023578,
+              "authoredDotToCamera": 0.8122303973747795,
+              "faceDotAuthored": 0.9999883764962655
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7439,
+            4894
+          ],
+          "bilinearWeight": 0.24411758715149842,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9848508942987121,
+                38.987777926545505,
+                -13.71172241440362
+              ],
+              "faceDotToCamera": 0.8112741997031493,
+              "authoredDotToCamera": 0.8115524860087517,
+              "faceDotAuthored": 0.999994039320137
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7440,
+            4894
+          ],
+          "bilinearWeight": 0.6875490288614914,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.974178863686828,
+                38.99654340124776,
+                -13.701242116536196
+              ],
+              "faceDotToCamera": 0.8113404755935819,
+              "authoredDotToCamera": 0.8120876915908652,
+              "faceDotAuthored": 0.9999889119055723
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          645.5,
+          204.5
+        ],
+        "faceIndex": 80677,
+        "world": [
+          -1.0015820720301747,
+          39.00241738618915,
+          -13.654234127397253
+        ],
+        "rawBilinearLinearMean": 0.0378096685723667,
+        "faceDotToCamera": 0.8117425881040647,
+        "authoredDotToCamera": 0.8120843950405601,
+        "faceDotAuthored": 0.9999842792414777
+      },
+      "pairedWorldSeparationMetres": 0.05712664597342443
+    },
+    {
+      "region": [
+        645,
+        205
+      ],
+      "screen": [
+        646.5,
+        205
+      ],
+      "faceIndex": 80677,
+      "world": [
+        -0.9447891921100613,
+        39.00175318456121,
+        -13.72168146016839
+      ],
+      "uv": [
+        0.9083198287889818,
+        0.40279606422098313
+      ],
+      "geometricNormal": [
+        0.38312175908251145,
+        -0.8623196156237026,
+        0.33109303560798736
+      ],
+      "authoredInterpolatedNormal": [
+        0.3867499340581337,
+        -0.8594610839295591,
+        0.3342919887114505
+      ],
+      "faceDotToCamera": 0.8111412078092259,
+      "authoredDotToCamera": 0.8126453413097242,
+      "faceDotAuthored": 0.999984215920971,
+      "cameraRayNextSurfaceMetres": null,
+      "normalDirectionClearance": [
+        {
+          "direction": "geometricFront",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        },
+        {
+          "direction": "geometricBack",
+          "nearestOtherSurfaceMetres": null,
+          "face": null
+        }
+      ],
+      "triangleWorld": [
+        [
+          -0.9042196869850159,
+          38.939453125,
+          -13.93088436126709
+        ],
+        [
+          -0.8346643447875977,
+          39.01237869262695,
+          -13.82143783569336
+        ],
+        [
+          -1.0496536493301392,
+          39.002586364746094,
+          -13.59816837310791
+        ]
+      ],
+      "triangleUv": [
+        [
+          0.907366931438446,
+          0.404155969619751
+        ],
+        [
+          0.9083966016769409,
+          0.40393131971359253
+        ],
+        [
+          0.9084089994430542,
+          0.4015592932701111
+        ]
+      ],
+      "rawBilinearLinearMean": 0.0,
+      "texels": [
+        {
+          "pixelBlenderXY": [
+            7440,
+            4891
+          ],
+          "bilinearWeight": 0.11170711700044782,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9408198920763349,
+                38.998192655411856,
+                -13.735547772186404
+              ],
+              "faceDotToCamera": 0.8110283268251771,
+              "authoredDotToCamera": 0.8125157173591813,
+              "faceDotAuthored": 0.9999867662988985
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7441,
+            4891
+          ],
+          "bilinearWeight": 0.09365098129335232,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9301478614644507,
+                39.006958130114114,
+                -13.72506747431898
+              ],
+              "faceDotToCamera": 0.8110944776389382,
+              "authoredDotToCamera": 0.8130476159334279,
+              "faceDotAuthored": 0.9999787950881236
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7440,
+            4892
+          ],
+          "bilinearWeight": 0.43225544366093666,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9519395492798326,
+                38.99764290402383,
+                -13.724112553636335
+              ],
+              "faceDotToCamera": 0.8111323894010423,
+              "authoredDotToCamera": 0.8123730726732734,
+              "faceDotAuthored": 0.9999876612940516
+            }
+          ]
+        },
+        {
+          "pixelBlenderXY": [
+            7441,
+            4892
+          ],
+          "bilinearWeight": 0.3623864580452632,
+          "linearMean": 0.0,
+          "insideGeometryMask": true,
+          "normalGuideIsValid": true,
+          "actualUvOwners": [
+            {
+              "faceIndex": 80677,
+              "world": [
+                -0.9412675186679484,
+                39.00640837872608,
+                -13.713632255768907
+              ],
+              "faceDotToCamera": 0.8111985664421169,
+              "authoredDotToCamera": 0.8129053185375275,
+              "faceDotAuthored": 0.9999800083024566
+            }
+          ]
+        }
+      ],
+      "nearbyLitComparison": {
+        "screen": [
+          646,
+          204
+        ],
+        "faceIndex": 80729,
+        "world": [
+          -0.967604865582187,
+          39.039043075121484,
+          -13.65698918161862
+        ],
+        "rawBilinearLinearMean": 0.02959720244302148,
+        "faceDotToCamera": 0.8492738933579491,
+        "authoredDotToCamera": 0.848695358031929,
+        "faceDotAuthored": 0.9999993691273732
+      },
+      "pairedWorldSeparationMetres": 0.07807804939895074
+    }
+  ],
+  "limitations": "Clearance probes include the PaleVault mesh only, not unrelated stone ribs/roof chunks. A sampled texel outside the geometry mask can be a baked gutter; its validity is reported separately. This is a bounded visible-window classification, not a census of all2million zero geometry pixels."
+}

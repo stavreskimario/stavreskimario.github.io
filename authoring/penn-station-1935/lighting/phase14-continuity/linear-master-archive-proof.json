@@ -1,0 +1,170 @@
+{
+  "status": "PASS lossless current physical reflection master; compressed and decoded source bytes exact",
+  "sourcePrimarySha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "master": {
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase14-continuity/reflections",
+    "archiveFile": "reflection-platform-enclosure-linear.exr.gz",
+    "archiveBytes": 24155706,
+    "archiveSha256": "026df0d11d33c262037b2767a135a35e7de90f9ba8cecdc4cc2e76ef1c6d3036",
+    "rawBytes": 24163582,
+    "rawSha256": "342bb6416f87991cccd7986d92fedc6796216a987da1bd5f30cf9a4461954cd3",
+    "width": 2048,
+    "height": 1024,
+    "channels": "RGBA",
+    "bitDepth": 32,
+    "transfer": "scene-linear OpenEXR float master",
+    "relationship": "Exact FLOAT32 master input to the explicit linear Radiance RGBE writer in the executed capture-local-reflection.py; original full/low HDR identities and optical statistics remain unchanged."
+  },
+  "width": 2048,
+  "height": 1024,
+  "sourceRenderVisibility": {
+    "proofSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+    "contexts": [
+      {
+        "context": "current-concourse-without-primary-arrivals.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "retained-exterior-visible-occluder.glb",
+        "sourceVisibilityRule": "Doric column master \u2014 35ft",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Doric column master \u2014 35ft",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                4.267199993133545
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                14.935199737548828
+              ]
+            ],
+            "sourceStreet0Bounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                0.0
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                10.668000221252441
+              ]
+            ],
+            "expectedBakeFrameBounds": [
+              [
+                -0.9100000262260437,
+                -0.9100000262260437,
+                4.2672
+              ],
+              [
+                0.9100000262260437,
+                0.9100000262260437,
+                14.93520022125244
+              ]
+            ],
+            "sourceToBakeFrameOffsetZ": 4.2672,
+            "boundErrorM": 4.837036122751215e-07,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "retained-main-visible-occluder-main0.glb",
+        "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+        "alreadyExcludedByImporter": false,
+        "changedObjects": [
+          {
+            "name": "Fluted Corinthian shaft master.001",
+            "hideRenderBefore": false,
+            "hideRenderAfter": true,
+            "sourceHideRender": true,
+            "actualWorldBounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -100.0
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -84.37899780273438
+              ]
+            ],
+            "sourceStreet0Bounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -104.26719665527344
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -88.64619445800781
+              ]
+            ],
+            "expectedBakeFrameBounds": [
+              [
+                -1.2690494060516357,
+                -1.2690494060516357,
+                -99.99999665527343
+              ],
+              [
+                1.2690494060516357,
+                1.2690494060516357,
+                -84.37899445800781
+              ]
+            ],
+            "sourceToBakeFrameOffsetZ": 4.2672,
+            "boundErrorM": 3.344726565046585e-06,
+            "meshMaterialAndMatrixExact": true
+          }
+        ]
+      },
+      {
+        "context": "formal-arcade-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-retained-occluder.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "platform-section-module.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-trains.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-context.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "arrivals-without-north-research-guard.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      },
+      {
+        "context": "model-concourse-exits.glb",
+        "sourceVisibilityRule": null,
+        "changedObjects": []
+      }
+    ]
+  },
+  "glassRestorationCount": 14
+}

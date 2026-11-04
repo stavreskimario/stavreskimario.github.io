@@ -1,0 +1,1150 @@
+{
+  "status": "PASS",
+  "files": 228,
+  "bytes": 237020654,
+  "internalAllowanceBytes": 240000000,
+  "sevenStagingTestsPassed": true,
+  "allStagedFilesByteExactWithRoot": true,
+  "fileHashes": [
+    {
+      "file": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "apps.json",
+      "bytes": 1261,
+      "sha256": "6da36cd0fc9175cb84852dc27518fa7bca467523206fda1b42ab419335931080"
+    },
+    {
+      "file": "hello-world/README.md",
+      "bytes": 3628,
+      "sha256": "adb47df2dd6e606a3fea6af17f3bd94dac7bceb11ee9c72b6d629486e8d320ad"
+    },
+    {
+      "file": "hello-world/app.js",
+      "bytes": 2754,
+      "sha256": "e707dd400a594b8db3fb55766f4b4ee355b3c6d484265bd61f883ee5240dd6bf"
+    },
+    {
+      "file": "hello-world/index.html",
+      "bytes": 3379,
+      "sha256": "4cbe8ffad7238840962d6e702579bea62c0324b5da80b75c5df6920cdf0e45d4"
+    },
+    {
+      "file": "hello-world/styles.css",
+      "bytes": 1590,
+      "sha256": "3c5ff4f99bf25ed82127d11bcba38bb4865cd1aeee761869658652c4b88d970e"
+    },
+    {
+      "file": "index.html",
+      "bytes": 2416,
+      "sha256": "9e7c3d8ee86c1ff078c2244a26a0186678c65b17746948a457bcb148c54a3c12"
+    },
+    {
+      "file": "la-trip/ASSET_SOURCES.md",
+      "bytes": 1200,
+      "sha256": "4df56a7c49b3d5c4645976a7600a5fc32f8392b09c5340be854b0ea87f81e61d"
+    },
+    {
+      "file": "la-trip/MAP_SOURCES.md",
+      "bytes": 530,
+      "sha256": "6759ca916cb63ed2706a81042a4698f814f0083683b1c9b997355a241591ef8f"
+    },
+    {
+      "file": "la-trip/app.js",
+      "bytes": 42095,
+      "sha256": "08356d4601647db8bf3884b90110997d5f99fbe320cb38a54b6c8507a1d2ca1b"
+    },
+    {
+      "file": "la-trip/assets/golden-gate-sunset.jpg",
+      "bytes": 47809,
+      "sha256": "f5b3549934035748844af324916c32aed46cbd4806a4f5a07f582f71ce9220a2"
+    },
+    {
+      "file": "la-trip/assets/la-skyline.jpg",
+      "bytes": 175615,
+      "sha256": "376874469ba809bef73560cedd65a2371ca0f42c032810c23b0058ae9d32641e"
+    },
+    {
+      "file": "la-trip/assets/westin-bonaventure.jpg",
+      "bytes": 97423,
+      "sha256": "e714b1c36276be9a3df141c0ccbd8ead71c4549d05033854c1888b2edb61c62d"
+    },
+    {
+      "file": "la-trip/editor.js",
+      "bytes": 26956,
+      "sha256": "c639aa7f6dff22bd7718c89c3e43fde25853ff4dd58eb77f835711cbb8fecb6e"
+    },
+    {
+      "file": "la-trip/fluid.js",
+      "bytes": 14033,
+      "sha256": "50ada0dac65ba8ff02524806708f08c2c1cf66253ce3b531d0477ab358ddfa83"
+    },
+    {
+      "file": "la-trip/index.html",
+      "bytes": 21418,
+      "sha256": "98741bb2d8f8eb4f4a1e5f7741a20a3e604533446ee8a89e816f715263b77785"
+    },
+    {
+      "file": "la-trip/styles.css",
+      "bytes": 58287,
+      "sha256": "506ac9e478788e5cd74a1ce5ca37725c2f2276e59264a64fc43ed81139a5ae75"
+    },
+    {
+      "file": "penn-station-1935/ASSET_RIGHTS.md",
+      "bytes": 20035,
+      "sha256": "a6dccc0790076e75f00b2d5d8c22038085bd0fc4304a13d95fa90c6923f1229d"
+    },
+    {
+      "file": "penn-station-1935/README.md",
+      "bytes": 7510,
+      "sha256": "1a3505f6610ba064596f0b01efde57f9fdf01184471d971a4ed041d8409a781a"
+    },
+    {
+      "file": "penn-station-1935/RESEARCH.md",
+      "bytes": 46699,
+      "sha256": "650464f2417fc14e1728856d95a62c0e65ccdef14315a0aa88f777d8b36daa40"
+    },
+    {
+      "file": "penn-station-1935/THIRD_PARTY.md",
+      "bytes": 18384,
+      "sha256": "65a48a0d97ce8ab85905e70d69fe324e9b04197a75ea3e9f99522ace6b31850a"
+    },
+    {
+      "file": "penn-station-1935/VALIDATION.md",
+      "bytes": 53357,
+      "sha256": "659717e5b011af180f2b3241c9963f79e577e424ce88a6b24455a6cf84c1602c"
+    },
+    {
+      "file": "penn-station-1935/assets/asset-metrics.json",
+      "bytes": 38094,
+      "sha256": "ee43fcbeec1e1d34da30cc41526df18ff3167d3d0984301bb0a393fd48d7ff4e"
+    },
+    {
+      "file": "penn-station-1935/assets/basis/LICENSE.txt",
+      "bytes": 11347,
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c"
+    },
+    {
+      "file": "penn-station-1935/assets/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "file": "penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-arcade-enclosure-denoise.json",
+      "bytes": 2562,
+      "sha256": "974d46d3100677a42993a1a6ccdcac14a553cf3e3e7245cf9bfc6d692c316740"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-arcade-enclosure-sky-low.webp",
+      "bytes": 88142,
+      "sha256": "69880705001bef4abb6f75b56f2d328c2372cfd148f046c2993453f525bd8907"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-arcade-enclosure-sky.webp",
+      "bytes": 2969348,
+      "sha256": "4a4f7d78eef898515307b910350cb2eba750c39cd377ec59c51b459085c42b8e"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-arcade-enclosure.json",
+      "bytes": 1184286,
+      "sha256": "70ed5bfc29092e440c4acd8b7031e720944529dc774e2a7aca9b01b489675c1e"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-access-denoise.json",
+      "bytes": 2537,
+      "sha256": "0f2f1d779c4f5e69a57672b092dfb40844547b70fcc81e8a84f7f1bdcee05440"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-access-sky-low.webp",
+      "bytes": 243890,
+      "sha256": "197ffb719a1a7a85cc318498c6c76dbffa58ae10b34a9f93635385658c4166e6"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-access-sky.webp",
+      "bytes": 2616680,
+      "sha256": "c1225d6f547d96297bcd8fa3faa781e0fbab554c340a85f76f591c65b05e7712"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-access.json",
+      "bytes": 4524,
+      "sha256": "0b264aa4de428b1860e70e0a01d309263549592aa541c77b29f7dc48956b8f79"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-arrivals-denoise.json",
+      "bytes": 2567,
+      "sha256": "f821409c994f37693ef7e6401729d749bef993b4e6698a5c0f2aea720d86146f"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-arrivals-sky-low.webp",
+      "bytes": 132540,
+      "sha256": "3d583bc075126e241512de7d068352e4c820e847b73916ac0dcdfcf82cafac33"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-arrivals-sky.webp",
+      "bytes": 4867814,
+      "sha256": "80cd1779e96cb50da92fff96c83c12d301d55543319484e3bcf79f288f40b2fb"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-arrivals.json",
+      "bytes": 3904713,
+      "sha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-circulation-denoise.json",
+      "bytes": 2586,
+      "sha256": "a519ba68387f72acd5acb65d97bf1602e58cea2d6089a73d8f9f9efbb2a0d093"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-circulation-sky-low.webp",
+      "bytes": 57772,
+      "sha256": "d9d3101cdf20b82366e594515c4e74c99b0dedeac3e3aac6fe558f7a93f363f2"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-circulation-sky.webp",
+      "bytes": 707476,
+      "sha256": "62927652ca53e9a0cf4325896559dbddf5063ccb55db4ec3732adecdc146f5bb"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-circulation.json",
+      "bytes": 4822,
+      "sha256": "6059d960ed3806c8fdf9f53cb3af63e174f91190c9431362fa764c4bfe553f1c"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-denoise.json",
+      "bytes": 2330,
+      "sha256": "17dd298ff7a0226b60be06f461cdfc369e22ff0d51c0572a90a9f7afcb8b443f"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-sky-low.webp",
+      "bytes": 139918,
+      "sha256": "4adb860ef1ba597f3a4d01cb97dcd5ec9e6f41c0a0f8565ee96ba0d0d25919b4"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse-sky.webp",
+      "bytes": 1170636,
+      "sha256": "b8c23d8c48c2d627e76384d1bdd8e67ce2165fb673028b88c96a6b26a487861e"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-concourse.json",
+      "bytes": 7105,
+      "sha256": "e84bf935b1b674eeda00942846ad60a7d1ac05c38f6ab896d3ca0f106e47653f"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-exterior-denoise.json",
+      "bytes": 2313,
+      "sha256": "06d673974f61d7f7b8bbd6d0172b3fc46951d1adae9c9a6bf2ad8b8342b034d0"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-exterior-sky-low.webp",
+      "bytes": 162948,
+      "sha256": "da947a56b7a7955ebe063aea2c9c2d57427082f00f056affae60db2252a8599b"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-exterior-sky.webp",
+      "bytes": 1276008,
+      "sha256": "9fced6e69fc9d34c9e01ba0b6d5f48abe451aad85852fdb4836795550f64f6f3"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-exterior.json",
+      "bytes": 7098,
+      "sha256": "7fc3052b04b615e00c479c17ea03b75c4ce366561b27ffd8b071508bcc80b8c0"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-denoise.json",
+      "bytes": 2313,
+      "sha256": "a3034ee27a7b088a1301c2fdd18f1628a3b19fd847d02946258362b8a923e029"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-sky-low.webp",
+      "bytes": 62942,
+      "sha256": "0823a46120496c2c29deb3a12b4e1d9ee0e09e8dbed91b0e9f8c95a49a44c76a"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-sky.webp",
+      "bytes": 783758,
+      "sha256": "98ba14e32f3bd6c3bcae69fa3941bc977bf66eb986c38a3daba725ef36c6a113"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-surfaces-denoise.json",
+      "bytes": 2913,
+      "sha256": "4a917d167290f9f4397b110a7b57c880a3909b2497039397f967f23aba2fd75c"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-surfaces-sky-low.webp",
+      "bytes": 57674,
+      "sha256": "46c3703740d499d4cfe28d9f332c7adcff66472688eac9d3cf8dcf5ce6514774"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-surfaces-sky.webp",
+      "bytes": 1097856,
+      "sha256": "f00734514791ef9b8a922d8ad1974416667ac12e72c5052c1b0fe63033d9a9a3"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform-surfaces.json",
+      "bytes": 8641,
+      "sha256": "d82cdbee541ca1dcfae4373a0a34468aac6fa8ce2ed58bfe5114dba7e50a8787"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-platform.json",
+      "bytes": 7101,
+      "sha256": "98f8a18885b8333a2bc79b6fff4dda6da9e20ba797fbc584e2516787d162ecf7"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-denoise.json",
+      "bytes": 538,
+      "sha256": "c990d08d3b9425a690a6125ddb72f293d64c90a92d28a97c5649ac4bad235b24"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-masonry-denoise.json",
+      "bytes": 2420,
+      "sha256": "30204346850f6d863dc9592eac15d00450ed3a31ab35d8307ddc30744b2b7734"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-masonry-sky-low.webp",
+      "bytes": 139780,
+      "sha256": "ed6731701400cc258eee9e853eac3393af1b1c46f8eb5268b00450ddad60dc6c"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-masonry-sky.webp",
+      "bytes": 3033948,
+      "sha256": "9db43579186eaedb86be3c1ea4c313c920cc5fe8f765c73fbcfa9f5396baefa0"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-masonry.json",
+      "bytes": 8617,
+      "sha256": "48d224a63c16f17ddb87ebf542646d2e12af77d3395e955cf2b512cdf2170f73"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-order-denoise.json",
+      "bytes": 2414,
+      "sha256": "824e9ca69bb9672d2b6ba8314d9984a4480d30e60a365f60b78fc0ff55b576b2"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-order-sky-low.webp",
+      "bytes": 154876,
+      "sha256": "3b76810810698ca9e2a86849a8436c439abce795147aa1f21cf52901085f3350"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-order-sky.webp",
+      "bytes": 5611270,
+      "sha256": "100bd6a739b62feaf40ff3f03dd2d2375cca60d345f1d3d4097c978868249df0"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-order.json",
+      "bytes": 9455,
+      "sha256": "6de7caf8333f7fb96b3d7317600a43b2cec13816a191793072d1c9868d12f9c1"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-vault-denoise.json",
+      "bytes": 2413,
+      "sha256": "3a8ca6215811f19964c249c53f19d9497dbbf8becd06ce5eb417abe97841b768"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-vault-sky-low.webp",
+      "bytes": 123206,
+      "sha256": "8dead4d28a62c675f7739b89a97e2827854041931c22826acfc949522c18b8d0"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-vault-sky.webp",
+      "bytes": 14189900,
+      "sha256": "0f8063785603d0b5c7f08f537dbd6e7dabeb0d4eec835b75d979172b1176e86c"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room-vault.json",
+      "bytes": 8607,
+      "sha256": "c71fc7b9c7ed4cbb11281c4004278507ba33fe13e25c9b686ec615ac1f8c0eed"
+    },
+    {
+      "file": "penn-station-1935/assets/lighting-waiting-room.json",
+      "bytes": 1669,
+      "sha256": "7ef630c95422b8cf67432bf89f51fbd658eb274e9dbc298a8283d6eb3f198c84"
+    },
+    {
+      "file": "penn-station-1935/assets/model-concourse-low.glb.gz",
+      "bytes": 5345536,
+      "sha256": "9cd9b42d72caaefa74c1e5135af7f4304ad2dfef0b0685bdb7ad1988fff5da00"
+    },
+    {
+      "file": "penn-station-1935/assets/model-concourse.glb.gz",
+      "bytes": 5175444,
+      "sha256": "c74aa5be856e72689b8e62694fe0715a2edb736ab518dbd3c96e4e8fc2cb9673"
+    },
+    {
+      "file": "penn-station-1935/assets/model-context-low.glb.gz",
+      "bytes": 684590,
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e"
+    },
+    {
+      "file": "penn-station-1935/assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "file": "penn-station-1935/assets/model-exterior-low.glb.gz",
+      "bytes": 4443602,
+      "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+    },
+    {
+      "file": "penn-station-1935/assets/model-exterior.glb.gz",
+      "bytes": 4297530,
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+    },
+    {
+      "file": "penn-station-1935/assets/model-platform-low.glb.gz",
+      "bytes": 240418,
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+    },
+    {
+      "file": "penn-station-1935/assets/model-platform.glb.gz",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    {
+      "file": "penn-station-1935/assets/model-trains-low.glb.gz",
+      "bytes": 157720,
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+    },
+    {
+      "file": "penn-station-1935/assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "penn-station-1935/assets/model-waiting-room-low.glb.gz",
+      "bytes": 7271933,
+      "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+    },
+    {
+      "file": "penn-station-1935/assets/model-waiting-room.glb.gz",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+    },
+    {
+      "file": "penn-station-1935/assets/mural-north-archival.png",
+      "bytes": 76559,
+      "sha256": "3fe44b7afcbd89a26bb1db1cdc1108bd525643ae4f556378340168b7afc49076"
+    },
+    {
+      "file": "penn-station-1935/assets/reference-concourse.jpg",
+      "bytes": 274441,
+      "sha256": "b3cc6659948f2b94bc960d482dffeebdc22bc4b4826f3ddf30d92c14ed6a8106"
+    },
+    {
+      "file": "penn-station-1935/assets/reference-exterior.jpg",
+      "bytes": 230149,
+      "sha256": "4c8da066cb4013d63372830e18d56c2964ce10f00bfcd0a07af1e362cb73f348"
+    },
+    {
+      "file": "penn-station-1935/assets/reference-waiting.jpg",
+      "bytes": 221187,
+      "sha256": "4761b4d46f68c6fa02ca81e2675eada74b0bd133ebad80253e085bebe006cdd4"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-arcade-low.hdr.gz",
+      "bytes": 294520,
+      "sha256": "fa319da93ff4d985b940f18cc639b751991cf4ee90454dc0a7a3a6767925057c"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-arcade-probe.json",
+      "bytes": 13988,
+      "sha256": "261b91ca3ceb2bccc1ac4c0a333c0da48a232594d69ce680863c56598bcbe0c3"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-arcade.hdr.gz",
+      "bytes": 4292934,
+      "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-concourse-low.hdr.gz",
+      "bytes": 366456,
+      "sha256": "a2358a4f16ff07ee16ddb5ebdb27dfad47235dc26b9397770026ce44cbb487f7"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-concourse.hdr.gz",
+      "bytes": 5537345,
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-exterior-probe.json",
+      "bytes": 6879,
+      "sha256": "ca60792793b594c670712086170f6ea2f061d50af37b2148298c08d476661fa5"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-platform-low.hdr.gz",
+      "bytes": 314101,
+      "sha256": "aca64b1713e1d885070a96c8c7c68f6982dd83eca2bacbee26a5f399375884dc"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-platform.hdr.gz",
+      "bytes": 4785576,
+      "sha256": "5a3fc2b3dbe5c7390f2bbbbbf80858b377140d188f3c9df5f3520d371ffc00e0"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-probes.json",
+      "bytes": 7631,
+      "sha256": "4cf46e385d0ab92b3ee6c5c80f75c83a3ff0df3fe648b3d89c45dff4a1167fdf"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-waiting-room-low.hdr.gz",
+      "bytes": 336231,
+      "sha256": "bd831495338fe92e20e947c14d314c7f893ccdc7502362e964c4a7e2b701d0c7"
+    },
+    {
+      "file": "penn-station-1935/assets/reflection-waiting-room.hdr.gz",
+      "bytes": 4936342,
+      "sha256": "2852344887b0f51174341b452c1fb2122787fd3924db60b910f71fbc527a4844"
+    },
+    {
+      "file": "penn-station-1935/assets/scene-manifest.json",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+    },
+    {
+      "file": "penn-station-1935/assets/sky.hdr",
+      "bytes": 2513408,
+      "sha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "bytes": 3734401,
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/045483ffdbb9fca9da9d.ktx2",
+      "bytes": 224682,
+      "sha256": "045483ffdbb9fca9da9dc648897703e7af34e6b2da7ef38e0d59ed5a6eb9165d"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "bytes": 10905637,
+      "sha256": "08b0fe03227cf7eec1cc85b80e1fe6779cb7712ac14b751b05e0d35c47090113"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/0b3fdeff4c401ceb3b51.ktx2",
+      "bytes": 172354,
+      "sha256": "0b3fdeff4c401ceb3b51bec946051159c1e59673f1a959bb38b439bd6e80c905"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "bytes": 3331970,
+      "sha256": "0f399333f7175f5e5afa242c687131ea51951076a896d13ad3e5604f6a58c3d6"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/0fd52d7b147ba7546220.ktx2",
+      "bytes": 541708,
+      "sha256": "0fd52d7b147ba7546220fddf690a386f56656f749bc5c8774f6a09f3a45677bf"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/1171d79307cd9bf10880.ktx2",
+      "bytes": 1231718,
+      "sha256": "1171d79307cd9bf108809bd0263e568753c8aa099270a2b380b5e4fb62d986a7"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/1175f64bd9bfd85e57fd.ktx2",
+      "bytes": 244187,
+      "sha256": "1175f64bd9bfd85e57fd7e427803440a040c3f3200a2871db5ca700976e8a4fa"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+      "bytes": 3556449,
+      "sha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/17a7c7833754aad20681.ktx2",
+      "bytes": 160504,
+      "sha256": "17a7c7833754aad2068103c804877957ba384fc33f918a5fe5e59cd022c75cfd"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/1dbb4370dc80ba66e186.ktx2",
+      "bytes": 950518,
+      "sha256": "1dbb4370dc80ba66e186f4a6f15298037bbffe86b45d9e62e41076be4ac5165c"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "bytes": 2104923,
+      "sha256": "1e3025f04821ca80c83addcfd0acf1f1a01c76264f08da0995edc89bd9138f94"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+      "bytes": 2893842,
+      "sha256": "1e3fdca78d540b4c4a2d75bcd145bbb37c3b7e1a320b9574ead0b4b08266db10"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+      "bytes": 2317428,
+      "sha256": "206a10b6a2d3fbbd05a14cd2efc6c583322a78f751d7f120da78c61071998e0f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/22ec9e77de77cf98bd6a.ktx2",
+      "bytes": 2355148,
+      "sha256": "22ec9e77de77cf98bd6a5c9ef0089ba05c2e054a5c60341e7eb7b3b6e00be570"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/23377872e769ee72152d.ktx2",
+      "bytes": 105846,
+      "sha256": "23377872e769ee72152db0f47438182fa0116497e98301f2cc378f17479dfa4a"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/33721d1aecd74f3fd521.ktx2",
+      "bytes": 181881,
+      "sha256": "33721d1aecd74f3fd521150ec70568568bd0fbf70d1e62c4237d07bc4205e4c6"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/363923bafe6efcb2994c.ktx2",
+      "bytes": 1731155,
+      "sha256": "363923bafe6efcb2994c3c9af760bc144583e38bfcf66f7030a8f792648be08a"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/3cf7f05c5747ad2f4f03.ktx2",
+      "bytes": 260085,
+      "sha256": "3cf7f05c5747ad2f4f0350df1fe99af189acf9b07889e5fbdf6dfc23d59c4d08"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "bytes": 4296,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "bytes": 794564,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+      "bytes": 297484,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/46d8c3d4cc2d1185893e.ktx2",
+      "bytes": 181791,
+      "sha256": "46d8c3d4cc2d1185893e50a7d45b51c81247ee466f42b102c6b5cea1c7e47019"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/4741dad316808fb38922.ktx2",
+      "bytes": 1793501,
+      "sha256": "4741dad316808fb3892285b89cdd3fc0ef2f07d13875b4b57a06ffe1b09797ba"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "bytes": 3746211,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/4c2542fdf90a8274dacf.ktx2",
+      "bytes": 134936,
+      "sha256": "4c2542fdf90a8274dacf4f05ddac9ad61576b5ee60f4d50c56efa1d04347c7d6"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "bytes": 607982,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "bytes": 3935940,
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/53979fdafe89bc4df9ca.ktx2",
+      "bytes": 231923,
+      "sha256": "53979fdafe89bc4df9cad880f7299eae5ee1ce8376f0b9500fdc34e6cb4cfa06"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/53ec32af1b61447bac9c.ktx2",
+      "bytes": 2701207,
+      "sha256": "53ec32af1b61447bac9ce168b784ce1af125a5f1e30e0d40fb75f0c07d78fb68"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/54a913be94c788baff0c.ktx2",
+      "bytes": 336065,
+      "sha256": "54a913be94c788baff0c937b41ff1fef3de86fe0be657af562f208b02a82e75d"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "bytes": 2816144,
+      "sha256": "54c4b6193c2de4abdc13391211c34050812afbc2c482e7cfd5303b7d46eac331"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/567b85d17aa8c6ce6ac5.ktx2",
+      "bytes": 134773,
+      "sha256": "567b85d17aa8c6ce6ac53d675fd4fa725a3fef9fcdeef7fa5ff31336b503c516"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/57b74bfd6c788b7c2da2.ktx2",
+      "bytes": 2357761,
+      "sha256": "57b74bfd6c788b7c2da23af64a4ec96e62c55531a3934df0f746b21c1680bee2"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/5ac4f28aafa1a2c0c811.ktx2",
+      "bytes": 3033940,
+      "sha256": "5ac4f28aafa1a2c0c81115a0d2f63b7f0e7226103a3c42448f133b0c45cdb806"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+      "bytes": 429110,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "bytes": 533240,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/623a245c87b996572e77.ktx2",
+      "bytes": 164478,
+      "sha256": "623a245c87b996572e7795e28c401ac27dc9c02a3bb99fbc5f8fb3621d9ee29f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/63eed54d00a46de365de.ktx2",
+      "bytes": 2027922,
+      "sha256": "63eed54d00a46de365de7314c1258483464dd6f34a102c6cb47dfab881c4fdc0"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/64fbedc702550bebf27f.ktx2",
+      "bytes": 250215,
+      "sha256": "64fbedc702550bebf27f686d0ac092ac82f001cf42b025c4167d0faa68c020b0"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/6507df0100f8376d9e57.ktx2",
+      "bytes": 99292,
+      "sha256": "6507df0100f8376d9e57307e7b759803b7c76514f8146f84ce31c1a8e21ca554"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "bytes": 839153,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/6c6853f06bb64da5e12d.ktx2",
+      "bytes": 541497,
+      "sha256": "6c6853f06bb64da5e12db0042d3ef9a2c52fe8878952162f31fccf07567c56fe"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/7004a2a65ab65ac2eede.ktx2",
+      "bytes": 1555732,
+      "sha256": "7004a2a65ab65ac2eede66f864a47166c1ac11041de8bbd56fc0da1cd603bf62"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/70fc08770b468139d643.ktx2",
+      "bytes": 188215,
+      "sha256": "70fc08770b468139d6435b25e7e6407d567f4edeff78bd1958e9a6483dcdee26"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "bytes": 3139363,
+      "sha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "bytes": 2381311,
+      "sha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "bytes": 3761640,
+      "sha256": "7be11436c1b7fe0e5ab786e16390559b43425abb178c8bc9ac5305ff0f5da37c"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/7d4841447665d723f34f.ktx2",
+      "bytes": 95737,
+      "sha256": "7d4841447665d723f34fe5a2c9037cbb8c60f487278add7fd6d4094a3842a54d"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/7d5bebcc1c714cbc5b55.ktx2",
+      "bytes": 184899,
+      "sha256": "7d5bebcc1c714cbc5b55dc4f6def8d1808d83c6f47b7a59286a9109ec378806d"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/801a4f1dcf698acb12ca.ktx2",
+      "bytes": 163319,
+      "sha256": "801a4f1dcf698acb12ca30cf4dc42abd0301bbbfc547ac6afbea6e8471d49375"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+      "bytes": 159620,
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/8b602c339be41e7e043a.ktx2",
+      "bytes": 182660,
+      "sha256": "8b602c339be41e7e043a41a8440d2a739516467dbab1079f4f746bd7392921a7"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "bytes": 892516,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "bytes": 1755,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/9a946d98bf8d81f09329.ktx2",
+      "bytes": 247101,
+      "sha256": "9a946d98bf8d81f0932974c3070fdffac4fb6c93cfd03bc069cabb09c65ae4db"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/9af10c675e67054369ce.ktx2",
+      "bytes": 1499779,
+      "sha256": "9af10c675e67054369cec80e5046f905d7c03dddc28fd54d49c4d0a2b819e7f1"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "bytes": 2757425,
+      "sha256": "9dd19af74e513b23a448e456cbb65f6c62d9585ea5801371dc39d8a9951b51c5"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/9e395005f83383f2235b.ktx2",
+      "bytes": 247153,
+      "sha256": "9e395005f83383f2235bfbb19228978d777f493e3b9c3b075007a338855951ca"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/9f2869150d52f4a87d42.ktx2",
+      "bytes": 244932,
+      "sha256": "9f2869150d52f4a87d4286054eb1ea3501c7f84d8b068e681779092c3e6c4e5c"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/a2ee0eb44659d956bcb7.ktx2",
+      "bytes": 11104,
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+      "bytes": 842348,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/a80e1021c4333a711be4.ktx2",
+      "bytes": 334014,
+      "sha256": "a80e1021c4333a711be4f443dbcba8a442acb66a30daef3c6b4b127343f79aab"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/a88cd37c93251ba8c26e.ktx2",
+      "bytes": 198781,
+      "sha256": "a88cd37c93251ba8c26e1bdfc161d624f0f0460aa7c225d21bc6209bf31958a3"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/aa3741f42c1f9476bdb9.ktx2",
+      "bytes": 216379,
+      "sha256": "aa3741f42c1f9476bdb9bcb7b5ef093c238312713001078a7a67d08df0fbbb0e"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "bytes": 3849773,
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/acc04afd2689712b1b12.ktx2",
+      "bytes": 160408,
+      "sha256": "acc04afd2689712b1b12fc9f154b0933a8049291ade6f5fe22ed582b9d13299f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/aff700fa69f448c57670.ktx2",
+      "bytes": 79775,
+      "sha256": "aff700fa69f448c57670d001f046620853d68935904834fb7805fece284a12e4"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/b4a5b7165636466257b3.ktx2",
+      "bytes": 2348682,
+      "sha256": "b4a5b7165636466257b3b5be471c62f8b017b285012c020f9f0792b79c6f3dbd"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "bytes": 532453,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/bd6e833fb5e2ae466373.ktx2",
+      "bytes": 251809,
+      "sha256": "bd6e833fb5e2ae46637322aa10ea807b098f0e374b3a1b67ff8a9ddc82b4c52b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/beeae21668c73f74ea5d.ktx2",
+      "bytes": 243248,
+      "sha256": "beeae21668c73f74ea5d38f5ac6a143a5e125354a9b5bd20ca269990c7072bde"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/c0868a78a1038306a222.ktx2",
+      "bytes": 54164,
+      "sha256": "c0868a78a1038306a22222ef7cf60d95390e1b56628f2217c30ce5c03b68ed18"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "bytes": 3106230,
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "bytes": 3716906,
+      "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/c8ffb212f6d77c7a9102.ktx2",
+      "bytes": 173916,
+      "sha256": "c8ffb212f6d77c7a91022a1da3e1698d7c42fcbdc52ae847a9ad5d8f10dc0540"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/cd5b2e95d69b82d43084.ktx2",
+      "bytes": 247116,
+      "sha256": "cd5b2e95d69b82d43084bca72583d8ad972adfd5af127c75fca22777a76d2933"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/cd6d4e919eb581296aa1.ktx2",
+      "bytes": 2203123,
+      "sha256": "cd6d4e919eb581296aa10380f730e58c35e1bc88b75a4d4b8d1300c270904076"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/cfbd6e09ee4a3cb3df61.ktx2",
+      "bytes": 681,
+      "sha256": "cfbd6e09ee4a3cb3df6113a97c542a7c44daf6ed00f73bfffd50a1d9cb057be0"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+      "bytes": 3847041,
+      "sha256": "d027c562b48d63001b53f41b3151cc4b1f9c159b7827baf27b3e325a071ce372"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/d2d09e30602bc72361bc.ktx2",
+      "bytes": 541669,
+      "sha256": "d2d09e30602bc72361bc86e6f4cf0e5ac417020c0a8e49a83ef3db4ef6d90c6e"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/d3af65ba7e33b704f9c1.ktx2",
+      "bytes": 182371,
+      "sha256": "d3af65ba7e33b704f9c161a49133fc68dd8d105ce08f11e41cab38e34c4ebc03"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+      "bytes": 863637,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/ded8551495b688b06a64.ktx2",
+      "bytes": 96022,
+      "sha256": "ded8551495b688b06a64794ebe8719630e52e5a202f02a93f0dbf680e2fffd7f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "bytes": 5398821,
+      "sha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e25abc85a6ecd814ea97.ktx2",
+      "bytes": 175605,
+      "sha256": "e25abc85a6ecd814ea9730c1d48603d726e6240b523282ded94d0c8eeba7fd07"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+      "bytes": 2819507,
+      "sha256": "e31619f2b2a7a5ba20dd0bda7a06cd1e2530fef0c20aadd946fae3d80572ae7f"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e3a546949c1022529068.ktx2",
+      "bytes": 217523,
+      "sha256": "e3a546949c10225290682d7156b47b81f6cba70ba4efd20359962b3ca55f634b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/e6417bb84166b7f417ae.ktx2",
+      "bytes": 250305,
+      "sha256": "e6417bb84166b7f417ae930a66352deb8431d4f477fcbf5d1d25e9bdc4ec899e"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "bytes": 862446,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "bytes": 863104,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "bytes": 5419396,
+      "sha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "bytes": 862627,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f3c33e9e13a60222a23d.ktx2",
+      "bytes": 202002,
+      "sha256": "f3c33e9e13a60222a23d0d6bc062c45b77a5c948cdfdab1beacba50cdae0af98"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+      "bytes": 2553771,
+      "sha256": "f46d86be9b939ee4beec53472e40cd7b115b201aeb0f4a744edf7a290c821f4b"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f4f79aec04acf833312f.ktx2",
+      "bytes": 191191,
+      "sha256": "f4f79aec04acf833312f89e0112b2c31b15513c84a9429a58dfe3e4c5f7e75b4"
+    },
+    {
+      "file": "penn-station-1935/assets/textures/f5a25519c2acf1a00d26.ktx2",
+      "bytes": 135059,
+      "sha256": "f5a25519c2acf1a00d269569b648161d3d52c3ab5e0c008b2c754d42de9ed625"
+    },
+    {
+      "file": "penn-station-1935/dist/app.js",
+      "bytes": 1046064,
+      "sha256": "616f91eb91fa62332987d1d3e9297d4cf183bbe7b32f9e690b812d7076a0bdb4"
+    },
+    {
+      "file": "penn-station-1935/dist/app.js.LEGAL.txt",
+      "bytes": 3321,
+      "sha256": "eac37110b4dee8d84bb8b5ff10311f8603412fb8506d2f4b7632a22b057c664b"
+    },
+    {
+      "file": "penn-station-1935/dist/build-sizes.json",
+      "bytes": 261,
+      "sha256": "19106da661f6adb91013ebcd9cbe3993c3938593db43bf6293c6b70a278b6ae1"
+    },
+    {
+      "file": "penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+      "bytes": 373510,
+      "sha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393"
+    },
+    {
+      "file": "penn-station-1935/dist/chunks/chunk-O3MLNBEO.js.LEGAL.txt",
+      "bytes": 159,
+      "sha256": "6b990102b9b9bc9033750d02208aeca57d83ae2e86f7f530a63c91b604dcd172"
+    },
+    {
+      "file": "penn-station-1935/dist/chunks/three.webgpu-VCFJNVTL.js",
+      "bytes": 579894,
+      "sha256": "1ad767acac8d8be480907e35f5894d67ea4c3e390e8142c06ccf1e4a625244cb"
+    },
+    {
+      "file": "penn-station-1935/dist/chunks/three.webgpu-VCFJNVTL.js.LEGAL.txt",
+      "bytes": 161,
+      "sha256": "bc7a0ae3cb8e30587a18e53ee30b712446c5cb416703b19374c4c18501ae44a9"
+    },
+    {
+      "file": "penn-station-1935/index.html",
+      "bytes": 18277,
+      "sha256": "d2690eb13210d153944ef82b50abeb662c519db539ddea650f1504c38449f2b3"
+    },
+    {
+      "file": "penn-station-1935/material-provenance.json",
+      "bytes": 29546,
+      "sha256": "0262a5ef8b3af66ceff44d3602768bf6273a224f5ec019326973481e420eaca3"
+    },
+    {
+      "file": "penn-station-1935/model/README.md",
+      "bytes": 30525,
+      "sha256": "b31d17f47bf0795de2fb9bfeced8f9979effe0a39450c51d098f6dfd4e984b67"
+    },
+    {
+      "file": "penn-station-1935/model/arrivals-evidence.md",
+      "bytes": 5876,
+      "sha256": "d4d39a19ca943ed0f19844e71a91ae0762527996f2ccc12fad08f3d9b5b4e9d6"
+    },
+    {
+      "file": "penn-station-1935/model/circulation-evidence.md",
+      "bytes": 8054,
+      "sha256": "e16286b982bd5c0f3cabbd8fda69893f634a6625f9f54c10be719cfa4ea74bc3"
+    },
+    {
+      "file": "penn-station-1935/model/concourse-detail-evidence.md",
+      "bytes": 9725,
+      "sha256": "7dec5f40b4f5119161ca91c1154e04699414a3f2eba922ca4942198a5e98261d"
+    },
+    {
+      "file": "penn-station-1935/model/context-research.md",
+      "bytes": 11552,
+      "sha256": "0e016b18145ab5256d8953c4cd9045a154c10948c4c4b46efa312f077efdea89"
+    },
+    {
+      "file": "penn-station-1935/model/departure-access-evidence.md",
+      "bytes": 7821,
+      "sha256": "7511f9728607f047936b0b3b2dc1e692222484397d5f2e34374b4a6050a81b3d"
+    },
+    {
+      "file": "penn-station-1935/model/interior-evidence.md",
+      "bytes": 29031,
+      "sha256": "ca4247c6ca5fa403ddc188c78198ebc5e1c76775b28d681aa824ca62a76232fb"
+    },
+    {
+      "file": "penn-station-1935/model/passenger-research.md",
+      "bytes": 3719,
+      "sha256": "66cf4b75b82c6574c6e802e1f23a8772f63bb5eb94589a75c9e6297122b56b67"
+    },
+    {
+      "file": "penn-station-1935/model/platform-section-evidence.md",
+      "bytes": 3077,
+      "sha256": "823ceeafad029b80d0335c3757e7b6b1857ddc1b0a74d858cf0157634f440825"
+    },
+    {
+      "file": "penn-station-1935/model/platform-stair-audit.md",
+      "bytes": 7308,
+      "sha256": "1e65c7af5ef70777592375469f123925ede9b115c8fd303dedbb27980111c7cc"
+    },
+    {
+      "file": "penn-station-1935/model/railway-plan.json",
+      "bytes": 9966,
+      "sha256": "13fbf689ea59f97063de7e20dc2682e5d1e99482831f3f44a28084ba106de0b1"
+    },
+    {
+      "file": "penn-station-1935/model/railway-research.md",
+      "bytes": 10636,
+      "sha256": "bbda05a2212fba63fee95ab73a019d2ea69921d275fd420a9607395819b4d01b"
+    },
+    {
+      "file": "penn-station-1935/model/rolling-stock-research.md",
+      "bytes": 9285,
+      "sha256": "903e1bfd8faf593c77cbb629bb8e5734987cb3ffccb47a303260788bf5ca9596"
+    },
+    {
+      "file": "penn-station-1935/package-lock.json",
+      "bytes": 149188,
+      "sha256": "a352b44b0921273f8273e8c0da95db6990f4aed2dc5bea49fd069e5f44c261ac"
+    },
+    {
+      "file": "penn-station-1935/package.json",
+      "bytes": 519,
+      "sha256": "1f2e9fc8e38f0bf057ab3a36d34d6d7cf75de3a5e81080e4025caaef7e197b95"
+    },
+    {
+      "file": "penn-station-1935/sources.json",
+      "bytes": 49294,
+      "sha256": "a3bd30f819d9706b14109e5ef711d01aa1cee114732dd4d48618dba65815851d"
+    },
+    {
+      "file": "penn-station-1935/styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617"
+    },
+    {
+      "file": "shared/catalog.css",
+      "bytes": 3412,
+      "sha256": "4e0a3017a555a8279edd41cefaf69dcb95f78c3cbbb39658cc5bd840fc229e66"
+    },
+    {
+      "file": "shared/catalog.js",
+      "bytes": 2415,
+      "sha256": "554053b076785c566aaa82dc6d920b7365e8c1e80894f32009e391ce892e681e"
+    },
+    {
+      "file": "shared/theme.css",
+      "bytes": 5390,
+      "sha256": "d83f0e1d47673cf497c6c55dd11790a3c2d7974fadddbfd519b5450036016fe8"
+    },
+    {
+      "file": "shared/ui.js",
+      "bytes": 13714,
+      "sha256": "5c6287b11e79f60bf76b3b6fd54bcf47996684e11c7eefeec797c70555f97013"
+    }
+  ]
+}

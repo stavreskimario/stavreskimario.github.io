@@ -1,0 +1,5 @@
+# Exact historical transport retention
+
+Four unreferenced historical KTX transport files totaling4,898,029bytes are retained through immutable Git and verified external copies in retired-unused-ktx.json. All12currentGLBimage arrays/materialextras and active auxiliary/text references were checked before retirement. Current used textures, source PNGs/HDRs, canonical scenes and QA images were retained. Run restore-unused-ktx.py with an explicit repository path for exact historical replay; it refuses differing existing files.
+
+Nineteen old generated QA screenshots totaling24,282,202bytes are archived through immutable Git and verified copies in retired-old-generated-qa.json. Their original historical reports/manifests remain unchanged and describe the earlier checkpoint. Current runtime images, all primary cuts, calibration/source material maps, sourceHDRs, canonical scenes and Phase11/12screens remain retained. Older local review links may require exact restoration; the receipt also provides immutable direct image URLs. restore-old-generated-qa.py restores the exact19PNGbytes and refuses differing files.

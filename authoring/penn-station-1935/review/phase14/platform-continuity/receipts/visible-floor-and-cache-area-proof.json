@@ -1,0 +1,80 @@
+{
+  "status": "PASS exact fresh floor ROI/top area and prior hidden-interface reconciliation",
+  "roi": {
+    "x": [
+      -162.2857,
+      -111.4247
+    ],
+    "z": [
+      3.1014,
+      45.3
+    ]
+  },
+  "ownedTriangles": 600,
+  "visibleStippledTopTriangles": 24,
+  "visibleStippledTopAreaM2": 795.1972984815977,
+  "visibleTopByCacheOwner": {
+    "Platform 03 continuous30-inch-gridded granolithic dressing": 258.78194937057884,
+    "Platform 04 continuous30-inch-gridded granolithic dressing": 260.82671129614636,
+    "Platform 05 continuous30-inch-gridded granolithic dressing": 275.5886378148725
+  },
+  "ownedAreaByFamilyM2": {
+    "Railway smooth concrete track base": 2146.262994599999,
+    "RailwayPlatformRubbedConcretePhase9": 2339.1968583869243,
+    "RailwayPlatformStippledGranolithicPhase9": 1507.4775762087622
+  },
+  "cacheOnlyHiddenUnderfaces": [
+    {
+      "sourceTriangleIndex": 2,
+      "clippedAreaM2": 38.624199280411865,
+      "sourceTriangle": [
+        [
+          -108.64828491210938,
+          -7.7374749183654785,
+          43.70412063598633
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          40.97026062011719
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          37.93263244628906
+        ]
+      ]
+    },
+    {
+      "sourceTriangleIndex": 3,
+      "clippedAreaM2": 50.10701982673692,
+      "sourceTriangle": [
+        [
+          -105.5141830444336,
+          -7.7374749183654785,
+          16.365495681762695
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          13.935395240783691
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          10.290245056152344
+        ]
+      ]
+    }
+  ],
+  "cacheOnlyUnderfaceTotalAreaM2": 88.73121910714877,
+  "expectedCacheAreaByFamilyM2": {
+    "Railway smooth concrete track base": 2146.262994599999,
+    "RailwayPlatformRubbedConcretePhase9": 2339.1968583869243,
+    "RailwayPlatformStippledGranolithicPhase9": 1596.208795315911
+  },
+  "oldReceipt": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+    "sha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191"
+  }
+}

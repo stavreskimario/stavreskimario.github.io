@@ -1,0 +1,194 @@
+{
+  "scope": "CPU/read-only actual closed base-plate component bounds from saved Phase5 source; rectangular base plates6faces/8vertices. Tests proposed2m clear flight/aperture X\u221250\u2026\u221243.35 against existing base footprints, not generic manifest obstacle boxes.",
+  "sourceSha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+  "candidateStatus": "X\u221250 gate proposal is not buildable on retained stair-row centres without structural conflict",
+  "basePlates": [
+    {
+      "boundsMainBlender": [
+        [
+          -50.04869842529297,
+          -15.13599967956543,
+          6.866454960174906e-09
+        ],
+        [
+          -48.83430099487305,
+          -13.921600341796875,
+          0.16000000329017627
+        ]
+      ],
+      "centerWorldZ": 14.528800010681152,
+      "sourcePolygonIds": [
+        2848,
+        2849,
+        2850,
+        2851,
+        2852,
+        2853
+      ],
+      "sourceVertexIds": [
+        3824,
+        3827,
+        3826,
+        3825,
+        3828,
+        3829,
+        3830,
+        3831
+      ]
+    },
+    {
+      "boundsMainBlender": [
+        [
+          -50.04869842529297,
+          13.921600341796875,
+          6.866454960174906e-09
+        ],
+        [
+          -48.83430099487305,
+          15.13599967956543,
+          0.16000000329017627
+        ]
+      ],
+      "centerWorldZ": -14.528800010681152,
+      "sourcePolygonIds": [
+        3812,
+        3813,
+        3814,
+        3815,
+        3816,
+        3817
+      ],
+      "sourceVertexIds": [
+        5120,
+        5123,
+        5122,
+        5121,
+        5124,
+        5125,
+        5126,
+        5127
+      ]
+    },
+    {
+      "boundsMainBlender": [
+        [
+          -50.04869842529297,
+          -41.29800033569336,
+          6.866454960174906e-09
+        ],
+        [
+          -48.83430099487305,
+          -40.08359909057617,
+          0.16000000329017627
+        ]
+      ],
+      "centerWorldZ": 40.690799713134766,
+      "sourcePolygonIds": [
+        282718,
+        282719,
+        282720,
+        282721,
+        282722,
+        282723
+      ],
+      "sourceVertexIds": [
+        328512,
+        328515,
+        328514,
+        328513,
+        328516,
+        328517,
+        328518,
+        328519
+      ]
+    },
+    {
+      "boundsMainBlender": [
+        [
+          -50.04869842529297,
+          40.08359909057617,
+          6.866454960174906e-09
+        ],
+        [
+          -48.83430099487305,
+          41.29800033569336,
+          0.16000000329017627
+        ]
+      ],
+      "centerWorldZ": -40.690799713134766,
+      "sourcePolygonIds": [
+        312552,
+        312553,
+        312554,
+        312555,
+        312556,
+        312557
+      ],
+      "sourceVertexIds": [
+        364904,
+        364907,
+        364906,
+        364905,
+        364908,
+        364909,
+        364910,
+        364911
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "row": 3,
+      "stairCenterWorldZ": 40.818378,
+      "baseCenterWorldZ": 40.690799713134766,
+      "overlapPlanXZ": [
+        -50,
+        -48.83430099487305,
+        40.08359909057617,
+        41.29800033569336
+      ],
+      "apertureThroughBearingFootprintSquareMetres": 1.4156263232580386,
+      "minimumHeadXToStayEastOfBaseWith150mmMargin": -48.68430099487305
+    },
+    {
+      "row": 5,
+      "stairCenterWorldZ": 13.32787,
+      "baseCenterWorldZ": 14.528800010681152,
+      "overlapPlanXZ": [
+        -50,
+        -48.83430099487305,
+        13.921600341796875,
+        14.32787
+      ],
+      "apertureThroughBearingFootprintSquareMetres": 0.473588136380651,
+      "minimumHeadXToStayEastOfBaseWith150mmMargin": -48.68430099487305
+    },
+    {
+      "row": 7,
+      "stairCenterWorldZ": -13.555112,
+      "baseCenterWorldZ": -14.528800010681152,
+      "overlapPlanXZ": [
+        -50,
+        -48.83430099487305,
+        -14.555112,
+        -13.921600341796875
+      ],
+      "apertureThroughBearingFootprintSquareMetres": 0.7384839097037085,
+      "minimumHeadXToStayEastOfBaseWith150mmMargin": -48.68430099487305
+    },
+    {
+      "row": 9,
+      "stairCenterWorldZ": -40.32146,
+      "baseCenterWorldZ": -40.690799713134766,
+      "overlapPlanXZ": [
+        -50,
+        -48.83430099487305,
+        -41.29800033569336,
+        -40.08359909057617
+      ],
+      "apertureThroughBearingFootprintSquareMetres": 1.4156263232580386,
+      "minimumHeadXToStayEastOfBaseWith150mmMargin": -48.68430099487305
+    }
+  ],
+  "conclusion": "Four row flights/apertures cross actual main pier base footprints. Do not delete or clip these structural parts or cut their bearing slab. Reconcile primary-plan gate registration first; eastward high-end clearance is X>\u221248.8343 before margin."
+}

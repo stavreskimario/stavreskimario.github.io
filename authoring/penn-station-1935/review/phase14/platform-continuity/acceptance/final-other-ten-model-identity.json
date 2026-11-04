@@ -1,0 +1,57 @@
+{
+  "status": "PASS all ten other full/low model transports equal frozen baseline hashes",
+  "candidate": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1",
+  "baselineReceiptSHA256": "90ff88ac3ea863d8b1eb4fa0297ae02ba41aecb8eac40290f0ee6cc30d1068ef",
+  "unchangedModels": [
+    {
+      "file": "model-context-low.glb.gz",
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263",
+      "bytes": 686636
+    },
+    {
+      "file": "model-context.glb.gz",
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104",
+      "bytes": 506131
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d",
+      "bytes": 7271933
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "sha256": "7b56c52dd817893567db46deeae5d5a95987ac35bc06cbef045f9469f2c36ebf",
+      "bytes": 6696698
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3",
+      "bytes": 4443602
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "sha256": "310af31e80aa96bb9254533cdc1a48dad5fcc78e17e499dd5242c91b1e09f759",
+      "bytes": 7007186
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "bytes": 8304517
+    },
+    {
+      "file": "model-exterior.glb.gz",
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a",
+      "bytes": 4297530
+    }
+  ]
+}

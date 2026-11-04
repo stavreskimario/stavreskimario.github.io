@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "scope": "Portable I/O and input verification only; frozen architectural body unchanged. No canonical/runtime writes.",
+  "frozenVersion": "connected-v12",
+  "originalGeneratorSha256": "98e82326c7e0e8da42f2bcbe431af264c664110ec958553fd48f56101179fe39",
+  "originalExtensionSha256": "f10e0032e5513f6eea8eb0f75447868d01fcf60794029496d8ef76670640bffc",
+  "architecturalBodySha256": "a71e369cc39495e3c0eae32b8bdbfbd33ef528e84c6a470f080d09abf56ec5de",
+  "portedGeneratorSha256": "6ccbfb8578693c3b4f59e07bb4c8bb7e963721e11087c7afad2c18c14d0126bc",
+  "portedExtensionSha256": "f10e0032e5513f6eea8eb0f75447868d01fcf60794029496d8ef76670640bffc",
+  "architecturalBodyByteIdentical": true,
+  "extensionByteIdentical": true,
+  "inputGitCommit": "abde5167c984b6bf28286af3259e79380ba7fb36",
+  "inputGitPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+  "inputSourceSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "controls": {
+    "arcade-ownership-controls.json": "30dfea97e2ab7ca44f13a8eee5156941f55b07c30ebee5c773dd8c29cff08240",
+    "arcade-source-audit.json": "2185467c03416512569dea1ddb681051b85361a4861e351a249b4591a3c1fce5",
+    "arcade-section-calibration.json": "e375323ec56ad541bc8a25bac7c5d39fbb5d7cd78488dc9167a5e97df2d6f60f",
+    "arcade-connected-ownership-controls.json": "a38ce6abfbd07689cf7cde2bfcc73a3b139ae6e2d37ebdca8045dd728adb924f"
+  },
+  "validation": "Python compile, input-hash checks, full portable CLI authoring replay and separate Main-context export pass. New module and all four authority GLBs byte-identical to frozen v12.",
+  "portableReplayProofSha256": "f87795450cf01923d3400a1fe03deb349eb9aad2f31105b3f4598dc1dddb4641"
+}

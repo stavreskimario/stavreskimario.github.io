@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "trueSourceIslandsReviewed": 1564,
+  "maximumWholeIslandAffineResidual": 5.5305320219010355e-08,
+  "sourceSharedCornerMaximumSplit": 0.0,
+  "sourceCornerKeyCount": 7800,
+  "relativePackScaleQuantiles": [
+    1.095166483937554,
+    1.0951817842361302,
+    1.0951960258974578,
+    1.0952014037263926,
+    1.0952204343600718
+  ],
+  "uvRange": [
+    0.0009764378773979843,
+    0.9984201192855835
+  ],
+  "failures": [],
+  "limits": [
+    "Checks existing connected charts remain intact and undergo a uniform affine scale/rotation/translation.",
+    "Blender exact-geometry CONCAVE pack with4/4096 fractional margin supplies chart separation; no independent exhaustive UV-triangle intersection certificate is asserted.",
+    "This is a UV-only candidate and requires a fresh lighting bake and mapped review."
+  ],
+  "generatorSha256": "f486a6c5ba3cdd4e3421f5851171fd5a077032d909f2f58155aff84087ee18a7"
+}

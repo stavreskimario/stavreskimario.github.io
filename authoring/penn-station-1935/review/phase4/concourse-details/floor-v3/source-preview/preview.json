@@ -1,0 +1,137 @@
+{
+  "scope": "Actual frozen Blender core source with reviewed interpreted PBR colours and restrained source-review daylight. This is not the finished browser render, not historically calibrated weather/exposure and not a calibrated historical photograph or final browser acceptance. Floor coverage revision3 reconstructs the broad visible central open court with explicit uncertainty about exact panel edges and pitch.",
+  "sourceBlendSha256": "3420eed9418f2dd3ee6aa67de368a4bbc1230a9133581e68e6ed9b2db5d904b0",
+  "cameraGltf": {
+    "eye": [
+      -103.8,
+      -2.4,
+      33
+    ],
+    "target": [
+      -52,
+      12,
+      -18
+    ],
+    "verticalFov": 62,
+    "matching": "Approximate LOC071935 composition, not calibrated original camera"
+  },
+  "renderer": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 32,
+    "threads": 6,
+    "resolution": [
+      1280,
+      900
+    ],
+    "viewTransform": "AgX",
+    "exposure": 1.6,
+    "sunEnergy": 2.2,
+    "domeStrength": 0.7
+  },
+  "materials": [
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.5,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "output": "concourse-floor-v3-source-preview.png",
+  "outputSha256": "64b6d79b1ad3221e6c7f4be11247c8353519ffd20b9f43973dee677cb2fa848a",
+  "completed": true
+}

@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/research/loc-det-4a23715u.tif",
+  "sourceSha256": "d899538fc873517bd4adaa704dc53a0d88271622bf613106b3226d111c1cba62",
+  "imageSize": [
+    5059,
+    4061
+  ],
+  "method": "Frontal transverse-plane circular-arc fit, with two alternative historical width normalisations. No current model height/roof input is used. Not a full camera-calibrated photogrammetric survey.",
+  "arcPixelPoints": [
+    [
+      1535.0,
+      1180.0
+    ],
+    [
+      1600.0,
+      900.0
+    ],
+    [
+      1800.0,
+      600.0
+    ],
+    [
+      2100.0,
+      360.0
+    ],
+    [
+      2475.0,
+      270.0
+    ],
+    [
+      2850.0,
+      375.0
+    ],
+    [
+      3150.0,
+      600.0
+    ],
+    [
+      3350.0,
+      900.0
+    ],
+    [
+      3420.0,
+      1180.0
+    ]
+  ],
+  "wallPlaneFloorProjectionPixels": [
+    [
+      1450.0,
+      2930.0
+    ],
+    [
+      3545.0,
+      2930.0
+    ]
+  ],
+  "controlQualifications": {
+    "arc": "Visible high-contrast outer transverse boundary, manual +/-12px.",
+    "wall": "Projected side-wall planes at terminal floor, hidden partly by projecting pier bases, +/-55px each.",
+    "floor": "Arcade-side threshold floor projection +/-35px. Small loggia steps are a separate datum.",
+    "verticalMetric": "Circle-family assumption plus +/-2.5% vertical scale sensitivity. Source is near-frontal but no recovered camera/lens or rectified survey.",
+    "interpretation": "45ft wall-to-wall versus40ft barrel/cornice-clear width is an inference testing the published discrepancy, not an authenticated datum explanation."
+  },
+  "fit": {
+    "centrePixels": [
+      2474.921376608528,
+      1226.1232370313246
+    ],
+    "radiusPixels": 936.3140359915726,
+    "crownPixelY": 289.809201039752,
+    "radialResidualPixels": [
+      4.738325569631115,
+      -2.5882834398121304,
+      -15.68969753764327,
+      7.473811124321287,
+      19.809204272409374,
+      -6.2093438520684,
+      -15.574411716224631,
+      -2.4409381626958293,
+      9.889407981110935
+    ],
+    "rmsResidualPixels": 11.09783160266548,
+    "maximumRadialResidualPixels": 19.809204272409374
+  },
+  "candidates": {
+    "wall45": {
+      "wallWidthM": 13.716000000000001,
+      "barrelSpanM": 12.260127272229509,
+      "springAboveArcadeFloorM": 11.155309632877495,
+      "crownAboveArcadeFloorM": 17.28537326899225,
+      "radiusM": 6.1300636361147545,
+      "imagePixelsPerM": 152.7413240011665
+    },
+    "barrel40": {
+      "wallWidthM": 13.639782710802969,
+      "barrelSpanM": 12.192,
+      "springAboveArcadeFloorM": 11.09332162905922,
+      "crownAboveArcadeFloorM": 17.189321629059222,
+      "radiusM": 6.096,
+      "imagePixelsPerM": 153.59482217709524
+    }
+  },
+  "sensitivity": {
+    "wall45": {
+      "wallWidthM": {
+        "minimum": 13.716,
+        "p05": 13.716,
+        "median": 13.716000000000001,
+        "p95": 13.716000000000003,
+        "maximum": 13.716000000000003
+      },
+      "barrelSpanM": {
+        "minimum": 11.593278554998204,
+        "p05": 11.831375343811771,
+        "median": 12.266381908783398,
+        "p95": 12.720346431494377,
+        "maximum": 12.973000707750831
+      },
+      "springM": {
+        "minimum": 10.18770464150386,
+        "p05": 10.64329416833973,
+        "median": 11.166063245186365,
+        "p95": 11.682498054365736,
+        "maximum": 12.251254159067201
+      },
+      "crownM": {
+        "minimum": 15.915467604707601,
+        "p05": 16.52233331835123,
+        "median": 17.298106895721958,
+        "p95": 18.050443931755716,
+        "maximum": 18.794608805074233
+      }
+    },
+    "barrel40": {
+      "wallWidthM": {
+        "minimum": 12.89026924203355,
+        "p05": 13.14629856277133,
+        "median": 13.632827778374734,
+        "p95": 14.13406870635885,
+        "maximum": 14.424346935742708
+      },
+      "barrelSpanM": {
+        "minimum": 12.191999999999998,
+        "p05": 12.191999999999998,
+        "median": 12.192,
+        "p95": 12.192000000000002,
+        "maximum": 12.192000000000002
+      },
+      "springM": {
+        "minimum": 10.473323798423037,
+        "p05": 10.718209807165255,
+        "median": 11.09706456188435,
+        "p95": 11.473462632861825,
+        "maximum": 11.75908579998054
+      },
+      "crownM": {
+        "minimum": 16.418376199849227,
+        "p05": 16.708191848370717,
+        "median": 17.197717112259856,
+        "p95": 17.67173773789418,
+        "maximum": 17.99445087919408
+      }
+    }
+  },
+  "sensitivityMeaning": "5000 bounded uniform perturbations, 5/95 percentiles are sensitivity summaries, not statistical confidence limits or historical measurement uncertainty.",
+  "recommendedWorkingSection": {
+    "wallWidthM": 13.716,
+    "barrelSpanM": 12.192,
+    "springAboveArcadeFloorM": 11.15,
+    "crownAboveArcadeFloorM": 17.246,
+    "shellVerticalThicknessM": 0.18,
+    "sourceStatus": "Reasoned photo-calibrated reconstruction. Retain minimum +/-0.6m spring and +/-0.8m crown uncertainty; these conservative allowances include unresolved plane/datum interpretation beyond point jitter.",
+    "notDerivedFrom": [
+      "Existing11.4mwall",
+      "Existing11.5mflatceiling",
+      "Existing18.9224mroofunderside"
+    ]
+  },
+  "held": [
+    "Exact original ceiling dimension",
+    "Proof of40/45ft datums",
+    "Photographer pose/lens and architectural perspective correction",
+    "Exact loggia/arcade threshold level split",
+    "Retention of all opening-era fabric in1935"
+  ]
+}

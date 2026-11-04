@@ -1,0 +1,141 @@
+{
+  "created": "2026-10-29T05:45:44.665Z",
+  "scope": "Actual locally served app at1280px desktop, balanced quality, reducedmotion. Rendering driver recorded; no mobile hardware/performance claim.",
+  "errors": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "views": [
+    {
+      "name": "platform",
+      "file": "platform.png",
+      "state": {
+        "view": "concourse",
+        "framing": "platform",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          -14.000000000000004,
+          -9.785625000000001,
+          15.700000000000003
+        ],
+        "quaternion": [
+          -0.006629527667645987,
+          0.5998265102441258,
+          0.004970166398698731,
+          0.8000871855099461
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 174,
+        "triangles": 7215974,
+        "geometries": 114,
+        "textures": 49,
+        "exposure": 4.150656177373227
+      },
+      "driver": {
+        "renderer": "WebKit WebGL",
+        "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "unmaskedVendor": "Google Inc. (Apple)"
+      },
+      "originalScratchFile": "/private/tmp/penn-phase3-platform-final60/platform.png"
+    }
+  ],
+  "url": "http://127.0.0.1:62753/exhibition/penn-station-1935/",
+  "preflight": [
+    {
+      "requested": "metal",
+      "available": true,
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "unmaskedVendor": "Google Inc. (Apple)"
+    }
+  ],
+  "requestedBackend": "metal",
+  "browser": "156.0.8078.48",
+  "assets": [
+    {
+      "file": "model-trains.glb",
+      "materials": 14,
+      "bakedMaterials": 0,
+      "occlusionMaterials": 0,
+      "reflectionMaterials": 14,
+      "reflectionFile": "reflection-platform.hdr.gz",
+      "atlasChannels": []
+    },
+    {
+      "file": "model-platform.glb",
+      "materials": 11,
+      "bakedMaterials": 3,
+      "occlusionMaterials": 3,
+      "reflectionMaterials": 11,
+      "reflectionFile": "reflection-platform.hdr.gz",
+      "atlasChannels": [
+        0
+      ]
+    },
+    {
+      "file": "model-context.glb",
+      "materials": 26,
+      "bakedMaterials": 0,
+      "occlusionMaterials": 0,
+      "reflectionMaterials": 0,
+      "reflectionFile": null,
+      "atlasChannels": []
+    },
+    {
+      "file": "model-exterior.glb",
+      "materials": 11,
+      "bakedMaterials": 4,
+      "occlusionMaterials": 4,
+      "reflectionMaterials": 0,
+      "reflectionFile": null,
+      "atlasChannels": [
+        1,
+        0
+      ]
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "materials": 15,
+      "bakedMaterials": 9,
+      "occlusionMaterials": 9,
+      "reflectionMaterials": 15,
+      "reflectionFile": "reflection-waiting-room.hdr.gz",
+      "atlasChannels": [
+        1,
+        0
+      ]
+    },
+    {
+      "file": "model-concourse.glb",
+      "materials": 9,
+      "bakedMaterials": 5,
+      "occlusionMaterials": 5,
+      "reflectionMaterials": 9,
+      "reflectionFile": "reflection-concourse.hdr.gz",
+      "atlasChannels": [
+        1,
+        0
+      ]
+    }
+  ],
+  "completed": "2026-10-29T05:45:53.542Z"
+}

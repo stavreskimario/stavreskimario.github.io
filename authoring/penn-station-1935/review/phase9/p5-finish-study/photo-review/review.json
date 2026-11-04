@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T03:32:51.198065+00:00",
+  "status": "SOURCE ELIGIBILITY PASS FOR BOUNDED FACE STUDY; COMPLETED SILHOUETTE ACCEPTANCE HELD",
+  "scope": "Independent visual reading of cached primary photographs and the P5 proposal only. No candidate geometry/render inspected; no modelling, GPU, root edit, publication or dimensional authentication performed.",
+  "sources": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/071937-right-arrival-stair-detail.png",
+      "bytes": 1534009,
+      "sha256": "2c50ea6b5c7c35293e42ef8e193289229ed9f02f6821134a4e96ed7df1150abe",
+      "width": 1400,
+      "height": 1200
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/071937-left-arrival-stair-detail.png",
+      "bytes": 1576849,
+      "sha256": "e121c05cb73c747ce714a7b28aacae0b95535e601225b16cadf7d0b5bc60e0c2",
+      "width": 1450,
+      "height": 1000
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/LXXXIV-arrival-photo-native.png",
+      "bytes": 2712265,
+      "sha256": "49d2d8df4d9e717936bb1bd9e64760d3e44aa5bad8f21671b3f141d6f6c25b45",
+      "width": 1800,
+      "height": 1400
+    }
+  ],
+  "proposalInputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-proposal-v1/PROPOSAL.md",
+      "bytes": 5234,
+      "sha256": "a24b688ebcaba14840672ef95c734dbbab246549dcb603fbdfa1e2c5bcd33aeb"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-proposal-v1/PROPOSAL.json",
+      "bytes": 10224,
+      "sha256": "30ffdc921be47f385faba6ebfbadbff20570d9ca75ca1ac957836010cd351ba5"
+    }
+  ],
+  "primaryReferences": [
+    {
+      "title": "Library of Congress, Detroit Publishing photograph item",
+      "url": "https://www.loc.gov/item/2016815392/"
+    },
+    {
+      "title": "ASCE volume 69, plate LXXXIV Fig.2, cached scan context",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=439"
+    }
+  ],
+  "features": [
+    {
+      "feature": "Broad stringer cheeks and continuous horizontal landing-side band",
+      "photoSupport": "Clearly visible in both LOC crops, particularly the central lower two-flight stairs. Large unbroken visible side faces are supported.",
+      "candidateAcceptance": "Eligible as a bounded appearance study. Require continuous visible faces and restrained seams in a comparable oblique view.",
+      "notEstablished": "Photographs do not prove an 8 mm cover sheet, hollow closed section, host I-section dimensions or a particular fabrication method."
+    },
+    {
+      "feature": "Curved stringer-to-landing transitions",
+      "photoSupport": "Both LOC crops show the sloping lower edge easing into the horizontal landing/fascia profile with smooth curvature.",
+      "candidateAcceptance": "A straight-panel-only result cannot establish a completed historical stair silhouette. Compare the candidate lower outline and landing haunches explicitly; treat missing curves as a remaining geometry stage.",
+      "notEstablished": "Exact radius, curve construction, section thickness and uniformity across all platforms are not recoverable from these perspective crops alone."
+    },
+    {
+      "feature": "Handrail direction changes and returned ends",
+      "photoSupport": "Visible handrail changes of direction and terminal/landing returns are smooth curved forms; the rail relates to the shaped newel tops.",
+      "candidateAcceptance": "Inspect actual candidate rail transitions separately from flat skins. Retaining old rails preserves existing contacts but does not certify their photographic fidelity.",
+      "notEstablished": "Exact rail diameter, bend radius, connection fabrication and every return arrangement are unmeasured."
+    },
+    {
+      "feature": "Newels, finials and visible feet",
+      "photoSupport": "Ball finials, shaped shoulders/shafts and visible plinth/collar or shoe forms occur in the source stairs.",
+      "candidateAcceptance": "Preserve structural anchors in the bounded study. Any later visible profile revision requires a dedicated silhouette trace and source-classification note.",
+      "notEstablished": "The photographs do not establish the buried bearing-pad elevation or justify a 207.5 mm raise, nor do they provide exact base profiles for all instances."
+    },
+    {
+      "feature": "Gallery fascia and distinct deck levels",
+      "photoSupport": "Exposed horizontal edge bands and open views below/beside the decks are visible. The prominent rounded upper-concourse fascia and lower Exit-gallery edge are different visible contexts.",
+      "candidateAcceptance": "Identify the actual lower-gallery edge before matching profiles. Preserve open rail/track views. Use a bounded face as a study, not as proof of the entire historical edge section.",
+      "notEstablished": "Do not transfer the upper-concourse moulded-looking edge profile to the lower gallery without registered evidence. Skin seams, 430 mm height and exact section remain authored assumptions."
+    },
+    {
+      "feature": "Guard infill",
+      "photoSupport": "Vertical divisions, diagonal motifs and circular junction details are visible.",
+      "candidateAcceptance": "Existing guards may remain as a protected control in this study; historical completion requires a separate comparison of panel rhythm and connections.",
+      "notEstablished": "The photographs do not prove the candidate bar counts, diameters, every ornament profile or 1935 retention."
+    }
+  ],
+  "overallHolds": [
+    "These crops do not identify P5; use a typical arrival-stair-family comparison, not an authenticated P5 matching-camera claim.",
+    "Opening-era photographic evidence does not establish complete 1935\u20131940 retention, colour or service inventory.",
+    "No sheet thickness, precise curve radius, paint colour, material alloy, full bearing area or structural capacity is authenticated by this visual review.",
+    "Physical contact/ownership/encoding tests are separate and are not replaced by photographic silhouette agreement."
+  ],
+  "recommendedReviewViews": [
+    "Oblique side view of the complete two-flight arrival stair, including intermediate landing and both exposed side profiles.",
+    "Close view of the sloped-to-level lower stringer outline and the corresponding handrail/newel transitions.",
+    "Wider lower-gallery view identifying the lower Exit fascia separately from the upper-concourse edge."
+  ],
+  "promotionRecommendation": "Review the bounded flat-face prototype as an intermediate appearance study. Do not label it a finished historic stair or repeat it as a completed profile until the curved transitions and correct deck-level silhouette have been assessed."
+}

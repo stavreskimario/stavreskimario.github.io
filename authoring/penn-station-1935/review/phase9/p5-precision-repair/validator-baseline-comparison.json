@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "files": [
+    {
+      "file": "model-concourse.glb",
+      "originalErrors": 0,
+      "originalWarnings": 16,
+      "repairedErrors": 0,
+      "repairedWarnings": 16,
+      "allWarningMessagesAndPointersExact": true,
+      "originalWarningCodes": [
+        "VALUE_NOT_IN_LIST",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "IMAGE_UNRECOGNIZED_FORMAT"
+      ]
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "originalErrors": 0,
+      "originalWarnings": 16,
+      "repairedErrors": 0,
+      "repairedWarnings": 16,
+      "allWarningMessagesAndPointersExact": true,
+      "originalWarningCodes": [
+        "VALUE_NOT_IN_LIST",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "IMAGE_UNRECOGNIZED_FORMAT"
+      ]
+    }
+  ]
+}

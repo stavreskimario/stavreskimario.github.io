@@ -1,0 +1,93 @@
+{
+  "status": "FROZEN sourcequalified two-bent bridgebay candidate-v3; lighting/encoded/nativeacceptance remains",
+  "acceptedCandidate": "candidate-v3 ONLY; v1/v2 rejected authoring/export drafts",
+  "sourceScope": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/research/FROZEN-DESIGN-SCOPE-v1.json",
+    "sha256": "bd7d4500fa720d844ea4733bfea618b83e9bcb25a19658ca69d13207e234e748"
+  },
+  "rawGlb": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.glb",
+    "sha256": "5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54",
+    "bytes": 585440
+  },
+  "editableBlend": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.blend",
+    "sha256": "6df74c29b3aedfa4a4ae01e2d23e47caa5c4ff5456a0593c01b1e5dac577ddcf",
+    "bytes": 124069
+  },
+  "coordinateSpace": "Main0glTF;worldY=Main0Y\u22124.2672; BlenderX east/Y north/Zup",
+  "primaryLightCount": 0,
+  "opaqueMaterials": [
+    "PaintedStructuralIronEighthAvenueBridge",
+    "GraniteCapstoneEighthAvenueBridge",
+    "StructuralConcreteEighthAvenueBridge",
+    "BuriedWaterproofingEighthAvenueBridge"
+  ],
+  "evaluatedMeshOwnerNames": [
+    "Bridge11station built-upIcolumns \u00d7two sourcebents",
+    "Buried granite capstones and concrete piers \u00d722",
+    "Permanent bent1 deep face-connected girders",
+    "Permanent bent2 deep face-connected girders",
+    "Longitudinal girder field with actual web connection returns",
+    "4in transverse floorplate Ibeams embedded in concrete",
+    "Documented composite opaque roofplate and waterproof protective cover"
+  ],
+  "evaluatedTriangles": 8256,
+  "columnCount": 22,
+  "all22ActualSourceReceiversProven": true,
+  "GNExportEvaluated": true,
+  "railClearance": {
+    "minimumOverSampledActiveTrackBayM": 5.809360903167725,
+    "sourceMinimumM": 4.9276,
+    "underClearanceComparisonWorldY": -8.208264,
+    "qualification": "Under-clearanceline isengineeringcomparison, notuniformroofunderside. Deepbentbottom usesline; connectingroofgirderssitaboveit."
+  },
+  "existingP5SidepathBodySamples": 250,
+  "first8StairsUnchanged": {
+    "unchangedSource": true,
+    "reason": "AllnewX\u2264\u2212121.39; nearestordinaryarrivalstairfootX\u2248\u221281.58. Nooriginalmodeldata imported orwritten by authoring."
+  },
+  "materialNormalCarryRequired": "Preserve authored splitcornernormals before join/weld/UVpreparation; restore before fresh transport, use existing0.5degreecodec bound. Source normals/UV0 areauthority.",
+  "scopeLimits": [
+    "One boundedtwo-bentbay only; no whole525ftbridge or ordinarygalleryenclosure claim.",
+    "Source306.08 isunder-clearanceline, notroofslabunderside. Deepframing chosenaboveatthatline; topsfollowdocumenteddepthranges.",
+    "SourcecapstopEl287buriedbelowplatform/rail; noaboveplatformstoneplinths. Concretepierdepthandrocksurfacehereinferred; steelcolumnsintersectactualretainedplatform/trackbase atall22receiverstations.",
+    "Steelplate/anglethicknesses,roofgroutcover,materialhue,localdepthschedule,minorfastener/jointfabrication inferred.",
+    "Existingfirst8arrivalstairs, rails,platforms,objects,UVs,normals,navigation/transports untouched.",
+    "Noarbitrarysidewall,blackportal,droppedceilingor8mconcretebox. Sourcebackfillaboveprotectcover isnotmodeledinthisboundedstructuralbay.",
+    "All4inbeams fullbaywidthspanatleast3girders; sourcejointstaggerpatternnotfullyrecoveredandnotclaimedexact."
+  ],
+  "roofGrayBandCorrection": "Existinggraybandiscontinuousroof/materialtransition. AOtexCoord0/UV0valid; lackofUV1aloneisNOTdefect. Noceiling/UVreplacement inferredhere.",
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/build_bridge.py",
+      "sha256": "27b8cafead3da0e294f40452f4e5ae6d50cba390519eb13ae66aa4bd346e90ca",
+      "bytes": 11508
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/check_bridge.mjs",
+      "sha256": "dca35fe86fbc232ba179a291f4e66969f5cef631112415c33ff424a7198d3ffc",
+      "bytes": 4556
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.blend",
+      "sha256": "6df74c29b3aedfa4a4ae01e2d23e47caa5c4ff5456a0593c01b1e5dac577ddcf",
+      "bytes": 124069
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/bridge-bay.glb",
+      "sha256": "5858205adabc358ffd7eb974c6b8454adf7cadacd84a5fa6b532ab5e889a2b54",
+      "bytes": 585440
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/construction.json",
+      "sha256": "ca0d0cdfc6d27d5a8bdbd2c10b6c6af71faa22f002293ee0557b256d3e35e1d1",
+      "bytes": 98383
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase12-lower-enclosure/geometry/construction-v1/candidate-v3/physical-proof.json",
+      "sha256": "f23f9f80d0296ec5f06fdd8ca21e47dda7c985a8086134c919ebb85804ff20ea",
+      "bytes": 15940
+    }
+  ]
+}

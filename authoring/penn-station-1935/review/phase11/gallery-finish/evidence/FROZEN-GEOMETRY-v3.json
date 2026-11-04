@@ -1,0 +1,114 @@
+{
+  "status": "FROZEN external geometry candidate PASS; root visual/lighting/encoded acceptance remains",
+  "candidate": "candidate-v3 ONLY",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/west-p5-curved-study.glb",
+    "sha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+    "bytes": 15900100
+  },
+  "scope": "Existing ordinary Exit gallery P1\u2013P8: seven non-P5 stair pairs plus whole107m edge on each side, retaining exact P5 fascia spans and all P5 stair source. No generated passenger floors, guardrails, haunches, walls, ceilings, train or platform changes.",
+  "coordinateSpace": "Main0 glTF; worldY=Main0Y-4.2672 exactly once",
+  "counts": {
+    "flight-stringer": 56,
+    "landing-fascia": 28,
+    "gallery-fascia": 14
+  },
+  "totalObjects": 98,
+  "onlyNewAppearanceFacesInGlb": true,
+  "materialReuse": "PaintedStructuralIronArrivalsStructure from accepted source; integration must preserve the existing material binding rather than overwrite old baked PBR.",
+  "sourcePreservation": {
+    "all4063ImportedObjectStatesExact": true,
+    "allImportedMaterialStatesExact": true,
+    "originalGlbRehashedUnchanged": true,
+    "originalObjectsReserializedIntoAddon": false,
+    "P5GeometryIncludedInAddon": false
+  },
+  "actualContactProof": {
+    "objects": 98,
+    "fullAreaRules": 310,
+    "failures": 0,
+    "positiveClosedComponents": true,
+    "noExteriorCoplanarDuplicateFaces": true
+  },
+  "walkingClearance": {
+    "samples": 1584,
+    "stairs": 16,
+    "bodyRadiusM": 0.32,
+    "lateralSamplesM": [
+      -0.6,
+      0,
+      0.6
+    ],
+    "failures": 0,
+    "headroomProbeM": 1.85
+  },
+  "galleryCoverage": {
+    "existingZExtentM": [
+      -36,
+      71
+    ],
+    "sides": 2,
+    "retainedP5Objects": 2,
+    "maximumActualNewPanelSeamMismatchM": 4.76837158203125e-07,
+    "newSameFacingCoplanarOverlaps": 0
+  },
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/build_finish.py",
+      "sha256": "80b1ae44eb93839d7e11455147ffa713d39ba3311c9802d17e68ae79a4623442",
+      "bytes": 24817
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v3/finish-manifest.json",
+      "sha256": "a09d21eee6cc35e25842387cc50ece10b8a18c045d69f6da086764cf85795cf2",
+      "bytes": 481576
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v3/finish-addon.glb",
+      "sha256": "5e8bed319df637a0004c22d7dd17e5cc13872a56f26098fa12a1fc8a6c4c7e19",
+      "bytes": 229512
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v3/addon.blend",
+      "sha256": "fca89040f7bf62761c70456ed178c0be76a37966e5b96921baba1759e08b4bb0",
+      "bytes": 106978
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/actual-finish-contact-proof-v3.json",
+      "sha256": "0976ed88d99f98d4983b94638a4a89b9b0e1af852a9986f32ef6edf956dfa80e",
+      "bytes": 238190
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/actual-walking-clearance-v3.json",
+      "sha256": "2ddd6ea064ac25c3f30cdce74a5f57f82ac444d18adbab00fd34cdd3c846af47",
+      "bytes": 408248
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/actual-gallery-panel-joins-v3.json",
+      "sha256": "9f85ff114728f8ff577123516d087743404a79993276dede1f6cd0fc58925ca7",
+      "bytes": 5272
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/audit-finish-v3.mjs",
+      "sha256": "f2c9e51d2631dc0ffdcb246e8c1c169034a092cc8cae117c0b42302bc147adc6",
+      "bytes": 3189
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/check-walk-clearance.mjs",
+      "sha256": "f30d7400b8d25767ed470e67a9259a21b188e2b4b31c1209ea3742a09b8a4026",
+      "bytes": 3697
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/check-panel-joins.mjs",
+      "sha256": "89e504933d845b9b823c4c76e5c49dde8f7018f5c25c8224bd4e5eec4d6e5dd2",
+      "bytes": 2173
+    }
+  ],
+  "qualifications": [
+    "Actual receiver positions derived separately per source row/side; no generic repeated center spacing.",
+    "8mm skin and panel construction are inferred appearance coordination, not authenticated historical fabrication.",
+    "Open-sided gallery source photographs remain authority; no opaque gallery enclosure or lowered ceiling invented.",
+    "Geometry checked on actual export; final baked/encoded whole-scene tests and visual review precede promotion.",
+    "Native browser walkthrough remains skipped at user request; no GPU/render/root/canonical edits performed."
+  ]
+}

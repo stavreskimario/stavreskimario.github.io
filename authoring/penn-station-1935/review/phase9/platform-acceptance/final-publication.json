@@ -1,0 +1,278 @@
+{
+  "created": "2026-11-01T22:47:24.800Z",
+  "status": "PASS",
+  "scope": "Actual GitHub Pages production responses for platform-surfaces; exact current local runtime bodies must match before acceptance. Native normal walking and both Shift keys measured during sustained W on the real waiting-room floor; no camera injection or full-route/FPS claim.",
+  "bundleSha256": "a4f7d8d97ee755ae58a6f9b0b262094819cbc7e591bb064dac9ef21cacc394b6",
+  "naturalBodies": [
+    {
+      "file": "styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617"
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 1045474,
+      "sha256": "a4f7d8d97ee755ae58a6f9b0b262094819cbc7e591bb064dac9ef21cacc394b6"
+    },
+    {
+      "file": "assets/scene-manifest.json",
+      "bytes": 686298,
+      "sha256": "973b13bfee2809385b055ad5767b7526c95af9c90abe7e1878400504593c1d12"
+    },
+    {
+      "file": "assets/model-platform.glb.gz",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    {
+      "file": "assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c"
+    },
+    {
+      "file": "assets/model-exterior.glb.gz",
+      "bytes": 2711634,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d"
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "bytes": 5171505,
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b"
+    },
+    {
+      "file": "assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+      "bytes": 2317428,
+      "sha256": "206a10b6a2d3fbbd05a14cd2efc6c583322a78f751d7f120da78c61071998e0f"
+    },
+    {
+      "file": "assets/textures/1dbb4370dc80ba66e186.ktx2",
+      "bytes": 950518,
+      "sha256": "1dbb4370dc80ba66e186f4a6f15298037bbffe86b45d9e62e41076be4ac5165c"
+    },
+    {
+      "file": "assets/textures/f46d86be9b939ee4beec.ktx2",
+      "bytes": 2553771,
+      "sha256": "f46d86be9b939ee4beec53472e40cd7b115b201aeb0f4a744edf7a290c821f4b"
+    },
+    {
+      "file": "assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+      "bytes": 2819507,
+      "sha256": "e31619f2b2a7a5ba20dd0bda7a06cd1e2530fef0c20aadd946fae3d80572ae7f"
+    },
+    {
+      "file": "assets/model-waiting-room.glb.gz",
+      "bytes": 8274157,
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277"
+    },
+    {
+      "file": "assets/lighting-platform-surfaces-sky.webp",
+      "bytes": 1097856,
+      "sha256": "f00734514791ef9b8a922d8ad1974416667ac12e72c5052c1b0fe63033d9a9a3"
+    }
+  ],
+  "platformSurfaceMaterials": [
+    {
+      "id": "e2710d46-1595-45db-9151-b08ce9d8b03d",
+      "name": "RailwayPlatformRubbedConcretePhase9",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.8500000238418579,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-surfaces-sky.webp",
+      "skyScale": 2,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "7b8bb3bf-baf2-4214-b865-211737966961",
+      "name": "RailwayPlatformStippledGranolithicPhase9",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 1,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-surfaces-sky.webp",
+      "skyScale": 2,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": ""
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb"
+      },
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    }
+  ],
+  "speedChecks": [
+    {
+      "modifier": null,
+      "expected": 2.6,
+      "measuredSpeed": 2.609599385675649,
+      "before": {
+        "position": [
+          0,
+          -2.58716644093108,
+          23.677143572475863
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.5871663990799725,
+          21.29275261376069
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 913.7000000089411,
+      "maximumRafGapMs": 16.80000000000109
+    },
+    {
+      "modifier": "ShiftLeft",
+      "expected": 5.75,
+      "measuredSpeed": 5.8259839734807795,
+      "before": {
+        "position": [
+          0,
+          -2.5871664410633883,
+          22.13575798721726
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.587166440245245,
+          16.867903278378577
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 904.2000000029802,
+      "maximumRafGapMs": 16.80000000000109
+    },
+    {
+      "modifier": "ShiftRight",
+      "expected": 5.75,
+      "measuredSpeed": 5.799093856619356,
+      "before": {
+        "position": [
+          0,
+          -2.586990714676458,
+          22.114301364881467
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "after": {
+        "position": [
+          0,
+          -2.5871577123064005,
+          16.845244689351684
+        ],
+        "quaternion": [
+          0.07777655644170531,
+          0,
+          0,
+          0.9969708156551376
+        ],
+        "fov": 50
+      },
+      "elapsedMs": 908.6000000089407,
+      "maximumRafGapMs": 16.799999999999272
+    }
+  ],
+  "errors": [],
+  "requestFailures": [],
+  "unexplainedRequestFailures": [],
+  "intentionallyBlocked": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "runtimeCommit": "1dfbe5372fb1bea724415aa06f02e8f652334318",
+  "pagesRun": 41358608240,
+  "siteChecksRun": 41358617824,
+  "url": "https://stavreskimario.github.io/penn-station-1935/?preview=1dfbe53",
+  "reportSha256": "57b39bcdc52af86bf2e4ddea2036105c04cd27a7acbc4b5593e123287cf21216",
+  "browserClosed": true,
+  "limits": [
+    "Public checks cover actual loaded payloads, material/lightmap/AO bindings, native normal/Shift walking, arrivals framing and removed card; no new sustained FPS/physical-mobile certificate.",
+    "The full34-leg loop is a separate local production-bundle test with the final exact platform payloads.",
+    "Wider platform enclosure, arcade/loggia, older probes and further visual realism remain unfinished."
+  ]
+}

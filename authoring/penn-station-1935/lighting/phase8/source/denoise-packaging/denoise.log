@@ -1,0 +1,15 @@
+WARN `--no-project` was provided, but no project was found
+Fra:1 Mem:10.08M (Peak 10.08M) | Time:00:00.00 | Compositing
+Fra:1 Mem:10.08M (Peak 10.08M) | Time:00:00.00 | Compositing | Initializing execution
+Fra:1 Mem:10.08M (Peak 10.08M) | Time:00:00.00 | Compositing | Operation 2-3
+Fra:1 Mem:10.39M (Peak 10.39M) | Time:00:00.00 | Compositing | Operation 3-3
+Fra:1 Mem:10.65M (Peak 10.65M) | Time:00:00.00 | Compositing | Operation 4-3
+Fra:1 Mem:585.84M (Peak 585.84M) | Time:00:00.00 | Compositing
+Fra:1 Mem:585.84M (Peak 585.84M) | Time:00:00.00 | Compositing | Initializing execution
+Fra:1 Mem:585.85M (Peak 585.85M) | Time:00:00.00 | Compositing | Operation 2-6
+Fra:1 Mem:585.85M (Peak 585.85M) | Time:00:00.00 | Compositing | Operation 3-6
+Fra:1 Mem:841.91M (Peak 841.91M) | Time:00:00.00 | Compositing | Operation 4-6
+Fra:1 Mem:841.91M (Peak 841.91M) | Time:00:00.00 | Compositing | Operation 5-6
+Fra:1 Mem:841.91M (Peak 1097.91M) | Time:00:03.02 | Compositing | Operation 6-6
+Fra:1 Mem:1097.91M (Peak 1353.91M) | Time:00:03.03 | Compositing | Operation 7-6
+{"schemaVersion": 1, "zone": "concourse-arrivals", "source": "lighting-concourse-arrivals-sky.hdr", "sourceSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a", "inputTransfer": "linear", "inputScale": 1.0, "radianceScale": 2.0, "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes", "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform", "sourceStored": {"mean": 0.03317305073142052, "minimum": 0.0, "maximum": 0.55859375}, "originalLinear": {"mean": 0.03317305073142052, "minimum": 0.0, "maximum": 0.55859375}, "denoisedLinear": {"mean": 0.03315361961722374, "minimum": 0.0, "maximum": 0.6049910187721252}, "relativeMeanChange": -0.0005857499918864306, "negativeOutputSamplesClamped": 0, "constant018Test": {"before": 0.18, "after": 0.18000005185604095, "maximumError": 0.0, "passed": true, "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"}, "retainedHdr": {"file": "lighting-concourse-arrivals-sky-denoised-linear.hdr", "sha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd", "decodedLinear": {"mean": 0.03304292634129524, "minimum": 0.0, "maximum": 0.6015625}, "meanQuantizationError": 0.00011071062181144953}, "full": {"png": "lighting-concourse-arrivals-sky.png", "webp": "lighting-concourse-arrivals-sky.webp", "clippedRGBSamples": 0, "width": 4096, "height": 4096}, "low": {"png": "lighting-concourse-arrivals-sky-low.png", "webp": "lighting-concourse-arrivals-sky-low.webp", "clippedRGBSamples": 0, "width": 512, "height": 512}, "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.", "elapsedSeconds": 11.637248915998498}

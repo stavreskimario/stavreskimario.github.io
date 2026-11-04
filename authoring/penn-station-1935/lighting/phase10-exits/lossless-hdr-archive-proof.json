@@ -1,0 +1,23 @@
+{
+  "status": "PASS lossless archival only; original raw/denoised files unchanged",
+  "archives": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/raw/lighting-concourse-exits-sky.hdr",
+      "sourceBytes": 46438147,
+      "sourceSha256": "648a28b04fc0892d2182581a887a54100f235da0877e794e066a2c7957ff3e63",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/lossless-hdr-archives/lighting-concourse-exits-sky.hdr.gz",
+      "archiveBytes": 41013216,
+      "archiveSha256": "254a5c1635302d25694ea18c2145aa3b6eddb2d68e3cdf488709a18f42c4cf61",
+      "decompressedBytesExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/denoised/lighting-concourse-exits-sky-denoised-linear.hdr",
+      "sourceBytes": 67649587,
+      "sourceSha256": "c5b80031dd27b12878f433260a184d0a860b226b025b4cde92439aaeafac8a73",
+      "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/bake-run-v2/lossless-hdr-archives/lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+      "archiveBytes": 21340922,
+      "archiveSha256": "7c1d665c8bd2dd34cfa26a53c312b5d43453d2a76887772f7168639f5905bfd4",
+      "decompressedBytesExact": true
+    }
+  ]
+}

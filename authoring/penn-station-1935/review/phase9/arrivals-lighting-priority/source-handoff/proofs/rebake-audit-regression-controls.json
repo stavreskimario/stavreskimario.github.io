@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "1mm physical displacement",
+      "rejected": true,
+      "reason": "Any physical position change is rejected"
+    },
+    {
+      "control": "changed surface UV0",
+      "rejected": true,
+      "reason": "UV map changed beyond Float32 round-trip bound"
+    },
+    {
+      "control": "changed priority lighting UV1",
+      "rejected": true,
+      "reason": "UV map changed beyond Float32 round-trip bound"
+    },
+    {
+      "control": "non-unit authored normal",
+      "rejected": true,
+      "reason": ""
+    },
+    {
+      "control": "changed PBR normal strength",
+      "rejected": true,
+      "reason": "Non-lighting material JSON changed: TravertineArrivalsStairStone"
+    },
+    {
+      "control": "changed authored normal image",
+      "rejected": true,
+      "reason": "Authored PBR image changed: TravertineArrivalsStairStone/normalTexture"
+    },
+    {
+      "control": "original stale AO exported after fresh bake",
+      "rejected": true,
+      "reason": "Stale or different AO export: TravertineArrivalsStairStone"
+    }
+  ],
+  "allSourceFilesUnchanged": true,
+  "generatorSha256": "9090b14f2d32343b64733610dd4a8dff44a9f8b8c747e615f3763830ef92699f"
+}

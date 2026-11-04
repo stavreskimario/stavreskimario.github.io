@@ -1,0 +1,56 @@
+{
+  "status": "PASS independent actual-map/source-corner and every-pixel delivery replay",
+  "physicalRecordSha256": "7286ce7bd00ef23d7c11e8c31a6b90b4b66515d600b9f57306400eff456864b1",
+  "controlSha256": "e0d5d76b840cf5198b58041bbaeaf0b89f3f2895a56e34054631850483d5cd44",
+  "mapSha256": "b0f979395ee2bc3db61440030883fd52e067ccf53b6a04749d236340f682e1af",
+  "geometry": {
+    "triangles": 402,
+    "maxOriginalCornerResidualM": 0.000002489972895408775,
+    "maxBaryUvError": 1.1600103322351174e-8
+  },
+  "mounted": {
+    "triangles": 402,
+    "maximumAbsoluteDifference": {
+      "world": 0,
+      "normal": 0,
+      "uv0": 0,
+      "uv": 0
+    }
+  },
+  "variants": [
+    {
+      "variant": "full",
+      "width": 4096,
+      "rgbSamples": 50331648,
+      "coveredPixels": 4581864,
+      "roofPixels": 2710774,
+      "transitionPixels": 1871090,
+      "paddingPixels": 587297,
+      "analyticalEdgeCorners": 1206,
+      "overlapPixels": 0,
+      "mismatchedSamples": 0,
+      "maxByteError": 0,
+      "underRoofByteChanges": 0,
+      "derivedPngSha256": "e9683c3c72ea9d70de55c21ab13f16479569524374086589fb47fc00dd022506",
+      "deliveredWebpSha256": "f1a4eff577b3ad79edef3c60f7aaba59eeb5638c9bfb9ed8e22d0bd7dd985717",
+      "retainedDerivedPngPresent": false
+    },
+    {
+      "variant": "low",
+      "width": 512,
+      "rgbSamples": 786432,
+      "coveredPixels": 71993,
+      "roofPixels": 42578,
+      "transitionPixels": 29415,
+      "paddingPixels": 9689,
+      "analyticalEdgeCorners": 1206,
+      "overlapPixels": 0,
+      "mismatchedSamples": 0,
+      "maxByteError": 0,
+      "underRoofByteChanges": 0,
+      "derivedPngSha256": "926308c85d176aa54894530e2de660cbfd65d13eff3aa11af8485231d0edb892",
+      "deliveredWebpSha256": "fabc583f6e5f6e83aa60f2200294102006d3abe562f48ecee5e892b9a150de9f",
+      "retainedDerivedPngPresent": false
+    }
+  ]
+}

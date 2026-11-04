@@ -1,0 +1,288 @@
+{
+  "status": "PASS actual imported source lamp/guard/template/material/selection/UV checks before GPU transport",
+  "staticPointLights": 10,
+  "removedNorthGuardOwners": 24,
+  "sourceVisibility": [
+    {
+      "context": "current-concourse-without-primary-arrivals.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "retained-exterior-visible-occluder.glb",
+      "sourceVisibilityRule": "Doric column master \u2014 35ft",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Doric column master \u2014 35ft",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              4.267199993133545
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              14.935199737548828
+            ]
+          ],
+          "sourceStreet0Bounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              0.0
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              10.668000221252441
+            ]
+          ],
+          "expectedBakeFrameBounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              4.2672
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              14.93520022125244
+            ]
+          ],
+          "sourceToBakeFrameOffsetZ": 4.2672,
+          "boundErrorM": 4.837036122751215e-07,
+          "meshMaterialAndMatrixExact": true
+        }
+      ]
+    },
+    {
+      "context": "retained-main-visible-occluder-main0.glb",
+      "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Fluted Corinthian shaft master.001",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -100.0
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -84.37899780273438
+            ]
+          ],
+          "sourceStreet0Bounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -104.26719665527344
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -88.64619445800781
+            ]
+          ],
+          "expectedBakeFrameBounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -99.99999665527343
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -84.37899445800781
+            ]
+          ],
+          "sourceToBakeFrameOffsetZ": 4.2672,
+          "boundErrorM": 3.344726565046585e-06,
+          "meshMaterialAndMatrixExact": true
+        }
+      ]
+    },
+    {
+      "context": "formal-arcade-module.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "platform-retained-occluder.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "platform-section-module.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "model-trains.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "model-context.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    },
+    {
+      "context": "arrivals-without-north-research-guard.glb",
+      "sourceVisibilityRule": null,
+      "changedObjects": []
+    }
+  ],
+  "occluderMaterialIntegrity": {
+    "schema": 1,
+    "status": "PASS",
+    "scope": "Established library applied only to actual imported neighbour objects/material pointers; primary meshes/materials excluded",
+    "libraryPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library",
+    "primaryMaterialCount": 8,
+    "uniqueOccluderMaterials": 121,
+    "uniqueOccluderMeshData": 8650,
+    "occluderObjects": 90499,
+    "primaryAndOccluderMeshPointerIntersection": 0,
+    "primaryAndOccluderMaterialPointerIntersection": 0,
+    "primaryMaterialGraphsPackedImagesAndPropertiesExact": true,
+    "primaryMaterialBeforeHashes": {
+      "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
+      "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
+    },
+    "primaryMaterialAfterHashes": {
+      "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
+      "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
+    },
+    "neighbourMaterialGraphsChanged": [
+      "ArcadeOrnamentalMetal",
+      "BedfordLimestoneConcourse",
+      "BedfordLimestoneConcourseCirculation",
+      "BotticinoMarble",
+      "ConcourseReinforcedVaultLightConcrete",
+      "ContextWindow",
+      "FlatRoofTile",
+      "HistoricGlass",
+      "HistoricGlass.001",
+      "InteriorGranite",
+      "LunetteGlazing",
+      "MilfordGranite",
+      "MilfordGranite.001",
+      "MilfordGraniteArcadeRepairPhase9",
+      "MonelRoof",
+      "OpalCandelabraGlass",
+      "PaintedStructuralIron",
+      "PaintedStructuralIron.001",
+      "PaintedStructuralIron.002",
+      "PaintedStructuralIronAccess",
+      "PaintedStructuralIronAccessGuard",
+      "PaintedStructuralIronAccessIndicators",
+      "PaintedStructuralIronArrivalsGroutJacket",
+      "PaintedStructuralIronArrivalsGuard",
+      "PaintedStructuralIronArrivalsStructure",
+      "PaintedStructuralIronCirculationAngles",
+      "PublicFloorMarble",
+      "PublicFloorMarble.001",
+      "PublicFloorMarble.002",
+      "PublicFloorMarbleAccessInfill",
+      "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "PublicFloorMarbleArrivalsRetainedNorth",
+      "Travertine",
+      "Travertine.001",
+      "Travertine.002",
+      "TravertineArcadeCastComposition",
+      "TravertineArcadeRepairPhase9",
+      "TravertineArrivalsStairStone",
+      "TravertineAshlar-1",
+      "TravertineAshlar-1ArcadeRepairPhase9",
+      "TravertineAshlar-2",
+      "TravertineAshlar-2ArcadeRepairPhase9",
+      "TravertineAshlar0",
+      "TravertineAshlar0ArcadeRepairPhase9",
+      "TravertineAshlar1",
+      "TravertineAshlar1ArcadeRepairPhase9",
+      "TravertineAshlar2",
+      "TravertineAshlar2ArcadeRepairPhase9",
+      "TravertineDepartureStairStone"
+    ],
+    "neighbourUV0MeshDataChangedCount": 1235,
+    "neighbourProfileMaterials": [
+      "BedfordLimestoneConcourse",
+      "BedfordLimestoneConcourseCirculation",
+      "BotticinoMarble",
+      "InteriorGranite",
+      "MilfordGranite",
+      "MilfordGranite.001",
+      "MilfordGraniteArcadeRepairPhase9",
+      "PublicFloorMarble",
+      "PublicFloorMarble.001",
+      "PublicFloorMarble.002",
+      "PublicFloorMarbleAccessInfill",
+      "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "PublicFloorMarbleArrivalsRetainedNorth",
+      "Travertine",
+      "Travertine.001",
+      "Travertine.002",
+      "TravertineArcadeCastComposition",
+      "TravertineArcadeRepairPhase9",
+      "TravertineArrivalsStairStone",
+      "TravertineAshlar-1",
+      "TravertineAshlar-1ArcadeRepairPhase9",
+      "TravertineAshlar-2",
+      "TravertineAshlar-2ArcadeRepairPhase9",
+      "TravertineAshlar0",
+      "TravertineAshlar0ArcadeRepairPhase9",
+      "TravertineAshlar1",
+      "TravertineAshlar1ArcadeRepairPhase9",
+      "TravertineAshlar2",
+      "TravertineAshlar2ArcadeRepairPhase9",
+      "TravertineDepartureStairStone"
+    ],
+    "primaryMaterialGraphsExactSinceInitialImport": true,
+    "primaryMaterialBeforeAllContextHashes": {
+      "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
+      "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
+    },
+    "primaryMaterialAfterAllContextHashes": {
+      "AgedBronzeArrivalsExitRoute": "b2b740bc965d6b23b4235c86b2ad58b07dcb6623678682c55c1c9c3ea5d5751e",
+      "InteriorGraniteArrivalsExitRoute": "e0b772fdddbbdce2ec98ce718d31864c8b295f5d5a64ac06bb8e8a688cc7dcd8",
+      "PaintedStructuralIronArrivalsExitRoute": "52e6581ded78b1f987fb23f74ee028b812bf37b95542b008f181927dc1ab0f59",
+      "WalnutBenchArrivalsExitRoute": "d40b63c805c62454f802a81a96af9bb727925d219476ff266bd9c61b2d620f61",
+      "EnamelledBrickArrivalsExitRoute": "112e4a56a2ce7fdcdea08dcd1b8e32ca784b67e21b95ef092a4c67b015bfbd3d",
+      "OpalCandelabraExits": "2fcb6742b6b28ec4f4f470c582f373b6335d53160829963fa9beee82b932c9ba",
+      "TravertineArrivalsExitRoute": "fdd625dc62d31645b7c56b789872469e27cd331ee32f4732104df7f1d96ef6f0",
+      "PublicFloorMarbleArrivalsExitRoute": "10b632ed7bb62b53d5b77c15605dd9fbc4e8c3de2f2f71356ee819fbb0579cc8"
+    }
+  },
+  "atlasUvRange": [
+    0.0,
+    1.0
+  ]
+}

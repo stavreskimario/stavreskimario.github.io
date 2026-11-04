@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "status": "PASS reversible archival of three generated raw AO PNG outputs only",
+  "scope": "Storage reserve only; no rendered quality or performance change. Original HDRs, retained denoised maps, input textures, detailed order AO and runtime assets are untouched.",
+  "immutableRecoveryCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+  "movedFiles": [
+    {
+      "zone": "phase8",
+      "repositoryPath": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "bytes": 10681935,
+      "sha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitBlob": "c9fc1b4789340d7f790f0a6340c29415564c02a2",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "independentExternalBackup": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-source-archive-v1/authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+        "sha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+        "bytes": 10681935
+      },
+      "freshExternalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+      "manifest": {
+        "repositoryPath": "authoring/penn-station-1935/lighting/phase8/archive-manifest.json",
+        "beforeSha256": "a624fc54d1ebfebdfc5f9fd746cabe1c8169750d9e5396e3181d9efc190db614",
+        "afterSha256": "482abbbb7d7817549ed1535c091ab2f1dc1a7810f78814e3bb271f73048d059c",
+        "beforeBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/phase8-archive-manifest.before.json"
+      }
+    },
+    {
+      "zone": "phase9-arcade",
+      "repositoryPath": "authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+      "bytes": 8515064,
+      "sha256": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitBlob": "3c7bc5d21d35c04015deff9020338c7a641a8b46",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+      "independentExternalBackup": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/lighting-archive-uv-priority-v2/authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+        "sha256": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335",
+        "bytes": 8515064
+      },
+      "freshExternalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+      "manifest": {
+        "repositoryPath": "authoring/penn-station-1935/lighting/phase9-arcade/archive-manifest.json",
+        "beforeSha256": "94223f41b27848db1108035d8fe82928c5b52783b838c820d5fac2627aacbbc6",
+        "afterSha256": "27954c6d397686be8c550314cb03b51964ea04d24003057f6e736bc8588a4601",
+        "beforeBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/phase9-arcade-archive-manifest.before.json"
+      }
+    },
+    {
+      "zone": "phase9-platform",
+      "repositoryPath": "authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "bytes": 3782880,
+      "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitBlob": "bbf179ec5dbeaa5f5fc63a70b83f2dcb53fbdbf9",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "independentExternalBackup": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/baked-v1/lighting-platform-surfaces-ao.png",
+        "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f",
+        "bytes": 3782880
+      },
+      "freshExternalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "manifest": {
+        "repositoryPath": "authoring/penn-station-1935/lighting/phase9-platform/archive-manifest.json",
+        "beforeSha256": "2f88cbb8f811e71ab4d71fa330145561f4b91e5cf0450ceb42835b46fb1d212b",
+        "afterSha256": "1b0c4d0d7dacebd461c16f78e25fa228381d0e315fda68014d9cdc3ce2082997",
+        "beforeBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/old-raw-ao-reserve-v1/phase9-platform-archive-manifest.before.json"
+      }
+    }
+  ],
+  "grossPngBytesReserved": 22979879,
+  "protectedUnchangedSourceFiles": 89,
+  "usageCheck": {
+    "directFilenameMatchesInActiveAppTestsScripts": 0,
+    "directFilenameMatchesInPhase10FrozenWorkCodeAndJson": 0,
+    "sourceValidatorsReviewed": "penn-assets.cjs verifyArrivalsSource/verifyArcadeSource/verifyPlatformSurfaceSource read HDR archives and bake reports; no raw AO PNG reads.",
+    "historicalReplayQualification": "Old complete-source replay/checks may need these generated PNGs restored first; no claim of every historical tool running without recovery."
+  },
+  "independentBackupsByteExact": true,
+  "immutableGitBytesVerified": true,
+  "optionalOldMaterialFinishImagesArchived": false,
+  "mutationAllowlist": [
+    "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-ao.png",
+    "authoring/penn-station-1935/lighting/phase9-arcade/raw/lighting-arcade-enclosure-ao.png",
+    "authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+    "authoring/penn-station-1935/lighting/phase8/archive-manifest.json",
+    "authoring/penn-station-1935/lighting/phase9-arcade/archive-manifest.json",
+    "authoring/penn-station-1935/lighting/phase9-platform/archive-manifest.json",
+    "authoring/penn-station-1935/review/phase10/storage/old-raw-ao-output-reserve.json",
+    "authoring/penn-station-1935/review/phase10/storage/restore-old-raw-ao.py",
+    "authoring/penn-station-1935/review/phase10/storage/README.md"
+  ]
+}

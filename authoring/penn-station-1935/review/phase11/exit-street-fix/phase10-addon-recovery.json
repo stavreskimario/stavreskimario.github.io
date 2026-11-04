@@ -1,0 +1,41 @@
+{
+  "status": "PASS replacement-first reversible archival of superseded Phase10 addon only",
+  "old": {
+    "repositoryPath": "authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+    "bytes": 16107186,
+    "sha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+    "immutableCommit": "a13683d9fcd28cc91cf49afc0e04d8585208d566",
+    "gitBlob": "6d1f94105f772ceadbf8eab3f0fb181b63a62112",
+    "archiveCondition": "Only after the new Phase11 full editable Blender scene has been copied into the repository and byte-verified. This is a versioned Phase10 addon, not canonical core c4.",
+    "freshExternalCopy": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/fresh-external-copy/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+    "freshExternalCopySha256": "b696eb1452cf29698084c657b8053436d9dd1ddf97e21fb82383d1e3d6fc750a",
+    "immutableGitVerified": true,
+    "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a13683d9fcd28cc91cf49afc0e04d8585208d566/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend"
+  },
+  "movedOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/storage-prep-v1/original-moved-after-verified-phase11-source/authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend",
+  "newEditableSource": {
+    "repositoryPath": "authoring/penn-station-1935/review/phase11/exit-street-fix/model/arrivals-exit-addon.blend",
+    "bytes": 16105468,
+    "sha256": "44f71d582425af027aabcd3f15dc6b07c55566e7df50d5a23bc2797a55e29c25"
+  },
+  "canonicalCore": {
+    "repositoryPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+    "sha256Before": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "sha256After": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "unchanged": true
+  },
+  "lightingFourOutputsStillRetained": true,
+  "oldPacketBeforeHashes": {
+    "MANIFEST.json": "c9123e658e06a30e26396d91522bc0e2c2af3d6a2e56f2297dacc3335ba5a632",
+    "README.md": "9707de0a9b22030489cb05d768a006f015a19fda4a1b1c699867ac3aaafd3471"
+  },
+  "oldPacketAfterHashes": {
+    "MANIFEST.json": "31ad2198e4a3d5fa6fe80b36fa8024a6d7f7cc5c626cef56332be71365c5d877",
+    "README.md": "aa81c3558ead1f7ebf1ac833d244a0e8f80e6e6cca4e9a7b6f65b573a17d2d89"
+  },
+  "freshExternalCopyVerified": true,
+  "rootRemovalOnly": [
+    "authoring/penn-station-1935/review/phase10/exit-construction/model/arrivals-exit-addon.blend"
+  ],
+  "restoreHelper": "restore-phase10-addon.py"
+}

@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "date": "2026-11-02",
+  "scope": "Read-only primary research handoff, no canonical/runtime edits",
+  "sources": [
+    {
+      "id": "S9-S10",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/next-visual-references/asce69.pdf",
+      "sha256": "4991ce4511ae853ffcb6e95e24b95d7b45f552f32bf0d9203d6b951512f6c7a3",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+      "publicationYear": 1910,
+      "rights": "United States public domain; no source raster added to runtime."
+    },
+    {
+      "id": "S6",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase6-platform-access/prr1910-ia.pdf",
+      "sha256": "da756824c1b8c997e95473ad16246c49b2019cb9a6a232495f28ee878afaa668",
+      "catalog": "https://www.loc.gov/item/10027726/",
+      "publicationYear": 1910,
+      "rights": "LOC item record: public domain, free to use and reuse."
+    }
+  ],
+  "controls": {
+    "platformSection": {
+      "source": "S9",
+      "printedPages": [
+        201,
+        202
+      ],
+      "pdfPagesOneBased": [
+        369,
+        370
+      ],
+      "centreThicknessRangeM": [
+        0.2032,
+        0.4064
+      ],
+      "edgeThicknessM": 0.2032,
+      "sidewallThicknessM": 0.4064,
+      "overhangFromOuterWallFaceM": 0.508,
+      "wallCentreInsetM": 0.7112,
+      "coveRadiusM": 0.3048,
+      "surfaceJointPitchApproxM": 0.762,
+      "topDressingThicknessM": 0.01905,
+      "finish": "Stippled granolithic; rubbed exposed concrete sidewalls.",
+      "example": {
+        "centreThicknessM": 0.3302,
+        "clearSpanMaximumM": 3.9624,
+        "overallMaximumM": 5.3848,
+        "crossfallRatio": 0.020833333333333332
+      },
+      "held": [
+        "Individual platform slab schedule",
+        "Angled-tip transition profiles",
+        "Full hatch/lift/opening/drain schedule",
+        "Applying crossfall while preserving existing interface heights",
+        "Matching printed special platformNo2 to model numbering"
+      ]
+    },
+    "groupedPlatformTable": {
+      "source": "S10",
+      "printedPage": 236,
+      "pdfPageOneBased": 416,
+      "nativeGroups": [
+        {
+          "count": 4,
+          "averageWidthFt": 21,
+          "averageLengthFt": 900
+        },
+        {
+          "count": 4,
+          "averageWidthFt": 21,
+          "averageLengthFt": 1050
+        },
+        {
+          "count": 2,
+          "averageWidthFt": 16,
+          "averageLengthFt": 1000
+        },
+        {
+          "count": 1,
+          "averageWidthFt": 47,
+          "averageLengthFt": 745,
+          "role": "LIRR loading"
+        }
+      ],
+      "ocrError": "First21ft misread31ft in OCR; native verified21ft.",
+      "doesNotEstablish": [
+        "Named platform assignments",
+        "P9 alignment correction",
+        "Certified1935 schedule"
+      ]
+    },
+    "westernMain": {
+      "source": [
+        "S10Fig2p243",
+        "S10p252",
+        "S9p189",
+        "plateLXXXIV"
+      ],
+      "qualifiedWesternEdgeX": -78.8,
+      "minimumRegistrationUncertaintyM": 1,
+      "affectedFeetInherited": {
+        "definite": 20,
+        "boundaryDependent": 6
+      },
+      "holdCutUntil": [
+        "Individual foundation/transfer paths",
+        "Source-traced floor polygons and retained cloister/bridge routes",
+        "Closed frame edges/guards",
+        "Native route validation"
+      ],
+      "roofErectionPlates": "LXIX/LXX E356ft6in lower drawn line is not Main~319ft or a complete foundation section."
+    },
+    "arcade": {
+      "source": [
+        "S6PDF18-19",
+        "S10p242",
+        "S10p249",
+        "S10p252",
+        "S10p254-256",
+        "S10p269"
+      ],
+      "lengthWidthConflictFt": {
+        "booklet": [
+          225,
+          45
+        ],
+        "gibbsTable": [
+          220,
+          40
+        ]
+      },
+      "stairWidthFt": 40,
+      "floor": "Marble, precise variety/pattern unverified",
+      "walls": "Travertine plus cast cement-composition facing",
+      "lighting": "Wall brackets with Nernst clusters",
+      "form": "Street-level barrel-vaulted shopping arcade with high arched side windows, expanded western loggia, stair down one floor to Main.",
+      "held": [
+        "Exact storefront inventory/signage in1935",
+        "Finished face dimensions beyond evidence conflict",
+        "Fixture fabrication and photometry"
+      ]
+    },
+    "northernP9": {
+      "status": "held",
+      "inheritedAlignmentDiscrepancyApproxM": 2.1,
+      "noArbitraryRelabelOrShift": true
+    }
+  },
+  "newCatalogs": [
+    {
+      "url": "https://www.loc.gov/resource/ds.04711/",
+      "item": "2004670837",
+      "date": "Not after4January1911",
+      "rights": "No known restrictions; no copyright renewal.",
+      "retrieved": "Search/resource catalog text only; direct API403, no raster downloaded.",
+      "qualification": "A2019LOCretrospective1942captionconflictswithprimaryitemrecord."
+    },
+    {
+      "url": "https://americanhistory.si.edu/collections/archival-item/sova-nmah-ac-1048-ref1149",
+      "date": "1909-10-09",
+      "title": "Main Arcade Looking East",
+      "retrieved": "Catalog only, in-person/off-site original not retrieved."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "asce69-pdf438.png",
+      "bytes": 429211,
+      "sha256": "534b15493e070fa28191ae950caf0724447998700d1e57c628975169da55d093"
+    },
+    {
+      "path": "asce69-pdf442.png",
+      "bytes": 713362,
+      "sha256": "84c9b47ec394fc3b25821d0adff4abef8a841424b4ce55cef1904479853e23eb"
+    },
+    {
+      "path": "asce69-pdf446.png",
+      "bytes": 658463,
+      "sha256": "36bcadc80ec073eb8a1d46fc814b3db5c719a2c2efdd8242c02ca140544b4a88"
+    },
+    {
+      "path": "asce69-pdf461.png",
+      "bytes": 710454,
+      "sha256": "f84ada1f71a6112a6beedd7c5128bc0c5abdb88d82b8621574dcfd5f4ad75f99"
+    },
+    {
+      "path": "francis-platforms-pdf369.png",
+      "bytes": 712264,
+      "sha256": "ff37ceab73bb53474e81bfa6d5ca5ca8d3533783f35eac260242191225c5bfab"
+    },
+    {
+      "path": "francis-platforms-pdf370.png",
+      "bytes": 656928,
+      "sha256": "ac672b923d855fee8f9db0e07071dc772b78f5d750012da7839d5bc2c4046a3f"
+    },
+    {
+      "path": "gibbs-table2-pdf416.png",
+      "bytes": 646321,
+      "sha256": "23d2bf9162fe80f532dac3430e835e5a4c68acdac8673b6c932d931a37eba71d"
+    },
+    {
+      "path": "platform-section.png",
+      "bytes": 391342,
+      "sha256": "2e16c75693558dfa74474cc6b46a646fc9630ab7993fe969d0a4ee9054c418bc"
+    },
+    {
+      "path": "platform-table.png",
+      "bytes": 369335,
+      "sha256": "505150948f889355733fdb160c6da23bfa3634c6a12f28b3ca8f142678f228ca"
+    },
+    {
+      "path": "prr1910-pdf18.png",
+      "bytes": 941630,
+      "sha256": "4c6ba692a82ad30a895d35b58d8f7c85d5c3e33895a4e97900ec643fc14a8454"
+    },
+    {
+      "path": "prr1910-pdf19.png",
+      "bytes": 659477,
+      "sha256": "bf98697439660f72f0cefe8fc44feda742777ba6845061d818622f09a012f7aa"
+    },
+    {
+      "path": "prr1910-pdf33.png",
+      "bytes": 1274301,
+      "sha256": "c4ec9557e6dbebc3f4cf3e32f634228d5baa03c896564851c02dfeb87275ae47"
+    },
+    {
+      "path": "prr1910-pdf36.png",
+      "bytes": 848945,
+      "sha256": "d468dab76d54b8e60510d16f2e6b003e644c0710dcd516524a4c08c242b5479c"
+    },
+    {
+      "path": "prr1910-pdf37.png",
+      "bytes": 968073,
+      "sha256": "02a2448d9bef74bc161424fd4a30d1a0bccb9183efb9d2c912f9d04795bbd53f"
+    }
+  ],
+  "report": {
+    "path": "next-construction-controls.md",
+    "sha256": "b7217a3d8c1f30e9478938d90c76b25617125db32370de73768ef7e5c76ba0c6"
+  }
+}

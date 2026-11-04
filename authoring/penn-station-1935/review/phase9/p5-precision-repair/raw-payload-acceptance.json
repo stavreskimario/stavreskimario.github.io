@@ -1,0 +1,373 @@
+{
+  "schema": 1,
+  "status": "PASS: actual P5 raw geometry/UV/PBR/image preservation, fresh AO and HDR payloads",
+  "inputs": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/geometry-input/p5-arrivals-preserved-input-v3.glb": {
+      "sha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
+      "bytes": 44632896
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/model-concourse-arrivals.glb": {
+      "sha256": "25bc201678022895b1255d598fa4b62edad107b49f7a90a2ffa09615e426521b",
+      "bytes": 47633400
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals.json": {
+      "sha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+      "bytes": 3920400
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-ao.png": {
+      "sha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+      "bytes": 10681935
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky.hdr": {
+      "sha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+      "bytes": 49721229
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky.png": {
+      "sha256": "7ca17e0b864edaabae5e2f389df6a77b6ae4e2d9bd1daee9ecbff12a77497401",
+      "bytes": 21587281
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky-low.png": {
+      "sha256": "a0e6be5a5e5b836484f7507bb715bdcfe0a69628129f7af5d7b8358299462c3f",
+      "bytes": 274084
+    }
+  },
+  "actualReport": {
+    "authoredImportedBuffersExact": true,
+    "onlyArchitectureSelectedActive": true,
+    "primaryShaderImageStatesExactSinceInitialImport": true,
+    "eightContextsAndVisibilityReceiptsPresent": true,
+    "neighborSurfaceProfiles": 28,
+    "actualRadianceScale": 1.0,
+    "engine": "4.3.0 Cycles METAL",
+    "elapsedBakeSeconds": 232.76600495900493
+  },
+  "geometry": {
+    "triangleCorners": 1181412,
+    "rawIndexPayloadsExact": 3135,
+    "primitiveCount": 3923,
+    "nodeJsonExact": true,
+    "sceneMembershipExact": true,
+    "positionsExact": true,
+    "maximumPositionComponentDeltaM": 0.0,
+    "rawNormalsExact": false,
+    "maximumNormalRoundtripAngleDegrees": 0.04171355838859745,
+    "allowedNormalRoundtripAngleDegrees": 0.5,
+    "surfaceUv0Exact": true,
+    "maximumSurfaceUv0Delta": 0.0,
+    "priorityUv1Exact": false,
+    "maximumPriorityUv1Delta": 2.9802322387695312e-08,
+    "allowedUvFloat32RoundtripDelta": 2e-07,
+    "qualification": "All oriented triangle corners must retain positions exactly. Index renumbering is reported, never substituted for the corner comparison. Normal re-encoding and UV V-flip Float32 round-trip, if present, are measured rather than called byte-exact.",
+    "worldPositionsExactFromActualLocalCornersAndExactRootFrames": true,
+    "normalWorldAnglesEqualLocalAnglesUnderIdentityLinearFrames": true,
+    "precisionHaunchTranslationsExact": [
+      {
+        "name": "P5Curve west lower haunch side-plus",
+        "translationMain0": [
+          -78.33699798583984,
+          -6.156351566314697,
+          13.807632446289062
+        ]
+      },
+      {
+        "name": "P5Curve west lower haunch side-minus",
+        "translationMain0": [
+          -78.33699798583984,
+          -6.156351566314697,
+          11.527631759643555
+        ]
+      }
+    ]
+  },
+  "materials": {
+    "materialCount": 7,
+    "allPbrScalarsExtensionsAndNonLightingExtrasExact": true,
+    "allowedChangedExtra": "sky_illumination_scale (must equal the actual report)",
+    "sourceImages": [
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "normalTexture",
+        "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+        "bytes": 1312711,
+        "imagePayloadExact": true,
+        "sourceImageName": "Travertine009_2K-JPG_NormalGL",
+        "exportImageName": "Travertine009_2K-JPG_NormalGL"
+      },
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "baseColorTexture",
+        "sha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+        "bytes": 4613837,
+        "imagePayloadExact": true,
+        "sourceImageName": "RomanTravertine-full",
+        "exportImageName": "RomanTravertine-full"
+      },
+      {
+        "material": "TravertineArrivalsStairStone",
+        "role": "metallicRoughnessTexture",
+        "sha256": "f2cd0775a33f8902da65a4f33dc377585cf2b5e3cda82119c50035163eb2b346",
+        "bytes": 2855859,
+        "imagePayloadExact": true,
+        "sourceImageName": "Travertine-roughness",
+        "exportImageName": "Travertine-roughness"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "normalTexture",
+        "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+        "bytes": 1288531,
+        "imagePayloadExact": true,
+        "sourceImageName": "Marble018_2K-JPG_NormalGL",
+        "exportImageName": "Marble018_2K-JPG_NormalGL"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "baseColorTexture",
+        "sha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+        "bytes": 4785562,
+        "imagePayloadExact": true,
+        "sourceImageName": "HonedMarble-full",
+        "exportImageName": "HonedMarble-full"
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "role": "metallicRoughnessTexture",
+        "sha256": "06b1677bd2d4cef870487f27e1e1242286092ec35491420740d2364db09bed2f",
+        "bytes": 3547440,
+        "imagePayloadExact": true,
+        "sourceImageName": "Marble018_2K-JPG_Roughness",
+        "exportImageName": "Marble018_2K-JPG_Roughness"
+      }
+    ]
+  },
+  "freshAo": {
+    "freshStandalonePngSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "litMaterialCount": 4,
+    "allOcclusionRedChannelPixelsFreshExact": true,
+    "bindings": [
+      {
+        "material": "TravertineArrivalsStairStone",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "ConcourseOpaqueArrivalsConcrete",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      },
+      {
+        "material": "ConcourseOpaqueArrivalsUpperSupports",
+        "texCoord": 1,
+        "image": "lighting-concourse-arrivals-ao",
+        "imagePayloadSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+        "redChannelPixelsExact": true,
+        "rgbPixelsExact": true,
+        "pngBytesExact": true
+      }
+    ]
+  },
+  "physicalLightingDensity": {
+    "publicFacesNeverLoseDensity": true,
+    "classes": [
+      {
+        "class": "public_treads_landings",
+        "triangles": 832,
+        "worldAreaM2": 284.1918396752121,
+        "oldGi4096TexelsPerM": 42.29579193791791,
+        "newGi4096TexelsPerM": 115.80554001816226,
+        "newAo2048TexelsPerMIfDownsized": 57.90277000908113,
+        "minimumPerTriangleLinearDensityRatio": 2.7379745539250906
+      },
+      {
+        "class": "public_stair_risers",
+        "triangles": 928,
+        "worldAreaM2": 195.28292632239015,
+        "oldGi4096TexelsPerM": 42.29568899238796,
+        "newGi4096TexelsPerM": 92.64411312415959,
+        "newAo2048TexelsPerMIfDownsized": 46.322056562079794,
+        "minimumPerTriangleLinearDensityRatio": 2.1903764567022397
+      },
+      {
+        "class": "public_retained_floor",
+        "triangles": 6,
+        "worldAreaM2": 20.035972595214844,
+        "oldGi4096TexelsPerM": 42.29570298655442,
+        "newGi4096TexelsPerM": 46.3221123740899,
+        "newAo2048TexelsPerMIfDownsized": 23.16105618704495,
+        "minimumPerTriangleLinearDensityRatio": 1.0951956003842145
+      },
+      {
+        "class": "public_gallery_floor",
+        "triangles": 50,
+        "worldAreaM2": 1905.5744269968523,
+        "oldGi4096TexelsPerM": 42.29571387123358,
+        "newGi4096TexelsPerM": 46.322095099650596,
+        "newAo2048TexelsPerMIfDownsized": 23.161047549825298,
+        "minimumPerTriangleLinearDensityRatio": 1.0951951797923305
+      }
+    ]
+  },
+  "actualHdrPayload": {
+    "schema": 1,
+    "status": "PASS",
+    "input": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky.hdr",
+    "inputSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+    "bytes": 49721229,
+    "decoder": "Official pinned Three.js0.180 HDRLoader FloatType parse; no renderer/GPU/browser",
+    "width": 4096,
+    "height": 4096,
+    "rgb": {
+      "minimum": 0,
+      "maximum": 0.5607843399047852,
+      "mean": 0.033303085685986854,
+      "positiveSamples": 39725622
+    },
+    "inputUnchanged": true
+  },
+  "hdrMeanRelativeDifferenceFromUnquantizedReport": 0.0007277262572642496,
+  "hdrMeanComparison": {
+    "producerMeanScope": "Only alpha>.1 covered pixels",
+    "coveredFraction": 0.8630061745643616,
+    "expectedWholeAtlasMeanFromCoveredReport": 0.03327886778009126,
+    "actualWholeAtlasHdrMean": 0.033303085685986854,
+    "relativeDifference": 0.0007277262572642496,
+    "qualification": "Coverage denominator reconciled before the measured RGBE quantization difference; no covered/whole mean equivalence claim."
+  },
+  "rawPngDimensions": [
+    {
+      "file": "lighting-concourse-arrivals-sky.png",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "7ca17e0b864edaabae5e2f389df6a77b6ae4e2d9bd1daee9ecbff12a77497401"
+    },
+    {
+      "file": "lighting-concourse-arrivals-sky-low.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a0e6be5a5e5b836484f7507bb715bdcfe0a69628129f7af5d7b8358299462c3f"
+    }
+  ],
+  "actualVisibilityChanges": [
+    {
+      "name": "Doric column master \u2014 35ft",
+      "hideRenderBefore": false,
+      "hideRenderAfter": true,
+      "sourceHideRender": true,
+      "actualWorldBounds": [
+        [
+          -0.9100000262260437,
+          -0.9100000262260437,
+          4.267199993133545
+        ],
+        [
+          0.9100000262260437,
+          0.9100000262260437,
+          14.935199737548828
+        ]
+      ],
+      "sourceStreet0Bounds": [
+        [
+          -0.9100000262260437,
+          -0.9100000262260437,
+          0.0
+        ],
+        [
+          0.9100000262260437,
+          0.9100000262260437,
+          10.668000221252441
+        ]
+      ],
+      "expectedBakeFrameBounds": [
+        [
+          -0.9100000262260437,
+          -0.9100000262260437,
+          4.2672
+        ],
+        [
+          0.9100000262260437,
+          0.9100000262260437,
+          14.93520022125244
+        ]
+      ],
+      "sourceToBakeFrameOffsetZ": 4.2672,
+      "boundErrorM": 4.837036122751215e-07,
+      "meshMaterialAndMatrixExact": true
+    },
+    {
+      "name": "Fluted Corinthian shaft master.001",
+      "hideRenderBefore": false,
+      "hideRenderAfter": true,
+      "sourceHideRender": true,
+      "actualWorldBounds": [
+        [
+          -1.2690494060516357,
+          -1.2690494060516357,
+          -100.0
+        ],
+        [
+          1.2690494060516357,
+          1.2690494060516357,
+          -84.37899780273438
+        ]
+      ],
+      "sourceStreet0Bounds": [
+        [
+          -1.2690494060516357,
+          -1.2690494060516357,
+          -104.26719665527344
+        ],
+        [
+          1.2690494060516357,
+          1.2690494060516357,
+          -88.64619445800781
+        ]
+      ],
+      "expectedBakeFrameBounds": [
+        [
+          -1.2690494060516357,
+          -1.2690494060516357,
+          -99.99999665527343
+        ],
+        [
+          1.2690494060516357,
+          1.2690494060516357,
+          -84.37899445800781
+        ]
+      ],
+      "sourceToBakeFrameOffsetZ": 4.2672,
+      "boundErrorM": 3.344726565046585e-06,
+      "meshMaterialAndMatrixExact": true
+    }
+  ],
+  "all68FrozenInputsRehashedExact": true,
+  "inputsUnchangedAtEnd": true,
+  "limits": [
+    "This is raw unquantized payload acceptance, not full/low encoded or native browser acceptance.",
+    "Normal re-encoding and UV Float32 round trips are measured under established0.5degree/2e-7bounds.",
+    "Fresh HDR is linear quantized RGBE; denoising,0.18 calibration, clipping and derivative-pixel checks remain next.",
+    "Source radii/fabrication/preciseP5identity and the upper haunch remain qualified."
+  ],
+  "referenceAuditSha256": "488a40cd1edd58e86f9036772e2df4ea73dc92ae305ed667e2ff863742f84b9e",
+  "generatorSha256": "324480d23eb91d064c6b71cbbdcf02f26a32317915c8e44a9eb4027dcc73b4fd"
+}

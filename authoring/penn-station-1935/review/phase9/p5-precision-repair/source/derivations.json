@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "file": "source/repair_precision.mjs",
+      "sha256": "5775e36c3b4884c6222a080f60e3cb93108a131265e462f6888e2d54ff9f05fd",
+      "originalSha256": "1e9dcb5e2d063e95d2eeba1633bcbdc626ac4cf386a15e9181e4802908ef4861",
+      "changes": "Path/configuration-only derivative: explicit environment roots, repo-relative utility imports, local owner decoder, fresh external proof guard. Original algorithms, all pins, ownership, geometry, compression and thresholds unchanged.",
+      "importChanges": [
+        {
+          "from": "import{parseGlb,decodeView,MeshoptEncoder,MeshoptDecoder}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/penn-station-1935/model/meshopt_patch_io.mjs"
+        },
+        {
+          "from": "import{writeGlb}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/asset_io.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/penn-station-1935/asset_io.mjs"
+        },
+        {
+          "from": "import{accessors,worldNodes}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/tests/helpers/penn-decoded-geometry.mjs"
+        }
+      ],
+      "executionQualification": "Syntax-checked only; no new replay/physical test was executed for the portable derivative."
+    },
+    {
+      "file": "source/verify_precision.mjs",
+      "sha256": "a4a608cb32a28fc55410598fe5e51db362ddae1cadf59a9d7c40be2db9889587",
+      "originalSha256": "d7b8b772ebe016503bec5e34cf5f851074fe8288c3adbbdf040e3d06aa9817ea",
+      "changes": "Path/configuration-only derivative: explicit environment roots, repo-relative utility imports, local owner decoder, fresh external proof guard. Original algorithms, all pins, ownership, geometry, compression and thresholds unchanged.",
+      "importChanges": [
+        {
+          "from": "import{parseGlb,decodeView}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/penn-station-1935/model/meshopt_patch_io.mjs"
+        },
+        {
+          "from": "import{accessors,worldNodes}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/tests/helpers/penn-decoded-geometry.mjs"
+        },
+        {
+          "from": "import{decoded,solid}from'/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-review-v1/review-p5-finish.mjs';",
+          "to": "Committed portable P5 source helper"
+        }
+      ],
+      "executionQualification": "Syntax-checked only; no new replay/physical test was executed for the portable derivative."
+    },
+    {
+      "file": "source/owner_decode.mjs",
+      "sha256": "666b8d97d3ea45613ce681831495dd79b2eb8b5519e0dcfb4f5f6b5eac5524de",
+      "originalSha256": "5971b0e181aba10bca1ec1324ebef0a86cc86f105c0487d49a8b792a526af27b",
+      "changes": "Path/configuration-only derivative: explicit environment roots, repo-relative utility imports, local owner decoder, fresh external proof guard. Original algorithms, all pins, ownership, geometry, compression and thresholds unchanged.",
+      "importChanges": [
+        {
+          "from": "import{parseGlb}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/meshopt_patch_io.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/penn-station-1935/model/meshopt_patch_io.mjs"
+        },
+        {
+          "from": "import{accessors,worldNodes}from'/Users/stavreskimario/Desktop/penn-station-reconstruction/tests/helpers/penn-decoded-geometry.mjs';",
+          "to": "Dynamic import under PENN_REPO_ROOT/tests/helpers/penn-decoded-geometry.mjs"
+        }
+      ],
+      "executionQualification": "Syntax-checked only; no new replay/physical test was executed for the portable derivative."
+    }
+  ]
+}

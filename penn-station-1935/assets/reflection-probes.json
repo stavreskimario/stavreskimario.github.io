@@ -1,0 +1,264 @@
+{
+  "engine": "4.3.0 Cycles",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "createdInputs": [
+    {
+      "zone": "exterior",
+      "file": "model-exterior.glb",
+      "sha256": "de8b76b4a83aa184d9934472a6a6fa94c1a6616cba926dd335573c65c57a6bb5",
+      "objects": 14
+    },
+    {
+      "zone": "context",
+      "file": "model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "objects": 10736
+    },
+    {
+      "zone": "waiting",
+      "file": "model-waiting-room.glb",
+      "sha256": "4dbd4da6f1bb75761fc525781580e113e4c4e2c142191496fe2a881eb2705945",
+      "objects": 27
+    },
+    {
+      "zone": "concourse",
+      "file": "model-concourse.glb",
+      "sha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
+      "objects": 5062
+    },
+    {
+      "zone": "platform",
+      "file": "model-platform.glb",
+      "sha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
+      "objects": 66804
+    },
+    {
+      "zone": "trains",
+      "file": "model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "objects": 66
+    }
+  ],
+  "width": 2048,
+  "samples": 64,
+  "hdrDitherIntensity": 0,
+  "surfaces": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BotticinoMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.25,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.58,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "InteriorGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.025,
+      "roughnessFactor": 0.5,
+      "appearanceRevision": 4,
+      "colourProfile": "InteriorFine",
+      "interiorShaftFinish": "Smoother response interpreted from primary photographs; no measured polish/roughness specification"
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1,
+      "normalStrength": 0.045,
+      "roughnessFactor": 0.88,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.002",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.002",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar-2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar0",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar1",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineAshlar2",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 0.95,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "probeOrientation": "Centre east(+X); increasing U turns toward south(+Z in Three)",
+  "lighting": "Neutral dome and fixed afternoon reference sun; interpretation, not a dated historic exposure",
+  "limitation": "Static room-centre approximation; no parallax correction, moving-passenger capture or time-specific indirect relighting",
+  "probes": [
+    {
+      "zone": "waiting-room",
+      "worldPosition": [
+        0,
+        -1.7672,
+        0
+      ],
+      "fullFile": "reflection-waiting-room.hdr.gz",
+      "fullBytes": 4936342,
+      "decodedSha256": "4571ff2b14f5bf9193ed97a4bb6b9f7426c35e2f591c246bb023f3ade4bc02e7",
+      "lowFile": "reflection-waiting-room-low.hdr.gz",
+      "lowBytes": 336231,
+      "lowHdrRoundtripRelativeError": 0.0032072647682232455,
+      "maximumRadiance": 0.7631624341011047
+    },
+    {
+      "zone": "concourse",
+      "worldPosition": [
+        -70,
+        -2.2672,
+        4.5
+      ],
+      "fullFile": "reflection-concourse.hdr.gz",
+      "fullBytes": 5537345,
+      "decodedSha256": "bb3ab54767300a4cbb23407a8900ab2e7b04bb18a32ba5c5736d20aac29d900e",
+      "lowFile": "reflection-concourse-low.hdr.gz",
+      "lowBytes": 366456,
+      "lowHdrRoundtripRelativeError": 0.003184320221966462,
+      "maximumRadiance": 4505.009765625
+    },
+    {
+      "zone": "platform",
+      "worldPosition": [
+        -65,
+        -10.1,
+        -0.341442588
+      ],
+      "fullFile": "reflection-platform.hdr.gz",
+      "fullBytes": 4785576,
+      "decodedSha256": "eedd59ea7f86c0ff66cd285afdaf259882500c9a4f27b5302ae406cd4fd34300",
+      "lowFile": "reflection-platform-low.hdr.gz",
+      "lowBytes": 314101,
+      "lowHdrRoundtripRelativeError": 0.0029164472597070527,
+      "maximumRadiance": 1.8507815599441528
+    }
+  ],
+  "elapsedSeconds": 186.11734933300067
+}

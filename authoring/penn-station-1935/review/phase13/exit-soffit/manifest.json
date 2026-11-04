@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "status": "FROZEN accepted exact56face source and clean context; final lighting/encoded/native visual acceptance pending",
+  "createdUTC": "2026-11-04T03:05:52.533320+00:00",
+  "sourceSHA256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+  "editableSHA256": "6cc50f8c952fba24f4f98c7f7f88a567610b5ece3e44c361fbd917fdef3a65b4",
+  "sourceObjects": 1,
+  "sourceTriangles": 56,
+  "sourceMaterials": 1,
+  "primaryLamps": 0,
+  "contextSourceLamps": 10,
+  "coordinateSpace": "Main0glTF;worldY=Main0Y\u22124.2672",
+  "sourceDrift": {
+    "position": 0,
+    "normal": 0,
+    "UV0": 0
+  },
+  "primaryLightUV": {
+    "channel": 1,
+    "resolution": 4096,
+    "intendedPixelsPerMetre": 60.13264562615617
+  },
+  "files": [
+    {
+      "path": "model/concourse-exit-soffit-addon.glb",
+      "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "bytes": 9112,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/model-concourse-soffit.glb",
+      "sourceSha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "sourceBytes": 9112,
+      "encoding": "identity",
+      "role": "Accepted exact56face Blender source; no added geometry"
+    },
+    {
+      "path": "model/concourse-exit-soffit-addon.blend",
+      "sha256": "6cc50f8c952fba24f4f98c7f7f88a567610b5ece3e44c361fbd917fdef3a65b4",
+      "bytes": 88356,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/soffit-finish.blend",
+      "sourceSha256": "6cc50f8c952fba24f4f98c7f7f88a567610b5ece3e44c361fbd917fdef3a65b4",
+      "sourceBytes": 88356,
+      "encoding": "identity",
+      "role": "Editable commonfinish module and continuous4K lightUV"
+    },
+    {
+      "path": "source/build_soffit_finish_v2.py",
+      "sha256": "e71f447196c584b82c8fbfa949c049c8d980b617b9b224c19bd56235ffa9c995",
+      "bytes": 4074,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/build_soffit_finish_v2.py",
+      "sourceSha256": "e71f447196c584b82c8fbfa949c049c8d980b617b9b224c19bd56235ffa9c995",
+      "sourceBytes": 4074,
+      "encoding": "identity",
+      "role": "Exact executed source builder"
+    },
+    {
+      "path": "source/remap-owned-soffit.mjs",
+      "sha256": "2dcb5718f4ce4ec2a8f3433919f4e7d8651602b65f01affe39af4be24882b68f",
+      "bytes": 4478,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/remap-owned-soffit.mjs",
+      "sourceSha256": "2dcb5718f4ce4ec2a8f3433919f4e7d8651602b65f01affe39af4be24882b68f",
+      "sourceBytes": 4478,
+      "encoding": "identity",
+      "role": "Executed full/low current source identity check"
+    },
+    {
+      "path": "source/pack-retained-soffit-base.mjs",
+      "sha256": "4ba04e4e945d309ac5ed4268146d9ad67e105cdcb7dea56cb061f71fed6a2c0f",
+      "bytes": 3334,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/pack-retained-soffit-base.mjs",
+      "sourceSha256": "4ba04e4e945d309ac5ed4268146d9ad67e105cdcb7dea56cb061f71fed6a2c0f",
+      "sourceBytes": 3334,
+      "encoding": "identity",
+      "role": "Executed two-primitive exact56 index-removal packer"
+    },
+    {
+      "path": "source/soffit_context_membership.py",
+      "sha256": "2b19c5d9c2ed8f4b05dafaa0a0026163401641a8703e52aefaae89a16ac30e79",
+      "bytes": 3505,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/soffit_context_membership.py",
+      "sourceSha256": "2b19c5d9c2ed8f4b05dafaa0a0026163401641a8703e52aefaae89a16ac30e79",
+      "sourceBytes": 3505,
+      "encoding": "identity",
+      "role": "Executed exact three-owner cached face removal"
+    },
+    {
+      "path": "source/prepare_soffit_context_v2.py",
+      "sha256": "7c9231c19f38e1583f8a086e904c97c022b7935e8553d1480d12c7e010b2d333",
+      "bytes": 2512,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/prepare_soffit_context_v2.py",
+      "sourceSha256": "7c9231c19f38e1583f8a086e904c97c022b7935e8553d1480d12c7e010b2d333",
+      "sourceBytes": 2512,
+      "encoding": "identity",
+      "role": "Executed reusable clean context preparation"
+    },
+    {
+      "path": "source/audit-cache-soffit.py",
+      "sha256": "d800bf37846509ed5c6d0183729497aa628e1c964b5c12c513324f7f1c0790d3",
+      "bytes": 2993,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/audit-cache-soffit.py",
+      "sourceSha256": "d800bf37846509ed5c6d0183729497aa628e1c964b5c12c513324f7f1c0790d3",
+      "sourceBytes": 2993,
+      "encoding": "identity",
+      "role": "Executed context owner mapping"
+    },
+    {
+      "path": "source/check-source-soffit-v2.mjs",
+      "sha256": "bc31d2fed0ad2dd42a03dae2ab72898fb736b3a33a38b37f5d9aa4b7d0031838",
+      "bytes": 7524,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/check-source-soffit-v2.mjs",
+      "sourceSha256": "bc31d2fed0ad2dd42a03dae2ab72898fb736b3a33a38b37f5d9aa4b7d0031838",
+      "sourceBytes": 7524,
+      "encoding": "identity",
+      "role": "Executed source P/N/UV0 and continuous lightUV conservation"
+    },
+    {
+      "path": "receipts/OWNERSHIP-REMAP-PASS.json",
+      "sha256": "e52230d00ed024dd996b722dd6cd077a0f085e0add37efe98f9bf0104fdc1258",
+      "bytes": 935,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/OWNERSHIP-REMAP-PASS.json",
+      "sourceSha256": "e52230d00ed024dd996b722dd6cd077a0f085e0add37efe98f9bf0104fdc1258",
+      "sourceBytes": 935,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "receipts/source-attribute-proof-v2.json",
+      "sha256": "e70672bacaa0d1010cd301c0e7c5875d2c5925469255def11a23a00697a56419",
+      "bytes": 2519,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/source-attribute-proof-v2.json",
+      "sourceSha256": "e70672bacaa0d1010cd301c0e7c5875d2c5925469255def11a23a00697a56419",
+      "sourceBytes": 2519,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "receipts/construction.json",
+      "sha256": "257b43a8d540b9c4cfc2262f2e1825e5ff0466e77c9f18367ec5a712a273a1c8",
+      "bytes": 1932,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/construction.json",
+      "sourceSha256": "257b43a8d540b9c4cfc2262f2e1825e5ff0466e77c9f18367ec5a712a273a1c8",
+      "sourceBytes": 1932,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "receipts/prepared-context-proof.json",
+      "sha256": "90af28440c9087d37465fdb9259d479bb076fd8c14414539824bb86da7b58d2b",
+      "bytes": 4267,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/context-v2/prepared-context-proof.json",
+      "sourceSha256": "90af28440c9087d37465fdb9259d479bb076fd8c14414539824bb86da7b58d2b",
+      "sourceBytes": 4267,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "receipts/exact-face-removal-proof.json",
+      "sha256": "4b7d97d1756e7c88a1375ef257aedb65f38294004ddd8e0840d083d17169ea6b",
+      "bytes": 2628,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/exact-face-removal-proof.json",
+      "sourceSha256": "4b7d97d1756e7c88a1375ef257aedb65f38294004ddd8e0840d083d17169ea6b",
+      "sourceBytes": 2628,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "research/FROZEN-SOFFIT-FINISH-SCOPE-v1.json",
+      "sha256": "cb8971c205e935373f08b0261f94f7e1763f7f8fbdeb3d45669362b299b657b9",
+      "bytes": 6323,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/ceiling-finish-scope-v1/FROZEN-SOFFIT-FINISH-SCOPE-v1.json",
+      "sourceSha256": "cb8971c205e935373f08b0261f94f7e1763f7f8fbdeb3d45669362b299b657b9",
+      "sourceBytes": 6323,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "research/SOURCE-NOTES.md",
+      "sha256": "d9c1568f371eeb853064b42aacb701ba58dc6dae75d2cbcd33d2a64b53e2936c",
+      "bytes": 2167,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/ceiling-finish-scope-v1/SOURCE-NOTES.md",
+      "sourceSha256": "d9c1568f371eeb853064b42aacb701ba58dc6dae75d2cbcd33d2a64b53e2936c",
+      "sourceBytes": 2167,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "research/references.json",
+      "sha256": "3d04ce329d4f04f3fafe530e7133f025838144fe8470cf21e0907a7b20de8c33",
+      "bytes": 3344,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/ceiling-finish-scope-v1/references.json",
+      "sourceSha256": "3d04ce329d4f04f3fafe530e7133f025838144fe8470cf21e0907a7b20de8c33",
+      "sourceBytes": 3344,
+      "encoding": "identity",
+      "role": "Essential source/ownership/physical-context/evidence receipt"
+    },
+    {
+      "path": "receipts/owned-current-full.json.gz",
+      "sha256": "26243b5119f55e3204d4684c797f6eaad523324beedfc2c5e88a08ecd0fc1491",
+      "bytes": 3366,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/owned-current-full.json",
+      "sourceSha256": "6ea0b60ac0a87efdfb5cb03e6efb79cdc923f1a3ee6171bae8bbbcc5741acbb1",
+      "sourceBytes": 84632,
+      "encoding": "gzip",
+      "role": "Exact oriented corner/cache identity replay data"
+    },
+    {
+      "path": "receipts/owned-current-low.json.gz",
+      "sha256": "e73e7253404d7a12c2061a7c8a53b3c5d8f91187d1a81ba366e860af5fa3f4f0",
+      "bytes": 3369,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/owned-current-low.json",
+      "sourceSha256": "7a7ffe721febb0ef0f1e742c455c309507aa26fd8460f3e5070df75e8c1b3885",
+      "sourceBytes": 84635,
+      "encoding": "gzip",
+      "role": "Exact oriented corner/cache identity replay data"
+    },
+    {
+      "path": "receipts/cache-soffit-owner-audit.json.gz",
+      "sha256": "6ec6ccad5a189119b4d65885ae19c4ea02f9a33b645056dadd5d551ba55bebd4",
+      "bytes": 2926,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/cache-soffit-owner-audit.json",
+      "sourceSha256": "2cf6121cd2333f22a21fd776b658a1baef20ab2f78f19f69502ceeff9dc02152",
+      "sourceBytes": 44895,
+      "encoding": "gzip",
+      "role": "Exact oriented corner/cache identity replay data"
+    },
+    {
+      "path": "research/owned-source-faces.json.gz",
+      "sha256": "691351b420195e41e22095edc73767411b88d4b172aa3551756600d3b811e59a",
+      "bytes": 4597,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/ceiling-finish-scope-v1/owned-source-faces.json",
+      "sourceSha256": "261b96394b4d0f1294d7fa5a3de657e78ba9181b77cfba1bf0dbe636622987b6",
+      "sourceBytes": 94892,
+      "encoding": "gzip",
+      "role": "Frozen source56face identity scope"
+    },
+    {
+      "path": "README.md",
+      "sha256": "47ce7e6083182e7bebbcea0b4d56e89f63535ad50992737e42db96b1df862522",
+      "bytes": 2806,
+      "encoding": "identity",
+      "role": "Scope, qualifications and replay notes"
+    }
+  ],
+  "intentionallyExternalInputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "bytes": 6959153,
+      "role": "Current complete full transport before exact face partition",
+      "copiedIntoRootPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "bytes": 6648546,
+      "role": "Current complete low transport before exact face partition",
+      "copiedIntoRootPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse.glb.gz",
+      "sha256": "436ad61297d887f3a4e6166d9abab3f8c6e7b0a0c1e20ce610a8922e240dcb03",
+      "bytes": 7005201,
+      "role": "Derived full transport with only56ownedfaces removed, must append newreceiver once",
+      "copiedIntoRootPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse-low.glb.gz",
+      "sha256": "29f63c0fafb385a0a8c2ae95a57cc37a4b8e50c196751382552d301a48ad89a0",
+      "bytes": 6695175,
+      "role": "Derived low transport with only56ownedfaces removed, must append newreceiver once",
+      "copiedIntoRootPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/context-v2/soffit-prebake-scene.blend",
+      "sha256": "4324a1fa7fbcd35e5d382a08cc1b974b1f09738ff3bccbeb87370a460e0208d6",
+      "bytes": 213376955,
+      "role": "Reusable complete current physical context, exact3owner cut and new56primary",
+      "copiedIntoRootPacket": false
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/independent-floor-prebake-scene.blend",
+      "sha256": "f82c477cff0727e0e501f1ee02d7bf10ed5c55acb7623ed9b17c7305414aeb63",
+      "bytes": 213427643,
+      "role": "Immutable accepted input context with current4baystructure andactualflooronce",
+      "copiedIntoRootPacket": false
+    }
+  ],
+  "payloadBytes": 167067
+}

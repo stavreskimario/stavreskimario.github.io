@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "sourceSha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "sourceTriangles": 31188,
+  "floorTriangles": 600,
+  "structureTriangles": 30588,
+  "floorObject": "Continuity exact original floor receivers",
+  "structureObject": "Continuity exact source structure",
+  "floorMaterialNames": [
+    "RailwayTrackBaseConcreteEnclosure14",
+    "RailwayPlatformRubbedConcreteEnclosure14",
+    "RailwayPlatformStippledGranolithicEnclosure14"
+  ],
+  "structureMaterialNames": [
+    "PaintedStructuralIronEighthAvenueBridge",
+    "GraniteCapstoneEighthAvenueBridge",
+    "StructuralConcreteEighthAvenueBridge",
+    "BuriedWaterproofingEighthAvenueBridge"
+  ],
+  "physicalCornerDigestBeforeAndAfter": "d62e4ec9d55a38aa944e77d98a1d1d03221124c790f5855ab32e9dc3aec0b94e",
+  "floorLightCornerDigestBeforeAndAfterStructurePacking": "3cc467e5ec6fb7a5288c782271d43c71887d660da1bc6137e1cb62b86af877e0",
+  "positionNormalUv0Exact": true,
+  "floorLightUvExactThroughStructurePacking": true,
+  "structureMinimumJacobianPixelsPerMetre": 12.764436434395352,
+  "structureMaterials": {
+    "PaintedStructuralIronEighthAvenueBridge": {
+      "area": 10235.216512257972,
+      "uvArea": 0.10048132553768094,
+      "areaEquivalentPixelsPerMetre": 12.833765772087213
+    },
+    "GraniteCapstoneEighthAvenueBridge": {
+      "area": 183.94777136402263,
+      "uvArea": 0.001805849874561503,
+      "areaEquivalentPixelsPerMetre": 12.833747913014761
+    },
+    "StructuralConcreteEighthAvenueBridge": {
+      "area": 4873.569646164253,
+      "uvArea": 0.04784504283794012,
+      "areaEquivalentPixelsPerMetre": 12.833787187824942
+    },
+    "BuriedWaterproofingEighthAvenueBridge": {
+      "area": 2170.989672206517,
+      "uvArea": 0.02131314367119276,
+      "areaEquivalentPixelsPerMetre": 12.833786952626763
+    }
+  },
+  "structureBaselineMinimum": 12.2044,
+  "contextControlSha256": "774bd737257be1888d02ade641b8db67465fd51cc9eec6563f49091666d7c323",
+  "sourceContractSha256": "d5ed4860f8120e5d3410aca20280d21622d7244b95c04161d1318fd1a6b9c97c",
+  "preparedScene": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/split-receivers-v1/split-prebake-scene.blend",
+  "preparedSceneSha256": "404d135c64d03bcd39aea78647458f54735daadbb07579bd0c33df3406fe5d16"
+}

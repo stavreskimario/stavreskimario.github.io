@@ -1,0 +1,60 @@
+{
+  "status": "IMMUTABLE V2 RAW SOURCE REVIEW READY; source/validators/overlap controls pass; actual runtime/body acceptance pending",
+  "outputs": {
+    "old-owned.glb": {
+      "bytes": 228940,
+      "sha256": "e0e78dc0df0f7e6c8d12bea02742823ef0e508807d83ccd4abcd2fb83f609e98"
+    },
+    "new-geometry-module.glb": {
+      "bytes": 364084,
+      "sha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13"
+    },
+    "retained-protected.glb": {
+      "bytes": 59596788,
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322"
+    },
+    "retained-concourse-occluder.glb": {
+      "bytes": 59596788,
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322"
+    },
+    "penn-station-phase7-circulation-review.blend": {
+      "bytes": 72399076,
+      "sha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588"
+    }
+  },
+  "sourceSha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d",
+  "angleCounts": {
+    "corrected": 176,
+    "principal": 32,
+    "isolatedMinor": 144,
+    "deferredMinor": 16
+  },
+  "deferredCentresBlenderXY": [
+    [
+      -41.31349999999999,
+      -40.690799999999996
+    ],
+    [
+      -41.31349999999999,
+      40.6908
+    ],
+    [
+      -40.8563,
+      -40.690799999999996
+    ],
+    [
+      -40.8563,
+      40.6908
+    ]
+  ],
+  "newPairIntersections": 0,
+  "v1RejectedPairs": 4,
+  "wallRearPrimitivesExact": 91,
+  "validatorErrors": 0,
+  "validatorWarnings": 0,
+  "sourceProofSha256": "a7214793534d9700e1124c0b8cc6f97fd85fead6e313b7607e8d241dc85ad8b4",
+  "componentCensusSha256": "80c0efc7f20c16139dcc67f8fe621b3c48f35922ee18907e5db7ee32db587cb2",
+  "rawReviewSha256": "e6ed8336ffa3c6abf654d5013e729824783950236ed29224b25ef4343c47bf7b",
+  "removalAliases": "ExactREMOVAL_PaintedStructuralIron andREMOVAL_BedfordLimestoneConcourse;noaliasrewrite needed",
+  "frames": "RawmodulesMain0; commonworldreviewblendMain\u22124.2672; existingexteriorStreet0reused unchanged"
+}

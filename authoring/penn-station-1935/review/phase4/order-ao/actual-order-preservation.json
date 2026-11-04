@@ -1,0 +1,117 @@
+{
+  "created": "2026-10-29T10:10:23.238Z",
+  "status": "passed",
+  "stage": "Actual architectural source through general2K resize, exact order4K restoration and scalar preparation; before UASTC",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-baked-delivery/model-waiting-room.glb",
+    "sha256": "9709a4a9dba521b9e41bb2c05a2ba0ea80243f64a09ecbdb88fedf8ea9299909"
+  },
+  "preUASTC": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-optimizer-delivery/waiting-room-scalars.glb",
+    "sha256": "d75d6c0efec5e93fa0da93d2b52804b1a1094bc6cfc5b9fd845eb6f9054afc79"
+  },
+  "orderMaterials": [
+    "InteriorGranite",
+    "Travertine"
+  ],
+  "orderAOImageSha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf",
+  "orderAOOriginalBytesPreserved": true,
+  "orderAtlasCount": 1,
+  "imageCount": 13,
+  "allOtherImagesAtMost2048": true,
+  "dimensions": [
+    {
+      "index": 0,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "dbd0811e9178ef3c52c85638d1fe4472c156408b235490f5a877a074498c7e41",
+      "orderAO": false
+    },
+    {
+      "index": 1,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "dd96f69534a0e54f925c8dd768554534d212a4f7e9b2729c35b5dcd6a55bb751",
+      "orderAO": false
+    },
+    {
+      "index": 2,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "70141de61736086c947766af22bdac46c5f285ec39fdc9faab781cd19e0bb71d",
+      "orderAO": false
+    },
+    {
+      "index": 3,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "94cc417363b9e1ccd654effeac0ff13b374ab599243cf35d9915705bc4eec920",
+      "orderAO": false
+    },
+    {
+      "index": 4,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "a841aaa94feabde8dee4a14d41f060f8382d04866492c5ae341663d82bc1612a",
+      "orderAO": false
+    },
+    {
+      "index": 5,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "b80e00ec4e027bbdf625ba971f574e091ffa94ae352250683c8ca660fd05f0d3",
+      "orderAO": false
+    },
+    {
+      "index": 6,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "f7f80e1ab0e5f3614827444e8f4e7b18671531445b1708d20e0acfdad01cdd5b",
+      "orderAO": false
+    },
+    {
+      "index": 7,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "779d0ab9c6efb749d7f874b1b04926ac2a03143370372a25352c2e8fe38fabaa",
+      "orderAO": false
+    },
+    {
+      "index": 8,
+      "width": 728,
+      "height": 260,
+      "sha256": "c017cbbac8977f5c7e02223cd2d1234d04fd4de44a0f67f9c6d4b29275246c07",
+      "orderAO": false
+    },
+    {
+      "index": 9,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "af28388d08abd769292ef231889676db11facb9ca1b1e6743cb56b14bb2d289d",
+      "orderAO": false
+    },
+    {
+      "index": 10,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "b04788368a002cabc964a2ea153dbf7e69e20cddb3a1ef294e9e67dd7c0e44bf",
+      "orderAO": true
+    },
+    {
+      "index": 11,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "4dbf3e0542247e5be3a0c70aeb998574ea3f21c1ff409017c0d24443bbfbaf9b",
+      "orderAO": false
+    },
+    {
+      "index": 12,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "2f51cc43776ee676def9d1508910b3718b6bb872c2ed89f107e65adf05dd9f1e",
+      "orderAO": false
+    }
+  ],
+  "scalarStageVerbatim": true,
+  "geometryUVNormalMaterialBindingsUnchanged": true
+}

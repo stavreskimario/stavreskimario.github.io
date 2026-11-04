@@ -1,0 +1,23 @@
+[
+  {
+    "revision": "bevel-v2",
+    "moduleSha256": "9b5da78e197bb6b9a216a102ad1c2493c24ec9903fcad0dfd051894c17af177f",
+    "status": "rejected",
+    "reason": "Bevel-generated side faces produced visible planar shading bands.",
+    "receipts": "/Users/stavreskimario/Desktop/penn-station-work/phase5-interior-details-v2/rejected-archive"
+  },
+  {
+    "revision": "bevel-v3",
+    "moduleSha256": "3d64aff275bb90ae50eec012ee2144cd38be050992be8d8546e6f882184c52d4",
+    "status": "rejected",
+    "reason": "Restored smooth flags still left broad profile shading bands from denser bevel topology. No normal-transfer iteration accepted.",
+    "receipts": "/Users/stavreskimario/Desktop/penn-station-work/phase5-interior-details-v3/rejected-archive"
+  },
+  {
+    "revision": "first combined-source-v2",
+    "sceneSha256": "f765f31e79627e9502b0206526630b3146bd1413173b6ff03f85d12fce872c13",
+    "status": "rejected",
+    "reason": "Newly linked parent matrices were read before dependency update, placing fixtures at origin+Main offset. Fixed helper now evaluates before applying Main offset.",
+    "receipts": "/Users/stavreskimario/Desktop/penn-station-work/phase5-source-fixture-v2/source-report.json"
+  }
+]

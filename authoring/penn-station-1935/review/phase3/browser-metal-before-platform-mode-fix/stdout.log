@@ -1,0 +1,31 @@
+START installed Chrome; local project-prefix server is ready
+BROWSER 156.0.8078.48
+OPEN desktop
+DOCUMENT desktop; waiting for app bootstrap
+BOOTSTRAP desktop
+READY waiting: exterior
+DRIVER desktop: {"api":"WebGL2","vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: exterior
+READY rendered: exterior
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: waiting
+READY rendered: waiting
+READY waiting: concourse
+READY rendered: concourse
+page.waitForFunction: Timeout 120000ms exceeded.
+    at platformWalking (/private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:348:18)
+    at async /private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:533:5
