@@ -32,7 +32,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '12-bridge-bay-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '13-enclosure-floor-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -48,7 +48,7 @@ const framing = {
   farley: { eye: [-130, 8, 71], target: [-169, 18, -12], title: 'Across Eighth Avenue', caption: 'The General Post Office · twenty Corinthian columns and the monumental stair' },
   platform: { eye: [-14, PLATFORM_FLOOR + 2.2, 15.7], target: [-38, -10.2, TRAIN_POSITION[2]], walk: [-14, PLATFORM_FLOOR + 1.68, 13.327870361], look: [-65, PLATFORM_FLOOR + 1.68, 13.327870361], title: 'Track 10 · Platform 5', caption: 'Twenty-one tracks and eleven platforms · opening-era plan with interpreted GG1 and P70 stock' },
   arrivals: { eye: [-70, EXIT_FLOOR + 1.8, 28], target: [-70, EXIT_FLOOR + 1.75, -20], walk: [-70, EXIT_FLOOR + 1.68, 28], look: [-70, EXIT_FLOOR + 1.68, -20], title: 'The arrivals gallery', caption: 'Independent platform arrivals · the lower exit gallery' },
-  bridge: { eye: [-112, -8.8, 23], target: [-138, -8.5, 10], walk: [-116, PLATFORM_FLOOR + 1.68, 11.3], look: [-145, -8.5, 11.3], title: 'The Eighth Avenue bridge', caption: 'The road bridge above the western tracks · first reconstructed structural bay' },
+  bridge: { eye: [-104, -8.8, 44], target: [-137, -8.5, 20], walk: [-116, PLATFORM_FLOOR + 1.68, 11.3], look: [-145, -8.5, 11.3], title: 'The Eighth Avenue bridge', caption: 'The road bridge above the western tracks · four reconstructed structural bays' },
 };
 let state = { view: 'exterior', framing: '', mode: 'walk', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
 const listeners = new Set();
@@ -185,7 +185,7 @@ function insidePlatform(point, polygon) {
 }
 
 async function loadReflection(zone, quality) {
-  const room = zone === 'waiting' ? 'waiting-room' : zone === 'concourse' ? 'concourse' : zone === 'arcade' ? 'arcade' : ['platform', 'trains'].includes(zone) ? 'platform' : null;
+  const room = zone === 'waiting' ? 'waiting-room' : zone === 'concourse' ? 'concourse' : zone === 'arcade' ? 'arcade' : zone === 'platform-enclosure' ? 'platform-enclosure' : ['platform', 'trains'].includes(zone) ? 'platform' : null;
   if (!room) return null;
   const filename = `reflection-${room}${quality === 'low' ? '-low' : ''}.hdr.gz`;
   if (!reflectionCache.has(filename)) {
@@ -271,8 +271,8 @@ async function loadModel(view, quality, renderer, progress) {
         // their backs adds a separate refraction pass for every unit.
         if (vaultLightGlass(material)) material.side = THREE.FrontSide;
         if (material.aoMap) material.aoMapIntensity = .25;
-        if (material.userData?.reflection_probe === 'arcade') {
-          lightingTasks.push(loadReflection('arcade', quality).then(texture => {
+        if (['arcade', 'platform-enclosure'].includes(material.userData?.reflection_probe)) {
+          lightingTasks.push(loadReflection(material.userData.reflection_probe, quality).then(texture => {
             material.envMap = texture; material.envMapIntensity = 1; material.needsUpdate = true;
           }));
         } else if (reflection) { material.envMap = reflection; material.envMapIntensity = 1; }

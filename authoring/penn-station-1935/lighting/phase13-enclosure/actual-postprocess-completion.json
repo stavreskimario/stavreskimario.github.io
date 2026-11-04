@@ -1,0 +1,103 @@
+{
+  "status": "PASS actual CPU denoise, zero clipping, exact pixels and lossless cached module package; native/physical/sourcearchive acceptance separate",
+  "primarySha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "rawBakeReportSha256": "08cdde283a6f06008a48679c95683072654c83483cea613b0769bc35c7e39288",
+  "radianceScale": 2,
+  "rawRadianceMaximum": 0.7600004076957703,
+  "actualPrimaryPointLights": 0,
+  "actualNeighborPointLights": 10,
+  "denoiseReportSha256": "aadbcd2233b42a7195cc3ddde4ba82e575ec45f84bb2ca8cf856b578debd8e67",
+  "packageProofSha256": "5968c95adc81e45d66b8c414b63f14466d1789c8e990ddf24b648c1dab14b7a6",
+  "seconds": 40.70477890968323,
+  "outputs": {
+    "lighting-platform-enclosure-sky.webp": {
+      "sha256": "33f401c5fdeb8ba12a1f092ba303662f0d0c805a46453c87542bd2696b02699e",
+      "bytes": 1751308
+    },
+    "model-platform-low.glb": {
+      "sha256": "f46354fbee35c447c587138ad933fe7b49e360a1fddbfc3e1dfc98c5e3b8cbf3",
+      "bytes": 1275920
+    },
+    "lighting-platform-enclosure-denoise.json": {
+      "sha256": "aadbcd2233b42a7195cc3ddde4ba82e575ec45f84bb2ca8cf856b578debd8e67",
+      "bytes": 2174
+    },
+    "module-packaging-proof.json": {
+      "sha256": "5968c95adc81e45d66b8c414b63f14466d1789c8e990ddf24b648c1dab14b7a6",
+      "bytes": 10313
+    },
+    "model-platform.glb": {
+      "sha256": "b733f2961fb68478f6bd2f37b569200bf0c42dfebeb8792ad7fb9f34baa9c7f4",
+      "bytes": 1275920
+    },
+    "lighting-platform-enclosure-sky-low.webp": {
+      "sha256": "9f1b9bdfbad696388256ef59e0358eedac3bcc3adbce692e77f25bdd8cab3b3b",
+      "bytes": 61452
+    }
+  },
+  "packingAssets": [
+    {
+      "file": "model-platform.glb",
+      "bytes": 1275920,
+      "sha256": "b733f2961fb68478f6bd2f37b569200bf0c42dfebeb8792ad7fb9f34baa9c7f4",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 7,
+      "textures": [
+        {
+          "uri": "textures/b36275b6ad999917caa6.ktx2",
+          "bytes": 1154327
+        },
+        {
+          "uri": "textures/fe20445f817ad8b117d3.ktx2",
+          "bytes": 2656504
+        },
+        {
+          "uri": "textures/206a10b6a2d3fbbd05a1.ktx2",
+          "bytes": 2317428
+        },
+        {
+          "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
+          "bytes": 2819507
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 2,
+      "geometryProofSha256": "c91c6a2ba5821d16b0a2e876a58cb4c44ab8537e1241ea17db8641342230e9ac"
+    },
+    {
+      "file": "model-platform-low.glb",
+      "bytes": 1275920,
+      "sha256": "f46354fbee35c447c587138ad933fe7b49e360a1fddbfc3e1dfc98c5e3b8cbf3",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 7,
+      "textures": [
+        {
+          "uri": "textures/705422670a75ef77e1cb.ktx2",
+          "bytes": 119991
+        },
+        {
+          "uri": "textures/31c2a3a3ede72fecb9fa.ktx2",
+          "bytes": 198588
+        },
+        {
+          "uri": "textures/05d98ee59a71e6731c36.ktx2",
+          "bytes": 213095
+        },
+        {
+          "uri": "textures/a4b92c79fa3419f79225.ktx2",
+          "bytes": 226451
+        }
+      ],
+      "geometryAttributesAdditionalDrift": 0,
+      "noSimplification": true,
+      "noQuantization": true,
+      "textureCacheMatches": 0,
+      "geometryProofSha256": "b3944b618ae218639b9075017c736009c84a4d9684c1ce10054a96b394ef6c2f"
+    }
+  ],
+  "helperSha256": "deefa462f67e214c0ab554f8c322f8691d141fe27fbed7488898c04b00e7cab4"
+}

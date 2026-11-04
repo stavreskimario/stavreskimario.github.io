@@ -19,7 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("input", type=Path)
 parser.add_argument("--out", type=Path, required=True)
 parser.add_argument("--zone", required=True)
-parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-surfaces", "platform-bridge", "arcade-enclosure"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
+parser.add_argument("--artifact-name", choices=("concourse-access", "concourse-circulation", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-surfaces", "platform-bridge", "platform-enclosure", "arcade-enclosure"), help="Separate independently authored surface maps while retaining the declared architectural coordinate frame")
 parser.add_argument("--resolution", type=int, default=2048)
 parser.add_argument("--samples", type=int, default=32)
 parser.add_argument("--threads", type=int, default=4)
@@ -39,11 +39,11 @@ if args.surface_group != "all" and args.zone != "waiting-room":
 if not 0 < args.uv_margin_pixels < args.resolution / 16:
     raise ValueError("UV margin must be a small positive texel count")
 if args.artifact_name:
-    expected_zone = {"platform-surfaces": "platform", "platform-bridge": "platform", "arcade-enclosure": "exterior"}.get(args.artifact_name, "concourse")
+    expected_zone = {"platform-surfaces": "platform", "platform-bridge": "platform", "platform-enclosure": "platform", "arcade-enclosure": "exterior"}.get(args.artifact_name, "concourse")
     if args.zone != expected_zone or args.surface_group != "all":
         raise ValueError(f"The {args.artifact_name} artifact requires the full {expected_zone}-frame module")
 artifact_zone = args.artifact_name or (args.zone if args.surface_group == "all" else args.zone + "-" + args.surface_group)
-if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge"} and not args.source_visibility_proof:
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge", "platform-enclosure"} and not args.source_visibility_proof:
     raise ValueError("Arcade/arrivals transport requires the original source render-visibility proof")
 if args.preserve_authored_uv1 and (artifact_zone not in {"arcade-enclosure", "concourse-arrivals"} or args.surface_group != "all"):
     raise ValueError("Preserve-authored-UV1 is restricted to the arcade or Main0 arrivals authoring artifact")
@@ -93,7 +93,7 @@ for specification in args.occluder:
             obj.location.z += offset
         if zone == "trains" and obj.parent not in imported:
             obj.location.y -= 8.690045261
-    if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge"}:
+    if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge", "platform-enclosure"}:
         from restore_imported_visibility import restore_source_render_visibility
         bpy.context.view_layer.update()
         source_visibility.append(restore_source_render_visibility(imported, filename, args.source_visibility_proof, frame_offset_z=-frames[args.zone]))
@@ -166,7 +166,7 @@ for obj in [obj for obj in scene.objects if obj.type == "MESH"]:
         # Gallery fascia is substantial coated structure, with its own atlas.
         # Fine lettering keeps its explicit exclusion; other artifacts retain
         # the established small-prop policy.
-        gallery_surface = artifact_zone in {"concourse-gallery-finish", "platform-bridge"} and not any(
+        gallery_surface = artifact_zone in {"concourse-gallery-finish", "platform-bridge", "platform-enclosure"} and not any(
             material and material.get("skip_lighting_atlas") for material in obj.data.materials)
         if not gallery_surface and obj.data.materials and all(material and (material.name.startswith(fine) or material.get("skip_lighting_atlas")) for material in obj.data.materials):
             unbaked.append(obj)
@@ -190,10 +190,11 @@ if artifact_zone == "concourse-gallery-finish":
     assert len(unbaked) == 2 and all(all(m and m.name.startswith("Lettering") for m in obj.data.materials) for obj in unbaked), "Only2 lettering owners remain unbaked"
     gallery_atlas_scope = {"sourceMeshes": 103, "opaquePrimaryMeshesBeforeJoin": 101, "unbakedLetteringMeshes": 2,
                            "primaryAtlasSourceNames": [obj.name for obj in solids], "unbakedSourceNames": [obj.name for obj in unbaked]}
-elif artifact_zone == "platform-bridge":
-    assert len([obj for obj in primary_objects if obj.type == "MESH"]) == 7, "Reviewed bridge has seven evaluated source owners"
-    assert len(solids) == 7 and not glazing and not unbaked, "Every opaque bridge owner receives its atlas"
-    gallery_atlas_scope = {"sourceMeshes": 7, "opaquePrimaryMeshesBeforeJoin": 7, "unbakedLetteringMeshes": 0,
+elif artifact_zone in {"platform-bridge", "platform-enclosure"}:
+    expected_owners = 27 if artifact_zone == "platform-enclosure" else 7
+    assert len([obj for obj in primary_objects if obj.type == "MESH"]) == expected_owners, "Reviewed bridge/enclosure source census"
+    assert len(solids) == expected_owners and not glazing and not unbaked, "Every bridge/floor owner receives its atlas"
+    gallery_atlas_scope = {"sourceMeshes": expected_owners, "opaquePrimaryMeshesBeforeJoin": expected_owners, "unbakedLetteringMeshes": 0,
                            "primaryAtlasSourceNames": [obj.name for obj in solids], "unbakedSourceNames": []}
 
 if not solids:
@@ -218,7 +219,7 @@ if args.preserve_authored_uv1:
     authored_uv_integrity, arcade_normal_integrity = verify_before_bake(authored_primary_snapshot, architecture, artifact_zone=artifact_zone)
 else:
     arcade_normal_integrity = None
-    if artifact_zone in {"arcade-enclosure", "concourse-gallery-finish", "platform-bridge"}:
+    if artifact_zone in {"arcade-enclosure", "concourse-gallery-finish", "platform-bridge", "platform-enclosure"}:
         from arcade_corner_normals import preserve_arcade_corner_normals, restore_arcade_corner_normals
         arcade_normal_integrity = preserve_arcade_corner_normals(solids)
     bpy.ops.object.select_all(action="DESELECT")
@@ -249,7 +250,7 @@ else:
         bpy.ops.object.mode_set(mode="EDIT")
         bpy.ops.mesh.select_all(action="SELECT")
         # Built-up bridge members retain their thin web-return contact faces.
-        if artifact_zone != "platform-bridge":
+        if artifact_zone not in {"platform-bridge", "platform-enclosure"}:
             bpy.ops.mesh.remove_doubles(threshold=.00001)
         bpy.ops.uv.smart_project(angle_limit=math.radians(75), island_margin=args.uv_margin_pixels / args.resolution, margin_method="FRACTION", area_weight=.5, correct_aspect=True, scale_to_bounds=True)
         bpy.ops.object.mode_set(mode="OBJECT")
@@ -431,7 +432,7 @@ report = {
 }
 if arcade_normal_integrity is not None:
     report["arcadeNormalIntegrity" if artifact_zone == "arcade-enclosure" else "authoredNormalIntegrity"] = arcade_normal_integrity
-if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge"}:
+if artifact_zone in {"arcade-enclosure", "concourse-arrivals", "concourse-exits", "concourse-gallery-finish", "platform-bridge", "platform-enclosure"}:
     report["sourceRenderVisibility"] = {"proofSha256": hashlib.sha256(args.source_visibility_proof.read_bytes()).hexdigest(), "contexts": source_visibility}
 if authored_uv_integrity is not None:
     report["authoredUvIntegrity"] = authored_uv_integrity

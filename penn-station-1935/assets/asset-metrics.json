@@ -969,11 +969,11 @@
     },
     {
       "file": "model-platform.glb",
-      "bytes": 1563352,
+      "bytes": 2594540,
       "transportFile": "model-platform.glb.gz",
-      "transportBytes": 327461,
-      "sha256": "b1aca55ee3437f3250f80cfb25c496861574f35f548cefce9b003e1eddcf82e5",
-      "transportSha256": "1d78c5cb8a6e0c3f51b4378cc5736211b42afbbd925ec12d60f94a133de2a00e",
+      "transportBytes": 648051,
+      "sha256": "29d31a6d7510899cc7ed766ab28f345039fcefacde332bc4e223c6a1cdcd9a19",
+      "transportSha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
       "externalTextures": [
         {
           "uri": "textures/1171d79307cd9bf10880.ktx2",
@@ -996,14 +996,30 @@
           "bytes": 2819507
         },
         {
-          "uri": "textures/6c26c61cd54d16a732de.ktx2",
-          "bytes": 1447796
+          "uri": "textures/b36275b6ad999917caa6.ktx2",
+          "bytes": 1154327
+        },
+        {
+          "uri": "textures/9098074176165a0d927e.ktx2",
+          "bytes": 3422850
+        },
+        {
+          "uri": "textures/fe20445f817ad8b117d3.ktx2",
+          "bytes": 2656504
+        },
+        {
+          "uri": "textures/206a10b6a2d3fbbd05a1.ktx2",
+          "bytes": 2317428
+        },
+        {
+          "uri": "textures/e31619f2b2a7a5ba20dd.ktx2",
+          "bytes": 2819507
         }
       ],
-      "nodes": 16,
-      "meshes": 16,
-      "materials": 16,
-      "textures": 6,
+      "nodes": 20,
+      "meshes": 20,
+      "materials": 19,
+      "textures": 10,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -1014,11 +1030,11 @@
     },
     {
       "file": "model-platform-low.glb",
-      "bytes": 1376256,
+      "bytes": 2407448,
       "transportFile": "model-platform-low.glb.gz",
-      "transportBytes": 353939,
-      "sha256": "af8159ef19bdbc44b86f77c88f1236fa5b91b625169acb113557c0fae818af2f",
-      "transportSha256": "533df54cb175010154b80dd2ea11d62ddb27a9467652d92850bdb6711f651b82",
+      "transportBytes": 673454,
+      "sha256": "84ba5aa44e948aafb09c8387f20c87b299ac791d99da103e3983a875960961a2",
+      "transportSha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e",
       "externalTextures": [
         {
           "uri": "textures/6507df0100f8376d9e57.ktx2",
@@ -1041,14 +1057,30 @@
           "bytes": 2819507
         },
         {
-          "uri": "textures/30dd933ca84527637a68.ktx2",
-          "bytes": 135718
+          "uri": "textures/705422670a75ef77e1cb.ktx2",
+          "bytes": 119991
+        },
+        {
+          "uri": "textures/d58a7f8dbadfacf9b284.ktx2",
+          "bytes": 129718
+        },
+        {
+          "uri": "textures/31c2a3a3ede72fecb9fa.ktx2",
+          "bytes": 198588
+        },
+        {
+          "uri": "textures/05d98ee59a71e6731c36.ktx2",
+          "bytes": 213095
+        },
+        {
+          "uri": "textures/a4b92c79fa3419f79225.ktx2",
+          "bytes": 226451
         }
       ],
-      "nodes": 16,
-      "meshes": 16,
-      "materials": 16,
-      "textures": 6,
+      "nodes": 20,
+      "meshes": 20,
+      "materials": 19,
+      "textures": 10,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -1130,8 +1162,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 109,
-  "modelTextureAndLightingBytes": 244294808,
+  "sharedTextureFiles": 115,
+  "modelTextureAndLightingBytes": 257452611,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1597,15 +1629,18 @@
     "newSourceSha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
     "runtimeNavigationUnchanged": true
   },
-  "eighthAvenueBridge": {
-    "status": "Phase12 bounded two-bent bridge candidate; static browser acceptance separate",
-    "lightingRevision": 12,
-    "previousMetricsSha256": "eabe09cac1d0447bd24854037a56a3fdb2b851969225b217d32bd5b1d507b745",
+  "fourBayEnclosure": {
+    "status": "Phase13 four-bay enclosure with actual floor GI candidate; static browser acceptance separate",
+    "lightingRevision": 13,
+    "previousMetricsSha256": "03ff9ab8397ed4954fd4501dabb99a8a80736f3205d63b4c0fac5c9283752a7e",
     "newMaterialNames": [
-      "GraniteCapstoneEighthAvenueBridgePhase12Bridge",
-      "StructuralConcreteEighthAvenueBridgePhase12Bridge",
-      "PaintedStructuralIronEighthAvenueBridgePhase12Bridge",
-      "BuriedWaterproofingEighthAvenueBridgePhase12Bridge"
+      "GraniteCapstoneEighthAvenueBridgePhase13Enclosure",
+      "StructuralConcreteEighthAvenueBridgePhase13Enclosure",
+      "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+      "BuriedWaterproofingEighthAvenueBridgePhase13Enclosure",
+      "RailwayTrackBaseConcreteEnclosure13Phase13Floor",
+      "RailwayPlatformRubbedConcreteEnclosure13Phase13Floor",
+      "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor"
     ],
     "existingBaseBinaryPrefixesExact": true,
     "unchangedOtherModels": [
@@ -1650,11 +1685,14 @@
         "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
       }
     ],
-    "sharedReferencedKtx": 109,
-    "aggregateBytes": 244294808,
-    "newBakeReportSha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff",
-    "newDenoiseReportSha256": "77f2d85a28c6cccf2ec0b227580c3626ebd7b974b6735cc233257ff4053f25a3",
-    "newSourceSha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
-    "runtimeNavigationUnchanged": true
+    "sharedReferencedKtx": 115,
+    "aggregateBytes": 257452611,
+    "newBakeReportSha256": "08cdde283a6f06008a48679c95683072654c83483cea613b0769bc35c7e39288",
+    "newDenoiseReportSha256": "062bf125d246f5c9cff495ca4b5533ac14d775c796108d4bc57df2b197faf281",
+    "newSourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+    "runtimeNavigationUnchanged": true,
+    "independentFloorAtlas": "platform-enclosure-floor",
+    "minimumVisibleFloorPixelsPerMetre": 76.92764506513112,
+    "structureLightUvAndGiUnchanged": true
   }
 }

@@ -1,0 +1,92 @@
+{
+  "status": "FROZEN exactfloorcachemembership withexplicitpriorhidden-interface reconciliation",
+  "coordinateSpace": "Main0glTF; cacheBlender[x,y,z]\u2192[x,z,\u2212y]",
+  "roi": {
+    "x": [
+      -162.2857,
+      -111.4247
+    ],
+    "z": [
+      3.1014,
+      37.212321
+    ]
+  },
+  "partitionSource": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-full.json",
+    "sha256": "f7261ea341d621a20fd897d076323c8f635e0bf03ea610e608979f54f7c46a49"
+  },
+  "cacheOwners": [
+    {
+      "owner": "Continuous station railway concrete foundation",
+      "sourceFamily": "Railway smooth concrete track base",
+      "scope": "unique-trackbase-upper-plane",
+      "cachePlaneMain0Y": -9.22337532043457,
+      "runtimePlaneMain0Y": -9.223750092452303,
+      "planeDifferenceQualification": "Uniqueauthoritativefoundationowner/rawplane differsby0.374772mmfromquantizedruntime representation; no runtimeheight or tolerance changed."
+    },
+    {
+      "owner": "Platform 04 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 04 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 05 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    }
+  ],
+  "expectedOwnedAreaBySourceFamily": {
+    "Railway smooth concrete track base": 1734.9155529809996,
+    "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
+    "RailwayPlatformStippledGranolithicPhase9": 1026.5997759210595
+  },
+  "primaryMaterials": {
+    "Railway smooth concrete track base": "RailwayTrackBaseConcreteEnclosure13",
+    "RailwayPlatformRubbedConcretePhase9": "RailwayPlatformRubbedConcreteEnclosure13",
+    "RailwayPlatformStippledGranolithicPhase9": "RailwayPlatformStippledGranolithicEnclosure13"
+  },
+  "sharedClipCore": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor_clip.py",
+    "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a"
+  },
+  "scope": "Onlythese5sourceobjects affected, no broadmaterial-name floor clipping; other138trackbasejointowners untouched.",
+  "expectedCacheAreaBySourceFamily": {
+    "Railway smooth concrete track base": 1734.9155529809996,
+    "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
+    "RailwayPlatformStippledGranolithicPhase9": 1076.7067957477964
+  },
+  "explicitCacheOnlyHiddenInterface": {
+    "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+    "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+    "oldPhase9ReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+    "sourceTriangleIndex": 3,
+    "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+    "clippedAreaM2": 50.10701982673692,
+    "orientation": "DOWNWARD",
+    "role": "CachedrawclosedgranolithicundersidecoincidentwithRubbedtop; alreadyomittedfrommountedruntimebyPhase9hidden-interfacecleanup. RemovefromcacheinsideownedROIaswellduringtruefloorswap; no newprimaryfaceadded.",
+    "visibleTopAndSideAreaExact": true,
+    "areaToleranceUnchanged": true
+  }
+}

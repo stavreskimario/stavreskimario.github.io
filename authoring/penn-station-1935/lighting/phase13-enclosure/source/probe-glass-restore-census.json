@@ -1,0 +1,303 @@
+{
+  "cache": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/gallery-prebake-scene.blend",
+  "cacheSha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3",
+  "status": "READ_ONLY cached diffuse-glass override recovery census",
+  "materials": [
+    {
+      "material": "SquareVaultLightGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.8999999761581421,
+          "roughness": 0.18000000715255737,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "HistoricGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 1.0,
+          "roughness": 0.03500000014901161,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "ConcourseRecessedWindowGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 1.0,
+          "roughness": 0.06499999761581421,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "ContextWindow",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.09000000357627869,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "HistoricGlass.001",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 1.0,
+          "roughness": 0.03500000014901161,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "LunetteGlazing",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 1.0,
+          "roughness": 0.03500000014901161,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "ArcadeShopAndClerestoryGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 1.0,
+          "roughness": 0.05000000074505806,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "PeriodTrainGlazing",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.1599999964237213,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "TransparentPassengerCoachGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.1899999976158142,
+          "alpha": 0.38999998569488525
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "AutomobileGlazing",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.1599999964237213,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "OpalStreetlampGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.28999999165534973,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "RearLampRedGlass",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.20000000298023224,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "PeriodBuildingGlazing",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.25,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    },
+    {
+      "material": "PaintedTimberWindowFrames",
+      "outputs": 1,
+      "principled": 1,
+      "surfaceLinks": [
+        {
+          "node": "Transparent BSDF",
+          "type": "BSDF_TRANSPARENT",
+          "socket": "BSDF"
+        }
+      ],
+      "principledNodes": [
+        {
+          "name": "Principled BSDF",
+          "transmission": 0.0,
+          "roughness": 0.6600000262260437,
+          "alpha": 1.0
+        }
+      ],
+      "unambiguousRestoration": true
+    }
+  ],
+  "unambiguous": 14,
+  "ambiguous": 0
+}

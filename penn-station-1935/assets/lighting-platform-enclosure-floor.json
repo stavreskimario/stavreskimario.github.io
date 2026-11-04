@@ -1,11 +1,170 @@
 {
-  "zone": "platform-bridge",
+  "zone": "platform-enclosure-floor",
   "frameZone": "platform",
   "surfaceGroup": "all",
-  "uvMarginPixels": 4.0,
+  "uvMarginPixels": 4,
   "uvMarginMethod": "FRACTION",
   "source": "bridge-bay.glb",
-  "sourceSha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+  "sourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "floorUvDensity": {
+    "walkingTopWeight": 4,
+    "visibleTopTriangles": 16,
+    "minimumJacobianPixelsPerMetre": 76.92764506513112,
+    "maximumJacobianPixelsPerMetre": 76.92768162453672,
+    "materials": {
+      "RailwayTrackBaseConcreteEnclosure13": {
+        "area": 1734.915665016597,
+        "uvArea": 0.03829761384986341,
+        "areaPixelsPerMetre": 19.244499545293632
+      },
+      "RailwayPlatformRubbedConcreteEnclosure13": {
+        "area": 1572.0278996348868,
+        "uvArea": 0.03448870962247952,
+        "areaPixelsPerMetre": 19.18528681333969
+      },
+      "RailwayPlatformStippledGranolithicEnclosure13": {
+        "area": 1026.5999502307586,
+        "uvArea": 0.2002793783507002,
+        "areaPixelsPerMetre": 57.21072427760795
+      }
+    },
+    "physicalPositionNormalUV0Exact": true,
+    "structureLightUVExact": true,
+    "uvBounds": [
+      0.0009765034192241728,
+      0.9990235567092896
+    ]
+  },
+  "floorUvPreflightSha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8",
+  "structureLightUvTransferredExact": true,
+  "contextMembership": {
+    "status": "PASS",
+    "roi": {
+      "x": [
+        -162.2857,
+        -111.4247
+      ],
+      "z": [
+        3.1014,
+        37.212321
+      ]
+    },
+    "objects": [
+      {
+        "owner": "Continuous station railway concrete foundation",
+        "sourceFamily": "Railway smooth concrete track base",
+        "oldFaces": 12,
+        "retainedFaces": 20,
+        "changedOldPolygons": 2,
+        "removedActualAreaM2": 1734.9155529809993,
+        "retainedClippedAreaM2": 76080.40015644694,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": -9.22337532043457,
+        "runtimePlaneMain0Y": -9.223750092452303,
+        "planeDifferenceQualified": "Uniqueauthoritativefoundationowner/rawplane differsby0.374772mmfromquantizedruntime representation; no runtimeheight or tolerance changed."
+      },
+      {
+        "owner": "Platform 04 continuous30-inch-gridded granolithic dressing",
+        "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+        "oldFaces": 24,
+        "retainedFaces": 48,
+        "changedOldPolygons": 12,
+        "removedActualAreaM2": 523.5914909508641,
+        "retainedClippedAreaM2": 2667.483754804865,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 04 source-section continuous walls and coved slab",
+        "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+        "oldFaces": 304,
+        "retainedFaces": 480,
+        "changedOldPolygons": 88,
+        "removedActualAreaM2": 771.2544912127388,
+        "retainedClippedAreaM2": 2601.1633796203364,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+        "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+        "oldFaces": 24,
+        "retainedFaces": 48,
+        "changedOldPolygons": 12,
+        "removedActualAreaM2": 553.1153047969322,
+        "retainedClippedAreaM2": 2908.8716942514015,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 05 source-section continuous walls and coved slab",
+        "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+        "oldFaces": 304,
+        "retainedFaces": 480,
+        "changedOldPolygons": 88,
+        "removedActualAreaM2": 800.7731989119729,
+        "retainedClippedAreaM2": 2514.6625587301737,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      }
+    ],
+    "removedAreaBySourceFamily": {
+      "Railway smooth concrete track base": 1734.9155529809993,
+      "RailwayPlatformStippledGranolithicPhase9": 1076.7067957477961,
+      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247116
+    },
+    "runtimeOwnedAreaBySourceFamily": {
+      "Railway smooth concrete track base": 1734.9155529809996,
+      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
+      "RailwayPlatformStippledGranolithicPhase9": 1026.5997759210595
+    },
+    "explicitCacheOnlyHiddenInterface": {
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "oldPhase9ReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+      "sourceTriangleIndex": 3,
+      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+      "clippedAreaM2": 50.10701982673692,
+      "orientation": "DOWNWARD",
+      "role": "CachedrawclosedgranolithicundersidecoincidentwithRubbedtop; alreadyomittedfrommountedruntimebyPhase9hidden-interfacecleanup. RemovefromcacheinsideownedROIaswellduringtruefloorswap; no newprimaryfaceadded.",
+      "visibleTopAndSideAreaExact": true,
+      "areaToleranceUnchanged": true
+    },
+    "otherCachedObjectsChanged": 0,
+    "newHiddenObjects": 0,
+    "newCapFaces": 0,
+    "clippingCore": "floor_clip.py sharedwithruntimepartition",
+    "qualification": "The trackbase cache usesitsown exact rawsourceupperplane; ~0.375mm runtimequantization difference recorded, not a raised runtime tolerance orheightmove. RuntimefloorP/N/UV0authority unchanged.",
+    "detail": "PASS exact mapped cached-floor receiver membership removed before primary import"
+  },
   "resolution": 4096,
   "samples": 128,
   "aoPathSamples": 4,
@@ -18,24 +177,23 @@
       "Apple M5 Max (GPU - 32 cores)"
     ]
   },
-  "atlasSurfaceArea": 0.373148113489151,
+  "atlasSurfaceArea": 0.2730656862258911,
   "sky": "Neutral diffuse dome plus explicitly interpreted static electric lamps; six-bounce diffuse transport; no directional sun baked",
   "staticPracticalLights": [],
   "primaryAtlasScope": {
-    "sourceMeshes": 7,
-    "opaquePrimaryMeshesBeforeJoin": 7,
+    "sourceMeshes": 3,
+    "sourceFileMeshOwners": 27,
+    "opaquePrimaryMeshesBeforeJoin": 3,
     "unbakedLetteringMeshes": 0,
     "primaryAtlasSourceNames": [
-      "Buried granite capstones and concrete piers \u00d722",
-      "Permanent bent2 deep face-connected girders",
-      "4in transverse floorplate Ibeams embedded in concrete",
-      "Permanent bent1 deep face-connected girders",
-      "Longitudinal girder field with actual web connection returns",
-      "Bridge11station built-upIcolumns \u00d7two sourcebents",
-      "Documented composite opaque roofplate and waterproof protective"
+      "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+      "Fresh true receiver Railway smooth concrete track base",
+      "Fresh true receiver RailwayPlatformStippledGranolithicPhase9"
     ],
-    "unbakedSourceNames": [],
-    "classification": "Every accepted opaque bridge owner receives the fresh independent atlas; coated structural metal is included."
+    "retainedSourceStructuralOwners": 24,
+    "selectedTriangles": 402,
+    "currentBlenderObjects": 1,
+    "classification": "Exactly the three original floor receiver owners; new lightUV only. All physical structure/context retained."
   },
   "registeredStaticPracticalLights": [
     {
@@ -298,6 +456,13 @@
       "heightOffset": 0,
       "objects": 103,
       "cachePrimaryJoined": true
+    },
+    {
+      "zone": "platform",
+      "source": "bridge-bay.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "objects": 24,
+      "role": "The unchanged remaining source structural owners retained as physical context"
     }
   ],
   "unbakedPrimaryMeshes": 0,
@@ -639,39 +804,42 @@
   "ambientOcclusion": {
     "minimum": 0.0,
     "maximum": 1.0,
-    "mean": 0.13277681171894073,
+    "mean": 0.2461261749267578,
     "coveredPixels": 16777216
   },
   "illumination": {
     "minimum": 0.0,
-    "maximum": 0.7600003480911255,
-    "mean": 0.01751793548464775,
-    "coveredPixels": 11865967
+    "maximum": 0.2511001229286194,
+    "mean": 0.011396902613341808,
+    "coveredPixels": 5843586
   },
-  "elapsedSeconds": 67.03670374999638,
+  "elapsedSeconds": 55.65614020801149,
   "architectureUv": "UVMap",
   "bakedUv": "BakedLightingUV",
-  "artifact": "model-platform-bridge.glb",
+  "artifact": "model-platform-enclosure-floor.glb",
   "orderSeparation": null,
   "orderUv": null,
   "vaultNormalIntegrity": null,
   "authoredNormalIntegrity": {
     "schema": 1,
-    "scope": "arcade-enclosure authored corner normals",
+    "scope": "Three original receiver owners; authored source normals transferred byte-exact through UV-only separation/repacking",
     "temporaryAttribute": "_PennArcadeWorldCornerNormal",
-    "sourceObjects": 7,
-    "sourceCorners": 24768,
+    "sourceObjects": 3,
+    "sourceCorners": 1206,
     "sourceNegativeHemisphereCorners": 0,
-    "sourceMinimumFaceAlignment": 1.0,
-    "restoredCorners": 24768,
-    "minimumRestoredSourceNormalDot": 1.0,
-    "maxEncodingAngleDegrees": 0.0,
+    "sourceMinimumFaceAlignment": 0.5944152727193834,
+    "restoredCorners": 1206,
+    "minimumRestoredSourceNormalDot": 0.9999999955792012,
+    "maxEncodingAngleDegrees": 0.005387508980701692,
     "maxAllowedEncodingAngleDegrees": 0.5,
     "restoredNegativeHemisphereCorners": 0,
-    "restoredMinimumFaceAlignment": 1.0,
+    "restoredMinimumFaceAlignment": 0.5944059909112784,
     "finiteUnitNormals": true,
     "temporaryAttributeRemoved": true,
-    "status": "PASS"
+    "status": "PASS",
+    "additionalRepackNormalDrift": 0,
+    "physicalCornerDigest": "6ac4183b1b73172daea430c11258f3519861a0804b48f17d3fb7c01f08ae05fc",
+    "uvPreflightSha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8"
   },
   "sourceRenderVisibility": {
     "proofSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
@@ -826,40 +994,31 @@
     "schema": 1,
     "status": "PASS",
     "method": "Reuse/update every recognized Occlusion settings input; create only when absent",
-    "freshAoImage": "platform-bridge-ao",
+    "freshAoImage": "platform-enclosure-floor-ao",
     "materials": [
       {
-        "material": "GraniteCapstoneEighthAvenueBridge",
+        "material": "RailwayTrackBaseConcreteEnclosure13",
         "existingSettingsGroups": 0,
         "updatedSettingsGroups": 1,
-        "aoImage": "platform-bridge-ao",
+        "aoImage": "platform-enclosure-floor-ao",
         "uvName": "BakedLightingUV",
         "allExistingNodesRetained": true,
         "allNonAoOriginalLinksExact": true
       },
       {
-        "material": "StructuralConcreteEighthAvenueBridge",
+        "material": "RailwayPlatformRubbedConcreteEnclosure13",
         "existingSettingsGroups": 0,
         "updatedSettingsGroups": 1,
-        "aoImage": "platform-bridge-ao",
+        "aoImage": "platform-enclosure-floor-ao",
         "uvName": "BakedLightingUV",
         "allExistingNodesRetained": true,
         "allNonAoOriginalLinksExact": true
       },
       {
-        "material": "PaintedStructuralIronEighthAvenueBridge",
+        "material": "RailwayPlatformStippledGranolithicEnclosure13",
         "existingSettingsGroups": 0,
         "updatedSettingsGroups": 1,
-        "aoImage": "platform-bridge-ao",
-        "uvName": "BakedLightingUV",
-        "allExistingNodesRetained": true,
-        "allNonAoOriginalLinksExact": true
-      },
-      {
-        "material": "BuriedWaterproofingEighthAvenueBridge",
-        "existingSettingsGroups": 0,
-        "updatedSettingsGroups": 1,
-        "aoImage": "platform-bridge-ao",
+        "aoImage": "platform-enclosure-floor-ao",
         "uvName": "BakedLightingUV",
         "allExistingNodesRetained": true,
         "allNonAoOriginalLinksExact": true
@@ -873,6 +1032,6 @@
     "primaryAndOccluderMeshPointerIntersection": 0,
     "primaryAndOccluderMaterialPointerIntersection": 0,
     "cachedContextMaterialGraphsExact": true,
-    "cacheQualification": "Accepted normal-correct Phase11 prepared context, before transport. Floor macro albedo is calibrated; later floor micro-normal/roughness detail is absent from context only."
+    "cacheQualification": "Accepted normal-correct Phase11 prepared context, before transport. Far-away arrivals-gallery floor retains its calibrated neutral mean before the later concrete micro-normal/roughness binding. Fresh platform receiver PBR is authored separately and preserved."
   }
 }

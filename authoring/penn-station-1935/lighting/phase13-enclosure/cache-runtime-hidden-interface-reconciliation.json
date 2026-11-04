@@ -1,0 +1,114 @@
+{
+  "status": "PASS exact old hidden-interface difference reconciled; visible top/side surfaces match",
+  "oldReceipt": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+  "oldReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
+  "cacheRemovedStippledAreaM2": 1076.7067957477961,
+  "runtimeOwnedStippledAreaM2": 1026.5997759210595,
+  "differenceM2": 50.10701982673663,
+  "exactOldHiddenInterfaceClippedAreaM2": 50.10701982673692,
+  "differenceErrorM2": 2.8421709430404007e-13,
+  "parts": [
+    {
+      "oldMissingTriangleIndex": 3,
+      "material": "RailwayPlatformStippledGranolithicPhase9",
+      "triangle": [
+        [
+          -105.5141830444336,
+          -7.7374749183654785,
+          16.365495681762695
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          13.935395240783691
+        ],
+        [
+          -221.4759521484375,
+          -7.7374749183654785,
+          10.290245056152344
+        ]
+      ],
+      "coincidentRetainedConcreteFace": true,
+      "clippedAreaM2": 50.10701982673692,
+      "clippedTriangles": [
+        [
+          {
+            "pos": [
+              -111.4247,
+              -7.7374749183654785,
+              16.241634602623297
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          },
+          {
+            "pos": [
+              -162.2857,
+              -7.7374749183654785,
+              15.175789027106239
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          },
+          {
+            "pos": [
+              -162.2857,
+              -7.7374749183654785,
+              13.39122927856719
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          }
+        ],
+        [
+          {
+            "pos": [
+              -111.4247,
+              -7.7374749183654785,
+              16.241634602623297
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          },
+          {
+            "pos": [
+              -162.2857,
+              -7.7374749183654785,
+              13.39122927856719
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          },
+          {
+            "pos": [
+              -111.4247,
+              -7.7374749183654785,
+              16.055843008218364
+            ],
+            "normal": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Old cached source retains one internal downward dressing interface already omitted in mounted Phase9. It coincides with retained rubbed-concrete upper face. Remove the old cached surface within receiver ROI along with the other receiver faces; no extra visible floor or tolerance/height change."
+}
