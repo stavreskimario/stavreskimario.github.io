@@ -1,6 +1,6 @@
 # Pennsylvania Station — lower station reconstruction
 
-Current visual checkpoint `12-bridge-bay-1` adds the first source-supported bay of the Eighth Avenue road bridge above the western tracks: 22 columns, built-up girders, connecting members and a roof plate. Open **Station plan → The Eighth Avenue bridge** to see it. Walk starts on the checked Platform 5 sidepath; Orbit gives a wider view. All six areas remain loaded together.
+[Live visual checkpoint `fe2ea78`](https://stavreskimario.github.io/penn-station-1935/?preview=fe2ea78), runtime `12-bridge-bay-1`, adds the first source-supported bay of the Eighth Avenue road bridge above the western tracks: 22 columns, built-up girders, connecting members and a roof plate. Open **Station plan → The Eighth Avenue bridge** to see it. Walk starts on the checked Platform 5 sidepath; Orbit gives a wider view. All six areas remain loaded together.
 
 The editable Blender/Geometry Nodes source follows the original engineering section's column spacing, width and structural families. Local fabrication, registration and paint remain reconstructed. Fresh 4K/128-sample lighting accompanies a corrected dielectric painted surface. This is one finite bay of the 525 ft bridge; the wider railway enclosure and finished photorealistic lighting remain incomplete. [Source and qualifications](../authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/README.md) and [validation](./VALIDATION.md) distinguish the checks and limitations.
 
