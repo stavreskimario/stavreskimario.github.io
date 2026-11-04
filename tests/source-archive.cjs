@@ -11,7 +11,10 @@ const run = promisify(execFile);
 const allowedPath = 'authoring/penn-station-1935/lighting/phase4/denoised/lighting-waiting-room-vault-sky-denoised-linear.hdr.gz';
 const manifestPath = 'authoring/penn-station-1935/review/phase11/storage/current-vault-hdr-archive.json';
 const enclosureManifest = 'authoring/penn-station-1935/review/phase13/storage/current-enclosure-hdr-archives.json';
+const arrivalsManifest = 'authoring/penn-station-1935/review/phase14/storage/current-arrivals-hdr-archives.json';
 const archivePolicies = new Map([
+  ['authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-sky.hdr.gz', { manifest: arrivalsManifest }],
+  ['authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz', { manifest: arrivalsManifest }],
   [allowedPath, { manifest: manifestPath, single: true }],
   ['authoring/penn-station-1935/lighting/phase13-enclosure/raw/lighting-platform-enclosure-sky.hdr.gz', { manifest: enclosureManifest }],
   ['authoring/penn-station-1935/lighting/phase13-enclosure/denoised/lighting-platform-enclosure-sky-denoised-linear.hdr.gz', { manifest: enclosureManifest }],

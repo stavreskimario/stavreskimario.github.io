@@ -302,7 +302,7 @@ async function verifyArrivalsSource({ record, bakeBytes, repositoryDirectory }) 
   const directory = path.resolve(repositoryDirectory, record.rawAuthoringDirectory);
   const rawBakeBytes = await fs.readFile(path.join(directory, 'lighting-concourse-arrivals.json'));
   assert(rawBakeBytes.equals(bakeBytes), 'Arrivals raw and runtime bake reports match byte-for-byte');
-  const archive = await fs.readFile(path.join(directory, record.sourceArchiveFile));
+  const archive = await readSourceArchive(path.join(directory, record.sourceArchiveFile), repositoryDirectory);
   const source = gunzipSync(archive);
   assert.equal(hash(source), record.sourceSha256, 'Arrivals raw HDR decoded bytes match sourceSha256');
   assert(source.subarray(0, 11).toString('ascii').startsWith('#?RADIANCE'), 'Arrivals raw source is actual HDR radiance');
