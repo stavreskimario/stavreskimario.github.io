@@ -1,0 +1,237 @@
+{
+  "status": "PASS exact4K physical source archives; no modified radiance/statistics or duplicate rawsourceGLB",
+  "artifact": "platform-continuity",
+  "sourcePrimarySha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "selectedSourceOwnerNames": [
+    "Bridge permanent row B0 built-up Icolumns",
+    "Bridge permanent row B1 built-up Icolumns",
+    "Bridge permanent row B2 built-up Icolumns",
+    "Bridge permanent row B3 built-up Icolumns",
+    "Bridge permanent row B4 built-up Icolumns",
+    "Buried granite and concrete bearings row B0",
+    "Buried granite and concrete bearings row B1",
+    "Buried granite and concrete bearings row B2",
+    "Buried granite and concrete bearings row B3",
+    "Buried granite and concrete bearings row B4",
+    "Permanent bent1 deep face-connected girders",
+    "Permanent bent2 deep face-connected girders",
+    "Permanent bent3 deep face-connected girders",
+    "Permanent bent4 deep face-connected girders",
+    "Permanent bent5 deep face-connected girders",
+    "Bay1 longitudinal girders and web connection returns",
+    "Bay2 longitudinal girders and web connection returns",
+    "Bay3 longitudinal girders and web connection returns",
+    "Bay4 longitudinal girders and web connection returns",
+    "Bay1 embedded4intransverse floorplate beams",
+    "Bay2 embedded4intransverse floorplate beams",
+    "Bay3 embedded4intransverse floorplate beams",
+    "Bay4 embedded4intransverse floorplate beams",
+    "Documented composite opaque roofplate and waterproof protective",
+    "Bridge permanent row B5 source P3 built-up Icolumns",
+    "Buried granite and concrete bearings row B5 P3",
+    "Permanent bent6 observed P3 face-connected girders",
+    "Bay5 P3 longitudinal girders and actual connection returns",
+    "Bay5 P3 embedded4in transverse floorplate beams",
+    "P3 roof extension from actual old south cover edge"
+  ],
+  "selectedTriangles": 30588,
+  "archives": [
+    {
+      "file": "raw/lighting-platform-continuity-sky.hdr.gz",
+      "rawBytes": 11811140,
+      "rawSha256": "740560f2fa5bc37b41ba113aa8aa9d1c07305c4d32fdacff2ea27ae260fb0a67",
+      "archiveBytes": 9294575,
+      "archiveSha256": "b3a19ed5cdfe3702341017460abe10904ce94dd31275ec76745aa173d2d233cd"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-sky-denoised-linear.hdr.gz",
+      "rawBytes": 67649587,
+      "rawSha256": "580fe531b4c89e3c3f6f88ac1a72ff062f6d9dce72c2d7af5a20d1bed3a15334",
+      "archiveBytes": 13227134,
+      "archiveSha256": "1d89cb995558f9f6db2730d9710d0d2bf73dfe43a9988b3dcfb7247682bd7bb5"
+    }
+  ],
+  "replayQualification": "Executed prepared-scene and source/context files remain externally pinned. Source helpers retained here are review copies; runtime requires only static optimized assets.",
+  "files": [
+    {
+      "file": "actual-bake-completion.json",
+      "bytes": 1781,
+      "sha256": "ab4494caf35812003a6b4c5ca9eb4ce59da8eccc69f6a77c1301a57eb6532d6e"
+    },
+    {
+      "file": "actual-postprocess-completion.json",
+      "bytes": 1168,
+      "sha256": "2cd3b4f05186ffe562d07e16c602bec70c2afca67c889a440a33741e8b77e9f5"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-denoise.json",
+      "bytes": 2591,
+      "sha256": "9a299c4405770e4704b4328933ca43b34095ee9785a5215a15a7065b5c86c9dc"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-sky-denoised-linear.hdr.gz",
+      "bytes": 13227134,
+      "sha256": "1d89cb995558f9f6db2730d9710d0d2bf73dfe43a9988b3dcfb7247682bd7bb5"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-sky-low.png",
+      "bytes": 94689,
+      "sha256": "2ae8141ba35fb685e8a01e40053a4de4a724f8a8a81f2d4b35c6a0cf3f607712"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-sky.png",
+      "bytes": 2482731,
+      "sha256": "ea306048601de22a996083660d614a3b8416046457e09632ef58fe251ed3ecce"
+    },
+    {
+      "file": "floor-uv-preflight.json",
+      "bytes": 1953,
+      "sha256": "3b4906e19bf5d7fe8dd5790b70e2f6d29a17d50fef8565d4e2e6727dd02e98c7"
+    },
+    {
+      "file": "packet.json",
+      "bytes": 7280,
+      "sha256": "776c090f95b161720f5c545fa0edd380205af18ab9d8d072402ba04bcee096f2"
+    },
+    {
+      "file": "prepared-context-proof.json",
+      "bytes": 4415,
+      "sha256": "47b04a68a518a8829d83602814be8e6bfb660ad287c1a744586ae2390f210620"
+    },
+    {
+      "file": "prepared-current-control.json",
+      "bytes": 36008,
+      "sha256": "bc8be086d428add2efe9f8dea861e949dd8d95d6718230bb5fe686620d5b0529"
+    },
+    {
+      "file": "raw/lighting-platform-continuity-sky.hdr.gz",
+      "bytes": 9294575,
+      "sha256": "b3a19ed5cdfe3702341017460abe10904ce94dd31275ec76745aa173d2d233cd"
+    },
+    {
+      "file": "raw/lighting-platform-continuity.json",
+      "bytes": 39878,
+      "sha256": "7521c5256fe16234f46daf727be9b8e280f3c1be08eed671ba00ee08452fc295"
+    },
+    {
+      "file": "source/archive-receiver.py",
+      "bytes": 3277,
+      "sha256": "fcdacba1864cba8b15f3e51a68bec88525d368763727317c39a331aca5989528"
+    },
+    {
+      "file": "source/bake-prepared-receiver.py",
+      "bytes": 16238,
+      "sha256": "c495abbfd94251c601117c2350060cfaf50cc4e33ec12255ad023c2090fbf357"
+    },
+    {
+      "file": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "file": "source/cpu-preparation/arcade_corner_normals.py",
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    {
+      "file": "source/cpu-preparation/authored_lighting_uv_guard.py",
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    {
+      "file": "source/cpu-preparation/bake_lighting.py",
+      "bytes": 34929,
+      "sha256": "6f186cfc92c87f32cf893bdbe51a5d0894a565df6364b4933e35a220ca8b9446"
+    },
+    {
+      "file": "source/cpu-preparation/floor_clip.py",
+      "bytes": 1479,
+      "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a"
+    },
+    {
+      "file": "source/cpu-preparation/floor_context_membership.py",
+      "bytes": 5129,
+      "sha256": "b989b40129ae8d244273e619eef9450e8152af5c8bcd405a1dae0010d4ecb528"
+    },
+    {
+      "file": "source/cpu-preparation/material_library.py",
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    {
+      "file": "source/cpu-preparation/occluder_materials.py",
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    {
+      "file": "source/cpu-preparation/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/cpu-preparation/restore_imported_visibility.py",
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    {
+      "file": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "file": "source/encode-lossless-meshopt.mjs",
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    {
+      "file": "source/package-continuity-lossless.mjs",
+      "bytes": 7691,
+      "sha256": "3e18890bd2b0f6cc0a61aff69292c7aba68a7760a6cea563edcbc5234f953f20"
+    },
+    {
+      "file": "source/postprocess-receiver.py",
+      "bytes": 3382,
+      "sha256": "23dc7a08e159820e4bc1dd1f21cea10bffa884ecddaefaf1d731dc9347078dac"
+    },
+    {
+      "file": "source/prepare-current-context.py",
+      "bytes": 2808,
+      "sha256": "113412ecf1aa0bcbc906115f23d30ae21c74d54591b9d1c60415456cee994797"
+    },
+    {
+      "file": "source/prepare-floor-uv.py",
+      "bytes": 6379,
+      "sha256": "211261ce2548bfe593e4717027c383be1dacccf004b13f57f49b7078e11abece"
+    },
+    {
+      "file": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/reuse-texture-cache.mjs",
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    },
+    {
+      "file": "source/run-cpu-receivers.py",
+      "bytes": 1620,
+      "sha256": "26313bef00a2a707f77ef7a71f6ee5226b89b9c8b8f2d1679e3d699799c11476"
+    },
+    {
+      "file": "source/run-frozen-transports.py",
+      "bytes": 2931,
+      "sha256": "f90219c5b6e7aff2e13311b774a53d076562a8981e130895ec6b37fc2f200b41"
+    },
+    {
+      "file": "source/split-receivers.py",
+      "bytes": 5769,
+      "sha256": "1f3cb842763cc3c9c161c79de3b636c4889f0a4981afd41088425241a8a84373"
+    },
+    {
+      "file": "split-receivers-proof.json",
+      "bytes": 2311,
+      "sha256": "c28114103d0a53d639b2a25cfa87f14b5fba395f86db768fd626e642b963c519"
+    }
+  ]
+}

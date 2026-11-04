@@ -1,3 +1,13 @@
+# Current first visual checkpoint: Platform 3 enclosure — 4 November 2026
+
+Entry `14-platform-continuity-1` extends the Eighth Avenue bridge to five connected bays and66supportedcolumns. Its new P3 row follows the permanent cap chain in PlateLIX; observedZ41.790 and adoptedZ41.040 are recorded separately. The0.75m adjustment coordinates the partially reconstructed railway and remains qualified. All24,996 earlier structural faces are exact copies. All31,188 new combined source faces survive delivery once, with zero additional P/N/UV0/UV1 drift after baking. Eleven actual receivers and buried contacts,250body points and2,268footprint supports pass. Existing tracks, platforms, stairs and ten other model files are unchanged.
+
+Fresh separate4K/128-sample structure/floor bakes preserve795.20m² of P3/P4/P5 walking tops at a minimum63.96pixels/metre. A refreshed2K local physical reflection capture preserves14glass shaders and its Float32EXR master. The explicit outer-apron join independently replays all51,118,080RGB samples with zero changes beneath the roof. Physical AO is retained: sampled walking-top boundary AO agrees, while limited track-bed corner differences remain qualified and were not conspicuous in the reviewed views.
+
+The actual final browser views pass with six loaded zones, intended lighting/PBR/probe bindings and no page/HTTP errors. Raw cancellations and expected font/KTX messages remain in the report; no broad network-clean claim is made. All12GLBs/117KTX textures and all15focused denoise controls pass. The proposed track-instance culling optimization was rejected after paired measurements showed higher camera-update CPU cost and a concourse regression; no production performance change was made.
+
+[Editable source, exact acceptance and actual views](../authoring/penn-station-1935/review/phase14/platform-continuity/README.md) distinguish documented dimensions, fitted registration and unfinished wider enclosure. Walking walkthrough and physical-mobile work remain deferred at the owner’s request. Arcade fixtures and coherent marble-floor lighting are the next active part of this iteration.
+
 # Current visual checkpoint: four western bridge bays and shared exit ceiling — 4 November 2026
 
 Entry `13-enclosure-soffit-1` expands the first Eighth Avenue bridge section from one bay/22 columns to four connected bays/55 supported columns. The 100 ft section and structural family follow original engineering records. Five nonuniform rows include two explicit current-track-gap fits; absolute registration, fabrication, paint and 1935 condition remain qualified. The finite section is not the complete 525 ft bridge. Open **Station plan → The Eighth Avenue bridge** for Walk/Orbit views.

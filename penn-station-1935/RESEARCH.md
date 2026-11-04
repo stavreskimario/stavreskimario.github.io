@@ -1,5 +1,10 @@
 # Pennsylvania Station: evidence and reconstruction register
 
+## Five-bay Platform 3 extension
+
+PlateLIX supplies the next permanent cap/girder chain. The source observation near worldZ41.790 is retained separately from the adoptedZ41.040: a qualified0.75m fit to the currently reconstructed tapered P3 platform. Existing four-bay geometry, tracks and stairs remain unchanged. Farther P2/P1 rows are oblique; Gibbs’ track plate shows curved southern approaches that must be registered before those rows can be constructed safely. The current straight partial railway is not presented as that completed approach.
+
+
 ## Four western bridge bays and the lower exit ceiling — 4 November 2026
 
 The original ASCE bridge sections support the 100 ft avenue width, eleven column stations at nominal 10 ft spacing, built-up girders and buried bearings. Four connected reconstructed bays now use five nonuniform rows and 55 supported columns. Two source row observations were fitted to the current track gaps by approximately 0.41 m and 0.53 m. Exact fabrication, foundation depth, absolute registration and survival of every opening-era detail into 1935 remain qualified; this finite section is not the entire 525 ft bridge. The source packet separates the measured source observations from adopted fits.

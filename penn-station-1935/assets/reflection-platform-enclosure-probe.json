@@ -4,9 +4,9 @@
   "createdInputs": [
     {
       "zone": "platform",
-      "file": "bridge-bay.glb",
-      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
-      "objects": 27,
+      "file": "model-platform-enclosure.glb",
+      "sha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+      "objects": 33,
       "role": "fresh combined enclosure and exact receiver primary"
     },
     {
@@ -85,6 +85,13 @@
       "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
       "objects": 103,
       "role": "registered context; floor membership changes explicitly recorded"
+    },
+    {
+      "zone": "concourse",
+      "file": "model-concourse-soffit.glb",
+      "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "objects": 1,
+      "role": "registered context; floor membership changes explicitly recorded"
     }
   ],
   "finiteLinearRadiance": true,
@@ -98,11 +105,11 @@
         11.3
       ],
       "fullFile": "reflection-platform-enclosure.hdr.gz",
-      "fullBytes": 4493198,
-      "decodedSha256": "fb0ffc245340977e4db7c251a1a28cd93fee04b5e44dd6b111620427e10180ea",
+      "fullBytes": 4481785,
+      "decodedSha256": "05335f6d3c46fccbb42f381434d74465353513be8fa4fbf3c9db9aef709d1d9e",
       "lowFile": "reflection-platform-enclosure-low.hdr.gz",
-      "lowBytes": 324778,
-      "lowHdrRoundtripRelativeError": 0.002921737879421073,
+      "lowBytes": 323956,
+      "lowHdrRoundtripRelativeError": 0.0029457788895558244,
       "maximumRadiance": 0.87109375
     }
   ],
@@ -255,10 +262,10 @@
       }
     ]
   },
-  "scene": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/raw/enclosure-prebake-scene.blend",
-  "sceneSha256": "8f8c5c1ef42bb59e045bfcaf58fcb85b427732e891bdac7eacd52a7ba7fd4126",
-  "preparedControlSha256": "4cd81d1a7a049f357b979a36186b0163a7e9fce078482b2fcde41fc3c41a64d5",
-  "sourcePrimarySha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "scene": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/independent-floor-prebake-scene.blend",
+  "sceneSha256": "4540f65f8329d9ce677323d647bdc62eb0f344a90f585cd526888c55a3b0ce02",
+  "preparedControlSha256": "bc8be086d428add2efe9f8dea861e949dd8d95d6718230bb5fe686620d5b0529",
+  "sourcePrimarySha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
   "contextMembership": {
     "status": "PASS",
     "roi": {
@@ -268,7 +275,7 @@
       ],
       "z": [
         3.1014,
-        37.212321
+        45.3
       ]
     },
     "objects": [
@@ -278,8 +285,8 @@
         "oldFaces": 12,
         "retainedFaces": 20,
         "changedOldPolygons": 2,
-        "removedActualAreaM2": 1734.9155529809993,
-        "retainedClippedAreaM2": 76080.40015644694,
+        "removedActualAreaM2": 2146.262994599999,
+        "retainedClippedAreaM2": 75669.05271482794,
         "originalUVLayerNamesRetained": [
           "UVMap"
         ],
@@ -356,36 +363,167 @@
         "cacheExpectedPlaneMain0Y": null,
         "runtimePlaneMain0Y": null,
         "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 03 continuous30-inch-gridded granolithic dressing",
+        "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+        "oldFaces": 24,
+        "retainedFaces": 48,
+        "changedOldPolygons": 12,
+        "removedActualAreaM2": 519.5019995681153,
+        "retainedClippedAreaM2": 2382.587109941445,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
+      },
+      {
+        "owner": "Platform 03 source-section continuous walls and coved slab",
+        "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+        "oldFaces": 304,
+        "retainedFaces": 480,
+        "changedOldPolygons": 88,
+        "removedActualAreaM2": 767.1691682622134,
+        "retainedClippedAreaM2": 2141.322931446349,
+        "originalUVLayerNamesRetained": [
+          "UVMap"
+        ],
+        "visibilityUnchanged": true,
+        "originalWorldMatrixRetained": true,
+        "cacheExpectedPlaneMain0Y": null,
+        "runtimePlaneMain0Y": null,
+        "planeDifferenceQualified": null
       }
     ],
     "removedAreaBySourceFamily": {
-      "Railway smooth concrete track base": 1734.9155529809993,
-      "RailwayPlatformStippledGranolithicPhase9": 1076.7067957477961,
-      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247116
+      "Railway smooth concrete track base": 2146.262994599999,
+      "RailwayPlatformStippledGranolithicPhase9": 1596.2087953159114,
+      "RailwayPlatformRubbedConcretePhase9": 2339.1968583869248
     },
     "runtimeOwnedAreaBySourceFamily": {
-      "Railway smooth concrete track base": 1734.9155529809996,
-      "RailwayPlatformRubbedConcretePhase9": 1572.0276901247123,
-      "RailwayPlatformStippledGranolithicPhase9": 1026.5997759210595
+      "Railway smooth concrete track base": 2146.262994599999,
+      "RailwayPlatformRubbedConcretePhase9": 2339.1968583869243,
+      "RailwayPlatformStippledGranolithicPhase9": 1507.4775762087622
     },
     "explicitCacheOnlyHiddenInterface": {
-      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
-      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
-      "oldPhase9ReceiptSha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191",
-      "sourceTriangleIndex": 3,
-      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
-      "clippedAreaM2": 50.10701982673692,
-      "orientation": "DOWNWARD",
-      "role": "CachedrawclosedgranolithicundersidecoincidentwithRubbedtop; alreadyomittedfrommountedruntimebyPhase9hidden-interfacecleanup. RemovefromcacheinsideownedROIaswellduringtruefloorswap; no newprimaryfaceadded.",
-      "visibleTopAndSideAreaExact": true,
-      "areaToleranceUnchanged": true
+      "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/visible-floor-and-cache-area-proof.json",
+      "sha256": "b92967fb16a93df89caab793824a02b9bed730b6e1c89397cb40ac61b10dec1c",
+      "oldPhase9Receipt": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+        "sha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191"
+      },
+      "sourceTriangleIndices": [
+        2,
+        3
+      ],
+      "clippedAreaM2": 88.73121910714877,
+      "role": "The two already omitted internal P3/P5 granolithic undersides coincide with retained rubbed tops; remove their cache-only ROI fragments too, do not add them to the primary or enlarge tolerance."
     },
     "otherCachedObjectsChanged": 0,
     "newHiddenObjects": 0,
     "newCapFaces": 0,
     "clippingCore": "floor_clip.py sharedwithruntimepartition",
     "qualification": "The trackbase cache usesitsown exact rawsourceupperplane; ~0.375mm runtimequantization difference recorded, not a raised runtime tolerance orheightmove. RuntimefloorP/N/UV0authority unchanged.",
-    "detail": "PASS exact mapped cached-floor receiver membership removed before primary import"
+    "detail": "PASS exact mapped cached-floor receiver membership removed before primary import",
+    "currentPaleSoffit": {
+      "status": "PASS exact56cachedtrianglefaces removed; allunowned geometryUVnormals andotherobjectpointers/transforms/visibility unchanged",
+      "changedOwners": [
+        {
+          "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+          "removedTrianglePolygons": [
+            1342,
+            1343,
+            1390,
+            1391,
+            1438,
+            1439,
+            1486,
+            1487,
+            1534,
+            1535,
+            1582,
+            1583,
+            1630,
+            1631,
+            1678,
+            1679,
+            1726,
+            1727,
+            1774,
+            1775,
+            1822,
+            1823,
+            1870,
+            1871,
+            1918,
+            1919,
+            1966,
+            1967,
+            2014,
+            2015,
+            2062,
+            2063,
+            2110,
+            2111,
+            2158,
+            2159,
+            2206,
+            2207,
+            2254,
+            2255,
+            2326,
+            2327,
+            2710,
+            2711,
+            3246,
+            3247,
+            3254,
+            3255,
+            4014,
+            4015,
+            4022,
+            4023
+          ],
+          "removedCount": 52,
+          "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+          "maximumRetainedNormalComponentDrift": 0.0,
+          "originalPolygons": 5540,
+          "retainedPolygons": 5488
+        },
+        {
+          "owner": "Lower33rd north ceiling",
+          "removedTrianglePolygons": [
+            0,
+            1
+          ],
+          "removedCount": 2,
+          "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+          "maximumRetainedNormalComponentDrift": 0.0,
+          "originalPolygons": 12,
+          "retainedPolygons": 10
+        },
+        {
+          "owner": "Lower33rd east ceiling west of ascent",
+          "removedTrianglePolygons": [
+            0,
+            1
+          ],
+          "removedCount": 2,
+          "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+          "maximumRetainedNormalComponentDrift": 0.0,
+          "originalPolygons": 12,
+          "retainedPolygons": 10
+        }
+      ],
+      "removedTotal": 56,
+      "allOtherObjectsUnchanged": 90604,
+      "auditPath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/cache-soffit-owner-audit.json",
+      "auditSha256": "2cf6121cd2333f22a21fd776b658a1baef20ab2f78f19f69502ceeff9dc02152"
+    }
   },
   "device": {
     "requested": "METAL",
@@ -487,11 +625,11 @@
       "roughness": 0.6600000262260437
     }
   ],
-  "rawLinearExrSha256": "3d330c5cb576acfbb486c1fc4010bf01912672d911492476341152bad265e732",
+  "rawLinearExrSha256": "342bb6416f87991cccd7986d92fedc6796216a987da1bd5f30cf9a4461954cd3",
   "sourceStats": {
-    "mean": 0.01300348062068224,
-    "minimum": 9.12699215405155e-06,
-    "maximum": 0.8740643858909607
+    "mean": 0.012312411330640316,
+    "minimum": 7.130910944397328e-06,
+    "maximum": 0.872606098651886
   },
   "negativeSamplesClamped": 0,
   "encoding": "32bit scene-linear OpenEXR capture \u2192 explicit linear Radiance RGBE writer; no display transform",
@@ -501,44 +639,44 @@
   "outputs": [
     {
       "file": "reflection-platform-enclosure.hdr.gz",
-      "bytes": 4493198,
-      "decodedSha256": "fb0ffc245340977e4db7c251a1a28cd93fee04b5e44dd6b111620427e10180ea",
+      "bytes": 4481785,
+      "decodedSha256": "05335f6d3c46fccbb42f381434d74465353513be8fa4fbf3c9db9aef709d1d9e",
       "width": 2048,
       "height": 1024,
       "linearStats": {
-        "mean": 0.01296524703502655,
-        "minimum": 9.119510650634766e-06,
+        "mean": 0.012275873683393002,
+        "minimum": 7.092952728271484e-06,
         "maximum": 0.87109375
       },
-      "roundtripRelativeMeanError": 0.002940302588791983
+      "roundtripRelativeMeanError": 0.002967163383653732
     },
     {
       "file": "reflection-platform-enclosure-low.hdr.gz",
-      "bytes": 324778,
-      "decodedSha256": "326934afe85cbe8bec4591b7ec661ab92646865c3487a9b0d58026122b9c09c7",
+      "bytes": 323956,
+      "decodedSha256": "5bb0c46ff9edc92e1b973b81a747b6c3d10a8eeb325a69bf92d980527deebb96",
       "width": 512,
       "height": 256,
       "linearStats": {
-        "mean": 0.013087711296975613,
+        "mean": 0.012391529977321625,
         "minimum": 0.0,
         "maximum": 0.90234375
       },
-      "roundtripRelativeMeanError": 0.002921737879421073
+      "roundtripRelativeMeanError": 0.0029457788895558244
     }
   ],
-  "elapsedSeconds": 24.549992999993265,
+  "elapsedSeconds": 31.44020066698431,
   "retainedLinearMaster": {
-    "authoringDirectory": "authoring/penn-station-1935/lighting/phase13-enclosure/reflections",
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase14-continuity/reflections",
     "archiveFile": "reflection-platform-enclosure-linear.exr.gz",
-    "archiveBytes": 24158394,
-    "archiveSha256": "0a13adf280c539777235c25a708443069fbac094e2a3441c746746109e366fa8",
-    "rawBytes": 24166491,
-    "rawSha256": "3d330c5cb576acfbb486c1fc4010bf01912672d911492476341152bad265e732",
+    "archiveBytes": 24155706,
+    "archiveSha256": "026df0d11d33c262037b2767a135a35e7de90f9ba8cecdc4cc2e76ef1c6d3036",
+    "rawBytes": 24163582,
+    "rawSha256": "342bb6416f87991cccd7986d92fedc6796216a987da1bd5f30cf9a4461954cd3",
     "width": 2048,
     "height": 1024,
     "channels": "RGBA",
     "bitDepth": 32,
     "transfer": "scene-linear OpenEXR float master",
-    "relationship": "This exact master is the input to the explicit linear Radiance RGBE writer in capture-local-reflection-v2.py; full and low HDR hashes/roundtrip errors remain unchanged."
+    "relationship": "Exact FLOAT32 master input to the explicit linear Radiance RGBE writer in the executed capture-local-reflection.py; original full/low HDR identities and optical statistics remain unchanged."
   }
 }

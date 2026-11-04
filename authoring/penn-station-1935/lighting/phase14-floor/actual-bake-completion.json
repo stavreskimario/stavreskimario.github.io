@@ -1,0 +1,52 @@
+{
+  "status": "PASS actual4K128 clean Metal transport and frozen source inputs",
+  "sourceSha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "packetSha256": "62f3a92ecef08865dcdffd8f430e5723de856002b221816781246389cfc38a17",
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "elapsedSeconds": 53.73856537498068,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.34740832448005676,
+    "mean": 0.019001806154847145,
+    "coveredPixels": 6044088
+  },
+  "selectedTriangles": 600,
+  "primaryOwners": 3,
+  "binaryArchivesDisabled": true,
+  "outputs": {
+    "lighting-platform-continuity-floor-ao.png": {
+      "sha256": "0f1e1fdc74f33805fb60a362f1be5bdf1a5664e48a60b2cca42b4b91bc7b0ba2",
+      "bytes": 3367863
+    },
+    "lighting-platform-continuity-floor-sky.hdr": {
+      "sha256": "2caa229408d72796b2c2c4fd09c47eb898d5c670ecfd1ea6ec3729c289b2ee18",
+      "bytes": 19381763
+    },
+    "actual-prebake-acceptance.json": {
+      "sha256": "6d2d6894211acf24df1d896e3a39a929025398f1659cac708f0c807a8de4891b",
+      "bytes": 16772
+    },
+    "lighting-platform-continuity-floor-sky.png": {
+      "sha256": "d3f024f56a4dda9b1f8b3bddb249a278f5075d849077fda0c9754b638f25d4e7",
+      "bytes": 8220442
+    },
+    "lighting-platform-continuity-floor.json": {
+      "sha256": "ac35bd4fad0c74f745936edc0e98d39c791e3079ade2100d9c4b9dded054a53d",
+      "bytes": 38121
+    },
+    "model-platform-continuity-floor.glb": {
+      "sha256": "95c6f41361c3faa071a15b2fc7f093036f362695f3e0274aca009640bfe5353c",
+      "bytes": 8855428
+    },
+    "lighting-platform-continuity-floor-sky-low.png": {
+      "sha256": "f8dcbba6105ba3cdced98c665d9513629b10b52a8cbc9aecc3b5533213775a20",
+      "bytes": 104732
+    }
+  }
+}

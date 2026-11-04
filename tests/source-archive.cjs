@@ -12,7 +12,13 @@ const allowedPath = 'authoring/penn-station-1935/lighting/phase4/denoised/lighti
 const manifestPath = 'authoring/penn-station-1935/review/phase11/storage/current-vault-hdr-archive.json';
 const enclosureManifest = 'authoring/penn-station-1935/review/phase13/storage/current-enclosure-hdr-archives.json';
 const arrivalsManifest = 'authoring/penn-station-1935/review/phase14/storage/current-arrivals-hdr-archives.json';
+const continuityManifest = 'authoring/penn-station-1935/review/phase14/storage/current-continuity-hdr-archives.json';
 const archivePolicies = new Map([
+  ['authoring/penn-station-1935/lighting/phase14-continuity/raw/lighting-platform-continuity-sky.hdr.gz', { manifest: continuityManifest }],
+  ['authoring/penn-station-1935/lighting/phase14-continuity/denoised/lighting-platform-continuity-sky-denoised-linear.hdr.gz', { manifest: continuityManifest }],
+  ['authoring/penn-station-1935/lighting/phase14-floor/raw/lighting-platform-continuity-floor-sky.hdr.gz', { manifest: continuityManifest }],
+  ['authoring/penn-station-1935/lighting/phase14-floor/denoised/lighting-platform-continuity-floor-sky-denoised-linear.hdr.gz', { manifest: continuityManifest }],
+  ['authoring/penn-station-1935/lighting/phase14-continuity/reflections/reflection-platform-enclosure-linear.exr.gz', { manifest: continuityManifest }],
   ['authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-sky.hdr.gz', { manifest: arrivalsManifest }],
   ['authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz', { manifest: arrivalsManifest }],
   [allowedPath, { manifest: manifestPath, single: true }],

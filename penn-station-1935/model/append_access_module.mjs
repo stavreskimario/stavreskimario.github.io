@@ -12,7 +12,7 @@ const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const validIndex=(value,list,label)=>{assert(Number.isInteger(value)&&value>=0&&value<list.length,`Invalid ${label} index`);return value;};
 
 export async function appendAccessModule(inputPath,modulePath,outputPath,reportPath,{allowedNewMaterials=[],lightingArtifact='concourse-access'}={}) {
-  assert(['concourse-access','concourse-circulation','concourse-arrivals','concourse-exits','concourse-gallery-finish','concourse-exit-soffit','platform-surfaces','platform-bridge','platform-enclosure','platform-enclosure-floor','arcade-enclosure'].includes(lightingArtifact),'Unreviewed access lighting artifact');
+  assert(['concourse-access','concourse-circulation','concourse-arrivals','concourse-exits','concourse-gallery-finish','concourse-exit-soffit','platform-surfaces','platform-bridge','platform-enclosure','platform-enclosure-floor','platform-continuity','platform-continuity-floor','arcade-enclosure'].includes(lightingArtifact),'Unreviewed access lighting artifact');
   assert.notEqual(path.resolve(inputPath),path.resolve(outputPath),'Preserve the station input');
   assert.notEqual(path.resolve(modulePath),path.resolve(outputPath),'Preserve the Blender module');
   const input=await readFile(inputPath),incoming=await readFile(modulePath);

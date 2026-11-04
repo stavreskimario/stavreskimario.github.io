@@ -32,7 +32,7 @@ const assets = new URL('../assets/', import.meta.url);
 // The bundled entry lives in dist/. Keep assets relative to the app on project Pages too.
 const assetURL = name => {
   const url = new URL(name, assets);
-  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '13-enclosure-soffit-1');
+  if (name === 'sky.hdr' || /^(model-|lighting-|reflection-|scene-manifest)/.test(name)) url.searchParams.set('revision', '14-platform-continuity-1');
   return url.href;
 };
 const $ = selector => document.querySelector(selector);
@@ -48,7 +48,7 @@ const framing = {
   farley: { eye: [-130, 8, 71], target: [-169, 18, -12], title: 'Across Eighth Avenue', caption: 'The General Post Office · twenty Corinthian columns and the monumental stair' },
   platform: { eye: [-14, PLATFORM_FLOOR + 2.2, 15.7], target: [-38, -10.2, TRAIN_POSITION[2]], walk: [-14, PLATFORM_FLOOR + 1.68, 13.327870361], look: [-65, PLATFORM_FLOOR + 1.68, 13.327870361], title: 'Track 10 · Platform 5', caption: 'Twenty-one tracks and eleven platforms · opening-era plan with interpreted GG1 and P70 stock' },
   arrivals: { eye: [-70, EXIT_FLOOR + 1.8, 28], target: [-70, EXIT_FLOOR + 1.75, -20], walk: [-70, EXIT_FLOOR + 1.68, 28], look: [-70, EXIT_FLOOR + 1.68, -20], title: 'The arrivals gallery', caption: 'Independent platform arrivals · the lower exit gallery' },
-  bridge: { eye: [-104, -8.8, 44], target: [-137, -8.5, 20], walk: [-116, PLATFORM_FLOOR + 1.68, 11.3], look: [-145, -8.5, 11.3], title: 'The Eighth Avenue bridge', caption: 'The road bridge above the western tracks · four reconstructed structural bays' },
+  bridge: { eye: [-104, -8.8, 52], target: [-138, -8.5, 24], walk: [-124.92, PLATFORM_FLOOR + 1.68, 39], look: [-147, PLATFORM_FLOOR + 1.68, 39], title: 'The Eighth Avenue bridge', caption: 'The road bridge above the western tracks · five reconstructed structural bays · Platform 3' },
 };
 let state = { view: 'exterior', framing: '', mode: 'walk', light: 'afternoon', quality: matchMedia('(max-width: 700px)').matches ? 'low' : 'balanced', fov: 50, shadows: true, annotations: false, entered: false, tour: false, sound: false, loading: true, error: '', progress: 0, renderer: '', revision: 0, pose: 0, instant: false };
 const listeners = new Set();

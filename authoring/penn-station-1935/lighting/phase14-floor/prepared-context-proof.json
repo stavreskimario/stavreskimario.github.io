@@ -1,0 +1,136 @@
+{
+  "status": "PASS reusablephysicallycomplete currentcontext with exact56receiverreplacement; noGIbaked",
+  "inputScene": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/gallery-prebake-scene.blend",
+    "sha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3"
+  },
+  "sourceEditable": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/soffit-finish.blend",
+    "sha256": "6cc50f8c952fba24f4f98c7f7f88a567610b5ece3e44c361fbd917fdef3a65b4"
+  },
+  "outputScene": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/current-context-v1/current-station-prebake-scene.blend",
+    "sha256": "ec9d3e04ab38e2fffa97874d47bdfdbe4d10a432a1384240c8becab090c0b1ee",
+    "bytes": 207053488
+  },
+  "membership": {
+    "status": "PASS exact56cachedtrianglefaces removed; allunowned geometryUVnormals andotherobjectpointers/transforms/visibility unchanged",
+    "changedOwners": [
+      {
+        "owner": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+        "removedTrianglePolygons": [
+          1342,
+          1343,
+          1390,
+          1391,
+          1438,
+          1439,
+          1486,
+          1487,
+          1534,
+          1535,
+          1582,
+          1583,
+          1630,
+          1631,
+          1678,
+          1679,
+          1726,
+          1727,
+          1774,
+          1775,
+          1822,
+          1823,
+          1870,
+          1871,
+          1918,
+          1919,
+          1966,
+          1967,
+          2014,
+          2015,
+          2062,
+          2063,
+          2110,
+          2111,
+          2158,
+          2159,
+          2206,
+          2207,
+          2254,
+          2255,
+          2326,
+          2327,
+          2710,
+          2711,
+          3246,
+          3247,
+          3254,
+          3255,
+          4014,
+          4015,
+          4022,
+          4023
+        ],
+        "removedCount": 52,
+        "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+        "maximumRetainedNormalComponentDrift": 0.0,
+        "originalPolygons": 5540,
+        "retainedPolygons": 5488
+      },
+      {
+        "owner": "Lower33rd north ceiling",
+        "removedTrianglePolygons": [
+          0,
+          1
+        ],
+        "removedCount": 2,
+        "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+        "maximumRetainedNormalComponentDrift": 0.0,
+        "originalPolygons": 12,
+        "retainedPolygons": 10
+      },
+      {
+        "owner": "Lower33rd east ceiling west of ascent",
+        "removedTrianglePolygons": [
+          0,
+          1
+        ],
+        "removedCount": 2,
+        "allRetainedVertexPositionsUVsNormalsMaterialIndicesExact": true,
+        "maximumRetainedNormalComponentDrift": 0.0,
+        "originalPolygons": 12,
+        "retainedPolygons": 10
+      }
+    ],
+    "removedTotal": 56,
+    "allOtherObjectsUnchanged": 90604,
+    "auditPath": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/cache-soffit-owner-audit.json",
+    "auditSha256": "2cf6121cd2333f22a21fd776b658a1baef20ab2f78f19f69502ceeff9dc02152"
+  },
+  "primary": "Exact56existinglower33rdsoffitfinishreceiver",
+  "primaryTriangles": 56,
+  "primaryMaterial": "Lower33rdPaleMineralSoffit",
+  "sourceUV0": "UVMap",
+  "lightUV": "BakedLightingUV",
+  "lightUvIndex": 1,
+  "resolution": 4096,
+  "lightingProjectionPixelsPerMetre": 60.13264562615617,
+  "sourceLamps": [
+    "Exit pendant 1",
+    "Exit pendant 2",
+    "Exit pendant 3",
+    "Exit pendant 4",
+    "Exit pendant 5",
+    "Exit pendant 6",
+    "Exit pendant 7",
+    "Exit pendant 8",
+    "Exit pendant 9",
+    "Exit pendant 10"
+  ],
+  "physicalContext": "Accepted original neighbor station context with original uncut platform floors, ten Exit lamps, normal-correct gallery and current56-face pale soffit; no old bridge/fresh floor primary is present. Next exact receiver membership cuts this original source once before the new combined primary is imported. NoGPU/noexposuregain; originalsource scene unchanged.",
+  "contextMembershipHelper": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/soffit_context_membership.py",
+    "sha256": "2b19c5d9c2ed8f4b05dafaa0a0026163401641a8703e52aefaae89a16ac30e79"
+  }
+}

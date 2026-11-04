@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "zone": "platform-continuity",
+  "source": "lighting-platform-continuity-sky.hdr",
+  "sourceSha256": "740560f2fa5bc37b41ba113aa8aa9d1c07305c4d32fdacff2ea27ae260fb0a67",
+  "inputTransfer": "linear",
+  "inputScale": 1.0,
+  "radianceScale": 2.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.0062070875428617,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "originalLinear": {
+    "mean": 0.0062070875428617,
+    "minimum": 0.0,
+    "maximum": 0.7578125
+  },
+  "denoisedLinear": {
+    "mean": 0.00628674728795886,
+    "minimum": 0.0,
+    "maximum": 1.7159292697906494
+  },
+  "relativeMeanChange": 0.012833675141052492,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-continuity-sky-denoised-linear.hdr",
+    "sha256": "580fe531b4c89e3c3f6f88ac1a72ff062f6d9dce72c2d7af5a20d1bed3a15334",
+    "decodedLinear": {
+      "mean": 0.006268478464335203,
+      "minimum": 0.0,
+      "maximum": 1.7109375
+    },
+    "meanQuantizationError": 1.827037522161845e-05,
+    "archiveFile": "lighting-platform-continuity-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-platform-continuity-sky.png",
+    "webp": "lighting-platform-continuity-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-platform-continuity-sky-low.png",
+    "webp": "lighting-platform-continuity-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 9.957546916994033,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase14-continuity/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase14-continuity/raw",
+  "sourceArchiveFile": "lighting-platform-continuity-sky.hdr.gz",
+  "bakeReportSha256": "7521c5256fe16234f46daf727be9b8e280f3c1be08eed671ba00ee08452fc295"
+}

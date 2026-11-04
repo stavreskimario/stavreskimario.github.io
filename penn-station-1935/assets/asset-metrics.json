@@ -977,11 +977,11 @@
     },
     {
       "file": "model-platform.glb",
-      "bytes": 2594540,
+      "bytes": 2911068,
       "transportFile": "model-platform.glb.gz",
-      "transportBytes": 648051,
-      "sha256": "29d31a6d7510899cc7ed766ab28f345039fcefacde332bc4e223c6a1cdcd9a19",
-      "transportSha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
+      "transportBytes": 776983,
+      "sha256": "9ab0c78ac7d7be5cfd7d15f238447c611f75ae0d44df569357bafbc6f0adfde7",
+      "transportSha256": "85f85da7dfb413773660d70404d65d988ec45690ac5b4ba237476a7b4d34d906",
       "externalTextures": [
         {
           "uri": "textures/1171d79307cd9bf10880.ktx2",
@@ -1004,12 +1004,12 @@
           "bytes": 2819507
         },
         {
-          "uri": "textures/b36275b6ad999917caa6.ktx2",
-          "bytes": 1154327
+          "uri": "textures/f42ea3be9f272fcd7cc1.ktx2",
+          "bytes": 1069440
         },
         {
-          "uri": "textures/9098074176165a0d927e.ktx2",
-          "bytes": 3422850
+          "uri": "textures/a6dc55f5985edd6a3b79.ktx2",
+          "bytes": 3308984
         },
         {
           "uri": "textures/fe20445f817ad8b117d3.ktx2",
@@ -1038,11 +1038,11 @@
     },
     {
       "file": "model-platform-low.glb",
-      "bytes": 2407448,
+      "bytes": 2723980,
       "transportFile": "model-platform-low.glb.gz",
-      "transportBytes": 673454,
-      "sha256": "84ba5aa44e948aafb09c8387f20c87b299ac791d99da103e3983a875960961a2",
-      "transportSha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e",
+      "transportBytes": 802608,
+      "sha256": "47c7a3c7133c432621416b4e995dcea3eba84c33a0b8a97abf7176d268355ad7",
+      "transportSha256": "4431f8e1b774f0fa1c3468d1a7ec56f8468e4f995d8068222f0e954c78c273dd",
       "externalTextures": [
         {
           "uri": "textures/6507df0100f8376d9e57.ktx2",
@@ -1065,12 +1065,12 @@
           "bytes": 2819507
         },
         {
-          "uri": "textures/705422670a75ef77e1cb.ktx2",
-          "bytes": 119991
+          "uri": "textures/4d0d62d6b229a3ad263c.ktx2",
+          "bytes": 106943
         },
         {
-          "uri": "textures/d58a7f8dbadfacf9b284.ktx2",
-          "bytes": 129718
+          "uri": "textures/2263ac03e5698052392a.ktx2",
+          "bytes": 127980
         },
         {
           "uri": "textures/31c2a3a3ede72fecb9fa.ktx2",
@@ -1171,7 +1171,7 @@
     }
   ],
   "sharedTextureFiles": 117,
-  "modelTextureAndLightingBytes": 259630135,
+  "modelTextureAndLightingBytes": 259506119,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1637,73 +1637,6 @@
     "newSourceSha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
     "runtimeNavigationUnchanged": true
   },
-  "fourBayEnclosure": {
-    "status": "Phase13 four-bay enclosure with actual floor GI candidate; static browser acceptance separate",
-    "lightingRevision": 13,
-    "previousMetricsSha256": "03ff9ab8397ed4954fd4501dabb99a8a80736f3205d63b4c0fac5c9283752a7e",
-    "newMaterialNames": [
-      "GraniteCapstoneEighthAvenueBridgePhase13Enclosure",
-      "StructuralConcreteEighthAvenueBridgePhase13Enclosure",
-      "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
-      "BuriedWaterproofingEighthAvenueBridgePhase13Enclosure",
-      "RailwayTrackBaseConcreteEnclosure13Phase13Floor",
-      "RailwayPlatformRubbedConcreteEnclosure13Phase13Floor",
-      "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor"
-    ],
-    "existingBaseBinaryPrefixesExact": true,
-    "unchangedOtherModels": [
-      {
-        "file": "model-exterior.glb.gz",
-        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
-      },
-      {
-        "file": "model-exterior-low.glb.gz",
-        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
-      },
-      {
-        "file": "model-waiting-room.glb.gz",
-        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
-      },
-      {
-        "file": "model-waiting-room-low.glb.gz",
-        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
-      },
-      {
-        "file": "model-concourse.glb.gz",
-        "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c"
-      },
-      {
-        "file": "model-concourse-low.glb.gz",
-        "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b"
-      },
-      {
-        "file": "model-context.glb.gz",
-        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
-      },
-      {
-        "file": "model-context-low.glb.gz",
-        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
-      },
-      {
-        "file": "model-trains.glb.gz",
-        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
-      },
-      {
-        "file": "model-trains-low.glb.gz",
-        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
-      }
-    ],
-    "sharedReferencedKtx": 115,
-    "aggregateBytes": 257452611,
-    "newBakeReportSha256": "08cdde283a6f06008a48679c95683072654c83483cea613b0769bc35c7e39288",
-    "newDenoiseReportSha256": "062bf125d246f5c9cff495ca4b5533ac14d775c796108d4bc57df2b197faf281",
-    "newSourceSha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
-    "runtimeNavigationUnchanged": true,
-    "independentFloorAtlas": "platform-enclosure-floor",
-    "minimumVisibleFloorPixelsPerMetre": 76.92764506513112,
-    "structureLightUvAndGiUnchanged": true,
-    "floorDeliveryTransform": "bounded-linear-radiance-stitch"
-  },
   "exitSoffit": {
     "sourceSha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
     "triangles": 56,
@@ -1743,6 +1676,60 @@
       {
         "file": "model-platform-low.glb.gz",
         "sha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+      },
+      {
+        "file": "model-trains-low.glb.gz",
+        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+      }
+    ]
+  },
+  "platformContinuity": {
+    "status": "Finite five-bay connected section; wider railway enclosure remains unfinished",
+    "sourceSha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+    "sourceOwners": 33,
+    "structureOwners": 30,
+    "floorOwners": 3,
+    "sourceTriangles": 31188,
+    "newP3ColumnRowFitM": -0.75,
+    "minimumVisibleFloorPixelsPerMetre": 63.96000922,
+    "minimumStructurePixelsPerMetre": 12.76443643,
+    "floorDeliveryTransform": "bounded-linear-radiance-stitch",
+    "unchangedOtherModels": [
+      {
+        "file": "model-exterior.glb.gz",
+        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+      },
+      {
+        "file": "model-exterior-low.glb.gz",
+        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+      },
+      {
+        "file": "model-concourse.glb.gz",
+        "sha256": "310af31e80aa96bb9254533cdc1a48dad5fcc78e17e499dd5242c91b1e09f759"
+      },
+      {
+        "file": "model-concourse-low.glb.gz",
+        "sha256": "7b56c52dd817893567db46deeae5d5a95987ac35bc06cbef045f9469f2c36ebf"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
       },
       {
         "file": "model-trains.glb.gz",
