@@ -1,0 +1,1408 @@
+{
+  "scope": "Two static native four-bay enclosure focus views only; no WASD or route walkthrough; root UI camera and actual frozen candidate geometry/materials; candidate asset directory overlay only, no served content derivatives.",
+  "started": "2026-11-04T02:51:46.109Z",
+  "pageErrors": [],
+  "console": [
+    {
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "type": "warning",
+      "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+    },
+    {
+      "type": "warning",
+      "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+    }
+  ],
+  "httpErrors": [],
+  "requestFailures": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/model-context.glb.gz?revision=13-enclosure-floor-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/model-concourse.glb.gz?revision=13-enclosure-floor-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz?revision=13-enclosure-floor-1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/22ec9e77de77cf98bd6a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/53ec32af1b61447bac9c.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/9098074176165a0d927e.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/6973003abb78858f457c.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/63eed54d00a46de365de.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/eb9e3d30e65af46f13f5.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:55929/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "blockedExternal": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "servedFiles": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/index.html",
+      "bytes": 19281,
+      "sha256": "f469ad30188f39837c5f277522f8a7858a426657842e2be659c77d592b703cc8"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/shared/theme.css",
+      "bytes": 5390,
+      "sha256": "d83f0e1d47673cf497c6c55dd11790a3c2d7974fadddbfd519b5450036016fe8"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/app.js",
+      "bytes": 1050713,
+      "sha256": "ae5fd32bdb6959d33c0760280506003e8152c08b92083b1a2ba0af5fa5e10a89"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/shared/ui.js",
+      "bytes": 13714,
+      "sha256": "5c6287b11e79f60bf76b3b6fd54bcf47996684e11c7eefeec797c70555f97013"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/dist/chunks/chunk-O3MLNBEO.js",
+      "bytes": 373510,
+      "sha256": "826be87cf942075e843c9e2638fbf54f39fd05588e60148299f35fa1fbea7393"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/sky.hdr",
+      "bytes": 2513408,
+      "sha256": "1cc4791465b91ae199da429934d244272672a7865c63ca3922f39de24e4a3ed1"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/scene-manifest.json",
+      "bytes": 711148,
+      "sha256": "9998fe419c82eae7ed9a218870a01a4c9ec607a81af7412e6345f66c4f666c8d"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-exterior.glb.gz",
+      "bytes": 4297530,
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-context.glb.gz",
+      "bytes": 506131,
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-platform.glb.gz",
+      "bytes": 648051,
+      "sha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-concourse.glb.gz",
+      "bytes": 6959153,
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-waiting-room.glb.gz",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/96c2452f554cdcc0f0cc.ktx2",
+      "bytes": 1755,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/7004a2a65ab65ac2eede.ktx2",
+      "bytes": 1555732,
+      "sha256": "7004a2a65ab65ac2eede66f864a47166c1ac11041de8bbd56fc0da1cd603bf62"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/c7f8f448d11f12484907.ktx2",
+      "bytes": 3716906,
+      "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/f20239dbf2c1e548d747.ktx2",
+      "bytes": 5419396,
+      "sha256": "f20239dbf2c1e548d7472828eea5e9346877fc14a00b5712e69d1e6e906a2c88"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/abfa7b3cab7953a6a5ae.ktx2",
+      "bytes": 3849773,
+      "sha256": "abfa7b3cab7953a6a5ae08e1f353db5c553fcbfa0849efa9d47325a9d65a375b"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/4ad8c3e9c3cab52c1b64.ktx2",
+      "bytes": 3746211,
+      "sha256": "4ad8c3e9c3cab52c1b644dbebc9fb93c80c94ac062254294bb0fd4643599f2db"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/a2ee0eb44659d956bcb7.ktx2",
+      "bytes": 11104,
+      "sha256": "a2ee0eb44659d956bcb72d9c863309e9957de1ef03063d7df2f64d1504ce498e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/4f684d7c526a22f95162.ktx2",
+      "bytes": 3935940,
+      "sha256": "4f684d7c526a22f951627909d8f54fc20b71a996b50103487f54709c842b456a"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/c7670262d7c33cc39671.ktx2",
+      "bytes": 3106230,
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/3d6f4a3323017ae4bc57.ktx2",
+      "bytes": 4296,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/71508f85f3c325538f05.ktx2",
+      "bytes": 3139363,
+      "sha256": "71508f85f3c325538f05fb8e2c9fd58b135918f4f05979ed529a865a767ab2b4"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/22ec9e77de77cf98bd6a.ktx2",
+      "bytes": 2355148,
+      "sha256": "22ec9e77de77cf98bd6a5c9ef0089ba05c2e054a5c60341e7eb7b3b6e00be570"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/53ec32af1b61447bac9c.ktx2",
+      "bytes": 2701207,
+      "sha256": "53ec32af1b61447bac9ce168b784ce1af125a5f1e30e0d40fb75f0c07d78fb68"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/b4a5b7165636466257b3.ktx2",
+      "bytes": 2348682,
+      "sha256": "b4a5b7165636466257b3b5be471c62f8b017b285012c020f9f0792b79c6f3dbd"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/d027c562b48d63001b53.ktx2",
+      "bytes": 3847041,
+      "sha256": "d027c562b48d63001b53f41b3151cc4b1f9c159b7827baf27b3e325a071ce372"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/3fd19ca7c33c82238530.ktx2",
+      "bytes": 297484,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "bytes": 532453,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/1e3fdca78d540b4c4a2d.ktx2",
+      "bytes": 2893842,
+      "sha256": "1e3fdca78d540b4c4a2d75bcd145bbb37c3b7e1a320b9574ead0b4b08266db10"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/5be97a02f824d013360b.ktx2",
+      "bytes": 429110,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/5c6c2c7409337af4cd71.ktx2",
+      "bytes": 533240,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/f20a20acf02f7ce2462f.ktx2",
+      "bytes": 862627,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/3f048a6c06cf38b8262f.ktx2",
+      "bytes": 794564,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/a39f7640085f37632425.ktx2",
+      "bytes": 842348,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/0fd52d7b147ba7546220.ktx2",
+      "bytes": 541708,
+      "sha256": "0fd52d7b147ba7546220fddf690a386f56656f749bc5c8774f6a09f3a45677bf"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/d2d09e30602bc72361bc.ktx2",
+      "bytes": 541669,
+      "sha256": "d2d09e30602bc72361bc86e6f4cf0e5ac417020c0a8e49a83ef3db4ef6d90c6e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/de511a781294895dfd20.ktx2",
+      "bytes": 863637,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/69568bc9b65cd706ace5.ktx2",
+      "bytes": 839153,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/ebad7b61f035b595fc1f.ktx2",
+      "bytes": 862446,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/6c6853f06bb64da5e12d.ktx2",
+      "bytes": 541497,
+      "sha256": "6c6853f06bb64da5e12db0042d3ef9a2c52fe8878952162f31fccf07567c56fe"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/90e6455c8ad02ae0eefb.ktx2",
+      "bytes": 892516,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/4d7a733aa9e3a117b76b.ktx2",
+      "bytes": 607982,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "bytes": 863104,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/206a10b6a2d3fbbd05a1.ktx2",
+      "bytes": 2317428,
+      "sha256": "206a10b6a2d3fbbd05a14cd2efc6c583322a78f751d7f120da78c61071998e0f"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/1dbb4370dc80ba66e186.ktx2",
+      "bytes": 950518,
+      "sha256": "1dbb4370dc80ba66e186f4a6f15298037bbffe86b45d9e62e41076be4ac5165c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/e31619f2b2a7a5ba20dd.ktx2",
+      "bytes": 2819507,
+      "sha256": "e31619f2b2a7a5ba20dd0bda7a06cd1e2530fef0c20aadd946fae3d80572ae7f"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/1171d79307cd9bf10880.ktx2",
+      "bytes": 1231718,
+      "sha256": "1171d79307cd9bf108809bd0263e568753c8aa099270a2b380b5e4fb62d986a7"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/b36275b6ad999917caa6.ktx2",
+      "bytes": 1154327,
+      "sha256": "b36275b6ad999917caa6f4c26fd82af10a1e9257dc31d047a859bdfa4edfdaa0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/f46d86be9b939ee4beec.ktx2",
+      "bytes": 2553771,
+      "sha256": "f46d86be9b939ee4beec53472e40cd7b115b201aeb0f4a744edf7a290c821f4b"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/fe20445f817ad8b117d3.ktx2",
+      "bytes": 2656504,
+      "sha256": "fe20445f817ad8b117d3bcb1bf336e32ba1ec0847085015d933edc8521036666"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/9098074176165a0d927e.ktx2",
+      "bytes": 3422850,
+      "sha256": "9098074176165a0d927e7fa1f1c4ba903861d6d0096b369371d3485b9a0eedd3"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/9af10c675e67054369ce.ktx2",
+      "bytes": 1499779,
+      "sha256": "9af10c675e67054369cec80e5046f905d7c03dddc28fd54d49c4d0a2b819e7f1"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/1e3025f04821ca80c83a.ktx2",
+      "bytes": 2104923,
+      "sha256": "1e3025f04821ca80c83addcfd0acf1f1a01c76264f08da0995edc89bd9138f94"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/54c4b6193c2de4abdc13.ktx2",
+      "bytes": 2816144,
+      "sha256": "54c4b6193c2de4abdc13391211c34050812afbc2c482e7cfd5303b7d46eac331"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/0f399333f7175f5e5afa.ktx2",
+      "bytes": 3331970,
+      "sha256": "0f399333f7175f5e5afa242c687131ea51951076a896d13ad3e5604f6a58c3d6"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/7be11436c1b7fe0e5ab7.ktx2",
+      "bytes": 3761640,
+      "sha256": "7be11436c1b7fe0e5ab786e16390559b43425abb178c8bc9ac5305ff0f5da37c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/898482cc86badea310d6.ktx2",
+      "bytes": 1724012,
+      "sha256": "898482cc86badea310d6bdfe55e74fb4ef3ce68d2f39988e1661e3d4829d6b7f"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/9dd19af74e513b23a448.ktx2",
+      "bytes": 2757425,
+      "sha256": "9dd19af74e513b23a448e456cbb65f6c62d9585ea5801371dc39d8a9951b51c5"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/6973003abb78858f457c.ktx2",
+      "bytes": 3029067,
+      "sha256": "6973003abb78858f457c9d7a9a359e01504872389473e521b089d685b96271ba"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/be769d91834b6d023ce1.ktx2",
+      "bytes": 1466743,
+      "sha256": "be769d91834b6d023ce1e772ce924075b788df40c3b5b6c1a995c6785d70b9ad"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/8126d17f083801bd41b3.ktx2",
+      "bytes": 1631539,
+      "sha256": "8126d17f083801bd41b3b8283fe82ab4c96f992017dfaaca463a9d5f5449c349"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/0aab5b4fc6e106416188.ktx2",
+      "bytes": 2537314,
+      "sha256": "0aab5b4fc6e106416188220a65e26ff2748d44a499697bc6fe2dc15f31054bf1"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/9a43cb8e4de4127a4ea6.ktx2",
+      "bytes": 147650,
+      "sha256": "9a43cb8e4de4127a4ea618aeb4e0646862dd3f93b751722f5d455b6fc2ad28a5"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/2aa7778a264d10851bba.ktx2",
+      "bytes": 22938,
+      "sha256": "2aa7778a264d10851bba1658103cad8f2defa8a5235f6a58331ed283acc7d4ec"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/00da3728f8d51a3696a3.ktx2",
+      "bytes": 33250,
+      "sha256": "00da3728f8d51a3696a3ce15bccf4e231625848c03bd148a6d2ea59d7da33f34"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/74a8a5e6c4800f175503.ktx2",
+      "bytes": 901739,
+      "sha256": "74a8a5e6c4800f175503074dbc1d0eb715938c8a853a0ea9ae871ba5d25958e3"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/63eed54d00a46de365de.ktx2",
+      "bytes": 2027922,
+      "sha256": "63eed54d00a46de365de7314c1258483464dd6f34a102c6cb47dfab881c4fdc0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/eb9e3d30e65af46f13f5.ktx2",
+      "bytes": 3643443,
+      "sha256": "eb9e3d30e65af46f13f599babb31ec7b5fcf6566b9dc2a6d7bf41d5661e391da"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/8714963ae3c33593ef07.ktx2",
+      "bytes": 159620,
+      "sha256": "8714963ae3c33593ef07adf1f5042fd97ca2d1560a43bde29ed9b6e96fb4e1cd"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/4741dad316808fb38922.ktx2",
+      "bytes": 1793501,
+      "sha256": "4741dad316808fb3892285b89cdd3fc0ef2f07d13875b4b57a06ffe1b09797ba"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/e0cadb7862053a61b888.ktx2",
+      "bytes": 5398821,
+      "sha256": "e0cadb7862053a61b888b3391a00c15374c715527995191699c265be6d066bee"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/02474452a0e7a2da0cfb.ktx2",
+      "bytes": 3734401,
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/textures/08b0fe03227cf7eec1cc.ktx2",
+      "bytes": 10905637,
+      "sha256": "08b0fe03227cf7eec1cc85b80e1fe6779cb7712ac14b751b05e0d35c47090113"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/reflection-platform.hdr.gz",
+      "bytes": 4785576,
+      "sha256": "5a3fc2b3dbe5c7390f2bbbbbf80858b377140d188f3c9df5f3520d371ffc00e0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp",
+      "bytes": 1542744,
+      "sha256": "8650bff98d9599492d4596d20e94a9f9ed5d17fb73cb2bede28f4a0484a462c8"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp",
+      "bytes": 1751308,
+      "sha256": "33f401c5fdeb8ba12a1f092ba303662f0d0c805a46453c87542bd2696b02699e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-sky.webp",
+      "bytes": 783758,
+      "sha256": "98ba14e32f3bd6c3bcae69fa3941bc977bf66eb986c38a3daba725ef36c6a113"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-surfaces-sky.webp",
+      "bytes": 1097856,
+      "sha256": "f00734514791ef9b8a922d8ad1974416667ac12e72c5052c1b0fe63033d9a9a3"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/reflection-platform-enclosure.hdr.gz",
+      "bytes": 4493198,
+      "sha256": "189250382019f883729af97368884b5fa0f73fca3e79ec23e9d5b7d5bd55922e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/reflection-waiting-room.hdr.gz",
+      "bytes": 4936342,
+      "sha256": "2852344887b0f51174341b452c1fb2122787fd3924db60b910f71fbc527a4844"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-exterior-sky.webp",
+      "bytes": 1276008,
+      "sha256": "9fced6e69fc9d34c9e01ba0b6d5f48abe451aad85852fdb4836795550f64f6f3"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-arcade-enclosure-sky.webp",
+      "bytes": 2969348,
+      "sha256": "4a4f7d78eef898515307b910350cb2eba750c39cd377ec59c51b459085c42b8e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/reflection-arcade.hdr.gz",
+      "bytes": 4292934,
+      "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/reflection-concourse.hdr.gz",
+      "bytes": 5537345,
+      "sha256": "7d5dc64a611998c7d39b2b1d67deecf9f1e73dc183c4785fdcd55155c86f429d"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-waiting-room-masonry-sky.webp",
+      "bytes": 3033948,
+      "sha256": "9db43579186eaedb86be3c1ea4c313c920cc5fe8f765c73fbcfa9f5396baefa0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-waiting-room-order-sky.webp",
+      "bytes": 5611270,
+      "sha256": "100bd6a739b62feaf40ff3f03dd2d2375cca60d345f1d3d4097c978868249df0"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-waiting-room-vault-sky.webp",
+      "bytes": 14189900,
+      "sha256": "0f8063785603d0b5c7f08f537dbd6e7dabeb0d4eec835b75d979172b1176e86c"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-circulation-sky.webp",
+      "bytes": 707476,
+      "sha256": "62927652ca53e9a0cf4325896559dbddf5063ccb55db4ec3732adecdc146f5bb"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-sky.webp",
+      "bytes": 1170636,
+      "sha256": "b8c23d8c48c2d627e76384d1bdd8e67ce2165fb673028b88c96a6b26a487861e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-access-sky.webp",
+      "bytes": 2616680,
+      "sha256": "c1225d6f547d96297bcd8fa3faa781e0fbab554c340a85f76f591c65b05e7712"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-arrivals-sky.webp",
+      "bytes": 4848142,
+      "sha256": "d830fb8445135b9cd0c5c09bfba77d52d789ba878c874d40493f03a4d82e2373"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-gallery-finish-sky.webp",
+      "bytes": 1492568,
+      "sha256": "b5fc991bf757ee15349f86803728a5c11797b025aab7cd5836c3c16e7c4a7101"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-concourse-exits-sky.webp",
+      "bytes": 3122208,
+      "sha256": "42356ce11e10b31d48e53192f58a0fef59bfe80f7e4737e58d376f63ba15bdc8"
+    }
+  ],
+  "views": [
+    {
+      "state": {
+        "view": "concourse",
+        "framing": "bridge",
+        "mode": "walk",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          -116,
+          -10.305625000000001,
+          11.3
+        ],
+        "quaternion": [
+          0.021981348423919637,
+          0.7067650389779239,
+          -0.021981348423919637,
+          0.7067650389779239
+        ],
+        "fov": 50
+      },
+      "scene": {
+        "id": "e189bd8c-02af-4f6a-9688-12cb775963dc",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "d2a8ecda-c031-45a9-a521-a6365b0a09ae",
+            "visible": true,
+            "meshes": 24
+          },
+          {
+            "name": "waiting",
+            "id": "7d7a2c0b-033a-467b-bd5c-d13640cd7cbd",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "daba93a8-6c5b-4e73-adb4-c25d56b3576f",
+            "visible": true,
+            "meshes": 46
+          },
+          {
+            "name": "context",
+            "id": "47401967-a68e-4104-b156-0b8a8ca0db35",
+            "visible": true,
+            "meshes": 38
+          },
+          {
+            "name": "platform",
+            "id": "b537d690-a368-4a9e-b5a7-3b39cc1d5ec8",
+            "visible": true,
+            "meshes": 29
+          },
+          {
+            "name": "trains",
+            "id": "d0e2f716-8e7a-4ce6-b836-7e37a794f7f9",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "metrics": {
+        "calls": 148,
+        "triangles": 6648104,
+        "geometries": 179,
+        "textures": 98,
+        "exposure": 4.051239509816315,
+        "renderFrame": 228,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1600,
+          916
+        ],
+        "reversedDepth": true
+      },
+      "viewMatrix": [
+        1.1080772758086002e-16,
+        0.062142594302475554,
+        0.9980672812858651,
+        0,
+        -6.899213900454844e-18,
+        0.9980672812858651,
+        -0.062142594302475554,
+        0,
+        -1.0000000000000002,
+        6.899213900454844e-18,
+        1.1080772758086002e-16,
+        0,
+        11.300000000000015,
+        17.49424806478881,
+        115.1353863557519,
+        1
+      ],
+      "focus": "bridge",
+      "mode": "walk",
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/static-final-v1/four-bay-walk.png"
+    },
+    {
+      "state": {
+        "view": "concourse",
+        "framing": "bridge",
+        "mode": "orbit",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 2,
+        "instant": true
+      },
+      "camera": {
+        "position": [
+          -104,
+          -8.799999999999997,
+          44
+        ],
+        "quaternion": [
+          0.0032757372960412813,
+          0.4537745791156845,
+          -0.0016680859871036383,
+          0.8911089262164813
+        ],
+        "fov": 50
+      },
+      "scene": {
+        "id": "e189bd8c-02af-4f6a-9688-12cb775963dc",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "d2a8ecda-c031-45a9-a521-a6365b0a09ae",
+            "visible": true,
+            "meshes": 24
+          },
+          {
+            "name": "waiting",
+            "id": "7d7a2c0b-033a-467b-bd5c-d13640cd7cbd",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "daba93a8-6c5b-4e73-adb4-c25d56b3576f",
+            "visible": true,
+            "meshes": 46
+          },
+          {
+            "name": "context",
+            "id": "47401967-a68e-4104-b156-0b8a8ca0db35",
+            "visible": true,
+            "meshes": 38
+          },
+          {
+            "name": "platform",
+            "id": "b537d690-a368-4a9e-b5a7-3b39cc1d5ec8",
+            "visible": true,
+            "meshes": 29
+          },
+          {
+            "name": "trains",
+            "id": "d0e2f716-8e7a-4ce6-b836-7e37a794f7f9",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "metrics": {
+        "calls": 148,
+        "triangles": 6648104,
+        "geometries": 179,
+        "textures": 98,
+        "exposure": 3.8883613219760886,
+        "renderFrame": 306,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1600,
+          916
+        ],
+        "reversedDepth": true
+      },
+      "viewMatrix": [
+        0.5881716976750461,
+        0.00594578525121873,
+        0.8087142274572646,
+        0,
+        8.673617379884035e-19,
+        0.9999729740686139,
+        -0.007351947522338701,
+        0,
+        -0.8087360843031886,
+        0.004324207455431803,
+        0.5881558017871016,
+        0,
+        96.75424426754508,
+        9.227858709891548,
+        58.162727238726475,
+        1
+      ],
+      "focus": "bridge",
+      "mode": "orbit",
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/static-final-v1/four-bay-orbit-wide.png"
+    }
+  ],
+  "bundleSha256": "ae5fd32bdb6959d33c0760280506003e8152c08b92083b1a2ba0af5fa5e10a89",
+  "actualNormalIntegrity": {
+    "schema": 1,
+    "scope": "arcade-enclosure authored corner normals",
+    "temporaryAttribute": "_PennArcadeWorldCornerNormal",
+    "sourceObjects": 27,
+    "sourceCorners": 76194,
+    "sourceNegativeHemisphereCorners": 0,
+    "sourceMinimumFaceAlignment": 0.5944152727193834,
+    "restoredCorners": 76194,
+    "minimumRestoredSourceNormalDot": 0.9999999955792012,
+    "maxEncodingAngleDegrees": 0.005387508980701692,
+    "maxAllowedEncodingAngleDegrees": 0.5,
+    "restoredNegativeHemisphereCorners": 0,
+    "restoredMinimumFaceAlignment": 0.5944059909112784,
+    "finiteUnitNormals": true,
+    "temporaryAttributeRemoved": true,
+    "status": "PASS"
+  },
+  "bridgeMaterials": [
+    {
+      "id": "c4c6638d-98d6-40b4-9482-2e8c0149ceaa",
+      "name": "GraniteCapstoneEighthAvenueBridgePhase13Enclosure",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.8600000143051147,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "1fa04de8-fd24-4d7a-9414-c082342eaf87",
+      "name": "StructuralConcreteEighthAvenueBridgePhase13Enclosure",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.8799999952316284,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "c2c43948-9006-4985-a38c-c0de02a682d1",
+      "name": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.6399999856948853,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "ea6f0123-eff4-4758-ae1d-e70ad02ce999",
+      "name": "BuriedWaterproofingEighthAvenueBridgePhase13Enclosure",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.9800000190734863,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "ca8a1c41-51ac-4c01-a8f6-6b5c124e2f74",
+      "name": "RailwayTrackBaseConcreteEnclosure13Phase13Floor",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.9300000071525574,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-floor-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "fb6a2931-abbf-46a4-91fb-92f11d27895a",
+      "name": "RailwayPlatformRubbedConcreteEnclosure13Phase13Floor",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 0.8500000238418579,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-floor-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": null,
+      "normalMap": null,
+      "roughnessMap": null,
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    },
+    {
+      "id": "e9b8bdd5-39a9-4e40-8c37-33f851f5065c",
+      "name": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "type": "MeshStandardMaterial",
+      "side": 2,
+      "transmission": 0,
+      "transparent": false,
+      "opacity": 1,
+      "roughness": 1,
+      "metalness": 0,
+      "aoIntensity": 0.25,
+      "lightIntensity": 6.283185307179586,
+      "skyFile": "lighting-platform-enclosure-floor-sky.webp",
+      "skyScale": 2,
+      "reflectionFile": "reflection-platform-enclosure.hdr.gz",
+      "walkingCollision": null,
+      "ao": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "lightmap": {
+        "channel": 1,
+        "width": 4096,
+        "height": 4096,
+        "flipY": false,
+        "wrapS": 1001,
+        "wrapT": 1001,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 1
+      },
+      "baseColorMap": {
+        "channel": 0,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "srgb",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 8
+      },
+      "normalMap": {
+        "channel": 0,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 8
+      },
+      "roughnessMap": {
+        "channel": 0,
+        "width": 2048,
+        "height": 2048,
+        "flipY": false,
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "colorSpace": "",
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "anisotropy": 8
+      },
+      "normalScale": [
+        1,
+        -1
+      ],
+      "zones": [
+        "platform"
+      ],
+      "meshes": 1
+    }
+  ],
+  "unexpectedConsoleErrors": [],
+  "status": "PASS_TWO_STATIC_BRIDGE_VIEWS_SEVEN_GI_AND_LOCAL_REFLECTION_BINDINGS_AND_CONSOLE",
+  "browserClosed": true,
+  "closed": "2026-11-04T02:51:56.643Z",
+  "transportQualification": "Served body hashes and raw cancellations are recorded. This local static check is not a public delivery certificate."
+}

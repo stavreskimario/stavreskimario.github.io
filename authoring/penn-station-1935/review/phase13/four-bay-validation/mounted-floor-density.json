@@ -1,0 +1,754 @@
+{
+  "status": "PASS visible floor minimum-direction lighting density",
+  "input": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-platform.glb.gz",
+    "sha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
+    "bytes": 648051
+  },
+  "targetVisibleFloorMinDirectionalPixelsPerMetre": 60,
+  "selector": "RailwayPlatformStippledGranolithicEnclosure13 family, actual oriented geometric world normalY>.95; excludes underside/coves/rubbed underdeck",
+  "method": "Per-triangle pixel-space UV Jacobian from an orthonormal physical tangent basis. Singular minimum reports weakest resolved direction, sqrt(abs(detJ)) reports equivalent area density. Authoritative runtime AO texCoord/texture transform; actual sky_illumination image dimensions independently read from file header. No sourceUV0/material tiling used.",
+  "bindings": [
+    {
+      "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+      "aoTexCoord": 1,
+      "attribute": "TEXCOORD_1",
+      "transform": {},
+      "image": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp",
+        "sha256": "33f401c5fdeb8ba12a1f092ba303662f0d0c805a46453c87542bd2696b02699e",
+        "bytes": 1751308,
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "aoTexCoord": 1,
+      "attribute": "TEXCOORD_1",
+      "transform": {},
+      "image": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp",
+        "sha256": "8650bff98d9599492d4596d20e94a9f9ed5d17fb73cb2bede28f4a0484a462c8",
+        "bytes": 1542744,
+        "width": 4096,
+        "height": 4096
+      }
+    }
+  ],
+  "summary": {
+    "visibleStippledFloorTop": {
+      "triangles": 16,
+      "physicalAreaM2": 536.4153657125225,
+      "actualLightingPixelArea": 3178590.8002192634,
+      "equivalentAreaPixelsPerMetre": 76.97801468248394,
+      "minimumDirectionalPixelsPerMetre": 76.92765371586495,
+      "areaWeightedMinimumDirectionPercentiles": {
+        "0": 76.92765371586495,
+        "1": 76.92769025127905,
+        "0.05": 76.92765740387675,
+        "0.5": 76.92766638222666,
+        "0.95": 76.92769025127905
+      },
+      "maximumAnisotropy": 1.0013224973959227,
+      "worst5": [
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+          "owner": "Exact three floor receivers for independent contact GI",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 34,
+          "centerWorld": [
+            -145.33203252156574,
+            -11.985624797058104,
+            13.13131586710612
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 7.73913985067702,
+          "lightingPixelArea": 45859.74567908049,
+          "minimumDirectionalPixelsPerMetre": 76.92765371586495,
+          "maximumDirectionalPixelsPerMetre": 77.02939033757863,
+          "areaEquivalentPixelsPerMetre": 76.97850521953153,
+          "anisotropy": 1.0013224973959227,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+          "owner": "Exact three floor receivers for independent contact GI",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 12,
+          "centerWorld": [
+            -145.33203252156574,
+            -11.985624797058104,
+            25.77427625656128
+          ],
+          "geometricNormalWorld": [
+            0,
+            0.9999999999999999,
+            0
+          ],
+          "worldAreaM2": 15.547083804530303,
+          "lightingPixelArea": 92125.67343749104,
+          "minimumDirectionalPixelsPerMetre": 76.9276540713277,
+          "maximumDirectionalPixelsPerMetre": 77.02811094800437,
+          "areaEquivalentPixelsPerMetre": 76.97786612251556,
+          "anisotropy": 1.0013058616942034,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+          "owner": "Exact three floor receivers for independent contact GI",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 37,
+          "centerWorld": [
+            -145.33203252156574,
+            -11.985624797058104,
+            13.715592384338379
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 22.446993064332673,
+          "lightingPixelArea": 133012.2300403118,
+          "minimumDirectionalPixelsPerMetre": 76.92765740387675,
+          "maximumDirectionalPixelsPerMetre": 77.028403170313,
+          "areaEquivalentPixelsPerMetre": 76.97801380558953,
+          "anisotropy": 1.0013096169808906,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+          "owner": "Exact three floor receivers for independent contact GI",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 33,
+          "centerWorld": [
+            -145.33203252156574,
+            -11.985624797058104,
+            14.809299786885578
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 19.258333960558048,
+          "lightingPixelArea": 114118.78372688591,
+          "minimumDirectionalPixelsPerMetre": 76.92766178758784,
+          "maximumDirectionalPixelsPerMetre": 77.02928886369129,
+          "areaEquivalentPixelsPerMetre": 76.97845855461416,
+          "anisotropy": 1.0013210732491007,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+          "owner": "Exact three floor receivers for independent contact GI",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 8,
+          "centerWorld": [
+            -145.33203252156574,
+            -11.985624797058104,
+            24.73663330078125
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 36.10971267831337,
+          "lightingPixelArea": 213972.5846274495,
+          "minimumDirectionalPixelsPerMetre": 76.9276620036525,
+          "maximumDirectionalPixelsPerMetre": 77.02852227149073,
+          "areaEquivalentPixelsPerMetre": 76.97807561859453,
+          "anisotropy": 1.0013111053320902,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+        }
+      ]
+    },
+    "paintedStructureAllFaces": {
+      "triangles": 23640,
+      "physicalAreaM2": 8312.268581998938,
+      "actualLightingPixelArea": 1246851.2470719444,
+      "equivalentAreaPixelsPerMetre": 12.24750254156052,
+      "minimumDirectionalPixelsPerMetre": 12.204424103737601,
+      "areaWeightedMinimumDirectionPercentiles": {
+        "0": 12.204424103737601,
+        "1": 12.24548203314473,
+        "0.05": 12.239378206404334,
+        "0.5": 12.239497869539795,
+        "0.95": 12.239536067283764
+      },
+      "maximumAnisotropy": 1.0054955875010747,
+      "worst5": [
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+          "owner": "platform-enclosure baked static architecture",
+          "node": 18,
+          "primitive": 2,
+          "triangleOffset": 18323,
+          "centerWorld": [
+            -152.28569984436035,
+            -5.945547587585449,
+            8.437149047851562
+          ],
+          "geometricNormalWorld": [
+            -1,
+            0,
+            0
+          ],
+          "worldAreaM2": 0.0002222988932771841,
+          "lightingPixelArea": 0.03319978713989258,
+          "minimumDirectionalPixelsPerMetre": 12.204424103737601,
+          "maximumDirectionalPixelsPerMetre": 12.237161951962586,
+          "areaEquivalentPixelsPerMetre": 12.220782065312877,
+          "anisotropy": 1.0026824574389346,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+          "owner": "platform-enclosure baked static architecture",
+          "node": 18,
+          "primitive": 2,
+          "triangleOffset": 18715,
+          "centerWorld": [
+            -121.4246997833252,
+            -5.9751811096191405,
+            10.367938995361328
+          ],
+          "geometricNormalWorld": [
+            1,
+            0,
+            0
+          ],
+          "worldAreaM2": 0.0002222988932771841,
+          "lightingPixelArea": 0.03319978713989258,
+          "minimumDirectionalPixelsPerMetre": 12.204424103737601,
+          "maximumDirectionalPixelsPerMetre": 12.237161951962586,
+          "areaEquivalentPixelsPerMetre": 12.220782065312877,
+          "anisotropy": 1.0026824574389346,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+          "owner": "platform-enclosure baked static architecture",
+          "node": 18,
+          "primitive": 2,
+          "triangleOffset": 18751,
+          "centerWorld": [
+            -121.4246997833252,
+            -5.9751811096191405,
+            10.543464660644531
+          ],
+          "geometricNormalWorld": [
+            1,
+            0,
+            0
+          ],
+          "worldAreaM2": 0.0002222988932771841,
+          "lightingPixelArea": 0.03319978713989258,
+          "minimumDirectionalPixelsPerMetre": 12.204424103737601,
+          "maximumDirectionalPixelsPerMetre": 12.237161951962586,
+          "areaEquivalentPixelsPerMetre": 12.220782065312877,
+          "anisotropy": 1.0026824574389346,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+          "owner": "platform-enclosure baked static architecture",
+          "node": 18,
+          "primitive": 2,
+          "triangleOffset": 17886,
+          "centerWorld": [
+            -121.4246997833252,
+            -5.945547587585449,
+            6.329166412353516
+          ],
+          "geometricNormalWorld": [
+            1,
+            0,
+            0
+          ],
+          "worldAreaM2": 0.0002222988932771841,
+          "lightingPixelArea": 0.0332072377204895,
+          "minimumDirectionalPixelsPerMetre": 12.204424103737603,
+          "maximumDirectionalPixelsPerMetre": 12.23990817322649,
+          "areaEquivalentPixelsPerMetre": 12.222153261060846,
+          "anisotropy": 1.0029074759437457,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase13Enclosure",
+          "owner": "platform-enclosure baked static architecture",
+          "node": 18,
+          "primitive": 2,
+          "triangleOffset": 17887,
+          "centerWorld": [
+            -121.4246997833252,
+            -5.9751811096191405,
+            6.330833435058594
+          ],
+          "geometricNormalWorld": [
+            1,
+            0,
+            0
+          ],
+          "worldAreaM2": 0.0002222988932771841,
+          "lightingPixelArea": 0.0332072377204895,
+          "minimumDirectionalPixelsPerMetre": 12.204424103737603,
+          "maximumDirectionalPixelsPerMetre": 12.23990817322649,
+          "areaEquivalentPixelsPerMetre": 12.222153261060846,
+          "anisotropy": 1.0029074759437457,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-sky.webp"
+        }
+      ]
+    }
+  },
+  "allVisibleFloorTriangles": [
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 8,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        24.73663330078125
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 36.10971267831337,
+      "lightingPixelArea": 213972.5846274495,
+      "minimumDirectionalPixelsPerMetre": 76.9276620036525,
+      "maximumDirectionalPixelsPerMetre": 77.02852227149073,
+      "areaEquivalentPixelsPerMetre": 76.97807561859453,
+      "anisotropy": 1.0013111053320902,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 9,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        25.097178618113198
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 27.50654414176779,
+      "lightingPixelArea": 162991.68515573442,
+      "minimumDirectionalPixelsPerMetre": 76.92768342802675,
+      "maximumDirectionalPixelsPerMetre": 77.02767075296646,
+      "areaEquivalentPixelsPerMetre": 76.9776608561372,
+      "anisotropy": 1.0012997573888112,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 10,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        29.012255986531574
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 43.68500320891326,
+      "lightingPixelArea": 258860.4064550995,
+      "minimumDirectionalPixelsPerMetre": 76.92768969949829,
+      "maximumDirectionalPixelsPerMetre": 77.02834501142185,
+      "areaEquivalentPixelsPerMetre": 76.9780009035345,
+      "anisotropy": 1.0013084405929353,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 11,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        28.238444169362385
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 29.53865404840826,
+      "lightingPixelArea": 175033.47656778988,
+      "minimumDirectionalPixelsPerMetre": 76.92766234173503,
+      "maximumDirectionalPixelsPerMetre": 77.02786863743152,
+      "areaEquivalentPixelsPerMetre": 76.97774918405872,
+      "anisotropy": 1.001302604195242,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 12,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        25.77427625656128
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 15.547083804530303,
+      "lightingPixelArea": 92125.67343749104,
+      "minimumDirectionalPixelsPerMetre": 76.9276540713277,
+      "maximumDirectionalPixelsPerMetre": 77.02811094800437,
+      "areaEquivalentPixelsPerMetre": 76.97786612251556,
+      "anisotropy": 1.0013058616942034,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 13,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        25.962889194488525
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 22.99273304731605,
+      "lightingPixelArea": 136245.619684875,
+      "minimumDirectionalPixelsPerMetre": 76.92766784338744,
+      "maximumDirectionalPixelsPerMetre": 77.02813538029363,
+      "areaEquivalentPixelsPerMetre": 76.97788522121603,
+      "anisotropy": 1.0013060000351335,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 14,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        27.384275913238525
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 50.97738931104959,
+      "lightingPixelArea": 302072.32231015334,
+      "minimumDirectionalPixelsPerMetre": 76.92766223471924,
+      "maximumDirectionalPixelsPerMetre": 77.02838799463491,
+      "areaEquivalentPixelsPerMetre": 76.97800863971591,
+      "anisotropy": 1.0013093568293854,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 15,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        26.731256008148193
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 34.469606691901845,
+      "lightingPixelArea": 204253.6473000199,
+      "minimumDirectionalPixelsPerMetre": 76.9276872871693,
+      "maximumDirectionalPixelsPerMetre": 77.02838920177263,
+      "areaEquivalentPixelsPerMetre": 76.97802177731208,
+      "anisotropy": 1.0013090464324945,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 30,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        11.270660400390625
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 74.79736012970534,
+      "lightingPixelArea": 443221.0552106425,
+      "minimumDirectionalPixelsPerMetre": 76.92766638222666,
+      "maximumDirectionalPixelsPerMetre": 77.02852022803734,
+      "areaEquivalentPixelsPerMetre": 76.9780767882587,
+      "anisotropy": 1.0013110217760872,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 31,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        12.049458821614582
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 59.4157020522689,
+      "lightingPixelArea": 352074.55913907284,
+      "minimumDirectionalPixelsPerMetre": 76.92769025127905,
+      "maximumDirectionalPixelsPerMetre": 77.02837181735018,
+      "areaEquivalentPixelsPerMetre": 76.97801457380845,
+      "anisotropy": 1.0013087818670008,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 32,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        15.417012532552082
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 35.806654492451344,
+      "lightingPixelArea": 212175.8449827433,
+      "minimumDirectionalPixelsPerMetre": 76.92766555578532,
+      "maximumDirectionalPixelsPerMetre": 77.02818081691584,
+      "areaEquivalentPixelsPerMetre": 76.97790678015518,
+      "anisotropy": 1.0013066204518792,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 33,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        14.809299786885578
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 19.258333960558048,
+      "lightingPixelArea": 114118.78372688591,
+      "minimumDirectionalPixelsPerMetre": 76.92766178758784,
+      "maximumDirectionalPixelsPerMetre": 77.02928886369129,
+      "areaEquivalentPixelsPerMetre": 76.97845855461416,
+      "anisotropy": 1.0013210732491007,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 34,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        13.13131586710612
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 7.73913985067702,
+      "lightingPixelArea": 45859.74567908049,
+      "minimumDirectionalPixelsPerMetre": 76.92765371586495,
+      "maximumDirectionalPixelsPerMetre": 77.02939033757863,
+      "areaEquivalentPixelsPerMetre": 76.97850521953153,
+      "anisotropy": 1.0013224973959227,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 35,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        13.118307113647461
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 14.38920072453584,
+      "lightingPixelArea": 85264.47212651372,
+      "minimumDirectionalPixelsPerMetre": 76.92766913740037,
+      "maximumDirectionalPixelsPerMetre": 77.0280427941704,
+      "areaEquivalentPixelsPerMetre": 76.97783960576874,
+      "anisotropy": 1.0013047796442494,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 36,
+      "centerWorld": [
+        -128.37836519877115,
+        -11.985624797058104,
+        14.148191769917805
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 41.73525450579291,
+      "lightingPixelArea": 247308.69377540052,
+      "minimumDirectionalPixelsPerMetre": 76.92766563536755,
+      "maximumDirectionalPixelsPerMetre": 77.02891194942026,
+      "areaEquivalentPixelsPerMetre": 76.9782721467634,
+      "anisotropy": 1.001316123571624,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure13Phase13Floor",
+      "owner": "Exact three floor receivers for independent contact GI",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 37,
+      "centerWorld": [
+        -145.33203252156574,
+        -11.985624797058104,
+        13.715592384338379
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 22.446993064332673,
+      "lightingPixelArea": 133012.2300403118,
+      "minimumDirectionalPixelsPerMetre": 76.92765740387675,
+      "maximumDirectionalPixelsPerMetre": 77.028403170313,
+      "areaEquivalentPixelsPerMetre": 76.97801380558953,
+      "anisotropy": 1.0013096169808906,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/lighting-platform-enclosure-floor-sky.webp"
+    }
+  ],
+  "qualification": "Unfiltered structural family includes hidden embedded beam faces; reported separately for comparable packing quality, not folded into visible-floor metric. Full desktop target enforced; deliberately downsampled low atlases must be reported separately."
+}

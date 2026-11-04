@@ -1,5 +1,7 @@
 # First Eighth Avenue bridge bay
 
+Historical checkpoint: superseded by Phase13. The two linear HDRs, two PNG derivatives and original single-bay Blender/GLB files are now restored from exact Git objects using `review/phase13/storage/restore-phase12-source.py` (repository-relative authoring location). See its receipt before replaying this old checkpoint; reports below describe the originally accepted files.
+
 The editable Blender addon uses Geometry Nodes for the eleven column/foundation stations repeated across two source-corresponding bents. Seven evaluated mesh owners contain 8,256 triangles. The roof, built-up columns, cross-girders, longitudinal girders and buried bearings follow the documented structural families. No passenger-floor pedestal or opaque gallery sidewall is added.
 
 The bounded section lies between approximately Z 6.33 and 13.0, across the 100 ft avenue width. This is one bay of the 525 ft bridge. Plate LIX establishes the width, column spacing and member families; local member depths/thicknesses, minor fabrication, cover, world registration and material appearance remain qualified. The source under-clearance line is not treated as a uniform slab underside.
