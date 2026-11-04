@@ -20,6 +20,7 @@ import { closedArcadeGlazing } from './collision-surfaces.mjs';
 import { findStairBevelSupport } from './stair-contact.mjs';
 import { findFloorJointSupport } from './floor-contact.mjs';
 import { enableStaticShadowCache, refreshStaticShadows, shadowDepthBias } from './shadow-cache.mjs';
+import { preparePrismVisibility, createPrismVisibility, isPrismVisual, staticInstanceCount, staticInstanceMatrix } from './prism-visibility.mjs';
 
 THREE.Mesh.prototype.raycast = acceleratedRaycast;
 const MAIN_FLOOR = -4.2672;
@@ -59,6 +60,7 @@ let commitWalkView;
 let debugRenderer;
 let debugBuilding;
 let debugNavigation;
+let debugPrismVisibility;
 let returnFocus;
 let tourTimer;
 let audio;
@@ -133,7 +135,7 @@ function buildCollisionIndex(model) {
   };
   model?.updateMatrixWorld(true);
   model?.traverse(object => {
-    if (!object.isMesh || !object.visible) return;
+    if (!object.isMesh || object.userData.prismShadowOnly || (!object.visible && !isPrismVisual(object))) return;
     index.stats.sourceMeshes++;
     let zone = object;
     while (zone.parent && zone.parent !== model) zone = zone.parent;
@@ -155,8 +157,8 @@ function buildCollisionIndex(model) {
     // Keep physical columns and other substantial repeated structure. Each
     // shares its geometry/BVH but has a static collision-only world transform;
     // nearby rays never invoke InstancedMesh.raycast across the whole batch.
-    for (let i = 0; i < object.count; i++) {
-      object.getMatrixAt(i, instance); world.multiplyMatrices(object.matrixWorld, instance);
+    for (let i = 0; i < staticInstanceCount(object); i++) {
+      staticInstanceMatrix(object, i, instance); world.multiplyMatrices(object.matrixWorld, instance);
       const bounds = geometry.boundingBox.clone().applyMatrix4(world);
       if (Math.max(bounds.max.x - bounds.min.x, bounds.max.y - bounds.min.y, bounds.max.z - bounds.min.z) < .12) {
         index.stats.excludedInstances++; continue;
@@ -289,6 +291,7 @@ async function loadModel(view, quality, renderer, progress) {
       }
     });
     await Promise.all(lightingTasks);
+    if (renderer.isWebGLRenderer) preparePrismVisibility(gltf.scene, THREE);
     modelReports.set(file, { file, materials: assigned.size, bakedMaterials: [...assigned].filter(material => material.lightMap).length, occlusionMaterials: [...assigned].filter(material => material.aoMap).length, reflectionMaterials: [...assigned].filter(material => material.envMap).length, reflectionFile: reflection?.userData.sourceFile || null, reflectionFiles: [...new Set([...assigned].map(material => material.envMap?.userData.sourceFile).filter(Boolean))], atlasChannels: [...new Set([...assigned].filter(material => material.lightMap).map(material => material.lightMap.channel))] });
     // Keep the renderable scene, allowing the parser's raw buffers and temporary
     // dependency caches to be collected after decoding.
@@ -675,6 +678,17 @@ const hotspots = {
   waiting: [{ position: [12, 18, -14], label: 'Corinthian order', detail: 'Eight colossal columns frame three vaulted bays. The capitals are interpretive meshes, not surveyed copies.' }, { position: [-10, 32, -22], label: 'Daylight at scale', detail: 'Three great semicircular windows light each long side. The period account gives a radius of 33 feet 4 inches.' }],
   concourse: [{ position: [-71, 23, -5], label: 'Steel & glass', detail: 'The published concourse has intersecting arched vaults. This first phase studies the structural rhythm; engineering joints remain approximate.' }],
 };
+function PrismVisibility({ model }) {
+  const { camera } = useThree();
+  const manager = useMemo(() => createPrismVisibility(model, THREE), [model]);
+  useLayoutEffect(() => {
+    debugPrismVisibility = manager.report;
+    return () => { if (debugPrismVisibility === manager.report) debugPrismVisibility = null; };
+  }, [manager]);
+  // Registered after Navigation so culling sees the current frame's camera.
+  useFrame(() => manager.update(camera));
+  return null;
+}
 function Scene() {
   const current = useSyncExternalStore(subscribe, () => state);
   const [model, setModel] = useState(null);
@@ -682,6 +696,7 @@ function Scene() {
     <Lighting current={current} />
     <Building current={current} onModel={setModel} />
     <Navigation current={current} model={model} />
+    <PrismVisibility model={model} />
     {current.annotations && !current.loading && hotspots[current.view].map(h => <Html key={h.label} position={h.position} center distanceFactor={current.view === 'exterior' ? 120 : 35}><button className="hotspot" title={h.detail} onClick={() => showAnnotation(h)}>{h.label}<span aria-hidden="true"> +</span></button></Html>)}
   </>;
 }
@@ -882,5 +897,5 @@ function sceneReport() {
     return { name: zone.name, id: zone.children[0]?.uuid, visible: zone.visible, meshes };
   }) };
 }
-window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure, renderFrame: debugRenderer.info.render.frame, pixelRatio: debugRenderer.getPixelRatio(), canvasPixels: [debugRenderer.domElement.width, debugRenderer.domElement.height], reversedDepth: Boolean(debugRenderer.capabilities?.reversedDepthBuffer) } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getMaterialReport: () => getMaterialReport(debugBuilding), sampleVisuals: (points, options) => sampleVisuals(debugBuilding, debugCamera, debugRenderer, points, options), getNavigation: () => debugNavigation ? { ...debugNavigation } : null });
+window.pennStation = Object.freeze({ getState: () => ({ ...state }), getCamera: () => debugCamera ? { position: debugCamera.position.toArray(), quaternion: debugCamera.quaternion.toArray(), fov: debugCamera.fov } : null, getMetrics: () => debugRenderer ? { calls: debugRenderer.info.render.calls, triangles: debugRenderer.info.render.triangles, geometries: debugRenderer.info.memory.geometries, textures: debugRenderer.info.memory.textures, exposure: debugRenderer.toneMappingExposure, renderFrame: debugRenderer.info.render.frame, pixelRatio: debugRenderer.getPixelRatio(), canvasPixels: [debugRenderer.domElement.width, debugRenderer.domElement.height], reversedDepth: Boolean(debugRenderer.capabilities?.reversedDepthBuffer) } : null, getAssets: () => [...modelReports.values()].map(report => ({ ...report, atlasChannels: [...report.atlasChannels] })), getScene: sceneReport, getMaterialReport: () => getMaterialReport(debugBuilding), sampleVisuals: (points, options) => sampleVisuals(debugBuilding, debugCamera, debugRenderer, points, options), getNavigation: () => debugNavigation ? { ...debugNavigation } : null, getPrismVisibility: () => debugPrismVisibility ? { ...debugPrismVisibility } : null });
 syncUI(); createRoot($('#scene-root')).render(<Viewer />);

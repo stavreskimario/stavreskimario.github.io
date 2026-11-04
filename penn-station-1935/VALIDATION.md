@@ -1,4 +1,10 @@
-# Current visual checkpoint: first Eighth Avenue bridge bay — 4 November 2026
+# Current renderer checkpoint: prism visibility — 4 November 2026
+
+Entry `13-prism-visibility-1` retains the accepted bridge/model assets and draws only prism panels that can reach the camera. The complete source matrices remain available for walking support; a full-floor companion retains concrete-web shadows while submitting no camera/color geometry. There are still two visual prism batches. WebGPU retains its previous path.
+
+[Actual CPU and paired Chrome evidence](../authoring/penn-station-1935/review/phase13/performance/README.md) preserves all 4,976 source instances in both variants, unchanged geometry/materials, conservative bounds under forward/reversed depth, full collision/shadow matrices and return from an empty view. Fixed-camera Chrome captures have exactly matching viewport RGB pixels and collision inventories at three viewpoints. Draw calls are unchanged. Waiting-room submitted triangles fall22.24M→10.06M and median measured GPU time7.09→5.88ms; concourse13.44→12.95ms, arrivals10.27→10.39ms. These are24-sample fixed-camera measurements with an explicit local observer, not a sustained walking/FPS benchmark or a universal speedup. No native walking walkthrough was run. Four-bay geometry, floor lighting and the ceiling seam remain separate work in progress. Matching public deployment verification follows this renderer commit.
+
+# Previous visual checkpoint: first Eighth Avenue bridge bay — 4 November 2026
 
 Runtime `12-bridge-bay-1` adds the first finite two-bent bay over the western tracks, with 22 columns, built-up girders, connecting members and a roof. **Station plan → The Eighth Avenue bridge** starts Walk on the checked Platform 5 sidepath; switching to Orbit retains the new view. All six areas remain present. Both walking speeds retain the separate 15% increase.
 
