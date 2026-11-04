@@ -1,0 +1,19 @@
+# Phase14 connected P3 bridge bay — first checkpoint
+
+`model/continuity-addon.glb.gz` is the complete accepted source (33 mesh owners, 31,188 triangles, 66 columns), losslessly gzipped. Decompression must produce SHA256495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c. The complete compressed editable Blender file is alongside it. No duplicated full platform/base pair, huge lighting context or standalone repeated image library is included.
+
+All 24,996 structural faces from the previous four bays are retained exactly at every oriented position, normal and material UV0. The new bay connects to a newly read permanent cap chain near native U615 in PlateLIX. The separate U631 stroke is temporary falsework. Eleven source cap observations and ±4 native-pixel / at least ±1m absolute registration uncertainty are recorded. Subpixel skew is not claimed recovered.
+
+The nominal source row is world Z41.79019. The adopted row is Z41.04019: an explicitly approved −0.75m fit to the existing tapered P3 platform. The direct source fit was held because it could not retain the intended southern walking side. The adopted position preserves both existing walking sides without moving any railway/platform or earlier row. This is a reconstruction coordination choice, not a source survey or engineering clearance tolerance.
+
+The source includes 600 exact existing platform/trackbed fragments for a fresh floor atlas, covering P3/P4/P5 and a surrounding lighting apron. Existing UV0/material images are retained; no floor overlay is added. Positions match canonical local Float32 boundary interpolation, UV0 error≤1.90735e−6, and measured Blender custom-normal deviation≤0.30810° remains within the established0.5° bound. That floor-normal claim is deliberately different from the exact unchanged old structural normals.
+
+The platform sources come from the complete original pre-module pair8eca/2ad1; do not clip the old already-cut Phase13 base and lose its existing floor. The retained-base outputs remove the old floor surfaces once, and must receive the new complete module once before runtime use. Seven exact cached floor owners are removed before primary import. The raw cache contains two previously omitted internal coincident P3/P5 undersides; their clipped88.73121911m² area is explicitly reconciled, without relaxing any footprint tolerance.
+
+New P3 checks pass:11actual column/receiver contacts,11buried granite/steel bearing contacts with zero separation,4.94576m adopted rail clearance,2.43533m minimum nominal vehicle lateral clearance,250supported body samples and2,268actual platform footprint supports. These are new P3 tests, not repeated checks of the prior four bays or a native walking walkthrough. Current rails/trains remain unchanged.
+
+Scripts are byte-exact executed copies with their original absolute paths. Recreate the pinned layout in a separate staging workspace, or change only paths in new replay copies. Decompress the JSON inputs beside their scripts. The builder imports three retained authoring helper functions from the prior source builder; that exact file is copied under replay-inputs. Bpy4.3.0/Python3.11 and existing repository Node geometry helpers are used.
+
+Full-quality new roof/floor lighting remains pending: old-structure transport must be refreshed for changed overhead geometry, and a separate floor atlas must pass actual transformed Stippled-UP minimum-direction density≥60px/m before GPU. No coarse12px/m floor bake, source quality downsampling or arbitrary exposure gain is approved by this source packet.
+
+Farther P2/P1 permanent rows are being traced as a second checkpoint. They are not uniformly cloned or dismissed merely because they are oblique. Exact field fit to the current straight tracks/short platforms must precede their authoring. No mobile, Manhattan, flicker, speed/default-navigation or native WASD work is included.

@@ -1,0 +1,138 @@
+{
+  "status": "READ-ONLY Phase13 adjacent-row actualreceiver/trainfit",
+  "pins": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+    }
+  ],
+  "columnCentersWorldX": [
+    -152.0952,
+    -149.0472,
+    -145.9992,
+    -142.9512,
+    -139.9032,
+    -136.8552,
+    -133.8072,
+    -130.75920000000002,
+    -127.7112,
+    -124.6632,
+    -121.6152
+  ],
+  "bentRowsWorldZ": [
+    41.04018867924528
+  ],
+  "receivers": [
+    {
+      "x": -152.0952,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -149.0472,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -145.9992,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -142.9512,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -139.9032,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -136.8552,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -133.8072,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -130.75920000000002,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -127.7112,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -124.6632,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    },
+    {
+      "x": -121.6152,
+      "z": 41.04018867924528,
+      "top": {
+        "y": -11.985624797058104,
+        "material": "RailwayPlatformStippledGranolithicPhase9",
+        "node": 14
+      }
+    }
+  ],
+  "existingTrainBoundsInBay": [],
+  "highestExistingTrainInBay": null,
+  "highestTrainY": null,
+  "sourceBridgeUndersideY": -8.208264,
+  "actualMinimumTrainToBridgeClearanceM": null,
+  "conservativeColumnTrainAabbIntersections": 0,
+  "columnTrainExamples": [],
+  "qualification": "Train zone actualruntimeoffset applied−13.154025Y/+8.690045261Z. Candidate columns18in outerenvelope only; no columns generated. AABB contacts conservative; no true geometric collision waiver. Intertrack receivers need source-backed foundation/rock geometry, not artificial platform support."
+}

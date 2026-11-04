@@ -1,0 +1,110 @@
+{
+  "status": "FROZEN exact7owner expandedP3/P4/P5 receiver membership with explicit prior hidden underfaces",
+  "coordinateSpace": "Main0glTF; cacheBlender[x,y,z]\u2192[x,z,\u2212y]",
+  "roi": {
+    "x": [
+      -162.2857,
+      -111.4247
+    ],
+    "z": [
+      3.1014,
+      45.3
+    ]
+  },
+  "partitionSource": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/partition-full.json",
+    "sha256": "0df7e730faf9ece5a8d43e8bb833f3274ee24d5be8f90ff5c0bbeebf6dd06572"
+  },
+  "cacheOwners": [
+    {
+      "owner": "Continuous station railway concrete foundation",
+      "sourceFamily": "Railway smooth concrete track base",
+      "scope": "unique-trackbase-upper-plane",
+      "cachePlaneMain0Y": -9.22337532043457,
+      "runtimePlaneMain0Y": -9.223750092452303,
+      "planeDifferenceQualification": "Uniqueauthoritativefoundationowner/rawplane differsby0.374772mmfromquantizedruntime representation; no runtimeheight or tolerance changed."
+    },
+    {
+      "owner": "Platform 04 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 04 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 05 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 05 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 03 continuous30-inch-gridded granolithic dressing",
+      "sourceFamily": "RailwayPlatformStippledGranolithicPhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    },
+    {
+      "owner": "Platform 03 source-section continuous walls and coved slab",
+      "sourceFamily": "RailwayPlatformRubbedConcretePhase9",
+      "scope": "all-actual-platform-section-surfaces",
+      "cachePlaneMain0Y": null,
+      "runtimePlaneMain0Y": null,
+      "planeDifferenceQualification": null
+    }
+  ],
+  "expectedOwnedAreaBySourceFamily": {
+    "Railway smooth concrete track base": 2146.262994599999,
+    "RailwayPlatformRubbedConcretePhase9": 2339.1968583869243,
+    "RailwayPlatformStippledGranolithicPhase9": 1507.4775762087622
+  },
+  "expectedCacheAreaBySourceFamily": {
+    "Railway smooth concrete track base": 2146.262994599999,
+    "RailwayPlatformRubbedConcretePhase9": 2339.1968583869243,
+    "RailwayPlatformStippledGranolithicPhase9": 1596.208795315911
+  },
+  "primaryMaterials": {
+    "Railway smooth concrete track base": "RailwayTrackBaseConcreteEnclosure14",
+    "RailwayPlatformRubbedConcretePhase9": "RailwayPlatformRubbedConcreteEnclosure14",
+    "RailwayPlatformStippledGranolithicPhase9": "RailwayPlatformStippledGranolithicEnclosure14"
+  },
+  "sharedClipCore": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/floor_clip.py",
+    "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a"
+  },
+  "explicitCacheOnlyHiddenInterface": {
+    "receipt": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/visible-floor-and-cache-area-proof.json",
+    "sha256": "b92967fb16a93df89caab793824a02b9bed730b6e1c89397cb40ac61b10dec1c",
+    "oldPhase9Receipt": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-hidden-interface-reconciliation.json",
+      "sha256": "b49c23a58785e9e567205c743e6b28ee121b702463a19b7dab4fa1f039afd191"
+    },
+    "sourceTriangleIndices": [
+      2,
+      3
+    ],
+    "clippedAreaM2": 88.73121910714877,
+    "role": "The two already omitted internal P3/P5 granolithic undersides coincide with retained rubbed tops; remove their cache-only ROI fragments too, do not add them to the primary or enlarge tolerance."
+  },
+  "scope": "Only the7mapped source objects, no broad material-name clipping or hidden meshes. All other original context, including accepted56face pale soffit, remains unchanged."
+}
