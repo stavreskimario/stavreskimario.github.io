@@ -1,0 +1,17 @@
+# Phase13 editable bridge and true-floor source
+
+Accepted source: `model/enclosure-addon.glb` (SHA2569ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54), plus its editable Blender file. These are exact copies of the accepted four-bay source:27meshowners,25,398triangles,55columns,402existing floor fragments. No old runtime candidate or shared historical image collection is included.
+
+The source geometry, PBR and material UV0 are frozen. The initial joint4K bridge/floor lighting atlas is held because its floor texel density was insufficient. This source packet is **not final lighting approval**. A later freshly baked/encoded/mounted chain must bind this source SHA and preserve every oriented corner.
+
+The source family is based on the original Eighth Avenue bridge sections. Five nonuniform row positions and both explicit current-gap fitting offsets are recorded in the research/receipts. Foundation depth, plate schedule, material hue and absolute datum registration remain qualified. `construction.sourceWorldBounds` X/Z denotes roof projection; actual buried bearing extents are in the physical proof. Some unchanged executed-builder comments still say Phase12/two-bent/22stations; actual27owner source and55station proof are authoritative for this expansion.
+
+`replay/pre-bridge-base` is the original accepted platform pair before the Phase12 bay. `replay/retained-base` removes only the declared old floor receiver faces. It is intentionally incomplete until the freshly baked combined source is appended **once**. Starting from these bases also removes the prior bay once; never append this source onto the old bridge-containing platform transport.
+
+The source and cache use one `floor_clip.py`. The cached granolithic underside differs from runtime by exactly50.10701982673692m²: one previously omitted coincident hidden underside triangle. The strict reconciliation is included; no area tolerance was enlarged. All5declared cache owners are clipped inside the receiver ROI, while other objects, bindings and transforms remain unchanged.
+
+Replay: decompress the `.json.gz` files beside their executed scripts (keep the compressed originals). The copied scripts are byte-identical to those actually executed and retain their original absolute workspace paths. The manifest maps every original path to its packet copy and pins intentionally external inputs. Recreate that layout in a separate staging workspace, or explicitly adjust only input/output paths in a new replay copy. The builder refuses to overwrite `candidate-v2`. Use Blender/Bpy4.3.0, Python3.11, numpy<2 and the existing repository Node geometry tools. The editable file already contains its authored PBR images; the external original PNGs are needed only for a clean rebuild.
+
+A clean source replay runs input extraction, exact full/low partition, retained-base packaging, then Blender source construction. Lighting additionally requires the separately pinned large accepted context scene and `apply_floor_context_membership` before primary import. The actual source physical proof covers55receiver contacts,55buried steel/granite contacts,54roof samples and500supported P4/P5body samples. User-native walking walkthrough remains intentionally skipped.
+
+Read and test replay changes before using them. Geometry acceptance here does not substitute for final app, material, lighting and static visual validation.
