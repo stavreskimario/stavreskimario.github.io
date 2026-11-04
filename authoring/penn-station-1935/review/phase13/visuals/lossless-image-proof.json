@@ -1,0 +1,32 @@
+{
+  "status": "PASS exact native RGB pixels in retained lossless WebP",
+  "images": [
+    {
+      "nativeSource": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/static-final-v1/four-bay-orbit-wide.png",
+      "sourceSha256": "7f4fe55542f79c4f86bf2824c046d430bda1d823eeba2a62d2fac935bea6d202",
+      "file": "bridge-wide.webp",
+      "bytes": 646736,
+      "sha256": "ce5b0beefbf65abdc56595afd0619366074efaa4f9c44860fabefdf3588785ec",
+      "decodedRgbSha256": "3501696905cf80d8fb9248338581d240abc2500bfdd8e904d90ce64a101b2523",
+      "pixelsExact": true
+    },
+    {
+      "nativeSource": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/static-seam-comparison-v1/soffit-junction-before.png",
+      "sourceSha256": "c092b6f6d144890f8b4296bee608b949755aa1ad9c2b9fbfde741c71849747aa",
+      "file": "ceiling-before.webp",
+      "bytes": 508270,
+      "sha256": "000f65727bedfdefa80d27e881d260d1af36306ff4edfed89fba1df645057f8a",
+      "decodedRgbSha256": "95fb441355ed81cd4b3a4cb300e5308a6592dde4c1f4b31695e75ccc0c2640b2",
+      "pixelsExact": true
+    },
+    {
+      "nativeSource": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/static-seam-comparison-v1/soffit-junction-after.png",
+      "sourceSha256": "706cef8d0e46fc43679761232f04551973fbd81cad4b3473b060920601c0f157",
+      "file": "ceiling-after.webp",
+      "bytes": 448310,
+      "sha256": "eda37218a4f8e36803a1a181aced34325dc91a4fa80f04fc8bc2f306d98862c2",
+      "decodedRgbSha256": "eca0714ba6ea877bbc74184d127b233f86a00bf5c3c477dd43aa30beeea5926a",
+      "pixelsExact": true
+    }
+  ]
+}
