@@ -1,0 +1,1019 @@
+{
+  "scope": "Labeled before/after exact existing soffit junction; standing test-only camera, no WASD. Actual frozen scene geometries/materials/lightmaps unchanged. Only manifest cameraPreset changes; no exposure overrides.",
+  "pose": {
+    "eye": [
+      -64,
+      -5.7876,
+      -69
+    ],
+    "target": [
+      -64,
+      -4.7,
+      -76
+    ],
+    "walk": [
+      -64,
+      -5.7876,
+      -69
+    ],
+    "look": [
+      -64,
+      -4.7,
+      -76
+    ]
+  },
+  "views": [
+    {
+      "label": "before",
+      "sourceAssets": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3",
+      "pageErrors": [],
+      "httpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+          "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/sky.hdr?revision=13-enclosure-soffit-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/model-exterior.glb.gz?revision=13-enclosure-soffit-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/fe20445f817ad8b117d3.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/9098074176165a0d927e.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/4ad8c3e9c3cab52c1b64.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/22ec9e77de77cf98bd6a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/53ec32af1b61447bac9c.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/b4a5b7165636466257b3.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/6973003abb78858f457c.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/0aab5b4fc6e106416188.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/00da3728f8d51a3696a3.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/2aa7778a264d10851bba.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/8714963ae3c33593ef07.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/eb9e3d30e65af46f13f5.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "console": [
+        {
+          "type": "error",
+          "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        }
+      ],
+      "cameraDerivative": {
+        "originalSha256": "9998fe419c82eae7ed9a218870a01a4c9ec607a81af7412e6345f66c4f666c8d",
+        "originalCameraPreset": {
+          "eye": [
+            -4.5,
+            -4.8,
+            -72.5
+          ],
+          "target": [
+            -4.5,
+            -2.5,
+            -84
+          ],
+          "walk": [
+            -3.2,
+            -5.7876,
+            -73.8
+          ],
+          "look": [
+            -3.2,
+            -3,
+            -84
+          ],
+          "title": "The 33rd Street exit",
+          "caption": "From the lower arrivals gallery to street level"
+        },
+        "testCameraPreset": {
+          "eye": [
+            -64,
+            -5.7876,
+            -69
+          ],
+          "target": [
+            -64,
+            -4.7,
+            -76
+          ],
+          "walk": [
+            -64,
+            -5.7876,
+            -69
+          ],
+          "look": [
+            -64,
+            -4.7,
+            -76
+          ],
+          "title": "The 33rd Street exit",
+          "caption": "From the lower arrivals gallery to street level"
+        },
+        "servedSha256": "1b13d5d22f43c598a0483d3169b98e122bdb10547d8544c3586b77042e98f9e7"
+      },
+      "state": {
+        "view": "concourse",
+        "framing": "exits",
+        "mode": "walk",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          -64,
+          -5.7876,
+          -69
+        ],
+        "quaternion": [
+          0.07699322464782718,
+          0,
+          0,
+          0.9970316160274603
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 55,
+        "triangles": 1821770,
+        "geometries": 179,
+        "textures": 98,
+        "exposure": 1.550411112597588,
+        "renderFrame": 240,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1600,
+          916
+        ],
+        "reversedDepth": true
+      },
+      "materials": [
+        {
+          "id": "274a8cf5-55f9-49d6-850c-64cd71dd798b",
+          "name": "ConcourseOpaqueCirculationConcrete",
+          "type": "MeshStandardMaterial",
+          "side": 2,
+          "transmission": 0,
+          "transparent": false,
+          "opacity": 1,
+          "roughness": 0.8199999928474426,
+          "metalness": 0,
+          "aoIntensity": 0.25,
+          "lightIntensity": 3.141592653589793,
+          "skyFile": "lighting-concourse-sky.webp",
+          "skyScale": 1,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "walkingCollision": null,
+          "ao": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "lightmap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1001,
+            "wrapT": 1001,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "baseColorMap": null,
+          "normalMap": null,
+          "roughnessMap": null,
+          "normalScale": [
+            1,
+            -1
+          ],
+          "zones": [
+            "concourse"
+          ],
+          "meshes": 1
+        },
+        {
+          "id": "0d4518c1-c818-4fde-9a73-bf9499dd6c22",
+          "name": "TravertineArrivalsExitRoute",
+          "type": "MeshStandardMaterial",
+          "side": 2,
+          "transmission": 0,
+          "transparent": false,
+          "opacity": 1,
+          "roughness": 1,
+          "metalness": 0,
+          "aoIntensity": 0.25,
+          "lightIntensity": 6.283185307179586,
+          "skyFile": "lighting-concourse-exits-sky.webp",
+          "skyScale": 2,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "walkingCollision": null,
+          "ao": {
+            "channel": 1,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "lightmap": {
+            "channel": 1,
+            "width": 4096,
+            "height": 4096,
+            "flipY": false,
+            "wrapS": 1001,
+            "wrapT": 1001,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "baseColorMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "normalMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "roughnessMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "normalScale": [
+            0.03500000014901161,
+            -0.03500000014901161
+          ],
+          "zones": [
+            "concourse"
+          ],
+          "meshes": 1
+        }
+      ],
+      "viewMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.9881440867166584,
+        -0.15352935838757684,
+        0,
+        0,
+        0.15352935838757684,
+        0.9881440867166584,
+        0,
+        64,
+        16.312508445024132,
+        67.2933754688455,
+        1
+      ],
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/static-seam-comparison-v1/soffit-junction-before.png"
+    },
+    {
+      "label": "after",
+      "sourceAssets": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/candidate-final-v2",
+      "pageErrors": [],
+      "httpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap",
+          "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/sky.hdr?revision=13-enclosure-soffit-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/model-context.glb.gz?revision=13-enclosure-soffit-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/model-exterior.glb.gz?revision=13-enclosure-soffit-1",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/206a10b6a2d3fbbd05a1.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/e31619f2b2a7a5ba20dd.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/f46d86be9b939ee4beec.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/9098074176165a0d927e.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/fe20445f817ad8b117d3.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/f20239dbf2c1e548d747.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/c7f8f448d11f12484907.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/abfa7b3cab7953a6a5ae.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/4f684d7c526a22f95162.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/c7670262d7c33cc39671.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/71508f85f3c325538f05.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/22ec9e77de77cf98bd6a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/53ec32af1b61447bac9c.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/b4a5b7165636466257b3.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/d027c562b48d63001b53.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/1e3fdca78d540b4c4a2d.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/1e3025f04821ca80c83a.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/54c4b6193c2de4abdc13.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/7be11436c1b7fe0e5ab7.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/0f399333f7175f5e5afa.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/6973003abb78858f457c.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/9dd19af74e513b23a448.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/be769d91834b6d023ce1.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/0aab5b4fc6e106416188.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/eb9e3d30e65af46f13f5.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/02474452a0e7a2da0cfb.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/e0cadb7862053a61b888.ktx2",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:60541/exhibition/penn-station-1935/assets/textures/08b0fe03227cf7eec1cc.ktx2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "console": [
+        {
+          "type": "error",
+          "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        },
+        {
+          "type": "warning",
+          "message": "THREE.KTX2Loader: Multiple active KTX2 loaders may cause performance issues. Use a single KTX2Loader instance, or call .dispose() on old instances."
+        }
+      ],
+      "cameraDerivative": {
+        "originalSha256": "9998fe419c82eae7ed9a218870a01a4c9ec607a81af7412e6345f66c4f666c8d",
+        "originalCameraPreset": {
+          "eye": [
+            -4.5,
+            -4.8,
+            -72.5
+          ],
+          "target": [
+            -4.5,
+            -2.5,
+            -84
+          ],
+          "walk": [
+            -3.2,
+            -5.7876,
+            -73.8
+          ],
+          "look": [
+            -3.2,
+            -3,
+            -84
+          ],
+          "title": "The 33rd Street exit",
+          "caption": "From the lower arrivals gallery to street level"
+        },
+        "testCameraPreset": {
+          "eye": [
+            -64,
+            -5.7876,
+            -69
+          ],
+          "target": [
+            -64,
+            -4.7,
+            -76
+          ],
+          "walk": [
+            -64,
+            -5.7876,
+            -69
+          ],
+          "look": [
+            -64,
+            -4.7,
+            -76
+          ],
+          "title": "The 33rd Street exit",
+          "caption": "From the lower arrivals gallery to street level"
+        },
+        "servedSha256": "1b13d5d22f43c598a0483d3169b98e122bdb10547d8544c3586b77042e98f9e7"
+      },
+      "state": {
+        "view": "concourse",
+        "framing": "exits",
+        "mode": "walk",
+        "light": "afternoon",
+        "quality": "balanced",
+        "fov": 50,
+        "shadows": true,
+        "annotations": false,
+        "entered": true,
+        "tour": false,
+        "sound": false,
+        "loading": false,
+        "error": "",
+        "progress": 100,
+        "renderer": "WebGL 2",
+        "revision": 0,
+        "pose": 1,
+        "instant": false
+      },
+      "camera": {
+        "position": [
+          -64,
+          -5.7876,
+          -69
+        ],
+        "quaternion": [
+          0.07699322464782718,
+          0,
+          0,
+          0.9970316160274603
+        ],
+        "fov": 50
+      },
+      "metrics": {
+        "calls": 56,
+        "triangles": 1821770,
+        "geometries": 180,
+        "textures": 100,
+        "exposure": 1.550487530035152,
+        "renderFrame": 243,
+        "pixelRatio": 1,
+        "canvasPixels": [
+          1600,
+          916
+        ],
+        "reversedDepth": true
+      },
+      "materials": [
+        {
+          "id": "30e6e3b3-98de-4f43-959b-ecf7d5520b08",
+          "name": "ConcourseOpaqueCirculationConcrete",
+          "type": "MeshStandardMaterial",
+          "side": 2,
+          "transmission": 0,
+          "transparent": false,
+          "opacity": 1,
+          "roughness": 0.8199999928474426,
+          "metalness": 0,
+          "aoIntensity": 0.25,
+          "lightIntensity": 3.141592653589793,
+          "skyFile": "lighting-concourse-sky.webp",
+          "skyScale": 1,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "walkingCollision": null,
+          "ao": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "lightmap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1001,
+            "wrapT": 1001,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "baseColorMap": null,
+          "normalMap": null,
+          "roughnessMap": null,
+          "normalScale": [
+            1,
+            -1
+          ],
+          "zones": [
+            "concourse"
+          ],
+          "meshes": 1
+        },
+        {
+          "id": "b5851e40-d1b1-44c3-acfa-051f3a451a6e",
+          "name": "TravertineArrivalsExitRoute",
+          "type": "MeshStandardMaterial",
+          "side": 2,
+          "transmission": 0,
+          "transparent": false,
+          "opacity": 1,
+          "roughness": 1,
+          "metalness": 0,
+          "aoIntensity": 0.25,
+          "lightIntensity": 6.283185307179586,
+          "skyFile": "lighting-concourse-exits-sky.webp",
+          "skyScale": 2,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "walkingCollision": null,
+          "ao": {
+            "channel": 1,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "lightmap": {
+            "channel": 1,
+            "width": 4096,
+            "height": 4096,
+            "flipY": false,
+            "wrapS": 1001,
+            "wrapT": 1001,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "baseColorMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "normalMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "roughnessMap": {
+            "channel": 0,
+            "width": 2048,
+            "height": 2048,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 8
+          },
+          "normalScale": [
+            0.03500000014901161,
+            -0.03500000014901161
+          ],
+          "zones": [
+            "concourse"
+          ],
+          "meshes": 1
+        },
+        {
+          "id": "dc710fc6-561d-4d35-ab8b-0b9e0ccf3f7a",
+          "name": "Lower33rdPaleMineralSoffitPhase13Soffit",
+          "type": "MeshStandardMaterial",
+          "side": 2,
+          "transmission": 0,
+          "transparent": false,
+          "opacity": 1,
+          "roughness": 0.8199999928474426,
+          "metalness": 0,
+          "aoIntensity": 0.25,
+          "lightIntensity": 6.283185307179586,
+          "skyFile": "lighting-concourse-exit-soffit-sky.webp",
+          "skyScale": 2,
+          "reflectionFile": "reflection-concourse.hdr.gz",
+          "walkingCollision": null,
+          "ao": {
+            "channel": 1,
+            "width": 4096,
+            "height": 4096,
+            "flipY": false,
+            "wrapS": 1000,
+            "wrapT": 1000,
+            "colorSpace": "",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "lightmap": {
+            "channel": 1,
+            "width": 4096,
+            "height": 4096,
+            "flipY": false,
+            "wrapS": 1001,
+            "wrapT": 1001,
+            "colorSpace": "srgb",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "anisotropy": 1
+          },
+          "baseColorMap": null,
+          "normalMap": null,
+          "roughnessMap": null,
+          "normalScale": [
+            1,
+            -1
+          ],
+          "zones": [
+            "concourse"
+          ],
+          "meshes": 1
+        }
+      ],
+      "viewMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.9881440867166584,
+        -0.15352935838757684,
+        0,
+        0,
+        0.15352935838757684,
+        0.9881440867166584,
+        0,
+        64,
+        16.312508445024132,
+        67.2933754688455,
+        1
+      ],
+      "screenshot": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/static-seam-comparison-v1/soffit-junction-after.png"
+    }
+  ],
+  "bundleSha256": "694584d8f468ad199978fbcbe1c7510e64581ecb6bd3445317f2ee06446fad00",
+  "exposureDifference": 0.00007641743756403585,
+  "status": "PASS identical standing camera/afternoon lighting, exact view matrices, stationary exposure matched within0.005",
+  "browserClosed": true
+}

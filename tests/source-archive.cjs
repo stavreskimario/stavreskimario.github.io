@@ -18,6 +18,8 @@ const archivePolicies = new Map([
   ['authoring/penn-station-1935/lighting/phase13-floor/raw/lighting-platform-enclosure-floor-sky.hdr.gz', { manifest: enclosureManifest }],
   ['authoring/penn-station-1935/lighting/phase13-floor/denoised/lighting-platform-enclosure-floor-sky-denoised-linear.hdr.gz', { manifest: enclosureManifest }],
   ['authoring/penn-station-1935/lighting/phase13-enclosure/reflections/reflection-platform-enclosure-linear.exr.gz', { manifest: enclosureManifest }],
+  ['authoring/penn-station-1935/lighting/phase13-soffit/raw/lighting-concourse-exit-soffit-sky.hdr.gz', { manifest: enclosureManifest }],
+  ['authoring/penn-station-1935/lighting/phase13-soffit/denoised/lighting-concourse-exit-soffit-sky-denoised-linear.hdr.gz', { manifest: enclosureManifest }],
 ]);
 
 async function readSourceArchive(file, repositoryRoot) {

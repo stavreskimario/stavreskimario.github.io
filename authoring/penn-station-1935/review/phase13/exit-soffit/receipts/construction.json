@@ -1,0 +1,56 @@
+{
+  "status": "FROZEN exact56face mineralfinish source; freshlight transport pending",
+  "sourceOwnership": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/owned-current-full.json",
+    "sha256": "6ea0b60ac0a87efdfb5cb03e6efb79cdc923f1a3ee6171bae8bbbcc5741acbb1"
+  },
+  "sourceTriangles": 56,
+  "sourceVertices": 168,
+  "sourceObjects": 1,
+  "coordinateSpace": "Main0glTF; worldY=Main0Y\u22124.2672",
+  "worldPlaneY": -4.707200057220459,
+  "boundsWorld": {
+    "x": [
+      -75,
+      -7.150000095367432
+    ],
+    "z": [
+      -79.37200164794922,
+      -45.5
+    ]
+  },
+  "lightUV": {
+    "name": "BakedLightingUV",
+    "channel": 1,
+    "projection": "CommonworldXZplanar; source triangle coverage only, no AABB infill",
+    "resolution": 4096,
+    "gutterPixels": 8,
+    "intendedMetricPixelsPerMetre": 60.13264562615617,
+    "sourceUV0Preserved": true
+  },
+  "material": {
+    "name": "Lower33rdPaleMineralSoffit",
+    "linearBaseColor": [
+      0.46,
+      0.45,
+      0.42
+    ],
+    "metallic": 0,
+    "roughness": 0.82,
+    "qualifiedAppearanceOnly": true
+  },
+  "physicalCaveat": "Existingcoplanarshellfacesonly; actual roof thickness and prism/opening geometry remain in unchanged context. This single-face receiver must replace selected old faces, not overlay them.",
+  "outputs": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/soffit-finish.blend",
+      "sha256": "6cc50f8c952fba24f4f98c7f7f88a567610b5ece3e44c361fbd917fdef3a65b4",
+      "bytes": 88356
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/model-concourse-soffit.glb",
+      "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "bytes": 9112
+    }
+  ],
+  "builderSha256": "e71f447196c584b82c8fbfa949c049c8d980b617b9b224c19bd56235ffa9c995"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "inputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/model-concourse-soffit.glb",
+      "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "bytes": 9112
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/bake-run-v1/raw/model-concourse-exit-soffit.glb",
+      "sha256": "b5e46460cb8d646199d6c9c75d66e49ddd3c49079ced29b8cefef33b5d15624f",
+      "bytes": 1464104
+    }
+  ],
+  "cases": [
+    {
+      "label": "accepted56source→fresh raw P/N/UV0/sharedlightUV",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    }
+  ]
+}

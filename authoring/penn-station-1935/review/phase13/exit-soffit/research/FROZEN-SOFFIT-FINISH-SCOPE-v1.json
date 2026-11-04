@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "status": "Evidence/design freeze; not an implementation, new bake or native walkthrough claim",
+  "scope": "Common qualified pale mineral finish and shared fresh GI for the exact 56 existing underside triangles at the north Exit/gallery-to-under-33rd seam",
+  "worldPlaneY": -4.707200057220459,
+  "seamWorldZ": -72.38999938964844,
+  "ownedSourceFaces": "owned-source-faces.json",
+  "groups": [
+    {
+      "snapshotNode": 9,
+      "snapshotPrimitive": 0,
+      "material": "ConcourseOpaqueCirculationConcrete",
+      "triangleCount": 52,
+      "triangleOffsets": [
+        1342,
+        1343,
+        1390,
+        1391,
+        1438,
+        1439,
+        1486,
+        1487,
+        1534,
+        1535,
+        1582,
+        1583,
+        1630,
+        1631,
+        1678,
+        1679,
+        1726,
+        1727,
+        1774,
+        1775,
+        1822,
+        1823,
+        1870,
+        1871,
+        1918,
+        1919,
+        1966,
+        1967,
+        2014,
+        2015,
+        2062,
+        2063,
+        2110,
+        2111,
+        2158,
+        2159,
+        2206,
+        2207,
+        2254,
+        2255,
+        2326,
+        2327,
+        2710,
+        2711,
+        3246,
+        3247,
+        3254,
+        3255,
+        4014,
+        4015,
+        4022,
+        4023
+      ],
+      "areaM2": 918.1240626411745,
+      "boundsWorld": {
+        "min": [
+          -75,
+          -4.707200057220459,
+          -72.38999938964844
+        ],
+        "max": [
+          -40.856300354003906,
+          -4.707200057220459,
+          -45.5
+        ]
+      }
+    },
+    {
+      "snapshotNode": 24,
+      "snapshotPrimitive": 1,
+      "material": "TravertineArrivalsExitRoute",
+      "triangleCount": 4,
+      "triangleOffsets": [
+        0,
+        1,
+        12,
+        13
+      ],
+      "areaM2": 534.0340827912714,
+      "boundsWorld": {
+        "min": [
+          -73.19999694824219,
+          -4.707200057220459,
+          -79.37200164794922
+        ],
+        "max": [
+          -7.150000095367432,
+          -4.707200057220459,
+          -70.22799682617188
+        ]
+      }
+    }
+  ],
+  "historicallySupported": [
+    "Reinforced stone-concrete floor/roof construction below street is directly documented.",
+    "The lower Exit photograph shows unornamented pale mineral-looking beam/bay surfaces and real prism fields.",
+    "Retaining-wall enamel brick does not imply the same finish on the ceiling.",
+    "Travertine documented for the arcade/waiting room does not establish travertine at this lower passage ceiling."
+  ],
+  "qualifiedReconstruction": [
+    "Use one restrained, matte, pale neutral mineral dielectric for the selected underside faces. This is an appearance family supported by the photograph, not identification of exact exposed-concrete/paint/plaster species.",
+    "Exact hue, roughness, pore scale, paint chemistry, aging and continued 1935-1940 condition are unverified.",
+    "The existing adopted roof plane and source-face areas are model facts. This task does not authenticate their absolute survey positions."
+  ],
+  "materialProposal": {
+    "name": "Lower33rdPaleMineralSoffit",
+    "family": "Plain pale mineral / concrete-like matte dielectric, possibly painted or plastered concrete; exact local finish unresolved",
+    "metallic": 0,
+    "roughnessCalibrationStart": 0.82,
+    "baseColorLinearCalibrationStart": [
+      0.46,
+      0.45,
+      0.42
+    ],
+    "numericValuesAre": "Rendering calibration starting values only; not historical measurements or a required exact match",
+    "surfaceDetail": "Restrained low-contrast fine mineral response. No travertine veins, stone-block joints, glossy enamel, pronounced coffers, new ribs or artificial heavy grime. No invented microdetail is required."
+  },
+  "confirmedDiagnosis": {
+    "continuousGeometry": true,
+    "sameUndersidePlane": true,
+    "activeUvChannelsValid": true,
+    "legacyAOChannel": 0,
+    "newAOChannel": 1,
+    "problem": "Different valid baked sky-radiance atlases and incompatible flat-concrete/travertine response produce a visible brightness/hue boundary. UV1 absence on the old material is not a defect.",
+    "measuredRadiance": "See actual linear decoded RGB in atlas-seam-samples.json. Adjacent valid samples show approximately 6-7x luminance difference before material response.",
+    "inputHash": "91987cb99e5619781af126352f2fbdc18ae6df5a837af2861e270c7803650ed4"
+  },
+  "allowedOperations": [
+    "Partition/rebind exactly the 52 old and 4 new source underside triangles, keeping world corners, orientation, normals and UV0 unchanged.",
+    "Assign a common qualified material and freshly bake the owned faces together with the same complete current light/occluder context.",
+    "Add or replace a dedicated light-atlas UV layer only as needed for the fresh bake; preserve the existing geometry and primary UV0. Record actual channel bindings.",
+    "Remap current source face identities and prove exact before/after positions/normals/UV0, area and triangle coverage."
+  ],
+  "excludedOperations": [
+    "No extra slab, roof masking plane, changed height or new beam geometry.",
+    "Do not fill prism fields, voids, staircase clearances, elevated roadway volume or a rectangular group AABB.",
+    "Do not globally change either shared old concrete or travertine material outside the exact selection.",
+    "Do not redesign the 15ft/30ft street/upper-gallery widths or claim a new historical survey from this finish correction.",
+    "Do not equalize atlas bytes by an arbitrary brightness multiplier or use photograph tone as calibrated photometry."
+  ],
+  "validationRequired": [
+    "Current-model oriented-corner identity and UV0/normal conservation for all 56 triangles; zero added/deleted faces outside the authored partition.",
+    "Fresh full-resolution raw/denoised linear source, atlas statistics and actual exported channel bindings retained with byte-exact provenance.",
+    "Repeat the same close-sign camera/rays and inspect both sides of the seam under matched lighting/exposure; a meaningful smooth change may remain from real local light gradients.",
+    "Prism openings, route floor/stair/roof headroom and all adopted levels unchanged.",
+    "No native walking walkthrough pass claimed while user-requested walkthrough remains skipped."
+  ]
+}

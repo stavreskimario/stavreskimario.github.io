@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "zone": "platform-enclosure-floor",
+  "source": "lighting-platform-enclosure-floor-sky.hdr",
+  "sourceSha256": "380b84d96dc50e46f8e40378459039d94e15babf269e636e8b285f7c1b089a60",
+  "inputTransfer": "linear",
+  "inputScale": 1.0,
+  "radianceScale": 2.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.003957287408411503,
+    "minimum": 0.0,
+    "maximum": 0.25
+  },
+  "originalLinear": {
+    "mean": 0.003957287408411503,
+    "minimum": 0.0,
+    "maximum": 0.25
+  },
+  "denoisedLinear": {
+    "mean": 0.0039443038403987885,
+    "minimum": 0.0,
+    "maximum": 0.22311615943908691
+  },
+  "relativeMeanChange": -0.003280926218580116,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-platform-enclosure-floor-sky-denoised-linear.hdr",
+    "sha256": "7cbb14ab9fb4c0afe3fa99c0cc5f611406bdf39e54fc455c88b61952678014e1",
+    "decodedLinear": {
+      "mean": 0.003932017367333174,
+      "minimum": 0.0,
+      "maximum": 0.22265625
+    },
+    "meanQuantizationError": 1.2275656445126515e-05,
+    "archiveFile": "lighting-platform-enclosure-floor-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-platform-enclosure-floor-sky.png",
+    "webp": "lighting-platform-enclosure-floor-sky.webp",
+    "clippedRGBSamples": 0,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-platform-enclosure-floor-sky-low.png",
+    "webp": "lighting-platform-enclosure-floor-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 9.969601707998663,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase13-floor/denoised",
+  "rawAuthoringDirectory": "authoring/penn-station-1935/lighting/phase13-floor/raw",
+  "sourceArchiveFile": "lighting-platform-enclosure-floor-sky.hdr.gz",
+  "bakeReportSha256": "877c9115e84a5ed9bbbf65ccf3a7879e779ffad16173332421b0c09589c70063",
+  "deliveryTransform": {
+    "schema": 1,
+    "type": "bounded-linear-radiance-stitch",
+    "qualification": "Explicit interpolation between retained open-platform and new roof-dependent bake states within the existing finite receiver apron; not a second physical bake. Physical source HDR, denoise statistics and material geometry remain unchanged.",
+    "physicalRecordSha256": "7286ce7bd00ef23d7c11e8c31a6b90b4b66515d600b9f57306400eff456864b1",
+    "controlFile": "authoring/penn-station-1935/lighting/phase13-floor/transition/floor-gi-transition-control.json.gz",
+    "controlArchiveSha256": "6938655272be2ca9cffccc71d0b81569474512011d23f3b292f8e962e4749f7e",
+    "controlDecodedSha256": "e0d5d76b840cf5198b58041bbaeaf0b89f3f2895a56e34054631850483d5cd44",
+    "helperFile": "authoring/penn-station-1935/lighting/phase13-floor/transition/replay-floor-gi-transition.cjs",
+    "helperSha256": "178e573c44bc60a54331fa7b00f711cb99b03ef88b9669f4b6a6892b9140746f",
+    "derivationFile": "authoring/penn-station-1935/lighting/phase13-floor/transition/floor-gi-transition-derivation.json",
+    "derivationSha256": "c751aa2b7fb3e09d1d3d0a9e4c95b2ea81b50dd8e531e272a89c25a4e43914ff",
+    "full": {
+      "derivedPng": "authoring/penn-station-1935/lighting/phase13-floor/transition/lighting-platform-enclosure-floor-sky-transition.png",
+      "derivedPngSha256": "e9683c3c72ea9d70de55c21ab13f16479569524374086589fb47fc00dd022506",
+      "deliveredWebp": "lighting-platform-enclosure-floor-sky.webp",
+      "deliveredWebpSha256": "f1a4eff577b3ad79edef3c60f7aaba59eeb5638c9bfb9ed8e22d0bd7dd985717",
+      "decodedRgbSha256": "c98e02538d5215025221db660e500bd4d059b73e4c79fef7aead4c283262c166",
+      "width": 4096,
+      "height": 4096,
+      "underRoofRGBByteErrors": 0,
+      "clippedRGBSamples": 0
+    },
+    "low": {
+      "derivedPng": "authoring/penn-station-1935/lighting/phase13-floor/transition/lighting-platform-enclosure-floor-sky-transition-low.png",
+      "derivedPngSha256": "926308c85d176aa54894530e2de660cbfd65d13eff3aa11af8485231d0edb892",
+      "deliveredWebp": "lighting-platform-enclosure-floor-sky-low.webp",
+      "deliveredWebpSha256": "fabc583f6e5f6e83aa60f2200294102006d3abe562f48ecee5e892b9a150de9f",
+      "decodedRgbSha256": "dd13a1ebc186d47e22f659d82c5583f22be4dc81d335161e406df7f3aff58eb6",
+      "width": 512,
+      "height": 512,
+      "underRoofRGBByteErrors": 0,
+      "clippedRGBSamples": 0
+    }
+  }
+}

@@ -383,11 +383,11 @@
     },
     {
       "file": "model-concourse.glb",
-      "bytes": 24485228,
+      "bytes": 24567940,
       "transportFile": "model-concourse.glb.gz",
-      "transportBytes": 6959153,
-      "sha256": "ce212fbbf5d20ccf3b009980fc0fc5db08ce3f23c3ff078dad8394f721b20515",
-      "transportSha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "transportBytes": 7007186,
+      "sha256": "d355cd9cfb4b66d72250676d63040a7d8119aeb1ba5efd40a46d30476c630056",
+      "transportSha256": "310af31e80aa96bb9254533cdc1a48dad5fcc78e17e499dd5242c91b1e09f759",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -588,12 +588,16 @@
         {
           "uri": "textures/8126d17f083801bd41b3.ktx2",
           "bytes": 1631539
+        },
+        {
+          "uri": "textures/d167818307accbe40812.ktx2",
+          "bytes": 1148676
         }
       ],
-      "nodes": 32,
-      "meshes": 32,
-      "materials": 42,
-      "textures": 50,
+      "nodes": 33,
+      "meshes": 33,
+      "materials": 43,
+      "textures": 51,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -608,11 +612,11 @@
     },
     {
       "file": "model-concourse-low.glb",
-      "bytes": 21216332,
+      "bytes": 21299044,
       "transportFile": "model-concourse-low.glb.gz",
-      "transportBytes": 6648546,
-      "sha256": "6daa8c611746c14949b20ca133b3c72a09b5df07c39a3befd4b75b395ecc55e6",
-      "transportSha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "transportBytes": 6696698,
+      "sha256": "3e0cb3d8589c98fe305fb8bc379efc6df35cfa644315c317578aeb35920db7a9",
+      "transportSha256": "7b56c52dd817893567db46deeae5d5a95987ac35bc06cbef045f9469f2c36ebf",
       "externalTextures": [
         {
           "uri": "textures/9af10c675e67054369ce.ktx2",
@@ -813,12 +817,16 @@
         {
           "uri": "textures/c10ccb6f6531eab32aa8.ktx2",
           "bytes": 102148
+        },
+        {
+          "uri": "textures/cef99c7c7d928e44280c.ktx2",
+          "bytes": 24825
         }
       ],
-      "nodes": 32,
-      "meshes": 32,
-      "materials": 42,
-      "textures": 50,
+      "nodes": 33,
+      "meshes": 33,
+      "materials": 43,
+      "textures": 51,
       "extensionsUsed": [
         "EXT_mesh_gpu_instancing",
         "EXT_meshopt_compression",
@@ -1162,8 +1170,8 @@
       ]
     }
   ],
-  "sharedTextureFiles": 115,
-  "modelTextureAndLightingBytes": 257452611,
+  "sharedTextureFiles": 117,
+  "modelTextureAndLightingBytes": 259630135,
   "navigationBytes": 711148,
   "scope": "Connected station with a new independently authored arrivals exit route. Geometry, lighting, native movement and historical scope require separate acceptance.",
   "arcadeIntegration": {
@@ -1693,6 +1701,57 @@
     "runtimeNavigationUnchanged": true,
     "independentFloorAtlas": "platform-enclosure-floor",
     "minimumVisibleFloorPixelsPerMetre": 76.92764506513112,
-    "structureLightUvAndGiUnchanged": true
+    "structureLightUvAndGiUnchanged": true,
+    "floorDeliveryTransform": "bounded-linear-radiance-stitch"
+  },
+  "exitSoffit": {
+    "sourceSha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+    "triangles": 56,
+    "material": "Lower33rdPaleMineralSoffitPhase13Soffit",
+    "newSourcePositionsNormalsMaterialUvExact": true,
+    "authoredLightUvPreserved": true,
+    "minimumPixelsPerMetre": 60.13250999,
+    "unchangedOtherModels": [
+      {
+        "file": "model-exterior.glb.gz",
+        "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a"
+      },
+      {
+        "file": "model-exterior-low.glb.gz",
+        "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3"
+      },
+      {
+        "file": "model-waiting-room.glb.gz",
+        "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595"
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d"
+      },
+      {
+        "file": "model-context.glb.gz",
+        "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104"
+      },
+      {
+        "file": "model-context-low.glb.gz",
+        "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263"
+      },
+      {
+        "file": "model-platform.glb.gz",
+        "sha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138"
+      },
+      {
+        "file": "model-platform-low.glb.gz",
+        "sha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e"
+      },
+      {
+        "file": "model-trains.glb.gz",
+        "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254"
+      },
+      {
+        "file": "model-trains-low.glb.gz",
+        "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d"
+      }
+    ]
   }
 }

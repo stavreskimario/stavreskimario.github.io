@@ -1,0 +1,68 @@
+{
+  "status": "PASS exact56face partition prepared; primaryreceiver must append once before use",
+  "variants": [
+    {
+      "quality": "full",
+      "input": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+        "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+        "bytes": 6959153
+      },
+      "output": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse.glb.gz",
+        "sha256": "436ad61297d887f3a4e6166d9abab3f8c6e7b0a0c1e20ce610a8922e240dcb03",
+        "bytes": 7005201
+      },
+      "status": "PASS originalBIN+PBR+nodes+scene unchanged; exactly56ownedfaceindices removed",
+      "modified": [
+        {
+          "node": 9,
+          "primitive": 0,
+          "removedTriangles": 52,
+          "allRetainedIndicesInOriginalOrder": true
+        },
+        {
+          "node": 24,
+          "primitive": 1,
+          "removedTriangles": 4,
+          "allRetainedIndicesInOriginalOrder": true
+        }
+      ],
+      "totalRemoved": 56,
+      "originalBinPrefixExact": true,
+      "allOldMaterialAndTextureBindingsExact": true
+    },
+    {
+      "quality": "low",
+      "input": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+        "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+        "bytes": 6648546
+      },
+      "output": {
+        "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse-low.glb.gz",
+        "sha256": "29f63c0fafb385a0a8c2ae95a57cc37a4b8e50c196751382552d301a48ad89a0",
+        "bytes": 6695175
+      },
+      "status": "PASS originalBIN+PBR+nodes+scene unchanged; exactly56ownedfaceindices removed",
+      "modified": [
+        {
+          "node": 9,
+          "primitive": 0,
+          "removedTriangles": 52,
+          "allRetainedIndicesInOriginalOrder": true
+        },
+        {
+          "node": 24,
+          "primitive": 1,
+          "removedTriangles": 4,
+          "allRetainedIndicesInOriginalOrder": true
+        }
+      ],
+      "totalRemoved": 56,
+      "originalBinPrefixExact": true,
+      "allOldMaterialAndTextureBindingsExact": true
+    }
+  ],
+  "qualification": "No boundary triangulation or geometry/UV/normal edits. Only the2declared old primitive index accessors change; original56triangles replaced by source module once. Retainedpair is intentionally incomplete until newfinish is added."
+}

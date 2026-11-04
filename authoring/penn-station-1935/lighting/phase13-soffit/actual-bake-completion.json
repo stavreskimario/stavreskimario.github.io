@@ -1,0 +1,51 @@
+{
+  "status": "PASS actual independent floor4096/128 Metal bake; all frozen input pins exact",
+  "sourceSha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+  "packetSha256": "33b05e7e57c496358488f98b92bda317157cfa354fceb2f3ab9e211229cf0e74",
+  "actualDevice": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "elapsedSeconds": 63.006650791998254,
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 1.0074355602264404,
+    "mean": 0.027271002531051636,
+    "coveredPixels": 5288173
+  },
+  "minimumFloorPixelsPerMetre": 60.13264562615617,
+  "binaryArchivesDisabled": true,
+  "outputs": {
+    "actual-prebake-acceptance.json": {
+      "sha256": "172714e58a35974574e4ac57bd9413cd1082df324f85d792b181b5c8f965ae67",
+      "bytes": 13282
+    },
+    "lighting-concourse-exit-soffit-ao.png": {
+      "sha256": "5d426d68403580b05817702d7820426185edf6ce1ff9c917b98966d9b98bb539",
+      "bytes": 1453518
+    },
+    "lighting-concourse-exit-soffit-sky.hdr": {
+      "sha256": "9034a717b15e84d220e43231de2a8a480ec045e0ddb04e91f33c374f0aeff010",
+      "bytes": 20257724
+    },
+    "lighting-concourse-exit-soffit-sky.png": {
+      "sha256": "96d805dc903b256d006dfeb52a4c89f8e1bf490ff5ee3a782425574d1a21d114",
+      "bytes": 8945228
+    },
+    "lighting-concourse-exit-soffit-sky-low.png": {
+      "sha256": "dabcd84bb47f7b70057fe74d2d1c8381b9c9247e19045c3af10e92ce21414296",
+      "bytes": 90347
+    },
+    "lighting-concourse-exit-soffit.json": {
+      "sha256": "9d112fd5aa6804899a9220771b98eb13c914726c517571c37f3ea851b78e6f98",
+      "bytes": 33485
+    },
+    "model-concourse-exit-soffit.glb": {
+      "sha256": "b5e46460cb8d646199d6c9c75d66e49ddd3c49079ced29b8cefef33b5d15624f",
+      "bytes": 1464104
+    }
+  }
+}

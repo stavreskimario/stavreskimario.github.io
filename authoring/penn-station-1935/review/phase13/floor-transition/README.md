@@ -1,0 +1,17 @@
+# Independent floor delivery replay
+
+Copy the three portable helpers and frozen map gzip into the locations chosen below. This consumer never executes the producer helper and never trusts reported PASS flags.
+
+`verify-floor-delivery-transform.cjs` depends on `replay-floor-transition.cjs` in the same directory. `repository-floor-delivery-adapter.cjs` is an optional ready-to-use repository adapter; keep it beside those helpers. The adapter expects the small frozen map at `authoring/penn-station-1935/lighting/phase13-floor/transition/402-floor-world-uv-map.json.gz`. Its decoded SHA is hard-pinned in the independent consumer. No new 9.2MB raw GLB copy is required.
+
+Call `verifyRepositoryFloorDelivery({record, repositoryDirectory, assetsDirectory, sharp, THREE, mountedDocument})`, supplying the actual NodeIO/Meshopt-decoded full platform document from the current model validation. It returns `{report, expectedRGB:{full:Buffer,low:Buffer}}`. Save only `report` as JSON. For the one known transformed floor derivative, `verifyDenoiseDerivative` can compare the actual delivered WebP RGB against the returned expected buffer. Every other derivative continues the existing exact original source-PNG comparison.
+
+The adapter maps the producer's original absolute input descriptors onto fixed current repository files. It reads the original physical PNGs and original physical denoise JSON, canonical retained source partitions and actual delivered WebPs. Control and map gzip are decoded and hash-checked. The runtime record with only `deliveryTransform` removed must deep-equal the retained original physical record, SHA7286ce7b… . Raw/denoised HDR provenance and full source/statistics checks remain separate and unchanged.
+
+For both native4096 and512 variants, all402 triangles are bound to the independently frozen actual mesh's oriented P/N/UV0/UV1 corners, then to canonical original source-owned corners and legacy UV. Track-base legacy scale1 and platform-surface scale2 are enforced. The consumer independently rasterizes the declared bounded smoothstep weights and mixes scene-linear radiance before sRGB quantization.
+
+Padding seeds are every **transformed covered pixel with spatialWeight < 1**, including a pixel whose quantized bytes happen to remain equal to physical. The queue is row-major, neighbors left/right/up/down, first arrival, uncovered-only, radius4/full and1/low. The roof pixels are separately checked against original physical bytes. Apron outer-edge geometry is checked to have new-state weight zero; this analytic boundary condition is distinguished from finite texture resampling.
+
+Every delivered WebP RGB byte is compared against independent replay. Replayed RGB is also encoded with pinned sharp PNG compressionLevel6 and its exact PNG byte hash must equal the recorded source-checkpoint PNG hash. Current-tree derived PNGs are optional only because this check reproduces their exact bytes; if present, their byte hash must also match. Thus lossless Git-backed archival of those generated PNGs does not skip any delivery replay or physical-source check.
+
+`actual-every-pixel-replay.json` records the real proof with current derived PNGs. `actual-every-pixel-replay-png-absent.json` records the same proof with both optional PNG reads intentionally returning ENOENT: actual WebP remains mandatory, source PNGs remain present, and every replayed sample/hash still passes. These are CPU proofs against candidate-v3, not a native walking walkthrough.

@@ -1,0 +1,25 @@
+{
+  "status": "PASS meaningful independent-consumer corruption checks",
+  "cases": [
+    {
+      "case": "physical-record-change",
+      "status": "PASS rejected deliberately corrupted delivery despite updated producer metadata",
+      "reason": "Runtime physical denoise record is unchanged except deliveryTransform"
+    },
+    {
+      "case": "arbitrary-world-uv-mask",
+      "status": "PASS rejected deliberately corrupted delivery despite updated producer metadata",
+      "reason": "Control newUV equals actual mesh"
+    },
+    {
+      "case": "wrong-trackbase-radiance-scale",
+      "status": "PASS rejected deliberately corrupted delivery despite updated producer metadata",
+      "reason": "Expected values to be strictly equal:"
+    },
+    {
+      "case": "one-underroof-webp-byte-change",
+      "status": "PASS rejected deliberately corrupted delivery despite updated producer metadata",
+      "reason": "Every actual under-roof RGB sample retains the original physical denoise byte"
+    }
+  ]
+}

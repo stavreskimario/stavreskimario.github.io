@@ -1,5 +1,15 @@
 # Pennsylvania Station: evidence and reconstruction register
 
+## Four western bridge bays and the lower exit ceiling — 4 November 2026
+
+The original ASCE bridge sections support the 100 ft avenue width, eleven column stations at nominal 10 ft spacing, built-up girders and buried bearings. Four connected reconstructed bays now use five nonuniform rows and 55 supported columns. Two source row observations were fitted to the current track gaps by approximately 0.41 m and 0.53 m. Exact fabrication, foundation depth, absolute registration and survival of every opening-era detail into 1935 remain qualified; this finite section is not the entire 525 ft bridge. The source packet separates the measured source observations from adopted fits.
+
+Actual floor surfaces beneath this section receive fresh static illumination and a local reflection capture. The exterior apron blends this new illumination into the older surrounding bake; that join is a rendering transition between two lighting states, not a separately measured historic light field. Surface texture and walking geometry are preserved. Wider platform enclosure and coherent lighting across the entire railway remain unfinished.
+
+The lower 33rd Street exit-ceiling correction reuses 56 existing downward faces: 52 from the older concourse slab and four from the exit. It retains their openings, heights and geometry. Original typical sections and period photographs support a restrained plain mineral appearance, while the precise paint, plaster or concrete finish, hue and 1935 condition remain unknown. A shared pale matte finish and common illumination remove the former material contrast; no new roof infill is inferred from that visual seam.
+
+Primary evidence remains the [1910 ASCE engineering papers](https://archive.org/details/transactionsofam69amer), with exact source crops, scope and reconstruction qualifications retained in the Phase13 authoring review. Modern material references and authored lighting remain appearance interpretations.
+
 Research date: 29 October 2026. Historical target: 1935–1940. **The target period has not yet been validated throughout the model.** The principal dimensional evidence records the original station around its opening, while several photographs establish later conditions. This is a phased architectural reconstruction study, not a surveyed replica or completed photorealistic reconstruction.
 
 ## First eight arrivals: current scope
