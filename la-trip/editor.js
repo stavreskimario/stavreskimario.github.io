@@ -6,6 +6,9 @@
  const trip = 'la-december-2026';
  const clone = value => JSON.parse(JSON.stringify(value));
  const defaults = clone(days), defaultPlaces = clone(places), defaultBookings = clone(reservations);
+ // Earlier device-local plans can still reference previous itinerary locations.
+ const itineraryRevision = 2;
+ const legacySanFranciscoPlace = {id:'sf',name:'San Francisco',full:'San Francisco · Ferry Building',area:'Previous itinerary',address:'Ferry Building, Embarcadero, San Francisco, CA',category:'SAVED LEGACY LOCATION',query:'Ferry Building San Francisco California',source:'https://www.sftravel.com/article/everything-you-need-to-know-about-san-franciscos-ferry-building',day:null};
  const types = {plane:'Flight',car:'Transport',hotel:'Hotel',ball:'Game',film:'Studio / film',sun:'Explore',coffee:'Food & drink',bag:'Shopping / packing',pin:'Place',ticket:'Tickets',calendar:'Event',moon:'Evening',spark:'Highlight',users:'Meet up',route:'Journey',clock:'Reminder'};
  const dialog = $('#itinerary-editor'), form = $('#itinerary-form');
  let overrides = [], previous = null, editor = null, imported = null;
@@ -65,7 +68,11 @@
  }
  function validBackup(data) {
   if (!data || ![1,2].includes(data.version) || data.trip !== trip || !Array.isArray(data.days) || data.days.length > defaults.length) throw new Error('Choose a valid LA trip backup (version 1 or 2).');
-  const mapRecords=records(data.version===1?defaultPlaces:data.places,validPlace,'locations');
+  const olderPlaces = data.version===1 ? [...defaultPlaces,legacySanFranciscoPlace] : data.places;
+  const migratedPlaces = data.version===2 && (data.itineraryRevision ?? 0)<itineraryRevision && Array.isArray(olderPlaces)
+   ? [...olderPlaces,...defaultPlaces.filter(p=>!olderPlaces.some(existing=>existing?.id===p.id))]
+   : olderPlaces;
+  const mapRecords=records(migratedPlaces,validPlace,'locations');
   const bookingRecords=records(data.version===1?defaultBookings:data.reservations,value=>validBooking(value,mapRecords),'bookings');
   const dates = new Set();
   const dayRecords = data.days.map(record => {
@@ -90,7 +97,7 @@
   }
   return {days:dayRecords,places:mapRecords,reservations:bookingRecords};
  }
- const payload = (records,collections={places,reservations}) => ({version:2,trip,days:records,places:clone(collections.places),reservations:clone(collections.reservations)});
+ const payload = (records,collections={places,reservations}) => ({version:2,trip,itineraryRevision,days:records,places:clone(collections.places),reservations:clone(collections.reservations)});
  function dayRecord(day) {
   const {date,title,label,description,noteTitle,note,map,events} = day;
   return clone({date,title,label,description,noteTitle,note,map,events});
@@ -101,6 +108,7 @@
   days.forEach((day,i) => Object.assign(day,clone(defaults[i]),clone(state.days.find(r => r.date === day.date) || {})));
   selectDay(selectedDay);renderReservations();renderReservationPeek();renderPlaces();renderPlacesPeek();
   selectPlace(place(selectedPlace)?selectedPlace:places[0]?.id);
+  $('#published-itinerary-update').hidden = overrides.length===0;
   refreshOptions();refreshMapPreference();
  }
  function storageNotice() {
@@ -345,6 +353,13 @@
    (document.body.dataset.view==='reservations'?$('#add-booking'):document.body.dataset.view==='maps'?$('#add-location'):$('#add-event')).focus({preventScroll:true});
   } catch(e) { announce(e.message); }
  }));
+ $('#use-revised-itinerary').addEventListener('click',() => {
+  if (!window.confirm('Replace all locally edited day plans with the revised 20–28 December road-trip itinerary? Your bookings and saved map locations will be kept. Download a backup first if you want to retain previous day edits.')) return;
+  try {
+   const restoredPlaces=[...places,...defaultPlaces.filter(p=>!places.some(existing=>existing.id===p.id))];
+   commit([],'Revised itinerary applied; bookings and map locations kept.',selectedDay,{places:restoredPlaces,reservations});
+  } catch(error) { announce(error.message); }
+ });
  $('#export-itinerary').addEventListener('click',() => {
   const content = {...payload(days.map(dayRecord)),exportedAt:new Date().toISOString()};
   const url = URL.createObjectURL(new Blob([JSON.stringify(content,null,2)],{type:'application/json'}));

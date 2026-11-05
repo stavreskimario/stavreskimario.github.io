@@ -21,13 +21,193 @@ function injectIcons(root=document){root.querySelectorAll('[data-icon]').forEach
 function esc(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 const $=s=>document.querySelector(s);
 const places=[
-{id:'hotel',name:'The Westin Bonaventure',full:'The Westin Bonaventure Hotel & Suites',area:'Downtown Los Angeles',address:'404 South Figueroa Street, Los Angeles, CA 90071',category:'YOUR HOME BASE · BOOKED',query:'The Westin Bonaventure Hotel 404 South Figueroa Street Los Angeles',source:'https://www.marriott.com/en-us/hotels/laxbw-the-westin-bonaventure-hotel-and-suites-los-angeles/overview/',day:20},
-{id:'warner',name:'Warner Bros. Studio Tour',full:'Warner Bros. Studio Tour Hollywood',area:'Burbank · Proposed 21 Dec',address:'3400 Warner Boulevard, Burbank, CA 91505',category:'STUDIO DAY · PROPOSED',query:'Warner Bros Studio Tour Hollywood 3400 Warner Boulevard Burbank',source:'https://www.wbstudiotour.com/info/directions/',day:21},
-{id:'universal',name:'Universal Studios',full:'Universal Studios Hollywood',area:'Universal City · Proposed 22 Dec',address:'100 Universal City Plaza, Universal City, CA 91608',category:'THEME PARK · PROPOSED',query:'Universal Studios Hollywood 100 Universal City Plaza',source:'https://www.universalstudioshollywood.com/web/en/us/plan-your-visit/directions-parking',day:22},
-{id:'intuit',name:'Intuit Dome',full:'Intuit Dome',area:'Inglewood · 23 Dec',address:'3930 West Century Boulevard, Inglewood, CA 90303',category:'CLIPPERS–WARRIORS · IN YOUR ITINERARY',query:'Intuit Dome 3930 West Century Boulevard Inglewood',source:'https://www.intuitdome.com/plan-your-visit/how-to-get-here',day:23},
-{id:'crypto',name:'Crypto.com Arena',full:'Crypto.com Arena',area:'Downtown LA · 25 Dec',address:'1111 South Figueroa Street, Los Angeles, CA 90015',category:'LAKERS–76ERS · IN YOUR ITINERARY',query:'Crypto.com Arena 1111 South Figueroa Street Los Angeles',source:'https://www.cryptoarena.com/directions',day:25},
-{id:'sf',name:'San Francisco',full:'San Francisco · Ferry Building',area:'Day trip · Proposed 26 Dec',address:'Ferry Building, Embarcadero, San Francisco, CA',category:'DAY TRIP BY AIR · PROPOSED',query:'Ferry Building San Francisco California',source:'https://www.sftravel.com/article/everything-you-need-to-know-about-san-franciscos-ferry-building',day:26},
-{id:'santamonica',name:'Santa Monica',full:'Santa Monica Pier & beach',area:'Coast day · Proposed 27 Dec',address:'Santa Monica Pier, Santa Monica, CA',category:'COAST DAY · PROPOSED',query:'Santa Monica Pier California',source:'https://www.santamonica.com/things-to-do/visiting-santa-monica-pier/',day:27}
+ {
+  "id": "hotel",
+  "name": "The Westin Bonaventure",
+  "full": "The Westin Bonaventure Hotel & Suites",
+  "area": "Downtown Los Angeles",
+  "address": "404 South Figueroa Street, Los Angeles, CA 90071",
+  "category": "YOUR HOME BASE · BOOKED",
+  "query": "The Westin Bonaventure Hotel 404 South Figueroa Street Los Angeles",
+  "source": "https://www.marriott.com/en-us/hotels/laxbw-the-westin-bonaventure-hotel-and-suites-los-angeles/overview/",
+  "day": 20
+ },
+ {
+  "id": "warner",
+  "name": "Warner Bros. Studio Tour",
+  "full": "Warner Bros. Studio Tour Hollywood",
+  "area": "Burbank · Optional 27 Dec",
+  "address": "3400 Warner Boulevard, Burbank, CA 91505",
+  "category": "OPTIONAL STUDIO VISIT",
+  "query": "Warner Bros Studio Tour Hollywood 3400 Warner Boulevard Burbank",
+  "source": "https://www.wbstudiotour.com/info/directions/",
+  "day": 27
+ },
+ {
+  "id": "universal",
+  "name": "Universal Studios",
+  "full": "Universal Studios Hollywood",
+  "area": "Universal City · Planned 21 Dec",
+  "address": "100 Universal City Plaza, Universal City, CA 91608",
+  "category": "THEME PARK · PLANNED",
+  "query": "Universal Studios Hollywood 100 Universal City Plaza",
+  "source": "https://www.universalstudioshollywood.com/web/en/us/plan-your-visit/directions-parking",
+  "day": 21
+ },
+ {
+  "id": "intuit",
+  "name": "Intuit Dome",
+  "full": "Intuit Dome",
+  "area": "Inglewood · 23 Dec",
+  "address": "3930 West Century Boulevard, Inglewood, CA 90303",
+  "category": "CLIPPERS–WARRIORS · CONFIRMED",
+  "query": "Intuit Dome 3930 West Century Boulevard Inglewood",
+  "source": "https://www.intuitdome.com/plan-your-visit/how-to-get-here",
+  "day": 23
+ },
+ {
+  "id": "crypto",
+  "name": "Crypto.com Arena",
+  "full": "Crypto.com Arena",
+  "area": "Downtown LA · 25 Dec",
+  "address": "1111 South Figueroa Street, Los Angeles, CA 90015",
+  "category": "LAKERS–76ERS · CONFIRMED",
+  "query": "Crypto.com Arena 1111 South Figueroa Street Los Angeles",
+  "source": "https://www.cryptoarena.com/directions",
+  "day": 25
+ },
+ {
+  "id": "hollywood",
+  "name": "Hollywood Boulevard",
+  "full": "Hollywood Walk of Fame",
+  "area": "Hollywood · 20 Dec",
+  "address": "Hollywood Boulevard and Highland Avenue, Los Angeles, CA",
+  "category": "HOLLYWOOD · DAY ONE",
+  "query": "Hollywood Walk of Fame Hollywood Boulevard Los Angeles",
+  "source": "https://walkoffame.com/",
+  "day": 20
+ },
+ {
+  "id": "beverly",
+  "name": "Beverly Hills",
+  "full": "Beverly Hills & Rodeo Drive",
+  "area": "Beverly Hills · 20 Dec",
+  "address": "Rodeo Drive, Beverly Hills, CA 90210",
+  "category": "BEVERLY HILLS · DAY ONE",
+  "query": "Rodeo Drive Beverly Hills California",
+  "source": "https://www.lovebeverlyhills.com/",
+  "day": 20
+ },
+ {
+  "id": "lajolla",
+  "name": "La Jolla Cove",
+  "full": "La Jolla Cove",
+  "area": "San Diego coast · 22 Dec",
+  "address": "1100 Coast Boulevard, La Jolla, CA 92037",
+  "category": "SAN DIEGO ROAD TRIP",
+  "query": "La Jolla Cove San Diego California",
+  "source": "https://www.sandiego.org/explore/coastal/la-jolla.aspx",
+  "day": 22
+ },
+ {
+  "id": "balboa",
+  "name": "Balboa Park",
+  "full": "Balboa Park",
+  "area": "San Diego · 22 Dec",
+  "address": "1549 El Prado, San Diego, CA 92101",
+  "category": "SAN DIEGO ROAD TRIP",
+  "query": "Balboa Park San Diego California",
+  "source": "https://balboapark.org/",
+  "day": 22
+ },
+ {
+  "id": "coronado",
+  "name": "Coronado",
+  "full": "Coronado Island & beach",
+  "area": "San Diego · Optional 22 Dec",
+  "address": "Coronado Beach, Coronado, CA 92118",
+  "category": "OPTIONAL SAN DIEGO STOP",
+  "query": "Coronado Beach San Diego California",
+  "source": "https://www.sandiego.org/explore/coastal/coronado.aspx",
+  "day": 22
+ },
+ {
+  "id": "joshua",
+  "name": "Joshua Tree",
+  "full": "Joshua Tree National Park",
+  "area": "High Desert · 24 Dec",
+  "address": "Joshua Tree National Park, California",
+  "category": "DESERT ROAD TRIP",
+  "query": "Joshua Tree National Park Hidden Valley trailhead",
+  "source": "https://www.nps.gov/jotr/index.htm",
+  "day": 24
+ },
+ {
+  "id": "palmsprings",
+  "name": "Palm Springs",
+  "full": "Downtown Palm Springs",
+  "area": "Coachella Valley · 24 Dec",
+  "address": "Palm Canyon Drive, Palm Springs, CA",
+  "category": "DESERT ROAD TRIP",
+  "query": "Downtown Palm Springs Palm Canyon Drive California",
+  "source": "https://visitpalmsprings.com/",
+  "day": 24
+ },
+ {
+  "id": "malibu",
+  "name": "Malibu",
+  "full": "Malibu Pier & Pacific Coast Highway",
+  "area": "Coastal drive · 26 Dec",
+  "address": "23000 Pacific Coast Highway, Malibu, CA",
+  "category": "SANTA BARBARA ROAD TRIP",
+  "query": "Malibu Pier California",
+  "source": "https://www.visitcalifornia.com/places-to-visit/malibu/",
+  "day": 26
+ },
+ {
+  "id": "santabarbara",
+  "name": "Santa Barbara",
+  "full": "Santa Barbara County Courthouse",
+  "area": "Santa Barbara · 26 Dec",
+  "address": "1100 Anacapa Street, Santa Barbara, CA 93101",
+  "category": "SANTA BARBARA ROAD TRIP",
+  "query": "Santa Barbara County Courthouse 1100 Anacapa Street",
+  "source": "https://santabarbaraca.com/",
+  "day": 26
+ },
+ {
+  "id": "griffith",
+  "name": "Griffith Observatory",
+  "full": "Griffith Observatory",
+  "area": "Los Feliz · Optional 27 Dec",
+  "address": "2800 East Observatory Road, Los Angeles, CA 90027",
+  "category": "OPTIONAL LA SIGHTSEEING",
+  "query": "Griffith Observatory Los Angeles",
+  "source": "https://griffithobservatory.org/",
+  "day": 27
+ },
+ {
+  "id": "santamonica",
+  "name": "Santa Monica",
+  "full": "Santa Monica Pier & beach",
+  "area": "Final day · 28 Dec",
+  "address": "Santa Monica Pier, Santa Monica, CA",
+  "category": "FINAL COAST DAY · WEATHER FLEXIBLE",
+  "query": "Santa Monica Pier California",
+  "source": "https://www.santamonica.com/things-to-do/visiting-santa-monica-pier/",
+  "day": 28
+ },
+ {
+  "id": "venice",
+  "name": "Venice Beach",
+  "full": "Venice Beach Boardwalk",
+  "area": "Coastal option · 28 Dec",
+  "address": "Venice Beach Boardwalk, Los Angeles, CA",
+  "category": "OPTIONAL FINAL DAY STOP",
+  "query": "Venice Beach Boardwalk Los Angeles",
+  "source": "https://www.discoverlosangeles.com/things-to-do/venice-beach",
+  "day": 28
+ }
 ];
 const place=id=>places.find(p=>p.id===id);
 let selectedPlace='hotel';
@@ -72,52 +252,441 @@ function renderMapCard(id,p){
  el.hidden=!p;
  if(!p){el.removeAttribute('src');el.dataset.placeId='';if(id==='#day-map')$('#day-map-open').hidden=true;return}
  if(id==='#day-map')$('#day-map-open').hidden=false;
- const src=`https://maps.google.com/maps?q=${encodeURIComponent(p.query)}&z=${p.id==='sf'?13:14}&output=embed`;
+ const src=`https://maps.google.com/maps?q=${encodeURIComponent(p.query)}&z=${p.id==='santabarbara'?13:14}&output=embed`;
  if(el.getAttribute('src')!==src)el.setAttribute('src',src);
  el.title=`Google Maps: ${p.full}`;el.dataset.placeId=p.id;
  if(id==='#day-map')setMapLink('#day-map-open',p.query);
 }
 const statuses={booked:'Booked',plan:'In itinerary',proposed:'Proposed'};
 const days=[
-{date:20,weekday:'Sun',label:'Arrive',title:'Hello, Los Angeles',description:'A travel day, a hotel check-in and an easy first evening. Exact flight and arrival times are still to add.',map:'hotel',noteTitle:'Land. Settle in. Exhale.',note:'Keep the first evening open. Your Westin stay starts today, so there’s no need to rush into sightseeing.',events:[
-{time:'Time to confirm · MEL local time',title:'Melbourne → Los Angeles',location:'United Airlines · UA99',status:'plan',type:'plane',note:'Depart Melbourne on 20 December. Flight times, terminal and booking reference to add.',reservation:'outbound'},
-{time:'After arrival',title:'LAX → your hotel',location:'Airport transfer',status:'proposed',type:'car',note:'Transfer method and timing to arrange once the arrival details are confirmed.',map:'hotel'},
-{time:'20 December · check-in time to confirm',title:'Check in at The Westin Bonaventure',location:'Downtown LA · 8 nights',status:'booked',type:'hotel',note:'Your stay is booked for 20–28 December, for two guests.',map:'hotel',reservation:'hotel'}]},
-{date:21,weekday:'Mon',label:'Warner Bros.',title:'Behind the scenes',description:'A proposed studio day in Burbank. Choose the tour and start time once tickets are confirmed.',map:'warner',noteTitle:'A day for movie magic',note:'Warner Bros. has its own day in the plan. Keep the rest of the afternoon flexible around your eventual tour slot.',events:[
-{time:'Morning · proposed',title:'Warner Bros. Studio Tour Hollywood',location:'Burbank',status:'proposed',type:'film',note:'Placeholder for your studio visit. Tour type, tickets and start time are not booked.',map:'warner',source:'https://www.wbstudiotour.com/'},
-{time:'Afternoon · flexible',title:'Lunch & an easy afternoon',location:'Burbank / Los Angeles',status:'proposed',type:'coffee',note:'Leave room to linger after the studio tour. Lunch and any extra stops can be added later.'},
-{time:'Evening · flexible',title:'Back to your home base',location:'The Westin Bonaventure',status:'proposed',type:'hotel',note:'An unhurried evening before a full Universal day.',map:'hotel'}]},
-{date:22,weekday:'Tue',label:'Universal',title:'A full day at Universal',description:'Universal gets a day of its own. This date is a placeholder until you choose tickets and check park hours.',map:'universal',noteTitle:'Keep the whole day free',note:'There are no other fixed plans today. Ticket choice, holiday hours and transport are still to arrange.',events:[
-{time:'Full day · proposed',title:'Universal Studios Hollywood',location:'Universal City',status:'proposed',type:'film',note:'Your theme park placeholder. Admission and operating hours are not yet confirmed.',map:'universal',source:'https://www.universalstudioshollywood.com/web/en/us'},
-{time:'After the park · optional',title:'Dinner around CityWalk',location:'Universal CityWalk',status:'proposed',type:'coffee',note:'An optional nearby dinner before heading back. No restaurant reservation yet.',map:'universal',source:'https://www.universalstudioshollywood.com/web/en/us/things-to-do/lands/citywalk'}]},
-{date:23,weekday:'Wed',label:'Clippers',title:'City time. Then courtside.',description:'Keep the daytime flexible and leave space to get to Inglewood for Clippers–Warriors.',map:'intuit',noteTitle:'Your first NBA night',note:'Clippers–Warriors is in the itinerary. Add the tickets, section and entry details when you have them.',events:[
-{time:'Daytime · flexible',title:'Browse the Fashion District',location:'Downtown Los Angeles',status:'proposed',type:'bag',note:'An optional shopping window. Specific stores and opening hours can be added later.',source:'https://fashiondistrict.org/shop/shopping-tips',query:'Los Angeles Fashion District'},
-{time:'Before the game',title:'Head to Intuit Dome',location:'Downtown LA → Inglewood',status:'proposed',type:'car',note:'Transport is still to arrange. Check live traffic and leave time for arena entry.',map:'intuit'},
-{time:'7:30 pm · PST',title:'LA Clippers vs Golden State Warriors',location:'Intuit Dome · Inglewood',status:'plan',type:'ball',note:'23 December, using the time from your itinerary. Ticket and seat details to add.',map:'intuit',reservation:'clippers',highlight:true}]},
-{date:24,weekday:'Thu',label:'Explore LA',title:'Christmas Eve, at your pace',description:'An open day in Los Angeles. A little exploring, a little downtime, and no fixed reservations.',map:'hotel',noteTitle:'A flexible Christmas Eve',note:'Keep today light. Choose the stops and a dinner reservation after holiday opening hours are known.',events:[
-{time:'Morning · flexible',title:'Slow start in Downtown LA',location:'Around your hotel',status:'proposed',type:'coffee',note:'Breakfast and a wander. Exact cafés and stops are still open.',map:'hotel'},
-{time:'Afternoon · flexible',title:'A little more Los Angeles',location:'Neighbourhood to choose',status:'proposed',type:'sun',note:'A free window for sightseeing, shopping or relaxing. Add a confirmed plan here later.'},
-{time:'Evening · proposed',title:'Christmas Eve dinner',location:'Restaurant to choose',status:'proposed',type:'coffee',note:'No reservation yet. Pick a venue and check holiday service before locking it in.'}]},
-{date:25,weekday:'Fri',label:'Lakers',title:'Christmas, courtside',description:'The anchor of Christmas Day: Lakers–76ers at Crypto.com Arena. Keep the surrounding plans easy.',map:'crypto',noteTitle:'The Christmas highlight',note:'Your calendar time is 2:00 pm in Los Angeles. Seats and ticket details can be added when ready.',events:[
-{time:'Morning · flexible',title:'An easy Christmas morning',location:'Downtown LA',status:'proposed',type:'coffee',note:'Breakfast and time to get ready. Christmas dining plans are still to confirm.'},
-{time:'2:00 pm · PST',title:'Los Angeles Lakers vs Philadelphia 76ers',location:'Crypto.com Arena',status:'plan',type:'ball',note:'25 December, matching your calendar plan. Ticket, seat and entry details to add.',map:'crypto',reservation:'lakers',highlight:true},
-{time:'After the game · flexible',title:'Christmas dinner',location:'Restaurant to choose',status:'proposed',type:'coffee',note:'Keep the evening open until the game and dinner arrangements are final.'}]},
-{date:26,weekday:'Sat',label:'SF day trip',title:'A San Francisco detour',description:'A proposed same-day flight trip, returning to your LA hotel that night. The date depends on workable flights.',map:'sf',noteTitle:'A flight day, not a road trip',note:'This is only a placeholder. Confirm outward and return flights, airport transfers and enough city time before booking.',events:[
-{time:'Early departure · target only',title:'Fly Los Angeles → San Francisco',location:'Airports and flights to choose',status:'proposed',type:'plane',note:'No flight has been selected or booked. An early departure would make the day trip more useful.'},
-{time:'Daytime · proposed',title:'The Ferry Building & waterfront',location:'San Francisco',status:'proposed',type:'sun',note:'A simple starting point for city time. Final stops depend on flight times and local conditions.',map:'sf',source:'https://www.sftravel.com/article/everything-you-need-to-know-about-san-franciscos-ferry-building'},
-{time:'Evening return · target only',title:'Fly back to Los Angeles',location:'Return to The Westin Bonaventure',status:'proposed',type:'plane',note:'Same-day return required for this draft. Return flight and airport transfers still to arrange.',map:'hotel'}]},
-{date:27,weekday:'Sun',label:'The coast',title:'One last California afternoon',description:'A proposed coastal day before you leave. Keep it flexible for weather, energy and any last-minute plans.',map:'santamonica',noteTitle:'Leave room for a favourite',note:'This is an open day. Swap the coast for anything you want to revisit, then leave some time to pack.',events:[
-{time:'Daytime · proposed',title:'Santa Monica Pier & the beach',location:'Santa Monica',status:'proposed',type:'sun',note:'An optional coastal wander and lunch. No fixed time or reservation.',map:'santamonica',source:'https://www.santamonica.com/things-to-do/visiting-santa-monica-pier/'},
-{time:'Evening · flexible',title:'Dinner, then pack for home',location:'Downtown Los Angeles',status:'proposed',type:'bag',note:'Keep your flight essentials and the next day’s clothes handy.',map:'hotel'}]},
-{date:28,weekday:'Mon',label:'Fly home',title:'Until next time, LA',description:'Check out of the Westin and fly home on DL11. Departure time and Melbourne arrival date are still to confirm.',map:'hotel',noteTitle:'One last check',note:'The 28 December date is your LA departure date in this plan. Add the Melbourne arrival date from your ticket.',events:[
-{time:'28 December · time to confirm',title:'Check out of The Westin Bonaventure',location:'Your eight-night stay ends',status:'booked',type:'hotel',note:'Check-out time and any luggage storage arrangements are still to add.',map:'hotel',reservation:'hotel'},
-{time:'Before your flight',title:'Hotel → LAX',location:'Airport transfer',status:'proposed',type:'car',note:'Choose transport and departure time once the flight schedule is confirmed.',query:'Los Angeles International Airport LAX'},
-{time:'Time to confirm · LA local time',title:'Los Angeles → Melbourne',location:'Delta Air Lines · DL11',status:'plan',type:'plane',note:'Depart Los Angeles on 28 December. Flight times, booking reference and Melbourne arrival date to add.',reservation:'inbound'}]}
+ {
+  "date": 20,
+  "weekday": "Sun",
+  "label": "Hollywood",
+  "title": "Hollywood, Beverly Hills & Rodeo",
+  "description": "Arrive in Los Angeles, settle into the Westin and spend your first day exploring Hollywood and Beverly Hills at a relaxed pace.",
+  "map": "hollywood",
+  "noteTitle": "Welcome to California.",
+  "note": "Keep things flexible after the long flight; Hollywood and Rodeo Drive are priorities, not timed reservations.",
+  "events": [
+   {
+    "time": "20 December · MEL local time",
+    "title": "Melbourne → Los Angeles",
+    "location": "United Airlines · UA99",
+    "status": "plan",
+    "type": "plane",
+    "note": "Your confirmed travel plan. Check the ticket for departure and arrival times; local dates differ.",
+    "reservation": "outbound"
+   },
+   {
+    "time": "After landing",
+    "title": "LAX → The Westin Bonaventure",
+    "location": "Airport transfer to Downtown LA",
+    "status": "proposed",
+    "type": "car",
+    "note": "Arrange the transfer and luggage drop or check-in before sightseeing.",
+    "map": "hotel"
+   },
+   {
+    "time": "Late morning / afternoon · flexible",
+    "title": "Hollywood Boulevard & Walk of Fame",
+    "location": "Hollywood · Los Angeles",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Stroll Hollywood Boulevard and see the famous landmarks; adjust the timing for arrival and jet lag.",
+    "map": "hollywood"
+   },
+   {
+    "time": "Afternoon · flexible",
+    "title": "Beverly Hills & Rodeo Drive",
+    "location": "Beverly Hills",
+    "status": "proposed",
+    "type": "bag",
+    "note": "Explore the neighbourhood, Rodeo Drive and nearby streets. Shops may close early on Sunday.",
+    "map": "beverly"
+   },
+   {
+    "time": "20 December · check-in time to confirm",
+    "title": "Check in at The Westin Bonaventure",
+    "location": "Downtown LA · 8 nights",
+    "status": "booked",
+    "type": "hotel",
+    "note": "Your stay is booked for 20–28 December, for two guests. Coordinate check-in or luggage storage with sightseeing.",
+    "map": "hotel",
+    "reservation": "hotel"
+   }
+  ]
+ },
+ {
+  "date": 21,
+  "weekday": "Mon",
+  "label": "Universal",
+  "title": "A Hollywood studio adventure",
+  "description": "Make Universal Studios Hollywood your full-day priority. This is your second Hollywood-area day.",
+  "map": "universal",
+  "noteTitle": "Lights. Camera. Action.",
+  "note": "Leave the whole day for rides and the Studio Tour; park hours and admission are still to confirm.",
+  "events": [
+   {
+    "time": "Full day · proposed",
+    "title": "Universal Studios Hollywood",
+    "location": "Universal City",
+    "status": "proposed",
+    "type": "film",
+    "note": "Spend the day at the theme park and take the Studio Tour. Buy tickets separately after checking the day's hours.",
+    "map": "universal",
+    "source": "https://www.universalstudioshollywood.com/web/en/us"
+   },
+   {
+    "time": "Evening · optional",
+    "title": "Dinner at Universal CityWalk",
+    "location": "Universal CityWalk",
+    "status": "proposed",
+    "type": "coffee",
+    "note": "A convenient dinner after the park if energy and opening hours allow.",
+    "map": "universal",
+    "source": "https://www.universalstudioshollywood.com/web/en/us/things-to-do/lands/citywalk"
+   }
+  ]
+ },
+ {
+  "date": 22,
+  "weekday": "Tue",
+  "label": "San Diego",
+  "title": "South to San Diego",
+  "description": "A full day road trip to the San Diego coast, La Jolla and Balboa Park, returning to your LA hotel the same evening.",
+  "map": "lajolla",
+  "noteTitle": "An early start pays off.",
+  "note": "Allow roughly 2.5–3.5 hours each way in favourable traffic, potentially longer. An early Hertz pickup and late return are important.",
+  "events": [
+   {
+    "time": "Early morning · target",
+    "title": "Drive LA → San Diego",
+    "location": "Hertz rental · pickup and return to arrange",
+    "status": "proposed",
+    "type": "car",
+    "note": "Leave early and allow for traffic. Confirm the rental desk's return arrangements before booking.",
+    "query": "La Jolla Cove San Diego California"
+   },
+   {
+    "time": "Morning · proposed",
+    "title": "La Jolla Cove & coast",
+    "location": "La Jolla · San Diego",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Enjoy the coastline and viewpoints; respect local wildlife and beach restrictions.",
+    "map": "lajolla"
+   },
+   {
+    "time": "Midday / afternoon · proposed",
+    "title": "Explore Balboa Park",
+    "location": "San Diego",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Walk around the park's Spanish Colonial Revival buildings and gardens. Confirm individual museum hours.",
+    "map": "balboa"
+   },
+   {
+    "time": "Late afternoon · optional",
+    "title": "Coronado Island",
+    "location": "Coronado · San Diego",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Add Coronado if road traffic and daylight allow, otherwise spend longer at La Jolla or Balboa Park.",
+    "map": "coronado"
+   },
+   {
+    "time": "Evening · target",
+    "title": "Drive back to Los Angeles",
+    "location": "San Diego → Westin Bonaventure",
+    "status": "proposed",
+    "type": "car",
+    "note": "Allow generous time for traffic and confirm late vehicle return or parking.",
+    "map": "hotel"
+   }
+  ]
+ },
+ {
+  "date": 23,
+  "weekday": "Wed",
+  "label": "Clippers",
+  "title": "LA by day. Clippers by night.",
+  "description": "A relaxed city day ahead of the confirmed Clippers–Warriors game in Inglewood.",
+  "map": "intuit",
+  "noteTitle": "Your first NBA night.",
+  "note": "Keep enough time for transfer and entry to Intuit Dome. Ticket details belong in your private booking records.",
+  "events": [
+   {
+    "time": "Daytime · flexible",
+    "title": "Explore Downtown LA or Fashion District",
+    "location": "Downtown Los Angeles",
+    "status": "proposed",
+    "type": "bag",
+    "note": "An optional, unhurried city and shopping window.",
+    "query": "Los Angeles Fashion District",
+    "source": "https://fashiondistrict.org/"
+   },
+   {
+    "time": "Before the game",
+    "title": "Travel to Intuit Dome",
+    "location": "Downtown LA → Inglewood",
+    "status": "proposed",
+    "type": "car",
+    "note": "Check traffic and the arena entry instructions; allow a substantial transfer buffer.",
+    "map": "intuit"
+   },
+   {
+    "time": "7:30 pm · PST",
+    "title": "LA Clippers vs Golden State Warriors",
+    "location": "Intuit Dome · Inglewood",
+    "status": "booked",
+    "type": "ball",
+    "note": "Confirmed game on 23 December. Add your seat and ticket entry details privately.",
+    "map": "intuit",
+    "reservation": "clippers",
+    "highlight": true
+   }
+  ]
+ },
+ {
+  "date": 24,
+  "weekday": "Thu",
+  "label": "The desert",
+  "title": "Joshua Tree & Palm Springs",
+  "description": "A full-day drive east to Joshua Tree National Park and Palm Springs on Christmas Eve.",
+  "map": "joshua",
+  "noteTitle": "Desert roads and winter light.",
+  "note": "Start early: daylight is short in December. Bring layers and water, and check national park conditions and holiday dining hours.",
+  "events": [
+   {
+    "time": "Early morning · target",
+    "title": "Drive to Joshua Tree National Park",
+    "location": "Los Angeles → High Desert",
+    "status": "proposed",
+    "type": "car",
+    "note": "Allow roughly 2.5–3 hours outbound before park driving, plus holiday traffic. Arrange the rental return plan.",
+    "map": "joshua"
+   },
+   {
+    "time": "Morning / midday · proposed",
+    "title": "Explore Joshua Tree",
+    "location": "Joshua Tree National Park",
+    "status": "proposed",
+    "type": "sun",
+    "note": "See the desert boulders and Joshua trees; Hidden Valley is a possible short walk. Check road conditions.",
+    "map": "joshua",
+    "source": "https://www.nps.gov/jotr/index.htm"
+   },
+   {
+    "time": "Afternoon · proposed",
+    "title": "Discover Palm Springs",
+    "location": "Palm Canyon Drive · Palm Springs",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Explore the mid-century streets and enjoy a meal if Christmas Eve opening hours allow.",
+    "map": "palmsprings"
+   },
+   {
+    "time": "Evening · target",
+    "title": "Return to Los Angeles",
+    "location": "Palm Springs → Downtown LA",
+    "status": "proposed",
+    "type": "car",
+    "note": "Leave enough time for the drive and agreed late car return.",
+    "map": "hotel"
+   }
+  ]
+ },
+ {
+  "date": 25,
+  "weekday": "Fri",
+  "label": "Lakers",
+  "title": "Christmas Day, courtside",
+  "description": "The Christmas highlight: your confirmed Lakers–76ers game at Crypto.com Arena, with the day otherwise kept easy.",
+  "map": "crypto",
+  "noteTitle": "A Christmas to remember.",
+  "note": "Your game is set for 2 pm Los Angeles time. Verify the doors and ticket entry details.",
+  "events": [
+   {
+    "time": "Morning · flexible",
+    "title": "Easy Christmas morning",
+    "location": "Downtown Los Angeles",
+    "status": "proposed",
+    "type": "coffee",
+    "note": "Have breakfast and take your time. Holiday dining hours vary."
+   },
+   {
+    "time": "2:00 pm · PST",
+    "title": "Los Angeles Lakers vs Philadelphia 76ers",
+    "location": "Crypto.com Arena",
+    "status": "booked",
+    "type": "ball",
+    "note": "Confirmed game for 25 December. Check your ticket for the final schedule, entrance and seats.",
+    "map": "crypto",
+    "reservation": "lakers",
+    "highlight": true
+   },
+   {
+    "time": "Evening · flexible",
+    "title": "Christmas dinner",
+    "location": "Restaurant to choose",
+    "status": "proposed",
+    "type": "coffee",
+    "note": "Confirm Christmas Day restaurant openings and reserve separately."
+   }
+  ]
+ },
+ {
+  "date": 26,
+  "weekday": "Sat",
+  "label": "Santa Barbara",
+  "title": "The coastal road to Santa Barbara",
+  "description": "Take the scenic route through Malibu and Ventura to Santa Barbara, returning to Los Angeles that evening.",
+  "map": "santabarbara",
+  "noteTitle": "California coast, Spanish streets.",
+  "note": "The scenic route is longer than the direct freeway drive. No Santa Monica stop today; save that for departure day.",
+  "events": [
+   {
+    "time": "Early morning · target",
+    "title": "Drive the Pacific Coast Highway",
+    "location": "Los Angeles → Malibu → Ventura",
+    "status": "proposed",
+    "type": "car",
+    "note": "Allow extra time for scenic coastal roads, traffic and any closures; pick up the rental early.",
+    "map": "malibu"
+   },
+   {
+    "time": "Morning · proposed",
+    "title": "Malibu Pier & the coast",
+    "location": "Malibu",
+    "status": "proposed",
+    "type": "sun",
+    "note": "A short scenic Malibu stop before continuing north. Skip Santa Monica on this road trip.",
+    "map": "malibu"
+   },
+   {
+    "time": "Midday / afternoon · proposed",
+    "title": "Santa Barbara historic centre",
+    "location": "Santa Barbara County Courthouse · State Street",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Explore the Spanish-style architecture, downtown streets and waterfront.",
+    "map": "santabarbara"
+   },
+   {
+    "time": "Late afternoon / evening · target",
+    "title": "Return to Los Angeles",
+    "location": "Santa Barbara → Downtown LA",
+    "status": "proposed",
+    "type": "car",
+    "note": "Allow time for seasonal traffic and late rental return.",
+    "map": "hotel"
+   }
+  ]
+ },
+ {
+  "date": 27,
+  "weekday": "Sun",
+  "label": "Free day",
+  "title": "A little room for Los Angeles",
+  "description": "An intentionally flexible day for missed sights, a possible Warner Bros. tour, Griffith Observatory or simply a slower pace.",
+  "map": "griffith",
+  "noteTitle": "A day that belongs to you.",
+  "note": "Keep 27 December movable: it can become your Santa Monica beach day if 28 December looks wet or flight timing makes the coast impractical.",
+  "events": [
+   {
+    "time": "Morning · optional",
+    "title": "Warner Bros. Studio Tour",
+    "location": "Burbank",
+    "status": "proposed",
+    "type": "film",
+    "note": "An optional studio tour if you want more movie history. Check Sunday schedules and ticket availability.",
+    "map": "warner",
+    "source": "https://www.wbstudiotour.com/"
+   },
+   {
+    "time": "Afternoon · optional",
+    "title": "Griffith Observatory or neighbourhoods",
+    "location": "Griffith Park · Los Angeles",
+    "status": "proposed",
+    "type": "sun",
+    "note": "See the city views or explore Pasadena and favourite LA spots. Choose based on opening hours and the weather.",
+    "map": "griffith"
+   },
+   {
+    "time": "Evening · flexible",
+    "title": "Dinner and pack for departure",
+    "location": "Downtown Los Angeles",
+    "status": "proposed",
+    "type": "bag",
+    "note": "Keep your travel essentials ready. You can also swap today's sightseeing with the Santa Monica plan if the forecast is better."
+   }
+  ]
+ },
+ {
+  "date": 28,
+  "weekday": "Mon",
+  "label": "Santa Monica",
+  "title": "One last day by the Pacific",
+  "description": "Finish your trip in Santa Monica before leaving Los Angeles on DL11. The available coastal time depends on your confirmed flight departure.",
+  "map": "santamonica",
+  "noteTitle": "Beach first. Airport on time.",
+  "note": "Santa Monica is the preferred final-day plan. Confirm DL11 timing, luggage storage and airport transfer before committing to a full day. If the forecast is poor, swap with 27 December.",
+  "events": [
+   {
+    "time": "28 December · time to confirm",
+    "title": "Check out of The Westin Bonaventure",
+    "location": "Downtown Los Angeles",
+    "status": "booked",
+    "type": "hotel",
+    "note": "Arrange luggage storage if needed while you visit the coast.",
+    "map": "hotel",
+    "reservation": "hotel"
+   },
+   {
+    "time": "Morning / early afternoon · flight-dependent",
+    "title": "Santa Monica Pier & Ocean Avenue",
+    "location": "Santa Monica",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Beach, pier and coastal views. Keep the visit short enough to reach LAX comfortably.",
+    "map": "santamonica",
+    "source": "https://www.santamonica.com/things-to-do/visiting-santa-monica-pier/"
+   },
+   {
+    "time": "Only if time permits",
+    "title": "Venice Beach",
+    "location": "Venice · Los Angeles",
+    "status": "proposed",
+    "type": "sun",
+    "note": "Optional extension, only if your flight, traffic and luggage arrangements allow.",
+    "map": "venice"
+   },
+   {
+    "time": "With an airport buffer",
+    "title": "Santa Monica / hotel → LAX",
+    "location": "Los Angeles International Airport",
+    "status": "proposed",
+    "type": "car",
+    "note": "Collect luggage if needed and allow extra time for LAX traffic, check-in and international security.",
+    "query": "Los Angeles International Airport LAX"
+   },
+   {
+    "time": "28 December · time to confirm · LA local",
+    "title": "Los Angeles → Melbourne",
+    "location": "Delta Air Lines · DL11",
+    "status": "plan",
+    "type": "plane",
+    "note": "Return flight on 28 December. Verify the actual departure time on your ticket; Santa Monica must fit around it.",
+    "reservation": "inbound"
+   }
+  ]
+ }
 ];
 // Stable identifiers let saved edits survive day changes and reloads.
 days.forEach(d=>d.events.forEach((e,i)=>e.id=`day-${d.date}-event-${i+1}`));
 let selectedDay=0;
-const dayPresentation={20:{photo:'assets/westin-bonaventure.jpg',position:'50% 62%',label:'Arrive',icon:'plane'},21:{photo:'assets/la-skyline.jpg',position:'23% 50%',label:'Warner Bros.',icon:'film'},22:{photo:'assets/la-skyline.jpg',position:'66% 35%',label:'Universal',icon:'film'},23:{photo:'assets/la-skyline.jpg',position:'25% 60%',label:'Clippers',icon:'ball'},24:{photo:'assets/westin-bonaventure.jpg',position:'55% 40%',label:'Explore LA',icon:'sun'},25:{photo:'assets/la-skyline.jpg',position:'60% 45%',label:'Lakers',icon:'ball'},26:{photo:'assets/golden-gate-sunset.jpg',position:'50% 45%',label:'San Francisco',icon:'plane'},27:{photo:'assets/la-skyline.jpg',position:'83% 70%',label:'The coast',icon:'sun'},28:{photo:'assets/westin-bonaventure.jpg',position:'42% 50%',label:'Fly home',icon:'plane'}};
+const dayPresentation={"20":{"photo":"assets/la-skyline.jpg","position":"23% 50%","label":"Hollywood","icon":"sun"},"21":{"photo":"assets/la-skyline.jpg","position":"66% 35%","label":"Universal","icon":"film"},"22":{"photo":"assets/la-skyline.jpg","position":"76% 58%","label":"San Diego","icon":"car"},"23":{"photo":"assets/la-skyline.jpg","position":"25% 60%","label":"Clippers","icon":"ball"},"24":{"photo":"assets/la-skyline.jpg","position":"55% 40%","label":"The desert","icon":"sun"},"25":{"photo":"assets/la-skyline.jpg","position":"60% 45%","label":"Lakers","icon":"ball"},"26":{"photo":"assets/la-skyline.jpg","position":"50% 45%","label":"Santa Barbara","icon":"car"},"27":{"photo":"assets/la-skyline.jpg","position":"83% 70%","label":"Free day","icon":"sun"},"28":{"photo":"assets/la-skyline.jpg","position":"42% 50%","label":"Santa Monica","icon":"sun"}};
 function renderDates(){
  const strip=$('#date-strip');
  if(!strip.children.length)strip.innerHTML=days.map((d,i)=>{const t=dayPresentation[d.date];return `<button class="date-button" data-day="${i}" aria-pressed="false" aria-label="Day ${i+1}, ${d.weekday} ${d.date} December: ${esc(d.label)}"><span class="date-copy"><span class="date-meta">DAY ${i+1}</span><span class="day-label">${esc(t.label)}</span><span class="date-number">${d.date} DEC</span></span><img class="date-photo" src="${t.photo}" style="object-position:${t.position}" alt="" width="87" height="78" loading="lazy"><span class="date-stamp">${icon(t.icon)}</span></button>`}).join('');
@@ -136,7 +705,7 @@ function renderReservationPeek(){
  $('#reservation-peek-list').innerHTML=cards.length?cards.map(r=>`<button class="mini-reservation" data-reservation="${esc(r.id)}" aria-label="View details: ${esc(r.title)}">${r.id==='hotel'&&r.title.includes('Westin Bonaventure')?'<img src="assets/westin-bonaventure.jpg" alt="Westin Bonaventure towers" width="67" height="77" loading="lazy">':`<span class="mini-art ${esc(r.id)}" aria-hidden="true">${icon(r.icon)}</span>`}<div><h3>${esc(r.title)}</h3><p>${esc(r.subtitle)}</p><span class="badge ${r.status}">${statuses[r.status]}</span></div></button>`).join(''):'<p class="empty-day">No bookings yet. Add one in Bookings.</p>';
 }
 function renderPlacesPeek(){
- const featured=['hotel','warner','universal','sf'].map(place).filter(Boolean);
+ const featured=['hotel','universal','santabarbara','santamonica'].map(place).filter(Boolean);
  const preview=[...featured,...places.filter(p=>!featured.includes(p))].slice(0,4);
  $('#places-peek-list').innerHTML=preview.map(p=>`<button class="place-peek-button" data-open-map="${esc(p.id)}" aria-label="Open map: ${esc(p.name)}">${p.id==='hotel'&&p.name.includes('Westin Bonaventure')?'<img src="assets/westin-bonaventure.jpg" alt="" width="30" height="30" loading="lazy">':`<span class="place-peek-icon">${icon('pin')}</span>`}<div><strong>${esc(p.name)}</strong><small>${esc(p.area)}</small></div><span aria-hidden="true">↗</span></button>`).join('')||'<p class="empty-day">No saved locations. Add one in Maps.</p>';
 }
@@ -160,8 +729,8 @@ function selectDay(index,scroll=false){
 const reservations=[
 {id:'hotel',title:'The Westin Bonaventure Hotel & Suites',subtitle:'20–28 December · 8 nights · 2 guests',status:'booked',icon:'hotel',details:[['Check-in','20 December 2026 · time to add'],['Check-out','28 December 2026 · time to add'],['Address',places[0].address],['Booking reference','To add']],note:'Confirmed stay. Room type and any additional booking details can be added later.',map:'hotel',source:places[0].source},
 {id:'outbound',title:'Melbourne → Los Angeles',subtitle:'20 December · United Airlines · UA99',status:'plan',icon:'plane',details:[['Flight','UA99 · United Airlines'],['Departure','20 December · MEL local time'],['Flight times','To confirm from your ticket'],['Booking reference','To add']],note:'Latest flight details supplied by you. Ticket, seat and terminal information has not been added.',source:'https://www.united.com/'},
-{id:'clippers',title:'LA Clippers vs Golden State Warriors',subtitle:'23 December · 7:30 pm PST · Intuit Dome',status:'plan',icon:'ball',details:[['Date & time','23 December 2026 · 7:30 pm PST'],['Venue','Intuit Dome, Inglewood'],['Section & seats','To add'],['Tickets / booking reference','To add']],note:'Time carried over from your itinerary. Check the final ticket for event and entry details.',map:'intuit',source:places[3].source},
-{id:'lakers',title:'Los Angeles Lakers vs Philadelphia 76ers',subtitle:'25 December · 2:00 pm PST · Crypto.com Arena',status:'plan',icon:'ball',details:[['Date & time','25 December 2026 · 2:00 pm PST'],['Venue','Crypto.com Arena, Los Angeles'],['Section & seats','To add'],['Tickets / booking reference','To add']],note:'Time matches your Christmas game calendar plan. Doors and other ticket details have not been added.',map:'crypto',source:places[4].source},
+{id:'clippers',title:'LA Clippers vs Golden State Warriors',subtitle:'23 December · 7:30 pm PST · Intuit Dome',status:'booked',icon:'ball',details:[['Date & time','23 December 2026 · 7:30 pm PST'],['Venue','Intuit Dome, Inglewood'],['Section & seats','To add'],['Tickets / booking reference','To add']],note:'Time carried over from your itinerary. Check the final ticket for event and entry details.',map:'intuit',source:places[3].source},
+{id:'lakers',title:'Los Angeles Lakers vs Philadelphia 76ers',subtitle:'25 December · 2:00 pm PST · Crypto.com Arena',status:'booked',icon:'ball',details:[['Date & time','25 December 2026 · 2:00 pm PST'],['Venue','Crypto.com Arena, Los Angeles'],['Section & seats','To add'],['Tickets / booking reference','To add']],note:'Time matches your Christmas game calendar plan. Doors and other ticket details have not been added.',map:'crypto',source:places[4].source},
 {id:'inbound',title:'Los Angeles → Melbourne',subtitle:'28 December · Delta Air Lines · DL11',status:'plan',icon:'plane',details:[['Flight','DL11 · Delta Air Lines'],['Departure','28 December · LA local time'],['Melbourne arrival date & time','To confirm from your ticket'],['Booking reference','To add']],note:'28 December is treated as the departure date from LA. Exact times, seats and terminal are still to add.',source:'https://www.delta.com/'}
 ];
 function renderReservations(){

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f3e9">
-  <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with reservations, maps and a personal packing checklist.">
+  <meta name="description" content="Mario’s Los Angeles trip, 20–28 December 2026. A day-by-day travel journal with three California road trips, two NBA games, maps and a personal packing checklist.">
   <title>Nine Days in Los Angeles · December ’26</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='3' fill='%23f7f3e9'/%3E%3Ctext x='5' y='28' font-family='Georgia' font-size='24' fill='%23a75034'%3ELA%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css?v=craft-1">
@@ -42,6 +42,7 @@
           <div class="plan-heading"><h3>The day’s plan</h3><span>LA time · PST</span></div>
           <div class="itinerary-tools"><button type="button" class="button secondary" id="add-event"><span data-icon="plus"></span>Add event</button><button type="button" class="text-link" id="edit-day">Edit day</button></div>
           <p id="itinerary-storage" class="editor-storage" data-trip-storage>Edits save in this browser on this device.</p>
+          <p id="published-itinerary-update" class="editor-storage" hidden>Your saved day edits are still in use. <button type="button" class="text-link" id="use-revised-itinerary">Use the revised December itinerary</button> (replaces local day edits only).</p>
           <div class="itinerary-feedback"><p id="itinerary-feedback" data-trip-feedback role="status" aria-live="polite"></p><button type="button" id="undo-itinerary" data-undo-trip class="text-link" hidden>Undo</button></div>
           <div id="timeline"></div>
           <details class="itinerary-backup"><summary>Back up or move your plan</summary><p>Edits stay in this browser. Download your itinerary, bookings and locations together, or import a backup on another device.</p><div><button type="button" class="button secondary" id="export-itinerary">Download backup</button><label class="button secondary" for="import-itinerary">Import backup<input type="file" id="import-itinerary" accept=".json,application/json"></label></div></details>
@@ -78,7 +79,7 @@
     </section>
 
     </main>
-    <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. San Francisco: <a href="https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg" target="_blank" rel="noopener noreferrer">Brocken Inaglory</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Photographs resized for the web and displayed with cropping and colour treatment; the San Francisco image adaptation is shared under the same licence.</p></details></footer>
+    <footer><span>LOS ANGELES · 20–28 DECEMBER 2026</span><span>Made for the moments in between.</span><details class="photo-sources"><summary>Photo credits</summary><p>Los Angeles: <a href="https://unsplash.com/photos/palm-trees-and-los-angeles-skyline-cHRDevKFDBw" target="_blank" rel="noopener noreferrer">Venti Views / Unsplash</a>.</p><p id="additional-photo-credits">Westin Bonaventure: <a href="https://commons.wikimedia.org/wiki/File:Westin_Bonaventure_Hotel-01.jpg" target="_blank" rel="noopener noreferrer">Priwo</a>, public domain. Photographs resized for the web and displayed with cropping and colour treatment.</p></details></footer>
   </div>
   <dialog id="itinerary-editor" aria-labelledby="editor-title" aria-describedby="editor-context">
     <form id="itinerary-form" novalidate>
