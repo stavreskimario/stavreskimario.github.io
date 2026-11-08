@@ -1,0 +1,172 @@
+{
+  "scope": "Only two photo-visible waiting-room wall brackets; not the complete1935inventory",
+  "datum": "MainlocalZ0; apply street lowering4.2672m exactly once on world-scene append",
+  "fixtureCount": 2,
+  "meshNodes": 4,
+  "sharedMeshes": 2,
+  "materialNames": [
+    "AgedBronze",
+    "OpalCandelabraGlass"
+  ],
+  "liveLights": 0,
+  "instancedTriangles": 21824,
+  "components": [
+    {
+      "name": "Round moulded wall rosette",
+      "triangles": 768,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.00621427639580248
+    },
+    {
+      "name": "Swept projecting central support",
+      "triangles": 1312,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.00292621824873663
+    },
+    {
+      "name": "Central stepped stem and modest finial",
+      "triangles": 1280,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.003156912938787297
+    },
+    {
+      "name": "Curved twin crossarm",
+      "triangles": 1568,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.002030206070974133
+    },
+    {
+      "name": "Downward stepped lamp cup",
+      "triangles": 1152,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.01255253482524698
+    },
+    {
+      "name": "Downward pale globe",
+      "triangles": 1840,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.01701374026068598
+    },
+    {
+      "name": "Downward stepped lamp cup.001",
+      "triangles": 1152,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.012552534834237506
+    },
+    {
+      "name": "Downward pale globe.001",
+      "triangles": 1840,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.017013740312239897
+    }
+  ],
+  "closedPositiveVolumeComponents": true,
+  "contactsPerFixture": [
+    {
+      "label": "Support root in rosette",
+      "support": "Round moulded wall rosette",
+      "pointMaster": [
+        0.035,
+        0,
+        -0.02
+      ],
+      "nearestDistance": 0.017000000923871994,
+      "outwardSignedDistance": -0.017000000923871994,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Support tip in central stem",
+      "support": "Central stepped stem and modest finial",
+      "pointMaster": [
+        0.37,
+        0,
+        0.34
+      ],
+      "nearestDistance": 0.06956338882446289,
+      "outwardSignedDistance": -0.06956338696181774,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm centre in central stem",
+      "support": "Central stepped stem and modest finial",
+      "pointMaster": [
+        0.37,
+        0,
+        0.38
+      ],
+      "nearestDistance": 0.05472320690751076,
+      "outwardSignedDistance": -0.05472320783883333,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm end meets lamp cup",
+      "support": "Downward stepped lamp cup",
+      "pointMaster": [
+        0.38,
+        -0.34,
+        0.33
+      ],
+      "nearestDistance": 0.0,
+      "outwardSignedDistance": 0.0,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Globe crown seated in lamp cup",
+      "support": "Downward stepped lamp cup",
+      "pointMaster": [
+        0.38,
+        -0.34,
+        0.04
+      ],
+      "nearestDistance": 0.004999998956918716,
+      "outwardSignedDistance": -0.004999998956918716,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Crossarm end meets lamp cup",
+      "support": "Downward stepped lamp cup.001",
+      "pointMaster": [
+        0.38,
+        0.34,
+        0.33
+      ],
+      "nearestDistance": 0.0,
+      "outwardSignedDistance": 0.0,
+      "touchesOrInside": true
+    },
+    {
+      "label": "Globe crown seated in lamp cup",
+      "support": "Downward stepped lamp cup.001",
+      "pointMaster": [
+        0.38,
+        0.34,
+        0.04
+      ],
+      "nearestDistance": 0.004999998956918716,
+      "outwardSignedDistance": -0.004999998491257429,
+      "touchesOrInside": true
+    }
+  ],
+  "geometryStatus": "Photograph-led profile, dimensions reconstructed",
+  "mounts": [
+    {
+      "wall": "west",
+      "blenderMainLocal": [
+        -15.655,
+        -28.144,
+        8.6
+      ]
+    },
+    {
+      "wall": "east",
+      "blenderMainLocal": [
+        15.655,
+        -28.144,
+        8.6
+      ]
+    }
+  ],
+  "blendSha256": "a146fb3599115fc33a17bc70d17977ace20dee1aacef1f15c57c9c833b0186b5",
+  "glbSha256": "e3cbbaff65d1dc5794983105ce67c9c9662d54bc360f39e11622c39db03c4498",
+  "glbBytes": 235428
+}

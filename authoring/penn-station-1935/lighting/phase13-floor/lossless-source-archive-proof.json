@@ -1,0 +1,144 @@
+{
+  "status": "PASS lossless independentfloor source archives and exact metadata, root not changed",
+  "archives": [
+    {
+      "file": "raw/lighting-platform-enclosure-floor-sky.hdr.gz",
+      "rawBytes": 19700785,
+      "rawSha256": "380b84d96dc50e46f8e40378459039d94e15babf269e636e8b285f7c1b089a60",
+      "archiveBytes": 15932959,
+      "archiveSha256": "247c38e990bf87213d0ecf7add9a9a50ec735403dc6a84a43c7e1532d9e094d4"
+    },
+    {
+      "file": "denoised/lighting-platform-enclosure-floor-sky-denoised-linear.hdr.gz",
+      "rawBytes": 67649587,
+      "rawSha256": "7cbb14ab9fb4c0afe3fa99c0cc5f611406bdf39e54fc455c88b61952678014e1",
+      "archiveBytes": 14610944,
+      "archiveSha256": "706e69290e4957b7b1e1a6e5e91ddf52ff35e9f08188a8ac4f7d458dce7d075d"
+    }
+  ],
+  "sourcePrimarySha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "scope": "Whole27-owner9ce source; exactly3floorowners/402faces receive newUV1+GI.24structuralowners and localphysicalprobe transfer unchanged.",
+  "sourceReproductionQualification": "Actual frozen commands refer to external prepared scenes and original directory layout; archived scripts are review copies. Prepared physicalscene/source caches remain external and pinned, not runtime dependencies.",
+  "files": [
+    {
+      "file": "actual-bake-completion.json",
+      "bytes": 1822,
+      "sha256": "74e11e71b85bd5d70eff61fcb27796bff096f3c5bc08a9ef3b7e63d19730e963"
+    },
+    {
+      "file": "actual-lighting-uv-binding-proof.json",
+      "bytes": 3512,
+      "sha256": "adcb2e3c397026485aa2f282d0135d729f196c8f34d7c45bef5656df895e6e7c"
+    },
+    {
+      "file": "actual-postprocess-completion.json",
+      "bytes": 1152,
+      "sha256": "497164d587d708b745a05e7929d5d95bdbbe4f6fed97a7740de1999899795a14"
+    },
+    {
+      "file": "denoised/lighting-platform-enclosure-floor-denoise.json",
+      "bytes": 2626,
+      "sha256": "7286ce7bd00ef23d7c11e8c31a6b90b4b66515d600b9f57306400eff456864b1"
+    },
+    {
+      "file": "denoised/lighting-platform-enclosure-floor-sky-denoised-linear.hdr.gz",
+      "bytes": 14610944,
+      "sha256": "706e69290e4957b7b1e1a6e5e91ddf52ff35e9f08188a8ac4f7d458dce7d075d"
+    },
+    {
+      "file": "denoised/lighting-platform-enclosure-floor-sky-low.png",
+      "bytes": 82295,
+      "sha256": "38d7693e3ccd348e000e10cdfaf7e256c732d751a916471c4b93ad3d5dd65ec0"
+    },
+    {
+      "file": "denoised/lighting-platform-enclosure-floor-sky.png",
+      "bytes": 2354648,
+      "sha256": "06a139b654259bcd190a555d3f3e8a0f1f13881f9d8a1696cd371ebef32c17f2"
+    },
+    {
+      "file": "independent-floor-uv-preflight-v2.json",
+      "bytes": 3292,
+      "sha256": "ff7337b089353b03d606bde41888959e2e46d8ce864664b7c217838190aa1bc8"
+    },
+    {
+      "file": "packet.json",
+      "bytes": 23106,
+      "sha256": "5944cbda42ce9ff57e39e40f1f4852699ccf66251297441095e65ca3fc5b1e65"
+    },
+    {
+      "file": "raw/lighting-platform-enclosure-floor-sky.hdr.gz",
+      "bytes": 15932959,
+      "sha256": "247c38e990bf87213d0ecf7add9a9a50ec735403dc6a84a43c7e1532d9e094d4"
+    },
+    {
+      "file": "raw/lighting-platform-enclosure-floor.json",
+      "bytes": 33124,
+      "sha256": "877c9115e84a5ed9bbbf65ccf3a7879e779ffad16173332421b0c09589c70063"
+    },
+    {
+      "file": "source/append-split-compiled-module.mjs",
+      "bytes": 1905,
+      "sha256": "db72d97499d26e8ec0e7fc476764f55e0d3fa31c2a4f11939e136ae21f63f7cc"
+    },
+    {
+      "file": "source/assemble-enclosure-split.py",
+      "bytes": 7579,
+      "sha256": "a9e39e756ae596a29f234e981bf8fb8072be7f768b7fb240967804f4fa1ee376"
+    },
+    {
+      "file": "source/bake-independent-floor.py",
+      "bytes": 15291,
+      "sha256": "f42f1fbf0cd96f5a60bccf7e60581c2ef362d56113b2bfd814d89a4bf34e2bd9"
+    },
+    {
+      "file": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "file": "source/compose-lighting-packages.mjs",
+      "bytes": 3495,
+      "sha256": "8718e4324a698a8ccbe5aaf09ebd03c1e2b3d53ce3065c81adaa2f6809f2e901"
+    },
+    {
+      "file": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "file": "source/encode-lossless-meshopt.mjs",
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    {
+      "file": "source/glb-lighting-subsets.mjs",
+      "bytes": 5032,
+      "sha256": "bce27031ba159ae9cab9e79bb49afac90b0236a51bcf302790370b2aaa2f443c"
+    },
+    {
+      "file": "source/package-floor-lossless.mjs",
+      "bytes": 7706,
+      "sha256": "bcde43bb2e62be61cd9bd9c909ab0d1317b5a60b17e4172a92da5de152251434"
+    },
+    {
+      "file": "source/postprocess-independent-floor.py",
+      "bytes": 3464,
+      "sha256": "558cb530d7bf6cd37bd446ec1895d1ef354524eab886c317fbb4af52767433e1"
+    },
+    {
+      "file": "source/prepare-floor-only-uv-v2.py",
+      "bytes": 6820,
+      "sha256": "886d7c7944ffa6e11b5b44d81af36e916c34e7b9dafb435ba982b822dc51a66a"
+    },
+    {
+      "file": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/reuse-texture-cache.mjs",
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    }
+  ]
+}

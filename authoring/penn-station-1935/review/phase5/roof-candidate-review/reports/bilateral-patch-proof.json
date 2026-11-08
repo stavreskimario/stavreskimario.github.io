@@ -1,0 +1,100 @@
+{
+  "scope": "Actual linear guidedHDR patches only; no render-image blur, AO, geometry, UV or sourceGI changes",
+  "sourceSha256": "f2f6b3f5de262b165da69688987af34ff406709007e19c0da3c64790739d9695",
+  "modelSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+  "uvConnectedComponents": 9291,
+  "radiusPixels": 2,
+  "spatialSigmaPixels": 1.2,
+  "normalSigmaDegrees": 5,
+  "maximumNormalAngleDegrees": 10,
+  "rangeSigmaMethod": "2.5 times robust same-chart, same-normal adjacent-pixel noise estimate",
+  "controls": [
+    {
+      "name": "constant018",
+      "maximumError": 0.0
+    },
+    {
+      "name": "indirectEdge",
+      "maximumError": 0.0
+    },
+    {
+      "name": "chartEdge",
+      "maximumError": 0.0
+    }
+  ],
+  "patches": [
+    {
+      "screen": [
+        635,
+        205
+      ],
+      "atlasOriginBlenderXY": [
+        154,
+        7932
+      ],
+      "pixels": 1434,
+      "estimatedNoiseSigma": 0.0021328886778672405,
+      "irradianceRangeSigma": 0.0053322216946681015,
+      "relativeMeanChangeOnGeometry": 0.00016279468111224382,
+      "standardDeviationBefore": 0.011102057993412018,
+      "standardDeviationAfter": 0.010754070244729519,
+      "maximumChange": 0.004805967211723328,
+      "outsideChartPixelsUnchanged": true
+    },
+    {
+      "screen": [
+        635,
+        230
+      ],
+      "atlasOriginBlenderXY": [
+        3508,
+        7480
+      ],
+      "pixels": 1488,
+      "estimatedNoiseSigma": 0.002687441374396765,
+      "irradianceRangeSigma": 0.006718603435991913,
+      "relativeMeanChangeOnGeometry": 0.0002816728070267338,
+      "standardDeviationBefore": 0.005944372620433569,
+      "standardDeviationAfter": 0.004804822150617838,
+      "maximumChange": 0.00673530250787735,
+      "outsideChartPixelsUnchanged": true
+    },
+    {
+      "screen": [
+        645,
+        205
+      ],
+      "atlasOriginBlenderXY": [
+        7390,
+        4850
+      ],
+      "pixels": 2098,
+      "estimatedNoiseSigma": 0.0002559467975615967,
+      "irradianceRangeSigma": 0.0006398669939039917,
+      "relativeMeanChangeOnGeometry": -2.143431333812007e-05,
+      "standardDeviationBefore": 0.01627179980278015,
+      "standardDeviationAfter": 0.016269387677311897,
+      "maximumChange": 0.0008285865187644958,
+      "outsideChartPixelsUnchanged": true
+    },
+    {
+      "screen": [
+        645,
+        220
+      ],
+      "atlasOriginBlenderXY": [
+        7182,
+        698
+      ],
+      "pixels": 2384,
+      "estimatedNoiseSigma": 0.000981130041559153,
+      "irradianceRangeSigma": 0.0024528251038978825,
+      "relativeMeanChangeOnGeometry": 0.0001145262726178764,
+      "standardDeviationBefore": 0.017014000564813614,
+      "standardDeviationAfter": 0.01695871911942959,
+      "maximumChange": 0.0023763924837112427,
+      "outsideChartPixelsUnchanged": true
+    }
+  ],
+  "limitation": "Patch proof only; real chart-gutter and mapped architectural-edge review required before a whole-atlas candidate"
+}

@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "status": "PASS independent final source/raw/encoded/mounted, density and delivery replay",
+  "createdUTC": "2026-11-04T05:40:58.991268+00:00",
+  "sourceSHA256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "mountedFullSHA256": "85f85da7dfb413773660d70404d65d988ec45690ac5b4ba237476a7b4d34d906",
+  "mountedLowSHA256": "4431f8e1b774f0fa1c3468d1a7ec56f8468e4f995d8068222f0e954c78c273dd",
+  "triangles": 31188,
+  "structure": 30588,
+  "floor": 600,
+  "retainedFourBayStructuralTrianglesExact": 24996,
+  "sourceToRawMaxPositionDriftM": 1.9073486328125e-06,
+  "sourceToRawMaxNormalCodecDegrees": 0.022891266845124124,
+  "sourceToRawUV0Drift": 0,
+  "rawToEncodedToMountedAllAttributesAdditionalDrift": 0,
+  "fullVisibleFloorMinDirectionalPixelsPerMetre": 63.96000921675306,
+  "low512VisibleFloorMinDirectionalPixelsPerMetre": 7.995001152094132,
+  "lowQualification": "Runtime low selects512 image via exact app filename suffix; separately measured and not represented as full60px/m quality.",
+  "allOtherModelTransportsExact": 10,
+  "replayedRGBSamples": 51118080,
+  "replayByteMismatches": 0,
+  "underRoofPhysicalRGBChanges": 0,
+  "walking": "No native walkthrough and no repeated source physical loops. Exact source inheritance transfers accepted11 bearing contacts/250body/2268footprints.",
+  "qualifications": [
+    "New P3 observed/sourceZ41.79018867924528 remains separately recorded from adoptedZ41.04018867924528,\u22120.75m qualified current railway coordination fit.",
+    "No roof infill or sidewall; prior four-bay P/N/UV0 retained exactly.",
+    "Floor normals in canonical source construction have0.3080901573degree codec qualification; source\u2192actualbake adds at most0.02289127degree, not claimed mathematical zero.",
+    "Derived delivery transition affects only explicitly bounded apron outside physical roof; physical original underroof pixels remain byteexact."
+  ],
+  "files": [
+    {
+      "path": "acceptance/final-continuity-chain.json",
+      "sha256": "994981aa250b4512fd945035174143ec77426484caa15c3ec8a9abc17c5171e8",
+      "bytes": 12161,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/final-continuity-chain.json"
+    },
+    {
+      "path": "acceptance/final-other-ten-model-identity.json",
+      "sha256": "6a6f159d15ef69b3a1af7b3a03b4937c60c2c131d13df1422deb1ce636e59370",
+      "bytes": 1954,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/final-other-ten-model-identity.json"
+    },
+    {
+      "path": "acceptance/actual-mounted-full-density.json",
+      "sha256": "c239f03d76cb4a95d35e961e690fbd95442c4fa6e56a4ee4d26f115d07958a0f",
+      "bytes": 37008,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/actual-mounted-full-density.json"
+    },
+    {
+      "path": "acceptance/actual-mounted-low-quality-density.json",
+      "sha256": "c6146a53918286f8bafbfe0934f84ff67ab676c6ca58d0140eeedb50eea18935",
+      "bytes": 37143,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/actual-mounted-low-quality-density.json"
+    },
+    {
+      "path": "acceptance/actual-every-pixel-replay-png-absent.json",
+      "sha256": "71afcddf5ebe2c30353a1528420cde9bab9cf13f1f51897036867311557a3ba8",
+      "bytes": 1858,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/actual-every-pixel-replay-png-absent.json"
+    },
+    {
+      "path": "acceptance/actual-floor-map-corner-proof.json",
+      "sha256": "7b1b1b1b2d9a3822bcd2a73ef2a1ef5644afaec007d05708d44019053277fcc3",
+      "bytes": 1156,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/actual-floor-map-corner-proof.json"
+    },
+    {
+      "path": "acceptance/actual-prepared-floor-density-gate.json",
+      "sha256": "3dff4f0b6130dbce346eb7b5055fbe046a109e37612abd49427346df24d69593",
+      "bytes": 11500,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/actual-prepared-floor-density-gate.json"
+    },
+    {
+      "path": "validation/check-final-continuity-chain.mjs",
+      "sha256": "348354ed11e5f5618fc7658c053f8e3883e301061494a273c28f123886264948",
+      "bytes": 12488,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/acceptance-v1/check-final-continuity-chain.mjs"
+    },
+    {
+      "path": "validation/measure-actual-floor-density.mjs",
+      "sha256": "72c825efcd543071f85a064ce8ba0101e275a9eaab9d6eca8590c5ce173cb887",
+      "bytes": 7563,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/measure-actual-floor-density.mjs"
+    },
+    {
+      "path": "validation/extract-frozen-floor-preflight.py",
+      "sha256": "e5d73b96a28b4abd907a28635f228640d6351bc7879a808476a3e4effe328c09",
+      "bytes": 1807,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/extract-frozen-floor-preflight.py"
+    },
+    {
+      "path": "validation/check-prepared-floor-density.mjs",
+      "sha256": "a3f56a319a177dc47e9fd95933c6ae186a1a6bdcb808b4146ff67f689abbfc2f",
+      "bytes": 3173,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/check-prepared-floor-density.mjs"
+    },
+    {
+      "path": "validation/transition/freeze-actual-floor-map.cjs",
+      "sha256": "4801d9c1a6a142a232d8ce43f0eaada9ff986fb6382120b017280b47d060ce44",
+      "bytes": 4039,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/freeze-actual-floor-map.cjs"
+    },
+    {
+      "path": "validation/transition/verify-floor-delivery-transform.cjs",
+      "sha256": "4505017c6fe09828daa6d65df5089143305dd7dbcd412e784f2b953e6ecaef38",
+      "bytes": 12426,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/verify-floor-delivery-transform.cjs"
+    },
+    {
+      "path": "validation/transition/replay-floor-transition.cjs",
+      "sha256": "63ee03d138caa802eeba077efcd6cc4109c4767e6666681f9d12ae220b34d891",
+      "bytes": 8077,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/replay-floor-transition.cjs"
+    },
+    {
+      "path": "validation/transition/repository-floor-delivery-adapter.cjs",
+      "sha256": "32879065310fd747d75e18ce82d540ae516ae8737859cd05103f1a823254fad9",
+      "bytes": 3077,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/repository-floor-delivery-adapter.cjs"
+    },
+    {
+      "path": "validation/transition/run-actual-proof.cjs",
+      "sha256": "4c08cf2a0cc8e1d22c88da7bd7ee146a3f09d6faab0f27786772324ee9be3181",
+      "bytes": 2995,
+      "sourcePath": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-transition-validator-v1/run-actual-proof.cjs"
+    },
+    {
+      "path": "validation/transition/600-floor-world-uv-map.json.gz",
+      "sha256": "ee1c241e348722228ce5bdc638fee4a651413104fbe3824d7c3cd4a8e611e85e",
+      "bytes": 86063,
+      "sourceSHA256": "a95b13a98582cd4680d01dec32bf1904acd74bede13fee711731d1095b31867d",
+      "encoding": "gzip"
+    }
+  ],
+  "payloadBytes": 244488
+}

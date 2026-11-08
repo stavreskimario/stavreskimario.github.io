@@ -1,0 +1,2186 @@
+{
+  "scope": "CPU-only read-only all registered source occluders and all primary meshes; full source triangles conservatively retained if their world AABB intersects complete2m probe region",
+  "registration": "Same bake offsets expressed in browserWorld; Main0 isWorldY+4.2672. Train BlenderY-8.690045261 becomesglTFWorldZ+8.690045261.",
+  "sources": [
+    {
+      "zone": "waiting-room",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/normal-source/model-waiting-room.glb",
+      "sha256": "43cdf1cf76c6c7c3222d1a4e3c31fa6a604e2705e5f09133cbd8cc8ef2cead0b",
+      "worldOffset": [
+        0,
+        -4.2672,
+        0
+      ],
+      "nodes": 27,
+      "primitivesTested": 27,
+      "primitiveInstancesIntersectingRegion": 2,
+      "trianglesRetained": 850
+    },
+    {
+      "zone": "exterior",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase4-core-final/model-exterior.glb",
+      "sha256": "de8b76b4a83aa184d9934472a6a6fa94c1a6616cba926dd335573c65c57a6bb5",
+      "worldOffset": [
+        0,
+        0,
+        0
+      ],
+      "nodes": 14,
+      "primitivesTested": 14,
+      "primitiveInstancesIntersectingRegion": 2,
+      "trianglesRetained": 0
+    },
+    {
+      "zone": "concourse",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase4-core-floor-v3-ready/model-concourse.glb",
+      "sha256": "c7dc943a776f3c85b0f297424a909a79c9806699713f00b69fec4fab440476aa",
+      "worldOffset": [
+        0,
+        -4.2672,
+        0
+      ],
+      "nodes": 5062,
+      "primitivesTested": 5062,
+      "primitiveInstancesIntersectingRegion": 0,
+      "trianglesRetained": 0
+    },
+    {
+      "zone": "platform",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-platform.glb",
+      "sha256": "850e4b798d927cdb746ff322ea9c9d73216d682122a827978cba6f8c17bc4e78",
+      "worldOffset": [
+        0,
+        -4.2672,
+        0
+      ],
+      "nodes": 66804,
+      "primitivesTested": 66846,
+      "primitiveInstancesIntersectingRegion": 0,
+      "trianglesRetained": 0
+    },
+    {
+      "zone": "trains",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "worldOffset": [
+        0,
+        -13.154025,
+        8.690045261
+      ],
+      "nodes": 66,
+      "primitivesTested": 66,
+      "primitiveInstancesIntersectingRegion": 0,
+      "trianglesRetained": 0
+    },
+    {
+      "zone": "context",
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase4-context/model-context.glb",
+      "sha256": "4e2d0117733fefc344dcca2eb726441e5b5f4d493f12ece1f3054cbf109f31bd",
+      "worldOffset": [
+        0,
+        0,
+        0
+      ],
+      "nodes": 10736,
+      "primitivesTested": 10736,
+      "primitiveInstancesIntersectingRegion": 0,
+      "trianglesRetained": 0
+    }
+  ],
+  "targetWindowVisibilityCounts": {
+    "samples": 81,
+    "zeroOrNearZero": 39,
+    "nearZeroOccluded": 39,
+    "nearZeroWithoutLocalOccluder": 0,
+    "litWithoutLocalOccluder": 36
+  },
+  "targetWindowVisibility": [
+    {
+      "screen": [
+        643,
+        203
+      ],
+      "rawBilinearLinearMean": 0.036981725941901224,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        203
+      ],
+      "rawBilinearLinearMean": 0.027705425376191757,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        203
+      ],
+      "rawBilinearLinearMean": 0.037791390945148474,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        203
+      ],
+      "rawBilinearLinearMean": 0.025437596263742344,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645,
+        203
+      ],
+      "rawBilinearLinearMean": 0.030753559184453386,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645.5,
+        203
+      ],
+      "rawBilinearLinearMean": 0.03697538196922472,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646,
+        203
+      ],
+      "rawBilinearLinearMean": 0.024067919224031127,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646.5,
+        203
+      ],
+      "rawBilinearLinearMean": 0.02449025418497607,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        647,
+        203
+      ],
+      "rawBilinearLinearMean": 0.031539499270607306,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.023704412718036198,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.032649072446034204,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.031121829422471138,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.03643336821372793,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.04417121490032283,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645.5,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.023326971967317166,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.027380508859768806,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646.5,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0.022240459492255508,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        647,
+        203.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.016815772423225104,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8117859903080393,
+        "point": [
+          -0.9013137867977077,
+          39.07964495829441,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        204
+      ],
+      "rawBilinearLinearMean": 0.03320272649175674,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        204
+      ],
+      "rawBilinearLinearMean": 0.030377583250424476,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        204
+      ],
+      "rawBilinearLinearMean": 0.03281073449836279,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        204
+      ],
+      "rawBilinearLinearMean": 0.029963648929632457,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645,
+        204
+      ],
+      "rawBilinearLinearMean": 0.04259063982846596,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645.5,
+        204
+      ],
+      "rawBilinearLinearMean": 0.02831299307219812,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646,
+        204
+      ],
+      "rawBilinearLinearMean": 0.02959720244302148,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646.5,
+        204
+      ],
+      "rawBilinearLinearMean": 0.004586796781893408,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.010430040354142743,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8119775407696512,
+        "point": [
+          -0.9357927506082968,
+          39.04492773126565,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        204
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.038879039510612154,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.812073147550185,
+        "point": [
+          -0.9014024534239701,
+          39.04062993927999,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.034738698290457934,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.03681922101689639,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.026210299398921503,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.03949283582453897,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.033982019865870294,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645.5,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.0378096685723667,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        646,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0.005798929224964581,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.004049419395941066,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8121687036406698,
+        "point": [
+          -0.9702674300490499,
+          39.01021481821447,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.032485657771456455,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8122645650615706,
+        "point": [
+          -0.9358750736742752,
+          39.0059215178189,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        204.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.06093420589225533,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8123601863669936,
+        "point": [
+          -0.9014910874564551,
+          39.00162926229498,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        205
+      ],
+      "rawBilinearLinearMean": 0.02146656557901188,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        205
+      ],
+      "rawBilinearLinearMean": 0.03831620844130847,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        205
+      ],
+      "rawBilinearLinearMean": 0.037445843933034045,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        205
+      ],
+      "rawBilinearLinearMean": 0.032434336665689505,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645,
+        205
+      ],
+      "rawBilinearLinearMean": 0.015844393390697528,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        645.5,
+        205
+      ],
+      "rawBilinearLinearMean": 2.1585381401562023e-05,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.02001137520065192,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8123594781625655,
+        "point": [
+          -1.004737825917846,
+          38.975506218335426,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646,
+        205
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.04081593026676103,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.812455594456645,
+        "point": [
+          -0.9703434111297385,
+          38.97121740844707,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        205
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.06162439509585276,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8125514705487085,
+        "point": [
+          -0.9359573664796333,
+          38.966929642272646,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        205
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.08298129364834214,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8126471063592642,
+        "point": [
+          -0.9015796889124943,
+          38.96264291943122,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0.02997659114388331,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        643.5,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0.026702704264111903,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0.016632170149526244,
+      "firstLocalOpaqueTowardCamera": null
+    },
+    {
+      "screen": [
+        644.5,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0.0008728993787547828,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.019331568178749804,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8124532519718751,
+        "point": [
+          -1.0736087846134001,
+          38.94508729422716,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.040311754864864324,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8125498635779432,
+        "point": [
+          -1.0392039390136418,
+          38.94080193082601,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645.5,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.061295978628282205,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8126462349770465,
+        "point": [
+          -1.0048074665888829,
+          38.936517610361506,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.08223940319789645,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.812742366088366,
+        "point": [
+          -0.9704193642831743,
+          38.932234332454385,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.10305441458858794,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8128382568317406,
+        "point": [
+          -0.9360396290414945,
+          38.92795209672342,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        205.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.12387337920444166,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8129339071276421,
+        "point": [
+          -0.9016682578104966,
+          38.92367090278831,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        206
+      ],
+      "rawBilinearLinearMean": 0.0022589167340327987,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.011423684557301576,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8124485375071379,
+        "point": [
+          -1.1769116091530798,
+          38.91894770344784,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643.5,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.022599297924896285,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8125458848689356,
+        "point": [
+          -1.1424879512273451,
+          38.914664744844806,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.039609828204390865,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8126429921043425,
+        "point": [
+          -1.1080726725739924,
+          38.910382828782815,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644.5,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.060592560149458866,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8127398591305963,
+        "point": [
+          -1.073665770133919,
+          38.90610195488129,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.08157932704571005,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8128364858655733,
+        "point": [
+          -1.03926724084951,
+          38.90182212275977,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645.5,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.10257015188054898,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8129328722277899,
+        "point": [
+          -1.0048770816646417,
+          38.89754333203805,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.12356505765098887,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8130290181364017,
+        "point": [
+          -0.9704952895246747,
+          38.89326558233605,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.14449506328562736,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8131249235112099,
+        "point": [
+          -0.9361218613762716,
+          38.88898887327317,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        206
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.16532061745834387,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8132205882726395,
+        "point": [
+          -0.901756794168135,
+          38.88471320447118,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.07951931067411692,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8127349784223933,
+        "point": [
+          -1.1769496132782478,
+          38.879960101670896,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643.5,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.09077314164158617,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8128323413899311,
+        "point": [
+          -1.1425322785810563,
+          38.87568267518346,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.1014349996219052,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8129294640654757,
+        "point": [
+          -1.1081233200770486,
+          38.87140628969839,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644.5,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.11196004055475267,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8130263463662138,
+        "point": [
+          -1.0737227347091913,
+          38.867130944837136,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.1228572839375908,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8131229882099894,
+        "point": [
+          -1.0393305194213616,
+          38.8628566402192,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645.5,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.1438547320837214,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8132193895152802,
+        "point": [
+          -1.004946671159121,
+          38.858583375464946,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.16485628206975256,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8133155502012042,
+        "point": [
+          -0.9705711868695118,
+          38.85431115019499,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.1858619569201502,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.813411470187521,
+        "point": [
+          -0.9362040635010638,
+          38.85003996403003,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        206.5
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.20677857173631364,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.81350714939463,
+        "point": [
+          -0.9018452980037918,
+          38.84576981659106,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.1477719529336195,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8130212990757787,
+        "point": [
+          -1.1769876034319136,
+          38.840986832624225,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        643.5,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.15902790676558165,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8131186776287157,
+        "point": [
+          -1.142576589640681,
+          38.83671493447494,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.16964936380890255,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8132158157241116,
+        "point": [
+          -1.1081739489655165,
+          38.832444075792246,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        644.5,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.18017536868753722,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.813312713279131,
+        "point": [
+          -1.073779678350495,
+          38.828174256196064,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.19069991648935694,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8134093702115618,
+        "point": [
+          -1.0393937747417523,
+          38.82390547530867,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        645.5,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.20122301723483677,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.8135057864398493,
+        "point": [
+          -1.0050162350863385,
+          38.81963773275038,
+          -13.671600341796875
+        ]
+      }
+    },
+    {
+      "screen": [
+        646,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.21121010812453878,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.5690429161444769,
+        "point": [
+          -0.9707240540779664,
+          38.815672152335615,
+          -13.67203527128821
+        ]
+      }
+    },
+    {
+      "screen": [
+        646.5,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.21651357505001295,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.5690175230948039,
+        "point": [
+          -0.9378154975457801,
+          38.81710829364371,
+          -13.680271746965822
+        ]
+      }
+    },
+    {
+      "screen": [
+        647,
+        207
+      ],
+      "rawBilinearLinearMean": 0,
+      "firstLocalOpaqueTowardCamera": {
+        "distanceMetres": 0.22740944374841987,
+        "zone": "waiting-room",
+        "node": 6,
+        "primitive": 0,
+        "instance": 0,
+        "material": "Travertine",
+        "bakeTransparent": false,
+        "normalDotRay": 0.5689919622625803,
+        "point": [
+          -0.9049042466348665,
+          38.81854455253548,
+          -13.688508897002526
+        ]
+      }
+    }
+  ],
+  "points": [
+    {
+      "label": "zero-0",
+      "world": [
+        -0.9037132055732666,
+        39.089172976908415,
+        -13.68525926812616
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 25,
+      "cameraSegmentProbe": {
+        "firstAny": {
+          "distanceMetres": 0.016815772423225104,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.8117859903080393,
+          "point": [
+            -0.9013137867977077,
+            39.07964495829441,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.016815772423225104,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.8117859903080393,
+          "point": [
+            -0.9013137867977077,
+            39.07964495829441,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.016815772423225104,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.8117859903080393,
+            "point": [
+              -0.9013137867977077,
+              39.07964495829441,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.022872622033765992,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.8890264681088488,
+            39.07815717619659,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.022872622033765992,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.8890264681088488,
+            39.07815717619659,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.022872622033765992,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5969126400431615,
+            "point": [
+              -0.8890264681088488,
+              39.07815717619659,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.1758900300292468,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5089289916814166,
+          "point": [
+            -1.0166110001184314,
+            39.17385206976529,
+            -13.790256219434589
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.1758900300292468,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5089289916814166,
+          "point": [
+            -1.0166110001184314,
+            39.17385206976529,
+            -13.790256219434589
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.1758900300292468,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5089289916814166,
+            "point": [
+              -1.0166110001184314,
+              39.17385206976529,
+              -13.790256219434589
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "lit-0",
+      "world": [
+        -0.9004773148455936,
+        39.11570163629861,
+        -13.667343529984358
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0.031539499270607306,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 12,
+      "cameraSegmentProbe": {
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.007121381590795123,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.905054444556868,
+            39.11913471657622,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.007121381590795123,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.905054444556868,
+            39.11913471657622,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.007121381590795123,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": -0.5969126400431615,
+            "point": [
+              -0.905054444556868,
+              39.11913471657622,
+              -13.671600341796875
+            ]
+          },
+          {
+            "distanceMetres": 0.12409034951153675,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5089289916814166,
+            "point": [
+              -0.9801285562911304,
+              39.175444121948615,
+              -13.741420597241568
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "zero-1",
+      "world": [
+        -0.9069501944986662,
+        39.06263531421247,
+        -13.70318108651746
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 25,
+      "cameraSegmentProbe": {
+        "firstAny": {
+          "distanceMetres": 0.038879039510612154,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.812073147550185,
+          "point": [
+            -0.9014024534239701,
+            39.04062993927999,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.038879039510612154,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.812073147550185,
+          "point": [
+            -0.9014024534239701,
+            39.04062993927999,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.038879039510612154,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.812073147550185,
+            "point": [
+              -0.9014024534239701,
+              39.04062993927999,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.05289681182141126,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.8729930520805532,
+            39.03716572884491,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.05289681182141126,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.8729930520805532,
+            39.03716572884491,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.05289681182141126,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5969126400431615,
+            "point": [
+              -0.8729930520805532,
+              39.03716572884491,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.22770729034073667,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5089289916814166,
+          "point": [
+            -1.053105825370337,
+            39.17225947727073,
+            -13.839108415478226
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.22770729034073667,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5089289916814166,
+          "point": [
+            -1.053105825370337,
+            39.17225947727073,
+            -13.839108415478226
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.22770729034073667,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5089289916814166,
+            "point": [
+              -1.053105825370337,
+              39.17225947727073,
+              -13.839108415478226
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "lit-1",
+      "world": [
+        -0.9340466059382084,
+        39.07736605684316,
+        -13.6621655050075
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0.022240459492255508,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 12,
+      "cameraSegmentProbe": {
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.015796059641645526,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.9441913982597019,
+            39.08497516749467,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.015796059641645526,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.9441913982597019,
+            39.08497516749467,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.015796059641645526,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": -0.5969126400431615,
+            "point": [
+              -0.9441913982597019,
+              39.08497516749467,
+              -13.671600341796875
+            ]
+          },
+          {
+            "distanceMetres": 0.196469006027657,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5089289916814166,
+            "point": [
+              -1.060152590407116,
+              39.171951964492386,
+              -13.779446307208525
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "zero-2",
+      "world": [
+        -0.9405298123906363,
+        39.0242954502007,
+        -13.697995413122996
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 25,
+      "cameraSegmentProbe": {
+        "firstAny": {
+          "distanceMetres": 0.032485657771456455,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.8122645650615706,
+          "point": [
+            -0.9358750736742752,
+            39.0059215178189,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.032485657771456455,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.8122645650615706,
+          "point": [
+            -0.9358750736742752,
+            39.0059215178189,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.032485657771456455,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.8122645650615706,
+            "point": [
+              -0.9358750736742752,
+              39.0059215178189,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.04420932047579479,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.9121485565308561,
+            39.00300806358675,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.04420932047579479,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5969126400431615,
+          "point": [
+            -0.9121485565308561,
+            39.00300806358675,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.04420932047579479,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5969126400431615,
+            "point": [
+              -0.9121485565308561,
+              39.00300806358675,
+              -13.671600341796875
+            ]
+          }
+        ]
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.29890629284483045,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5196808262606956,
+          "point": [
+            -1.1323830497674963,
+            39.16819514432827,
+            -13.876422326636918
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.29890629284483045,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": 0.5196808262606956,
+          "point": [
+            -1.1323830497674963,
+            39.16819514432827,
+            -13.876422326636918
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.29890629284483045,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5196808262606956,
+            "point": [
+              -1.1323830497674963,
+              39.16819514432827,
+              -13.876422326636918
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "lit-2",
+      "world": [
+        -0.967604865582187,
+        39.039043075121484,
+        -13.65698918161862
+      ],
+      "normal": [
+        0.6418293079676772,
+        -0.48140465264726706,
+        0.5969126400431615
+      ],
+      "radiance": 0.02959720244302148,
+      "face": 80729,
+      "frontHemisphereOpaqueHits": 12,
+      "cameraSegmentProbe": {
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalFront": {
+        "label": "geometricFront",
+        "direction": [
+          0.6418293079676772,
+          -0.48140465264726706,
+          0.5969126400431615
+        ],
+        "firstAny": null,
+        "firstOpaque": null,
+        "firstHits": []
+      },
+      "geometricNormalBack": {
+        "label": "geometricBack",
+        "direction": [
+          -0.6418293079676772,
+          0.48140465264726706,
+          -0.5969126400431615
+        ],
+        "firstAny": {
+          "distanceMetres": 0.024467887044240876,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.983315490884302,
+            39.05082684383156,
+            -13.671600341796875
+          ]
+        },
+        "firstOpaque": {
+          "distanceMetres": 0.024467887044240876,
+          "zone": "waiting-room",
+          "node": 6,
+          "primitive": 0,
+          "instance": 0,
+          "material": "Travertine",
+          "bakeTransparent": false,
+          "normalDotRay": -0.5969126400431615,
+          "point": [
+            -0.983315490884302,
+            39.05082684383156,
+            -13.671600341796875
+          ]
+        },
+        "firstHits": [
+          {
+            "distanceMetres": 0.024467887044240876,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": -0.5969126400431615,
+            "point": [
+              -0.983315490884302,
+              39.05082684383156,
+              -13.671600341796875
+            ]
+          },
+          {
+            "distanceMetres": 0.2674011083298907,
+            "zone": "waiting-room",
+            "node": 6,
+            "primitive": 0,
+            "instance": 0,
+            "material": "Travertine",
+            "bakeTransparent": false,
+            "normalDotRay": 0.5196808262606956,
+            "point": [
+              -1.1392371521844313,
+              39.167776026841054,
+              -13.816610252268683
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "maximumRayMetres": 2,
+  "rayOriginOffsetMetres": 1e-05,
+  "limitations": "Short first-hit probes can identify nearby opaque ribbons/enclosures, but do not compute global sky visibility or prove absence of all long-range shadowing. First-hit exit normals alone are not a closed-solid parity test.",
+  "conclusion": "All39zero/near-zero target samples are hidden by opaqueTravertine. These are NOT visible Metal black-texel or reversed-face evidence. Do not fill them as missing illumination."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS exact Phase10 source policy, raw/runtime report identity, two decompressed HDR hashes,4K/512 source-delivery pixels and finite/control statistics",
+  "raw": {
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase10-exits/raw",
+    "archiveFile": "lighting-concourse-exits-sky.hdr.gz",
+    "archiveBytes": 41013216,
+    "decodedBytes": 46438147,
+    "decodedSha256": "648a28b04fc0892d2182581a887a54100f235da0877e794e066a2c7957ff3e63",
+    "bakeReportSha256": "da7e3152325bec3ad4c47b8473408d47d9a2db50b04e03eb95f9a99ae9d00e29"
+  },
+  "retained": {
+    "archiveFile": "lighting-concourse-exits-sky-denoised-linear.hdr.gz",
+    "archiveBytes": 21340922,
+    "width": 4096,
+    "height": 4096
+  },
+  "pixels": [
+    {
+      "variant": "full",
+      "file": "lighting-concourse-exits-sky.webp",
+      "width": 4096,
+      "height": 4096,
+      "clippedRGBSamples": 0
+    },
+    {
+      "variant": "low",
+      "file": "lighting-concourse-exits-sky-low.webp",
+      "width": 512,
+      "height": 512,
+      "clippedRGBSamples": 0
+    }
+  ]
+}

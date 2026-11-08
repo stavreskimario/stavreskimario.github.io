@@ -1,0 +1,169 @@
+{
+  "status": "HOLD source split-normal regression before publication; all physical and old-base preservation checks PASS",
+  "geometryStatus": "HOLD",
+  "geometryReceipt": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-mounted-geometry.json",
+    "sha256": "21c4b4bcd143b8bb063c791de9b602400544a8b8fd95706617afbf7af06b0871"
+  },
+  "physicalChecks": [
+    {
+      "name": "actual-stairs-full.json",
+      "status": "PASS actual existing stair-floor support with no new body/head intrusion",
+      "samples": 1584
+    },
+    {
+      "name": "actual-stairs-low.json",
+      "status": "PASS actual existing stair-floor support with no new body/head intrusion",
+      "samples": 1584
+    },
+    {
+      "name": "full-forward exit",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563
+    },
+    {
+      "name": "full-reverse exit",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563
+    },
+    {
+      "name": "low-forward exit",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563
+    },
+    {
+      "name": "low-reverse exit",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563
+    }
+  ],
+  "totalStairSamples": 3168,
+  "totalExitSamples": 6252,
+  "roadCurbPrismStatus": "PASS actual encoded module and assembled wall family clear road/curb prisms",
+  "basePreservation": [
+    {
+      "quality": "full",
+      "originalBinPrefixBytes": 24259884,
+      "originalBinPrefixExact": true,
+      "originalJsonGeometryArrayPrefixesExact": true,
+      "oldMaterialChanges": [
+        {
+          "index": 26,
+          "name": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ]
+    },
+    {
+      "quality": "low",
+      "originalBinPrefixBytes": 20991008,
+      "originalBinPrefixExact": true,
+      "originalJsonGeometryArrayPrefixesExact": true,
+      "oldMaterialChanges": [
+        {
+          "index": 26,
+          "name": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ]
+    }
+  ],
+  "normalWitness": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/normal-stage-witness.json",
+    "sha256": "65e8fcd5db89702f4a20dcee50b30e9b4a5b8afae2c43ca4674686b5314ad5f6",
+    "uniqueOrientedMatchPerStage": true,
+    "regressionBeforePacking": true
+  },
+  "sourceFlags": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/source-shading-flags.json",
+    "sha256": "4a657ee513d0e41bf45988eb190a7d1802c33969820b43a1a2c1cc46138ea939"
+  },
+  "inputsDuringTest": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-addon.glb",
+      "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+      "bytes": 270372
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v3/package/model-concourse.glb",
+      "sha256": "fd40d87b74c2d058a9f6c59bb7e0e350058cd7b17f627f7aad833386db14a6e0",
+      "bytes": 125052
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "sha256": "7e04e82836e75cee67fa11113c57525f4ec14412bd49430823755e0ad4e27ee0",
+      "bytes": 6960201
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-concourse.glb.gz",
+      "sha256": "45d7af0457ea473f4750e7ddbbba14fa4fb8c71f46472dda3ce9b22a25544a0a",
+      "bytes": 6896629
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v3/package/model-concourse-low.glb",
+      "sha256": "41e17563bf4cb098cb7d097b78a440898a1a28cd819110aec533de02db22312d",
+      "bytes": 125052
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "sha256": "63b11acccd6c5cf4bc1dabca87eb245b43032ee383453dcd0ad937bad08178a9",
+      "bytes": 6649633
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-concourse-low.glb.gz",
+      "sha256": "63b977ed4db677f7fe3ba267dbf0520b6e0bd619053ce187fde84c7b6eb62b21",
+      "bytes": 6586218
+    }
+  ],
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-mounted-geometry.json",
+      "sha256": "21c4b4bcd143b8bb063c791de9b602400544a8b8fd95706617afbf7af06b0871",
+      "bytes": 13342
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-road-prisms.json",
+      "sha256": "abbed413d8cd11bc6e2527c5a33b37d3e49a10121ee7f2f9212d256b8d9476cc",
+      "bytes": 4829
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-stairs-full.json",
+      "sha256": "d3592a323440eaed387add94955b6771ae07715b9fc48f5b166cedf89160577d",
+      "bytes": 398603
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-stairs-low.json",
+      "sha256": "ba0287ab7338da7a0cceb1bee4e6379ded729bb9720ee79549042f534977d361",
+      "bytes": 398611
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/normal-stage-witness.json",
+      "sha256": "65e8fcd5db89702f4a20dcee50b30e9b4a5b8afae2c43ca4674686b5314ad5f6",
+      "bytes": 7225
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/source-shading-flags.json",
+      "sha256": "4a657ee513d0e41bf45988eb190a7d1802c33969820b43a1a2c1cc46138ea939",
+      "bytes": 6627
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-exit-full-forward/route-check.json",
+      "sha256": "d4c063fe8c9b2e1a41d1b49537f71aea784595d7d8763212b4aea4e70002dcd8",
+      "bytes": 331912
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-exit-full-reverse/route-check.json",
+      "sha256": "a9e06863cfc7bee938f156b21b0e5b36361523b124d571e080484b54fddf6bc9",
+      "bytes": 332001
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-exit-low-forward/route-check.json",
+      "sha256": "53101eb32975b69f65e75355c8d09d35c06d1fdae92966834409d5ea5c4779d5",
+      "bytes": 331923
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/final-acceptance-v1/actual-exit-low-reverse/route-check.json",
+      "sha256": "b9f626b8a2bbf24aa9f78976067162fe8129d822233fda424a88403f77e8103b",
+      "bytes": 332012
+    }
+  ],
+  "qualification": "No source-normal preservation acceptance or publication recommended. No new browser/GPU/runtime mutations performed by auditor. Physical proofs remain scoped to pinned candidate-finish-v1 inputs."
+}

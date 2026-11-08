@@ -1,0 +1,256 @@
+{
+  "schema": 1,
+  "status": "PASS \u2014 exact delivered optimized retained runtime base located; no scene re-optimization",
+  "role": "Review-only lineage proof; not fresh ARR runtime publication",
+  "sources": {
+    "retained": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz",
+      "transportBytes": 4544016,
+      "transportSha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269",
+      "decodedBytes": 15731896,
+      "decodedSha256": "710e1eea4e65bee3df5b5e0d408f6a4e37d89367d02566966ffb96156fc98e02",
+      "binaryBytes": 15672836,
+      "binarySha256": "61f264f2d14685363a9a299fdca3f51a2ed613ceec7bf20391a2fd9fd3beeeeb",
+      "arrayLengths": {
+        "buffers": 7,
+        "bufferViews": 92,
+        "accessors": 113,
+        "images": 26,
+        "textures": 26,
+        "samplers": 3,
+        "materials": 24,
+        "meshes": 17,
+        "nodes": 17
+      }
+    },
+    "oldAssembly": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/model-concourse.glb.gz",
+      "transportBytes": 5171505,
+      "transportSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "decodedBytes": 17710208,
+      "decodedSha256": "9fa941951423438496159f425ffb5455977727b7a92b04a14db9df02bd1c92ec",
+      "binaryBytes": 17635800,
+      "binarySha256": "2b9618efc2e4af0d0a28cdfa0b700f5285a5fb08a7a88cb59bf5f7e49b603c25",
+      "arrayLengths": {
+        "buffers": 8,
+        "bufferViews": 114,
+        "accessors": 140,
+        "images": 33,
+        "textures": 33,
+        "samplers": 4,
+        "materials": 31,
+        "meshes": 21,
+        "nodes": 21
+      }
+    },
+    "oldModule": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/optimized-module-v1/model-concourse.glb",
+      "transportBytes": 1979688,
+      "transportSha256": "e1774c7f638f6508aa10810fa2d35efb6a109642606925807524e9f47e517555",
+      "decodedBytes": 1979688,
+      "decodedSha256": "e1774c7f638f6508aa10810fa2d35efb6a109642606925807524e9f47e517555",
+      "binaryBytes": 1962964,
+      "binarySha256": "239a6e8b4a4105e4df1f23eabc8094c78c02401d9ecfb1db3b100f204a159db4",
+      "arrayLengths": {
+        "buffers": 2,
+        "bufferViews": 22,
+        "accessors": 27,
+        "images": 7,
+        "textures": 7,
+        "samplers": 1,
+        "materials": 7,
+        "meshes": 4,
+        "nodes": 4
+      }
+    },
+    "beforeFull": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/before-local-overlay/model-concourse.glb.gz",
+      "transportBytes": 4543895,
+      "transportSha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "decodedBytes": 15730964,
+      "decodedSha256": "9b7221a4cecacf1401fe94561aab36dbcd97e6cbb373dc345e003bb4ca29bd75",
+      "binaryBytes": 15672248,
+      "binarySha256": "7b80db337e638c2a6098cfb8317cc11b759f37e16d7d0bcc9ddfab5660041cbc",
+      "arrayLengths": {
+        "buffers": 6,
+        "bufferViews": 91,
+        "accessors": 112,
+        "images": 26,
+        "textures": 26,
+        "samplers": 3,
+        "materials": 24,
+        "meshes": 17,
+        "nodes": 17
+      }
+    },
+    "beforeLow": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/before-local-overlay/model-concourse-low.glb.gz",
+      "transportBytes": 4543895,
+      "transportSha256": "210f52d08e23cbc77727f9b9bbcc7eaf3480400aa741805c44fa61d173636599",
+      "decodedBytes": 15730964,
+      "decodedSha256": "9b7221a4cecacf1401fe94561aab36dbcd97e6cbb373dc345e003bb4ca29bd75",
+      "binaryBytes": 15672248,
+      "binarySha256": "7b80db337e638c2a6098cfb8317cc11b759f37e16d7d0bcc9ddfab5660041cbc",
+      "arrayLengths": {
+        "buffers": 6,
+        "bufferViews": 91,
+        "accessors": 112,
+        "images": 26,
+        "textures": 26,
+        "samplers": 3,
+        "materials": 24,
+        "meshes": 17,
+        "nodes": 17
+      }
+    },
+    "currentFull": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+      "transportBytes": 5092816,
+      "transportSha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "decodedBytes": 17710380,
+      "decodedSha256": "fd0bb8344c8ec0afb06de59531e841809aee60a9188f7b141db39c7c09ceb89b",
+      "binaryBytes": 17635800,
+      "binarySha256": "2b9618efc2e4af0d0a28cdfa0b700f5285a5fb08a7a88cb59bf5f7e49b603c25",
+      "arrayLengths": {
+        "buffers": 8,
+        "bufferViews": 114,
+        "accessors": 140,
+        "images": 34,
+        "textures": 34,
+        "samplers": 4,
+        "materials": 31,
+        "meshes": 21,
+        "nodes": 21
+      }
+    },
+    "currentLow": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "transportBytes": 5171505,
+      "transportSha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "decodedBytes": 17710208,
+      "decodedSha256": "9fa941951423438496159f425ffb5455977727b7a92b04a14db9df02bd1c92ec",
+      "binaryBytes": 17635800,
+      "binarySha256": "2b9618efc2e4af0d0a28cdfa0b700f5285a5fb08a7a88cb59bf5f7e49b603c25",
+      "arrayLengths": {
+        "buffers": 8,
+        "bufferViews": 114,
+        "accessors": 140,
+        "images": 33,
+        "textures": 33,
+        "samplers": 4,
+        "materials": 31,
+        "meshes": 21,
+        "nodes": 21
+      }
+    }
+  },
+  "assemblyReceipt": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/append-arrivals.json",
+    "sha256": "6578f67d5078f2e52d96253961bb4a27990b4caa2c22186849608e8e9fa35acb"
+  },
+  "retainedPrefixes": {
+    "bufferViews": {
+      "retainedPrefixCount": 92,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "accessors": {
+      "retainedPrefixCount": 113,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "images": {
+      "retainedPrefixCount": 26,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "textures": {
+      "retainedPrefixCount": 26,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "samplers": {
+      "retainedPrefixCount": 3,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "materials": {
+      "retainedPrefixCount": 24,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "meshes": {
+      "retainedPrefixCount": 17,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    },
+    "nodes": {
+      "retainedPrefixCount": 17,
+      "oldAssemblyExact": true,
+      "currentFullExact": true,
+      "currentLowExact": true
+    }
+  },
+  "fullBinaryEqualsRetainedPlusOldModule": true,
+  "currentFullAndLowBinaryExactlyOldAssembly": true,
+  "allVirtualBuffersRetainedExact": true,
+  "retainedActiveSceneNodePrefixExact": true,
+  "beforeArrivalsFullAndLowTransportIdentical": true,
+  "publishedOldArrivalsFullAndLowTransportIdentical": true,
+  "currentLowExactlyOriginalAssembly": true,
+  "currentFullOnlyDelta": {
+    "materialIndex": 24,
+    "material": "TravertineArrivalsStairStone",
+    "normalTextureIndexBefore": 27,
+    "normalTextureIndexAfter": 33,
+    "addedImage": {
+      "name": "Travertine009_2K-JPG_NormalGL",
+      "mimeType": "image/ktx2",
+      "uri": "textures/57b74bfd6c788b7c2da2.ktx2"
+    },
+    "addedTexture": {
+      "sampler": 3,
+      "extensions": {
+        "KHR_texture_basisu": {
+          "source": 33
+        }
+      }
+    },
+    "otherJsonExact": true,
+    "binaryExact": true,
+    "scope": "Only old ARR module material, outside retained prefix"
+  },
+  "sourcePins": {
+    "penn-station-1935/model/append_access_module.mjs": "1a83b7cb7a09e66fd4f39e9d5abbada1798cde98c7e635dd7967936d59c130a0",
+    "penn-station-1935/model/meshopt_patch_io.mjs": "b5b1fb1ab8d73e2d39a990b18dcbaa399e44681568d387a1c693eec51ccb925d",
+    "penn-station-1935/asset_io.mjs": "dd7c7b81b4830c5af84fdfabe84c18cbeb0f5d33462fa2446b1f519f15e2c1cd",
+    "penn-station-1935/model/patch_reviewed_stone_normals.py": "b726c4b0bc8e1121c1d918ea29aae0116eb6bd51cd513aff8dd35b71c9036d72",
+    "penn-station-1935/optimise.mjs": "d87dfd63f2a025e262fa05412dbcb1da34927dc3ac870eb7b190476ceb38b40e"
+  },
+  "nextAssembly": {
+    "basePath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/concourse-without-old-exit.glb.gz",
+    "baseSha256": "d06fb5fbea6908f1584b9ba263cd5db2d65a710dc37c0e3ff4c1bbfe16ef3269",
+    "baseUsedForBothCurrentFullAndFallback": true,
+    "method": "Optimize only independently baked new ARR module; use current full-quality normal encoding and separately reviewed fallback. Append to the unchanged exact d06 retained base with append_access_module.mjs and seven explicit ARR material names. Copy module external textures/lighting, refresh bookkeeping, validate. No need to strip/rebuild/re-optimize retained station.",
+    "normalBinding": "Current selected normal correction belongs to replaced ARR material24. New full module must retain .035 strength and use reviewed normal encoding; do not blindly carry texture index33 after changing appended array lengths. Assert actual imageURI/hash instead.",
+    "lowVariantLimit": "Published current fallback uses identical old assembled geometry; full-only normal correction did not modify low. If new fallback differs, optimize ONLY the new module as fallback and append to same d06 base, then review full/low separately."
+  },
+  "prohibitedAlternatives": [
+    "Do not use raw35f concourse occluder as runtime base.",
+    "Do not use 210f pre-removal base: old exit triangles would return.",
+    "Do not append to b2bce or38325 old assembly: old ARR module would duplicate.",
+    "Do not append e1774 old module when replacing with new ARR bake."
+  ],
+  "holds": [
+    "New ARR bake/optimizer/post-bake geometry/UV0/material/AO checks pending at audit time.",
+    "No new runtime assembled or promoted.",
+    "Root files may change later; recheck pins at actual assembly time."
+  ]
+}

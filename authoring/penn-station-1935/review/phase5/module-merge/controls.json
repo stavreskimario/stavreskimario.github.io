@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "controls": [
+    "raw default keeps authoritative materials and old compressed payload",
+    "two virtual module buffers remap after old fallback buffer",
+    "raw and compressed byte ranges offset independently",
+    "actual MeshoptDecoder reproduces positions/normals/UVs/indices",
+    "nonzero accessor offset preserved",
+    "old views/accessors/virtual buffer exact",
+    "sole replaced mesh removal and old/new node references remapped",
+    "only vault AO/lighting changes; old PBR and other materials exact",
+    "external content-addressed KTX2 URI and sampler/image indices preserved",
+    "default rejects textured module",
+    "non-vault authority rejected",
+    "traversal URI rejected",
+    "non-AO role rejected"
+  ],
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/merge-module-controls"
+}

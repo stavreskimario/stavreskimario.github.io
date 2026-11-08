@@ -1,0 +1,5372 @@
+{
+  "started": "2026-10-29T03:38:23.615Z",
+  "scope": "Installed headless Chrome, 640×480 viewport, low quality, real keyboard input and collision surfaces. No camera mutation or mocked 3D.",
+  "rendererNote": "Software ANGLE/SwiftShader; elapsed movement and render counts are not a claim about hardware frame rate.",
+  "deploymentPrefix": "/exhibition/",
+  "checks": [
+    "Actual exterior walking spawn, complete low-quality connected world, relative project-prefix asset loading",
+    "Continuous exterior-to-hall route,28-riser descent and automatic waiting-room label without teleporting",
+    "Hall-to-concourse passage, real sidestep, stair-well bypass and automatic concourse label without a pose reset",
+    "Continuous return journey and upward grand-stair traversal to street-level eye height"
+  ],
+  "legs": [
+    {
+      "label": "Seventh Avenue through arcade and down grand stair",
+      "keys": [
+        "ShiftLeft",
+        "KeyW"
+      ],
+      "start": {
+        "state": {
+          "view": "exterior",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            124,
+            1.68,
+            0
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 160,
+          "triangles": 3263046,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.006,
+          "position": [
+            123.9491989346034,
+            1.6800000000000002,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0.05080106539659823,
+          "metrics": {
+            "calls": 160,
+            "triangles": 3263046,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.009,
+          "position": [
+            122.7666160437289,
+            1.68,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.1825828908744995,
+          "metrics": {
+            "calls": 160,
+            "triangles": 3263046,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.012,
+          "position": [
+            121.52214997703872,
+            1.68,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2444660666901797,
+          "metrics": {
+            "calls": 160,
+            "triangles": 3263046,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.016,
+          "position": [
+            120.27260422994684,
+            1.68,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2495457470918865,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 10.019,
+          "position": [
+            119.02264151729621,
+            1.6780518751861844,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499627126506283,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 12.022,
+          "position": [
+            117.77264457802826,
+            1.6780302334743715,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499969392679446,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 14.025,
+          "position": [
+            116.52264482926844,
+            1.67802999305667,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499997487598193,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 16.028,
+          "position": [
+            115.26064485005503,
+            1.678029990384602,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2619999792134138,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 18.031,
+          "position": [
+            114.01064485170768,
+            1.6780299903561866,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999983473487,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 20.034,
+          "position": [
+            112.76064485184341,
+            1.6780299903558709,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999998642721,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 22.045,
+          "position": [
+            111.51064485185455,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999888587,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 24.049,
+          "position": [
+            110.26064485185553,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999990195,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 26.052,
+          "position": [
+            109.01064485185557,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 28.056,
+          "position": [
+            107.76064485185562,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 30.06,
+          "position": [
+            106.51064485185566,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 32.063,
+          "position": [
+            105.2606448518557,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 34.067,
+          "position": [
+            104.01064485185574,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 36.069,
+          "position": [
+            104.01064485185574,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 38.073,
+          "position": [
+            102.76064485185579,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 40.075,
+          "position": [
+            101.51064485185583,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 42.079,
+          "position": [
+            100.26064485185587,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 44.082,
+          "position": [
+            99.01064485185591,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 46.084,
+          "position": [
+            97.76064485185596,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 48.087,
+          "position": [
+            96.510644851856,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 50.091,
+          "position": [
+            95.26064485185604,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 52.094,
+          "position": [
+            94.01064485185609,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 54.098,
+          "position": [
+            92.76064485185613,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 56.102,
+          "position": [
+            91.51064485185617,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 58.104,
+          "position": [
+            90.26064485185621,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 60.107,
+          "position": [
+            89.01064485185626,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 62.11,
+          "position": [
+            87.7606448518563,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 64.114,
+          "position": [
+            86.51064485185634,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 66.117,
+          "position": [
+            85.26064485185638,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 68.121,
+          "position": [
+            84.01064485185643,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 70.125,
+          "position": [
+            82.76064485185647,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 72.128,
+          "position": [
+            81.51064485185651,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 74.13,
+          "position": [
+            80.26064485185655,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 76.133,
+          "position": [
+            79.0106448518566,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 78.137,
+          "position": [
+            77.76064485185664,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 80.139,
+          "position": [
+            77.76064485185664,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 82.143,
+          "position": [
+            76.51064485185668,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 84.146,
+          "position": [
+            75.26064485185672,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 86.148,
+          "position": [
+            74.01064485185677,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 88.152,
+          "position": [
+            72.76064485185681,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 90.155,
+          "position": [
+            71.51064485185685,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 92.159,
+          "position": [
+            70.2606448518569,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 94.165,
+          "position": [
+            69.01064485185694,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 96.168,
+          "position": [
+            67.76064485185698,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 98.173,
+          "position": [
+            66.51064485185702,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 100.179,
+          "position": [
+            65.26064485185707,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 102.181,
+          "position": [
+            64.01064485185711,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999574,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 104.185,
+          "position": [
+            62.76064485185707,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 106.188,
+          "position": [
+            61.51064485185704,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 108.191,
+          "position": [
+            60.260644851857,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 110.194,
+          "position": [
+            59.010644851856966,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 112.199,
+          "position": [
+            59.010644851856966,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 114.203,
+          "position": [
+            57.76064485185693,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 116.206,
+          "position": [
+            56.510644851856895,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 118.209,
+          "position": [
+            55.26064485185686,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 120.212,
+          "position": [
+            55.26064485185686,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 122.215,
+          "position": [
+            54.010644851856824,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 124.217,
+          "position": [
+            52.76064485185679,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 126.22,
+          "position": [
+            51.51064485185675,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 128.223,
+          "position": [
+            50.26064485185672,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 130.225,
+          "position": [
+            49.01064485185668,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 132.229,
+          "position": [
+            47.76064485185665,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 134.232,
+          "position": [
+            47.76064485185665,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 136.235,
+          "position": [
+            46.51064485185661,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 138.238,
+          "position": [
+            45.260644851856576,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 140.241,
+          "position": [
+            44.01064485185654,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 142.244,
+          "position": [
+            42.760644851856505,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 144.248,
+          "position": [
+            41.51064485185647,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 146.251,
+          "position": [
+            40.26064485185643,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 148.254,
+          "position": [
+            39.0106448518564,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 150.256,
+          "position": [
+            37.76064485185636,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 152.26,
+          "position": [
+            36.51064485185633,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 154.263,
+          "position": [
+            35.26064485185629,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 156.265,
+          "position": [
+            34.010644851856256,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 158.269,
+          "position": [
+            32.76064485185622,
+            1.6780299903558673,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 154,
+            "triangles": 3244806,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 160.273,
+          "position": [
+            31.510644851856203,
+            1.6824729019986162,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000178,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 162.277,
+          "position": [
+            30.260644851856206,
+            1.6825222582886752,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 164.28,
+          "position": [
+            29.01064485185621,
+            1.6825228065875306,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 166.284,
+          "position": [
+            27.760644851856213,
+            1.6825228126785807,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 168.287,
+          "position": [
+            26.510644851856217,
+            1.6825228127462462,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 170.29,
+          "position": [
+            25.26064485185622,
+            1.682522812746998,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 172.292,
+          "position": [
+            24.010644851856224,
+            1.3810901681026184,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 174.295,
+          "position": [
+            22.760644851856227,
+            0.6214196455162939,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 176.299,
+          "position": [
+            21.51064485185623,
+            0.010115179021905604,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 178.303,
+          "position": [
+            20.260644851856235,
+            -0.5995410894689647,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 180.307,
+          "position": [
+            19.010644851856238,
+            -1.2091790481339195,
+            0
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 182.31,
+          "position": [
+            17.76064485185624,
+            -1.8188168033950816,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 188.576,
+          "position": [
+            16.510644851856245,
+            -2.4284545563966318,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 190.579,
+          "position": [
+            15.110644851856248,
+            -2.5839284012695094,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.3999999999999968,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 192.582,
+          "position": [
+            15.110644851856248,
+            -2.5839284012695094,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 194.585,
+          "position": [
+            13.860644851856252,
+            -2.5739690169635083,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 196.588,
+          "position": [
+            12.610644851856255,
+            -2.584819565275709,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 198.591,
+          "position": [
+            10.110644851856263,
+            -2.5794608495043994,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 200.594,
+          "position": [
+            8.860644851856266,
+            -2.5848805740243943,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 202.597,
+          "position": [
+            7.61064485185627,
+            -2.584940781725325,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 204.6,
+          "position": [
+            5.110644851856277,
+            -2.584941458002687,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 206.603,
+          "position": [
+            3.8606448518562795,
+            -2.584941458085229,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999973,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            3.8606448518562795,
+            -2.584941458085229,
+            0
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 150,
+          "triangles": 3243110,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 206.603
+    },
+    {
+      "label": "Clear hall centre to axial passage",
+      "keys": [
+        "ShiftLeft",
+        "KeyW"
+      ],
+      "start": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            3.8606448518562795,
+            -2.584941458085229,
+            0
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 150,
+          "triangles": 3243110,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.004,
+          "position": [
+            2.610644851856278,
+            -2.584941458086146,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000013,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.008,
+          "position": [
+            0.11064485185627637,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.5000000000000018,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.01,
+          "position": [
+            -1.1393551481437236,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.25,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.013,
+          "position": [
+            -3.6393551481437263,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.5000000000000027,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 10.016,
+          "position": [
+            -6.1393551481437205,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999999942,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 12.019,
+          "position": [
+            -7.389355148143717,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 14.022,
+          "position": [
+            -9.88935514814371,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999994,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 16.025,
+          "position": [
+            -11.139355148143707,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 18.028,
+          "position": [
+            -13.6393551481437,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 20.03,
+          "position": [
+            -14.889355148143697,
+            -2.5849414580861563,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 22.033,
+          "position": [
+            -17.38935514814369,
+            -2.584806132128395,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 24.036,
+          "position": [
+            -19.889355148143682,
+            -2.584804612092249,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 26.038,
+          "position": [
+            -21.13935514814368,
+            -2.5848046119067223,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 28.041,
+          "position": [
+            -23.63935514814367,
+            -2.5848046119046386,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 30.044,
+          "position": [
+            -26.139355148143665,
+            -2.584804611904638,
+            0
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.139355148143665,
+            -2.584804611904638,
+            0
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 30.044
+    },
+    {
+      "label": "Passage sidestep around central stair opening",
+      "keys": [
+        "KeyA"
+      ],
+      "start": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.139355148143665,
+            -2.584804611904638,
+            0
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.004,
+          "position": [
+            -26.241961396423548,
+            -2.584804611904638,
+            0.5966447508944658
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0.5966447508944658,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.007,
+          "position": [
+            -26.251075185635095,
+            -2.584804611904638,
+            1.891905580504464
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2952608296099983,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.009,
+          "position": [
+            -26.251075185635095,
+            -2.584804611904638,
+            3.1918736482255556
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2999680677210916,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.013,
+          "position": [
+            -26.251075185635095,
+            -2.584804611904638,
+            4.4918734330675525
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2999997848419969,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.251075185635095,
+            -2.584804611904638,
+            4.4918734330675525
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 8.013
+    },
+    {
+      "label": "Axial passage into glass concourse",
+      "keys": [
+        "ShiftLeft",
+        "KeyW"
+      ],
+      "start": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.251075185635095,
+            -2.584804611904638,
+            4.4918734330675525
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.004,
+          "position": [
+            -27.398468939931668,
+            -2.584804611904638,
+            4.545228680833335
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.1473937542965729,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.007,
+          "position": [
+            -29.889355150948976,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4908862110173082,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.01,
+          "position": [
+            -32.38929374272187,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999385917728922,
+          "metrics": {
+            "calls": 144,
+            "triangles": 3153246,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.013,
+          "position": [
+            -34.88929332895652,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999586234651,
+          "metrics": {
+            "calls": 140,
+            "triangles": 3135710,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 10.018,
+          "position": [
+            -36.1392933263801,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999974235791,
+          "metrics": {
+            "calls": 134,
+            "triangles": 3121178,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 12.021,
+          "position": [
+            -38.63929332615124,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999997711413,
+          "metrics": {
+            "calls": 132,
+            "triangles": 3119066,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 14.025,
+          "position": [
+            -41.13929332614967,
+            -2.5728974791690518,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999984297,
+          "metrics": {
+            "calls": 128,
+            "triangles": 3112314,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 16.028,
+          "position": [
+            -43.63929332614966,
+            -2.5848031424477202,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 122,
+            "triangles": 3097198,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 18.032,
+          "position": [
+            -46.13929332614973,
+            -2.584804611723293,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 120,
+            "triangles": 3097174,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 20.035,
+          "position": [
+            -48.639293326149804,
+            -2.584804611904616,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 118,
+            "triangles": 3076470,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 22.039,
+          "position": [
+            -51.139293326149875,
+            -2.5728974791690518,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 114,
+            "triangles": 2889886,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 24.042,
+          "position": [
+            -53.63929332614995,
+            -2.5848031424477202,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 26.045,
+          "position": [
+            -56.13929332615002,
+            -2.584804611723293,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 28.048,
+          "position": [
+            -58.63929332615009,
+            -2.584804611904616,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 30.05,
+          "position": [
+            -61.13929332615016,
+            -2.5728974791690518,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 32.053,
+          "position": [
+            -63.63929332615023,
+            -2.5848031424477202,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 34.056,
+          "position": [
+            -67.38929332615012,
+            -2.584804611902624,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 3.7499999999998934,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 36.059,
+          "position": [
+            -69.88929332615004,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999999147,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -69.88929332615004,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 106,
+          "triangles": 2559402,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 36.059
+    },
+    {
+      "label": "Return across concourse to axial passage",
+      "keys": [
+        "ShiftLeft",
+        "KeyS"
+      ],
+      "start": {
+        "state": {
+          "view": "concourse",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -70.00032200817877,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 106,
+          "triangles": 2559402,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.005,
+          "position": [
+            -67.58468423630879,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4156377718699815,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.008,
+          "position": [
+            -65.08539199044978,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.49929224585901,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.011,
+          "position": [
+            -62.58539675925967,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999952311901055,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.014,
+          "position": [
+            -58.835396791591656,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 3.7499999676680176,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 10.017,
+          "position": [
+            -56.33539679160948,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999821725,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 12.02,
+          "position": [
+            -53.83539679160965,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999998366,
+          "metrics": {
+            "calls": 106,
+            "triangles": 2559402,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 14.023,
+          "position": [
+            -51.335396791609575,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 114,
+            "triangles": 2889886,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 16.026,
+          "position": [
+            -47.58539679160947,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 3.7500000000001066,
+          "metrics": {
+            "calls": 118,
+            "triangles": 3076470,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 18.028,
+          "position": [
+            -45.0853967916094,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 122,
+            "triangles": 3097198,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 20.031,
+          "position": [
+            -42.58539679160933,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 124,
+            "triangles": 3102814,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 22.034,
+          "position": [
+            -40.085396791609256,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "concourse",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 130,
+            "triangles": 3112538,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 24.037,
+          "position": [
+            -37.585396791609185,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 132,
+            "triangles": 3119066,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 26.04,
+          "position": [
+            -36.33539679160915,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000355,
+          "metrics": {
+            "calls": 134,
+            "triangles": 3121178,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 28.043,
+          "position": [
+            -33.83539679160908,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.500000000000071,
+          "metrics": {
+            "calls": 142,
+            "triangles": 3149150,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 30.045,
+          "position": [
+            -31.33539679160903,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.5000000000000497,
+          "metrics": {
+            "calls": 144,
+            "triangles": 3153246,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 32.049,
+          "position": [
+            -28.835396791609035,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 34.052,
+          "position": [
+            -26.335396791609043,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.335396791609043,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 34.052
+    },
+    {
+      "label": "Rejoin the clear central hall route",
+      "keys": [
+        "KeyD"
+      ],
+      "start": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.335396791609043,
+            -2.584804611904638,
+            4.54996785110433
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.004,
+          "position": [
+            -26.23279054332916,
+            -2.584804611904638,
+            3.953323100209865
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 0.5966447508944648,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.006,
+          "position": [
+            -26.223676754117612,
+            -2.584804611904638,
+            2.6580622705998667
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2952608296099983,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.009,
+          "position": [
+            -26.223676754117612,
+            -2.584804611904638,
+            1.358094202878775
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2999680677210916,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.013,
+          "position": [
+            -26.223676754117612,
+            -2.584804611904638,
+            0.05809441803677773
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2999997848419973,
+          "metrics": {
+            "calls": 146,
+            "triangles": 3222182,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.223676754117612,
+            -2.584804611904638,
+            0.05809441803677773
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 8.013
+    },
+    {
+      "label": "Return through hall and climb grand stair",
+      "keys": [
+        "ShiftLeft",
+        "KeyS"
+      ],
+      "start": {
+        "state": {
+          "view": "waiting",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            -26.223676754117612,
+            -2.584804611904638,
+            0.05809441803677773
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 146,
+          "triangles": 3222182,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "samples": [
+        {
+          "elapsedSeconds": 2.004,
+          "position": [
+            -25.07628299982104,
+            -2.584804611904638,
+            0.004739170270993584
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.1473937542965729,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 4.007,
+          "position": [
+            -22.58539678880373,
+            -2.584804611904638,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4908862110173082,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 6.009,
+          "position": [
+            -20.08545819703084,
+            -2.584804611904638,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999385917728922,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 8.012,
+          "position": [
+            -18.835458579408733,
+            -2.584804611904638,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499996176221053,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 10.015,
+          "position": [
+            -16.335458613372687,
+            -2.5849399378623996,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999660360466,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 12.017,
+          "position": [
+            -15.085458613584175,
+            -2.584941441197996,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999997885123,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 14.02,
+          "position": [
+            -12.58545861360296,
+            -2.584819690294768,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999981215,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 16.025,
+          "position": [
+            -11.33545861360308,
+            -2.5849401053681835,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999998792,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 18.027,
+          "position": [
+            -8.835458613603087,
+            -2.584941457919218,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 20.03,
+          "position": [
+            -7.585458613603091,
+            -2.5849414580843018,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 22.033,
+          "position": [
+            -5.085458613603098,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 24.036,
+          "position": [
+            -3.835458613603101,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999973,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 26.039,
+          "position": [
+            -2.5854586136030995,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000013,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 28.044,
+          "position": [
+            -1.3354586136030981,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000013,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 30.047,
+          "position": [
+            1.1645413863969023,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.5000000000000004,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 32.05,
+          "position": [
+            2.4145413863969036,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000013,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 34.057,
+          "position": [
+            3.664541386396905,
+            -2.579460864547167,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2500000000000013,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 36.06,
+          "position": [
+            6.164541386396899,
+            -2.5849407817271817,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.4999999999999942,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 38.064,
+          "position": [
+            7.414541386396896,
+            -2.584941450572487,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 40.067,
+          "position": [
+            8.664541386396893,
+            -2.584941458002687,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999973,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 42.071,
+          "position": [
+            11.164541386396886,
+            -2.584941458086146,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 44.074,
+          "position": [
+            12.414541386396882,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 46.078,
+          "position": [
+            13.664541386396879,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 48.081,
+          "position": [
+            14.914541386396875,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 50.085,
+          "position": [
+            16.164541386396873,
+            -2.5849414580861563,
+            -6.986829192458244e-15
+          ],
+          "view": "waiting",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999982,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 52.088,
+          "position": [
+            18.664541386396866,
+            -1.3725136510968765,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 150,
+            "triangles": 3243110,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 54.091,
+          "position": [
+            19.914541386396863,
+            -0.7628767339091274,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 56.093,
+          "position": [
+            21.16454138639686,
+            -0.1532389902177319,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 58.096,
+          "position": [
+            22.414541386396856,
+            0.4563987626552897,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 60.1,
+          "position": [
+            24.91454138639685,
+            1.6742315672955768,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 2.499999999999993,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 62.104,
+          "position": [
+            26.164541386396845,
+            1.6824307053299887,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 64.106,
+          "position": [
+            27.41454138639684,
+            1.6825217895260296,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        },
+        {
+          "elapsedSeconds": 66.109,
+          "position": [
+            28.664541386396838,
+            1.6825228013800482,
+            -6.986829192458244e-15
+          ],
+          "view": "exterior",
+          "mode": "walk",
+          "pose": 0,
+          "progress": 1.2499999999999964,
+          "metrics": {
+            "calls": 152,
+            "triangles": 3244634,
+            "geometries": 100,
+            "textures": 39
+          }
+        }
+      ],
+      "end": {
+        "state": {
+          "view": "exterior",
+          "framing": "",
+          "mode": "walk",
+          "light": "afternoon",
+          "quality": "low",
+          "fov": 50,
+          "shadows": true,
+          "annotations": false,
+          "entered": true,
+          "tour": false,
+          "sound": false,
+          "loading": false,
+          "error": "",
+          "progress": 100,
+          "renderer": "WebGL 2",
+          "revision": 0,
+          "pose": 0,
+          "instant": true
+        },
+        "camera": {
+          "position": [
+            28.664541386396838,
+            1.6825228013800482,
+            -6.986829192458244e-15
+          ],
+          "quaternion": [
+            0,
+            0.7071067811865475,
+            0,
+            0.7071067811865476
+          ],
+          "fov": 50
+        },
+        "metrics": {
+          "calls": 152,
+          "triangles": 3244634,
+          "geometries": 100,
+          "textures": 39
+        },
+        "assets": [
+          {
+            "file": "model-context-low.glb",
+            "materials": 26,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-exterior-low.glb",
+            "materials": 8,
+            "bakedMaterials": 6,
+            "occlusionMaterials": 6,
+            "atlasChannels": [
+              1,
+              0
+            ]
+          },
+          {
+            "file": "model-trains-low.glb",
+            "materials": 14,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-platform-low.glb",
+            "materials": 6,
+            "bakedMaterials": 0,
+            "occlusionMaterials": 0,
+            "atlasChannels": []
+          },
+          {
+            "file": "model-waiting-room-low.glb",
+            "materials": 13,
+            "bakedMaterials": 12,
+            "occlusionMaterials": 12,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          },
+          {
+            "file": "model-concourse-low.glb",
+            "materials": 10,
+            "bakedMaterials": 9,
+            "occlusionMaterials": 9,
+            "atlasChannels": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "elapsedSeconds": 66.109
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "requests": [
+    {
+      "path": "/exhibition/penn-station-1935/",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/styles.css",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/shared/theme.css",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/shared/ui.js",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/dist/app.js",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-exterior-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-context-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/727a06452744061516f9.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/cfbd6e09ee4a3cb3df61.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/1ed31ea622d96e47544c.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/045483ffdbb9fca9da9d.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/5a9772cb39ace88e956f.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/64b525034a9a4df87410.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/f4caf730a085bde61cdb.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/e25abc85a6ecd814ea97.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/8b602c339be41e7e043a.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/33721d1aecd74f3fd521.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/d3af65ba7e33b704f9c1.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/a88cd37c93251ba8c26e.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/f3c33e9e13a60222a23d.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/46d8c3d4cc2d1185893e.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/beeae21668c73f74ea5d.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/acc04afd2689712b1b12.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky-low.webp",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-trains-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-platform-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-concourse-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/model-waiting-room-low.glb.gz",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/c0868a78a1038306a222.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/23377872e769ee72152d.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/ded8551495b688b06a64.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/7d4841447665d723f34f.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/a97fd9ee2b34d38ec11c.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/ea2070fbe776040f22cb.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/4f8d892ee7633a32162d.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/6b991d2d4d6842ad19fc.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/17a7c7833754aad20681.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/84ca1fa3bf5561015fe0.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/0663da69b5940183c02f.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/textures/38556271990a26e3bd5e.ktx2",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky-low.webp",
+      "status": 200
+    },
+    {
+      "path": "/exhibition/penn-station-1935/assets/lighting-concourse-sky-low.webp",
+      "status": 200
+    }
+  ],
+  "blockedExternal": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+  ],
+  "browser": "141.0.7390.37",
+  "initial": {
+    "state": {
+      "view": "exterior",
+      "framing": "",
+      "mode": "walk",
+      "light": "afternoon",
+      "quality": "low",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 0,
+      "instant": true
+    },
+    "camera": {
+      "position": [
+        124,
+        1.68,
+        0
+      ],
+      "quaternion": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "fov": 50
+    },
+    "metrics": {
+      "calls": 160,
+      "triangles": 3263046,
+      "geometries": 100,
+      "textures": 39
+    },
+    "assets": [
+      {
+        "file": "model-context-low.glb",
+        "materials": 26,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-exterior-low.glb",
+        "materials": 8,
+        "bakedMaterials": 6,
+        "occlusionMaterials": 6,
+        "atlasChannels": [
+          1,
+          0
+        ]
+      },
+      {
+        "file": "model-trains-low.glb",
+        "materials": 14,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-platform-low.glb",
+        "materials": 6,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-waiting-room-low.glb",
+        "materials": 13,
+        "bakedMaterials": 12,
+        "occlusionMaterials": 12,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      },
+      {
+        "file": "model-concourse-low.glb",
+        "materials": 10,
+        "bakedMaterials": 9,
+        "occlusionMaterials": 9,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "functionalRenderOverride": "Scene-container CSS size only; all connected-world geometry, collision surfaces and real keyboard input remain active. Layout and performance claims belong to the separate UI suite.",
+  "renderDimensions": {
+    "drawingBuffer": [
+      320,
+      240
+    ],
+    "css": [
+      320,
+      240
+    ],
+    "viewport": [
+      640,
+      480
+    ]
+  },
+  "concourse": {
+    "state": {
+      "view": "concourse",
+      "framing": "",
+      "mode": "walk",
+      "light": "afternoon",
+      "quality": "low",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 0,
+      "instant": true
+    },
+    "camera": {
+      "position": [
+        -69.88929332615004,
+        -2.584804611904638,
+        4.54996785110433
+      ],
+      "quaternion": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "fov": 50
+    },
+    "metrics": {
+      "calls": 106,
+      "triangles": 2559402,
+      "geometries": 100,
+      "textures": 39
+    },
+    "assets": [
+      {
+        "file": "model-context-low.glb",
+        "materials": 26,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-exterior-low.glb",
+        "materials": 8,
+        "bakedMaterials": 6,
+        "occlusionMaterials": 6,
+        "atlasChannels": [
+          1,
+          0
+        ]
+      },
+      {
+        "file": "model-trains-low.glb",
+        "materials": 14,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-platform-low.glb",
+        "materials": 6,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-waiting-room-low.glb",
+        "materials": 13,
+        "bakedMaterials": 12,
+        "occlusionMaterials": 12,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      },
+      {
+        "file": "model-concourse-low.glb",
+        "materials": 10,
+        "bakedMaterials": 9,
+        "occlusionMaterials": 9,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "returned": {
+    "state": {
+      "view": "exterior",
+      "framing": "",
+      "mode": "walk",
+      "light": "afternoon",
+      "quality": "low",
+      "fov": 50,
+      "shadows": true,
+      "annotations": false,
+      "entered": true,
+      "tour": false,
+      "sound": false,
+      "loading": false,
+      "error": "",
+      "progress": 100,
+      "renderer": "WebGL 2",
+      "revision": 0,
+      "pose": 0,
+      "instant": true
+    },
+    "camera": {
+      "position": [
+        28.664541386396838,
+        1.6825228013800482,
+        -6.986829192458244e-15
+      ],
+      "quaternion": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ],
+      "fov": 50
+    },
+    "metrics": {
+      "calls": 152,
+      "triangles": 3244634,
+      "geometries": 100,
+      "textures": 39
+    },
+    "assets": [
+      {
+        "file": "model-context-low.glb",
+        "materials": 26,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-exterior-low.glb",
+        "materials": 8,
+        "bakedMaterials": 6,
+        "occlusionMaterials": 6,
+        "atlasChannels": [
+          1,
+          0
+        ]
+      },
+      {
+        "file": "model-trains-low.glb",
+        "materials": 14,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-platform-low.glb",
+        "materials": 6,
+        "bakedMaterials": 0,
+        "occlusionMaterials": 0,
+        "atlasChannels": []
+      },
+      {
+        "file": "model-waiting-room-low.glb",
+        "materials": 13,
+        "bakedMaterials": 12,
+        "occlusionMaterials": 12,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      },
+      {
+        "file": "model-concourse-low.glb",
+        "materials": 10,
+        "bakedMaterials": 9,
+        "occlusionMaterials": 9,
+        "atlasChannels": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "passed": true,
+  "finished": "2026-10-29T03:45:13.208Z"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "inputTransfer": "Explicit inverse sRGB of retained display-encoded HDRs",
+  "outputTransfer": "Linear RGBE HDR; Standard/sRGB PNG and pixel-identical losslessWebP",
+  "radianceScale": 1,
+  "zones": [
+    {
+      "zone": "exterior",
+      "sourceUnchanged": true,
+      "calibrationPass": true,
+      "linearMeanBefore": 0.0717393159866333,
+      "linearMeanAfter": 0.07217348366975784,
+      "meanChangePercent": 0.6052018717399577,
+      "sourcePeak": 0.784324049949646,
+      "filteredPeak": 1.183816909790039,
+      "clippedFullRGBSamples": 31,
+      "clippedLowRGBSamples": 0,
+      "retainedHdrMeanQuantizationError": 0.00023093329218681902
+    },
+    {
+      "zone": "waiting-room",
+      "sourceUnchanged": true,
+      "calibrationPass": true,
+      "linearMeanBefore": 0.012887709774076939,
+      "linearMeanAfter": 0.012967550195753574,
+      "meanChangePercent": 0.6195082219901504,
+      "sourcePeak": 0.6735773086547852,
+      "filteredPeak": 1.0037989616394043,
+      "clippedFullRGBSamples": 1,
+      "clippedLowRGBSamples": 0,
+      "retainedHdrMeanQuantizationError": 3.953167833969928e-05
+    },
+    {
+      "zone": "concourse",
+      "sourceUnchanged": true,
+      "calibrationPass": true,
+      "linearMeanBefore": 0.050909530371427536,
+      "linearMeanAfter": 0.05091196671128273,
+      "meanChangePercent": 0.0047856262617607115,
+      "sourcePeak": 0.6877774000167847,
+      "filteredPeak": 0.6950743198394775,
+      "clippedFullRGBSamples": 0,
+      "clippedLowRGBSamples": 0,
+      "retainedHdrMeanQuantizationError": 0.00015907170018181205
+    },
+    {
+      "zone": "platform",
+      "sourceUnchanged": true,
+      "calibrationPass": true,
+      "linearMeanBefore": 0.2528435289859772,
+      "linearMeanAfter": 0.2528460919857025,
+      "meanChangePercent": 0.0010136702867757919,
+      "sourcePeak": 0.7538285851478577,
+      "filteredPeak": 1.0042312145233154,
+      "clippedFullRGBSamples": 1,
+      "clippedLowRGBSamples": 0,
+      "retainedHdrMeanQuantizationError": 0.0006902559543959796
+    }
+  ],
+  "scope": "Diffuse illumination only; originals,geometry,AOandappassets unchanged",
+  "note": "Exactly uniform inputs bypass the learned filter; constant test verifies the linear compositor/encoding path. Color-only denoising can soften tiny shadow features at atlas islands."
+}

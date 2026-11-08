@@ -1,0 +1,67 @@
+{
+  "status": "PASS actual56face source P/N/UV0, common qualified finish and continuous metric lightUV",
+  "source": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/model-concourse-soffit.glb",
+    "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+    "bytes": 9112
+  },
+  "currentOwners": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-concourse.glb.gz",
+    "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+    "bytes": 6959153
+  },
+  "result": {
+    "label": "exact56existingorientedfaces→newcommonfinishBlendersource",
+    "status": "PASS",
+    "trianglesBefore": 56,
+    "trianglesAfter": 56,
+    "matched": 56,
+    "exactOrientedCorners": 56,
+    "maxPositionComponentDriftM": 0,
+    "maxNormalComponentDrift": 0,
+    "maxNormalAngleDegrees": 0,
+    "minimumNormalDot": 1,
+    "maxUv0ComponentDrift": 0,
+    "maxLightingUv1ComponentDrift": 0,
+    "unmatched": 0,
+    "largestCases": [],
+    "failures": [],
+    "positionBoundM": 0.00002,
+    "normalAngleBoundDegrees": 0.5,
+    "minimumNormalDotBound": 0.9999619230641713,
+    "normalComponentDriftMeasuredOnly": true,
+    "uvComponentBound": 0.000002
+  },
+  "material": {
+    "doubleSided": true,
+    "extras": {
+      "source_family": "Unornamented pale mineral lower Exit underside; exact coating unresolved",
+      "historical_qualification": "Photographic appearance family only; exact original material species, hue/roughness and1935condition not measured.",
+      "owned_existing_triangles": 56,
+      "finish_revision": 13,
+      "lighting_atlas_uv": 1
+    },
+    "name": "Lower33rdPaleMineralSoffit",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.46000000834465027,
+        0.44999998807907104,
+        0.41999998688697815,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8199999928474426
+    }
+  },
+  "continuousLightUV": {
+    "channel": 1,
+    "intendedResolution": [
+      4096,
+      4096
+    ],
+    "metricPixelsPerMetre": 60.13264562615617,
+    "maximumAnalyticProjectionErrorUV": 2.7410240965863863e-8,
+    "projectionOnlyOnExisting56Triangles": true
+  },
+  "qualification": "OriginalUV0retained; freshlightUV1 is validcontinuoussharedworldprojection, not an added roof. No existing hole/prism/level/wall/floor/stair/sign face modified. Final raw/encoded/channel/density and same-view lighting acceptance remain required."
+}

@@ -1,0 +1,68 @@
+# Pennsylvania Station — lower station reconstruction
+
+[Live visual checkpoint `fe2ea78`](https://stavreskimario.github.io/penn-station-1935/?preview=fe2ea78), runtime `12-bridge-bay-1`, adds the first source-supported bay of the Eighth Avenue road bridge above the western tracks: 22 columns, built-up girders, connecting members and a roof plate. Open **Station plan → The Eighth Avenue bridge** to see it. Walk starts on the checked Platform 5 sidepath; Orbit gives a wider view. All six areas remain loaded together.
+
+The editable Blender/Geometry Nodes source follows the original engineering section's column spacing, width and structural families. Local fabrication, registration and paint remain reconstructed. Fresh 4K/128-sample lighting accompanies a corrected dielectric painted surface. This is one finite bay of the 525 ft bridge; the wider railway enclosure and finished photorealistic lighting remain incomplete. [Source and qualifications](../authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/README.md) and [validation](./VALIDATION.md) distinguish the checks and limitations.
+
+Both normal and Shift walking are 15% faster: 2.99 and 6.6125 m/s. Existing gallery finishes, concrete floor maps, street-exit sign and wall correction remain included. The gray ceiling band near the exit is a finish/lighting transition across existing roof geometry, not a proven hole; its refinement follows separately. Fuller Manhattan, mobile optimization and exterior roof flicker stay deferred.
+
+## Previous arrivals route to the street
+
+Runtime `10-arrivals-street-exit-1` added the onward connection from the lower arrivals gallery: northward gallery extension → passage under 33rd Street → the source-supported midblock Otis escalator and adjacent stone stair → a physical private-way landing and the opposite sidewalk. The escalator is static; the adjacent stair provides the walking ascent. All spaces remain in the same continuously loaded station. Its publication and acceptance are retained in [validation](VALIDATION.md).
+
+The passage has Blender-authored enameled-brick PBR surfaces and fresh 4096 px / 128-sample Cycles Metal illumination, including ten interpreted baked lamps. Raw and encoded route checks each pass 6,252 samples, with minimum measured headroom 1.885793 m. The browser walking walkthrough was omitted at the user's request; no new native walking, performance or public-deployment pass is claimed. See [current validation](VALIDATION.md), [editable construction and primary evidence](../authoring/penn-station-1935/review/phase10/exit-construction/README.md) and [lighting source](../authoring/penn-station-1935/lighting/phase10-exits/README.md).
+
+Opening-era plans document the passage and ascent; an original Otis photograph supports the paired escalator/stone-stair arrangement. The adjacent stair width, full run, minor profiles, finishes and registration remain inferred. The adopted rise is 24.5 ft against the source's 25 ft escalator lift; existing station levels were retained. Survival of every opening-era detail into 1935–1940 is unverified. An ambiguous northwestern plan rectangle was rejected as a direct street-stair shortcut. This is a bounded circulation checkpoint, with broader platform finishing and photographic realism still in progress.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Lower arrivals gallery ended at a research guard | A continuous modeled route through the north gallery and under-street passage to a real sidewalk | Give arrivals an onward exit |
+| Missing passage finish and ascent | Enameled-brick PBR, ten baked lamps and a photo-led static escalator beside walkable stone stairs | Reconstruct the documented architectural family |
+
+## Previous Platform 5 checkpoint
+
+The following record describes the earlier checkpoint. Its publication checks and remaining-work list predate the arrivals street connection above.
+
+This checkpoint adds paired flat fascia faces around Platform 5, smooth west-stair handrail transitions and two curved lower haunches authored in Blender. Fresh 4K/256-sample illumination follows the changed geometry. Source, physical contact and all 34 native walking steps pass with six continuously loaded zones and Walk as default. The strict local response observation remains recorded as failed. Independent public verification passes all 19 selected response bodies and eight native stair/gallery walking steps at `50f1933`. [Open the live update](https://stavreskimario.github.io/penn-station-1935/?preview=50f1933).
+
+[Source study](../authoring/penn-station-1935/review/phase9/p5-finish-study/README.md), [precision repair](../authoring/penn-station-1935/review/phase9/p5-precision-repair/README.md) and [actual browser previews](../authoring/penn-station-1935/review/phase9/p5-finish-integration/README.md) retain the evidence. The upper haunch, other stair profiles and continuous gallery finishing remain unfinished. Primary photographs support open guards and exposed framing; exact radii, fabrication and the Platform 5 / 1935 registration remain inferred. Broader photographic fidelity is still in progress. [Validation](VALIDATION.md) separates current checks from the previous publicly verified lighting checkpoint.
+
+An evidence-led reconstruction of the original Pennsylvania Station for Mario's GitHub Pages collection. Exterior, waiting room, concourse, neighbourhood and railway share one continuously loaded world. Sixteen independent arrival staircases connect eight ordinary platform correspondences to the lower Exit gallery. The first eight platforms now have source-controlled concrete overhangs, coved undersides, continuous supporting walls and a finer granolithic finish, with fresh illumination from the current station geometry.
+
+The intended period is 1935–1940, using opening-era plans and photographs as anchors. Minor dimensions, later alterations, finishes and major unfinished areas remain qualified. This is a phased reconstruction with further photographic fidelity work ahead. See the [research register](RESEARCH.md), [source catalogue](sources.json), [arrivals evidence](model/arrivals-evidence.md) and [validation](VALIDATION.md).
+
+| Before | After | Why |
+| --- | --- | --- |
+| Provisional narrow Exit deck without separate arrival stairs | A source-width gallery and sixteen stairs with two flights and a flat intermediate landing each | Reconstruct the separate arrival circulation |
+| Old deck and lamp positions conflict with the new stairs | Exact old-cell removal, closed northern retained portions and sixteen complete relocated lamp assemblies | Coordinate the floor, access and actual fixture supports |
+| Missing lower frame and lift enclosures | Individually traced supports and eight distinct lift enclosures, with unresolved transfers held | Add source-backed structure without cloning a regular generic grid |
+| Uniform lighting allocation on arrival stairs | Denser tread/landing charts, fresh 4K/256-sample illumination and AO on the existing geometry | Resolve stair lighting while preserving source circulation |
+| Angular provisional handrail transitions and unfinished framing faces at Platform 5 | Blender-authored curved west handrails, paired flat fascia and two lower haunches, with fresh lighting | Establish one reviewed finish before extending it through the gallery |
+
+## Explore
+
+Choose **Enter Station**. **Walk is the default**: drag to look, use **WASD/arrows** to walk and **Shift** for speed. Eye height follows actual floors and stairs. Normal and Shift walking are each15% faster than the gallery-finish checkpoint:2.99m/s and6.6125m/s. Open **Station plan → The lower arrivals gallery** to reach the new viewpoint. **Environment → Orbit** enables free flight, with **Q/E** for height; switching back to Walk retains the arrivals viewpoint.
+
+The large location card has been removed so the architecture stays visible; viewpoint names remain in navigation. The main viewpoints move the camera around the same station. Daylight, field of view, shadows, quality, annotations, approximate archive comparisons and optional ambience remain available. Fields, dialogs and blur guard movement input. Fuller Manhattan and further mobile optimization are deferred.
+
+## Platform construction and rendering
+
+Blender authors the architecture. React, React Three Fiber, Drei and Three.js render glTF 2.0 with Meshopt and shared KTX2 textures. WebGL 2 is the default; native WebGPU parity remains experimental. GitHub Pages requires no backend or visitor build step.
+
+Ten illumination records include the new 4096 px platform atlas baked with 64 samples, a 512 px fallback and 2048 px contact AO. The platform addition uses two material batches and lossless Meshopt compression of the original floating-point geometry, preserving thin surfaces and stair contacts. Existing northern platform lighting and static reflection captures remain retained. Stone, glass and historical colour remain appearance interpretations.
+
+The delivered arrivals lighting checkpoint records 219,408,187 referenced model/texture/light/probe bytes across both variants. All 12 GLBs pass with zero errors, 438 recorded warnings and 89 shared KTX2 textures. [Platform evidence](model/platform-section-evidence.md) distinguishes documented construction from interpreted depths, flat tops, end closures and finishes. Current decoded arrivals routes, tread/guard/support contacts and the local 34-leg native loop pass; [Validation](VALIDATION.md) keeps those functional results separate from sustained performance and publication.
+
+The [core editable-source history](../authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md) and [platform source/replay](../authoring/penn-station-1935/review/phase9/platform-sections/README.md) preserves the new scene, exact earlier-source recovery and a standalone CLI replay that reproduces the raw geometry byte for byte. Required lighting sources remain retained or recoverable through immutable Git identities and verified backups. [Asset rights](ASSET_RIGHTS.md) identify the references.
+
+The arrivals public stage fits the measured 240 MB internal allowance, preserving full-resolution maps. Exact file/byte counts are retained in the lighting review; the separate complete legacy-root limit stays 1 GB. Hosting settings are unchanged; Engineering Journal and Crystal Palace remain removed.
+
+## Remaining work
+
+An [unpublished P5 source study](../authoring/penn-station-1935/review/phase9/p5-finish-study/README.md) preserves editable flat-face work, actual before/after views and exact replay/geometry/walking checks. Curved stair and rail profiles, fresh lighting, encoded variants and live integration remain unfinished.
+
+The next geometry milestone is a coordinated **first eight gallery-edge, stair and underside finish**, starting with one P5 review bay. Primary photographs support open metal guards and exposed framing beside the tracks. Finish actual fascia, landing/stringer seats and guard/newel joins while retaining those open views; add no generic opaque side walls. The [qualified source plan](../authoring/penn-station-1935/review/phase9/arrivals-lighting-priority/next-checkpoint-v2.md) requires registered bearing and train-clearance checks before repeating the bay. The general 5 in beam-top rule does not establish a universal slab or gallery soffit datum.
+
+Northern P9/LIRR arrivals, streetward exits, western Main-floor openings/supports and the broader platform enclosure remain unfinished. Twenty-six upper transfer cases and two lower support positions remain held. Lift enclosures are visual models, not functioning elevators or authenticated assignments of the three Main-reaching lifts. Absolute placement retains at least ±1 m source-registration uncertainty.
+
+Further stone/glass realism, waiting-room ceiling and concourse/track/arcade detail, five murals and realistic period passengers remain open. Fuller Manhattan/mobile work is deferred. Exterior roof flicker stays last. [PR11](https://github.com/stavreskimario/stavreskimario.github.io/pull/11) remains draft and unmerged.

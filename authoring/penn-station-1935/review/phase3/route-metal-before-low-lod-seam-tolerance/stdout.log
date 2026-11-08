@@ -1,0 +1,13 @@
+ROUTE launch: installed Chrome, ANGLE/metal, 640×480 low-quality world
+ROUTE driver: {"vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)"}
+ROUTE leg: Seventh Avenue through arcade and down grand stair
+ROUTE Seventh Avenue through arcade and down grand stair: 114.47, 1.69, 0.00 · exterior
+ROUTE Seventh Avenue through arcade and down grand stair: 104.47, 1.69, 0.00 · exterior
+ROUTE Seventh Avenue through arcade and down grand stair: 101.64, 1.69, 0.00 · exterior
+ROUTE Seventh Avenue through arcade and down grand stair: 101.64, 1.69, 0.00 · exterior
+ROUTE Seventh Avenue through arcade and down grand stair: 101.64, 1.69, 0.00 · exterior
+ROUTE Seventh Avenue through arcade and down grand stair: 101.64, 1.69, 0.00 · exterior
+AssertionError [ERR_ASSERTION]: Seventh Avenue through arcade and down grand stair: stalled for three successive two-second samples; likely collision/navigation gap
+    at drive (/private/tmp/penn-station-pages-20261029/tests/penn-route.cjs:229:11)
+    at async /private/tmp/penn-station-pages-20261029/tests/penn-route.cjs:239:18
+ROUTE report: /private/tmp/penn-station-pages-20261029/authoring/penn-station-1935/review/phase3/route-metal/penn-route-validation.json

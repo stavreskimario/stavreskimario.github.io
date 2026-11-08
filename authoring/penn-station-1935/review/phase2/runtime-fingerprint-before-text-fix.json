@@ -1,0 +1,491 @@
+{
+  "created": "2026-10-29T03:38:29.184Z",
+  "description": "Final promoted runtime/source files at start of browser validation",
+  "files": [
+    {
+      "file": "assets/asset-metrics.json",
+      "bytes": 14708,
+      "sha256": "21be47d8dde5a555056ce2fe90f935146bfcd6d2da51ee642069545af62737fc"
+    },
+    {
+      "file": "assets/basis/LICENSE.txt",
+      "bytes": 11347,
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c"
+    },
+    {
+      "file": "assets/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "file": "assets/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "file": "assets/lighting-concourse-sky-low.webp",
+      "bytes": 163054,
+      "sha256": "ee497dc8a78dea61422d0872e7b4ff2580c3d45a8f75bed11ee581e5362f7b9f"
+    },
+    {
+      "file": "assets/lighting-concourse-sky.webp",
+      "bytes": 1378280,
+      "sha256": "13dc39ac14b19628c454a254bd3c65de528a68c56dd3e0905499dfcb1f488f05"
+    },
+    {
+      "file": "assets/lighting-concourse.json",
+      "bytes": 738,
+      "sha256": "326d8a2c1f57020ad72bfad8179631905e972c119e682f6129464c9f8dbd7e75"
+    },
+    {
+      "file": "assets/lighting-exterior-sky-low.webp",
+      "bytes": 171118,
+      "sha256": "b08a7f606a1ae98f530da0b41bddb3e474057fc44f30c0c49fd770f33151c081"
+    },
+    {
+      "file": "assets/lighting-exterior-sky.webp",
+      "bytes": 2985440,
+      "sha256": "af05a3f2ff979b11204761a079d7ee79108c3c8773faf320edbed3c2770c86a6"
+    },
+    {
+      "file": "assets/lighting-exterior.json",
+      "bytes": 733,
+      "sha256": "dfa97b10938af8b51318e5d9f1180289b814e0b9bdc1cfc02bae1e6b9e9a1293"
+    },
+    {
+      "file": "assets/lighting-waiting-room-sky-low.webp",
+      "bytes": 189274,
+      "sha256": "9bc7f355744307f6712052f454cdfea7191d48989c9d5b2cff4b12e395d62e06"
+    },
+    {
+      "file": "assets/lighting-waiting-room-sky.webp",
+      "bytes": 1894894,
+      "sha256": "26937d944e7a52c1efba3da2d6e18c79f62aa2b4d8dc4beebf6220d40c63699e"
+    },
+    {
+      "file": "assets/lighting-waiting-room.json",
+      "bytes": 744,
+      "sha256": "248dd45c09b341dcc356afe3b0f196ec611a123ee23160853eca61fdea1f42ba"
+    },
+    {
+      "file": "assets/model-concourse-low.glb.gz",
+      "bytes": 4153201,
+      "sha256": "22e09e9c0cc44455c288855f0be3786175cefa3480a00c66e8b27af9daf7904f"
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "bytes": 4143321,
+      "sha256": "2b9b7b74112c11f7065056b1beabba7c7aa332f7b8f0da82029e14ee9eb9da8e"
+    },
+    {
+      "file": "assets/model-context-low.glb.gz",
+      "bytes": 654188,
+      "sha256": "450388badd46f14c0ff4308832d98a0c274a19c68be40ba21d6e9ae08b01b652"
+    },
+    {
+      "file": "assets/model-context.glb.gz",
+      "bytes": 493360,
+      "sha256": "b18853817bc901e6666572176bfd1ba873f6ef27eee0078d0a273eeed67c8a06"
+    },
+    {
+      "file": "assets/model-exterior-low.glb.gz",
+      "bytes": 816861,
+      "sha256": "6ad96be7f11f2797d7b7a7db84e3ac0e42e72ad7cec079d0191440a096cc325f"
+    },
+    {
+      "file": "assets/model-exterior.glb.gz",
+      "bytes": 548567,
+      "sha256": "1030e5eacea1758312c0eccee2bca31c8334c5c053164721d3fa51daed554a96"
+    },
+    {
+      "file": "assets/model-platform-low.glb.gz",
+      "bytes": 41245,
+      "sha256": "fc5af21a225cae02f95d1e7992174be9138fce85d9b19cddcf34948588bb768c"
+    },
+    {
+      "file": "assets/model-platform.glb.gz",
+      "bytes": 19112,
+      "sha256": "1bbcdd7b1987ab672da659f4ffa383b96e479dca2b7c930047f6c2eb6305230c"
+    },
+    {
+      "file": "assets/model-trains-low.glb.gz",
+      "bytes": 155868,
+      "sha256": "415eff7135a5b527da028a47cf59a17277e408f82fbf07fc09774ca1004b8926"
+    },
+    {
+      "file": "assets/model-trains.glb.gz",
+      "bytes": 120567,
+      "sha256": "720efb1de0912d3835ab2e0df3ec8632309dfa6b8faabbbf55ffe7b3d5e692fb"
+    },
+    {
+      "file": "assets/model-waiting-room-low.glb.gz",
+      "bytes": 3524511,
+      "sha256": "d179a7a8d3d07dd204eb58a2da932f8980a06d35709b48b740b2b64358398214"
+    },
+    {
+      "file": "assets/model-waiting-room.glb.gz",
+      "bytes": 3453425,
+      "sha256": "c25a7436b0dbdef75cf1e7ed128d2b3cd5d8d17cfd30044b3c8d578ea3fd5db9"
+    },
+    {
+      "file": "assets/reference-concourse.jpg",
+      "bytes": 274441,
+      "sha256": "b3cc6659948f2b94bc960d482dffeebdc22bc4b4826f3ddf30d92c14ed6a8106"
+    },
+    {
+      "file": "assets/reference-exterior.jpg",
+      "bytes": 230149,
+      "sha256": "4c8da066cb4013d63372830e18d56c2964ce10f00bfcd0a07af1e362cb73f348"
+    },
+    {
+      "file": "assets/reference-waiting.jpg",
+      "bytes": 221187,
+      "sha256": "4761b4d46f68c6fa02ca81e2675eada74b0bd133ebad80253e085bebe006cdd4"
+    },
+    {
+      "file": "assets/scene-manifest.json",
+      "bytes": 22298,
+      "sha256": "e06b4d380c4065915ddae09b56a6b374be51e5973c7b63a03d278d87138ce975"
+    },
+    {
+      "file": "assets/sky.hdr",
+      "bytes": 1500948,
+      "sha256": "38199a31e945906f6778431e989256a92d9d78b0cfc0f902accad9f5244bf50f"
+    },
+    {
+      "file": "assets/textures/045483ffdbb9fca9da9d.ktx2",
+      "bytes": 224682,
+      "sha256": "045483ffdbb9fca9da9dc648897703e7af34e6b2da7ef38e0d59ed5a6eb9165d"
+    },
+    {
+      "file": "assets/textures/0663da69b5940183c02f.ktx2",
+      "bytes": 237504,
+      "sha256": "0663da69b5940183c02f72652e5c8bc6aa7cd7b63e0a9cd27c21a18679339c65"
+    },
+    {
+      "file": "assets/textures/13c4f61beb144394cd73.ktx2",
+      "bytes": 3556449,
+      "sha256": "13c4f61beb144394cd73fcbf7a773802b791a8b2ba68029d128fde94e10aa32b"
+    },
+    {
+      "file": "assets/textures/13ccf7ecaf95c5e9de8a.ktx2",
+      "bytes": 867311,
+      "sha256": "13ccf7ecaf95c5e9de8a93444a5d4c1302f5ebb420320655fd5a55a5d0dd428a"
+    },
+    {
+      "file": "assets/textures/17a7c7833754aad20681.ktx2",
+      "bytes": 160504,
+      "sha256": "17a7c7833754aad2068103c804877957ba384fc33f918a5fe5e59cd022c75cfd"
+    },
+    {
+      "file": "assets/textures/1ed31ea622d96e47544c.ktx2",
+      "bytes": 335846,
+      "sha256": "1ed31ea622d96e47544c1d258f835369afe404a93b9312cf71eea4e77de2edcf"
+    },
+    {
+      "file": "assets/textures/23377872e769ee72152d.ktx2",
+      "bytes": 105846,
+      "sha256": "23377872e769ee72152db0f47438182fa0116497e98301f2cc378f17479dfa4a"
+    },
+    {
+      "file": "assets/textures/3335d12c85f0a74be102.ktx2",
+      "bytes": 5435228,
+      "sha256": "3335d12c85f0a74be10258cc4b1b406d335752f7cf053ebffd93a2a63813828a"
+    },
+    {
+      "file": "assets/textures/33721d1aecd74f3fd521.ktx2",
+      "bytes": 181881,
+      "sha256": "33721d1aecd74f3fd521150ec70568568bd0fbf70d1e62c4237d07bc4205e4c6"
+    },
+    {
+      "file": "assets/textures/38556271990a26e3bd5e.ktx2",
+      "bytes": 268666,
+      "sha256": "38556271990a26e3bd5e9aa46bfe968161f53c0d43d803e31a21ce09d32de988"
+    },
+    {
+      "file": "assets/textures/3b45d2f165e94f00482a.ktx2",
+      "bytes": 860007,
+      "sha256": "3b45d2f165e94f00482a8df687986af99c8e084f41fe22e57f293958c9fa54f9"
+    },
+    {
+      "file": "assets/textures/3d6f4a3323017ae4bc57.ktx2",
+      "bytes": 4296,
+      "sha256": "3d6f4a3323017ae4bc573ed42b57edb724a30686f9af75247ee436c516f56360"
+    },
+    {
+      "file": "assets/textures/3f048a6c06cf38b8262f.ktx2",
+      "bytes": 794564,
+      "sha256": "3f048a6c06cf38b8262fa0653675fb57ebeead04d1b84b5c49a6242ea7a4041f"
+    },
+    {
+      "file": "assets/textures/3fd19ca7c33c82238530.ktx2",
+      "bytes": 297484,
+      "sha256": "3fd19ca7c33c8223853094437fb2fd2d2ac3c19e9c9879337760e033e4314829"
+    },
+    {
+      "file": "assets/textures/46d8c3d4cc2d1185893e.ktx2",
+      "bytes": 181791,
+      "sha256": "46d8c3d4cc2d1185893e50a7d45b51c81247ee466f42b102c6b5cea1c7e47019"
+    },
+    {
+      "file": "assets/textures/49f21a731702220b5bd7.ktx2",
+      "bytes": 1693382,
+      "sha256": "49f21a731702220b5bd75cbfc4c24898604b7cf2745bd8e52eb7637a51f866cb"
+    },
+    {
+      "file": "assets/textures/4d7a733aa9e3a117b76b.ktx2",
+      "bytes": 607982,
+      "sha256": "4d7a733aa9e3a117b76b145c99d2a04691ca2e36cc040fc593ccfa920340ee23"
+    },
+    {
+      "file": "assets/textures/4f8d892ee7633a32162d.ktx2",
+      "bytes": 164808,
+      "sha256": "4f8d892ee7633a32162d0a1fdeef9ecd23ba3b768185a2000bd53bda8c4db8bc"
+    },
+    {
+      "file": "assets/textures/5a9772cb39ace88e956f.ktx2",
+      "bytes": 202442,
+      "sha256": "5a9772cb39ace88e956fdd5654e7136459868480d8396ddd5e8ed9d2a493cebf"
+    },
+    {
+      "file": "assets/textures/5be97a02f824d013360b.ktx2",
+      "bytes": 429110,
+      "sha256": "5be97a02f824d013360b9e8d5217cc5f7f35c00777cfc2c108f819358248a0e1"
+    },
+    {
+      "file": "assets/textures/5c6c2c7409337af4cd71.ktx2",
+      "bytes": 533240,
+      "sha256": "5c6c2c7409337af4cd71501badb750278db60064382e570455d5cef98b0e0bce"
+    },
+    {
+      "file": "assets/textures/64b525034a9a4df87410.ktx2",
+      "bytes": 208002,
+      "sha256": "64b525034a9a4df87410e7f1535ace734ab539a68939df833ca50ab3e11fb70d"
+    },
+    {
+      "file": "assets/textures/69568bc9b65cd706ace5.ktx2",
+      "bytes": 839153,
+      "sha256": "69568bc9b65cd706ace5aa0497aba3eb11711b4fb520f3304959cf70be77d016"
+    },
+    {
+      "file": "assets/textures/6b991d2d4d6842ad19fc.ktx2",
+      "bytes": 193529,
+      "sha256": "6b991d2d4d6842ad19fc6972758fbd18dea066cb1ebf3c5b165237012c5df7a5"
+    },
+    {
+      "file": "assets/textures/727a06452744061516f9.ktx2",
+      "bytes": 157789,
+      "sha256": "727a06452744061516f9d6d3544dc6b2b3aeb14a6d9c268ea576d3145a7f380c"
+    },
+    {
+      "file": "assets/textures/772eced7e742a43d978e.ktx2",
+      "bytes": 859920,
+      "sha256": "772eced7e742a43d978e0e1083d5c545d883984f77093f91a64eb996c6a885f0"
+    },
+    {
+      "file": "assets/textures/79410fc7f29b67cf4e8c.ktx2",
+      "bytes": 2381311,
+      "sha256": "79410fc7f29b67cf4e8c9fc10073779ea72b804479e613f6b7e49784cad5a344"
+    },
+    {
+      "file": "assets/textures/7a0eea2b54cb58d7296d.ktx2",
+      "bytes": 1541662,
+      "sha256": "7a0eea2b54cb58d7296d286caa61c02ebd07ef020f7a6f7aba70817edbb5bef3"
+    },
+    {
+      "file": "assets/textures/7d4841447665d723f34f.ktx2",
+      "bytes": 95737,
+      "sha256": "7d4841447665d723f34fe5a2c9037cbb8c60f487278add7fd6d4094a3842a54d"
+    },
+    {
+      "file": "assets/textures/84ca1fa3bf5561015fe0.ktx2",
+      "bytes": 274454,
+      "sha256": "84ca1fa3bf5561015fe0602cbcd1da51942521f92b52581a97677d9cb3938ba6"
+    },
+    {
+      "file": "assets/textures/8b602c339be41e7e043a.ktx2",
+      "bytes": 182660,
+      "sha256": "8b602c339be41e7e043a41a8440d2a739516467dbab1079f4f746bd7392921a7"
+    },
+    {
+      "file": "assets/textures/90e6455c8ad02ae0eefb.ktx2",
+      "bytes": 892516,
+      "sha256": "90e6455c8ad02ae0eefb057d0eb11113b84eac576c3819eba56ee621967470cd"
+    },
+    {
+      "file": "assets/textures/911a361e2370f842c598.ktx2",
+      "bytes": 926968,
+      "sha256": "911a361e2370f842c5983f8ef2bd919c0e056331ca2ffa33d6bff3d174e39456"
+    },
+    {
+      "file": "assets/textures/96c2452f554cdcc0f0cc.ktx2",
+      "bytes": 1755,
+      "sha256": "96c2452f554cdcc0f0ccdd51bd5dd2f6486b4f1046084b024ea28898128f1892"
+    },
+    {
+      "file": "assets/textures/a39f7640085f37632425.ktx2",
+      "bytes": 842348,
+      "sha256": "a39f7640085f37632425a42bfd2c0439c8af68d95022914b54408bc72771fc85"
+    },
+    {
+      "file": "assets/textures/a88cd37c93251ba8c26e.ktx2",
+      "bytes": 198781,
+      "sha256": "a88cd37c93251ba8c26e1bdfc161d624f0f0460aa7c225d21bc6209bf31958a3"
+    },
+    {
+      "file": "assets/textures/a97fd9ee2b34d38ec11c.ktx2",
+      "bytes": 208020,
+      "sha256": "a97fd9ee2b34d38ec11c5cb820da6004f1dcd4c8a909c2ea028c478a36cf68f8"
+    },
+    {
+      "file": "assets/textures/acc04afd2689712b1b12.ktx2",
+      "bytes": 160408,
+      "sha256": "acc04afd2689712b1b12fc9f154b0933a8049291ade6f5fe22ed582b9d13299f"
+    },
+    {
+      "file": "assets/textures/b64c55705256a5018846.ktx2",
+      "bytes": 4085128,
+      "sha256": "b64c55705256a5018846d6e62b487fe3b5641497d991bf50f94f6ae83fccc44d"
+    },
+    {
+      "file": "assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+      "bytes": 532453,
+      "sha256": "bd4573fc7dd8e24ce5fc14d58d340e8973a224238fefe5bfb63a25813c78bfcf"
+    },
+    {
+      "file": "assets/textures/beeae21668c73f74ea5d.ktx2",
+      "bytes": 243248,
+      "sha256": "beeae21668c73f74ea5d38f5ac6a143a5e125354a9b5bd20ca269990c7072bde"
+    },
+    {
+      "file": "assets/textures/c0868a78a1038306a222.ktx2",
+      "bytes": 54164,
+      "sha256": "c0868a78a1038306a22222ef7cf60d95390e1b56628f2217c30ce5c03b68ed18"
+    },
+    {
+      "file": "assets/textures/cfbd6e09ee4a3cb3df61.ktx2",
+      "bytes": 681,
+      "sha256": "cfbd6e09ee4a3cb3df6113a97c542a7c44daf6ed00f73bfffd50a1d9cb057be0"
+    },
+    {
+      "file": "assets/textures/d3af65ba7e33b704f9c1.ktx2",
+      "bytes": 182371,
+      "sha256": "d3af65ba7e33b704f9c161a49133fc68dd8d105ce08f11e41cab38e34c4ebc03"
+    },
+    {
+      "file": "assets/textures/de511a781294895dfd20.ktx2",
+      "bytes": 863637,
+      "sha256": "de511a781294895dfd209a6b0a1ca33d75360b501063be58b8e02cb7eacdf3a6"
+    },
+    {
+      "file": "assets/textures/ded8551495b688b06a64.ktx2",
+      "bytes": 96022,
+      "sha256": "ded8551495b688b06a64794ebe8719630e52e5a202f02a93f0dbf680e2fffd7f"
+    },
+    {
+      "file": "assets/textures/e25abc85a6ecd814ea97.ktx2",
+      "bytes": 175605,
+      "sha256": "e25abc85a6ecd814ea9730c1d48603d726e6240b523282ded94d0c8eeba7fd07"
+    },
+    {
+      "file": "assets/textures/e9617f9c27a00f4287f1.ktx2",
+      "bytes": 3639326,
+      "sha256": "e9617f9c27a00f4287f1f8c39b220f8d51ed925d25886c4e191fcb43b3265db1"
+    },
+    {
+      "file": "assets/textures/ea2070fbe776040f22cb.ktx2",
+      "bytes": 206219,
+      "sha256": "ea2070fbe776040f22cbe15054508f0d110addaa3458232106a2adaf8a60f38c"
+    },
+    {
+      "file": "assets/textures/ebad7b61f035b595fc1f.ktx2",
+      "bytes": 862446,
+      "sha256": "ebad7b61f035b595fc1f124b5ff656ba56c5778c5f2103004125d86232f7c75c"
+    },
+    {
+      "file": "assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+      "bytes": 863104,
+      "sha256": "ef7fd884a3d0c11e51a51e0e10778a6144332cd89588038ca0f425109635556b"
+    },
+    {
+      "file": "assets/textures/f20a20acf02f7ce2462f.ktx2",
+      "bytes": 862627,
+      "sha256": "f20a20acf02f7ce2462f2f014d55d0d52d2d02125029c8c7140a44c035b7be88"
+    },
+    {
+      "file": "assets/textures/f32c702ad0508fcd84ed.ktx2",
+      "bytes": 863497,
+      "sha256": "f32c702ad0508fcd84ed926d25a1ba3633ea91af81d10083ab27f5e605350857"
+    },
+    {
+      "file": "assets/textures/f3c33e9e13a60222a23d.ktx2",
+      "bytes": 202002,
+      "sha256": "f3c33e9e13a60222a23d0d6bc062c45b77a5c948cdfdab1beacba50cdae0af98"
+    },
+    {
+      "file": "assets/textures/f4caf730a085bde61cdb.ktx2",
+      "bytes": 164647,
+      "sha256": "f4caf730a085bde61cdb55ec17cd9f808d46eee3d27acc2bfe8a0ae11d30d18c"
+    },
+    {
+      "file": "assets/textures/f674cdbc2a30bb6f79e5.ktx2",
+      "bytes": 2435952,
+      "sha256": "f674cdbc2a30bb6f79e5ae615cd769abe7f5b34b8e3fb56db37509e3061e0bd5"
+    },
+    {
+      "file": "assets/textures/f827c7f915d3d0910681.ktx2",
+      "bytes": 926768,
+      "sha256": "f827c7f915d3d09106818d6ce95645d0b4bc3fb685fd6cdf26cb4444f9198d38"
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 1025554,
+      "sha256": "e0cf6b5efb135ad4fe56624f20f4ae172ac564ec110de03ed95fd21c06f82fb2"
+    },
+    {
+      "file": "dist/app.js.LEGAL.txt",
+      "bytes": 3321,
+      "sha256": "eac37110b4dee8d84bb8b5ff10311f8603412fb8506d2f4b7632a22b057c664b"
+    },
+    {
+      "file": "dist/build-sizes.json",
+      "bytes": 261,
+      "sha256": "41a664f5a5d110a32b18d298f776f5f2ec9651e57d53e09b41f3308187f997bf"
+    },
+    {
+      "file": "dist/chunks/chunk-PPXUOJ6P.js",
+      "bytes": 373510,
+      "sha256": "85df8611c6b0a9312135368143f1edd7b2fb12ccad1b50e6e83686fe6eee257c"
+    },
+    {
+      "file": "dist/chunks/chunk-PPXUOJ6P.js.LEGAL.txt",
+      "bytes": 159,
+      "sha256": "6b990102b9b9bc9033750d02208aeca57d83ae2e86f7f530a63c91b604dcd172"
+    },
+    {
+      "file": "dist/chunks/three.webgpu-K62HXD2J.js",
+      "bytes": 579894,
+      "sha256": "e11cc4b51f22acfaadf8e950b1f8757de7c6d9d22c429a916f406993b19285aa"
+    },
+    {
+      "file": "dist/chunks/three.webgpu-K62HXD2J.js.LEGAL.txt",
+      "bytes": 161,
+      "sha256": "bc7a0ae3cb8e30587a18e53ee30b712446c5cb416703b19374c4c18501ae44a9"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17329,
+      "sha256": "f4142f613e9a249be551e081ff5a82f8b2d250c304cebea75534ab9af88b5bf5"
+    },
+    {
+      "file": "src/app.jsx",
+      "bytes": 40800,
+      "sha256": "47843926cb914dbbe4444daf52923b63e1ae5a1c9ec2b39965a6193aebcbf987"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 27741,
+      "sha256": "5fa947c81e786395fce18bf597d3360202d0f05c21c858f80ad60f7a4ffdf7ab"
+    }
+  ]
+}

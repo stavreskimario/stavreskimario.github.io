@@ -1,0 +1,291 @@
+{
+  "status": "PASS exact56source/raw/encoded/mounted, unownedindexretention and10othermodelidentity",
+  "inputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/candidate-v2/model-concourse-soffit.glb",
+      "sha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+      "bytes": 9112
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/bake-run-v1/raw/model-concourse-exit-soffit.glb",
+      "sha256": "b5e46460cb8d646199d6c9c75d66e49ddd3c49079ced29b8cefef33b5d15624f",
+      "bytes": 1464104
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/bake-run-v1/package/model-platform.glb",
+      "sha256": "b4f8149677af0001e412d3907833e488c17f53086e0de26365d7f37caf584aa3",
+      "bytes": 7528
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/candidate-final-v2/model-concourse.glb.gz",
+      "sha256": "310af31e80aa96bb9254533cdc1a48dad5fcc78e17e499dd5242c91b1e09f759",
+      "bytes": 7007186
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse.glb.gz",
+      "sha256": "436ad61297d887f3a4e6166d9abab3f8c6e7b0a0c1e20ce610a8922e240dcb03",
+      "bytes": 7005201
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-concourse.glb.gz",
+      "sha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "bytes": 6959153
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/bake-run-v1/package/model-platform-low.glb",
+      "sha256": "4b01d043e27e902e53c8a6ace197b436d0046edb4a6cdc9e66634af8a1df3129",
+      "bytes": 7528
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/integration/candidate-final-v2/model-concourse-low.glb.gz",
+      "sha256": "7b56c52dd817893567db46deeae5d5a95987ac35bc06cbef045f9469f2c36ebf",
+      "bytes": 6696698
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-soffit-finish/geometry/retained-base-v1/model-concourse-low.glb.gz",
+      "sha256": "29f63c0fafb385a0a8c2ae95a57cc37a4b8e50c196751382552d301a48ad89a0",
+      "bytes": 6695175
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/candidate-enclosure-v3/model-concourse-low.glb.gz",
+      "sha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "bytes": 6648546
+    }
+  ],
+  "cases": [
+    {
+      "label": "accepted56source→fresh raw P/N/UV0/sharedlightUV",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "full raw→encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "full encoded→mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "low raw→encoded exact additional",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "low encoded→mounted exact additional",
+      "status": "PASS",
+      "trianglesBefore": 56,
+      "trianglesAfter": 56,
+      "matched": 56,
+      "exactOrientedCorners": 56,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    }
+  ],
+  "prefixProof": [
+    {
+      "quality": "full",
+      "originalSha256": "51d6bc16f744f32e03a2ebb6d9474767de769493b4316d7ff9ad56d1d8c03f2c",
+      "retainedSha256": "436ad61297d887f3a4e6166d9abab3f8c6e7b0a0c1e20ce610a8922e240dcb03",
+      "mountedSha256": "310af31e80aa96bb9254533cdc1a48dad5fcc78e17e499dd5242c91b1e09f759",
+      "originalBinAndAllOtherPBRNodesSceneExact": true,
+      "retainedBinAndAllTablesPrefixExact": true,
+      "newTrianglesOnce": 56
+    },
+    {
+      "quality": "low",
+      "originalSha256": "437b48408a88d2819cc91f249732bf0dc9eaf92eae59da0ddf30a0d928d7116b",
+      "retainedSha256": "29f63c0fafb385a0a8c2ae95a57cc37a4b8e50c196751382552d301a48ad89a0",
+      "mountedSha256": "7b56c52dd817893567db46deeae5d5a95987ac35bc06cbef045f9469f2c36ebf",
+      "originalBinAndAllOtherPBRNodesSceneExact": true,
+      "retainedBinAndAllTablesPrefixExact": true,
+      "newTrianglesOnce": 56
+    }
+  ],
+  "unownedIndexProof": [
+    {
+      "quality": "full",
+      "node": 9,
+      "primitive": 0,
+      "removedTriangles": 52,
+      "allUnownedIndexTriplesExactOriginalOrder": true
+    },
+    {
+      "quality": "full",
+      "node": 24,
+      "primitive": 1,
+      "removedTriangles": 4,
+      "allUnownedIndexTriplesExactOriginalOrder": true
+    },
+    {
+      "quality": "low",
+      "node": 9,
+      "primitive": 0,
+      "removedTriangles": 52,
+      "allUnownedIndexTriplesExactOriginalOrder": true
+    },
+    {
+      "quality": "low",
+      "node": 24,
+      "primitive": 1,
+      "removedTriangles": 4,
+      "allUnownedIndexTriplesExactOriginalOrder": true
+    }
+  ],
+  "otherModels": [
+    {
+      "file": "model-context-low.glb.gz",
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263",
+      "bytes": 686636,
+      "byteExact": true
+    },
+    {
+      "file": "model-context.glb.gz",
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104",
+      "bytes": 506131,
+      "byteExact": true
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "sha256": "678240a41833fd829adbc4b6645069da06827e477499a04c25d8b4725413c4d3",
+      "bytes": 4443602,
+      "byteExact": true
+    },
+    {
+      "file": "model-exterior.glb.gz",
+      "sha256": "00982ef823f95c0ebe82a5ebf4f13a6063432cf03f75532d95b581f7ac539a9a",
+      "bytes": 4297530,
+      "byteExact": true
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "sha256": "abb6f1037eceff13ad409b5cd9d79a5fc07645bdcfe5b56c297f1f61a1a4c36e",
+      "bytes": 673454,
+      "byteExact": true
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "sha256": "437154580d54fee843ab99d94c27bd7b4562ab8d2b1a9727d5f03a48fc776138",
+      "bytes": 648051,
+      "byteExact": true
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720,
+      "byteExact": true
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231,
+      "byteExact": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "sha256": "03d1097405b3e9665a2817aa56acaa6d6ea9ac93db952c951b249615db26a04d",
+      "bytes": 7271933,
+      "byteExact": true
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "bytes": 8304517,
+      "byteExact": true
+    }
+  ],
+  "roofGeometry": {
+    "original56FacesReplacedExactlyOnce": true,
+    "roofPrismOpeningsAndStairWallFloorGeometryPreservedByExactUnownedIndices": true,
+    "newRoofInfillTriangles": 0,
+    "worldPlaneY": [
+      -4.707200057220459,
+      -4.707200057220459
+    ],
+    "expectedWorldPlaneY": -4.707200057220459,
+    "sharedLightUVPreserved": true
+  },
+  "qualification": "Common pale mineral finish is qualified photographic appearance only, exact coating/hue not measured. OriginalprimaryUV0 and all unowned geometry/PBR retained. Original valid AOchannels are not treated as a missingUV defect. No repeatedwalking/physicalroute audits; geometry conservation proves unchanged roof openings/heights. Final density/channel/lighting and staticview acceptance separate."
+}

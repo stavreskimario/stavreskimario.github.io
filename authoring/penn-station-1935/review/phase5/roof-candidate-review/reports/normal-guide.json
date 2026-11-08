@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Object-space normal guidance only; no GI/illumination/AO/geometry rebake or modification",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/model-waiting-room-vault.glb",
+  "sourceSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+  "resolution": [
+    8192,
+    8192
+  ],
+  "samples": 1,
+  "engine": "Cycles NORMAL OBJECT",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "packedUvIndex": 1,
+  "packedUvName": "UVMap.001",
+  "bakeMarginPixels": 8,
+  "normalEncoding": "Cycles OBJECT normal RGB0..1 decoded2RGB-1 and normalized to unit signed vectors; untouched background zero",
+  "guideArrayRowOrder": "Blender image pixels, bottom-to-top; same as linear GI pixels read by bpy",
+  "coveredPixels": 27418555,
+  "normalLengthMaximumError": 1.7881393432617188e-07,
+  "meshPositionsNormalsAndBothUvsSha256Before": "fc7b9e55c254cd987dc1b64289ac1b8cf90bb4a916a784cedd85d13cf82579e6",
+  "meshPositionsNormalsAndBothUvsSha256After": "fc7b9e55c254cd987dc1b64289ac1b8cf90bb4a916a784cedd85d13cf82579e6",
+  "files": {
+    "vault-normal-guide.npy": {
+      "bytes": 805306496,
+      "sha256": "d99ff3db23809f655263a2df3188e2e525521cdc7febb53fdd2a741ba7e6cc46"
+    }
+  },
+  "elapsedSeconds": 15.332124332999228,
+  "archiveStatus": "Raw losslessNPY retained in persistentwork; redundant209MBcompressed/EXR exports deferred; exactnewpackedGLB reproduces guide"
+}

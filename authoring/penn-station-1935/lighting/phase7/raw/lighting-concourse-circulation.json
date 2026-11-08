@@ -1,0 +1,164 @@
+{
+  "zone": "concourse-circulation",
+  "frameZone": "concourse",
+  "surfaceGroup": "all",
+  "uvMarginPixels": 4,
+  "uvMarginMethod": "FRACTION",
+  "source": "new-geometry-module.glb",
+  "sourceSha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13",
+  "resolution": 2048,
+  "samples": 64,
+  "aoPathSamples": 4,
+  "aoNodeSamples": 24,
+  "engine": "4.3.0 Cycles METAL",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "atlasSurfaceArea": 0.9140636920928955,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
+  "registeredOccluders": [
+    {
+      "zone": "concourse",
+      "source": "retained-concourse-occluder.glb",
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322",
+      "heightOffset": 0.0,
+      "objects": 7090
+    },
+    {
+      "zone": "exterior",
+      "source": "retained-exterior-occluder.glb",
+      "sha256": "138684e4794b39eb740019fe194f5cc23837d9de1aab22e7978d1f193f7854ca",
+      "heightOffset": 4.2672,
+      "objects": 15
+    }
+  ],
+  "unbakedPrimaryMeshes": 91,
+  "surfaceProfiles": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "BedfordLimestoneConcourseCirculation",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleAccessInfill",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineDepartureStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1.0,
+  "retainedHdrTransfer": "linear; separate Non-Color float buffer set before pixel assignment",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.5824043154716492,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.2636655569076538,
+    "mean": 0.07067662477493286,
+    "coveredPixels": 3902304
+  },
+  "elapsedSeconds": 13.404579333000584,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-concourse-circulation.glb",
+  "orderSeparation": null,
+  "orderUv": null,
+  "vaultNormalIntegrity": null
+}

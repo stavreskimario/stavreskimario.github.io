@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "status": "PASS: physically removed exact raw arrivals nodes from current canonical concourse",
+  "currentConcourse": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+    "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce",
+    "meshNodes": 11229
+  },
+  "originalPrimary": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/arrivals-module.glb",
+    "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+    "meshNodes": 4047
+  },
+  "originalPhase8Retained": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/candidate-eight-v1/retained-concourse-occluder.glb",
+    "sha256": "19d8bb5c3f4d2528504419793a248eb8873bf662610ef12e46ff3c354dd6e45a",
+    "meshNodes": 7182,
+    "role": "Historical independent count/source lineage only; current retained context is derived from current canonical8d input, not substituted blindly."
+  },
+  "removedPrimaryNodes": 4047,
+  "removedPrimitiveTriangles": 374852,
+  "primaryCurrentVsOriginalMaximumWorldCoordinateErrorM": 0,
+  "primaryCurrentVsOriginalMaximumNormalError": 0,
+  "sameIndicesForEveryPrimaryPrimitive": true,
+  "primaryMatchingMaterialNamesExact": true,
+  "retainedMeshNodes": 7182,
+  "allRetainedNodeJsonExact": true,
+  "allMeshMaterialAccessorAndOtherJsonExact": true,
+  "originalBinaryTailExact": true,
+  "originalBinarySha256": "b74498c39c32aabf8062940309ab2b18db11b9c8d15a53ba44267094bbc2f238",
+  "noPrimaryNodesRemainEvenAsOrphans": true,
+  "output": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/context-dedup-v1/current-concourse-without-primary-arrivals.glb",
+    "sha256": "35f726bf45a31227e4d6fe828d71e8f30913b51a778f386ed6dbaf6ba7b26b53",
+    "bytes": 90948868
+  },
+  "limits": [
+    "Original unreferenced mesh/buffer/image definitions remain in the BIN/JSON for exact-prefix proof. Physical scene nodes for the primary are absent. Blender import node census is an additional gate before bake.",
+    "Old phase8 retained shape equality is not assumed; current canonical geometry is the source.",
+    "Current primary input uses the accepted baked join/weld result, whose authored geometry preserves the accepted stair route."
+  ]
+}

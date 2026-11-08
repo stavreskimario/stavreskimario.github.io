@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "status": "Prepared and hash-pinned for root review; Metal bake not started",
+  "primary": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+    "sha256": "28fc2125841dfcac62724ec7e45163ac9d412b5487250ded3a782579345f166a",
+    "bytes": 5510404,
+    "nodes": 16,
+    "materials": 2,
+    "triangles": 2432,
+    "frame": "X east/Yup/Zsouth, Main0; runtimeY-4.2672"
+  },
+  "canonicalSource": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-reconstruction/authoring/penn-station-1935/penn-station-phase5.blend",
+    "sha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "afterSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739"
+  },
+  "frameProof": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/canonical-occluder-frame-proof.json",
+    "sha256": "0bf034496b3d4a7cfd462cc4973bd6b7552a277b3daf2714304f8d45bb20d5c6",
+    "sourceMatricesExactlyRestored": 11278,
+    "sourceUniqueMeshAttributesExactlyRestored": 6222,
+    "floorControls": {
+      "waiting": [
+        {
+          "object": "02 Main waiting room \u2014 PublicFloorMarble",
+          "height": 6.866454960174906e-09,
+          "normalZ": 1.0,
+          "deltaExpected": 6.866454960174906e-09,
+          "material": "PublicFloorMarble"
+        }
+      ],
+      "concourse": [
+        {
+          "object": "03 Glass and iron concourse \u2014 ConcourseReinforcedVaultLightCo",
+          "height": 0.0,
+          "normalZ": 1.0,
+          "deltaExpected": 0.0,
+          "material": "ConcourseOpaqueCirculationConcrete"
+        },
+        {
+          "object": "Source registered ordinary Exit slab around individual lift.015",
+          "height": -3.200399875640869,
+          "normalZ": 1.0,
+          "deltaExpected": 1.2435913099295703e-07,
+          "material": "ConcourseOpaqueArrivalsConcrete"
+        }
+      ],
+      "exterior": []
+    }
+  },
+  "occluders": [
+    {
+      "zone": "waiting",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-waiting-occluder.glb",
+      "sha256": "6b85f29ce1912314808c4c147f8b06918e68e96d5fba471042737d71135292a0",
+      "bytes": 70997940,
+      "gltfNodes": 28,
+      "gltfMeshNodes": 28,
+      "heightOffsetToPlatformMainFrame": 0,
+      "gltfZOffset": 0
+    },
+    {
+      "zone": "concourse",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+      "sha256": "8d991db65db6aff8af403a80852958bb3dcfc0a82f105e706d5dc5165dff20ce",
+      "bytes": 91517356,
+      "gltfNodes": 11229,
+      "gltfMeshNodes": 11229,
+      "heightOffsetToPlatformMainFrame": 0,
+      "gltfZOffset": 0
+    },
+    {
+      "zone": "exterior",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-exterior-occluder.glb",
+      "sha256": "58bd1e9e76d1d7c16ed25e0c4e86d2e6430684d2a90c5d28ceb6825139427824",
+      "bytes": 50435532,
+      "gltfNodes": 15,
+      "gltfMeshNodes": 15,
+      "heightOffsetToPlatformMainFrame": 4.2672,
+      "gltfZOffset": 0
+    },
+    {
+      "zone": "platform",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+      "sha256": "54dbafaaed019b69001041b7761cd661baabd920be7b3643794d3dbe8964382b",
+      "bytes": 13735708,
+      "gltfNodes": 66376,
+      "gltfMeshNodes": 66376,
+      "heightOffsetToPlatformMainFrame": 0,
+      "gltfZOffset": 0
+    },
+    {
+      "zone": "trains",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb",
+      "sha256": "5e43058a798e5533fd814002b7384f0ee290f2a3a720c2d9fa108493b540d643",
+      "bytes": 7011560,
+      "gltfNodes": 66,
+      "gltfMeshNodes": 66,
+      "heightOffsetToPlatformMainFrame": -8.886825,
+      "gltfZOffset": 8.690045261
+    }
+  ],
+  "fixtureProof": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/independent-fixture-geometry.json",
+    "sha256": "060748b1a2303f0cb40560a65b82c9041dd73e5a6f7e4d2d3e9bf24a10389f84",
+    "actualRawCompleteGroups": 22,
+    "actualRawComponents": 154,
+    "maxRawFlangeTopGapMetres": 6.637573246592865e-08
+  },
+  "bakeSourceDirectory": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-source-v1",
+  "bakeSources": {
+    "bake_lighting.py": {
+      "sha256": "8713c67c173357b9140ece3753b2702d8b28d38217139395a4dc4861698ef608",
+      "bytes": 19109
+    },
+    "material_library.py": {
+      "sha256": "a6b9b83843038fa829867c7cfebc4958f1c0386bd1bb02c7e4237e9de4169dfc",
+      "bytes": 9518
+    },
+    "render_device.py": {
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "bytes": 1188
+    }
+  },
+  "materialLibrary": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library",
+    "files": {
+      "phase4/MilfordFine-low.png": {
+        "sha256": "f032136c6015d37ba649d1b5d9676af5cb825adaacc49ab002b26ecef6b9b697",
+        "bytes": 600709
+      },
+      "phase4/RomanTravertine-full.png": {
+        "sha256": "55e1fe64aba11ad7ddf1f3336411b983c1c328624d548d4c5caea56e4bae0aa9",
+        "bytes": 4613837
+      },
+      "phase4/InteriorFine-low.png": {
+        "sha256": "29c42ffb7d87f340fa883105bc1ac0dc6c0747e68c0c11a2fd1de33d5521fd6e",
+        "bytes": 574077
+      },
+      "phase4/HonedMarble-low.png": {
+        "sha256": "8fd739db6c28858189512e890dc01ae0f35289494855db537d2c43591c52cabc",
+        "bytes": 335024
+      },
+      "phase4/BedfordLimestoneConcourse-Color.png": {
+        "sha256": "cd42e7dd2cd70cfcbb0628962fdd8522daa57299718b140c492645e15dcc6d5a",
+        "bytes": 1627960
+      },
+      "phase4/BedfordLimestoneConcourse-Roughness.png": {
+        "sha256": "10a506f7925250947afa5ef0137f86839656927e2de4ea19df5bb4d1299cb715",
+        "bytes": 1375067
+      },
+      "phase4/InteriorFine-full.png": {
+        "sha256": "f38b17209705f3b2ab4c32871ecb12784e21de2e00afb8b735223b2abba3ea34",
+        "bytes": 8803704
+      },
+      "phase4/RomanTravertine-low.png": {
+        "sha256": "8779a6b404aaa8df09930dd73dd2f13275a9f91ef43ff73283e13c1b099687c3",
+        "bytes": 269538
+      },
+      "phase4/MilfordFine-full.png": {
+        "sha256": "cfdfe12098f4159874cea786cfb84b1593901be2cfbd47b1f0549ffed5339b25",
+        "bytes": 9191188
+      },
+      "phase4/HonedMarble-full.png": {
+        "sha256": "94a110d65f88fcd6a26ef537250b47c0c57de1a143fcacffb200faa05750ac63",
+        "bytes": 4785562
+      },
+      "phase4/BedfordLimestoneConcourse-NormalGL.png": {
+        "sha256": "0e1659e0d1616d0dd9a07481574addcdd36f4fcabb4b903fcffe35b847124995",
+        "bytes": 4519322
+      },
+      "phase5/InteriorGranite-roughness.png": {
+        "sha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+        "bytes": 2252437
+      },
+      "phase5/MilfordGranite-roughness.png": {
+        "sha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+        "bytes": 2422436
+      },
+      "phase5/Travertine-roughness.png": {
+        "sha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+        "bytes": 1885295
+      },
+      "Marble018/Marble018_2K-JPG_Color.jpg": {
+        "sha256": "d5c8799bd4465a93e9e01e429021b4d08c73bb9edc2a44be3ee316f4e8d22e06",
+        "bytes": 3945678
+      },
+      "Marble018/Marble018_2K-JPG_NormalGL.jpg": {
+        "sha256": "f40b9459b5f592d86e30645443127556412c8d8d818c9b11badc6a7082161357",
+        "bytes": 1288531
+      },
+      "Marble018/Marble018_2K-JPG_Roughness.jpg": {
+        "sha256": "62d98f139f89052e3c591a93598cfe078ef58d8f8c1f31cafc30910e6cad3235",
+        "bytes": 2097792
+      },
+      "Granite005A/Granite005A_2K-JPG_NormalGL.jpg": {
+        "sha256": "1859fcc20f3211fe4ee5f2664988e72ad9019a7ee5f438d073a6fffde9a6cb7b",
+        "bytes": 1742147
+      },
+      "Granite005A/Granite005A_2K-JPG_Roughness.jpg": {
+        "sha256": "f56aecfe9f7ecaf2d56d9246d5b46e62f0a016c0540424de3ae7f65b7704f04f",
+        "bytes": 2301486
+      },
+      "Granite005A/Granite005A_2K-JPG_Color.jpg": {
+        "sha256": "39a19c22c82177ba7883d27ed4c810b089f679c36d88820c5aa65943f260f55c",
+        "bytes": 8537509
+      },
+      "Travertine009/Travertine009_2K-JPG_Roughness.jpg": {
+        "sha256": "c29534ccc277c598e17efa3f3abc9d6bda82f421f90b5abd340136fd3d82bebc",
+        "bytes": 1135101
+      },
+      "Travertine009/Travertine009_2K-JPG_NormalGL.jpg": {
+        "sha256": "b551e18777872604bc4aaba2adc4d3212841caa0ac544c02136f27a89a05dc22",
+        "bytes": 1312711
+      },
+      "Travertine009/Travertine009_2K-JPG_Color.jpg": {
+        "sha256": "d01dafb9087c7ab105307167748d922221c1de117864f2a03cb5f86243b82ecc",
+        "bytes": 3798875
+      }
+    },
+    "role": "Existing reviewed appearance library on occluders. New procedural granolithic module PBR maps remain embedded and are not replaced by unmatched profiles."
+  },
+  "plannedArguments": [
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-section-module.glb",
+    "--out",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/baked-v1",
+    "--zone",
+    "platform",
+    "--artifact-name",
+    "platform-surfaces",
+    "--resolution",
+    "4096",
+    "--samples",
+    "64",
+    "--device",
+    "METAL",
+    "--threads",
+    "4",
+    "--uv-margin-pixels",
+    "4",
+    "--materials",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/material-library",
+    "--occluder",
+    "waiting=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-waiting-occluder.glb",
+    "--occluder",
+    "concourse=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-concourse-occluder.glb",
+    "--occluder",
+    "exterior=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/bake-occluders-v2/current-exterior-occluder.glb",
+    "--occluder",
+    "platform=/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/architecture/candidate-v3/platform-retained-occluder.glb",
+    "--occluder",
+    "trains=/Users/stavreskimario/Desktop/penn-station-work/phase4-lighting-occluders/model-trains.glb"
+  ],
+  "plannedLighting": {
+    "engine": "Blender4.3CyclesMetal",
+    "resolution": 4096,
+    "diffuseSamples": 64,
+    "aoOuterSamples": 4,
+    "aoNodeRays": 24,
+    "neutralDome": true,
+    "diffuseBounces": 6,
+    "directionalSunBaked": false
+  },
+  "limits": [
+    "Current authored geometry, not historical scan data.",
+    "No old full solid railway platform is supplied as an occluder; only strict retained railway plus the primary new surface module.",
+    "Current complete canonical concourse includes arrivals once. Separate arrivals/retained concourse GLBs are not also supplied.",
+    "Source floor levels were checked before export, in Main0 export frame and after exact RAM restoration.",
+    "Waiting is included because platform lengths extend beneath it; exterior remainsStreet0 and receives+4.2672m in the baker.",
+    "The existing platform probes and wider room lightmaps remain separate older artifacts."
+  ]
+}

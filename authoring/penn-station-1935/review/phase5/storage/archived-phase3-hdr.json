@@ -1,0 +1,78 @@
+{
+  "scope": "Superseded Phase3 illumination HDR payloads; current Phase4/5 runtime lighting and editable sources remain in the tree. Original compressed bytes are verified in immutable Git history and a separate persistent local backup before removal from the current public tree.",
+  "files": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky.hdr.gz",
+      "bytes": 10647978,
+      "sha256": "929b7e13d012dc926cf3bbf7b2479838fdf1987541d6459bfdd8aa5c53d2b69f",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "2bd52926189260a3bade6edd3d1bb998cb5e8b4c",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-concourse-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky.hdr.gz",
+      "bytes": 6575960,
+      "sha256": "d50751a60378f6281a8d0d48a72bc5948672326a45d7ce8534e70e5197edbcb0",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "7430121b6ade8ce551b81a62b63376e0fb375088",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-exterior-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky.hdr.gz",
+      "bytes": 4394245,
+      "sha256": "9d7070085d4f15238e2815baa8db787d6ad75958d9a7dea83f40039f43bb483b",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "869be592cc830748ab4b2b1fa883860568dd5c9a",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-platform-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky.hdr.gz",
+      "bytes": 5578372,
+      "sha256": "b867340aed5af453b8879cb9fc77276e2c7f0102240bb1c4419af92c9b6d75ec",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "b1042c1eab7a4d520e66ec99183431cfcb9e01ff",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/raw/lighting-waiting-room-sky.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-denoised-linear.hdr.gz",
+      "bytes": 8967757,
+      "sha256": "9c4e91b806f08eb13e1a672926bed154d56bac46040df0b6e92a771180e5ec70",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "64ccefd8ca0d95553c41ad022feb4ab887208f50",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/denoised/lighting-concourse-sky-denoised-linear.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-denoised-linear.hdr.gz",
+      "bytes": 9951074,
+      "sha256": "a29e83316d0bb030a4c405d24ee6af31547bcc82af9232993c2aeba2d664a2ab",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "04006b129e53b3c3d4bb48798b03cc243516781f",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/denoised/lighting-exterior-sky-denoised-linear.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-platform-sky-denoised-linear.hdr.gz",
+      "bytes": 5051560,
+      "sha256": "d531fd85a856e5d99a3960bb60b62402cc06e2db010cabbf6f20f80c364f939c",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "bb4efd5e42160632d7ad2c354df7ad88ac644e11",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/denoised/lighting-platform-sky-denoised-linear.hdr.gz",
+      "backupVerified": true
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-denoised-linear.hdr.gz",
+      "bytes": 8509510,
+      "sha256": "635348bcd53bea286862523a3889bbb34ad63ffbd161a115ea23a76069d5ebdd",
+      "gitCommit": "60563ab11c1d83c9b21badcd7fbd7b21efa66473",
+      "gitBlob": "c8843ed449847dce8637cf2a4345b15beb45d463",
+      "persistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase5-history-backup/authoring/penn-station-1935/lighting/phase3/denoised/lighting-waiting-room-sky-denoised-linear.hdr.gz",
+      "backupVerified": true
+    }
+  ],
+  "bytesRemovedFromCurrentTree": 59676456
+}

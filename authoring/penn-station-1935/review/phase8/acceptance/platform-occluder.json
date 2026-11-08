@@ -1,0 +1,42 @@
+{
+  "scope": "Allactualrelocatedplatformgeometry inclrails/ties/platforms/22completefixtures, losslessly decoded. No invented geometry. Texture-free PBRfactors/emission retained.",
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/platform-relocated-full.glb",
+  "sourceSha256": "0b0bc9fa2d6974c20edd05cab9af900991222e6b9245dc9c5e587c7226bdd9de",
+  "output": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/packaging-v1/platform-relocated-raw-texture-free.glb",
+  "outputSha256": "60f92b7273f883ad8dec9383a634cb32762e2ec68f83e1f8ec97d49d5a5f9136",
+  "bytes": 6178996,
+  "coordinateSpace": "Main0-glTF; NOworldoffset baked. Apply Main−4.2672 exactlyonce onlywhenworldspacewanted.",
+  "allDecodedAccessorScalarValuesExact": 2143840,
+  "allNodesMeshesWorldMatricesExact": true,
+  "allNontextureMaterialRecordsExact": true,
+  "assembledTriangles": 935400,
+  "fixtureInstances": 154,
+  "fixtureGroups": 22,
+  "glowerMaterial": {
+    "name": "PlatformNernstGlower",
+    "extras": {
+      "skip_lighting_atlas": true
+    },
+    "doubleSided": true,
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        0.7099999785423279,
+        0.3799999952316284,
+        1
+      ],
+      "roughnessFactor": 0.44999998807907104,
+      "metallicFactor": 0
+    },
+    "emissiveFactor": [
+      1,
+      0.7300000190734863,
+      0.41999998688697815
+    ],
+    "extensions": {
+      "KHR_materials_emissive_strength": {
+        "emissiveStrength": 30
+      }
+    }
+  }
+}

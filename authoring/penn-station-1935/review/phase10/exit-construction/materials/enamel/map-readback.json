@@ -1,0 +1,74 @@
+{
+  "status": "Actual2Kmapreadback verified; mappedsceneappearanceacceptancepending",
+  "maps": [
+    {
+      "file": "enameled-brick-color.png",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "40d21822d0288860dc09de3c4273c601d237df8b3e798b6befe843d1d8a3ada2",
+      "oppositeEdgePixelDeltaByteMax": [
+        1,
+        1
+      ],
+      "oppositeEdgePixelDeltaByteMean": [
+        0.0016276041666666667,
+        0.0008138020833333334
+      ]
+    },
+    {
+      "file": "enameled-brick-normal.png",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "bad663d9afb39f8ac6124ad2370e30055b6bf7b515f668dcdc876c3217e3f636",
+      "oppositeEdgePixelDeltaByteMax": [
+        0,
+        0
+      ],
+      "oppositeEdgePixelDeltaByteMean": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "enameled-brick-roughness.png",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "4c26840a001e7d60552972900729dca8195310e2e75ec8bb4bc88f5b8a0ac684",
+      "oppositeEdgePixelDeltaByteMax": [
+        0,
+        0
+      ],
+      "oppositeEdgePixelDeltaByteMean": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "tenBrickCellsPer2_032m": true,
+  "measuredInteriorBrickPitchPixels": [
+    205,
+    205,
+    205,
+    204,
+    205,
+    205,
+    205,
+    205
+  ],
+  "interiorMortarPixelWidths": [
+    3,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    3
+  ],
+  "metresPerPixel": [
+    0.0009921875,
+    0.0009673828125
+  ],
+  "uvInstruction": "For projected metreUV0:U/=2.032;V/=1.9812. KeepindependentlightmapUV1."
+}

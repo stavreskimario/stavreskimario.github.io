@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "commit": "3e821c357aa356e001ff960863efb9212d5f1e59",
+  "verifiedAt": "2026-11-04T02:18:25.167793+00:00",
+  "pagesRun": 41759201594,
+  "pagesConclusion": "success",
+  "siteChecksRun": 41759217526,
+  "siteChecksConclusion": "success",
+  "bodies": [
+    {
+      "path": "penn-station-1935/index.html",
+      "url": "https://stavreskimario.github.io/penn-station-1935/index.html?release=3e821c3",
+      "status": 200,
+      "bytes": 19282,
+      "sha256": "22d03b42f3de2e01adfb73feba9464c00e241b4842a735f481286e36e8246ccf",
+      "matchesCommittedBody": true
+    },
+    {
+      "path": "penn-station-1935/dist/app.js",
+      "url": "https://stavreskimario.github.io/penn-station-1935/dist/app.js?release=3e821c3",
+      "status": 200,
+      "bytes": 1050612,
+      "sha256": "a49e4267a865c2576e3624dc56bf81d14d169279c0d46a0a75b3c5de487fd821",
+      "matchesCommittedBody": true
+    }
+  ],
+  "scope": "Actual public bodies; local paired Chrome profiling is separate; no native public walking pass"
+}

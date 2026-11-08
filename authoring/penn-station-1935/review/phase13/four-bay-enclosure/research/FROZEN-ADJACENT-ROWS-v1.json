@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "status": "FROZEN Phase13 primary-source design and explicit current-railway coordination, research only",
+  "rootBaselineCommit": "659fffd1ccd6f179038b271147127aa2ae229a34",
+  "visualBaseline": "fe2ea78",
+  "baselines": {
+    "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/model/bridge-addon.blend": {
+      "bytes": 123416,
+      "sha256": "44c1eb632a3f4aad5eaf9e699c44e9f76577527ae082d2273a8a355957b22a2f"
+    },
+    "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/model/bridge-addon.glb": {
+      "bytes": 585436,
+      "sha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b"
+    },
+    "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/acceptance/construction.json": {
+      "bytes": 101078,
+      "sha256": "c00df95fbce7a8d2c60d9b590369812d8e58b1964fc006eecd3ac104483b100f"
+    },
+    "authoring/penn-station-1935/review/phase12/eighth-avenue-bridge/evidence/design-scope-v2.json": {
+      "bytes": 13473,
+      "sha256": "ad451bec8ccdbd54ba4f0f13b9029c593c96cbc34bc88503035a073cbad4770e"
+    },
+    "penn-station-1935/assets/asset-metrics.json": {
+      "bytes": 54161,
+      "sha256": "03ff9ab8397ed4954fd4501dabb99a8a80736f3205d63b4c0fac5c9283752a7e"
+    },
+    "penn-station-1935/assets/scene-manifest.json": {
+      "bytes": 711148,
+      "sha256": "9998fe419c82eae7ed9a218870a01a4c9ec607a81af7412e6345f66c4f666c8d"
+    }
+  },
+  "source": {
+    "publication": "Francis/O\u2019Brien,TransactionsASCE69(1910),paper1164",
+    "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+    "pages": [
+      296,
+      299,
+      301
+    ],
+    "sourceRaster": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf301.png",
+    "sourceRasterSha256": "c844c68568309169634c40c167c04ba8e126b94f6ffc80f4f514fa1c52ca759f",
+    "sourceRasterSizePx": [
+      2067,
+      1629
+    ],
+    "terminalAxisNativeU": 1051,
+    "houseLineNativeV": [
+      1154.5,
+      1472.5
+    ],
+    "metresPerNativePixel": 0.09584905660377359,
+    "nativeIncreasingU": "North/worldZnegative",
+    "method": "Individually observed permanent column/cap and face-connected girder rows. Dense full-width temporary trestle strokes excluded. No uniform spacing cloned.",
+    "rights": "Original1910USpublication/publicdomain inUnitedStates; existing Phase12 source packet retains the full rights/URL basis."
+  },
+  "rows": [
+    {
+      "id": "B0",
+      "nativeU": 985.0,
+      "observedWorldZ": 6.326037735849057,
+      "authoringWorldZ": 6.33,
+      "kind": "Accepted Phase12 gap row",
+      "retained": true,
+      "coordinationDeltaZ": 0.003962264150943362,
+      "minimumNativeReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1
+    },
+    {
+      "id": "B1",
+      "nativeU": 915.3,
+      "observedWorldZ": 13.00671698113208,
+      "authoringWorldZ": 13.0,
+      "kind": "Accepted Phase12 P5-corresponding row",
+      "retained": true,
+      "coordinationDeltaZ": -0.006716981132079525,
+      "minimumNativeReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1
+    },
+    {
+      "id": "B2",
+      "nativeU": 843.3,
+      "observedWorldZ": 19.90784905660378,
+      "authoringWorldZ": 20.314408,
+      "kind": "New inter-track row fitted to current gap centre",
+      "retained": false,
+      "coordinationDeltaZ": 0.40655894339622023,
+      "minimumNativeReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1
+    },
+    {
+      "id": "B3",
+      "nativeU": 773.0,
+      "observedWorldZ": 26.646037735849056,
+      "authoringWorldZ": 26.646037735849056,
+      "kind": "New P4-corresponding source row",
+      "retained": false,
+      "coordinationDeltaZ": 0.0,
+      "minimumNativeReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1
+    },
+    {
+      "id": "B4",
+      "nativeU": 702.0,
+      "observedWorldZ": 33.45132075471698,
+      "authoringWorldZ": 33.983721,
+      "kind": "New inter-track row fitted to current gap centre",
+      "retained": false,
+      "coordinationDeltaZ": 0.5324002452830214,
+      "minimumNativeReadingUncertaintyPx": 4,
+      "minimumAbsoluteRegistrationUncertaintyM": 1
+    }
+  ],
+  "bays": [
+    {
+      "between": [
+        "B0",
+        "B1"
+      ],
+      "worldZ": [
+        6.33,
+        13.0
+      ],
+      "widthM": 6.67,
+      "withinPrintedSpanFamily": true
+    },
+    {
+      "between": [
+        "B1",
+        "B2"
+      ],
+      "worldZ": [
+        13.0,
+        20.314408
+      ],
+      "widthM": 7.314408,
+      "withinPrintedSpanFamily": true
+    },
+    {
+      "between": [
+        "B2",
+        "B3"
+      ],
+      "worldZ": [
+        20.314408,
+        26.646037735849056
+      ],
+      "widthM": 6.331629735849056,
+      "withinPrintedSpanFamily": true
+    },
+    {
+      "between": [
+        "B3",
+        "B4"
+      ],
+      "worldZ": [
+        26.646037735849056,
+        33.983721
+      ],
+      "widthM": 7.337683264150947,
+      "withinPrintedSpanFamily": true
+    }
+  ],
+  "primarySpanFamilyM": [
+    6.223,
+    13.335
+  ],
+  "coverageWorld": {
+    "houseLineX": [
+      -152.0952,
+      -121.6152
+    ],
+    "roofOutToOutX": [
+      -152.2857,
+      -121.4247
+    ],
+    "bentRowZ": [
+      6.33,
+      33.983721
+    ],
+    "coveredDepthM": 27.653721000000004,
+    "opaqueGalleryWalls": false
+  },
+  "columnStationsWorldX": [
+    -152.0952,
+    -149.0472,
+    -145.9992,
+    -142.9512,
+    -139.9032,
+    -136.8552,
+    -133.8072,
+    -130.7592,
+    -127.71119999999999,
+    -124.66319999999999,
+    -121.6152
+  ],
+  "columnCount": 55,
+  "coordinateFrame": "Main0glTF;worldY=Main0Y\u22124.2672; BlenderX east/Y north/Zup",
+  "retainedVerticalControls": {
+    "sourceCapTopWorldY": -14.023848,
+    "clearanceComparisonWorldY": -8.208264,
+    "lowestFramingWorldY": -8.208264,
+    "deepGirderTopWorldY": -6.011164,
+    "concreteRoofBottomWorldY": -6.023864
+  },
+  "profileFamily": {
+    "column": {
+      "shape": "Riveted built-up I-type",
+      "webWidthM": 0.4064,
+      "anglesM": [
+        0.2032,
+        0.1524
+      ],
+      "coverPlateWidthM": 0.4572,
+      "coverPlateCountRange": [
+        2,
+        6
+      ],
+      "plateAndAngleThicknesses": "Not specified here; inferred local fabrication if authored."
+    },
+    "transverseBentGirder": {
+      "depthRangeM": [
+        1.524,
+        2.1971
+      ],
+      "sourceDepthRange": "5ft to7ft2.5in",
+      "flangeAnglesM": [
+        0.1524,
+        0.1524
+      ],
+      "faceConnected": true
+    },
+    "longitudinalGirder": {
+      "depthRangeM": [
+        0.7239,
+        1.3335
+      ],
+      "sourceDepthRange": "2ft4.5in to4ft4.5in",
+      "internalSpacingM": 1.524,
+      "outerBaySpacingM": 1.016,
+      "flangeAngleOptionsM": [
+        [
+          0.1524,
+          0.1524
+        ],
+        [
+          0.2032,
+          0.1524
+        ]
+      ],
+      "faceConnected": true
+    },
+    "floorPlate": {
+      "IBeamDepthM": 0.1016,
+      "spacingRangeM": [
+        0.1524,
+        0.2032
+      ],
+      "minimumGirderSpans": 3,
+      "materialFamily": "4in I-beams embedded in concrete; waterproofing/protecting cover and real backfill above.",
+      "exactConcreteCoverThickness": "Not fixed by this local section; do not label an arbitrary uniform slab thickness as recovered."
+    },
+    "bearing": {
+      "documented": "Cut granite capstones underpinned to solid rock with concrete piers.",
+      "capstoneTopSourceFt": 287,
+      "exactPierDepthsAndRockSurface": "Unresolved local conditions; current receiver adaptation must be labeled inferred."
+    }
+  },
+  "retainedMaterial": "Phase12 v4dielectric paintedcoating, linearRGB(0.18,0.19,0.17),metallic0,roughness0.64; appearance interpretation,not measuredpaint. Existingmaterialgraphs/normal handling must remain retained.",
+  "coordinationDecision": {
+    "primarySupport": "Francis162 locates bents in all platforms and between tracks where possible.",
+    "observedWorldRows": [
+      6.326037735849057,
+      13.00671698113208,
+      19.90784905660378,
+      26.646037735849056,
+      33.45132075471698
+    ],
+    "authoringRows": [
+      6.33,
+      13.0,
+      20.314408,
+      26.646037735849056,
+      33.983721
+    ],
+    "reason": "At direct source-readB4, geometry found12.49mm nominal vehicle-envelope intrusion; direct B2left113mm. Two new gap rows are fitted to the current partial railway gap centres, within the qualified source-registration range.",
+    "qualification": "Fitted positions are reconstruction/coordination choices,not newly source-measured coordinates.\u00b11mregistration is not an engineering clearance tolerance. No accepted rail/platform or Phase12row is moved.",
+    "geometryAgentPreliminaryChecks": "All five source rows have11realreceiverseach. Fitted two gap rows expected~0.52m nominal lateral clearance; actual authored geometry/vehicle/loadpath checks remain required."
+  },
+  "floorAndSoffitControls": {
+    "platformFinish": "Francis201\u2013202/Fig6 supports3/4in stippledgranolithic dressing and approximately30in squarejointpitch; colors/roughness/aggregate/jointorigin interpreted. Preserve actual existing floor geometry,UV0,normals.",
+    "newFloorLighting": "Rebake real selected platform surfaces under the new roof; do not add overlay planes or certify old bright atlas as current occlusion.",
+    "exitCeiling": "Existing continuous roof; AOchannel0/atlasUV0 valid. Only material/GI contrast is confirmed; no missingUV1 defect or roof/prism infill claim.",
+    "historicalLighting": "No measured1935photometry or new undocumented lamps/reflection sources established by these primary pages."
+  },
+  "sourceConfidence": {
+    "high": "Bridge/cap/column/girder/floorplate family and11stations/10ftacrosswidth; individual permanent row observations in native drawing.",
+    "qualified": "1Dscale/origin/worldregistration, current gap-center adjustments, local depth/thickness/footing/cover schedule, exact1935survival and material appearance."
+  },
+  "held": "Farther southern potentialrowU631\u2248Z40.2566 not included: permanent identity/skew needs further reading and actual receivers; do not block current4bays. Northern/full525ftbridge and Manhattan remain later.",
+  "requiredGates": [
+    "One replacement addon contains old bay once plus new rows/bays; no duplicate accepted old bridge.",
+    "Actual22old+33new column/receiver and full vehicle/rail/track clearance, grounded buried foundations, closed positive mesh and exact current floor preservation.",
+    "Retain original material graphs/UV0/normals; no geometry-welding loss or negative winding.",
+    "Fresh geometry-dependent roof/floorGI+AO, exact sourceHDR/PNG/WebP controls; no quality downsampling for storage.",
+    "Browser walking walkthrough remains skipped; no new nativewalking or mobile/performance certification claimed by source research."
+  ]
+}

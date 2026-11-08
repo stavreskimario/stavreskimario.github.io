@@ -1,0 +1,9 @@
+# Revision 3 geometry review
+
+The source stills use the same complete core world: street0 and main floor−4.2672m. They are geometry evidence, not the calibrated final browser lighting. Four elevated corners and low/high interior views were visually inspected. The initially identified origin-column and coplanar-masonry/roof artefacts are removed in these final images. The source script itself contains the transform-flush and non-overlapping-shell corrections.
+
+The authoring contact ledger records2,334 scoped actual-mesh bearing checks with0failures. The independent assembled ray audit passes1,059 east–west floor samples, nine main access flights, nine lower doglegs, both end stairs, all nine corresponding platform landings and22 platform-light mounting contacts. Permission bounds and browser collision are tested separately. Exact image-pixel rays confirm the side Ionic trabeation is supported and the formerly black end-wall band is solid outward-facing masonry.
+
+The waiting-room finished ceiling adopts143ft from Francis&O’Brien; Gibbs explicitly reports150ft in the same volume, so the primary conflict remains. Lower concourse perimeter fenestration, glass-prism floor-light fields, five mural images, figurative sculpture, precise furnishing patterns and exhaustive1935 operational detail remain unfinished. Contact counts do not certify historical completeness or structural engineering adequacy. See the application geometry and research ledgers.
+
+The editable core is already worldaligned; raw interior GLBs remain Main0 and are translated down4.2672m in the browser. The railway is separately authored and its source retains Main0. Unreferenced material/image datablocks from isolated review replacements were removed from the editable core; frozen runtime-input GLB hashes were unchanged.

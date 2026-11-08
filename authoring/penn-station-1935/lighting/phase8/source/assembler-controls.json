@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Five repinned unsafe synthetic inputs rejected; one synthetic shared-mesh branch preserves unowned geometry. These are assembly safeguards, not historical or physical candidate acceptance.",
+  "cases": [
+    {
+      "case": "owned-rail-frame-change",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "Owned rail frame changed"
+    },
+    {
+      "case": "nonfinite-addition-frame",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": ""
+    },
+    {
+      "case": "addition-parent-frame-would-be-lost",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "Addition must have an explicit root frame; parent transforms may not be lost"
+    },
+    {
+      "case": "wrong-owned-rail-material",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "Owned rail must export the actual Guard binding, not a default material"
+    },
+    {
+      "case": "duplicate-node-name",
+      "result": "REJECTED",
+      "exception": "AssertionError",
+      "message": "('Duplicate node name', 'Arrival row5 west west flight1 rounded top rail')"
+    },
+    {
+      "case": "shared-owned-mesh",
+      "result": "PASS: unowned user and old mesh exact; only owned node redirected"
+    }
+  ],
+  "authoritativeInputsUnchanged": true,
+  "sourcePins": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/pack-v1/byte-patch/UV-ONLY-UNBAKED-arrivals-priority.glb": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/west-p5-curved-study.glb": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/curve-study-manifest.json": "d776f343b9b7d40716601bc5bd0c0904702e5b131834c438659f43176513e347",
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/assemble_input.py": "dff77339b65a1c7f7776120843310d19a73ae75f4dfdc3fcb175748163767a7f"
+  },
+  "generatorSha256": "608f1ae468e6b37600f05c86042233a3617306ab4ad105957a21607696390604"
+}

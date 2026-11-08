@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "status": "PASS: eight-owner precision repair and bounded CPU/source/glTF acceptance; native browser/publication pending",
+  "scope": "Standalone replacements only, append to matching retained D06 base. No root, candidate-v1, canonical, GPU, browser, bake or texture changes by this worker.",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/model-concourse-arrivals.glb",
+    "sha256": "25bc201678022895b1255d598fa4b62edad107b49f7a90a2ffa09615e426521b"
+  },
+  "authority": {
+    "selectionSha256": "80569caf0a1abcf0c4fc363e69a942aec2a19e180403739e6e55f8e1b013e255",
+    "heldStandardSummarySha256": "0962e4295c316dda571d1eb2664288e49a9887f93d8b9f5b100350f1f0edface",
+    "ownedUnownedAmbiguities": 0,
+    "fallbackSharedCapsWithinEightOwnerUnion": 46,
+    "oldOwnedRenderTrianglesRemoved": {
+      "full": 19048,
+      "low": 4688
+    }
+  },
+  "models": [
+    {
+      "variant": "full",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimized-precision-v1/model-concourse.glb",
+      "sha256": "b85bee87837ad29d2e78183109ecf9df2f9c2544736de0b1e8d724b7d4110892",
+      "bytes": 3457412,
+      "proofSha256": "930ca8d59959aef55b8ac851a110d151898f58bd97116e010909a6fe62a5b010"
+    },
+    {
+      "variant": "low",
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-optimized-precision-v1/model-concourse-low.glb",
+      "sha256": "897445b7ca69a7c1ef90d56acaa0925ee130b3968dddd41f8e0bb6d6554508a1",
+      "bytes": 2263220,
+      "proofSha256": "7e9724cc8cef3ecfa14682cc59aa7fe016ceff0bed7843dfac4ef5757278c663"
+    }
+  ],
+  "rendering": {
+    "oldNodes": 4,
+    "newNodes": 7,
+    "oldMeshes": 4,
+    "newMeshes": 7,
+    "oldMaterialDraws": 7,
+    "newMaterialDraws": 10,
+    "addedDraws": 3,
+    "fullTriangles": 393804,
+    "fallbackTriangles": 220568,
+    "newEightOwnerSourceTrianglesBothVariants": 19048,
+    "sixIdentityRailsInOnePrimitive": true,
+    "twoLocalHaunchTranslationsLiteralSourceExact": true
+  },
+  "preservation": {
+    "entireOldModuleBINPrefixesExact": true,
+    "allOldAccessorViewNodeJSONPrefixesExact": true,
+    "allUnownedIndexValuesSequenceVertexAttributesAndTransformsExact": true,
+    "all14FlatFinishPanelsRenderGeometryExact": true,
+    "all7MaterialDefinitionsExact": true,
+    "all13KTXAnd2GIBytesExact": true,
+    "newEightOwnerFloat32PositionNormalUV0ScalarsIndexValuesAndWorldCornersExact": true,
+    "additionalNewOwnerPositionNormalUVCodecDrift": 0,
+    "noDuplicateOldOwnedCurvedRenderFaces": true
+  },
+  "newOwnerPhysical": [
+    {
+      "variant": "full",
+      "status": "PASS",
+      "exactSourceOwners": 8,
+      "closedPositiveMeshes": 8,
+      "zeroAreaFaces": 0,
+      "minimumGeometricCornerNormalDot": 0.9948338614198264,
+      "additionalNormalEncodingDriftDegrees": 0,
+      "twoSidedProfiles": 562,
+      "maximumTubeRadiusResidualM": 6.174084481204434e-07,
+      "complete32VertexCaps": 12,
+      "maximumCapPlaneResidualM": 6.61874248779077e-06,
+      "connecting32VertexRings": 4,
+      "maximumRingHausdorffM": 7.62939453125e-06,
+      "actualReceiverRegions": 46,
+      "maximumReceiverGapM": 0.00035980280495338443,
+      "actualAdjacencies": 88,
+      "sourceRequiredRailReceiverComparisons": 12,
+      "criticalFinialInteriorWitnesses": [
+        {
+          "finial": "Arrival row5 west Arrival newel round finial.004",
+          "rail": "Arrival row5 west Arrival intermediate landing top rail",
+          "witnessMain0": [
+            -78.08466671238546,
+            -4.462245645319225,
+            13.703065502824398
+          ],
+          "verticalOverlapM": 0.002600619329164111,
+          "commonSolidInteriorRadiusM": 0.001266665051907748,
+          "ballDistanceM": 0.0013003096645816115,
+          "railDistanceM": 0.001266665051907748
+        },
+        {
+          "finial": "Arrival row5 west Arrival newel round finial.006",
+          "rail": "Arrival row5 west Arrival intermediate landing top rail.001",
+          "witnessMain0": [
+            -78.08466671238546,
+            -4.462226108381516,
+            11.63267750853123
+          ],
+          "verticalOverlapM": 0.0026396932045820165,
+          "commonSolidInteriorRadiusM": 0.0012856964848732579,
+          "ballDistanceM": 0.0013198466022910083,
+          "railDistanceM": 0.0012856964848732579
+        }
+      ],
+      "failures": []
+    },
+    {
+      "variant": "low",
+      "status": "PASS",
+      "exactSourceOwners": 8,
+      "closedPositiveMeshes": 8,
+      "zeroAreaFaces": 0,
+      "minimumGeometricCornerNormalDot": 0.9948338614198264,
+      "additionalNormalEncodingDriftDegrees": 0,
+      "twoSidedProfiles": 562,
+      "maximumTubeRadiusResidualM": 6.174084481204434e-07,
+      "complete32VertexCaps": 12,
+      "maximumCapPlaneResidualM": 6.61874248779077e-06,
+      "connecting32VertexRings": 4,
+      "maximumRingHausdorffM": 7.62939453125e-06,
+      "actualReceiverRegions": 46,
+      "maximumReceiverGapM": 0.00035980280495338443,
+      "actualAdjacencies": 88,
+      "sourceRequiredRailReceiverComparisons": 12,
+      "criticalFinialInteriorWitnesses": [
+        {
+          "finial": "Arrival row5 west Arrival newel round finial.004",
+          "rail": "Arrival row5 west Arrival intermediate landing top rail",
+          "witnessMain0": [
+            -78.08548343348774,
+            -4.462369844559188,
+            13.70383238723354
+          ],
+          "verticalOverlapM": 0.002352220849236808,
+          "commonSolidInteriorRadiusM": 0.0011423123772711591,
+          "ballDistanceM": 0.001176110424618848,
+          "railDistanceM": 0.0011423123772711591
+        },
+        {
+          "finial": "Arrival row5 west Arrival newel round finial.006",
+          "rail": "Arrival row5 west Arrival intermediate landing top rail.001",
+          "witnessMain0": [
+            -78.08543359679459,
+            -4.462308765760437,
+            11.632727345224374
+          ],
+          "verticalOverlapM": 0.002474378446739145,
+          "commonSolidInteriorRadiusM": 0.0012018361007395382,
+          "ballDistanceM": 0.0012371892233700166,
+          "railDistanceM": 0.0012018361007395382
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "existingBoundedPhysical": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-precision-physical-v1/SUMMARY.json",
+    "sha256": "c77095401120b3e7a4f8ec5b3c960fb55fe7e4266627a293d7156cf368d4da80",
+    "status": "PASS both variants",
+    "perVariant": {
+      "arrivalRoutes": 96,
+      "arrivalSamples": 39696,
+      "galleryRoutes": 4,
+      "gallerySamples": 9084,
+      "departureRoutes": 18,
+      "departureSamples": 8442,
+      "treadProbes": 3744,
+      "guardRays": 864,
+      "guardBodyStops": 864,
+      "supports": 47,
+      "foundationRays": 1175,
+      "lowerCapCentres": 47,
+      "upperContactFootprintRays": 525,
+      "encodedFixtureContacts": 110
+    },
+    "sourceFixtureDiagnostic": "80 pre-existing failures per variant under source-only20\u00b5m, measured0.81565mm offset. Unchanged2mmencoded fixture gate passes110.",
+    "unownedFallbackGuardDisplacementM": 0.004359693581768909
+  },
+  "validator": {
+    "status": "PASS",
+    "perVariantErrors": 0,
+    "perVariantWarnings": 16,
+    "allWarningsCodesMessagesPointersExactToStandardModules": true,
+    "receiptSha256": "ee19685f0c04e62a5c90fd6354e9d2dcaef28f3b12cd2c26959df0fac6f37cae",
+    "baselineComparisonSha256": "e874f83fad009682ef3abbb00910c7eeee00ed2a6d08d1ce5ebc95a6b4ab59f6"
+  },
+  "transport": {
+    "schema": 1,
+    "scope": "Standalone measuredtransportonly; assembledD06candidatebytesmustbemeasuredseparately. Noqualitycuts orFPSclaim.",
+    "variants": [
+      {
+        "file": "model-concourse.glb",
+        "oldRawBytes": 2046436,
+        "newRawBytes": 3457412,
+        "rawDelta": 1410976,
+        "oldGzip9Bytes": 656046,
+        "newGzip9Bytes": 840619,
+        "gzipDelta": 184573,
+        "newGzipSha256": "7db5981821b97c3a7e5b1985ed8576f9ebd3532a8ab96e9d3d462e0448f19655"
+      },
+      {
+        "file": "model-concourse-low.glb",
+        "oldRawBytes": 1372564,
+        "newRawBytes": 2263220,
+        "rawDelta": 890656,
+        "oldGzip9Bytes": 834346,
+        "newGzip9Bytes": 1083962,
+        "gzipDelta": 249616,
+        "newGzipSha256": "b7acca62ed6ce73d5d7957f8b0e81b3926c62ddc5e9a53c143f3b27eb07948c5"
+      }
+    ],
+    "combinedRawDelta": 2301632,
+    "combinedGzipDelta": 434189
+  },
+  "evidenceIndexSha256": "f22be10afd3dec497ee2525a29e7f0c556a50d95ccb3631d32e477dd80c0d882",
+  "independentPhysicalSha256": "abce4ecc8008e53cdbcdcba08e3d20016909b88b1aed28eaf6107796465c12cd",
+  "compressedEvidenceBytes": 37731,
+  "limitations": [
+    "The inherited unowned global quantization and effective8bitnormal codec remain unchanged; precision protection applies only to eight reviewed components.",
+    "Actual source lower-arrivals/Exit family supports an interpretation;150mmradius/fabrication and exactP5camera are unverified, upperhaunch remains held.",
+    "Receiver regions use unchanged2mmencoded bounds, while actual new tube/cap/ring checks retain1mm/20\u00b5msource controls. These do not certify structural capacity.",
+    "Native six-zone browser, staging, final visual review and publication are root-owned separate gates. No FPS or final historical-replica claim."
+  ]
+}

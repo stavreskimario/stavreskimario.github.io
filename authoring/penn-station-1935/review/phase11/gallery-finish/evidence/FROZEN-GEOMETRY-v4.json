@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN PASS candidate-v4: 103 actual exported objects, prior98 exact, source-family sign supported/readable",
+  "prior98FittedSkinGeometryExact": true,
+  "objectCounts": {
+    "acceptedSkins": 98,
+    "ivoryBoard": 1,
+    "realBearingStems": 2,
+    "oppositelyFacingReadableLetterMeshes": 2,
+    "total": 103
+  },
+  "sourceFamily": "PRR1910 booklet PDF53 Exit Concourse photograph; 33rd STREET destination family. Exact location, board profile/color and builtin Bfont glyph style inferred.",
+  "worldSignCenter": [
+    -64,
+    -5.06,
+    -75
+  ],
+  "headClearanceM": 2.23759998896122,
+  "ceilingContactsActualAreaM2": [
+    0.00032399997144239023,
+    0.00032399997144239023
+  ],
+  "letteringNormalsZ": [
+    0.99999999999999,
+    -0.9999999999999681
+  ],
+  "letteringOpaqueSingleSided": true,
+  "letteringMaterialSkipLightingAtlas": true,
+  "priorAcceptedSkinHandoff": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/FROZEN-GEOMETRY-v3.json",
+    "sha256": "9ed3fec38bcf791fb4775e7e38029e205bc9d2de275cf25cbf3fcef5b153555f"
+  },
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-addon.glb",
+      "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+      "bytes": 270372
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/addon.blend",
+      "sha256": "23f5e1c50923aafd727d9cff6859430d7cbd46e38d4a1bacce6c179ceaaad515",
+      "bytes": 141360
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-manifest.json",
+      "sha256": "4751039a1e22f7f20c69f0c10f8629fdfb263b81072a9347032252da74915c3d",
+      "bytes": 483894
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/sign-manifest.json",
+      "sha256": "bea74c089233aa07303c70de229ebe68a4ca12dcabf7688ca469d18261f74836",
+      "bytes": 1977
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/sign-proof.json",
+      "sha256": "e9dbdf8358d71dbc2d2bc4d7c2928c4f65dfe7aadde0903e15fd65f9e8993116",
+      "bytes": 2932
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/add-destination-sign.py",
+      "sha256": "3f8e2614ed9347325279b3e0b603f5de4938e554460573c0b195048587c70b7f",
+      "bytes": 5682
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/check-sign-v4.mjs",
+      "sha256": "5897ce6230f2105d9ac243ef3bf81232407109c78daf07ea9bf6693f5ed90e92",
+      "bytes": 5413
+    }
+  ],
+  "scope": "External CPU-only Blender addon. No GPU/root/source model/promotion changes."
+}

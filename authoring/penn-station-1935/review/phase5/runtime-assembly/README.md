@@ -1,0 +1,13 @@
+# Phase5 offline runtime assembly
+
+This is a packaging and geometry receipt for the full candidate in `work/phase5-final-candidate`. It is **not final visual acceptance**: the v2 vault 8192/512 illumination maps are provisional placeholders pending root/geometry denoising and MIP review. No application, production asset, or dist files were changed by this assembly.
+
+The fresh input is the frozen valid floor checkpoint. Both waiting variants replace only PaleVaultPlaster with the reviewed coherent-chart v2 standalone module, then append the two source-backed wall fixtures using the existing AgedBronze and OpalCandelabraGlass material records. Existing waiting BIN payloads and all eight non-vault meshes remain exact. All appended attribute/index bytes and node world transforms independently match their standalone modules. Two fixtures add four rendered mesh nodes, 21,824 instanced triangles and zero lights. Actual decoded waiting bounds are unchanged in both variants, with no spike.
+
+The subsequent finish pass changes only material JSON and six linear UASTC quality-2, non-RDO roughness maps. All 12 models retain exact geometry, transforms, accessors, views and BIN bytes across that pass. Each new map is decoded again to check its scalar response (mean absolute green-channel error below 0.00114 on the 0–1 range). Colour, normal, AO and illumination bindings remain unchanged by the finish pass.
+
+All 12 GLBs validate with zero errors and 284 warnings: 120 enum-value/KTX2 MIME warnings, 120 unrecognized-KTX2-image warnings, and 44 generated-tangent warnings. All 869 Meshopt views decode successfully. The 78 unique hash-checked KTX2 files total 86,356,339 bytes. Models, unique texture images, referenced illumination, reflection probes and sky total 163,280,128 bytes; navigation is a separate 567,295 bytes. Old addressable image records/files are retained, including maps superseded by the new material bindings.
+
+`summary.json` records all 12 transport/decoded hashes, exact fixture counts/palette, bounds, canonical editable source SHA and measured totals. The complete validator logs, immutable input snapshot and intermediate merge reports remain in persistent `work/phase5-candidate-receipts`; they are not duplicated in the published tree. `finish-roughness-packaging.json` records the scalar codec proofs and exact geometry/BIN preservation.
+
+Masonry/order atlases, other zone illumination and existing sky/reflection probes are retained from Phase4. Candidate-only metadata labels the coherent-chart vault bake/denoise as Phase5 and provisional. The repo asset-tree SHA snapshot was checked unchanged after assembly. No browser/GPU jobs were run.

@@ -1,0 +1,564 @@
+{
+  "schema": 1,
+  "status": "Source archive prepared and raw payload accepted; encoded/browser/native acceptance are separate",
+  "rawSourceRadianceSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+  "rawBakeReportSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+  "sourceGeometryInputSha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
+  "rawModelSha256": "25bc201678022895b1255d598fa4b62edad107b49f7a90a2ffa09615e426521b",
+  "originalDenoiseReport": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1/lighting-concourse-arrivals-denoise.json",
+    "bytes": 2175,
+    "sha256": "d33b5d941420b5163f4ec1637e6d853fc23e56ae250f02f73a32bcc7d13e838d"
+  },
+  "denoiseStatisticsAndOpticalValuesUnchanged": true,
+  "receipts": [
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals.json",
+      "destination": "raw/lighting-concourse-arrivals.json",
+      "sourceBytes": 3920400,
+      "sourceSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+      "archiveBytes": 3920400,
+      "archiveSha256": "1f2bf7daac40091285535195759a61f210d631c164790c36c881fff4f5d49acb",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-ao.png",
+      "destination": "raw/lighting-concourse-arrivals-ao.png",
+      "sourceBytes": 10681935,
+      "sourceSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+      "archiveBytes": 10681935,
+      "archiveSha256": "7661e5d6ca719a07d8d42ef80d8e2fb9fc716e95a2faf89c1445f1a82a2f24d2",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/lighting-concourse-arrivals-sky.hdr",
+      "destination": "raw/lighting-concourse-arrivals-sky.hdr.gz",
+      "sourceBytes": 49721229,
+      "sourceSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+      "archiveBytes": 41829335,
+      "archiveSha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca",
+      "decodedByteExact": true,
+      "gzipMtime": 0,
+      "gzipLevel": 9
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1/lighting-concourse-arrivals-sky-denoised-linear.hdr",
+      "destination": "denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+      "sourceBytes": 67649587,
+      "sourceSha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd",
+      "archiveBytes": 30046400,
+      "archiveSha256": "8d49bb51330830fee59c6c07c0fc91284c92e3044c01589c1c23f3dbb27298e2",
+      "decodedByteExact": true,
+      "gzipMtime": 0,
+      "gzipLevel": 9
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1/lighting-concourse-arrivals-sky.png",
+      "destination": "denoised/lighting-concourse-arrivals-sky.png",
+      "sourceBytes": 6850275,
+      "sourceSha256": "ea130156867e91588d32f34afa57d0527b8a61591bb1314a174cfbcf1fc9a697",
+      "archiveBytes": 6850275,
+      "archiveSha256": "ea130156867e91588d32f34afa57d0527b8a61591bb1314a174cfbcf1fc9a697",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1/lighting-concourse-arrivals-sky-low.png",
+      "destination": "denoised/lighting-concourse-arrivals-sky-low.png",
+      "sourceBytes": 208008,
+      "sourceSha256": "d3ebb777f8a26dda70b76b1361f026f996e07fbf90d936e0445d72a2d9c75d66",
+      "archiveBytes": 208008,
+      "archiveSha256": "d3ebb777f8a26dda70b76b1361f026f996e07fbf90d936e0445d72a2d9c75d66",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/arcade_corner_normals.py",
+      "destination": "source/arcade_corner_normals.py",
+      "sourceBytes": 5450,
+      "sourceSha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567",
+      "archiveBytes": 5450,
+      "archiveSha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/authored_lighting_uv_guard.py",
+      "destination": "source/authored_lighting_uv_guard.py",
+      "sourceBytes": 4263,
+      "sourceSha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf",
+      "archiveBytes": 4263,
+      "archiveSha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/bake_lighting.py",
+      "destination": "source/bake_lighting.py",
+      "sourceBytes": 23902,
+      "sourceSha256": "d0f95f9e2ab48d2357647fea1c437dac8b5c06ab1a538ee604d9abd0b6764432",
+      "archiveBytes": 23902,
+      "archiveSha256": "d0f95f9e2ab48d2357647fea1c437dac8b5c06ab1a538ee604d9abd0b6764432",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/baked_occlusion_binding.py",
+      "destination": "source/baked_occlusion_binding.py",
+      "sourceBytes": 3167,
+      "sourceSha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+      "archiveBytes": 3167,
+      "archiveSha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/material_library.py",
+      "destination": "source/material_library.py",
+      "sourceBytes": 9855,
+      "sourceSha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8",
+      "archiveBytes": 9855,
+      "archiveSha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/occluder_materials.py",
+      "destination": "source/occluder_materials.py",
+      "sourceBytes": 4289,
+      "sourceSha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c",
+      "archiveBytes": 4289,
+      "archiveSha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/order_lighting_uv.py",
+      "destination": "source/order_lighting_uv.py",
+      "sourceBytes": 11793,
+      "sourceSha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c",
+      "archiveBytes": 11793,
+      "archiveSha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/render_device.py",
+      "destination": "source/render_device.py",
+      "sourceBytes": 1188,
+      "sourceSha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "archiveBytes": 1188,
+      "archiveSha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/restore_imported_visibility.py",
+      "destination": "source/restore_imported_visibility.py",
+      "sourceBytes": 2390,
+      "sourceSha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21",
+      "archiveBytes": 2390,
+      "archiveSha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-source-current/vault_lighting_uv.py",
+      "destination": "source/vault_lighting_uv.py",
+      "sourceBytes": 6302,
+      "sourceSha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee",
+      "archiveBytes": 6302,
+      "archiveSha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/assemble_input.py",
+      "destination": "source/assemble_input.py",
+      "sourceBytes": 11752,
+      "sourceSha256": "dff77339b65a1c7f7776120843310d19a73ae75f4dfdc3fcb175748163767a7f",
+      "archiveBytes": 11752,
+      "archiveSha256": "dff77339b65a1c7f7776120843310d19a73ae75f4dfdc3fcb175748163767a7f",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/prepare_packet.py",
+      "destination": "source/prepare_packet.py",
+      "sourceBytes": 6826,
+      "sourceSha256": "ab0285688b0b8a9e5c35d949401f1f784081cfdcc52223b815c3ae86efcc2143",
+      "archiveBytes": 6826,
+      "archiveSha256": "ab0285688b0b8a9e5c35d949401f1f784081cfdcc52223b815c3ae86efcc2143",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/compare_blender_imports.py",
+      "destination": "source/compare_blender_imports.py",
+      "sourceBytes": 4690,
+      "sourceSha256": "fa1e320ec4682d279f0ae5da14330e2c52125081ef657e76f11de0b79d65d463",
+      "archiveBytes": 4690,
+      "archiveSha256": "fa1e320ec4682d279f0ae5da14330e2c52125081ef657e76f11de0b79d65d463",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/run_full_context_preflight.py",
+      "destination": "source/run_full_context_preflight.py",
+      "sourceBytes": 5605,
+      "sourceSha256": "4841b90d7323162e68b63cf500518717b22222c4a8a0cd0e5574f2df698c2fb7",
+      "archiveBytes": 5605,
+      "archiveSha256": "4841b90d7323162e68b63cf500518717b22222c4a8a0cd0e5574f2df698c2fb7",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/freeze_packet.py",
+      "destination": "source/freeze_packet.py",
+      "sourceBytes": 9581,
+      "sourceSha256": "7ba9854d6555d23760889f519ebbbc1740139caae4cfa84245dc6650a3bb4cc9",
+      "archiveBytes": 9581,
+      "archiveSha256": "7ba9854d6555d23760889f519ebbbc1740139caae4cfa84245dc6650a3bb4cc9",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/check_assembler_controls.py",
+      "destination": "source/check_assembler_controls.py",
+      "sourceBytes": 4555,
+      "sourceSha256": "608f1ae468e6b37600f05c86042233a3617306ab4ad105957a21607696390604",
+      "archiveBytes": 4555,
+      "archiveSha256": "608f1ae468e6b37600f05c86042233a3617306ab4ad105957a21607696390604",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/run_frozen_bake.py",
+      "destination": "source/run_frozen_bake.py",
+      "sourceBytes": 1751,
+      "sourceSha256": "57ed31d4c9896af67dca10c2419ce7672265ddeb35113063693679b5bf407712",
+      "archiveBytes": 1751,
+      "archiveSha256": "57ed31d4c9896af67dca10c2419ce7672265ddeb35113063693679b5bf407712",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/frozen-bake-command.json",
+      "destination": "source/frozen-bake-command.json",
+      "sourceBytes": 34401,
+      "sourceSha256": "a5c2c7ffba1535cd7fafa7b730b9d34fd9f1b0376cd7c02756c55379eeeee34d",
+      "archiveBytes": 34401,
+      "archiveSha256": "a5c2c7ffba1535cd7fafa7b730b9d34fd9f1b0376cd7c02756c55379eeeee34d",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/FROZEN-PACKET-MANIFEST.json",
+      "destination": "source/FROZEN-PACKET-MANIFEST.json",
+      "sourceBytes": 1035,
+      "sourceSha256": "ac3ef47183d362b99889f72d53d1940dda757957bb4d875a057e21e781190f01",
+      "archiveBytes": 1035,
+      "archiveSha256": "ac3ef47183d362b99889f72d53d1940dda757957bb4d875a057e21e781190f01",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/production-source-snapshot.json",
+      "destination": "source/production-source-snapshot.json",
+      "sourceBytes": 4545,
+      "sourceSha256": "9a8bf1209d682852a10cfdf2b7f943924aa76e4875cd239cb29e2f1cdabbf7e1",
+      "archiveBytes": 4545,
+      "archiveSha256": "9a8bf1209d682852a10cfdf2b7f943924aa76e4875cd239cb29e2f1cdabbf7e1",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/toolchain.json",
+      "destination": "source/toolchain.json",
+      "sourceBytes": 405,
+      "sourceSha256": "98cb780901288728f57d78cc8b21c855a6db443468b7ddd2053d031e1a30404d",
+      "archiveBytes": 405,
+      "archiveSha256": "98cb780901288728f57d78cc8b21c855a6db443468b7ddd2053d031e1a30404d",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/base-optical-lineage.json",
+      "destination": "source/base-optical-lineage.json",
+      "sourceBytes": 2592,
+      "sourceSha256": "bc523c33176aa51e9a2bae025244a50f28848dc495d6d682e25743edfa290d9e",
+      "archiveBytes": 2592,
+      "archiveSha256": "bc523c33176aa51e9a2bae025244a50f28848dc495d6d682e25743edfa290d9e",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/assembly-proof-v3.json",
+      "destination": "source/assembly-proof-v3.json",
+      "sourceBytes": 26629,
+      "sourceSha256": "3c804713ffe8920d3093908761dd04b7cf7ebe7b584dae8807d685839ccba420",
+      "archiveBytes": 26629,
+      "archiveSha256": "3c804713ffe8920d3093908761dd04b7cf7ebe7b584dae8807d685839ccba420",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/blender-import-comparison-v3.json",
+      "destination": "source/blender-import-comparison-v3.json",
+      "sourceBytes": 9206,
+      "sourceSha256": "409b6641a77e9378218406ed51cab06fa7886dfca552b7e42e47af666ea3d4b2",
+      "archiveBytes": 9206,
+      "archiveSha256": "409b6641a77e9378218406ed51cab06fa7886dfca552b7e42e47af666ea3d4b2",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/assembler-controls.json",
+      "destination": "source/assembler-controls.json",
+      "sourceBytes": 2361,
+      "sourceSha256": "9060ee249f6e8a50e2d3959f302390234a12147537ba2cdbc2edcbc801b85117",
+      "archiveBytes": 2361,
+      "archiveSha256": "9060ee249f6e8a50e2d3959f302390234a12147537ba2cdbc2edcbc801b85117",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/bake-completion.json",
+      "destination": "source/bake-completion.json",
+      "sourceBytes": 1283,
+      "sourceSha256": "259c2454f807128608668f4273a8a1a4edbbc81dfe5512801e003edbd0ce2420",
+      "archiveBytes": 1283,
+      "archiveSha256": "259c2454f807128608668f4273a8a1a4edbbc81dfe5512801e003edbd0ce2420",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/final-readonly-verification.json",
+      "destination": "source/final-readonly-verification.json",
+      "sourceBytes": 486,
+      "sourceSha256": "f2fa5f6af900d065f7d40fa0939e3e369e3971dbd9d10a9b504657830210c510",
+      "archiveBytes": 486,
+      "archiveSha256": "f2fa5f6af900d065f7d40fa0939e3e369e3971dbd9d10a9b504657830210c510",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/cpu-preflight-v3/preflight-proof.json",
+      "destination": "source/full-context-preflight.json.gz",
+      "sourceBytes": 3931110,
+      "sourceSha256": "8743a789f90ee92cbb8036a0780e9aeb1be0efd70306bfcb0a5920766675ad2a",
+      "archiveBytes": 663016,
+      "archiveSha256": "1a47d87bdf0f7a6eb0d36c2ef1e40a360e0341858a2552ac9c3e02582040d895",
+      "decodedByteExact": true,
+      "gzipMtime": 0,
+      "gzipLevel": 9
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/reviewed-metal-bake.log",
+      "destination": "source/reviewed-metal-bake.log.gz",
+      "sourceBytes": 7336280,
+      "sourceSha256": "53048b53deacdf2f1d27da29237bd4304a9bb669ff5085bb2796ff4704e5c15b",
+      "archiveBytes": 787743,
+      "archiveSha256": "3d2fea740bf4c89ac4ba99372650a02eee9d38c159e607e94d6b05210f64058e",
+      "decodedByteExact": true,
+      "gzipMtime": 0,
+      "gzipLevel": 9
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/visible-occluders-v1/visible-context-proof.json",
+      "destination": "source/visible-context-proof.json",
+      "sourceBytes": 5035,
+      "sourceSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+      "archiveBytes": 5035,
+      "archiveSha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/source/denoise_lighting.py",
+      "destination": "source/denoise_lighting.py",
+      "sourceBytes": 8443,
+      "sourceSha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "archiveBytes": 8443,
+      "archiveSha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/review-command.json",
+      "destination": "source/denoise-packaging/review-command.json",
+      "sourceBytes": 5772,
+      "sourceSha256": "5e208de9fd8d49aa5296a77f36a6c0bc519639401df1f34a973107feb3870758",
+      "archiveBytes": 5772,
+      "archiveSha256": "5e208de9fd8d49aa5296a77f36a6c0bc519639401df1f34a973107feb3870758",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/execution-acceptance.json",
+      "destination": "source/denoise-packaging/execution-acceptance.json",
+      "sourceBytes": 1132,
+      "sourceSha256": "20df9af18f17e6f2a524c035beb4f5ac36d12935ea26167c35d171ac73c1ee41",
+      "archiveBytes": 1132,
+      "archiveSha256": "20df9af18f17e6f2a524c035beb4f5ac36d12935ea26167c35d171ac73c1ee41",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/cloned-helper-pins.json",
+      "destination": "source/denoise-packaging/cloned-helper-pins.json",
+      "sourceBytes": 2949,
+      "sourceSha256": "d3010e390a643ef1c454e0bfd879cc35e8ab329579b118d993412d32ea0e6f3a",
+      "archiveBytes": 2949,
+      "archiveSha256": "d3010e390a643ef1c454e0bfd879cc35e8ab329579b118d993412d32ea0e6f3a",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/packaging-proof.json",
+      "destination": "source/denoise-packaging/packaging-proof.json",
+      "sourceBytes": 15465,
+      "sourceSha256": "d67fc88d6719e00b63252a6f7780b85a6d9549600c5bbbc6613c6971148e4aef",
+      "archiveBytes": 15465,
+      "archiveSha256": "d67fc88d6719e00b63252a6f7780b85a6d9549600c5bbbc6613c6971148e4aef",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-packaging-v1/logs/denoise.log",
+      "destination": "source/denoise-packaging/denoise.log",
+      "sourceBytes": 3034,
+      "sourceSha256": "cf46084018bea6ed25f9681824d2083bb8cba865c8f9f038777a48ff8b10dc24",
+      "archiveBytes": 3034,
+      "archiveSha256": "cf46084018bea6ed25f9681824d2083bb8cba865c8f9f038777a48ff8b10dc24",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-denoised-v1/completion-proof.json",
+      "destination": "source/denoise-packaging/completion-proof.json",
+      "sourceBytes": 1534,
+      "sourceSha256": "165153af9439c3e8f2a6e206370199731ed55adeaed13933ab1ed60570dcce12",
+      "archiveBytes": 1534,
+      "archiveSha256": "165153af9439c3e8f2a6e206370199731ed55adeaed13933ab1ed60570dcce12",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/accept_payload.py",
+      "destination": "source/raw-acceptance/accept_payload.py",
+      "sourceBytes": 8298,
+      "sourceSha256": "324480d23eb91d064c6b71cbbdcf02f26a32317915c8e44a9eb4027dcc73b4fd",
+      "archiveBytes": 8298,
+      "archiveSha256": "324480d23eb91d064c6b71cbbdcf02f26a32317915c8e44a9eb4027dcc73b4fd",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/audit_reference.py",
+      "destination": "source/raw-acceptance/audit_reference.py",
+      "sourceBytes": 16730,
+      "sourceSha256": "488a40cd1edd58e86f9036772e2df4ea73dc92ae305ed667e2ff863742f84b9e",
+      "archiveBytes": 16730,
+      "archiveSha256": "488a40cd1edd58e86f9036772e2df4ea73dc92ae305ed667e2ff863742f84b9e",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/hdr_payload_stats.mjs",
+      "destination": "source/raw-acceptance/hdr_payload_stats.mjs",
+      "sourceBytes": 1712,
+      "sourceSha256": "e25377e6184a0f30f762dcb6c3e6687fca8316340a8e72730e4282ccc0512e74",
+      "archiveBytes": 1712,
+      "archiveSha256": "e25377e6184a0f30f762dcb6c3e6687fca8316340a8e72730e4282ccc0512e74",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/hdr-payload-stats.json",
+      "destination": "source/raw-acceptance/hdr-payload-stats.json",
+      "sourceBytes": 573,
+      "sourceSha256": "4c6edd31c97bc136f0d6d7bbbd962e01cfaa7e502f0f3ee047257b7921d1b502",
+      "archiveBytes": 573,
+      "archiveSha256": "4c6edd31c97bc136f0d6d7bbbd962e01cfaa7e502f0f3ee047257b7921d1b502",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/raw-payload-acceptance.json",
+      "destination": "source/raw-acceptance/raw-payload-acceptance.json",
+      "sourceBytes": 13676,
+      "sourceSha256": "2135f63a05352cb5d09da5c0d0c0a62f62a954d0770b59d458b6fe25d2f34aa8",
+      "archiveBytes": 13676,
+      "archiveSha256": "2135f63a05352cb5d09da5c0d0c0a62f62a954d0770b59d458b6fe25d2f34aa8",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-post-bake-v1/final-rehash.json",
+      "destination": "source/raw-acceptance/final-rehash.json",
+      "sourceBytes": 429,
+      "sourceSha256": "5e9ea1677196731db3785a67fc33f24401f8dc87ffc2b842bb320bece6aeac2e",
+      "archiveBytes": 429,
+      "archiveSha256": "5e9ea1677196731db3785a67fc33f24401f8dc87ffc2b842bb320bece6aeac2e",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/root-visual-v3/root-visual-review.json",
+      "destination": "source/source-review/root-visual-review.json",
+      "sourceBytes": 1791,
+      "sourceSha256": "c1bf6bee1fdc6c0633078836855970978d9e957524b6b577c29f6c06427ea271",
+      "archiveBytes": 1791,
+      "archiveSha256": "c1bf6bee1fdc6c0633078836855970978d9e957524b6b577c29f6c06427ea271",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-review-v1/final-v3/SUMMARY.json",
+      "destination": "source/source-review/independent-SUMMARY.json",
+      "sourceBytes": 10341,
+      "sourceSha256": "9a7ec034fea5c15250d23aafdb8da1492a39f8d321913edfd1ae082904fd19d5",
+      "archiveBytes": 10341,
+      "archiveSha256": "9a7ec034fea5c15250d23aafdb8da1492a39f8d321913edfd1ae082904fd19d5",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/CPU-SUMMARY-v3.json",
+      "destination": "source/source-review/own-CPU-SUMMARY-v3.json",
+      "sourceBytes": 9988,
+      "sourceSha256": "51961a17d91eea0c3bb3c6fee538ef67965a379958cf5e34520b106970d7a5f5",
+      "archiveBytes": 9988,
+      "archiveSha256": "51961a17d91eea0c3bb3c6fee538ef67965a379958cf5e34520b106970d7a5f5",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    },
+    {
+      "source": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-source-archive-v1/previous-source-recovery.json",
+      "destination": "source/previous-source-recovery.json",
+      "sourceBytes": 8627,
+      "sourceSha256": "c95708f4556fcd2f6143ed967d7b99b6e07641e6889f85d126bc2e5e19fe9fa5",
+      "archiveBytes": 8627,
+      "archiveSha256": "c95708f4556fcd2f6143ed967d7b99b6e07641e6889f85d126bc2e5e19fe9fa5",
+      "decodedByteExact": true,
+      "copyByteExact": true
+    }
+  ],
+  "previousSourceRecovery": "source/previous-source-recovery.json",
+  "rawModelRecovery": "source/raw-model-recovery.json",
+  "original68FilePins": "source/frozen-bake-command.json",
+  "retainedRawSourceFrames": "Main0; exact eight registered contexts and two restored hidden source-template rules; source offset +4.2672 m where recorded",
+  "qualifications": [
+    "First WEST P5 bay bounded curved-rail/lower-haunch and flat-finish study only; upper haunch held.",
+    "150 mm rail curvature, 8 mm flat faces and fabrication details are inferred; source photographs do not identify P5 or authenticate a camera.",
+    "Existing opaque geometry/UV0 exact; authored UV1 and corner normals preserved through the accepted bounded Blender re-encoding; no atlas repack.",
+    "GI/AO freshly includes the changed unbaked metal as occlusion; no complete historical/gallery or final photorealism claim.",
+    "Neutral dome transport contains no directional sun; runtime direct lighting/reflection capture remain separate and unchanged."
+  ],
+  "rootFilesEdited": false,
+  "GPUExecutedByPackager": false,
+  "finalBrowserAcceptanceClaimed": false
+}

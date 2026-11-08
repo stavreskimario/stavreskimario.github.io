@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "status": "PASS bounded feasibility: one lower-haunch plus west handrail smoothing candidate; upperhaunchheld",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-finish-study-v1/candidate-v2/p5-study-source-plus-finish.glb",
+    "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f"
+  },
+  "sourceProofSha256": "715435918224899607c4241bc41b80afc7c5141a1d243f8b6724a00de2035146",
+  "lowerHaunch": {
+    "kind": "additive lower-flight\u2192landing lower-outline haunch",
+    "startMain0": [
+      -78.492,
+      -6.156351717078671
+    ],
+    "endMain0": [
+      -78.18199920654297,
+      -6.033079624176025
+    ],
+    "startSlope": 0.6383062584370026,
+    "endSlope": 0,
+    "cubicHermiteYPolynomialOverT": [
+      -6.156351717078671,
+      0.19787544658406248,
+      -0.025934614460188077,
+      -0.048668739221228774
+    ],
+    "xStart": -78.492,
+    "xLength": 0.3100007934570357,
+    "minimumCurvatureRadiusM": 0.27945802854657675,
+    "maximumCurvatureRadiusM": 3.093558146752613,
+    "maximumNewLowerOutlineAboveOriginalM": 0.0,
+    "maximumAddedDepthBelowOriginalM": 0.07460335368141013,
+    "tangentResiduals": [
+      0.0,
+      0.0
+    ],
+    "feasibleAdditiveWithoutOldFlangeCut": true,
+    "lateralTransition": "C1quintic outer offset from existing flight flange\u00b11.11m to actual landing girder\u00b11.17m; inner8mm source contact strip retained. New outer haunch face is inferred appearance, not member-centreline bending."
+  },
+  "upperHaunchHold": {
+    "kind": "upper-flight/landing lower-outline hold",
+    "existingDiagonalSlope": 0.6345286104088931,
+    "existingLowerLineIntercept": 42.88944219457829,
+    "lineIntersectionWithLandingBottomX": -77.10057673715993,
+    "endGirderXBounds": [
+      -76.98199462890625,
+      -76.802001953125
+    ],
+    "problem": "A short single-convex fillet lies inside the existing end-girder body. A strictly additive join beginning after its protected end face must overshoot the diagonal slope and introduce an S-shaped transition; this is a larger unverified profile choice.",
+    "decision": "Retain upper haunch for this first candidate; present bounded ownership/cutback options separately rather than alter bearing/girder depth or bend an I-centreline."
+  },
+  "railFillets": [
+    {
+      "corner": "A",
+      "inferredNominalBendRadiusM": 0.15,
+      "angleRadians": -0.5654220250739525,
+      "tangentSetbackM": 0.04357377033708266,
+      "arcCubicControlsMain0": [
+        [
+          -76.85520793945403,
+          -4.459734014577316
+        ],
+        [
+          -76.87923927240716,
+          -4.474982582882336
+        ],
+        [
+          -76.90711285329533,
+          -4.4830796296296285
+        ],
+        [
+          -76.93557377033707,
+          -4.4830796296296285
+        ]
+      ],
+      "maxCentrelineDistanceFromOldTwoLinesM": 0.005954594411774039,
+      "newelGuardContactBudgetM": 0.055999999999999994,
+      "C1Constructible": true
+    },
+    {
+      "corner": "B",
+      "inferredNominalBendRadiusM": 0.15,
+      "angleRadians": 0.5681101992385345,
+      "tangentSetbackM": 0.04379248214282938,
+      "arcCubicControlsMain0": [
+        [
+          -78.04820751785716,
+          -4.4830796296296285
+        ],
+        [
+          -78.07680557859982,
+          -4.4830796296296285
+        ],
+        [
+          -78.10480767056816,
+          -4.491254837046196
+        ],
+        [
+          -78.12891352700278,
+          -4.506641739391815
+        ]
+      ],
+      "maxCentrelineDistanceFromOldTwoLinesM": 0.006010966501486692,
+      "newelGuardContactBudgetM": 0.055999999999999994,
+      "C1Constructible": true
+    }
+  ],
+  "ownedOriginalRailObjects": 6,
+  "ownedOriginalPrimaryIBeams": 0,
+  "newelAnchorChanges": 0,
+  "treadOrLandingTopChanges": 0,
+  "frameCapGirderHeightChanges": 0,
+  "geometryCreated": false,
+  "qualifications": [
+    "Radius/setbacks are inferred and parameterized, not measured historical dimensions.",
+    "Source supports the visible lower-outline family, not bent member centrelines or a fabrication schedule.",
+    "This is a lower-haunch/handrail checkpoint, not completion of both stair/landing silhouettes.",
+    "Final actual mesh contact/body/normal/winding/ownership checks still required."
+  ],
+  "generatorSha256": "eaf014da64e726f1b4d2f4f1e3b75780fe1bd50b0c9b264128debab354364709"
+}

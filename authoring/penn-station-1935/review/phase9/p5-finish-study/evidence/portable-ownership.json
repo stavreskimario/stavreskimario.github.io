@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "status": "PASS: exactly6ownedrail mesh definitions and2newhaunch nodes; every other original binding and byte exact",
+  "inputs": {
+    "source": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/portable-replay-v1/source/p5-flat-source.glb",
+      "sha256": "ba851616344808c23d2fb1868f29c30f8cfbe0ca7b4f5645d5f64677700f610f"
+    },
+    "candidate": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/portable-replay-v1/rebuilt-curves/west-p5-curved-study.glb",
+      "sha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f"
+    },
+    "manifest": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curved-source-handoff-v1/portable-replay-v1/rebuilt-curves/curve-study-manifest.json",
+      "sha256": "6b385494372d2baa73167d9efa8daf61a470d894346679eeb65e9e3f1ff0b88d"
+    }
+  },
+  "failures": [],
+  "ownedRails": [
+    {
+      "node": "Arrival row5 west west flight1 rounded top rail",
+      "meshIndex": 1290,
+      "uniqueOriginalNode": 1290,
+      "beforeMeshJsonSha256": "106f91ded162aae9b7e4da86d3e88fb51d694f15a2388f302249b923526745d1",
+      "afterMeshJsonSha256": "d61c1b899eca1487071fdb60ccf7c93bd6c90329bc837ac57a9b87856bd7ae1d"
+    },
+    {
+      "node": "Arrival row5 west Arrival intermediate landing top rail",
+      "meshIndex": 1430,
+      "uniqueOriginalNode": 1430,
+      "beforeMeshJsonSha256": "13a20cd87dd6ec327d8f50884aec95f93d656c5d9d28b4b4fd37de7dfbbf05ff",
+      "afterMeshJsonSha256": "5bafbd17216c0fc22eebbecd13a98e1efc296e0ba3c190327c26ca15f6652938"
+    },
+    {
+      "node": "Arrival row5 west west flight2 rounded top rail",
+      "meshIndex": 1359,
+      "uniqueOriginalNode": 1359,
+      "beforeMeshJsonSha256": "08d24c2f75b20b53b50d08469e52cc5facf637356275114754c392e4d8ab2f50",
+      "afterMeshJsonSha256": "d1a29e1e824494d87f0c0080595dbe97b5ade473c3231861ecfa683cc2e0fb87"
+    },
+    {
+      "node": "Arrival row5 west west flight1 rounded top rail.001",
+      "meshIndex": 1324,
+      "uniqueOriginalNode": 1324,
+      "beforeMeshJsonSha256": "c226b6fe02642cf6849f74406e60f62874c8b95a34a44dbbdbfa358395f1eed0",
+      "afterMeshJsonSha256": "2e0da3967635ea50abc958febc51246f809d4cb10ef8580fe2b620c75bc4695f"
+    },
+    {
+      "node": "Arrival row5 west Arrival intermediate landing top rail.001",
+      "meshIndex": 1438,
+      "uniqueOriginalNode": 1438,
+      "beforeMeshJsonSha256": "34ec8769195db4b540b71deb1c77daa7ce979875bf91fad9ccc324cb2cd37246",
+      "afterMeshJsonSha256": "4d3068cd065d5c00f04b118adb03ff81a0dd24ac177f12625b5797ef029d56e4"
+    },
+    {
+      "node": "Arrival row5 west west flight2 rounded top rail.001",
+      "meshIndex": 1393,
+      "uniqueOriginalNode": 1393,
+      "beforeMeshJsonSha256": "64c5fe8e6611f0b166e1123c3681d436992d425fa18d960f6f2f426d4cbfdd97",
+      "afterMeshJsonSha256": "54b1caef62215a886bfe60911c43ac3e6080276b147496333cde1bb132c2d38a"
+    }
+  ],
+  "exactOriginalNodeCount": 4061,
+  "exactNonownedMeshCount": 4055,
+  "exactFlatFaceMeshCount": 14,
+  "originalBinaryPrefixBytes": 11903792,
+  "originalBinaryPrefixSha256": "8e88d12bc115780293e1c84797421046023d732d2090df553864a5e6dbb5abfb",
+  "allOriginalNodesWorldMatricesExact": true,
+  "allOriginalMaterialsAndImagesExact": true,
+  "allOriginalAccessorNormalUvIndexBytesExact": true,
+  "sameSourceFrame": "Main0; no original node/world transform changes",
+  "newAddedNodeNames": [
+    "P5Curve west lower haunch side-plus",
+    "P5Curve west lower haunch side-minus"
+  ]
+}

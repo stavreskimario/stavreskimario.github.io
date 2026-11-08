@@ -1,0 +1,103 @@
+{
+  "status": "PASS corrected raw source integrated physical route and exact preservation regression",
+  "cases": [
+    {
+      "case": "full-forward",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroom": 1.885793149471283,
+      "report": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-raw-v1/full-forward/route-check.json",
+      "sha256": "f3a28b4123279863bfef5f6c5979608bfb8d24facead2f2c3ad6026a837f0638"
+    },
+    {
+      "case": "full-reverse",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroom": 1.885793149471283,
+      "report": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-raw-v1/full-reverse/route-check.json",
+      "sha256": "630888c2c645f96b430aecf0d4ec267438177699092b9d17466a18966951f46b"
+    },
+    {
+      "case": "low-forward",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroom": 1.885793149471283,
+      "report": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-raw-v1/low-forward/route-check.json",
+      "sha256": "a81f9647e24551492200da6c17be7db8b599ef8c9da17628824270ed67119c53"
+    },
+    {
+      "case": "low-reverse",
+      "status": "PASS targeted one-direction actual geometry loop",
+      "samples": 1563,
+      "minimumHeadroom": 1.885793149471283,
+      "report": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/integrated-cpu-raw-v1/low-reverse/route-check.json",
+      "sha256": "87ff2c292eb5513092b54a6094aa7b2bca5dcebbaf56adafe81fb6b1707d2322"
+    }
+  ],
+  "totalSamples": 6252,
+  "frozenInputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/candidate-v1/model-concourse-exits.glb",
+      "sha256": "9721001d3ab0689327168ee31faa368174418fb2d9da3f3dafea0ec73074ae18",
+      "bytes": 34805936,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse.glb.gz",
+      "sha256": "45da359a564f02c599961807662bd8e6d14d3bdc9bf1d032261955cb37c6cefe",
+      "bytes": 6698444,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform.glb.gz",
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "bytes": 213970,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context.glb.gz",
+      "sha256": "3bce9f15959a899f03c6eb60ceacd987d9d4f18e741de874e76eb87936a2c104",
+      "bytes": 506131,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-concourse-low.glb.gz",
+      "sha256": "e6f15fb4d5ea04501f320894e5216bac959b2e563a6c8f17bd91800f4d3ce8dd",
+      "bytes": 6388181,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/model-platform-low.glb.gz",
+      "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779",
+      "bytes": 240418,
+      "rehashedUnchangedAfterAllRuns": true
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/geometry-route-v1/cuts-v5/model-context-low.glb.gz",
+      "sha256": "491ff6c75d7f14752f09a66e5ae0a463e793997eb7aacb55c9bb659ac9273263",
+      "bytes": 686636,
+      "rehashedUnchangedAfterAllRuns": true
+    }
+  ],
+  "routeWaypointsExactOriginalToV3": true,
+  "newRoute": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/construction-v1/route-v3.json",
+    "sha256": "7b546fe1c9d9851749b0e438f8c085aba0740f024fc555d7204a172f1f758130"
+  },
+  "originalPathRecipe": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase10-arrivals-exit/construction-v1/route-v1.json",
+    "sha256": "bb2183ac2229406d962baf0e8f42ba965f0f35975ceaa00c61b12924f430ba64"
+  },
+  "sourcePreservationAndRoadPrismProof": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/geometry-proof-v1/corrected-source-regression.json",
+    "sha256": "a9465eba0d45a7005dbf3a1c38fcf07dc82a6908798f964c0225b50c6fc658cc",
+    "exactCommonObjects": 91,
+    "criticalFloorTreadObjects": 51,
+    "unexpectedChanges": [],
+    "afterRoadAndCurbIntrusions": [
+      0,
+      0
+    ]
+  },
+  "qualification": "Corrected source module combined with unchanged cuts-v5 full/low scene/context and actual current platform geometry. Checks re-use original 0.08m samples and current authored paving collision rule. Native browser WASD walkthrough remains skipped by user. Final encoded module requires its own targeted physical check after bake/package."
+}

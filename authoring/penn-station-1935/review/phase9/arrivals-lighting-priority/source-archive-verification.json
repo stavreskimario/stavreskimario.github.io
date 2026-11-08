@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Existing verifyArrivalsSource, retained HDR, raw bake statistics, actual Main0 template visibility and full/low PNG–WebP derivative contracts applied to external source archive only.",
+  "archiveDirectory": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-source-archive-v2/authoring/penn-station-1935/lighting/phase8",
+  "totalSourceBytesIncludingManifest": 101922555,
+  "previousPhase8SourceBytes": 70541154,
+  "replacementDeltaBytes": 31381401,
+  "rawBakeReportByteExact": true,
+  "denoiseStatisticsAndOpticalValuesUnchanged": true,
+  "manifestFileCount": 35,
+  "archiveManifestSha256": "89bad6c0699d77dcb73357ae46819a7d81e779715e010877bd06d7453d6e2970",
+  "rawSource": {
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase8/raw",
+    "archiveFile": "lighting-concourse-arrivals-sky.hdr.gz",
+    "archiveBytes": 41941911,
+    "decodedBytes": 49852600,
+    "decodedSha256": "ddbd8053412ce36ac942b63927927e6b59ee2686acb0fe9a84ea681b764dae8d",
+    "bakeReportSha256": "be36423c000f70a0104e698ac20dad9172fc4f68bdbfb52ba9af3458bbdf90ac"
+  },
+  "retainedHDR": {
+    "archiveFile": "lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+    "archiveBytes": 30090391,
+    "decodedBytes": 67649587,
+    "decodedSha256": "1a2d38e8955f38b1f3d6c52dda0a36ed9977ac9806e52fb1f53f24398ff086cb",
+    "width": 4096,
+    "height": 4096
+  },
+  "derivatives": [
+    {
+      "variant": "full",
+      "file": "lighting-concourse-arrivals-sky.webp",
+      "width": 4096,
+      "height": 4096,
+      "clippedRGBSamples": 0
+    },
+    {
+      "variant": "low",
+      "file": "lighting-concourse-arrivals-sky-low.webp",
+      "width": 512,
+      "height": 512,
+      "clippedRGBSamples": 0
+    }
+  ],
+  "validatorSha256": "f349c3faa1080483c558eb5f93ed5c139fa7fb438628f01ec2dbe8c93ab8ef37",
+  "rootFilesEdited": false
+}

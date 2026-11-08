@@ -1,0 +1,3005 @@
+{
+  "created": "2026-10-29T03:38:18.554Z",
+  "assets": [
+    {
+      "file": "model-context.glb",
+      "bytes": 2204080,
+      "transportFile": "model-context.glb.gz",
+      "transportBytes": 493360,
+      "errors": 0,
+      "warnings": 19,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -373.7987976074219,
+          -1,
+          -169.99786370433668
+        ],
+        "max": [
+          340,
+          85.89968742190504,
+          169.99786370433668
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 37,
+      "instances": 22
+    },
+    {
+      "file": "model-context-low.glb",
+      "bytes": 1751252,
+      "transportFile": "model-context-low.glb.gz",
+      "transportBytes": 654188,
+      "errors": 0,
+      "warnings": 19,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -373.7987976074219,
+          -1,
+          -169.99786370433668
+        ],
+        "max": [
+          340,
+          85.89968742190504,
+          169.99786370433668
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 37,
+      "instances": 22
+    },
+    {
+      "file": "model-trains.glb",
+      "bytes": 663600,
+      "transportFile": "model-trains.glb.gz",
+      "transportBytes": 120567,
+      "errors": 0,
+      "warnings": 8,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -91.58699798583984,
+          -1,
+          -1.691473229038314
+        ],
+        "max": [
+          1,
+          6.133440417810039,
+          1.691473229038314
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 16,
+      "instances": 4
+    },
+    {
+      "file": "model-trains-low.glb",
+      "bytes": 485180,
+      "transportFile": "model-trains-low.glb.gz",
+      "transportBytes": 155868,
+      "errors": 0,
+      "warnings": 8,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_mesh_gpu_instancing'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -91.58699798583984,
+          -1,
+          -1.691473229038314
+        ],
+        "max": [
+          1,
+          6.131616792422129,
+          1.691473229038314
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 16,
+      "instances": 4
+    },
+    {
+      "file": "model-platform.glb",
+      "bytes": 532324,
+      "transportFile": "model-platform.glb.gz",
+      "transportBytes": 19112,
+      "errors": 0,
+      "warnings": 7,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -85.10160064697266,
+          -9.458247132786942,
+          5.594396116517666
+        ],
+        "max": [
+          25,
+          -7.716426368759015,
+          13.135074922940763
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 6,
+      "instances": 0
+    },
+    {
+      "file": "model-platform-low.glb",
+      "bytes": 439024,
+      "transportFile": "model-platform-low.glb.gz",
+      "transportBytes": 41245,
+      "errors": 0,
+      "warnings": 7,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -85.10160064697266,
+          -9.458247132786942,
+          5.594396116517666
+        ],
+        "max": [
+          25,
+          -7.716426368759015,
+          13.135074922940763
+        ]
+      },
+      "bakedMaterials": 0,
+      "atlasChannels": [],
+      "meshCount": 6,
+      "instances": 0
+    },
+    {
+      "file": "model-exterior.glb",
+      "bytes": 2270372,
+      "transportFile": "model-exterior.glb.gz",
+      "transportBytes": 548567,
+      "errors": 0,
+      "warnings": 16,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -119.83159637451172,
+          -4.265456032155615,
+          -65.87891718289653
+        ],
+        "max": [
+          120.20559692382812,
+          46.63265545308457,
+          65.87891718289653
+        ]
+      },
+      "bakedMaterials": 6,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 3,
+      "instances": 0
+    },
+    {
+      "file": "model-exterior-low.glb",
+      "bytes": 1611572,
+      "transportFile": "model-exterior-low.glb.gz",
+      "transportBytes": 816861,
+      "errors": 0,
+      "warnings": 16,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -119.83159637451172,
+          -4.265456032155615,
+          -65.87891718289653
+        ],
+        "max": [
+          120.20559692382812,
+          46.63265545308457,
+          65.87891718289653
+        ]
+      },
+      "bakedMaterials": 6,
+      "atlasChannels": [
+        1,
+        0
+      ],
+      "meshCount": 3,
+      "instances": 0
+    },
+    {
+      "file": "model-concourse.glb",
+      "bytes": 9965088,
+      "transportFile": "model-concourse.glb.gz",
+      "transportBytes": 4143321,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -105.69165965116439,
+          -8.072529818878024,
+          -49.31800079345703
+        ],
+        "max": [
+          -16.00204304658952,
+          30.14828112350449,
+          49.31800079345703
+        ]
+      },
+      "bakedMaterials": 9,
+      "atlasChannels": [
+        0,
+        1
+      ],
+      "meshCount": 2,
+      "instances": 0
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "bytes": 9295244,
+      "transportFile": "model-concourse-low.glb.gz",
+      "transportBytes": 4153201,
+      "errors": 0,
+      "warnings": 23,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -105.69165965116439,
+          -8.072529818878024,
+          -49.31800079345703
+        ],
+        "max": [
+          -16.00204304658952,
+          30.14828112350449,
+          49.31800079345703
+        ]
+      },
+      "bakedMaterials": 9,
+      "atlasChannels": [
+        0,
+        1
+      ],
+      "meshCount": 2,
+      "instances": 0
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "bytes": 8627592,
+      "transportFile": "model-waiting-room.glb.gz",
+      "transportBytes": 3453425,
+      "errors": 0,
+      "warnings": 26,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -18.1396660092265,
+          -0.3981626185636813,
+          -45.39999961853027
+        ],
+        "max": [
+          32.709664750376405,
+          45.7181623133879,
+          45.400001525878906
+        ]
+      },
+      "bakedMaterials": 12,
+      "atlasChannels": [
+        0,
+        1
+      ],
+      "meshCount": 2,
+      "instances": 0
+    },
+    {
+      "file": "model-waiting-room-low.glb",
+      "bytes": 7029436,
+      "transportFile": "model-waiting-room-low.glb.gz",
+      "transportBytes": 3524511,
+      "errors": 0,
+      "warnings": 26,
+      "notices": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+        },
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "VALUE_NOT_IN_LIST",
+          "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png')."
+        },
+        {
+          "code": "URI_GLB",
+          "message": "URI is used in GLB container."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+          "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        },
+        {
+          "code": "IMAGE_UNRECOGNIZED_FORMAT",
+          "message": "Image format not recognized."
+        }
+      ],
+      "bounds": {
+        "min": [
+          -18.1396660092265,
+          -0.3981626185636813,
+          -45.39999961853027
+        ],
+        "max": [
+          32.709664750376405,
+          45.7181623133879,
+          45.400001525878906
+        ]
+      },
+      "bakedMaterials": 12,
+      "atlasChannels": [
+        0,
+        1
+      ],
+      "meshCount": 2,
+      "instances": 0
+    }
+  ],
+  "anchors": {
+    "nominalFootprint": [
+      238.9632,
+      131.064
+    ],
+    "waitingRoomClear": [
+      31.3944,
+      84.42960000000001,
+      45.72
+    ],
+    "waitingRoomWallExtent": [
+      33.1216,
+      95.8088
+    ],
+    "waitingLanternExterior": [
+      36.2712,
+      99.06
+    ],
+    "waitingLanternFrameWidth": 34.3916,
+    "waitingRoofAboveMain": 50.9016,
+    "waitingRoofAboveStreet": 46.6344,
+    "exteriorDoricColumnHeight": 10.668000000000001,
+    "exteriorDoricColumnDiameter": 1.3716000000000002,
+    "interiorColumn": {
+      "pedestal": 2.8448,
+      "base": 0.9906,
+      "shaft": 14.630400000000002,
+      "capital": 2.5146,
+      "totalAboveFloor": 20.980400000000003,
+      "entablatureHeight": 4.0894
+    },
+    "lowerWallArchRadius": 5.8674,
+    "concourse": {
+      "overall": [
+        64.2874,
+        97.536
+      ],
+      "ewBarrelSpans": [
+        26.162,
+        29.0576,
+        26.162
+      ],
+      "nsBarrelSpan": 29.8704,
+      "nsBarrelCenterX": -64.3767,
+      "roofCrownAboveMain": 29.727525,
+      "mainPierWidth": 0.9144000000000001,
+      "webSpacing": 0.6096,
+      "archCrownDepth": 0.6096,
+      "archHaunchDepth": 2.0066
+    }
+  },
+  "uniqueSharedTextures": 57,
+  "decodedGlbBytes": 44874764,
+  "modelTextureAndLightingTransferBytes": 69274219
+}

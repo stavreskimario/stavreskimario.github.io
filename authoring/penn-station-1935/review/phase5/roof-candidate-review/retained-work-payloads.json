@@ -1,0 +1,61 @@
+{
+  "status": "NOTDELIVERED; large source/bake/guide payloads retained exclusively in persistentDesktopwork",
+  "payloads": [
+    {
+      "label": "normal-only source geometry",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/normal-source/model-waiting-room.glb",
+      "originalBytes": 66361608,
+      "originalSha256": "43cdf1cf76c6c7c3222d1a4e3c31fa6a604e2705e5f09133cbd8cc8ef2cead0b",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "selected25packed rawvault",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/model-waiting-room-vault.glb",
+      "originalBytes": 33767440,
+      "originalSha256": "07e15f4c1cc811cfba37a26bda25526341dcaf43460de540b98a1774d4aa0eb8",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "raw linearGI",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/vault-baked-v3/lighting-waiting-room-vault-sky.hdr",
+      "originalBytes": 94680957,
+      "originalSha256": "084078b1e4743b144ff3416e6f2a74fd94d5db6c3fd8812d86ba8c354f6dcd2b",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "new25signed objectNORMALguide",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/vault-normal-guide.npy",
+      "originalBytes": 805306496,
+      "originalSha256": "d99ff3db23809f655263a2df3188e2e525521cdc7febb53fdd2a741ba7e6cc46",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "guided linear retainedHDR",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/denoised/lighting-waiting-room-vault-sky-denoised-linear.hdr",
+      "originalBytes": 270565427,
+      "originalSha256": "f2f6b3f5de262b165da69688987af34ff406709007e19c0da3c64790739d9695",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "guided full8KPNG",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/denoised/lighting-waiting-room-vault-sky.png",
+      "originalBytes": 23783341,
+      "originalSha256": "f8bec0965de0e37293560969dd76188d12de8bfd2910b846d4bbf57f5cd16ca4",
+      "copiedIntoRepository": false
+    },
+    {
+      "label": "guided full8KWebP",
+      "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/denoised/lighting-waiting-room-vault-sky.webp",
+      "originalBytes": 16251366,
+      "originalSha256": "1ebcb229eeb271e511f8e4c4105a469e489e072b631819afeb805cda89eedb76",
+      "copiedIntoRepository": false
+    }
+  ],
+  "bakeHelperSha256": "9b75530d1f906b691189fe17f564ed275069f4a272e44fa357e8e3978131fa42",
+  "canonicalHelper": {
+    "originalPath": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/vault_lighting_uv.py",
+    "originalBytes": 6302,
+    "originalSha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+  },
+  "canonicalGuardQualification": "The later canonical helper adds an explicit loop-vertex equality assertion; no geometry/UV/normal result changes. Actual bake used the separately archived immutable9b75530d helper."
+}

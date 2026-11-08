@@ -1,0 +1,1979 @@
+{
+  "schema": 1,
+  "status": "READ-ONLY source/component plan v2; yard/tunnel clearance scope explicitly qualified",
+  "currentDeclaredArrivalsRawModule": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/cli-replay-eight-v1/arrivals-module.glb",
+    "sha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+    "matchesCurrentManifestSourceModule": true,
+    "frame": "Main0glTF; worldY=Main0Y\u22124.2672m"
+  },
+  "inputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/arrivals-evidence.md",
+      "bytes": 5876,
+      "sha256": "d4d39a19ca943ed0f19844e71a91ae0762527996f2ccc12fad08f3d9b5b4e9d6"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/platform-section-evidence.md",
+      "bytes": 3077,
+      "sha256": "823ceeafad029b80d0335c3757e7b6b1857ddc1b0a74d858cf0157634f440825"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/repair_arrivals_access.py",
+      "bytes": 39576,
+      "sha256": "115d16ae2a6fe9d2217ab443c27dfeb7a3d7bacac7982360ee1f5c7337b440cf"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/assets/scene-manifest.json",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/arrivals-completion-audit.json",
+      "bytes": 9620,
+      "sha256": "f0682314a37df6da7d867b3921de2d88ae45b1380fea42b8d831c90ef5463844"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/research.md",
+      "bytes": 13994,
+      "sha256": "438da7e70f6e09129e36e44f9061a745fc5ff9ec2dc91788bf139b0590403e86"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/whole-eight-construction-controls.json",
+      "bytes": 15935,
+      "sha256": "c7dfc3bbc58b62db679c75a3b9c79fd34f98e9f03841055127fac3b2403f4bc6"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/reviewed-support-trace.json",
+      "bytes": 69075,
+      "sha256": "2c457abd0f7354353a943431aae6de33d229f93d87eb1aa7a1b71148abd9da6e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/source-arrival-dependencies.json",
+      "bytes": 2476866,
+      "sha256": "26de8ed782b4d29e76f105ee6f166943f011078be30be2dbcf1a1f55baf3a94e"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/enclosure-controls.json",
+      "bytes": 6756,
+      "sha256": "85d397aeb9bc52a51b8b56d1a82982c5774fd27d2a0750fa641e58fc2c7badac"
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/qualified-T-gallery-trace-v1.md",
+      "bytes": 9322,
+      "sha256": "7ccc0332d7425888a07272df15d60f88437a0f250340831f3a3423e52faa6c18"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S10-242",
+      "primary": "Gibbs, ASCE69, paper1165, printed242 / PDF426",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=426",
+      "localText": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf426.txt",
+      "supports": "Exit beneath Main, narrower deck, arrival stairs at either side; not a full opaque sidewall instruction."
+    },
+    {
+      "id": "S10-Fig3",
+      "primary": "Gibbs Fig.3, printed244 / PDF428",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=428",
+      "localNative": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf428.png",
+      "supports": "Individual edge entries, lift keepouts, irregular support cuts and southern ordinary-gallery boundary."
+    },
+    {
+      "id": "S10-LXXXIV",
+      "primary": "Gibbs plateLXXXIV Fig.2 / PDF439",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=439",
+      "localNative": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/LXXXIV-arrival-photo-native.png",
+      "supports": "Open deck/rail views, guards, two-flight landing/stair family, exposed underside/framing."
+    },
+    {
+      "id": "LOC071937",
+      "primary": "Detroit Publishing, LOC item2016815392, det.4a23720, negative071937; catalogued1905\u20131915",
+      "url": "https://www.loc.gov/item/2016815392/",
+      "localStudy": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/loc-071937-study.jpg",
+      "localOriginal": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/loc-071937-original.tif",
+      "supports": "Photographic edge/guard/fascia, stair/landing/support and rectangular pier family. Negative number is not1937."
+    },
+    {
+      "id": "S9-188",
+      "primary": "Francis/O\u2019Brien printed188 / PDF344",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=344",
+      "localText": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf344.txt",
+      "supports": "Reinforced concrete floor slabs and concrete beam haunches; no universal Exit fabrication schedule."
+    },
+    {
+      "id": "S9-189",
+      "primary": "Francis/O\u2019Brien printed189",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=347",
+      "supports": "Railway constraints and offset/transfer support family; no straight-down generic post rule.",
+      "localText": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf347.txt"
+    },
+    {
+      "id": "S9-191",
+      "primary": "Francis/O\u2019Brien printed191 / PDF351",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=351",
+      "localText": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf351.txt",
+      "supports": "General ordinary finished-floor to steel-beam-top distance5in, except13in brick driveways."
+    },
+    {
+      "id": "S9-LXI",
+      "primary": "Francis/O\u2019Brien plateLXI / PDF309",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=309",
+      "localNorthCrop": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/LXI-north-floor-datums-native.png",
+      "localSouthCrop": "/Users/stavreskimario/Desktop/penn-station-work/phase7-arrivals/LXI-south-floor-datums-native.png",
+      "supports": "Local north Main319.01/Exit308.51ft; south318.82/308.39ft; north8ft10in local clearance, not universal interior ceiling."
+    },
+    {
+      "id": "S10-237",
+      "primary": "Gibbs printed237 / PDF419",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=419",
+      "localText": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf419.txt",
+      "supports": "Printed minimum16ft2in overhead clearance is stated for the yard and tunnels; its use as a conservative terminal-yard comparison does not independently establish a local Exit soffit/ceiling datum."
+    },
+    {
+      "id": "S10-255-256",
+      "primary": "Gibbs printed255\u2013256 / PDF445\u2013446",
+      "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf#page=445",
+      "localTexts": [
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf445-vertical-native.txt",
+        "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf446-vertical-native.txt"
+      ],
+      "supports": "Fireproofed lower steel jacket to8ft6in above platform, exposed concrete above; interior square vault lights without rings; general floor family."
+    }
+  ],
+  "components": [
+    {
+      "component": "First-eight gallery perimeter / ordinary side openings",
+      "currentBoundsXZ": [
+        -73.2,
+        -54.912,
+        -36,
+        71
+      ],
+      "topWorldY": -7.4676,
+      "evidence": [
+        "S10-242",
+        "S10-Fig3",
+        "S10-LXXXIV",
+        "LOC071937"
+      ],
+      "documented": "Narrower Exit below Main, side stairs and open guarded edges seen in primary photos.",
+      "reconstruction": "Working60ft faces and absolute position\u00b11m; exact guard/fascia sections inferred.",
+      "nextAction": "Finish actual slab-edge/fascia/girder/guard returns around all16 entries; maintain clear platform views. No continuous opaque side walls."
+    },
+    {
+      "component": "One P5 review bay ordinary deck-frame section",
+      "sourceModuleSha256": "ba0969961ed97c854742e86c43fd16326f142f8e4289b3acd55acb8a910f58cc",
+      "actualGirderCount": 99,
+      "currentWorldBeamTop": -7.767600066375732,
+      "currentWorldBeamBottom": -8.247600085449218,
+      "currentFinishToBeamTopM": 0.3000000663757323,
+      "generalSourceFinishToBeamTopM": 0.127,
+      "conditionalBeamRaiseM": 0.1730000663757325,
+      "evidence": [
+        "S9-188",
+        "S9-191",
+        "S10-237"
+      ],
+      "documented": "General5in finish-to-beam-top rule and concrete-haunch family. Gibbs237 states16ft2in overhead clearance for yard/tunnels, not a local Exit soffit schedule.",
+      "reconstruction": "Existing480mm depth,300mm slab, individual sizes still inferred. Exact finish/slab-body stratigraphy not recovered.",
+      "nextAction": "Author one external P5 candidate coordinating inferred-depth beams with the general5in finish offset and actual caps/columns/slab interfaces. Treat yard-clearance arithmetic conservatively; verify local crossing/rail grade and actual encoded train envelope before classifying a conflict. Do not blindly translate99objects.",
+      "yardClearanceComparisonPlaneWorldY": -8.226425,
+      "currentBottomBelowComparisonPlaneM": 0.02117508544921698
+    },
+    {
+      "component": "Sixteen two-flight stairs and intermediate landings",
+      "adoptedPlatformWorldY": -11.985625,
+      "adoptedLandingWorldY": -9.81027962962963,
+      "evidence": [
+        "S10-LXXXIV",
+        "LOC071937",
+        "S10-Fig3"
+      ],
+      "documented": "Two aligned flights, flat landing, solid stringers, posts and ornamental open guards.",
+      "reconstruction": "14+13risers,284mm going,1.2m landing,2m nominal clear width, profiles/material colour.",
+      "nextAction": "Keep accepted profiles/feet; refine photo-backed stringer/landing-seat/newel/guard joins using source geometry, retaining blocked under-landing space."
+    },
+    {
+      "component": "Lower47 / upper21 supports and pier appearance",
+      "evidence": [
+        "S10-Fig3",
+        "S10-255-256",
+        "LOC071937",
+        "S9-189"
+      ],
+      "documented": "Individual source cuts and lower jacket/concrete family; actual field has irregular/offset load paths.",
+      "reconstruction": "320mm bodies,500mm bases,460mm caps, inferred beam dimensions; photo not a fabrication schedule.",
+      "nextAction": "Coordinate actual caps/pier lengths if frame moves, preserve8ft6in jacket transition relative platform; no new generic columns or floating caps."
+    },
+    {
+      "component": "Southern row1/end-fascia junction",
+      "scopeBoundsXZ": [
+        -81.5,
+        -46.612,
+        67.23259692481163,
+        71.0
+      ],
+      "galleryEndZ": 71.0,
+      "sourceNativeBoundaryUInterval": [
+        270,
+        285
+      ],
+      "firstLiftKeepout": {
+        "row": 1,
+        "x": [
+          -65.85061682242991,
+          -62.5177570093458
+        ],
+        "z": [
+          67.23259692481163,
+          69.21910143963831
+        ]
+      },
+      "row1Profiles": [
+        {
+          "sourceOrdinal": 1,
+          "workingPlatform": 1,
+          "platformMappingStatus": "SourceFig3unnumbered candidate correspondence; P9/LIRRnotincluded",
+          "side": "west",
+          "sourceCenterZ": 69.49943331242115,
+          "exitHeadWorld": [
+            -73.2,
+            -7.4676,
+            69.49943331242115
+          ],
+          "platformFootWorld": [
+            -81.5,
+            -11.985624999999999,
+            69.49943331242115
+          ],
+          "flights": [
+            {
+              "side": "west",
+              "flight": 1,
+              "start": [
+                -73.2,
+                -7.4676,
+                69.49943331242115
+              ],
+              "end": [
+                -76.892,
+                -9.81027962962963,
+                69.49943331242115
+              ],
+              "risers": 14,
+              "internalGoings": 13,
+              "physicalTreadWidth": 2.14,
+              "nominalClearWidth": 2,
+              "rowOrdinal": 1,
+              "label": "Arrival 1 west flight 1",
+              "width": 2,
+              "coordinateSpace": "world-glTF",
+              "row": 1,
+              "steps": 14,
+              "route": "arrival"
+            },
+            {
+              "side": "west",
+              "flight": 2,
+              "start": [
+                -78.092,
+                -9.81027962962963,
+                69.49943331242115
+              ],
+              "end": [
+                -81.5,
+                -11.985624999999999,
+                69.49943331242115
+              ],
+              "risers": 13,
+              "internalGoings": 12,
+              "physicalTreadWidth": 2.14,
+              "nominalClearWidth": 2,
+              "rowOrdinal": 1,
+              "label": "Arrival 1 west flight 2",
+              "width": 2,
+              "coordinateSpace": "world-glTF",
+              "row": 1,
+              "steps": 13,
+              "route": "arrival"
+            }
+          ],
+          "intermediateLanding": {
+            "boundsXZ": [
+              -78.092,
+              -76.892,
+              68.42943331242115,
+              70.56943331242114
+            ],
+            "worldY": -9.81027962962963
+          },
+          "geometryBasedFloorRayRequired": true,
+          "boundsXZ": [
+            -81.5,
+            -73.2,
+            68.49943331242115,
+            70.49943331242115
+          ]
+        },
+        {
+          "sourceOrdinal": 1,
+          "workingPlatform": 1,
+          "platformMappingStatus": "SourceFig3unnumbered candidate correspondence; P9/LIRRnotincluded",
+          "side": "east",
+          "sourceCenterZ": 69.42271312630847,
+          "exitHeadWorld": [
+            -54.912,
+            -7.4676,
+            69.42271312630847
+          ],
+          "platformFootWorld": [
+            -46.611999999999995,
+            -11.985624999999999,
+            69.42271312630847
+          ],
+          "flights": [
+            {
+              "side": "east",
+              "flight": 1,
+              "start": [
+                -54.912,
+                -7.4676,
+                69.42271312630847
+              ],
+              "end": [
+                -51.22,
+                -9.81027962962963,
+                69.42271312630847
+              ],
+              "risers": 14,
+              "internalGoings": 13,
+              "physicalTreadWidth": 2.14,
+              "nominalClearWidth": 2,
+              "rowOrdinal": 1,
+              "label": "Arrival 1 east flight 1",
+              "width": 2,
+              "coordinateSpace": "world-glTF",
+              "row": 1,
+              "steps": 14,
+              "route": "arrival"
+            },
+            {
+              "side": "east",
+              "flight": 2,
+              "start": [
+                -50.019999999999996,
+                -9.81027962962963,
+                69.42271312630847
+              ],
+              "end": [
+                -46.611999999999995,
+                -11.985624999999999,
+                69.42271312630847
+              ],
+              "risers": 13,
+              "internalGoings": 12,
+              "physicalTreadWidth": 2.14,
+              "nominalClearWidth": 2,
+              "rowOrdinal": 1,
+              "label": "Arrival 1 east flight 2",
+              "width": 2,
+              "coordinateSpace": "world-glTF",
+              "row": 1,
+              "steps": 13,
+              "route": "arrival"
+            }
+          ],
+          "intermediateLanding": {
+            "boundsXZ": [
+              -51.22,
+              -50.019999999999996,
+              68.35271312630847,
+              70.49271312630846
+            ],
+            "worldY": -9.81027962962963
+          },
+          "geometryBasedFloorRayRequired": true,
+          "boundsXZ": [
+            -54.912,
+            -46.611999999999995,
+            68.42271312630847,
+            70.42271312630847
+          ]
+        }
+      ],
+      "evidence": [
+        "S10-Fig3",
+        "S9-LXI"
+      ],
+      "documented": "Qualified southern ordinary-gallery end and first-row topology in native plan; local side-viaduct section is separate.",
+      "reconstruction": "WorldZ71 boundary registration is approximate\u00b11m; exact wall/top/street threshold not established.",
+      "nextAction": "Finish only the existing row1/stair/firstlift/end-beam/fascia/guard junction inside these limits. Do not extend toward31stStreet or add a blind end wall/new street stair. Further side-viaduct registration required for those."
+    },
+    {
+      "component": "P1\u20138 platform surroundings / underside views",
+      "evidence": [
+        "S9-188",
+        "S10-237",
+        "S9-LXI"
+      ],
+      "documented": "Real floor/bridge/viaduct structures with track clearance and source-specific open courts.",
+      "reconstruction": "Complete enclosure, lowerT-gallery datum, receivers and street portal/fan registration unresolved.",
+      "nextAction": "Preserve accepted concrete slabs/coves/walls and21tracks; supply only source-registered local structural edges after clearance/bearing proof. No universal canopy, foundation-boundary box or fake portal at current track ends."
+    }
+  ],
+  "actualRawFrameGirders": [
+    {
+      "name": "Unequal source support longitudinal transfer girder",
+      "boundsMain0": [
+        [
+          -66.92594146728516,
+          -3.9804000854492188,
+          -36
+        ],
+        [
+          -66.7459487915039,
+          -3.5004000663757324,
+          -34.56688690185547
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.001",
+      "boundsMain0": [
+        [
+          -66.92594146728516,
+          -3.9804000854492188,
+          -34.56734085083008
+        ],
+        [
+          -66.7006607055664,
+          -3.5004000663757324,
+          -25.576435089111328
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.002",
+      "boundsMain0": [
+        [
+          -66.88065338134766,
+          -3.9804000854492188,
+          -25.577083587646484
+        ],
+        [
+          -66.68954467773438,
+          -3.5004000663757324,
+          -20.418210983276367
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.003",
+      "boundsMain0": [
+        [
+          -66.87210845947266,
+          -3.9804000854492188,
+          -20.418447494506836
+        ],
+        [
+          -66.68954467773438,
+          -3.5004000663757324,
+          -14.857075691223145
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.004",
+      "boundsMain0": [
+        [
+          -66.87210845947266,
+          -3.9804000854492188,
+          -14.857673645019531
+        ],
+        [
+          -66.67074584960938,
+          -3.5004000663757324,
+          -11.398944854736328
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.005",
+      "boundsMain0": [
+        [
+          -66.85073852539062,
+          -3.9804000854492188,
+          -11.399775505065918
+        ],
+        [
+          -66.64083862304688,
+          -3.5004000663757324,
+          -1.616006851196289
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.006",
+      "boundsMain0": [
+        [
+          -66.88063049316406,
+          -3.9804000854492188,
+          -1.6185173988342285
+        ],
+        [
+          -66.64086151123047,
+          -3.5004000663757324,
+          0.7936553359031677
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.007",
+      "boundsMain0": [
+        [
+          -66.90885162353516,
+          -3.9804000854492188,
+          0.7909594178199768
+        ],
+        [
+          -66.7006607055664,
+          -3.5004000663757324,
+          6.303823947906494
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.008",
+      "boundsMain0": [
+        [
+          -66.92935943603516,
+          -3.9804000854492188,
+          6.3029866218566895
+        ],
+        [
+          -66.7288589477539,
+          -3.5004000663757324,
+          11.202042579650879
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.009",
+      "boundsMain0": [
+        [
+          -66.92935180664062,
+          -3.9804000854492188,
+          11.200447082519531
+        ],
+        [
+          -66.70579528808594,
+          -3.5004000663757324,
+          14.420754432678223
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.010",
+      "boundsMain0": [
+        [
+          -67.01567077636719,
+          -3.9804000854492188,
+          14.418466567993164
+        ],
+        [
+          -66.7057876586914,
+          -3.5004000663757324,
+          25.357398986816406
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.011",
+      "boundsMain0": [
+        [
+          -67.05156707763672,
+          -3.9804000854492188,
+          25.355281829833984
+        ],
+        [
+          -66.83567810058594,
+          -3.5004000663757324,
+          28.4395809173584
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.012",
+      "boundsMain0": [
+        [
+          -67.05156707763672,
+          -3.9804000854492188,
+          28.438419342041016
+        ],
+        [
+          -66.86473846435547,
+          -3.5004000663757324,
+          33.88130187988281
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.013",
+      "boundsMain0": [
+        [
+          -67.04473114013672,
+          -3.9804000854492188,
+          33.88081741333008
+        ],
+        [
+          -66.82884216308594,
+          -3.5004000663757324,
+          42.59648513793945
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.014",
+      "boundsMain0": [
+        [
+          -67.01737976074219,
+          -3.9804000854492188,
+          42.595970153808594
+        ],
+        [
+          -66.82884216308594,
+          -3.5004000663757324,
+          47.92282485961914
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.015",
+      "boundsMain0": [
+        [
+          -67.02251434326172,
+          -3.9804000854492188,
+          47.92259979248047
+        ],
+        [
+          -66.83738708496094,
+          -3.5004000663757324,
+          53.62407684326172
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.016",
+      "boundsMain0": [
+        [
+          -67.03105926513672,
+          -3.9804000854492188,
+          53.62371826171875
+        ],
+        [
+          -66.84252166748047,
+          -3.5004000663757324,
+          56.37034606933594
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.017",
+      "boundsMain0": [
+        [
+          -67.03105926513672,
+          -3.9804000854492188,
+          56.36931610107422
+        ],
+        [
+          -66.80577087402344,
+          -3.5004000663757324,
+          61.80265426635742
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.018",
+      "boundsMain0": [
+        [
+          -67.01310729980469,
+          -3.9804000854492188,
+          61.80148696899414
+        ],
+        [
+          -66.80577087402344,
+          -3.5004000663757324,
+          67.69725799560547
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.019",
+      "boundsMain0": [
+        [
+          -67.01310729980469,
+          -3.9804000854492188,
+          67.69683837890625
+        ],
+        [
+          -66.83311462402344,
+          -3.5004000663757324,
+          71
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.020",
+      "boundsMain0": [
+        [
+          -61.159244537353516,
+          -3.9804000854492188,
+          -36
+        ],
+        [
+          -60.979244232177734,
+          -3.5004000663757324,
+          -34.59033966064453
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.021",
+      "boundsMain0": [
+        [
+          -61.159244537353516,
+          -3.9804000854492188,
+          -34.590789794921875
+        ],
+        [
+          -60.93480682373047,
+          -3.5004000663757324,
+          -25.722612380981445
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.022",
+      "boundsMain0": [
+        [
+          -61.136173248291016,
+          -3.9804000854492188,
+          -25.723434448242188
+        ],
+        [
+          -60.93480682373047,
+          -3.5004000663757324,
+          -20.56246566772461
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.023",
+      "boundsMain0": [
+        [
+          -61.136173248291016,
+          -3.9804000854492188,
+          -20.563213348388672
+        ],
+        [
+          -60.93224334716797,
+          -3.5004000663757324,
+          -14.834050178527832
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.024",
+      "boundsMain0": [
+        [
+          -61.11224365234375,
+          -3.9804000854492188,
+          -14.834425926208496
+        ],
+        [
+          -60.93224334716797,
+          -3.5004000663757324,
+          -11.389101028442383
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.025",
+      "boundsMain0": [
+        [
+          -61.22160720825195,
+          -3.9804000854492188,
+          -11.391130447387695
+        ],
+        [
+          -60.93226623535156,
+          -3.5004000663757324,
+          -6.537928104400635
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.026",
+      "boundsMain0": [
+        [
+          -61.22163009643555,
+          -3.9804000854492188,
+          -6.540516376495361
+        ],
+        [
+          -61.0108642578125,
+          -3.5004000663757324,
+          -1.5802973508834839
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.027",
+      "boundsMain0": [
+        [
+          -61.20453643798828,
+          -3.9804000854492188,
+          -1.5813536643981934
+        ],
+        [
+          -61.0108642578125,
+          -3.5004000663757324,
+          0.8906301259994507
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.028",
+      "boundsMain0": [
+        [
+          -61.28571319580078,
+          -3.9804000854492188,
+          0.888749897480011
+        ],
+        [
+          -61.0245475769043,
+          -3.5004000663757324,
+          6.177109241485596
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.029",
+      "boundsMain0": [
+        [
+          -61.35493087768555,
+          -3.9804000854492188,
+          6.1744160652160645
+        ],
+        [
+          -61.105735778808594,
+          -3.5004000663757324,
+          10.929696083068848
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.030",
+      "boundsMain0": [
+        [
+          -61.35493850708008,
+          -3.9804000854492188,
+          10.927652359008789
+        ],
+        [
+          -61.14589309692383,
+          -3.5004000663757324,
+          14.496259689331055
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.031",
+      "boundsMain0": [
+        [
+          -61.37887191772461,
+          -3.9804000854492188,
+          14.495086669921875
+        ],
+        [
+          -61.14588928222656,
+          -3.5004000663757324,
+          25.351818084716797
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.032",
+      "boundsMain0": [
+        [
+          -61.436126708984375,
+          -3.9804000854492188,
+          25.350772857666016
+        ],
+        [
+          -61.198875427246094,
+          -3.5004000663757324,
+          33.857154846191406
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.033",
+      "boundsMain0": [
+        [
+          -61.482276916503906,
+          -3.9804000854492188,
+          33.856075286865234
+        ],
+        [
+          -61.25613021850586,
+          -3.5004000663757324,
+          42.64714050292969
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.034",
+      "boundsMain0": [
+        [
+          -61.482276916503906,
+          -3.9804000854492188,
+          42.64630889892578
+        ],
+        [
+          -61.28091049194336,
+          -3.5004000663757324,
+          47.98174285888672
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.035",
+      "boundsMain0": [
+        [
+          -61.460906982421875,
+          -3.9804000854492188,
+          47.98054504394531
+        ],
+        [
+          -61.22793197631836,
+          -3.5004000663757324,
+          53.67266082763672
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.036",
+      "boundsMain0": [
+        [
+          -61.407928466796875,
+          -3.9804000854492188,
+          53.67182159423828
+        ],
+        [
+          -61.227928161621094,
+          -3.5004000663757324,
+          56.2654914855957
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.037",
+      "boundsMain0": [
+        [
+          -61.407928466796875,
+          -3.9804000854492188,
+          56.265464782714844
+        ],
+        [
+          -61.226219177246094,
+          -3.5004000663757324,
+          61.681007385253906
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.038",
+      "boundsMain0": [
+        [
+          -61.40621566772461,
+          -3.9804000854492188,
+          61.68021774291992
+        ],
+        [
+          -61.17665481567383,
+          -3.5004000663757324,
+          67.531982421875
+        ]
+      ]
+    },
+    {
+      "name": "Unequal source support longitudinal transfer girder.039",
+      "boundsMain0": [
+        [
+          -61.356651306152344,
+          -3.9804000854492188,
+          67.53121948242188
+        ],
+        [
+          -61.17665100097656,
+          -3.5004000663757324,
+          71
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder",
+      "boundsMain0": [
+        [
+          -73.20036315917969,
+          -3.9804000854492188,
+          -34.70538330078125
+        ],
+        [
+          -54.9116325378418,
+          -3.5004000663757324,
+          -34.45100784301758
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.001",
+      "boundsMain0": [
+        [
+          -73.20227813720703,
+          -3.9804000854492188,
+          -25.96800422668457
+        ],
+        [
+          -54.90971755981445,
+          -3.5004000663757324,
+          -25.32442855834961
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.002",
+      "boundsMain0": [
+        [
+          -73.20226287841797,
+          -3.9804000854492188,
+          -20.807336807250977
+        ],
+        [
+          -54.909732818603516,
+          -3.5004000663757324,
+          -20.16669464111328
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.003",
+      "boundsMain0": [
+        [
+          -73.20034790039062,
+          -3.9804000854492188,
+          -14.97240161895752
+        ],
+        [
+          -54.911643981933594,
+          -3.5004000663757324,
+          -14.720355033874512
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.004",
+      "boundsMain0": [
+        [
+          -73.20015716552734,
+          -3.9804000854492188,
+          -11.50117015838623
+        ],
+        [
+          -54.911834716796875,
+          -3.5004000663757324,
+          -11.2880277633667
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.005",
+      "boundsMain0": [
+        [
+          -73.19999694824219,
+          -3.9804000854492188,
+          -6.629958152770996
+        ],
+        [
+          -54.9119987487793,
+          -3.5004000663757324,
+          -6.449957847595215
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.006",
+      "boundsMain0": [
+        [
+          -73.2005615234375,
+          -3.9804000854492188,
+          -1.7469871044158936
+        ],
+        [
+          -54.911434173583984,
+          -3.5004000663757324,
+          -1.4519143104553223
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.007",
+      "boundsMain0": [
+        [
+          -73.2015609741211,
+          -3.9804000854492188,
+          0.5899696350097656
+        ],
+        [
+          -54.91043472290039,
+          -3.5004000663757324,
+          1.087985873222351
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.008",
+      "boundsMain0": [
+        [
+          -73.20204162597656,
+          -3.9804000854492188,
+          5.943119525909424
+        ],
+        [
+          -54.90995788574219,
+          -3.5004000663757324,
+          6.538182258605957
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.009",
+      "boundsMain0": [
+        [
+          -73.20440673828125,
+          -3.9804000854492188,
+          10.527048110961914
+        ],
+        [
+          -54.9075927734375,
+          -3.5004000663757324,
+          11.603381156921387
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.010",
+      "boundsMain0": [
+        [
+          -73.20122528076172,
+          -3.9804000854492188,
+          14.24201488494873
+        ],
+        [
+          -54.910770416259766,
+          -3.5004000663757324,
+          14.67194938659668
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.011",
+      "boundsMain0": [
+        [
+          -73.2000732421875,
+          -3.9804000854492188,
+          25.255775451660156
+        ],
+        [
+          -54.91191864013672,
+          -3.5004000663757324,
+          25.45184326171875
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.012",
+      "boundsMain0": [
+        [
+          -73.19999694824219,
+          -3.9804000854492188,
+          28.34853172302246
+        ],
+        [
+          -54.9119987487793,
+          -3.5004000663757324,
+          28.528532028198242
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.013",
+      "boundsMain0": [
+        [
+          -73.20039367675781,
+          -3.9804000854492188,
+          33.738285064697266
+        ],
+        [
+          -54.91160202026367,
+          -3.5004000663757324,
+          33.998619079589844
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.014",
+      "boundsMain0": [
+        [
+          -73.19999694824219,
+          -3.9804000854492188,
+          39.855552673339844
+        ],
+        [
+          -54.9119987487793,
+          -3.5004000663757324,
+          40.035552978515625
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.015",
+      "boundsMain0": [
+        [
+          -73.20082092285156,
+          -3.9804000854492188,
+          42.44866180419922
+        ],
+        [
+          -54.91117477416992,
+          -3.5004000663757324,
+          42.79594421386719
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.016",
+      "boundsMain0": [
+        [
+          -73.20005798339844,
+          -3.9804000854492188,
+          47.88212585449219
+        ],
+        [
+          -54.91194152832031,
+          -3.5004000663757324,
+          48.07396697998047
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.017",
+      "boundsMain0": [
+        [
+          -73.2000503540039,
+          -3.9804000854492188,
+          53.61027145385742
+        ],
+        [
+          -65.9505615234375,
+          -3.5004000663757324,
+          53.794517517089844
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.018",
+      "boundsMain0": [
+        [
+          -62.50326919555664,
+          -3.9804000854492188,
+          53.61653518676758
+        ],
+        [
+          -54.91194534301758,
+          -3.5004000663757324,
+          53.80098342895508
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.019",
+      "boundsMain0": [
+        [
+          -73.2003173828125,
+          -3.9804000854492188,
+          56.17335891723633
+        ],
+        [
+          -54.911678314208984,
+          -3.5004000663757324,
+          56.41823959350586
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.020",
+      "boundsMain0": [
+        [
+          -73.20142364501953,
+          -3.9804000854492188,
+          61.441741943359375
+        ],
+        [
+          -54.91056823730469,
+          -3.5004000663757324,
+          61.91209411621094
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.021",
+      "boundsMain0": [
+        [
+          -73.20262908935547,
+          -3.9804000854492188,
+          67.57840728759766
+        ],
+        [
+          -65.94798278808594,
+          -3.5004000663757324,
+          67.97058868408203
+        ]
+      ]
+    },
+    {
+      "name": "Source-post transverse transfer girder.022",
+      "boundsMain0": [
+        [
+          -62.420387268066406,
+          -3.9804000854492188,
+          67.25519561767578
+        ],
+        [
+          -54.909366607666016,
+          -3.5004000663757324,
+          67.65487670898438
+        ]
+      ]
+    },
+    {
+      "name": "Exit bridge continuous edge girder",
+      "boundsMain0": [
+        [
+          -73.28999328613281,
+          -3.9804000854492188,
+          -36
+        ],
+        [
+          -73.11000061035156,
+          -3.5004000663757324,
+          71
+        ]
+      ]
+    },
+    {
+      "name": "Exit bridge continuous edge girder.001",
+      "boundsMain0": [
+        [
+          -55.00199890136719,
+          -3.9804000854492188,
+          -36
+        ],
+        [
+          -54.821998596191406,
+          -3.5004000663757324,
+          71
+        ]
+      ]
+    },
+    {
+      "name": "Exit review end transverse girder",
+      "boundsMain0": [
+        [
+          -73.19999694824219,
+          -3.9804000854492188,
+          -36.09000015258789
+        ],
+        [
+          -54.9119987487793,
+          -3.5004000663757324,
+          -35.90999984741211
+        ]
+      ]
+    },
+    {
+      "name": "Exit review end transverse girder.001",
+      "boundsMain0": [
+        [
+          -73.19999694824219,
+          -3.9804000854492188,
+          70.91000366210938
+        ],
+        [
+          -54.9119987487793,
+          -3.5004000663757324,
+          71.08999633789062
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          67.03260040283203
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          67.21259307861328
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.001",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          69.23910522460938
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          69.41909790039062
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.002",
+      "boundsMain0": [
+        [
+          -66.05061340332031,
+          -3.9804000854492188,
+          67.12259674072266
+        ],
+        [
+          -65.87062072753906,
+          -3.5004000663757324,
+          69.3291015625
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.003",
+      "boundsMain0": [
+        [
+          -62.49775695800781,
+          -3.9804000854492188,
+          67.12259674072266
+        ],
+        [
+          -62.31775665283203,
+          -3.5004000663757324,
+          69.3291015625
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.004",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          53.52499771118164
+        ],
+        [
+          -62.49321365356445,
+          -3.5004000663757324,
+          53.70499801635742
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.005",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          55.566524505615234
+        ],
+        [
+          -62.49321365356445,
+          -3.5004000663757324,
+          55.746524810791016
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.006",
+      "boundsMain0": [
+        [
+          -66.05061340332031,
+          -3.9804000854492188,
+          53.61499786376953
+        ],
+        [
+          -65.87062072753906,
+          -3.5004000663757324,
+          55.656524658203125
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.007",
+      "boundsMain0": [
+        [
+          -62.583213806152344,
+          -3.9804000854492188,
+          53.61499786376953
+        ],
+        [
+          -62.40321350097656,
+          -3.5004000663757324,
+          55.656524658203125
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.008",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          39.934783935546875
+        ],
+        [
+          -62.49321365356445,
+          -3.5004000663757324,
+          40.114784240722656
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.009",
+      "boundsMain0": [
+        [
+          -65.96061706542969,
+          -3.9804000854492188,
+          42.14104080200195
+        ],
+        [
+          -62.49321365356445,
+          -3.5004000663757324,
+          42.321041107177734
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.010",
+      "boundsMain0": [
+        [
+          -66.05061340332031,
+          -3.9804000854492188,
+          40.024784088134766
+        ],
+        [
+          -65.87062072753906,
+          -3.5004000663757324,
+          42.231040954589844
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.011",
+      "boundsMain0": [
+        [
+          -62.583213806152344,
+          -3.9804000854492188,
+          40.024784088134766
+        ],
+        [
+          -62.40321350097656,
+          -3.5004000663757324,
+          42.231040954589844
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.012",
+      "boundsMain0": [
+        [
+          -65.87516021728516,
+          -3.9804000854492188,
+          25.603036880493164
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          25.783037185668945
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.013",
+      "boundsMain0": [
+        [
+          -65.87516021728516,
+          -3.9804000854492188,
+          27.89165687561035
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          28.071657180786133
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.014",
+      "boundsMain0": [
+        [
+          -65.96515655517578,
+          -3.9804000854492188,
+          25.693037033081055
+        ],
+        [
+          -65.78516387939453,
+          -3.5004000663757324,
+          27.981657028198242
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.015",
+      "boundsMain0": [
+        [
+          -62.49775695800781,
+          -3.9804000854492188,
+          25.693037033081055
+        ],
+        [
+          -62.31775665283203,
+          -3.5004000663757324,
+          27.981657028198242
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.016",
+      "boundsMain0": [
+        [
+          -65.78970336914062,
+          -3.9804000854492188,
+          11.353904724121094
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          11.533905029296875
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.017",
+      "boundsMain0": [
+        [
+          -65.78970336914062,
+          -3.9804000854492188,
+          13.559908866882324
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          13.739909172058105
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.018",
+      "boundsMain0": [
+        [
+          -65.87969970703125,
+          -3.9804000854492188,
+          11.443904876708984
+        ],
+        [
+          -65.69970703125,
+          -3.5004000663757324,
+          13.649909019470215
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.019",
+      "boundsMain0": [
+        [
+          -62.49775695800781,
+          -3.9804000854492188,
+          11.443904876708984
+        ],
+        [
+          -62.31775665283203,
+          -3.5004000663757324,
+          13.649909019470215
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.020",
+      "boundsMain0": [
+        [
+          -65.78970336914062,
+          -3.9804000854492188,
+          -1.5773892402648926
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          -1.3973891735076904
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.021",
+      "boundsMain0": [
+        [
+          -65.78970336914062,
+          -3.9804000854492188,
+          0.6286154985427856
+        ],
+        [
+          -62.40775680541992,
+          -3.5004000663757324,
+          0.8086155652999878
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.022",
+      "boundsMain0": [
+        [
+          -65.87969970703125,
+          -3.9804000854492188,
+          -1.4873892068862915
+        ],
+        [
+          -65.69970703125,
+          -3.5004000663757324,
+          0.7186155319213867
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.023",
+      "boundsMain0": [
+        [
+          -62.49775695800781,
+          -3.9804000854492188,
+          -1.4873892068862915
+        ],
+        [
+          -62.31775665283203,
+          -3.5004000663757324,
+          0.7186155319213867
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.024",
+      "boundsMain0": [
+        [
+          -65.61878204345703,
+          -3.9804000854492188,
+          -14.426568031311035
+        ],
+        [
+          -62.32229995727539,
+          -3.5004000663757324,
+          -14.246567726135254
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.025",
+      "boundsMain0": [
+        [
+          -65.61878204345703,
+          -3.9804000854492188,
+          -12.138448715209961
+        ],
+        [
+          -62.32229995727539,
+          -3.5004000663757324,
+          -11.95844841003418
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.026",
+      "boundsMain0": [
+        [
+          -65.70877838134766,
+          -3.9804000854492188,
+          -14.336567878723145
+        ],
+        [
+          -65.5287857055664,
+          -3.5004000663757324,
+          -12.04844856262207
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.027",
+      "boundsMain0": [
+        [
+          -62.41230010986328,
+          -3.9804000854492188,
+          -14.336567878723145
+        ],
+        [
+          -62.2322998046875,
+          -3.5004000663757324,
+          -12.04844856262207
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.028",
+      "boundsMain0": [
+        [
+          -65.61878204345703,
+          -3.9804000854492188,
+          -28.758066177368164
+        ],
+        [
+          -62.32229995727539,
+          -3.5004000663757324,
+          -28.578065872192383
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.029",
+      "boundsMain0": [
+        [
+          -65.61878204345703,
+          -3.9804000854492188,
+          -26.38758087158203
+        ],
+        [
+          -62.32229995727539,
+          -3.5004000663757324,
+          -26.20758056640625
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.030",
+      "boundsMain0": [
+        [
+          -65.70877838134766,
+          -3.9804000854492188,
+          -28.668066024780273
+        ],
+        [
+          -65.5287857055664,
+          -3.5004000663757324,
+          -26.29758071899414
+        ]
+      ]
+    },
+    {
+      "name": "Individual source lift perimeter beam.031",
+      "boundsMain0": [
+        [
+          -62.41230010986328,
+          -3.9804000854492188,
+          -28.668066024780273
+        ],
+        [
+          -62.2322998046875,
+          -3.5004000663757324,
+          -26.29758071899414
+        ]
+      ]
+    }
+  ],
+  "fixtureMountOffsetsFromExitFloorM": [
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.300001,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3,
+    -0.3
+  ],
+  "holds": {
+    "arrivalLowerSourceCuts": {
+      "traced": 49,
+      "built": 47,
+      "heldIds": [
+        "C014",
+        "C025"
+      ]
+    },
+    "arrivalUpperContinuations": {
+      "built": 21,
+      "heldTransferCases": 26,
+      "reason": "No whole-cap opaque Main receiver; glass and85mmvault-light webs are not certified bearing."
+    },
+    "westernMainFloorCut": {
+      "workingWestEdgeX": -78.8,
+      "uncertaintyBandX": [
+        -79.8,
+        -77.8
+      ],
+      "definiteWesternRoofPierFeet": 20,
+      "edgeDependentRoofPierFeet": 6,
+      "reason": "Do not remove overbroad Main/prism floor until actual lower continuations/receivers are coordinated. This20+6set is NOT the26arrivals upper-transfer cases."
+    },
+    "northern": {
+      "p9ApproxMismatchM": 2.1,
+      "sharedTrack": 18,
+      "temporaryBoundaryZ": -36,
+      "reason": "P9/LIRR registration not solved by shifting stairs or railway; preserve retained north deck/sixfixtures."
+    },
+    "streetExits": "Destinations documented, full precise rises/passages/thresholds unregistered; no new streetward route promised.",
+    "liftAssignments": "Eight enclosures remain individual keepouts; which3lifts reachMain remains unverified."
+  },
+  "candidateAcceptance": [
+    "Exact current railway/platform/copings/stairfeet/lift keepouts and unaffectedMain/roofsource signatures preserved.",
+    "Actual source and encoded full/low whole-contact footprints; rails/train/headroom tests across21tracks and every moved frame member.",
+    "Current lower47/upper21 cap contacts remain real; neither held lower support nor upper transfer fabricated by symmetry.",
+    "All16fixture groups plus retained6positions retain real complete mounting flange/practical emitter agreement after any frame change.",
+    "All16arrival paths both directions, gallery aisles, platform detours, departure routes and six-zone native browser walking repeated.",
+    "Matched primary-photo viewpoints for open edges/landing/stringer/pier appearance; source and final lighting acceptance separate."
+  ],
+  "limits": [
+    "Opening-era evidence is not a complete1935retention survey.",
+    "Beam/rail21mmcomparison is source-working-control arithmetic and raw geometry confirmation, not a proven encoded train collision.",
+    "The5in beam-top offset does not establish structural slab-body placement, ceiling height, girder depth or engineering capacity.",
+    "Tgallery vertical datum and transferred receivers remain separate; do not replace them with a flat universal ceiling.",
+    "Gibbs237 names yard/tunnel overhead clearance; applying it to a specific Exit member is a conservative comparison pending local section/grade registration, not proof of a local historical soffit violation."
+  ],
+  "revision": 2
+}

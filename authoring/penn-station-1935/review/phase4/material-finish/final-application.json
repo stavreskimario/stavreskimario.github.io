@@ -1,0 +1,703 @@
+{
+  "schema": 1,
+  "appearanceRevision": 4,
+  "architecturalUvRevision": 3,
+  "rebakedIllumination": false,
+  "scope": "JSON-only base-colour references and normal strength. The BIN chunk, geometry/UV JSON, roughness, metal, AO, lightmap references and base-colour factors are preserved.",
+  "models": [
+    {
+      "file": "model-exterior.glb",
+      "sourceSha256": "5448f257f1a16b1d35c2d0bf6c64f3c95f6c930cdd441b62b5811a9fe88242a1",
+      "outputSha256": "72815e61b94c0a8694160aa1019d7ae65ffee05d75ebf6230568ce23e5aa56ab",
+      "binSha256Before": "8dc369ad79e7b0115a34b0c6211c987103cac4f1f9eaf689453af27b7ba10ba7",
+      "binSha256After": "8dc369ad79e7b0115a34b0c6211c987103cac4f1f9eaf689453af27b7ba10ba7",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 8690384,
+      "gzipBytes": 2586035,
+      "materials": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordFine",
+          "texture": "textures/9a2a57aafe53d16676d3.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.045,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.5375664821881201,
+            0.44746480087056534,
+            0.39239811362011084
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.5375664821881201,
+            0.44746480087056534,
+            0.39239811362011084
+          ],
+          "encodingError255": {
+            "mean": 2.7663554350535073,
+            "p99": 12,
+            "max": 34
+          }
+        },
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/4210287e358bb2da10ee.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "encodingError255": {
+            "mean": 0.3657231330871582,
+            "p99": 2,
+            "max": 14
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/cfa5d8f301774c078a0c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "encodingError255": {
+            "mean": 0.3449856440226237,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "file": "model-exterior-low.glb",
+      "sourceSha256": "502d5d64301a64c800e93d041a5f81e07b1c0b9142f02bf944a0e09b286dc939",
+      "outputSha256": "f5866e5f7936b211c7481107916ea21a43bfc2a79991d575b75cdba8b35fde09",
+      "binSha256Before": "c56e38c3bc3da9370edaab72adb16344ca9d6ec97cc8cb07b2dc9458a72fd575",
+      "binSha256After": "c56e38c3bc3da9370edaab72adb16344ca9d6ec97cc8cb07b2dc9458a72fd575",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 7805648,
+      "gzipBytes": 2668214,
+      "materials": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordFine",
+          "texture": "textures/ae88b5dd2747a01b5dcc.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.045,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.5379203263338158,
+            0.44760152327720454,
+            0.39239328494082426
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.5379203263338158,
+            0.44760152327720454,
+            0.39239328494082426
+          ],
+          "encodingError255": {
+            "mean": 2.6054890950520835,
+            "p99": 11,
+            "max": 30
+          }
+        },
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/88d28d8819a3c330f440.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "encodingError255": {
+            "mean": 0.31831614176432294,
+            "p99": 2,
+            "max": 12
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/9ecaa6189d922d00885c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "encodingError255": {
+            "mean": 0.29941685994466144,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "sourceSha256": "fa3ea6dbb59013a315600a4051bc00c74d154ed89de30d9c797e1837c60fa675",
+      "outputSha256": "9a9ee61da12bb27e56a479fdcf8bf7c06e485cfe5ac349c7675cdc66296c3f9f",
+      "binSha256Before": "766629b3ad9038eb8598850bbd093db5585ceac2cc607ae6a7e8ae004e834956",
+      "binSha256After": "766629b3ad9038eb8598850bbd093db5585ceac2cc607ae6a7e8ae004e834956",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 10288128,
+      "gzipBytes": 4483819,
+      "materials": [
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/4210287e358bb2da10ee.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "encodingError255": {
+            "mean": 0.3657231330871582,
+            "p99": 2,
+            "max": 14
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/cfa5d8f301774c078a0c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "encodingError255": {
+            "mean": 0.3449856440226237,
+            "p99": 1,
+            "max": 4
+          }
+        },
+        {
+          "material": "BotticinoMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/4210287e358bb2da10ee.ktx2",
+          "normalStrengthBefore": 0.054999999701976776,
+          "normalStrengthAfter": 0.025,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "encodingError255": {
+            "mean": 0.3657231330871582,
+            "p99": 2,
+            "max": 14
+          }
+        },
+        {
+          "material": "InteriorGranite",
+          "profile": "InteriorFine",
+          "texture": "textures/0739d50563d34373af6a.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.025,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.4914818359985512,
+            0.46181188451850974,
+            0.4058650591310931
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.4914818359985512,
+            0.46181188451850974,
+            0.4058650591310931
+          ],
+          "encodingError255": {
+            "mean": 2.3377112547556558,
+            "p99": 10,
+            "max": 29
+          }
+        },
+        {
+          "material": "TravertineAshlar-2",
+          "profile": "RomanTravertine",
+          "texture": "textures/cfa5d8f301774c078a0c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "encodingError255": {
+            "mean": 0.3449856440226237,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "file": "model-waiting-room-low.glb",
+      "sourceSha256": "69997935dd2eae04c531380a4288d886e4393974f64a63b6b1669495e1e0b084",
+      "outputSha256": "4220b1e3dbed887fb00bf84c19620ea76b5856332ee07d69071f3860b200b9f1",
+      "binSha256Before": "352e87b6ae0f3022f9403f4703aa8c5b0729c6ceccdbf4e1342793878a34493a",
+      "binSha256After": "352e87b6ae0f3022f9403f4703aa8c5b0729c6ceccdbf4e1342793878a34493a",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 8104264,
+      "gzipBytes": 4129383,
+      "materials": [
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/88d28d8819a3c330f440.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "encodingError255": {
+            "mean": 0.31831614176432294,
+            "p99": 2,
+            "max": 12
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/9ecaa6189d922d00885c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "encodingError255": {
+            "mean": 0.29941685994466144,
+            "p99": 1,
+            "max": 4
+          }
+        },
+        {
+          "material": "BotticinoMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/88d28d8819a3c330f440.ktx2",
+          "normalStrengthBefore": 0.054999999701976776,
+          "normalStrengthAfter": 0.025,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "encodingError255": {
+            "mean": 0.31831614176432294,
+            "p99": 2,
+            "max": 12
+          }
+        },
+        {
+          "material": "InteriorGranite",
+          "profile": "InteriorFine",
+          "texture": "textures/077942f44d0f97c06059.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.025,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.4916499781952023,
+            0.4620375238688141,
+            0.40583072441363105
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.4916499781952023,
+            0.4620375238688141,
+            0.40583072441363105
+          ],
+          "encodingError255": {
+            "mean": 2.1929537455240884,
+            "p99": 9,
+            "max": 27
+          }
+        },
+        {
+          "material": "TravertineAshlar-2",
+          "profile": "RomanTravertine",
+          "texture": "textures/9ecaa6189d922d00885c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "encodingError255": {
+            "mean": 0.29941685994466144,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "file": "model-concourse.glb",
+      "sourceSha256": "6f077311e65f60d8df92cc20df12440210b76dbef9e6f1885543067159b622d4",
+      "outputSha256": "26a0320c2be7913bbb02513fa9c8cb13c1ba65a7f8bfd6c383625ae62d17134f",
+      "binSha256Before": "c804bed9bd83412752d47b85782cefa22f22e71c9535cba36e0909b35bb37b9a",
+      "binSha256After": "c804bed9bd83412752d47b85782cefa22f22e71c9535cba36e0909b35bb37b9a",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 8174892,
+      "gzipBytes": 2742544,
+      "materials": [
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/4210287e358bb2da10ee.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6035794039014757,
+            0.5706952909717267,
+            0.4917776798475667
+          ],
+          "encodingError255": {
+            "mean": 0.3657231330871582,
+            "p99": 2,
+            "max": 14
+          }
+        },
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordFine",
+          "texture": "textures/9a2a57aafe53d16676d3.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.045,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.5375664821881201,
+            0.44746480087056534,
+            0.39239811362011084
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.5375664821881201,
+            0.44746480087056534,
+            0.39239811362011084
+          ],
+          "encodingError255": {
+            "mean": 2.7663554350535073,
+            "p99": 12,
+            "max": 34
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/cfa5d8f301774c078a0c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6926407475101808,
+            0.6385578085519785,
+            0.5229263271257834
+          ],
+          "encodingError255": {
+            "mean": 0.3449856440226237,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "sourceSha256": "ef3945f3b3650739f7ea548431c57e8cd87cb7894c4585b98000db572d4604b1",
+      "outputSha256": "b4318ae11521c0ea03870dfea59bde4456833942473aa82ea6c3c4f0503325c1",
+      "binSha256Before": "a29f0826298abda1e5ad7a94e70c239473a4f7e2e33753bc72e717d87b0eb27f",
+      "binSha256After": "a29f0826298abda1e5ad7a94e70c239473a4f7e2e33753bc72e717d87b0eb27f",
+      "geometryUvJsonUnchanged": true,
+      "aoRoughnessMetalIlluminationReferencesUnchanged": true,
+      "bytes": 7433212,
+      "gzipBytes": 2724753,
+      "materials": [
+        {
+          "material": "PublicFloorMarble",
+          "profile": "HonedMarble",
+          "texture": "textures/88d28d8819a3c330f440.ktx2",
+          "normalStrengthBefore": 0.04500000178813934,
+          "normalStrengthAfter": 0.018,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6046446606603207,
+            0.5712599572701491,
+            0.4920853827377534
+          ],
+          "encodingError255": {
+            "mean": 0.31831614176432294,
+            "p99": 2,
+            "max": 12
+          }
+        },
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordFine",
+          "texture": "textures/ae88b5dd2747a01b5dcc.ktx2",
+          "normalStrengthBefore": 0.14000000059604645,
+          "normalStrengthAfter": 0.045,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.5379203263338158,
+            0.44760152327720454,
+            0.39239328494082426
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.5379203263338158,
+            0.44760152327720454,
+            0.39239328494082426
+          ],
+          "encodingError255": {
+            "mean": 2.6054890950520835,
+            "p99": 11,
+            "max": 30
+          }
+        },
+        {
+          "material": "Travertine",
+          "profile": "RomanTravertine",
+          "texture": "textures/9ecaa6189d922d00885c.ktx2",
+          "normalStrengthBefore": 0.11999999731779099,
+          "normalStrengthAfter": 0.035,
+          "baseColorFactorPreserved": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "decodedMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "finalFactorTimesMapLinearMean": [
+            0.6928149417538879,
+            0.6388190541891073,
+            0.52289057239662
+          ],
+          "encodingError255": {
+            "mean": 0.29941685994466144,
+            "p99": 1,
+            "max": 4
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "status": "FROZEN accepted authored source; final baked/encoded/mounted acceptance remains separate",
+  "frozenUTC": "2026-11-04T02:22:18.402614+00:00",
+  "scope": "Four nonuniform Eighth Avenue bridge bays replacing Phase12 single bay once; true existing P4/P5 floor/trackbase partitions receive fresh GI; no new sidewall, train/stair change or full-station enclosure claim.",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+    "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+    "bytes": 7132424
+  },
+  "editable": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.blend",
+    "sha256": "d3daeab9b4d046ddc2b9dfefa9ff8f258e6997d6db2e9252c536b274253033ad",
+    "bytes": 4398318
+  },
+  "ownerCount": 27,
+  "sourceTriangles": 25398,
+  "primaryLights": 0,
+  "sourceEvidence": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/FROZEN-ADJACENT-ROWS-v1.json",
+    "sha256": "f624be99c7b6f09245b716728ae110465268a3178a3e759cf161e8ee3d54d821",
+    "rows": [
+      {
+        "id": "B0",
+        "nativeU": 985.0,
+        "observedWorldZ": 6.326037735849057,
+        "authoringWorldZ": 6.33,
+        "kind": "Accepted Phase12 gap row",
+        "retained": true,
+        "coordinationDeltaZ": 0.003962264150943362,
+        "minimumNativeReadingUncertaintyPx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "id": "B1",
+        "nativeU": 915.3,
+        "observedWorldZ": 13.00671698113208,
+        "authoringWorldZ": 13.0,
+        "kind": "Accepted Phase12 P5-corresponding row",
+        "retained": true,
+        "coordinationDeltaZ": -0.006716981132079525,
+        "minimumNativeReadingUncertaintyPx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "id": "B2",
+        "nativeU": 843.3,
+        "observedWorldZ": 19.90784905660378,
+        "authoringWorldZ": 20.314408,
+        "kind": "New inter-track row fitted to current gap centre",
+        "retained": false,
+        "coordinationDeltaZ": 0.40655894339622023,
+        "minimumNativeReadingUncertaintyPx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "id": "B3",
+        "nativeU": 773.0,
+        "observedWorldZ": 26.646037735849056,
+        "authoringWorldZ": 26.646037735849056,
+        "kind": "New P4-corresponding source row",
+        "retained": false,
+        "coordinationDeltaZ": 0.0,
+        "minimumNativeReadingUncertaintyPx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "id": "B4",
+        "nativeU": 702.0,
+        "observedWorldZ": 33.45132075471698,
+        "authoringWorldZ": 33.983721,
+        "kind": "New inter-track row fitted to current gap centre",
+        "retained": false,
+        "coordinationDeltaZ": 0.5324002452830214,
+        "minimumNativeReadingUncertaintyPx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      }
+    ]
+  },
+  "actualFloorOwnership": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-full.json",
+    "sha256": "f7261ea341d621a20fd897d076323c8f635e0bf03ea610e608979f54f7c46a49",
+    "roi": {
+      "x": [
+        -162.2857,
+        -111.4247
+      ],
+      "z": [
+        3.1014,
+        37.212321
+      ]
+    },
+    "ownedTriangles": 402
+  },
+  "memberWorldBounds": {
+    "min": [
+      -152.70479959249496,
+      -15.243048078727721,
+      5.720399916172028
+    ],
+    "max": [
+      -121.0055980682373,
+      -5.805963999938965,
+      34.593322694301605
+    ]
+  },
+  "physical": {
+    "status": "PASS actual exported55columns/realreceivers, fourbay roof/railclearance and P4/P5 sidepaths",
+    "receivers": 55,
+    "roofSamples": 54,
+    "minimumRailClearanceM": 4.9457606491088875,
+    "nominalVehicleMinimumLateralColumnClearanceM": 0.5085799980988873,
+    "P4P5SupportedBodySamples": 500,
+    "actualTrainTrianglesInFiniteBay": 0
+  },
+  "floorSourceAttributes": {
+    "label": "actualsource-ownedfloor P/N/materialUV0\u2192Blendercombinedsource",
+    "status": "PASS",
+    "trianglesBefore": 402,
+    "trianglesAfter": 402,
+    "matched": 402,
+    "exactOrientedCorners": 119,
+    "maxPositionComponentDriftM": 0,
+    "maxNormalComponentDrift": 0.00042159986188059547,
+    "maxNormalAngleDegrees": 0.02433191589229608,
+    "minimumNormalDot": 0.9999999098268282,
+    "maxUv0ComponentDrift": 1.9073486328125e-06,
+    "maxLightingUv1ComponentDrift": 0,
+    "unmatched": 0,
+    "largestCases": [],
+    "failures": [],
+    "positionBoundM": 2e-05,
+    "normalAngleBoundDegrees": 0.5,
+    "minimumNormalDotBound": 0.9999619230641713,
+    "normalComponentDriftMeasuredOnly": true,
+    "uvComponentBound": 2e-06
+  },
+  "cacheHiddenInterfaceQualification": "Old Phase9 P5 granolithic underside source triangle3, clipped50.10701982673692m\u00b2, is absent at runtime because coincident with rubbed slab top. Cache removes it inside receiverROI; no added primary plane and no area tolerance waiver. Prior exact receipt retained.",
+  "replacement": "Start frozen pre-Phase12 platform8eca3566/2ad1e8ab; use exact three-primitive floor cut retained-base-v1, append new27-owner module once. Old Phase12Bridge geometry is absent by baseline construction. Outside-owned source BIN/material/texture/UV data retained.",
+  "qualifications": [
+    "Source rows19.907849/33.451321 adopted20.314408/33.983721 to fit current adopted track gaps; exact offsets explicitly retained, not measured historic positions.",
+    "306.08 is under-clearance comparison; local girder/plate depth schedule, capstone/rock coordination and paint hue inferred.",
+    "500 path samples are automated supported-body checks; native user walkthrough intentionally skipped.",
+    "Source\u2192Blender normal codec bound0.5deg; UV0 strict2e-6, positions20micrometres; additional lossless encoded/mounted drift must be0.",
+    "UV1 absence is not evidence of roof hole; earlier sign band is existing soffit material/GI transition."
+  ],
+  "files": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.blend",
+      "sha256": "d3daeab9b4d046ddc2b9dfefa9ff8f258e6997d6db2e9252c536b274253033ad",
+      "bytes": 4398318
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/bridge-bay.glb",
+      "sha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+      "bytes": 7132424
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/candidate-v2/construction.json",
+      "sha256": "618cbd8fa83871b9e0a44b332d7160c307aa592fba0c1efa81b0a4bc3a5445ad",
+      "bytes": 369445
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/construction-v1/build_enclosure.py",
+      "sha256": "135f3ef6d390e73a8bc131940419e840697e4be27c44a33013148ab1d1be0367",
+      "bytes": 14158
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-full.json",
+      "sha256": "f7261ea341d621a20fd897d076323c8f635e0bf03ea610e608979f54f7c46a49",
+      "bytes": 3495252
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/partition-low.json",
+      "sha256": "fd590ffdb987eb90cc284e23cdd71122b8b11bb0af77d04997ee21eba458a61b",
+      "bytes": 3495255
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/retained-base-v1/partition-pack-proof.json",
+      "sha256": "dab71dc5c1eafc62c579493b0677f34eacba21ad4e20d83d8b6a6016042319f1",
+      "bytes": 3167
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor_clip.py",
+      "sha256": "02877e32822186030659fab116e5ce60744ead53b0409745e6b85e3ab6ab517a",
+      "bytes": 1479
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor_context_membership.py",
+      "sha256": "b989b40129ae8d244273e619eef9450e8152af5c8bcd405a1dae0010d4ecb528",
+      "bytes": 5129
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/floor-ownership-v1/floor-context-membership-v2.json",
+      "sha256": "06bae65d5126394ac4df69576ee21915bebf2d8b800cd1dcd4a89b15439cc5e7",
+      "bytes": 4259
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/cache-runtime-hidden-interface-reconciliation.json",
+      "sha256": "7161ff25f989424530c6fe39a1a2f42475d18e806498a69f83f04ca6d177a5a1",
+      "bytes": 3044
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/actual-context-cut-preflight-v2.json",
+      "sha256": "27751cff5d037ad9a6e8ebc1a403813d26caeb3b0c267e98812185f96e18bc4c",
+      "bytes": 5655
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/source-physical-proof.json",
+      "sha256": "e07200fdbeb37c367d9175d3d9a9d05043eeecae407748da09e8e880d2e8f972",
+      "bytes": 33841
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/geometry/acceptance-v1/combined-source-floor-proof.json",
+      "sha256": "f3cfdea18c9bee3c3b4179763750eb3a7d5f48996145c01157e9337c61257710",
+      "bytes": 3329
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/FROZEN-ADJACENT-ROWS-v1.json",
+      "sha256": "f624be99c7b6f09245b716728ae110465268a3178a3e759cf161e8ee3d54d821",
+      "bytes": 10914
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "status": "PASS actual source103/raw/encoded normal preservation under existing codec bound",
+  "cases": [
+    {
+      "label": "actual accepted103→normal-preserved raw Blender codec",
+      "status": "PASS",
+      "trianglesBefore": 2930,
+      "trianglesAfter": 2930,
+      "matched": 2930,
+      "exactOrientedCorners": 475,
+      "maxPositionComponentDriftM": 0.00000762939453125,
+      "maxNormalComponentDrift": 0.0004203691319709657,
+      "maxNormalAngleDegrees": 0.02856879347855923,
+      "minimumNormalDot": 0.9999998756892949,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "full actual raw→encoded lossless pack",
+      "status": "PASS",
+      "trianglesBefore": 2930,
+      "trianglesAfter": 2930,
+      "matched": 2930,
+      "exactOrientedCorners": 2930,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    },
+    {
+      "label": "low actual raw→encoded lossless pack",
+      "status": "PASS",
+      "trianglesBefore": 2930,
+      "trianglesAfter": 2930,
+      "matched": 2930,
+      "exactOrientedCorners": 2930,
+      "maxPositionComponentDriftM": 0,
+      "maxNormalComponentDrift": 0,
+      "maxNormalAngleDegrees": 0,
+      "minimumNormalDot": 1,
+      "maxUv0ComponentDrift": 0,
+      "maxLightingUv1ComponentDrift": 0,
+      "unmatched": 0,
+      "largestCases": [],
+      "failures": [],
+      "positionBoundM": 0.00002,
+      "normalAngleBoundDegrees": 0.5,
+      "minimumNormalDotBound": 0.9999619230641713,
+      "normalComponentDriftMeasuredOnly": true,
+      "uvComponentBound": 0.000002
+    }
+  ],
+  "glyphProof": [
+    {
+      "stage": "accepted",
+      "side": "south",
+      "triangles": 463,
+      "minimumOutwardNormalDot": 0.9999999999999909
+    },
+    {
+      "stage": "accepted",
+      "side": "north",
+      "triangles": 463,
+      "minimumOutwardNormalDot": 0.99999999999999
+    },
+    {
+      "stage": "raw",
+      "side": "south",
+      "triangles": 463,
+      "minimumOutwardNormalDot": 0.9999999999999543
+    },
+    {
+      "stage": "raw",
+      "side": "north",
+      "triangles": 463,
+      "minimumOutwardNormalDot": 0.99999999999999
+    }
+  ],
+  "inputs": [
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/geometry-v1/candidate-v4/finish-addon.glb",
+      "sha256": "ca1134df4138804e4cb1fe7895ee9d22e938ebe833891ae73a1f725a69ef1a97",
+      "bytes": 270372
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/model-concourse-gallery-finish.glb",
+      "sha256": "d6aef96f59b23bb36475886956c854a995100a9f1c6b65d35d2004e7672beacb",
+      "bytes": 3267136
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package/model-concourse.glb",
+      "sha256": "0224be1d02d910e0edd056434bef093e1b017cccd4d07cf18032abedb570d282",
+      "bytes": 123980
+    },
+    {
+      "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/package/model-concourse-low.glb",
+      "sha256": "3f8d1856437eb9e09e0d4d7e19e2228996cf25adb973340ad4046cd831469846",
+      "bytes": 123980
+    }
+  ],
+  "qualification": "Actual fresh bake-run-v4, not the restoration diagnostic. All2930oriented triangles matched against accepted103source; source→Blender normal codec <=0.5degree, positions<=20micrometres and UV0<=2e-6 unchanged. Raw→Meshopt P/N/UV0/UV1 exact0 additional drift. Mounted/base/physical acceptance follows separately."
+}

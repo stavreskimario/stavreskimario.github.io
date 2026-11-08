@@ -1,0 +1,154 @@
+{
+  "zone": "concourse-access",
+  "frameZone": "concourse",
+  "surfaceGroup": "all",
+  "uvMarginPixels": 4,
+  "uvMarginMethod": "FRACTION",
+  "source": "departure-access-module.glb",
+  "sourceSha256": "6a5687b54db9a7579344a1211bfb9f544366799e931446671d9cf63b2bda23bf",
+  "resolution": 2048,
+  "samples": 64,
+  "aoPathSamples": 4,
+  "aoNodeSamples": 24,
+  "engine": "4.3.0 Cycles METAL",
+  "device": {
+    "requested": "METAL",
+    "backend": "METAL",
+    "devices": [
+      "Apple M5 Max (GPU - 32 cores)"
+    ]
+  },
+  "atlasSurfaceArea": 0.500607967376709,
+  "sky": "Neutral diffuse dome; direct sky visibility and six-bounce diffuse transport; no directional sun baked",
+  "registeredOccluders": [
+    {
+      "zone": "concourse",
+      "source": "retained-concourse-occluder.glb",
+      "sha256": "b326e3e3f80e10c3b7fcad233b938de861cb3bb4ea35fc480e3929320712acf5",
+      "heightOffset": 0.0,
+      "objects": 4988
+    },
+    {
+      "zone": "exterior",
+      "source": "retained-exterior-occluder.glb",
+      "sha256": "138684e4794b39eb740019fe194f5cc23837d9de1aab22e7978d1f193f7854ca",
+      "heightOffset": 4.2672,
+      "objects": 15
+    }
+  ],
+  "unbakedPrimaryMeshes": 1638,
+  "surfaceProfiles": [
+    {
+      "material": "BedfordLimestoneConcourse",
+      "asset": "BedfordLimestoneConcourse",
+      "tileMetres": 1.5,
+      "normalStrength": 0.15,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": null,
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "MilfordGranite.001",
+      "asset": "Granite005A",
+      "tileMetres": 1.0,
+      "normalStrength": 0.045,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "MilfordFine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarble.001",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "PublicFloorMarbleAccessInfill",
+      "asset": "Marble018",
+      "tileMetres": 1.8,
+      "normalStrength": 0.018,
+      "roughnessFactor": 0.48,
+      "appearanceRevision": 4,
+      "colourProfile": "HonedMarble",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "Travertine.001",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    },
+    {
+      "material": "TravertineDepartureStairStone",
+      "asset": "Travertine009",
+      "tileMetres": 1.5,
+      "normalStrength": 0.035,
+      "roughnessFactor": 1.0,
+      "appearanceRevision": 4,
+      "colourProfile": "RomanTravertine",
+      "interiorShaftFinish": null
+    }
+  ],
+  "diffuseEncoding": "Cycles outgoing unit-albedo radiance; Linear Rec.709 source \u2192 Standard/sRGB PNG \u2192 lossless WebP. Decode sRGB and multiply by pi times radianceScale for Three.js Lambert irradiance.",
+  "radianceScale": 1.0,
+  "retainedHdrTransfer": "linear; separate Non-Color float buffer set before pixel assignment",
+  "ambientOcclusion": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "mean": 0.48734569549560547,
+    "coveredPixels": 4194304
+  },
+  "illumination": {
+    "minimum": 0.0,
+    "maximum": 0.7615786194801331,
+    "mean": 0.27342841029167175,
+    "coveredPixels": 3724687
+  },
+  "elapsedSeconds": 14.119826000001922,
+  "architectureUv": "UVMap",
+  "bakedUv": "BakedLightingUV",
+  "artifact": "model-concourse-access.glb",
+  "orderSeparation": null,
+  "orderUv": null,
+  "vaultNormalIntegrity": null
+}

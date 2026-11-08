@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "status": "CONDITIONALLY COMPATIBLE: source names, frame and scalar material values verified; canonical integration and roundtrip remain unperformed.",
+  "createdUTC": "2026-11-02T04:21:47.324097+00:00",
+  "scope": "Read-only inspection of actual canonical C4 and frozen accepted curved source. No canonical/repository/source save, export, render or GPU use.",
+  "verified": {
+    "canonicalSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+    "canonicalBytes": 82090595,
+    "canonicalSceneObjects": 13319,
+    "all4047OriginalArrivalsNodeNamesPresent": true,
+    "all16NewNamesAbsent": true,
+    "sixOldOwnersAreUnparentedMeshes": true,
+    "oldOwnersCollection": "Phase7 first eight ARRIVALS \u2014 SOURCE REVIEW",
+    "allOriginalInputsRehashedUnchanged": true,
+    "oldOwnerStreet0WorldToOriginalMain0MaxVertexResidualM": 4.837036131632999e-07,
+    "guardAndStructurePrincipledScalarsMatchStudyExactly": true,
+    "canonicalMaterialGraphsAreDifferentFromImportedStudyGraphs": true
+  },
+  "ownership": {
+    "replaceExactlySixExistingRailObjects": [
+      "Arrival row5 west west flight1 rounded top rail",
+      "Arrival row5 west Arrival intermediate landing top rail",
+      "Arrival row5 west west flight2 rounded top rail",
+      "Arrival row5 west west flight1 rounded top rail.001",
+      "Arrival row5 west Arrival intermediate landing top rail.001",
+      "Arrival row5 west west flight2 rounded top rail.001"
+    ],
+    "addExactly16Objects": [
+      "P5Finish west flight1 side-plus",
+      "P5Finish west flight1 side-minus",
+      "P5Finish west flight2 side-plus",
+      "P5Finish west flight2 side-minus",
+      "P5Finish west landing side-minus",
+      "P5Finish west landing side-plus",
+      "P5Finish east flight1 side-plus",
+      "P5Finish east flight1 side-minus",
+      "P5Finish east flight2 side-plus",
+      "P5Finish east flight2 side-minus",
+      "P5Finish east landing side-minus",
+      "P5Finish east landing side-plus",
+      "P5Finish west gallery fascia",
+      "P5Finish east gallery fascia",
+      "P5Curve west lower haunch side-plus",
+      "P5Curve west lower haunch side-minus"
+    ],
+    "resultingEditableAddonObjects": 22,
+    "primaryStructuralMembersOwned": 0,
+    "fullRawCandidateIsNotAnAppendableAddon": "The raw024e8cff module includes all4,047 original arrivals components. Importing it into C4 duplicates the current architecture; append only the selected22 editable objects and explicitly replace the six owned rails."
+  },
+  "frameContract": {
+    "canonical": "Blender Street0: X east,Y north,Z up",
+    "addon": "Blender Main0: X east,Y north,Z up",
+    "main0ToStreet0BlenderWorldTranslation": [
+      0,
+      0,
+      -4.2672
+    ],
+    "main0ToStreet0GlTFWorldTranslation": [
+      0,
+      -4.2672,
+      0
+    ],
+    "observedOldCanonicalOwnerTranslationZ": -4.267199993133545,
+    "application": "Left-multiply each appended object world matrix once by Matrix.Translation((0,0,-4.2672)). Retain the two haunch local-origin translations and each editable curve local coordinate. Never add the datum to both vertices and object transforms.",
+    "moduleExportBackToMain0": "For disposable export copies only, left-multiply accepted Street0 world matrices by Matrix.Translation((0,0,+4.2672)); do not change source coordinates."
+  },
+  "materialContract": {
+    "reuseCanonicalMaterials": [
+      "PaintedStructuralIronArrivalsGuard",
+      "PaintedStructuralIronArrivalsStructure"
+    ],
+    "explicitRemappingRequired": [
+      "Curve.data.materials and actual GN GeometryNodeSetMaterial node must point to existing canonical Guard.",
+      "Flat finish and haunch mesh slots must point to existing canonical Structure.",
+      "Check actual evaluated polygon materials and exported glTF primitive indices/names; object slots alone were previously insufficient."
+    ],
+    "why": "Principled scalar values match exactly, but canonical source material graph hashes differ from glTF-imported study graphs. Replacing canonical material graphs would exceed the bounded ownership and is unnecessary.",
+    "canonicalGraphPins": {
+      "PaintedStructuralIronArrivalsGuard": "13af41c3502d44d976c694cc2888b2271f3c049b044714e5aed7b4bd1abc3b57",
+      "PaintedStructuralIronArrivalsStructure": "cfb2d8932259056b11492b235cd77fe39b769702d01b59b74d41e55b28ef39b3"
+    },
+    "studyGraphPins": {
+      "PaintedStructuralIronArrivalsGuard": "c2f67fedc3cbf3be45ce2a4eda7149b1e825946f1ee33f2a6b41f0db858bd771",
+      "PaintedStructuralIronArrivalsStructure": "dbeac42d8c6c2c135721dd071b654491ba313bb45f6b065a07c47424c506c1c9"
+    }
+  },
+  "exportContract": {
+    "verifiedHazards": [
+      "build_station.py deletes the existing objects and collections at startup; it is a historical full rebuild, not a C4 patch workflow.",
+      "build_station.py export() only selects MESH/FONT; this omits the new six CURVE/GN objects.",
+      "The legacy arrivals retained-occluder selection also filters MESH/FONT and selected old collection prefixes. It does not prove an updated canonical export includes the new curves."
+    ],
+    "verifiedSafeStudyPattern": "The accepted builder retains Bezier/GN editability, creates disposable evaluated Mesh copies with evaluated surface-material assertions, adds UV0 only to owned export meshes, exports them and patches only the six declared raw mesh definitions plus new nodes/buffers. No untouched source geometry is converted.",
+    "futureCanonicalPath": "Use a dedicated external bounded integration helper. Load selected22 addon object references, match source names before Blender auto-renaming, replace only six old owners, preserve old collection/visibility/custom metadata and reuse canonical materials. Export curves through temporary evaluated meshes and compare the resulting Main0 owned/addon meshes to the frozen accepted raw/source controls."
+  },
+  "requiredFutureAcceptance": [
+    "Pin and back up exact C4 before any save; output to a new external file.",
+    "Snapshot all canonical nonowned object geometry, normals, every UV, matrices, visibility and properties, all existing material graphs and packed images.",
+    "Verify old owner data users/constraints/animation/collection dependencies before replacement; this compatibility audit did not test those future mutation dependencies.",
+    "Prove all13,313 nonowned canonical objects exact and preserve all existing material graphs; there should be exactly16 net new scene objects after six replacements.",
+    "Reopen the external saved full scene and22-object addon; verify actual editable Bezier/GN graph and evaluated material assignment.",
+    "Re-export Main0 owned/addon meshes and rerun contacts,12 rail-finial receiver pairs,C1/rings/outward-normal controls and public walking tests.",
+    "Treat logical scene replay separately from exact Blender container recovery; filepath/container metadata can change.",
+    "Only after root review consider replacing the canonical file. No approval or promotion is implied by this read-only report."
+  ],
+  "historicalLimits": [
+    "This is the first WEST curved lower-outline/handrail study plus P5-pair flat faces. Upper haunch remains held.",
+    "R150mm, cover/haunch fabrication and identifying the source stair asP5 remain inferred; no complete gallery or authenticated full stair claim."
+  ],
+  "sourceEvidencePins": {
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-canonical-compatibility-v1/actual-source-inspection.json": {
+      "sha256": "8bbfa96764ee8fef5bbd558ccf016a463557cea7617ded7b62b9eaf248c77406",
+      "bytes": 37842
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-canonical-compatibility-v1/inspect_sources.py": {
+      "sha256": "7f3c8bf9717d33ebc2046247e74d6961bac5f36b992815b6c80106634c0408fe",
+      "bytes": 6340
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/authoring/penn-station-1935/review/phase9/arcade/canonical-history.json": {
+      "sha256": "5dc38341c36702eb2e65dc18518a4db64a049c6e5d8bbb376e9a80e013290d75",
+      "bytes": 1442
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/authoring/penn-station-1935/review/phase8/arrivals/canonical-history.md": {
+      "sha256": "d4318c09a467864939a73608d8597ae3d373ccd8c8db8e789be4b5ad3156c4b4",
+      "bytes": 3726
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/repair_arrivals_access.py": {
+      "sha256": "115d16ae2a6fe9d2217ab443c27dfeb7a3d7bacac7982360ee1f5c7337b440cf",
+      "bytes": 39576
+    },
+    "/Users/stavreskimario/Desktop/penn-station-reconstruction/penn-station-1935/model/build_station.py": {
+      "sha256": "6c6d8bc313f5a52a680e7f5e6f554c43687d344601236ec61060746f39ecb3eb",
+      "bytes": 129594
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/build_curved_study_v3_material_fixed.py": {
+      "sha256": "6936f56b3faa057d366299559c05e7f7f263bb58f83706830bfb490bbf5e32f1",
+      "bytes": 20636
+    },
+    "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/source-checkpoint-v12/export_retained_main.py": {
+      "sha256": "e5214aa06fa225ea5548ec276654cf8f0dd6a199cff4458f9fe3ff9bf6a41be7",
+      "bytes": 2452
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "status": "Source illumination prepared; final asset/browser/promotion acceptance separate.",
+  "files": {
+    "README.md": {
+      "sha256": "4b0fab98ca7086d7dc3a1ba5a9868eab96e86a76122f54964f91426dc979be27",
+      "bytes": 1822
+    },
+    "denoised/lighting-platform-surfaces-denoise.json": {
+      "sha256": "4a917d167290f9f4397b110a7b57c880a3909b2497039397f967f23aba2fd75c",
+      "bytes": 2913
+    },
+    "denoised/lighting-platform-surfaces-sky-low.png": {
+      "sha256": "d5692a3f3660184bf4f2bf7bdad8abf2a3712a22b9c18c7ca9b4930496947d3c",
+      "bytes": 65636
+    },
+    "denoised/lighting-platform-surfaces-sky-denoised-linear.hdr.gz": {
+      "sha256": "a5b32b0f25fdc48d8b09d79b5d58262b73a44c7d163095b9918d8c21bbe51e3d",
+      "bytes": 8771005
+    },
+    "denoised/lighting-platform-surfaces-sky.png": {
+      "sha256": "972b5c5b6549b6ee736950ad9cc18fbd37c47369b8281f90d78a4b76456670d5",
+      "bytes": 1795912
+    },
+    "source/bake_lighting.py": {
+      "sha256": "8713c67c173357b9140ece3753b2702d8b28d38217139395a4dc4861698ef608",
+      "bytes": 19109
+    },
+    "source/material_library.py": {
+      "sha256": "a6b9b83843038fa829867c7cfebc4958f1c0386bd1bb02c7e4237e9de4169dfc",
+      "bytes": 9518
+    },
+    "source/render_device.py": {
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "bytes": 1188
+    },
+    "raw/lighting-platform-surfaces-sky.hdr.gz": {
+      "sha256": "1e9e6450b42372b50f84dc2da1be4077b32d2cb2939091c2ce8474580640ffcc",
+      "bytes": 7023228
+    },
+    "raw/lighting-platform-surfaces.json": {
+      "sha256": "d82cdbee541ca1dcfae4373a0a34468aac6fa8ce2ed58bfe5114dba7e50a8787",
+      "bytes": 8641
+    }
+  },
+  "totalSourceBytes": 17698972,
+  "archivedGeneratedOutputs": {
+    "raw/lighting-platform-surfaces-ao.png": {
+      "sha256": "2e4b1533bd0bd5e43a5aa9050ad1cec395d06cfbe4aa7a7f0e7da591f50c320f",
+      "bytes": 3782880,
+      "retention": "Exact immutable Git blob and two verified external backups; omitted from current source tree",
+      "immutableCommit": "a0aa21afc83fba41e6f0d8b2d269c0becec3e708",
+      "gitPath": "authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "gitBlob": "bbf179ec5dbeaa5f5fc63a70b83f2dcb53fbdbf9",
+      "gitRawUrl": "https://raw.githubusercontent.com/stavreskimario/stavreskimario.github.io/a0aa21afc83fba41e6f0d8b2d269c0becec3e708/authoring/penn-station-1935/lighting/phase9-platform/raw/lighting-platform-surfaces-ao.png",
+      "recoveryReceipt": "authoring/penn-station-1935/review/phase10/storage/old-raw-ao-output-reserve.json"
+    }
+  },
+  "previousTotalSourceBytesBeforeRawAoReserve": 21481852,
+  "totalSourceBytesScope": "Physically retained files listed in files, excluding this manifest. Archived generated outputs are listed separately.",
+  "rawAoStorageNote": "Only the generated raw AO PNG was moved to exact Git-backed archival storage. HDR sources, retained denoised maps, runtime KTX2 and surface detail remain unchanged."
+}

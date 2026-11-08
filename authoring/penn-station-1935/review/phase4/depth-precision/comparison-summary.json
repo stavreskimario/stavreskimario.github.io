@@ -1,0 +1,70 @@
+{
+  "scope": "Actual matched final-asset aerial captures. Only two WebGL constructor options differ in scratch source. No production edits. This source decision is distinct from final production visual/navigation acceptance.",
+  "cameraFromBothCapturedStdout": {
+    "position": [
+      326.4696215848659,
+      136.09609831651403,
+      254.3762891049543
+    ],
+    "quaternion": [
+      -0.1639208255587534,
+      0.33763675403433374,
+      0.05983576952365122,
+      0.9249600347900486
+    ],
+    "fov": 50
+  },
+  "maximumObservedCameraDifference": 0,
+  "currentAssetsObservedAfterPair": {
+    "assetMetricsSha256": "ed48546458e98692bfc2c8248daaa521132939c0c70197fa78080afda735bc7f",
+    "sceneManifestSha256": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+  },
+  "images": [
+    {
+      "variant": "baseline",
+      "file": "baseline.png",
+      "sha256": "c3221093a9ed4b2c85ae34415246750bd6a088beb7621903690f3fdb06d08db4"
+    },
+    {
+      "variant": "reversed",
+      "file": "reversed.png",
+      "sha256": "e0b08b9c62f8b2237eda274108c858030eef4e95d147d8b017d754fac56e8caa"
+    }
+  ],
+  "observedZoneRowsFromRunnerAssertion": [
+    {
+      "name": "exterior",
+      "meshes": 11,
+      "visible": true
+    },
+    {
+      "name": "waiting",
+      "meshes": 15,
+      "visible": true
+    },
+    {
+      "name": "concourse",
+      "meshes": 16,
+      "visible": true
+    },
+    {
+      "name": "context",
+      "meshes": 37,
+      "visible": true
+    },
+    {
+      "name": "platform",
+      "meshes": 17,
+      "visible": true
+    },
+    {
+      "name": "trains",
+      "meshes": 16,
+      "visible": true
+    }
+  ],
+  "visualFinding": "Reversed depth eliminates the large wavy Hotel pavement bands and broad station roof striping in the matched aerial view. Opaque station/context, cast shading and visible glass/roof structure remain present. This bounded aerial inspection does not replace final interior/transmission/shadow controls.",
+  "capabilityProof": "capability-control.json",
+  "preparedInputs": "prepared-inputs.json",
+  "runnerLimitation": "Both images and identical camera stdout completed with no page exceptions, then the final scene equality assertion failed because it compared random scene UUIDs between independent loads. Zone names/mesh counts/visibility were equal. The invalid assertion is corrected for future use; no further full-scene run was made. Complete per-variant metadata from that failed process was not saved and is not reconstructed here."
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "Nine actual authored crown coffers; constant white plaster; same CPU32sample illumination/camera. Only old bake welding versus preserved/coffer-bounded normals differs. Not a production browser image or calibrated historic daylight.",
+  "sourceSha256": "5b75612f7e64c6556cd480a6e84d5aff2aa994e44f25cb48300519c9951ef0b7",
+  "records": [
+    {
+      "mode": "welded",
+      "geometryTriangleSignature": "34d6446b59c4b24560be78f97687c4cb259b327861c52a31b7bd542144e2bece",
+      "normals": {
+        "p1": 0.7408511299564712,
+        "p5": 0.7928890929437209,
+        "minimum": 0.6741839607210487,
+        "oppositeCorners": 0
+      },
+      "vertices": 1653,
+      "triangles": 3216,
+      "sameSurfaceWithin0.1mm": true
+    },
+    {
+      "mode": "preserved",
+      "geometryTriangleSignature": "4dd90ecfd032a5a8e4da8eba2a48249b8f0fae3f45c324d6c1be9cac82b84110",
+      "normals": {
+        "p1": 0.9768425794177544,
+        "p5": 0.9989789942586811,
+        "minimum": 0.8712404288117361,
+        "oppositeCorners": 0
+      },
+      "vertices": 3572,
+      "triangles": 3216,
+      "sameSurfaceWithin0.1mm": true
+    }
+  ],
+  "exactTrianglePairing": {
+    "triangleCount": 3216,
+    "bijection": true,
+    "maximumOldWeldCoordinateDisplacementMetres": 2.384185791015625e-07,
+    "normalRepairGeometryExactlyUnchanged": true
+  }
+}

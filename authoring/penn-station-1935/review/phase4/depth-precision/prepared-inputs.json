@@ -1,0 +1,96 @@
+{
+  "scope": "Prepared scratch-only renderer comparison. Production source/assets untouched. Baseline and reversed snapshots differ only by reversedDepthBuffer:true in the two WebGL constructors. No station browser scene has been run.",
+  "sourceFiles": [
+    {
+      "name": "app.jsx",
+      "sha256": "f2c42ee2da8fc52089f17657f6b481acb6bafad426b157f1e50814426e165f2a"
+    },
+    {
+      "name": "lighting.mjs",
+      "sha256": "a3c59ff015e2fa515bff53e81f1bd819b74b0902410fdaed4a5b34174e68690b"
+    },
+    {
+      "name": "shadow-cache.mjs",
+      "sha256": "5cf701bc528c9e93e69880663d9f9cd22ea60bb681591bf94fdbf23c14ce3ac8"
+    },
+    {
+      "name": "stair-contact.mjs",
+      "sha256": "adbb3d1f068eb93e2a305c4a397550b3663ca1c9a9d88b704132d3007f75474d"
+    },
+    {
+      "name": "visual-review.mjs",
+      "sha256": "cc8d4746357a9c5b789d033b3822d55069099b84beb6d3d1191fb408c9e53f6e"
+    }
+  ],
+  "variants": [
+    {
+      "name": "baseline",
+      "sourceSha256": "f2c42ee2da8fc52089f17657f6b481acb6bafad426b157f1e50814426e165f2a",
+      "bundleSha256": "46f7e74bb0c0ea6551d079694b1532491e17d2f7291a98ddd07efeae5bbc1fe3",
+      "outputs": [
+        {
+          "file": "baseline/dist/app.js.LEGAL.txt",
+          "bytes": 3321
+        },
+        {
+          "file": "baseline/dist/app.js",
+          "bytes": 1043019
+        },
+        {
+          "file": "baseline/dist/chunks/three.webgpu-VCFJNVTL.js.LEGAL.txt",
+          "bytes": 161
+        },
+        {
+          "file": "baseline/dist/chunks/three.webgpu-VCFJNVTL.js",
+          "bytes": 579894
+        },
+        {
+          "file": "baseline/dist/chunks/chunk-O3MLNBEO.js.LEGAL.txt",
+          "bytes": 159
+        },
+        {
+          "file": "baseline/dist/chunks/chunk-O3MLNBEO.js",
+          "bytes": 373510
+        }
+      ]
+    },
+    {
+      "name": "reversed",
+      "sourceSha256": "bd7a6df2e2e91311803dcd613926e79e35585620e81a1d0ebe90050ab85b78f2",
+      "bundleSha256": "112662a05fde771af713744cef761fd2fb106c6b17db52302800350a5532feb7",
+      "outputs": [
+        {
+          "file": "reversed/dist/app.js.LEGAL.txt",
+          "bytes": 3321
+        },
+        {
+          "file": "reversed/dist/app.js",
+          "bytes": 1043065
+        },
+        {
+          "file": "reversed/dist/chunks/three.webgpu-VCFJNVTL.js.LEGAL.txt",
+          "bytes": 161
+        },
+        {
+          "file": "reversed/dist/chunks/three.webgpu-VCFJNVTL.js",
+          "bytes": 579894
+        },
+        {
+          "file": "reversed/dist/chunks/chunk-O3MLNBEO.js.LEGAL.txt",
+          "bytes": 159
+        },
+        {
+          "file": "reversed/dist/chunks/chunk-O3MLNBEO.js",
+          "bytes": 373510
+        }
+      ]
+    }
+  ],
+  "onlyPatch": {
+    "constructors": 2,
+    "option": "reversedDepthBuffer:true",
+    "webgpuUntouched": true,
+    "near": 0.15,
+    "far": 1000
+  }
+}

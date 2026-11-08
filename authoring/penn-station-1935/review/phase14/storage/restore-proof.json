@@ -1,0 +1,34 @@
+{
+  "status": "PASS fresh restore from exact immutable HEAD membership; compressed and decoded SHA identities and4K Radiance headers verified",
+  "files": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/raw/lighting-concourse-arrivals-sky.hdr.gz",
+      "commit": "341bb59f58a4226e1010e5b1a5b4b6d5d3e85145",
+      "blob": "0bff3c97e6d906b964b86fc2513e1192044a76a5",
+      "bytes": 41829335,
+      "sha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca",
+      "decodedBytes": 49721229,
+      "decodedSha256": "d0123a730906841a9bdfe992f68106a7e9a80ba44b9501da3740418798a86a9a",
+      "width": 4096,
+      "height": 4096,
+      "archiveMembershipVerified": true,
+      "freshBackupSha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca",
+      "restoreFixtureSha256": "d9a132b555a4f2861ba219b3002d207c645d042a0c1ab14d319afbcabe379bca"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase8/denoised/lighting-concourse-arrivals-sky-denoised-linear.hdr.gz",
+      "commit": "341bb59f58a4226e1010e5b1a5b4b6d5d3e85145",
+      "blob": "bf39882254fee96cbf686979757be068dc6b6ba6",
+      "bytes": 30046400,
+      "sha256": "8d49bb51330830fee59c6c07c0fc91284c92e3044c01589c1c23f3dbb27298e2",
+      "decodedBytes": 67649587,
+      "decodedSha256": "51a559386fefbd28101cc1f5b155e1ab33ba3f6af0c5c1b9569dd93a49d701bd",
+      "width": 4096,
+      "height": 4096,
+      "archiveMembershipVerified": true,
+      "freshBackupSha256": "8d49bb51330830fee59c6c07c0fc91284c92e3044c01589c1c23f3dbb27298e2",
+      "restoreFixtureSha256": "8d49bb51330830fee59c6c07c0fc91284c92e3044c01589c1c23f3dbb27298e2"
+    }
+  ],
+  "bytes": 71875735
+}

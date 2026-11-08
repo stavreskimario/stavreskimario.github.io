@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "status": "READY FOR ROOT REVIEW: external-only source handoff and actual raw acceptance",
+  "files": {
+    "POST-BAKE-AUDIT.md": {
+      "bytes": 2471,
+      "sha256": "ff3cdaa156255dd11962671ffe3e84b12cbcbc3e39569e75a92f2f00e581c04e"
+    },
+    "README.md": {
+      "bytes": 6529,
+      "sha256": "628e687d65c8fe03cb011561052a5a2afe9443e59eb4612720b2101506df28b5"
+    },
+    "actual-bake-v2-source/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "actual-bake-v2-source/authored_lighting_uv_guard.py": {
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    "actual-bake-v2-source/bake_lighting.py": {
+      "bytes": 24234,
+      "sha256": "d367ec0b757d62aaafdd33eb29279c307b323b15326336a001b0643cc3405a2f"
+    },
+    "actual-bake-v2-source/baked_occlusion_binding.py": {
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    "actual-bake-v2-source/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    "actual-bake-v2-source/occluder_materials.py": {
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    "actual-bake-v2-source/order_lighting_uv.py": {
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    },
+    "actual-bake-v2-source/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    "actual-bake-v2-source/restore_imported_visibility.py": {
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    "actual-bake-v2-source/vault_lighting_uv.py": {
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+    },
+    "data/priority-lighting-uv.npy.gz": {
+      "bytes": 35704,
+      "sha256": "4084cddd77267a2cdfbccebbd2b6f155021dfbca8ef6f459f50cf9ffb7300321"
+    },
+    "input-identities.json": {
+      "bytes": 2695,
+      "sha256": "8ec8e22df3654a6fae5f64a0374ec9f686afd045b97b224ca73fbe1d99139266"
+    },
+    "patches/production-arrivals-preserve.patch": {
+      "bytes": 13704,
+      "sha256": "dc84c74c8c44a4943c5e6039eba8c9643b9e3e3215b4b4856c473089d1c8a336"
+    },
+    "patches/source-identities.json": {
+      "bytes": 1286,
+      "sha256": "e246a8c98952cb482de5f73b62751083c5aea413affcf5510708cccdd1166aba"
+    },
+    "proofs/actual-bake-report.json.gz": {
+      "bytes": 659150,
+      "sha256": "1719fc4d74e6966d850f0c739a79206c8b19eabb3bc0fc058349e32ad4c4eeb9"
+    },
+    "proofs/actual-frozen-bake-command.json.gz": {
+      "bytes": 5826,
+      "sha256": "9da23f59f3990eb0aa43d5a5e41fd641b2441dfcd5e2453837cfe05dd2612024"
+    },
+    "proofs/actual-v2-raw-acceptance-v2.json": {
+      "bytes": 8532,
+      "sha256": "88cd7d7aeaf58f7f7259081fa40abc5ffc075e57a4f5fb1e54a05194158ad7a0"
+    },
+    "proofs/actual-v2-raw-acceptance.json": {
+      "bytes": 8498,
+      "sha256": "403d5acf2cc0fa48639655dc6b981d9e025a687c73b1fe538497c4934f592fd0"
+    },
+    "proofs/atlas-review.json": {
+      "bytes": 9865,
+      "sha256": "b17094f44301f38a4c086e15fee708549801bd9622bc3497419147f3eb0244b7"
+    },
+    "proofs/current-retained-proof.json": {
+      "bytes": 2400,
+      "sha256": "172515895fb79c39fffc4418f1350e91144ca8da34218c11e121c3ab0f41841d"
+    },
+    "proofs/fresh-ao-export-proof.json": {
+      "bytes": 2972,
+      "sha256": "d3b7aa5b3364839e39dd7efa89c60c72faaf0de24fadfa9458fd57884e693594"
+    },
+    "proofs/full-context-preflight.json.gz": {
+      "bytes": 659198,
+      "sha256": "f5daac14e96f487a65bf5d488477a3b9bc0a2fb58dee73727845362af6d50a89"
+    },
+    "proofs/pack-integrity.json": {
+      "bytes": 937,
+      "sha256": "a099563cc14edef375efe62b771e9cf0b4136292bc7883275c29e994baccc745"
+    },
+    "proofs/portable-replay-pack-integrity.json": {
+      "bytes": 937,
+      "sha256": "a099563cc14edef375efe62b771e9cf0b4136292bc7883275c29e994baccc745"
+    },
+    "proofs/portable-replay-receipt.json": {
+      "bytes": 536,
+      "sha256": "920ded7c34817c6eb8da7a3d4615929af5ecfce217b8a2feb9a00431dce49ace"
+    },
+    "proofs/portable-replay-uv-only-proof.json": {
+      "bytes": 1719,
+      "sha256": "ff37bfe417cdc0457d4460fc6af56849a010d381427a9f04f6e7b3f385b0a9ca"
+    },
+    "proofs/production-patch-replay.json": {
+      "bytes": 1934,
+      "sha256": "402d4dac0eae9779d1ceb8bbb41db753e953d6db19b5eaf502767390242c9082"
+    },
+    "proofs/public-floor-preservation.json": {
+      "bytes": 877,
+      "sha256": "f80ae0cc413652575b0451a8ba6632edbeea2dc8329c296f930b1133f5a0c982"
+    },
+    "proofs/rebake-audit-regression-controls-v2.json": {
+      "bytes": 1382,
+      "sha256": "c9489ac39e3a8681a664e9938dd7f281ab24c860a79c2555f4aa11999bafcae7"
+    },
+    "proofs/rebake-audit-regression-controls.json": {
+      "bytes": 1241,
+      "sha256": "89fc7568f8b4d67a24da5ed7701b23632dc7dd70eb6b99b3a378a6310fe6c3e4"
+    },
+    "proofs/retained-lineage-comparison-resolved.json": {
+      "bytes": 2626,
+      "sha256": "fdf5f1acdaedaeacd48928881d354393cf5657fdc03aad0e6b9c77a4c227558d"
+    },
+    "proofs/runtime-base-MANIFEST.json": {
+      "bytes": 1226,
+      "sha256": "973a080e6d8a97194131878f7390b93739fe9b222688bc2189e5aa11aa31268f"
+    },
+    "proofs/runtime-base-original-append-replay-proof.json": {
+      "bytes": 2096,
+      "sha256": "bbc97521a40bafd8b5ba299f9613bcd7644fb6d225ae0938af34b3e6df8b33d5"
+    },
+    "proofs/runtime-base-retained-runtime-base-proof.json": {
+      "bytes": 10368,
+      "sha256": "0074df078faa8e849a95e7ad09103286da068c1e1a9fd905607c14a9ff01bc9b"
+    },
+    "proofs/uv-only-preservation-proof.json": {
+      "bytes": 1719,
+      "sha256": "ff37bfe417cdc0457d4460fc6af56849a010d381427a9f04f6e7b3f385b0a9ca"
+    },
+    "source/glb_surface_io.py": {
+      "bytes": 2278,
+      "sha256": "8d440d4ea926b8a9301af6cd12caca04f648e2d657346eb2f08383da323a1989"
+    },
+    "source/lighting_uv/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "source/lighting_uv/arrivals_atlas_priority.py": {
+      "bytes": 10507,
+      "sha256": "728b77e16e536e6248d81787d2b001ee9f12f151b8a8a397f0cf88bf92b7ae4f"
+    },
+    "source/lighting_uv/audit_arrivals_rebake.py": {
+      "bytes": 16730,
+      "sha256": "488a40cd1edd58e86f9036772e2df4ea73dc92ae305ed667e2ff863742f84b9e"
+    },
+    "source/lighting_uv/authored_lighting_uv_guard.py": {
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    "source/lighting_uv/bake_lighting.py": {
+      "bytes": 23902,
+      "sha256": "d0f95f9e2ab48d2357647fea1c437dac8b5c06ab1a538ee604d9abd0b6764432"
+    },
+    "source/lighting_uv/baked_occlusion_binding.py": {
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    "source/lighting_uv/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    "source/lighting_uv/occluder_materials.py": {
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    "source/lighting_uv/order_lighting_uv.py": {
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    },
+    "source/lighting_uv/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    "source/lighting_uv/restore_imported_visibility.py": {
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    "source/lighting_uv/test_rebake_audit_controls.py": {
+      "bytes": 3381,
+      "sha256": "be972f116ec440432ee5c43acda36d74307107142aa30d3560d8ff369fd0569c"
+    },
+    "source/lighting_uv/validate_priority_pack.py": {
+      "bytes": 3028,
+      "sha256": "f486a6c5ba3cdd4e3421f5851171fd5a077032d909f2f58155aff84087ee18a7"
+    },
+    "source/lighting_uv/vault_lighting_uv.py": {
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+    },
+    "source/lighting_uv/write_uv_only_candidate.py": {
+      "bytes": 3713,
+      "sha256": "d8e9b259304373370131acb3423c1ed349f8fbb77cf0ae128ad28d693cb4d274"
+    }
+  },
+  "largeBinaryInputsBundled": false,
+  "gpuOperationsByThisTask": 0,
+  "repositoryWritesByThisTask": 0,
+  "actualRuntimePublicationByThisTask": false
+}

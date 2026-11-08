@@ -1,0 +1,139 @@
+{
+  "scope": "Observed native-session long operations. No causal attribution or FPS certification. Playwright pinned waitForTimeout uses Node-side setTimeout; browser and controller may share host scheduling pressure.",
+  "functionalStatus": "PASS: native Main\u2192departure\u2192platform\u2192Eastarrival\u2192ExitN/Saisles\u2192Westarrival\u2192platform\u2192Main",
+  "delayCause": "Unassigned",
+  "events": [
+    {
+      "label": "pulse-wait:exit-north-cross-aisle",
+      "monotonicMs": 6686.815667000003,
+      "wallMs": 6687,
+      "phase": "exit-north-cross-aisle",
+      "bracketingSampleGapMs": 6715.642957999997,
+      "before": {
+        "elapsedMs": 1410.4058750000113,
+        "wallElapsedMs": 1411,
+        "camera": [
+          -61.73829763133747,
+          -5.787227535211418,
+          -31.968447013509667
+        ],
+        "renderFrame": 4599,
+        "floor": -7.467227535211418
+      },
+      "after": {
+        "elapsedMs": 8126.048833000008,
+        "wallElapsedMs": 8126,
+        "camera": [
+          -62.53673055518776,
+          -5.787227535211418,
+          -31.971946917226365
+        ],
+        "renderFrame": 4605,
+        "floor": -7.467227535211418
+      },
+      "renderFrameAdvance": 6,
+      "xzProgressM": 0.7984405946682276,
+      "lastBlocked": null,
+      "lastSupportMiss": null
+    },
+    {
+      "label": "pulse-wait:exit-west-aisle-south-5",
+      "monotonicMs": 4173.744833000004,
+      "wallMs": 4174,
+      "phase": "exit-west-aisle-south-5",
+      "bracketingSampleGapMs": 4204.167416000011,
+      "before": {
+        "elapsedMs": 7978.851291999992,
+        "wallElapsedMs": 7979,
+        "camera": [
+          -69.00035246808073,
+          -5.787227535211418,
+          52.31308395264916
+        ],
+        "renderFrame": 7382,
+        "floor": -7.467227535211418
+      },
+      "after": {
+        "elapsedMs": 12183.018708000003,
+        "wallElapsedMs": 12183,
+        "camera": [
+          -69.00035246808073,
+          -5.787227535211418,
+          53.00136587079555
+        ],
+        "renderFrame": 7385,
+        "floor": -7.467227535211418
+      },
+      "renderFrameAdvance": 3,
+      "xzProgressM": 0.6882819181463944,
+      "lastBlocked": null,
+      "lastSupportMiss": null
+    },
+    {
+      "label": "pulse-wait:exit-east-aisle-return-p5-4",
+      "monotonicMs": 11701.757042000012,
+      "wallMs": 11702,
+      "phase": "exit-east-aisle-return-p5-4",
+      "bracketingSampleGapMs": 11735.999249999993,
+      "before": {
+        "elapsedMs": 4697.462667000014,
+        "wallElapsedMs": 4697,
+        "camera": [
+          -58.99996128887257,
+          -5.787227535211418,
+          15.396466155975597
+        ],
+        "renderFrame": 8981,
+        "floor": -7.467227535211418
+      },
+      "after": {
+        "elapsedMs": 16433.461917000008,
+        "wallElapsedMs": 16433,
+        "camera": [
+          -58.99996128887257,
+          -5.787227535211418,
+          14.70516462243494
+        ],
+        "renderFrame": 8983,
+        "floor": -7.467227535211418
+      },
+      "renderFrameAdvance": 2,
+      "xzProgressM": 0.6913015335406563,
+      "lastBlocked": null,
+      "lastSupportMiss": null
+    },
+    {
+      "label": "pulse-wait:platform-east-return-bypass-stairs-3",
+      "monotonicMs": 1445.594333999994,
+      "wallMs": 1446,
+      "phase": "platform-east-return-bypass-stairs-3",
+      "bracketingSampleGapMs": 1479.895124999981,
+      "before": {
+        "elapsedMs": 4835.413375000004,
+        "wallElapsedMs": 4836,
+        "camera": [
+          -37.606972837718146,
+          -10.302399991334408,
+          15.349473930005603
+        ],
+        "renderFrame": 10861,
+        "floor": -11.982399991334407
+      },
+      "after": {
+        "elapsedMs": 6315.308499999985,
+        "wallElapsedMs": 6316,
+        "camera": [
+          -36.92604104313641,
+          -10.302399991334408,
+          15.349473930005603
+        ],
+        "renderFrame": 10864,
+        "floor": -11.982399991334407
+      },
+      "renderFrameAdvance": 3,
+      "xzProgressM": 0.6809317945817384,
+      "lastBlocked": null,
+      "lastSupportMiss": null
+    }
+  ]
+}

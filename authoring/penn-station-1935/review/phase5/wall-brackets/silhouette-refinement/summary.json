@@ -1,0 +1,897 @@
+{
+  "scope": "Matched actual-browser native crops of cup/finial radial tessellation only only; no palette/exposure/pixel changes requested. Natural settled exposure is recorded.",
+  "sameAppSourceHashes": true,
+  "errors": [],
+  "records": [
+    {
+      "name": "bracket-west",
+      "camera": {
+        "position": [
+          -12.5,
+          4.7,
+          29
+        ],
+        "quaternion": [
+          -0.03699071094559687,
+          0.6050809085366107,
+          0.028160818681996245,
+          0.7948054791704754
+        ],
+        "fov": 42
+      },
+      "oldCamera": {
+        "position": [
+          -12.5,
+          4.7,
+          29
+        ],
+        "quaternion": [
+          -0.03699071094559687,
+          0.6050809085366107,
+          0.028160818681996245,
+          0.7948054791704754
+        ],
+        "fov": 42
+      },
+      "sourceFile": "candidate-bracket-west.png",
+      "nativeCrop": "native-bracket-west-crop.png",
+      "preview": "bracket-west-before-after.webp",
+      "previewBytes": 17038,
+      "previewSha256": "9f00f58b77c80fa44a4967dc5e697108c84e18af41024219183d925a05be0644",
+      "exposure": 4.1539040546185175,
+      "oldExposure": 4.159620167347328,
+      "scene": {
+        "id": "b08d7201-aad7-4c0f-8080-c41516837604",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "83b538bf-b414-4c71-82bc-caefec1f8823",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "154cbb8f-da42-43f5-82b0-b170cf5417f1",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "1f971d42-f365-4727-8042-9515c262bcfb",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "8bd7192a-b7b4-481e-b008-232aa53f97e9",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "2923c3c8-fac5-4b47-a6b7-eef2818a59b0",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "cc28d55e-653d-4da1-95dd-ac9c68d669aa",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              529.3715276488874,
+              276.00302725161504
+            ],
+            "max": [
+              975.3708772630362,
+              637.796729828505
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              324.002569245248,
+              316.96860738957605
+            ],
+            "max": [
+              372.93029754176143,
+              353.70061570719463
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_\u2014_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_\u2014_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "hiddenMeshes": []
+    },
+    {
+      "name": "bracket-east",
+      "camera": {
+        "position": [
+          12.5,
+          4.7,
+          27.3
+        ],
+        "quaternion": [
+          -0.02825505989374628,
+          -0.7937132715904318,
+          -0.0369762050917037,
+          0.6065094016984655
+        ],
+        "fov": 42
+      },
+      "oldCamera": {
+        "position": [
+          12.5,
+          4.7,
+          27.3
+        ],
+        "quaternion": [
+          -0.02825505989374628,
+          -0.7937132715904318,
+          -0.0369762050917037,
+          0.6065094016984655
+        ],
+        "fov": 42
+      },
+      "sourceFile": "candidate-bracket-east.png",
+      "nativeCrop": "native-bracket-east-crop.png",
+      "preview": "bracket-east-before-after.webp",
+      "previewBytes": 16922,
+      "previewSha256": "56d41d869f5345e9f61c2019a2f80be4ca94e4f7dd3a9174111179d12045f627",
+      "exposure": 4.159751515830919,
+      "oldExposure": 4.159620167347328,
+      "scene": {
+        "id": "b08d7201-aad7-4c0f-8080-c41516837604",
+        "zones": [
+          {
+            "name": "exterior",
+            "id": "83b538bf-b414-4c71-82bc-caefec1f8823",
+            "visible": true,
+            "meshes": 11
+          },
+          {
+            "name": "waiting",
+            "id": "154cbb8f-da42-43f5-82b0-b170cf5417f1",
+            "visible": true,
+            "meshes": 19
+          },
+          {
+            "name": "concourse",
+            "id": "1f971d42-f365-4727-8042-9515c262bcfb",
+            "visible": true,
+            "meshes": 16
+          },
+          {
+            "name": "context",
+            "id": "8bd7192a-b7b4-481e-b008-232aa53f97e9",
+            "visible": true,
+            "meshes": 37
+          },
+          {
+            "name": "platform",
+            "id": "2923c3c8-fac5-4b47-a6b7-eef2818a59b0",
+            "visible": true,
+            "meshes": 17
+          },
+          {
+            "name": "trains",
+            "id": "cc28d55e-653d-4da1-95dd-ac9c68d669aa",
+            "visible": true,
+            "meshes": 16
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "name": "Photo-supported_west_wall_bracket",
+          "anchor": [
+            -15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              -15.654999732971191,
+              4.052800380277634,
+              27.643999099731445
+            ],
+            "max": [
+              -15.11499971151352,
+              4.85280036239624,
+              28.64399915933609
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              329.3640426763619,
+              316.8968168820427
+            ],
+            "max": [
+              378.14870827018456,
+              353.5817182521483
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes001",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork001",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                -15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Photo-supported_east_wall_bracket",
+          "anchor": [
+            15.654999732971191,
+            4.332800381469727,
+            28.143999099731445
+          ],
+          "bounds": {
+            "min": [
+              15.114999667802126,
+              4.052800380277634,
+              27.6439990593598
+            ],
+            "max": [
+              15.654999776245466,
+              4.85280036239624,
+              28.64399914693975
+            ]
+          },
+          "screenBounds": {
+            "min": [
+              529.1742806659594,
+              275.83985068641306
+            ],
+            "max": [
+              975.3471229630081,
+              637.8920517580935
+            ]
+          },
+          "meshes": [
+            {
+              "name": "Photographed_bracket_globes002",
+              "visible": true,
+              "material": "OpalCandelabraGlass",
+              "color": [
+                0.9399999976158142,
+                0.9300000071525574,
+                0.8899999856948853
+              ],
+              "roughness": 0.30000001192092896,
+              "metalness": 0,
+              "transmission": 0.18000000715255737,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            },
+            {
+              "name": "Photographed_bracket_metalwork002",
+              "visible": true,
+              "material": "AgedBronze",
+              "color": [
+                0.1899999976158142,
+                0.14000000059604645,
+                0.08500000089406967
+              ],
+              "roughness": 0.4699999988079071,
+              "metalness": 0.6499999761581421,
+              "transmission": 0,
+              "opacity": 1,
+              "side": 2,
+              "position": [
+                15.654999732971191,
+                4.332800381469727,
+                28.143999099731445
+              ]
+            }
+          ]
+        }
+      ],
+      "wallSupport": [
+        {
+          "side": -1,
+          "hits": [
+            {
+              "point": [
+                -15.65483991316918,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6548399131691802,
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_\u2014_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "hits": [
+            {
+              "point": [
+                15.655325567892946,
+                4.332800000000002,
+                28.144
+              ],
+              "distance": 0.6553255678929464,
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "object": "02_Main_waiting_room_\u2014_PublicFloorMarble_4",
+              "material": "Travertine"
+            }
+          ]
+        }
+      ],
+      "hiddenMeshes": []
+    }
+  ],
+  "module": {
+    "scope": "Only cup/finial radial tessellation only; old profile control points and all placement/material records exact",
+    "oldSha256": "e3cbbaff65d1dc5794983105ce67c9c9662d54bc360f39e11622c39db03c4498",
+    "newSha256": "f8a9a468b6b2143a41509c243d37affa6d03c0f82edf7bab7566cfea4352f026",
+    "oldBytes": 235428,
+    "newBytes": 310020,
+    "oldInstancedTriangles": 21824,
+    "newInstancedTriangles": 28992,
+    "oldGeometry": [
+      {
+        "mesh": "Sphere",
+        "triangles": 3680,
+        "nonManifoldEdges": 0,
+        "signedVolume": 0.03402748046612696,
+        "trianglesSha256": "4143ece23b83d752894c4526a946484013b68ed9e66c600ddc3461981daa0157"
+      },
+      {
+        "mesh": "Round moulded wall rosette",
+        "triangles": 7232,
+        "nonManifoldEdges": 0,
+        "signedVolume": 0.03943264079602211,
+        "trianglesSha256": "3dd407fff1ca34a5e415ad123a1fed214f8a2e6cd6b774e357b0590e79186318"
+      }
+    ],
+    "newGeometry": [
+      {
+        "mesh": "Sphere",
+        "triangles": 3680,
+        "nonManifoldEdges": 0,
+        "signedVolume": 0.03402748046612698,
+        "trianglesSha256": "4143ece23b83d752894c4526a946484013b68ed9e66c600ddc3461981daa0157"
+      },
+      {
+        "mesh": "Round moulded wall rosette",
+        "triangles": 10816,
+        "nonManifoldEdges": 0,
+        "signedVolume": 0.039466724551993064,
+        "trianglesSha256": "a2e9d161ac0a0b43ba1dcd58d0799723f1f6a6a111f3958367659f245ebf6893"
+      }
+    ],
+    "oldBounds": [
+      {
+        "name": "Photographed bracket globes.001",
+        "min": [
+          -15.434999853372574,
+          8.320000380277634,
+          27.643999099731445
+        ],
+        "max": [
+          -15.11499971151352,
+          8.640000380575657,
+          28.64399915933609
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.001",
+        "min": [
+          -15.654999732971191,
+          8.382000386714935,
+          27.648999094963074
+        ],
+        "max": [
+          -15.119999706745148,
+          9.12000036239624,
+          28.638999104499817
+        ]
+      },
+      {
+        "name": "Photographed bracket globes.002",
+        "min": [
+          15.114999681789772,
+          8.320000380277634,
+          27.64399907334745
+        ],
+        "max": [
+          15.43499988309632,
+          8.640000380575657,
+          28.6439991329521
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.002",
+        "min": [
+          15.119999677021404,
+          8.382000386714935,
+          27.64899912818373
+        ],
+        "max": [
+          15.654999747833063,
+          9.12000036239624,
+          28.63899913772047
+        ]
+      }
+    ],
+    "newBounds": [
+      {
+        "name": "Photographed bracket globes.001",
+        "min": [
+          -15.434999853372574,
+          8.320000380277634,
+          27.643999099731445
+        ],
+        "max": [
+          -15.11499971151352,
+          8.640000380575657,
+          28.64399915933609
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.001",
+        "min": [
+          -15.654999732971191,
+          8.382000386714935,
+          27.648999094963074
+        ],
+        "max": [
+          -15.119999706745148,
+          9.12000036239624,
+          28.638999104499817
+        ]
+      },
+      {
+        "name": "Photographed bracket globes.002",
+        "min": [
+          15.114999681789772,
+          8.320000380277634,
+          27.64399907334745
+        ],
+        "max": [
+          15.43499988309632,
+          8.640000380575657,
+          28.6439991329521
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.002",
+        "min": [
+          15.119999677021404,
+          8.382000386714935,
+          27.64899912818373
+        ],
+        "max": [
+          15.654999747833063,
+          9.12000036239624,
+          28.63899913772047
+        ]
+      }
+    ],
+    "boundsDifferences": [
+      {
+        "name": "Photographed bracket globes.001",
+        "minDelta": [
+          0,
+          0,
+          0
+        ],
+        "maxDelta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.001",
+        "minDelta": [
+          0,
+          0,
+          0
+        ],
+        "maxDelta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Photographed bracket globes.002",
+        "minDelta": [
+          0,
+          0,
+          0
+        ],
+        "maxDelta": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Photographed bracket metalwork.002",
+        "minDelta": [
+          0,
+          0,
+          0
+        ],
+        "maxDelta": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "placementAndMaterialJsonExact": true,
+    "globesDecodedExact": true,
+    "unchangedComponents": [
+      "Round moulded wall rosette",
+      "Swept projecting central support",
+      "Curved twin crossarm",
+      "Downward pale globe",
+      "Downward pale globe.001"
+    ],
+    "contactPoints": [
+      {
+        "label": "Support root in rosette",
+        "support": "Round moulded wall rosette",
+        "pointMaster": [
+          0.035,
+          0,
+          -0.02
+        ],
+        "nearestDistance": 0.017000000923871994,
+        "outwardSignedDistance": -0.017000000923871994,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Support tip in central stem",
+        "support": "Central stepped stem and modest finial",
+        "pointMaster": [
+          0.37,
+          0,
+          0.34
+        ],
+        "nearestDistance": 0.06961764395236969,
+        "outwardSignedDistance": -0.06961764767765999,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Crossarm centre in central stem",
+        "support": "Central stepped stem and modest finial",
+        "pointMaster": [
+          0.37,
+          0,
+          0.38
+        ],
+        "nearestDistance": 0.054765861481428146,
+        "outwardSignedDistance": -0.05476586474105716,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Crossarm end meets lamp cup",
+        "support": "Downward stepped lamp cup",
+        "pointMaster": [
+          0.38,
+          -0.34,
+          0.33
+        ],
+        "nearestDistance": 0,
+        "outwardSignedDistance": 0,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Globe crown seated in lamp cup",
+        "support": "Downward stepped lamp cup",
+        "pointMaster": [
+          0.38,
+          -0.34,
+          0.04
+        ],
+        "nearestDistance": 0.004999998956918716,
+        "outwardSignedDistance": -0.004999998956918716,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Crossarm end meets lamp cup",
+        "support": "Downward stepped lamp cup.001",
+        "pointMaster": [
+          0.38,
+          0.34,
+          0.33
+        ],
+        "nearestDistance": 0,
+        "outwardSignedDistance": 0,
+        "touchesOrInside": true
+      },
+      {
+        "label": "Globe crown seated in lamp cup",
+        "support": "Downward stepped lamp cup.001",
+        "pointMaster": [
+          0.38,
+          0.34,
+          0.04
+        ],
+        "nearestDistance": 0.004999998956918716,
+        "outwardSignedDistance": -0.004999998956918716,
+        "touchesOrInside": true
+      }
+    ],
+    "errors": 0,
+    "warnings": 0,
+    "canonicalUpdateNeeded": "Replace the existing two bracket parent assemblies in the combined canonical scene with this refined module; lower Main0 by4.2672m exactly once. Do not append duplicates."
+  },
+  "assembly": {
+    "models": [
+      {
+        "file": "model-waiting-room.glb.gz",
+        "inputSha256": "4b2a0a96d3d9f84c21a0f41d6b941deea1260be82b93ed50567604ce71943464",
+        "outputSha256": "84c804b4af603fb70e813460491347b28be878320df0e38f51df3a857b5138ae",
+        "bytes": 9501693,
+        "decodedBytes": 17809240,
+        "decodedSha256": "d2062594fd563c145921d9a1dcbe396ec38137d43fc034156b00d7c8f54d1bd9",
+        "errors": 0,
+        "warnings": 37,
+        "fixtureParentCount": 2,
+        "materialBindingsExact": true
+      },
+      {
+        "file": "model-waiting-room-low.glb.gz",
+        "inputSha256": "eb9b5997195a17c11195bb62cc9e1a4b5d01bec96712361584fc17b2f6528569",
+        "outputSha256": "b62ff60dfffa157b3dcebf221d95a2b088d3f634815b175e95aa7bbe6838309f",
+        "bytes": 8413594,
+        "decodedBytes": 13403588,
+        "decodedSha256": "beb1e3e2313df8827a5193b88031eda2f5da8b9279708a1047801ddd0f7fe5e7",
+        "errors": 0,
+        "warnings": 37,
+        "fixtureParentCount": 2,
+        "materialBindingsExact": true
+      }
+    ],
+    "unchangedOtherModels": [
+      "model-exterior.glb.gz",
+      "model-exterior-low.glb.gz",
+      "model-concourse.glb.gz",
+      "model-concourse-low.glb.gz",
+      "model-context.glb.gz",
+      "model-context-low.glb.gz",
+      "model-platform.glb.gz",
+      "model-platform-low.glb.gz",
+      "model-trains.glb.gz",
+      "model-trains-low.glb.gz"
+    ],
+    "texturesReencoded": 0,
+    "finishBindingsExact": true,
+    "canonicalSourceUpdatePending": true,
+    "metricBytes": 163339980,
+    "waitingTransportDelta": 59852
+  },
+  "acceptedRevision": "radial-only 64\u2192128 on cups/finial; no bevel",
+  "visualReview": "Matched native crops retain the original smooth profile shading without the bevel experiment banding. Remaining dark bronze appearance is unchanged/qualified. Only radial polygon stepping is reduced; no claim of complete photorealism.",
+  "canonicalSourceCandidate": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase5-source-fixture-radial/penn-station-phase5.blend",
+    "sha256": "b446877d1311f0f6c9d5acb3d503e6105c1b39e8f2050e4311d5be2458ac3f1d",
+    "bytes": 72553533,
+    "worldBoundsVerifiedAgainstRawModule": true
+  }
+}

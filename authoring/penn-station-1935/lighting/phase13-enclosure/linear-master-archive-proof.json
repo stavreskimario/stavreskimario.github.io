@@ -1,0 +1,22 @@
+{
+  "status": "PASS exact lossless gzip of actual physical probe float master; runtime metadata-only derivation",
+  "source": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/reflection/source-linear.exr",
+  "archive": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/reflection/reflection-platform-enclosure-linear.exr.gz",
+  "master": {
+    "authoringDirectory": "authoring/penn-station-1935/lighting/phase13-enclosure/reflections",
+    "archiveFile": "reflection-platform-enclosure-linear.exr.gz",
+    "archiveBytes": 24158394,
+    "archiveSha256": "0a13adf280c539777235c25a708443069fbac094e2a3441c746746109e366fa8",
+    "rawBytes": 24166491,
+    "rawSha256": "3d330c5cb576acfbb486c1fc4010bf01912672d911492476341152bad265e732",
+    "width": 2048,
+    "height": 1024,
+    "channels": "RGBA",
+    "bitDepth": 32,
+    "transfer": "scene-linear OpenEXR float master",
+    "relationship": "This exact master is the input to the explicit linear Radiance RGBE writer in capture-local-reflection-v2.py; full and low HDR hashes/roundtrip errors remain unchanged."
+  },
+  "actualProbeReportSha256": "60a8c29c82a7ae68c12d11d0fed842c7dafc7cb56c99d45b3279470fa1c01627",
+  "derivedProbeReport": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/prepared-metadata/reflection-platform-enclosure-probe.json",
+  "derivedProbeReportSha256": "0b89ea7ec5278096d47047a2f05ed780fb645dfaa3590f319976218b78608d6c"
+}

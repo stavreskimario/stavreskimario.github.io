@@ -1,0 +1,64 @@
+{
+  "created": "2026-10-29T10:03:38.697Z",
+  "status": "passed",
+  "helperSha256": "f802cec0324921f9f7be9b9f15f73a3cf80a1709d1ab78a700cd24706af201d0",
+  "selection": "lighting-waiting-room-order-sky.png",
+  "source": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/source-4k.glb",
+    "sha256": "dcb58fd05a60da3dd06395ab2860711e0237a71bc0ca3052aec02f410c3c01e3"
+  },
+  "input": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/restored.glb",
+    "sha256": "ae9bbb7caada25ff27a632955a9867b4c31d00f8cb222d26376b1c573c0e0284"
+  },
+  "output": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/order-ao-controls/repeat.glb",
+    "sha256": "ae9bbb7caada25ff27a632955a9867b4c31d00f8cb222d26376b1c573c0e0284"
+  },
+  "materials": [
+    {
+      "material": "OrderCapitalFixture",
+      "imageIndex": 0,
+      "bufferView": 0,
+      "beforeSize": [
+        4096,
+        4096
+      ],
+      "restoredSize": [
+        4096,
+        4096
+      ],
+      "sourceImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+      "beforeImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+      "sourceBytes": 2037702,
+      "beforeBytes": 2037702
+    },
+    {
+      "material": "OrderPilasterFixture",
+      "imageIndex": 0,
+      "bufferView": 0,
+      "beforeSize": [
+        4096,
+        4096
+      ],
+      "restoredSize": [
+        4096,
+        4096
+      ],
+      "sourceImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+      "beforeImageSha256": "5511b2efb8383bca25af1c183646be7e11e5e3fcf2ff40da60a333757dddefac",
+      "sourceBytes": 2037702,
+      "beforeBytes": 2037702
+    }
+  ],
+  "restoredImages": 0,
+  "imageCount": 4,
+  "textureCount": 4,
+  "unchangedBinaryViews": 5,
+  "unchangedBinaryViewsSha256": "38983c1327375c333738cfd4cabeeb9dddfabb2aa5e974caf763ad22d880b76c",
+  "beforeBytes": 2932800,
+  "afterBytes": 2932800,
+  "verbatimInput": true,
+  "geometryUVNormalMaterialBindingsUnchanged": true,
+  "otherImagesUnchanged": true
+}

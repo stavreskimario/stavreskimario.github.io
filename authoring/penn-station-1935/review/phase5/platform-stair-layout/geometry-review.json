@@ -1,0 +1,364 @@
+{
+  "scope": "Read-only actual907 train-access stair/wall audit. Physical samples only; not historical placement or code-clearance certification. No models/source/browser changes.",
+  "axes": "Runtime X east,Y up,Z south,metres; concourse/platform raw chunks lowered4.2672m exactly once.",
+  "hashes": {
+    "model-concourse.glb.gz": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+    "model-platform.glb.gz": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+    "model-concourse-low.glb.gz": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+    "model-platform-low.glb.gz": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+    "scene-manifest.json": "2198c77988f86d73944425e4a6195653d904b1e503660a8467c93dedeab10c6c"
+  },
+  "fullLowMeasuredResultsAgree": true,
+  "opaqueEnclosureSelection": "BedfordLimestoneConcourse and opaque office backing; tall axis-facing Travertine/Milford masonry faces. Glass and iron/bronze rails/guards are excluded as walls. Overhead checks additionally include actual iron/bronze stair parts and platform fitting geometry.",
+  "commonGeometry": {
+    "mainHeadX": -42.2563,
+    "mainHeadY": -4.2672,
+    "mainFootX": -47.9563,
+    "mainFootY": -7.4676,
+    "mainRunM": 5.7,
+    "mainWidthM": 3.0,
+    "mainDirection": "Current model starts HIGH beside east wall and descends WEST toward court.",
+    "firstDoglegX": [
+      -48.9563,
+      -53.4563
+    ],
+    "firstDoglegZOffset": 0.83,
+    "firstDoglegDirection": "west/down",
+    "returnDoglegX": [
+      -53.4563,
+      -48.9563
+    ],
+    "returnDoglegZOffset": -0.83,
+    "returnDirection": "east/down",
+    "doglegWidthM": 1.45,
+    "turningLandingXZRelativeToHeadZ": [
+      -54.4563,
+      -53.4563,
+      -1.65,
+      1.65
+    ],
+    "turningLandingNominalY": -9.7266125,
+    "lowerLandingXZRelativeToHeadZ": [
+      -48.9563,
+      -48.0563,
+      -1.65,
+      1.65
+    ],
+    "lowerLandingNominalY": -11.985625
+  },
+  "heads": [
+    {
+      "modelFamily": 1,
+      "headZ": 68.764528,
+      "minimumHeadBackOpaqueStoneGapM": null,
+      "centreEyeBackOpaqueGapM": null,
+      "centreEyeHitMaterial": null,
+      "wallScopeIfNone": "No opaque stone/backing hit within10m; head6 is the axial passage, heads1/2 are outside the320ft enclosure",
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 2,
+      "headZ": 54.791453,
+      "minimumHeadBackOpaqueStoneGapM": null,
+      "centreEyeBackOpaqueGapM": null,
+      "centreEyeHitMaterial": null,
+      "wallScopeIfNone": "No opaque stone/backing hit within10m; head6 is the axial passage, heads1/2 are outside the320ft enclosure",
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 3,
+      "headZ": 40.818378,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.3770417179500782,
+      "centreEyeHitMaterial": "ConcourseUnmodelledOfficeBacking",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 4,
+      "headZ": 27.149065,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.1251889413632625,
+      "centreEyeHitMaterial": "BedfordLimestoneConcourse",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733372,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 5,
+      "headZ": 13.32787,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.3770417179500782,
+      "centreEyeHitMaterial": "ConcourseUnmodelledOfficeBacking",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733374,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 6,
+      "headZ": -0.341443,
+      "minimumHeadBackOpaqueStoneGapM": null,
+      "centreEyeBackOpaqueGapM": null,
+      "centreEyeHitMaterial": null,
+      "wallScopeIfNone": "No opaque stone/backing hit within10m; head6 is the axial passage, heads1/2 are outside the320ft enclosure",
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733374,
+        4.214731626450663
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 7,
+      "headZ": -13.555112,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.3770417179500782,
+      "centreEyeHitMaterial": "ConcourseUnmodelledOfficeBacking",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 8,
+      "headZ": -27.224425,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.1251889413632625,
+      "centreEyeHitMaterial": "BedfordLimestoneConcourse",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450663
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    },
+    {
+      "modelFamily": 9,
+      "headZ": -40.32146,
+      "minimumHeadBackOpaqueStoneGapM": 1.1251889413632625,
+      "centreEyeBackOpaqueGapM": 1.3770417179500782,
+      "centreEyeHitMaterial": "ConcourseUnmodelledOfficeBacking",
+      "wallScopeIfNone": null,
+      "turningGridClearanceM": [
+        1.9595913406359484,
+        1.9595913406359484
+      ],
+      "turningFirstHitMaterials": [
+        "PublicFloorMarble"
+      ],
+      "platformGridClearanceM": [
+        4.155481028733373,
+        4.214731626450664
+      ],
+      "platformFirstHitMaterials": [
+        "PaintedStructuralIron",
+        "PublicFloorMarble"
+      ],
+      "testedLowerLandingOpaqueWallHitsWithin10m": 0
+    }
+  ],
+  "actualP5DescentSamples": [
+    {
+      "x": -42.406299999999995,
+      "actualTopY": -4.268240311256523,
+      "material": "Travertine"
+    },
+    {
+      "x": -45.1063,
+      "actualTopY": -5.7837754405420485,
+      "material": "Travertine"
+    },
+    {
+      "x": -47.80629999999999,
+      "actualTopY": -7.299310569827575,
+      "material": "Travertine"
+    },
+    {
+      "x": -48.4563,
+      "actualTopY": -7.4672124208854465,
+      "material": "PublicFloorMarble"
+    }
+  ],
+  "headroomMethod": {
+    "samplesPerTurningLanding": 25,
+    "samplesPerPlatformLanding": 25,
+    "landingEdgeInsetM": 0.05,
+    "fullAndLow": true,
+    "ray": "Actual first stone/slab/iron/bronze/fitting intersection above the sampled floor; tread undersides compete naturally with exit slab.",
+    "turningCentreExample": {
+      "floorY": -9.727259705519693,
+      "firstHit": {
+        "distance": 1.9295913406359493,
+        "point": [
+          -53.9563,
+          -7.767668364883744,
+          68.764528
+        ],
+        "material": "PublicFloorMarble",
+        "zone": "concourse",
+        "node": 2,
+        "primitive": 0,
+        "triangle": 14,
+        "normal": [
+          0,
+          -1,
+          0
+        ]
+      },
+      "clearanceM": 1.9595913406359484
+    },
+    "result": "All225turning samples pervariant hit the exit floor slab/PublicFloorMarble first at1.959591m. No overhead flight was closer at these samples. Platform samples find slab or iron fitting at4.155481\u20264.218m. This does not certify unsampled edge strips or an entire body volume."
+  },
+  "separateCirculationObservations": {
+    "subsidiaryWallEndPinchM": 0.7562467160124271,
+    "pinchLocationZ": [
+      -8.6,
+      -8.2,
+      -7.8,
+      7.8,
+      8.2,
+      8.6
+    ],
+    "pinchMeaning": "Measured gap between the east edge of the source stair-opening line and west end of subsidiary masonry, excluding posts/rails; reconstructed approach pinch, not a regulatory test.",
+    "transverseWall": {
+      "worldZ": 48.49270566737214,
+      "worldEyeY": -2.5872,
+      "testedX": [
+        -104,
+        -99,
+        -90,
+        -80,
+        -70,
+        -60,
+        -50,
+        -43,
+        -41.5
+      ],
+      "allTestedCrossingsHitOpaqueStone": true,
+      "meaning": "Current wall crosses every tested direct Main-floor path from the320ft court toward the two peripheral positive-Z heads. This does not establish absence of every alternative route or historical correctness."
+    }
+  },
+  "dimensionalStatus": {
+    "sourceAnchors": "21tracks/11platform topology and platform elevation3ft10in above rail; nine headZ centres traced from Gibbs243. See separate primary-evidence review for top-flight direction.",
+    "reconstructed": "HeadX/setback, individual3m/1.45m widths,5.7m/4.5m runs,19/15step counts, uniform switchback/landing registration and10ft6in Exit datum are working reconstructions.1.9596m headroom is a consequence of those choices, not a historical dimension.",
+    "historicalConclusion": "Physical walking/support tests do not verify placement. Independent primary audit now supports courtward high ends and eastward descent; current top-flight orientation is the opposite. No correction was made here."
+  },
+  "rawReceipts": {
+    "wallAndSupportRays": {
+      "retainedOutsideRepository": "stair-wall-audit/report.json",
+      "sha256": "4fe84d649acf84d7f679164055f94745b5274cdb8bee51da4f2505858bee0818"
+    },
+    "boundedOverheadGrid": {
+      "retainedOutsideRepository": "stair-wall-audit/headroom-grid-report.json",
+      "sha256": "b064251e25922116b84aa899b35b5baee9f2b421ca8898ffe5989c7b21c96883"
+    }
+  },
+  "originalReceiptSha256": "e42e774c0b8cdf3df440d6d265807628853aa77cb6799862ee879b35954aab59"
+}

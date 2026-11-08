@@ -1,0 +1,49 @@
+{
+  "source": "build_station.py",
+  "sourceSha256": "010b42068b71bb6a152de0b5b582516e3d970f487c7f1ccd5781a128cf7071eb",
+  "scope": "Exact authored40-row leaf centre/radial sections: existing back shell is a fixed55mm radial extrusion while the front profile turns downward near the tip. The flat end closure intersects an earlier front row. No source geometry changed.",
+  "results": [
+    {
+      "rank": 0,
+      "s": 0,
+      "tipZAboveCapStart": 1.29,
+      "tipClosureRadius": [
+        1.3031000000000001,
+        1.3581
+      ],
+      "earlierFrontIntersections": [
+        {
+          "frontSegment": [
+            36,
+            37
+          ],
+          "intersectionRadius": 1.3284063822950538,
+          "insideTipClosure": true,
+          "radialPenetrationFromClosureBack": 0.025306382295053664,
+          "radialPenetrationFromClosureFront": 0.029693617704946274
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "s": 0,
+      "tipZAboveCapStart": 2.05,
+      "tipClosureRadius": [
+        1.4833333333333334,
+        1.5383333333333333
+      ],
+      "earlierFrontIntersections": [
+        {
+          "frontSegment": [
+            36,
+            37
+          ],
+          "intersectionRadius": 1.508639715628387,
+          "insideTipClosure": true,
+          "radialPenetrationFromClosureBack": 0.025306382295053664,
+          "radialPenetrationFromClosureFront": 0.029693617704946274
+        }
+      ]
+    }
+  ]
+}

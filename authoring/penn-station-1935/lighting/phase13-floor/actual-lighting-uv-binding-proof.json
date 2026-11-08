@@ -1,0 +1,104 @@
+{
+  "status": "PASS unique new active/explicit bake UV and exported AO/runtime lightmap channel match",
+  "sourceGLBHasOldUV1": false,
+  "preparedUVLayerNames": [
+    "UVMap",
+    "BakedLightingUV"
+  ],
+  "activeUVAtPreparedScene": "BakedLightingUV",
+  "explicitBakeUv": "BakedLightingUV",
+  "exportedBindings": [
+    {
+      "material": "GraniteCapstoneEighthAvenueBridge",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 3
+    },
+    {
+      "material": "StructuralConcreteEighthAvenueBridge",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 8
+    },
+    {
+      "material": "PaintedStructuralIronEighthAvenueBridge",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 13
+    },
+    {
+      "material": "BuriedWaterproofingEighthAvenueBridge",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 18
+    },
+    {
+      "material": "RailwayTrackBaseConcreteEnclosure13",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 23
+    },
+    {
+      "material": "RailwayPlatformRubbedConcreteEnclosure13",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 28
+    },
+    {
+      "material": "RailwayPlatformStippledGranolithicEnclosure13",
+      "exportedAOchannel": 1,
+      "exportedLightmapChannelByRuntimeContract": 1,
+      "attribute": 33
+    }
+  ],
+  "atlasAreaFromActualPreparedMesh": 0.16477048427663477,
+  "reportedAtlasArea": 0.1647704839706421,
+  "coveredPixelCountFromActualBake": 7970127,
+  "nominalInsideChartPixels": 2764390.005133705,
+  "dilationMarginPixels": 4.0,
+  "perMaterialDensity": {
+    "GraniteCapstoneEighthAvenueBridge": {
+      "triangles": 660,
+      "physicalAreaM2": 153.28977536358434,
+      "uvArea": 0.001370489526904694,
+      "equivalentPixelsPerMetre": 12.2473242103101
+    },
+    "StructuralConcreteEighthAvenueBridge": {
+      "triangles": 684,
+      "physicalAreaM2": 3904.3633339605294,
+      "uvArea": 0.03490804319971362,
+      "equivalentPixelsPerMetre": 12.247503930977082
+    },
+    "PaintedStructuralIronEighthAvenueBridge": {
+      "triangles": 23640,
+      "physicalAreaM2": 8312.267518132552,
+      "uvArea": 0.07431812661450665,
+      "equivalentPixelsPerMetre": 12.247503403193878
+    },
+    "BuriedWaterproofingEighthAvenueBridge": {
+      "triangles": 12,
+      "physicalAreaM2": 1735.2987397513498,
+      "uvArea": 0.015514936781039403,
+      "equivalentPixelsPerMetre": 12.247510696569291
+    },
+    "RailwayTrackBaseConcreteEnclosure13": {
+      "triangles": 4,
+      "physicalAreaM2": 1734.915665016597,
+      "uvArea": 0.015511503506654173,
+      "equivalentPixelsPerMetre": 12.247507425872254
+    },
+    "RailwayPlatformRubbedConcreteEnclosure13": {
+      "triangles": 352,
+      "physicalAreaM2": 1572.0278996348868,
+      "uvArea": 0.01396878501176293,
+      "equivalentPixelsPerMetre": 12.209816581328807
+    },
+    "RailwayPlatformStippledGranolithicEnclosure13": {
+      "triangles": 46,
+      "physicalAreaM2": 1026.5999502307586,
+      "uvArea": 0.009178599636053102,
+      "equivalentPixelsPerMetre": 12.24750264333414
+    }
+  },
+  "qualification": "Covered alpha pixels include island dilation around many narrow structural islands; physical receiver density is measured separately. UV0 preserved and not used as new GI coordinates."
+}

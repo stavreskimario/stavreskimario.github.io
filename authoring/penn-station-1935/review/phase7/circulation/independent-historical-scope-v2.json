@@ -1,0 +1,1350 @@
+{
+  "schema": 1,
+  "status": "Independent historical-scope review of source candidateV2; V1 rejected separately; no model/runtime edits",
+  "files": [
+    {
+      "name": "new-geometry-module.glb",
+      "bytes": 364084,
+      "sha256": "8b74aec56fa35caa563039f179221283991f64abb140754e773d1e6b88887c13"
+    },
+    {
+      "name": "retained-protected.glb",
+      "bytes": 59596788,
+      "sha256": "171ab79ecbd7105f5275765dc38e65221c99114c9a9aeeeee87e05b85e1cf322"
+    }
+  ],
+  "geometryChecks": {
+    "angleEnvelopes": {
+      "pass": true,
+      "principalGroups": [
+        {
+          "centre": [
+            -79.3119,
+            14.528799999999997
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -79.76909637451172,
+            14.071599960327148
+          ],
+          "max": [
+            -78.85469818115234,
+            14.986000061035156
+          ],
+          "points": 144,
+          "size": [
+            0.914398193359375,
+            0.9144001007080078
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -79.3119,
+            -14.528800000000004
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -79.76909637451172,
+            -14.986000061035156
+          ],
+          "max": [
+            -78.85469818115234,
+            -14.071599960327148
+          ],
+          "points": 144,
+          "size": [
+            0.914398193359375,
+            0.9144001007080078
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -49.44149999999999,
+            14.528799999999997
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -49.89870071411133,
+            14.071599960327148
+          ],
+          "max": [
+            -48.98429870605469,
+            14.986000061035156
+          ],
+          "points": 144,
+          "size": [
+            0.9144020080566406,
+            0.9144001007080078
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -49.44149999999999,
+            -14.528800000000004
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -49.89870071411133,
+            -14.986000061035156
+          ],
+          "max": [
+            -48.98429870605469,
+            -14.071599960327148
+          ],
+          "points": 144,
+          "size": [
+            0.9144020080566406,
+            0.9144001007080078
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -79.3119,
+            40.690799999999996
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -79.76909637451172,
+            40.23360061645508
+          ],
+          "max": [
+            -78.85469818115234,
+            41.14799880981445
+          ],
+          "points": 144,
+          "size": [
+            0.914398193359375,
+            0.914398193359375
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -49.44149999999999,
+            40.690799999999996
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -49.89870071411133,
+            40.23360061645508
+          ],
+          "max": [
+            -48.98429870605469,
+            41.14799880981445
+          ],
+          "points": 144,
+          "size": [
+            0.9144020080566406,
+            0.914398193359375
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -79.3119,
+            -40.6908
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -79.76909637451172,
+            -41.14799880981445
+          ],
+          "max": [
+            -78.85469818115234,
+            -40.23360061645508
+          ],
+          "points": 144,
+          "size": [
+            0.914398193359375,
+            0.914398193359375
+          ],
+          "expected": 0.9144
+        },
+        {
+          "centre": [
+            -49.44149999999999,
+            -40.6908
+          ],
+          "major": true,
+          "angleCount": 4,
+          "min": [
+            -49.89870071411133,
+            -41.14799880981445
+          ],
+          "max": [
+            -48.98429870605469,
+            -40.23360061645508
+          ],
+          "points": 144,
+          "size": [
+            0.9144020080566406,
+            0.914398193359375
+          ],
+          "expected": 0.9144
+        }
+      ],
+      "minorGroupCount": 36,
+      "maximumPrincipalEnvelopeErrorMetres": 0.0000020080566406344147
+    },
+    "southOpenings": [
+      {
+        "worldXZ": [
+          -54.6,
+          -50.6149787902832,
+          48.49300003051758,
+          49.042999267578125
+        ],
+        "nativeV": [
+          1380.2072855520578,
+          1428.3725330121247
+        ]
+      },
+      {
+        "worldXZ": [
+          -48.30358123779297,
+          -42.451419830322266,
+          48.49300003051758,
+          49.042999267578125
+        ],
+        "nativeV": [
+          1456.3094069295905,
+          1527.0419796144697
+        ]
+      }
+    ],
+    "boundaryTrianglesTested": 1272,
+    "openingRays": {
+      "count": 392,
+      "failures": [
+        {
+          "x": -54.57,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -54.47,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -54.37,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -54.269999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -54.169999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -54.06999999999999,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.96999999999999,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.86999999999999,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.76999999999999,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.66999999999999,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.569999999999986,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.469999999999985,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.36999999999998,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.26999999999998,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.16999999999998,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -53.06999999999998,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.96999999999998,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.869999999999976,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.769999999999975,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.66999999999997,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.56999999999997,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.46999999999997,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.36999999999997,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.26999999999997,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.169999999999966,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -52.069999999999965,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.96999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.86999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.76999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.66999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.56999999999996,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.469999999999956,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.369999999999955,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.26999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.16999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -51.06999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -50.96999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -50.86999999999995,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -50.769999999999946,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -50.669999999999945,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -48.27358123779297,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -48.173581237792966,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -48.073581237792965,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.97358123779296,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.87358123779296,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.77358123779296,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.67358123779296,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.57358123779296,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.473581237792956,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.373581237792955,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.27358123779295,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.17358123779295,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -47.07358123779295,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.97358123779295,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.87358123779295,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.773581237792946,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.673581237792945,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.57358123779294,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.47358123779294,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.37358123779294,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.27358123779294,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.17358123779294,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -46.073581237792936,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.973581237792935,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.87358123779293,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.77358123779293,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.67358123779293,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.57358123779293,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.47358123779293,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.373581237792926,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.273581237792925,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.173581237792924,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -45.07358123779292,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.97358123779292,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.87358123779292,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.77358123779292,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.67358123779292,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.573581237792915,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.473581237792914,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.37358123779291,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.27358123779291,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.17358123779291,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -44.07358123779291,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.97358123779291,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.873581237792905,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.773581237792904,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.6735812377929,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.5735812377929,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.4735812377929,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.3735812377929,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.2735812377929,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.173581237792895,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -43.073581237792894,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -42.97358123779289,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -42.87358123779289,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -42.77358123779289,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -42.67358123779289,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        },
+        {
+          "x": -42.57358123779289,
+          "y": 3.79,
+          "hit": {
+            "z": 48.618499755859375,
+            "material": "PaintedStructuralIron",
+            "node": "03 Glass and iron concourse — PaintedStructuralIron.001"
+          }
+        }
+      ],
+      "clearThrough3_6m": true
+    },
+    "overheadCrossings": [
+      {
+        "x": -52.6074893951416,
+        "firstSampledObstructionHeightMain": 3.654999999999994,
+        "stepMetres": 0.001,
+        "hit": {
+          "z": 48.655998258592966,
+          "material": "BedfordLimestoneConcourse",
+          "node": "03 Glass and iron concourse — BedfordLimestoneConcourse.001"
+        }
+      },
+      {
+        "x": -45.37750053405762,
+        "firstSampledObstructionHeightMain": 3.654999999999994,
+        "stepMetres": 0.001,
+        "hit": {
+          "z": 48.655998258592966,
+          "material": "BedfordLimestoneConcourse",
+          "node": "03 Glass and iron concourse — BedfordLimestoneConcourse.001"
+        }
+      }
+    ],
+    "retainedClosedSamples": [
+      {
+        "x": -55.6,
+        "y": 1.7,
+        "hit": {
+          "z": 48.49300003051758,
+          "material": "BedfordLimestoneConcourseCirculation",
+          "node": "Closed western residual south lower wall"
+        }
+      },
+      {
+        "x": -49.45,
+        "y": 1.7,
+        "hit": {
+          "z": 48.49300003051758,
+          "material": "BedfordLimestoneConcourse",
+          "node": "03 Glass and iron concourse — BedfordLimestoneConcourse.001"
+        }
+      },
+      {
+        "x": -41.8,
+        "y": 1.7,
+        "hit": {
+          "z": 48.49300003051758,
+          "material": "BedfordLimestoneConcourse",
+          "node": "03 Glass and iron concourse — BedfordLimestoneConcourse.001"
+        }
+      }
+    ],
+    "rearGuardRows": [
+      {
+        "row": 1,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          67.57202911376953
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          69.95703125
+        ]
+      },
+      {
+        "row": 2,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          53.59895324707031
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          55.983951568603516
+        ]
+      },
+      {
+        "row": 3,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          39.625877380371094
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          42.01087951660156
+        ]
+      },
+      {
+        "row": 4,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          25.956565856933594
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          28.341564178466797
+        ]
+      },
+      {
+        "row": 5,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          12.135370254516602
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          14.520369529724121
+        ]
+      },
+      {
+        "row": 6,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          -1.5339430570602417
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          0.8510569930076599
+        ]
+      },
+      {
+        "row": 7,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          -14.747611999511719
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          -12.362611770629883
+        ]
+      },
+      {
+        "row": 8,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          -28.41692543029785
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          -26.031925201416016
+        ]
+      },
+      {
+        "row": 9,
+        "parts": 10,
+        "min": [
+          -43.349998474121094,
+          -0.05000000074505806,
+          -41.51396179199219
+        ],
+        "max": [
+          -43.27750015258789,
+          1.1425000429153442,
+          -39.12895965576172
+        ]
+      }
+    ]
+  },
+  "primaryReview": {
+    "sourceRegionNativeV": [
+      1380,
+      1540
+    ],
+    "minimumPositionUncertaintyMetres": 0.75,
+    "principalColumnFt": 3,
+    "retainedPierCentreX": -49.459280014038086,
+    "pierRegistrationLimit": "Pier centre retained from existing structural grid. Its approximately1.5m offset from the rough V1460 pier reading remains unresolved; opening topology is supported, not a surveyed jamb schedule.",
+    "guards": "Rear enclosure is source-consistent;1.12m rail centre height, seven uprights and small profiles remain reconstructed.",
+    "arrivals": "No arrival corridor/deck reconstruction in this candidate. The printed60ft width and new18-stair trace are research only.",
+    "targetPeriod": "Opening-era evidence; not certification that all details were unchanged in1935."
+  },
+  "proofClaims": {
+    "qualifications": [
+      "3ft major angle envelope is primary-supported; corner orientation is diagnosed mechanically, not a complete shop-detail tracing.",
+      "Minor0.62m envelope remains interpreted;16originallegs at4close compound-edge piers are explicitly deferred.",
+      "Opening region primary-supported±0.75m;3.8m is removed wall-cell height, not measured unobstructed clearance. Retained sill iron crosses slightly below it.",
+      "Arrivals and platform mappings retain earlier limitations."
+    ],
+    "rearGuardInterpretation": "Source-consistent rear enclosure; exact dimensions and cadence reconstructed. Allposts sit on closed east-side infill, not over treads.",
+    "retained": "All baseplates,lattice,collars,capplates,full-height stone piers,upperwindows,departure flights,gates/indicators,Main/Exit/platform floors and arrival deck. Existing runtime context cover reused; no invented street roof.",
+    "unrelatedObjectCount": 7137,
+    "correctedLegCounts": {
+      "total": 176,
+      "principal": 32,
+      "isolatedMinor": 144,
+      "deferredOriginal": 16
+    },
+    "sampledOpeningHeadroom": {
+      "approximateMidpointMetres": 3.655,
+      "bodyHeight3_6Clear": true,
+      "measurementReceipt": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/independent-historical-scope-review.json",
+      "derivation": "Earlier candidate measured on unchanged retained sill and wall geometry;91non-angle primitives remainexact inV2.3.8m is removed wall-cell height, not unobstructed clearance."
+    },
+    "newInterPierOverlapCheck": {
+      "actualRawAngleCapTriangles": 704,
+      "positiveIntersections": 0,
+      "maximumIntersectionArea": 0,
+      "rejected192LegControlPositivePairs": 4,
+      "scope": "Only vertical L-angle prisms, not intentional rail/member bearing joints; actual GLB cap triangles clipped with positive shared height."
+    }
+  },
+  "qualificationCorrectionRequired": [],
+  "geometryScopePass": true,
+  "pass": true,
+  "sourceProofSha256": "a7214793534d9700e1124c0b8cc6f97fd85fead6e313b7607e8d241dc85ad8b4",
+  "candidateRevision": "V2",
+  "v1Status": "Rejected separately for four secondary-pier intersections; no V1 acceptance implied.",
+  "reviewLimits": [
+    "Scope review verifies principal envelope/opening topology/retained samples and guard counts, not complete structural engineering or a full historical survey.",
+    "Opening region follows an approximate native-plan interpretation; exact pier/door registration remains unresolved.",
+    "The 16 ambiguous original minor legs are not certified by the principal-envelope test.",
+    "Arrivals corridor and west Main floor correction are research-only future work."
+  ]
+}

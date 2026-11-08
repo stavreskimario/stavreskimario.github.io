@@ -1,0 +1,122 @@
+{
+  "status": "PASS exact physical soffit source archive; one56-face receiver with authored UV1/no weld",
+  "archives": [
+    {
+      "file": "raw/lighting-concourse-exit-soffit-sky.hdr.gz",
+      "rawBytes": 20257724,
+      "rawSha256": "9034a717b15e84d220e43231de2a8a480ec045e0ddb04e91f33c374f0aeff010",
+      "archiveBytes": 17006284,
+      "archiveSha256": "356080a01e8c4de1fdd651f36b3b42681107e3fe83ff6b461ad87985129ca89d"
+    },
+    {
+      "file": "denoised/lighting-concourse-exit-soffit-sky-denoised-linear.hdr.gz",
+      "rawBytes": 67649587,
+      "rawSha256": "c5a6940dc306d096df596f6be507c3ba5da78aa03835a1dfbffc9430628d4516",
+      "archiveBytes": 8858038,
+      "archiveSha256": "09518ac0c9e2a026f4852a2630a0508fd1ba73454afca9425443076d5659a9ff"
+    }
+  ],
+  "sourcePrimarySha256": "95043fbbafba02c26c1e88af3788be9155a492c550ca6af2930e7bd0129ac7cd",
+  "files": [
+    {
+      "file": "actual-bake-completion.json",
+      "bytes": 1805,
+      "sha256": "2d67de1b96be5a608aa6d10e9f519685b12ab3b58134e0b790e848610d709731"
+    },
+    {
+      "file": "actual-postprocess-completion.json",
+      "bytes": 1142,
+      "sha256": "1d293504c7109801219fda972e5581588cab63e823ce9ef1a0350b478b52b810"
+    },
+    {
+      "file": "denoised/lighting-concourse-exit-soffit-denoise.json",
+      "bytes": 2596,
+      "sha256": "c9509f283c33baa8ddf7d30c4d8e79688950986b0365c14b609d51c7a4f98aa8"
+    },
+    {
+      "file": "denoised/lighting-concourse-exit-soffit-sky-denoised-linear.hdr.gz",
+      "bytes": 8858038,
+      "sha256": "09518ac0c9e2a026f4852a2630a0508fd1ba73454afca9425443076d5659a9ff"
+    },
+    {
+      "file": "denoised/lighting-concourse-exit-soffit-sky-low.png",
+      "bytes": 48594,
+      "sha256": "1aadb47ee3bf5a257cb5009040ff6fcca5dc2fb36f682dee095c95e32146de37"
+    },
+    {
+      "file": "denoised/lighting-concourse-exit-soffit-sky.png",
+      "bytes": 1529898,
+      "sha256": "44c554dd3f974785a3e4b9b3a3560d89d4d11525dcc7ca75f9e5f172930e7242"
+    },
+    {
+      "file": "packet.json",
+      "bytes": 1217,
+      "sha256": "33b05e7e57c496358488f98b92bda317157cfa354fceb2f3ab9e211229cf0e74"
+    },
+    {
+      "file": "raw/lighting-concourse-exit-soffit-sky.hdr.gz",
+      "bytes": 17006284,
+      "sha256": "356080a01e8c4de1fdd651f36b3b42681107e3fe83ff6b461ad87985129ca89d"
+    },
+    {
+      "file": "raw/lighting-concourse-exit-soffit.json",
+      "bytes": 33485,
+      "sha256": "9d112fd5aa6804899a9220771b98eb13c914726c517571c37f3ea851b78e6f98"
+    },
+    {
+      "file": "source/bake-soffit.py",
+      "bytes": 15146,
+      "sha256": "5bf7d5b02753aaf6fa02e70e077802314d2799d64676137a633de0c121d240ac"
+    },
+    {
+      "file": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "file": "source/cache-soffit-owner-audit.json",
+      "bytes": 44895,
+      "sha256": "2cf6121cd2333f22a21fd776b658a1baef20ab2f78f19f69502ceeff9dc02152"
+    },
+    {
+      "file": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "file": "source/encode-lossless-meshopt.mjs",
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    {
+      "file": "source/package-soffit-lossless.mjs",
+      "bytes": 7643,
+      "sha256": "3eccb530eea7b4a03e1a10b5951898e51a0c29ac7acb2b2c82abb22bcb5f75cd"
+    },
+    {
+      "file": "source/postprocess-soffit.py",
+      "bytes": 3606,
+      "sha256": "519d7fe1da29d22d00059fd5de1b499fffb9840b0496582cb65f10f2f0b4bebb"
+    },
+    {
+      "file": "source/prepared-context-proof.json",
+      "bytes": 4267,
+      "sha256": "90af28440c9087d37465fdb9259d479bb076fd8c14414539824bb86da7b58d2b"
+    },
+    {
+      "file": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/reuse-texture-cache.mjs",
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    },
+    {
+      "file": "source/soffit_context_membership.py",
+      "bytes": 3505,
+      "sha256": "2b19c5d9c2ed8f4b05dafaa0a0026163401641a8703e52aefaae89a16ac30e79"
+    }
+  ]
+}

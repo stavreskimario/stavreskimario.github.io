@@ -1,0 +1,134 @@
+{
+  "status": "FROZEN corrected source, independent density gate and physical source controls; parent review before GPU",
+  "artifact": "platform-continuity",
+  "scene": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/independent-floor-prebake-scene.blend",
+  "sceneSha256": "4540f65f8329d9ce677323d647bdc62eb0f344a90f585cd526888c55a3b0ce02",
+  "input": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/construction-v1/candidate-v2/model-platform-enclosure.glb",
+  "sourceSha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "preparationProof": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/floor-uv-preflight.json",
+  "preparationProofSha256": "3b4906e19bf5d7fe8dd5790b70e2f6d29a17d50fef8565d4e2e6727dd02e98c7",
+  "structurePreparationProof": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/split-receivers-v1/split-receivers-proof.json",
+  "contextControl": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/prepared-current-control.json",
+  "contextControlSha256": "bc8be086d428add2efe9f8dea861e949dd8d95d6718230bb5fe686620d5b0529",
+  "targetObject": "Continuity exact source structure",
+  "selectedTriangles": 30588,
+  "selectedMaterialNames": [
+    "PaintedStructuralIronEighthAvenueBridge",
+    "GraniteCapstoneEighthAvenueBridge",
+    "StructuralConcreteEighthAvenueBridge",
+    "BuriedWaterproofingEighthAvenueBridge"
+  ],
+  "selectedSourceOwnerNames": [
+    "Bridge permanent row B0 built-up Icolumns",
+    "Bridge permanent row B1 built-up Icolumns",
+    "Bridge permanent row B2 built-up Icolumns",
+    "Bridge permanent row B3 built-up Icolumns",
+    "Bridge permanent row B4 built-up Icolumns",
+    "Buried granite and concrete bearings row B0",
+    "Buried granite and concrete bearings row B1",
+    "Buried granite and concrete bearings row B2",
+    "Buried granite and concrete bearings row B3",
+    "Buried granite and concrete bearings row B4",
+    "Permanent bent1 deep face-connected girders",
+    "Permanent bent2 deep face-connected girders",
+    "Permanent bent3 deep face-connected girders",
+    "Permanent bent4 deep face-connected girders",
+    "Permanent bent5 deep face-connected girders",
+    "Bay1 longitudinal girders and web connection returns",
+    "Bay2 longitudinal girders and web connection returns",
+    "Bay3 longitudinal girders and web connection returns",
+    "Bay4 longitudinal girders and web connection returns",
+    "Bay1 embedded4intransverse floorplate beams",
+    "Bay2 embedded4intransverse floorplate beams",
+    "Bay3 embedded4intransverse floorplate beams",
+    "Bay4 embedded4intransverse floorplate beams",
+    "Documented composite opaque roofplate and waterproof protective",
+    "Bridge permanent row B5 source P3 built-up Icolumns",
+    "Buried granite and concrete bearings row B5 P3",
+    "Permanent bent6 observed P3 face-connected girders",
+    "Bay5 P3 longitudinal girders and actual connection returns",
+    "Bay5 P3 embedded4in transverse floorplate beams",
+    "P3 roof extension from actual old south cover edge"
+  ],
+  "sourceMeshOwners": 33,
+  "out": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/structure-bake-v1/raw",
+  "resolution": 4096,
+  "samples": 128,
+  "minimumVisibleFloorPixelsPerMetre": 63.96000086750335,
+  "minimumStructurePixelsPerMetre": 12.764436434395352,
+  "environment": {
+    "CYCLES_METAL_DISABLE_BINARY_ARCHIVES": "1"
+  },
+  "filePins": [
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/construction-v1/candidate-v2/model-platform-enclosure.glb",
+      "sha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+      "bytes": 7527360
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/independent-floor-prebake-scene.blend",
+      "sha256": "4540f65f8329d9ce677323d647bdc62eb0f344a90f585cd526888c55a3b0ce02",
+      "bytes": 213609390
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/prepared-current-control.json",
+      "sha256": "bc8be086d428add2efe9f8dea861e949dd8d95d6718230bb5fe686620d5b0529",
+      "bytes": 36008
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/floor-uv-v1/floor-uv-preflight.json",
+      "sha256": "3b4906e19bf5d7fe8dd5790b70e2f6d29a17d50fef8565d4e2e6727dd02e98c7",
+      "bytes": 1953
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/split-receivers-v1/split-receivers-proof.json",
+      "sha256": "c28114103d0a53d639b2a25cfa87f14b5fba395f86db768fd626e642b963c519",
+      "bytes": 2311
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/light-density-v1/actual-prepared-floor-density-gate.json",
+      "sha256": "3dff4f0b6130dbce346eb7b5055fbe046a109e37612abd49427346df24d69593",
+      "bytes": 11500
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/cpu-preparation-v2/primary-contract.json",
+      "sha256": "d5ed4860f8120e5d3410aca20280d21622d7244b95c04161d1318fd1a6b9c97c",
+      "bytes": 2879
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/current-context-v1/prepared-context-proof.json",
+      "sha256": "47b04a68a518a8829d83602814be8e6bfb660ad287c1a744586ae2390f210620",
+      "bytes": 4415
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/floor-context-membership.json",
+      "sha256": "f0cb0b6efb5a0a7ca86ed0a56a891d05c71e1e9c5c4567c3235bc00836a0a221",
+      "bytes": 4957
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/bake-prepared-receiver.py",
+      "sha256": "c495abbfd94251c601117c2350060cfaf50cc4e33ec12255ad023c2090fbf357",
+      "bytes": 16238
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/prepare-floor-uv.py",
+      "sha256": "211261ce2548bfe593e4717027c383be1dacccf004b13f57f49b7078e11abece",
+      "bytes": 6379
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/split-receivers.py",
+      "sha256": "1f3cb842763cc3c9c161c79de3b636c4889f0a4981afd41088425241a8a84373",
+      "bytes": 5769
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/source/render_device.py",
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a",
+      "bytes": 1188
+    },
+    {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/source/baked_occlusion_binding.py",
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+      "bytes": 3167
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "files": [
+    {
+      "file": "model-concourse.glb",
+      "sha256": "b85bee87837ad29d2e78183109ecf9df2f9c2544736de0b1e8d724b7d4110892",
+      "bytes": 3457412,
+      "errors": 0,
+      "warnings": 16,
+      "infos": 22,
+      "hints": 0,
+      "truncated": false,
+      "errorMessages": [],
+      "warningTypes": [
+        "VALUE_NOT_IN_LIST",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "IMAGE_UNRECOGNIZED_FORMAT"
+      ]
+    },
+    {
+      "file": "model-concourse-low.glb",
+      "sha256": "897445b7ca69a7c1ef90d56acaa0925ee130b3968dddd41f8e0bb6d6554508a1",
+      "bytes": 2263220,
+      "errors": 0,
+      "warnings": 16,
+      "infos": 22,
+      "hints": 0,
+      "truncated": false,
+      "errorMessages": [],
+      "warningTypes": [
+        "VALUE_NOT_IN_LIST",
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+        "IMAGE_UNRECOGNIZED_FORMAT"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "created": "2026-10-29T09:45:28.298Z",
+  "tool": "toktx v4.4.2",
+  "settings": {
+    "encoder": "UASTC",
+    "level": 1,
+    "zstd": 6,
+    "jobs": 2,
+    "resizing": false
+  },
+  "inputs": {
+    "before": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/scalar-constant-final-controls/fixture-before.glb",
+      "sha256": "29a5c20d5efdba0ac7985538a9b262e64a7ab995ca01cbf46e57c30ac02b026e"
+    },
+    "after": {
+      "path": "/Users/stavreskimario/Desktop/penn-station-work/scalar-constant-final-controls/fixture-after.glb",
+      "sha256": "f5288afbdae307751a28eea9f7364c0b5786764734d253ff40e9872fc589ffa9"
+    }
+  },
+  "roles": [
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.491455078125,
+            "p99": 2,
+            "max": 6,
+            "sourceMean": 126.8125,
+            "decodedMean": 127.002197265625
+          },
+          "baselineVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "preparedVsBaseline": {
+            "mean": 1.3857421875,
+            "p99": 7,
+            "max": 12,
+            "sourceMean": 126.565185546875,
+            "decodedMean": 127.002197265625
+          }
+        }
+      }
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 1.3583984375,
+            "p99": 7,
+            "max": 8,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.89306640625
+          },
+          "baselineVsSource": {
+            "mean": 2.453857421875,
+            "p99": 15,
+            "max": 31,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.810302734375
+          },
+          "preparedVsBaseline": {
+            "mean": 2.093017578125,
+            "p99": 14,
+            "max": 32,
+            "sourceMean": 127.810302734375,
+            "decodedMean": 127.89306640625
+          }
+        }
+      }
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "extensions.KHR_materials_clearcoat.clearcoatRoughnessTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "MilfordGraniteFixture",
+      "slot": "extensions.KHR_materials_clearcoat.clearcoatNormalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 0.491455078125,
+            "p99": 2,
+            "max": 6,
+            "sourceMean": 126.8125,
+            "decodedMean": 127.002197265625
+          },
+          "baselineVsSource": {
+            "mean": 1.263427734375,
+            "p99": 7,
+            "max": 12,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.532470703125
+          },
+          "preparedVsBaseline": {
+            "mean": 1.32373046875,
+            "p99": 7,
+            "max": 13,
+            "sourceMean": 126.532470703125,
+            "decodedMean": 127.002197265625
+          }
+        }
+      }
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "InteriorGraniteFixture",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 1.38916015625,
+            "p99": 6,
+            "max": 8,
+            "sourceMean": 128.0625,
+            "decodedMean": 128.1728515625
+          },
+          "baselineVsSource": {
+            "mean": 2.462646484375,
+            "p99": 15,
+            "max": 27,
+            "sourceMean": 128.0625,
+            "decodedMean": 128.157470703125
+          },
+          "preparedVsBaseline": {
+            "mean": 2.197998046875,
+            "p99": 17,
+            "max": 28,
+            "sourceMean": 128.157470703125,
+            "decodedMean": 128.1728515625
+          }
+        }
+      }
+    },
+    {
+      "material": "PaintedStructuralIronControl",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "PaintedStructuralIronControl",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "baselineVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 126.565185546875,
+            "decodedMean": 126.565185546875
+          }
+        },
+        "B": {
+          "preparedVsSource": {
+            "mean": 3.490966796875,
+            "p99": 21,
+            "max": 39,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.715087890625
+          },
+          "baselineVsSource": {
+            "mean": 3.490966796875,
+            "p99": 21,
+            "max": 39,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.715087890625
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 127.715087890625,
+            "decodedMean": 127.715087890625
+          }
+        }
+      }
+    },
+    {
+      "material": "PaintedStructuralIronControl",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "PaintedStructuralIronControl",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 1.3583984375,
+            "p99": 7,
+            "max": 8,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.89306640625
+          },
+          "baselineVsSource": {
+            "mean": 2.453857421875,
+            "p99": 15,
+            "max": 31,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.810302734375
+          },
+          "preparedVsBaseline": {
+            "mean": 2.093017578125,
+            "p99": 14,
+            "max": 32,
+            "sourceMean": 127.810302734375,
+            "decodedMean": 127.89306640625
+          }
+        }
+      }
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "baselineVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 126.565185546875,
+            "decodedMean": 126.565185546875
+          }
+        },
+        "B": {
+          "preparedVsSource": {
+            "mean": 3.490966796875,
+            "p99": 21,
+            "max": 39,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.715087890625
+          },
+          "baselineVsSource": {
+            "mean": 3.490966796875,
+            "p99": 21,
+            "max": 39,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.715087890625
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 127.715087890625,
+            "decodedMean": 127.715087890625
+          }
+        }
+      }
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "MilfordGraniteNonzeroMetalControl",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 1.3583984375,
+            "p99": 7,
+            "max": 8,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.89306640625
+          },
+          "baselineVsSource": {
+            "mean": 2.453857421875,
+            "p99": 15,
+            "max": 31,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.810302734375
+          },
+          "preparedVsBaseline": {
+            "mean": 2.093017578125,
+            "p99": 14,
+            "max": 32,
+            "sourceMean": 127.810302734375,
+            "decodedMean": 127.89306640625
+          }
+        }
+      }
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "pbrMetallicRoughness.baseColorTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "pbrMetallicRoughness.metallicRoughnessTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "G": {
+          "preparedVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "baselineVsSource": {
+            "mean": 1.322021484375,
+            "p99": 6,
+            "max": 13,
+            "sourceMean": 126.8125,
+            "decodedMean": 126.565185546875
+          },
+          "preparedVsBaseline": {
+            "mean": 0,
+            "p99": 0,
+            "max": 0,
+            "sourceMean": 126.565185546875,
+            "decodedMean": 126.565185546875
+          }
+        }
+      }
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "normalTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "occlusionTexture",
+      "sourceImageUnchanged": false,
+      "encodedPixelBlocksUnchanged": false,
+      "size": [
+        64,
+        64
+      ],
+      "channels": {
+        "R": {
+          "preparedVsSource": {
+            "mean": 1.3583984375,
+            "p99": 7,
+            "max": 8,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.89306640625
+          },
+          "baselineVsSource": {
+            "mean": 2.453857421875,
+            "p99": 15,
+            "max": 31,
+            "sourceMean": 127.8125,
+            "decodedMean": 127.810302734375
+          },
+          "preparedVsBaseline": {
+            "mean": 2.093017578125,
+            "p99": 14,
+            "max": 32,
+            "sourceMean": 127.810302734375,
+            "decodedMean": 127.89306640625
+          }
+        }
+      }
+    },
+    {
+      "material": "UnreviewedNonmetalControl",
+      "slot": "extensions.KHR_materials_transmission.transmissionTexture",
+      "sourceImageUnchanged": true,
+      "encodedPixelBlocksUnchanged": true
+    }
+  ],
+  "images": {
+    "before": {
+      "count": 4,
+      "bytes": 14252
+    },
+    "after": {
+      "count": 7,
+      "bytes": 20504
+    }
+  },
+  "savedImageBytes": -6252,
+  "status": "passed"
+}

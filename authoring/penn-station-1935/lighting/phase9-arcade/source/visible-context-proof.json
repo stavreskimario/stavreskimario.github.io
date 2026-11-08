@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "operation": "JSON scene-reference-only render-visibility derivative; frozen authorities unchanged",
+  "sourceVisibilityInventorySha256": "b6ea9225593b9e7a7f325e8b254e1087ae251dd62f076f63db566607fd7676ae",
+  "sourceProofs": {
+    "c96": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "c4aa": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc"
+  },
+  "files": [
+    {
+      "zone": "exterior",
+      "input": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/connected-v12/retained-exterior-occluder.glb",
+      "inputSha256": "fc62b1f34c1a56c771a2b91e21aa48e3c5d2d0d1f65712c62c29b0d450894ec6",
+      "output": "retained-exterior-visible-occluder.glb",
+      "outputSha256": "9e342b9ca33d32284fd1e9466a7a5b40955c08d9a611d9233ab841620d1f625b",
+      "bytes": 49410228,
+      "excludedNodeIndex": 0,
+      "excludedNodeName": "Doric column master \u2014 35ft",
+      "sourceObjectName": "Doric column master \u2014 35ft",
+      "sourceHideRender": true,
+      "sourceWorldBounds": [
+        [
+          -0.9100000262260437,
+          -0.9100000262260437,
+          0.0
+        ],
+        [
+          0.9100000262260437,
+          0.9100000262260437,
+          10.668000221252441
+        ]
+      ],
+      "rawGlTfBounds": [
+        [
+          -0.9100000262260437,
+          0.0,
+          -0.9100000262260437
+        ],
+        [
+          0.9100000262260437,
+          10.668000221252441,
+          0.9100000262260437
+        ]
+      ],
+      "heightOffset": 0.0,
+      "boundMaximumErrorM": 0.0,
+      "sceneReferenceEdits": [
+        {
+          "path": "scenes[0].nodes",
+          "before": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "after": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "allOtherSceneReferencesExact": true,
+      "allNodeMeshMaterialAccessorPayloadsExact": true,
+      "binChunkByteExact": true,
+      "binChunkSha256": "560a75610cdfa16eb3b5d3b1a9c479bea6a7df200d687cd6d0afa99e849fec72",
+      "allOtherReachableNodesExact": true,
+      "frozenInputUnchanged": true
+    },
+    {
+      "zone": "main",
+      "input": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/connected-v12/retained-main-occluder-main0.glb",
+      "inputSha256": "5e56cfc2a135c499eb40a1a9c6ad5516359c7bbee95043a8f0d32ebba58ad511",
+      "output": "retained-main-visible-occluder-main0.glb",
+      "outputSha256": "1c1fbfcebc204264050e16fbc179b8ab5e3186c6815dfcc48baade634ae8be9e",
+      "bytes": 54752384,
+      "excludedNodeIndex": 4,
+      "excludedNodeName": "Fluted Corinthian shaft master.001",
+      "sourceObjectName": "Fluted Corinthian shaft master",
+      "sourceHideRender": true,
+      "sourceWorldBounds": [
+        [
+          -1.2690494060516357,
+          -1.2690494060516357,
+          -104.26719665527344
+        ],
+        [
+          1.2690494060516357,
+          1.2690494060516357,
+          -88.64619445800781
+        ]
+      ],
+      "rawGlTfBounds": [
+        [
+          -1.2690494060516357,
+          -100.0,
+          -1.2690494060516357
+        ],
+        [
+          1.2690494060516357,
+          -84.37899971008301,
+          1.2690494060516357
+        ]
+      ],
+      "heightOffset": -4.2672,
+      "boundMaximumErrorM": 5.252075197859085e-06,
+      "sceneReferenceEdits": [
+        {
+          "path": "scenes[0].nodes",
+          "before": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "after": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      ],
+      "allOtherSceneReferencesExact": true,
+      "allNodeMeshMaterialAccessorPayloadsExact": true,
+      "binChunkByteExact": true,
+      "binChunkSha256": "24ae18aa24175d413e5161f759cf2e1eba34ecbaae22057c6d3320e75c1ba7d9",
+      "allOtherReachableNodesExact": true,
+      "frozenInputUnchanged": true
+    }
+  ]
+}

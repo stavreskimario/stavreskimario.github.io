@@ -1,0 +1,429 @@
+{
+  "status": "packaging validation only; provisional vault GI has no visual acceptance",
+  "geometrySource": {
+    "file": "authoring/penn-station-1935/penn-station-phase5.blend",
+    "sha256": "d1e0160b7c5db2845f8a4b868acfd4e5a662d015aa26fad539fd0d7886dea5e2"
+  },
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "bytes": 2711634,
+      "decodedBytes": 8839992,
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "decodedSha256": "3a5e9cc5fb3b692e4e219cae9884912a60589d4178a832e3f9eacc80c025b035",
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "bytes": 2805415,
+      "decodedBytes": 7969992,
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "decodedSha256": "5c23cd5e58106529b463d2895babd5fd6e238631aeb58f0811db1edaeb114117",
+      "errors": 0,
+      "warnings": 27,
+      "decodedMeshoptViews": 31,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "bytes": 9471497,
+      "decodedBytes": 17734648,
+      "sha256": "4b2a0a96d3d9f84c21a0f41d6b941deea1260be82b93ed50567604ce71943464",
+      "decodedSha256": "5924039bb63d92d3dd55dfc05129152ea4fbb88054bfc24cd29258a53457658e",
+      "errors": 0,
+      "warnings": 37,
+      "decodedMeshoptViews": 51,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "bytes": 8383938,
+      "decodedBytes": 13328996,
+      "sha256": "eb9b5997195a17c11195bb62cc9e1a4b5d01bec96712361584fc17b2f6528569",
+      "decodedSha256": "b98a2c012d31366304e3565e73c141b267da262e6fa0ea46882ce5939f9b07d4",
+      "errors": 0,
+      "warnings": 37,
+      "decodedMeshoptViews": 51,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "bytes": 4268512,
+      "decodedBytes": 11033920,
+      "sha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+      "decodedSha256": "69747ba3addb8ea930a5f0f59481391402cbeda84d19161de64fb14ef080df76",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "bytes": 4246967,
+      "decodedBytes": 10270564,
+      "sha256": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+      "decodedSha256": "f74f1a792be96c6008114016938363e6aedd5ccd65cbe35fe1c4be59e9a731de",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 52,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-context.glb.gz",
+      "bytes": 504344,
+      "decodedBytes": 2197204,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "decodedSha256": "18e4d9f2aacad888af4dbe449b249f1f9f7a0daeb1464b4cb19b1d55e130fbfe",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 187,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "bytes": 684590,
+      "decodedBytes": 1756120,
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "decodedSha256": "44f2d84fd77ffad1f61f4d924225b1369bc0cc435b64fe972b6cf004397a5018",
+      "errors": 0,
+      "warnings": 34,
+      "decodedMeshoptViews": 186,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "bytes": 161587,
+      "decodedBytes": 1062664,
+      "sha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "decodedSha256": "577b71d28492f9589484edc12c4a46c50d730bec58b582ab0ee15580f72f48f1",
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "bytes": 188633,
+      "decodedBytes": 875592,
+      "sha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "decodedSha256": "794f9f942529c05fd3fcbc87943fde531c2e7fe5288c664eac7cd807269018c7",
+      "errors": 0,
+      "warnings": 2,
+      "decodedMeshoptViews": 60,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "bytes": 123231,
+      "decodedBytes": 667464,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "decodedSha256": "46377519c85c18ff10928ad82620ece0830c30e7c11c63e760ba350b3ca37979",
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54,
+      "roughnessPassGeometryAndBinaryExact": true
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "bytes": 157720,
+      "decodedBytes": 488976,
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "decodedSha256": "041fdb85f1b5d6e6d8375e9d7f82eef0b6a5218468bd915a4328223cb315abb8",
+      "errors": 0,
+      "warnings": 8,
+      "decodedMeshoptViews": 54,
+      "roughnessPassGeometryAndBinaryExact": true
+    }
+  ],
+  "waiting": [
+    {
+      "file": "model-waiting-room.glb.gz",
+      "oldNonVaultMeshesRetainedExact": 8,
+      "oldBinaryPrefixBytes": 15761452,
+      "vault": {
+        "meshes": 1,
+        "nodes": 1,
+        "decodedAttributesAndWorldTransformsExact": true
+      },
+      "brackets": {
+        "meshes": 2,
+        "nodes": 6,
+        "decodedAttributesAndWorldTransformsExact": true,
+        "fixtureCount": 2,
+        "renderedMeshNodes": 4,
+        "instancedTriangles": 21824,
+        "materials": [
+          "AgedBronze",
+          "OpalCandelabraGlass"
+        ],
+        "authoritativePaletteExact": true,
+        "newLights": 0,
+        "bounds": {
+          "min": [
+            -15.654999732971191,
+            8.320000380277634,
+            27.64399907334745
+          ],
+          "max": [
+            15.654999747833063,
+            9.12000036239624,
+            28.64399915933609
+          ],
+          "vertices": 12520,
+          "primitives": 4
+        }
+      },
+      "sourceBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ],
+        "vertices": 1358044,
+        "primitives": 15
+      },
+      "candidateBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ],
+        "vertices": 1447177,
+        "primitives": 19
+      },
+      "noBoundsSpike": true
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "oldNonVaultMeshesRetainedExact": 8,
+      "oldBinaryPrefixBytes": 11578756,
+      "vault": {
+        "meshes": 1,
+        "nodes": 1,
+        "decodedAttributesAndWorldTransformsExact": true
+      },
+      "brackets": {
+        "meshes": 2,
+        "nodes": 6,
+        "decodedAttributesAndWorldTransformsExact": true,
+        "fixtureCount": 2,
+        "renderedMeshNodes": 4,
+        "instancedTriangles": 21824,
+        "materials": [
+          "AgedBronze",
+          "OpalCandelabraGlass"
+        ],
+        "authoritativePaletteExact": true,
+        "newLights": 0,
+        "bounds": {
+          "min": [
+            -15.654999732971191,
+            8.320000380277634,
+            27.64399907334745
+          ],
+          "max": [
+            15.654999747833063,
+            9.12000036239624,
+            28.64399915933609
+          ],
+          "vertices": 12520,
+          "primitives": 4
+        }
+      },
+      "sourceBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ],
+        "vertices": 979352,
+        "primitives": 15
+      },
+      "candidateBounds": {
+        "min": [
+          -18.140201196994468,
+          -0.39947966287098424,
+          -49.02939987182617
+        ],
+        "max": [
+          32.71020089181869,
+          43.58636402339448,
+          49.02939987182617
+        ],
+        "vertices": 1086753,
+        "primitives": 19
+      },
+      "noBoundsSpike": true
+    }
+  ],
+  "repoAssetsUnchanged": true,
+  "errors": 0,
+  "warnings": 284,
+  "metrics": {
+    "pipeline": "Blender 4.3 \u2192 glTF Transform 4.2.1 \u2192 Meshopt + KTX2/UASTC",
+    "scope": "Phase5 outside-repo candidate; vault GI v2 provisional, not visual acceptance",
+    "sharedTextureFiles": 78,
+    "modelTextureAndLightingBytes": 163280128,
+    "navigationBytes": 567295,
+    "retainedTexturePool": {
+      "files": 78,
+      "bytes": 86356339,
+      "note": "Exact old image records remain addressable after material replacement; old and new KTX2 files intentionally retained."
+    }
+  },
+  "decodedMeshoptViews": 869,
+  "roughness": {
+    "profiles": [
+      {
+        "profile": "InteriorGranite",
+        "low": false,
+        "sourceFile": "InteriorGranite-roughness.png",
+        "sourceSha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+        "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+        "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+        "bytes": 3734401,
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mipLevels": 12,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.0010534015356325635,
+        "roundtripMaximumAbsoluteError": 0.01568627450980392
+      },
+      {
+        "profile": "InteriorGranite",
+        "low": true,
+        "sourceFile": "InteriorGranite-roughness-low.png",
+        "sourceSha256": "721e053a2963c77985f75547e75096a00f3b7059c55efb9935b271e1ed4a8574",
+        "uri": "textures/e6417bb84166b7f417ae.ktx2",
+        "sha256": "e6417bb84166b7f417ae930a66352deb8431d4f477fcbf5d1d25e9bdc4ec899e",
+        "bytes": 250305,
+        "dimensions": [
+          512,
+          512
+        ],
+        "mipLevels": 10,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.0008640364104626225,
+        "roundtripMaximumAbsoluteError": 0.011764705882352941
+      },
+      {
+        "profile": "MilfordGranite",
+        "low": false,
+        "sourceFile": "MilfordGranite-roughness.png",
+        "sourceSha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+        "uri": "textures/c7f8f448d11f12484907.ktx2",
+        "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+        "bytes": 3716906,
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mipLevels": 12,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.0010841696870093251,
+        "roundtripMaximumAbsoluteError": 0.01568627450980392
+      },
+      {
+        "profile": "MilfordGranite",
+        "low": true,
+        "sourceFile": "MilfordGranite-roughness-low.png",
+        "sourceSha256": "5ff06d0cd4cf1e76190ec5b41aa44022ebe9fbe1eb9e3ce8ceee8d9409f22bc8",
+        "uri": "textures/9e395005f83383f2235b.ktx2",
+        "sha256": "9e395005f83383f2235bfbb19228978d777f493e3b9c3b075007a338855951ca",
+        "bytes": 247153,
+        "dimensions": [
+          512,
+          512
+        ],
+        "mipLevels": 10,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.001131588804955576,
+        "roundtripMaximumAbsoluteError": 0.011764705882352941
+      },
+      {
+        "profile": "Travertine",
+        "low": false,
+        "sourceFile": "Travertine-roughness.png",
+        "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+        "uri": "textures/c7670262d7c33cc39671.ktx2",
+        "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+        "bytes": 3106230,
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "mipLevels": 12,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.00031133352541456034,
+        "roundtripMaximumAbsoluteError": 0.011764705882352941
+      },
+      {
+        "profile": "Travertine",
+        "low": true,
+        "sourceFile": "Travertine-roughness-low.png",
+        "sourceSha256": "9e8a219f9ad8ff92ee9a48e6cfe0dbd026467dfae360b82a9b370d4cf0e75fcb",
+        "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+        "sha256": "cd5b2e95d69b82d43084bca72583d8ad972adfd5af127c75fca22777a76d2933",
+        "bytes": 247116,
+        "dimensions": [
+          512,
+          512
+        ],
+        "mipLevels": 10,
+        "transfer": "linear Non-Color",
+        "roughnessFactor": 1,
+        "roundtripMeanAbsoluteError": 0.00041620591107536766,
+        "roundtripMaximumAbsoluteError": 0.011764705882352941
+      }
+    ],
+    "modelsWithMaterialChanges": 6,
+    "allModelGeometryAndBinaryExact": true
+  },
+  "candidateDirectory": "/Users/stavreskimario/Desktop/penn-station-work/phase5-final-candidate",
+  "newVaultIlluminationStatus": "Provisional v2 8192/512 WebP; no mapped visual acceptance. Root will select final denoising/MIP pixels.",
+  "validationBoundary": "Read-only glTF validator plus independent Meshopt/accessor/world-transform/bounds checks. Not final UI, walking, or visual acceptance.",
+  "unchangedSnapshotFiles": 113,
+  "changedSnapshotFiles": [
+    "asset-metrics.json",
+    "lighting-waiting-room-denoise.json",
+    "lighting-waiting-room-vault-denoise.json",
+    "lighting-waiting-room-vault-sky-low.webp",
+    "lighting-waiting-room-vault-sky.webp",
+    "lighting-waiting-room-vault.json",
+    "lighting-waiting-room.json",
+    "model-concourse-low.glb.gz",
+    "model-concourse.glb.gz",
+    "model-exterior-low.glb.gz",
+    "model-exterior.glb.gz",
+    "model-waiting-room-low.glb.gz",
+    "model-waiting-room.glb.gz"
+  ],
+  "sceneManifestPreservedExact": true,
+  "allRetainedReflectionProbesAndSkyExact": true,
+  "completeCandidatePoolBytes": 165345226
+}

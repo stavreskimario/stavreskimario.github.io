@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "status": "PASS: every imported lit material exports fresh AO pixels",
+  "inputSha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+  "freshAoSha256": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335",
+  "exportedGlbSha256": "3bc274da90c0d82198f9e8676c589838635f4c35ae94a4e77d44d068309632d6",
+  "exportedAoImageHashes": {
+    "1": "468e6f76fa0f48b2ad7b00622ca65d6ab09d105da8465555638074f4ecb44335"
+  },
+  "bindings": [
+    {
+      "material": "TravertineArrivalsStairStone",
+      "image": 1,
+      "texCoord": 1,
+      "freshAoRedChannelPixelExact": true
+    },
+    {
+      "material": "PublicFloorMarbleArrivalsRetainedNorth",
+      "image": 1,
+      "texCoord": 1,
+      "freshAoRedChannelPixelExact": true
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsConcrete",
+      "image": 1,
+      "texCoord": 1,
+      "freshAoRedChannelPixelExact": true
+    },
+    {
+      "material": "ConcourseOpaqueArrivalsUpperSupports",
+      "image": 1,
+      "texCoord": 1,
+      "freshAoRedChannelPixelExact": true
+    }
+  ],
+  "materialNodeBindingAudit": {
+    "schema": 1,
+    "status": "PASS",
+    "method": "Reuse/update every recognized Occlusion settings input; create only when absent",
+    "freshAoImage": "lighting-arcade-enclosure-ao.png",
+    "materials": [
+      {
+        "material": "ConcourseOpaqueArrivalsConcrete",
+        "existingSettingsGroups": 1,
+        "updatedSettingsGroups": 1,
+        "aoImage": "lighting-arcade-enclosure-ao.png",
+        "uvName": "UVMap.001",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      },
+      {
+        "material": "ConcourseOpaqueArrivalsUpperSupports",
+        "existingSettingsGroups": 1,
+        "updatedSettingsGroups": 1,
+        "aoImage": "lighting-arcade-enclosure-ao.png",
+        "uvName": "UVMap.001",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      },
+      {
+        "material": "PublicFloorMarbleArrivalsRetainedNorth",
+        "existingSettingsGroups": 1,
+        "updatedSettingsGroups": 1,
+        "aoImage": "lighting-arcade-enclosure-ao.png",
+        "uvName": "UVMap.001",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      },
+      {
+        "material": "TravertineArrivalsStairStone",
+        "existingSettingsGroups": 1,
+        "updatedSettingsGroups": 1,
+        "aoImage": "lighting-arcade-enclosure-ao.png",
+        "uvName": "UVMap.001",
+        "allExistingNodesRetained": true,
+        "allNonAoOriginalLinksExact": true
+      }
+    ]
+  },
+  "helperSha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e",
+  "generatorSha256": "4b781a363c0d1e8b0e8f52aef79ff28a77a2a9d7eb107575adfc7dbc94ea5440",
+  "scope": "Actual imported stale group graph updated and re-exported without GPU or baking; every fresh occlusion red-channel pixel checked, all old material nodes/non-AO links retained."
+}

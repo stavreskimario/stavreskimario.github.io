@@ -1,0 +1,4098 @@
+{
+  "status": "NOTDELIVERED candidate diagnostics; noFPS claim",
+  "comparisons": [
+    {
+      "label": "color-only versus normal-guided",
+      "status": "COMPLETE; residual grain remains",
+      "sourceReport": {
+        "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/browser-comparison/diagnostic-report.json",
+        "originalBytes": 321106,
+        "originalSha256": "57a27d44daa4647e6587ffb6d15c74fe7d43bfb279ea0845b4b9862196a7f5b8"
+      },
+      "sourceAppSha256": "dbb2398697043fbc935bf4dd88a2da440057c729426c3b6795cc5e57392b1867",
+      "diagnosticBundleSha256": "7726f704bfcf6536541245724a0fc04656688ee576d0c9391baf4ef8ade2acd9",
+      "browser": "156.0.8078.74",
+      "pageErrors": [],
+      "variants": [
+        {
+          "name": "v3-color-only",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 161,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "7e727e68-bb33-4b1f-8324-1078a8176f6a",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "cb5b4e0c-2ee3-4ccd-b9f3-5f5fc80e8e39",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "39aba545-a152-4ffc-a043-de114a20ada4",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "5da1a067-0949-4fa7-91f3-c3e2699dadbe",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "38f615c4-ad6e-4def-9b90-851030b6188a",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "49439643-2758-44ba-a5be-64d100631423",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "16012af0-de85-44fe-9bf8-97897d2ccf9b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "16012af0-de85-44fe-9bf8-97897d2ccf9b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "16012af0-de85-44fe-9bf8-97897d2ccf9b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "16012af0-de85-44fe-9bf8-97897d2ccf9b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-normal-guided",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 189,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "79b53124-b82f-439b-8a6f-3a34e9a22045",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "6ebc3c96-0d27-43ff-a210-4532dd483ea7",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "9bc1f87e-9fcd-4ef3-9e6d-33c67fac0783",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "9a452b19-02db-4197-b8fd-36cf8612b8d4",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "e9d8e3e2-5586-4df0-8b4a-0183369b1f5d",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "848899b4-b505-4df5-bd71-7f827d23ddb5",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "ca483ec7-02db-4f82-8de4-516113f90463",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "ca483ec7-02db-4f82-8de4-516113f90463",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "ca483ec7-02db-4f82-8de4-516113f90463",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "ca483ec7-02db-4f82-8de4-516113f90463",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-color-only-literal-gi",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 223,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "57c7c947-609e-43ea-bd0e-3646fbbf4fad",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "37d43186-1481-41cc-917d-bb6290608e00",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "5780db66-c5b8-4893-bf66-8a6042695c2a",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "ef854f4f-f476-4d78-9430-8430377fa832",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "559fc055-237f-496f-94ab-74c4af3d274c",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "6b70a73c-aedb-4a0c-96f9-5699111a18e2",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "79e05198-be93-43b5-a95b-e9dd00093e0a",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "79e05198-be93-43b5-a95b-e9dd00093e0a",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "79e05198-be93-43b5-a95b-e9dd00093e0a",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "79e05198-be93-43b5-a95b-e9dd00093e0a",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-normal-guided-literal-gi",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 224,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "fb0bd552-258d-460c-8ecb-8fb34706b89b",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "7b3ed00a-3c17-4913-9b7c-69cc4095499b",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "edc9a6b2-ba87-4af9-be82-065ccb8187cc",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "0c9af568-6b8a-45e9-b424-c58de063c678",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "a932c1b8-75e9-4f78-a543-db54961a621f",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "b40fcb2a-80b8-4973-990f-0b3727e74384",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "34cfd20d-850a-46fc-b794-325932612717",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "34cfd20d-850a-46fc-b794-325932612717",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "34cfd20d-850a-46fc-b794-325932612717",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "34cfd20d-850a-46fc-b794-325932612717",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "corrected capped-mip standard",
+      "status": "COMPLETE; preserves original baked diffuse hook; modest improvement only",
+      "sourceReport": {
+        "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/mip-chain-comparison/diagnostic-report.json",
+        "originalBytes": 174860,
+        "originalSha256": "308c45a0988ee63f1c51daa85891c95da5a5224759c7eb843e7f8195b4dfd08f"
+      },
+      "sourceAppSha256": "dbb2398697043fbc935bf4dd88a2da440057c729426c3b6795cc5e57392b1867",
+      "diagnosticBundleSha256": "5cbf3742ca2fd7ad59793feb83e298b5a579427ea8ff5f38cb13832df91c6792",
+      "browser": "156.0.8078.74",
+      "pageErrors": [],
+      "variants": [
+        {
+          "name": "v3-normal-guided",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false,
+            "boundedMip": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 226,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "f8022076-a79e-430f-bea4-a9144e39777c",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "72864f45-17dd-4379-87e3-c6edc0412e10",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "908d31d1-610f-473f-8f2d-372692522c55",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "6af2e387-a3f6-43a2-b21e-096094cdac2b",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "29fe2e9f-ceaf-483d-b770-45897e0eff31",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "a824e8cd-3cef-4dbe-814d-1f24a3388407",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "dac443f4-b8f6-40a8-adc7-bf29d49f9723",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "dac443f4-b8f6-40a8-adc7-bf29d49f9723",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "dac443f4-b8f6-40a8-adc7-bf29d49f9723",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "dac443f4-b8f6-40a8-adc7-bf29d49f9723",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-normal-guided-mip2",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false,
+            "boundedMip": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 224,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "8d1ed120-e5c2-4eda-ba2f-d3fbeb9ea3ae",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "bc349f61-3bc2-4a3f-b945-4084535a7b1e",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "f5ea70cb-053a-4a57-a9fb-fb0e6eed9ad2",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "ac251c4b-3074-4df3-bf82-d7aefae45784",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "3bcac753-3c12-4ba3-9683-8c3d97978195",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "bab8730d-5cd8-4617-8438-656de4de8d4b",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "9188bd0c-0bd5-4458-82cd-51f357291921",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "9188bd0c-0bd5-4458-82cd-51f357291921",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "9188bd0c-0bd5-4458-82cd-51f357291921",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "9188bd0c-0bd5-4458-82cd-51f357291921",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "corrected capped-mip literal",
+      "status": "COMPLETE; literal affectsPaleVaultPlaster only",
+      "sourceReport": {
+        "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/mip-chain-literal-comparison/diagnostic-report.json",
+        "originalBytes": 162630,
+        "originalSha256": "c485110d912fc7ba534ba43bcb25a4f18ff3e1a7d3415ced5ed7fc453061bb3a"
+      },
+      "sourceAppSha256": "dbb2398697043fbc935bf4dd88a2da440057c729426c3b6795cc5e57392b1867",
+      "diagnosticBundleSha256": "5cbf3742ca2fd7ad59793feb83e298b5a579427ea8ff5f38cb13832df91c6792",
+      "browser": "156.0.8078.74",
+      "pageErrors": [],
+      "variants": [
+        {
+          "name": "v3-normal-guided-literal-gi",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": true,
+            "boundedMip": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 223,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "09a7bfc1-f604-48fc-9721-57b779aeb73e",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "4abb9d48-b243-439c-ab5a-2c6e201860ec",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "dadfc72b-a749-4f55-a592-d758a74d151f",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "7562adb3-f4e8-45b3-9226-662dab38f2ee",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "cefca8c2-13cf-45e1-8026-3179feed1c0e",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "771d55d9-8dac-4e78-93da-85f2397b78b1",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "a9aa7ac2-d0df-48ce-9ec3-829531e5c6ae",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "a9aa7ac2-d0df-48ce-9ec3-829531e5c6ae",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "a9aa7ac2-d0df-48ce-9ec3-829531e5c6ae",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "a9aa7ac2-d0df-48ce-9ec3-829531e5c6ae",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-normal-guided-mip2-literal-gi",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": true,
+            "boundedMip": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 226,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "df7699b9-cfdf-42b1-aae9-56e8d268771e",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "1ac9a066-a2c8-44a0-8b4e-26eced057da2",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "5794e4ba-d7f9-4008-b37f-c9205a4d732d",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "e6ddd587-a599-4e5b-922b-28e81079145a",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "bf0a7726-8d08-42f4-9c48-5e2e7f22c790",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "90d88489-ddc6-4f60-af28-830d3621719c",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "80cb3ed9-a408-4aa8-9a7e-9e8f1f5bc739",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "80cb3ed9-a408-4aa8-9a7e-9e8f1f5bc739",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "80cb3ed9-a408-4aa8-9a7e-9e8f1f5bc739",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "80cb3ed9-a408-4aa8-9a7e-9e8f1f5bc739",
+                  "name": "PaleVaultPlaster literal GI-only gain8",
+                  "type": "MeshBasicMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": null,
+                  "metalness": null,
+                  "aoIntensity": 1,
+                  "lightIntensity": 1,
+                  "skyFile": null,
+                  "skyScale": null,
+                  "ao": null,
+                  "lightmap": null
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": null,
+                "mappedLightmapUV": null,
+                "triangleUV1": null,
+                "triangleAOuv": null,
+                "triangleLightmapUV": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "initial mip hook",
+      "status": "INVALID: replaced existingonBeforeCompile and lost diffuseIBLsuppression; exclude brightness comparison; also stopped afterEnterbutton timeout",
+      "sourceReport": {
+        "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/mip-comparison/diagnostic-report.json",
+        "originalBytes": 174848,
+        "originalSha256": "bc1ac1db3c91a3e4585c17191d916ac968d61b29c760258742b34c95d8babfa7"
+      },
+      "sourceAppSha256": "dbb2398697043fbc935bf4dd88a2da440057c729426c3b6795cc5e57392b1867",
+      "diagnosticBundleSha256": "930cd0be075847479985f176acabad3b063fa09cc0ed23cdded1b05c093a7453",
+      "browser": "156.0.8078.74",
+      "pageErrors": [],
+      "variants": [
+        {
+          "name": "v3-normal-guided",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false,
+            "boundedMip": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 228,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "6ab7c5ec-6962-443a-b257-d41f8b037430",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "d68991ce-5b0d-4bc2-99a0-f7006738c38b",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "3dfbcb7d-fdea-45d1-a0c3-6cb55fe06f62",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "1f85467d-0475-44e6-bf6c-e2998c0e7f35",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "f5229a21-673a-46e8-b3c2-8d40d2cf4b4b",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "8a326630-eb47-4c96-9067-d53c3468b1a0",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "f8effb32-a398-4bff-921b-70d01dfaa49e",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "f8effb32-a398-4bff-921b-70d01dfaa49e",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "f8effb32-a398-4bff-921b-70d01dfaa49e",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "f8effb32-a398-4bff-921b-70d01dfaa49e",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "v3-normal-guided-mip2",
+          "options": {
+            "finish": "B",
+            "travertine": "B",
+            "literalGI": false,
+            "boundedMip": true
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "exposure": 4.15,
+          "metrics": {
+            "calls": 157,
+            "triangles": 20344960,
+            "geometries": 122,
+            "textures": 63,
+            "exposure": 4.15,
+            "renderFrame": 225,
+            "pixelRatio": 2,
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "reversedDepth": true
+          },
+          "allSixZonesVisible": true,
+          "zones": [
+            {
+              "id": "f1c32e4f-04fe-4af0-b666-59a892e926e5",
+              "name": "exterior",
+              "visible": true,
+              "meshes": 11
+            },
+            {
+              "id": "51fd061c-2cb2-4767-a009-0cb213e31491",
+              "name": "waiting",
+              "visible": true,
+              "meshes": 15
+            },
+            {
+              "id": "3b0adb22-55e5-47b7-8a5d-f9e694709392",
+              "name": "concourse",
+              "visible": true,
+              "meshes": 16
+            },
+            {
+              "id": "73986e10-86bc-482b-a9b8-b7dcd84af0f6",
+              "name": "context",
+              "visible": true,
+              "meshes": 37
+            },
+            {
+              "id": "e88d4fa2-cd3c-4e35-997c-f3a7fb15731b",
+              "name": "platform",
+              "visible": true,
+              "meshes": 17
+            },
+            {
+              "id": "98baf556-8ebe-4f4f-b154-784cd6050944",
+              "name": "trains",
+              "visible": true,
+              "meshes": 16
+            }
+          ],
+          "sampleVisuals": {
+            "zone": "waiting",
+            "coordinateSpace": "page CSS pixels relative to the current canvas client rectangle",
+            "canvasRect": {
+              "left": 0,
+              "top": 84,
+              "width": 1280,
+              "height": 816
+            },
+            "canvasPixels": [
+              2560,
+              1632
+            ],
+            "camera": {
+              "position": [
+                8,
+                3.732800000000001,
+                37
+              ],
+              "quaternion": [
+                0.14068191942738867,
+                0.09051058880350103,
+                -0.012916300639636422,
+                0.9858243251403649
+              ],
+              "fov": 50
+            },
+            "samples": [
+              {
+                "label": "coffer-0",
+                "screen": [
+                  590,
+                  150
+                ],
+                "world": [
+                  -3.3600127741780437,
+                  38.97941851329642,
+                  -7.455879385963143
+                ],
+                "faceNormalWorld": [
+                  0.1214603881239296,
+                  -0.7547895547701386,
+                  0.6446240005822622
+                ],
+                "material": {
+                  "id": "3538c62f-7c2a-4aa7-98c8-75cc5dddb76b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "mappedLightmapUV": [
+                  0.4279566666332043,
+                  0.07292129219123397
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.4279545281147478,
+                    0.07560845349813076
+                  ],
+                  [
+                    0.42870222018768595,
+                    0.0729228656443122
+                  ],
+                  [
+                    0.4279392690928511,
+                    0.07266346227206837
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-1",
+                "screen": [
+                  640,
+                  220
+                ],
+                "world": [
+                  -1.6738858760565811,
+                  38.9130358527593,
+                  -15.238983730704668
+                ],
+                "faceNormalWorld": [
+                  -0.4986941922296705,
+                  -0.8667780007801286,
+                  0
+                ],
+                "material": {
+                  "id": "3538c62f-7c2a-4aa7-98c8-75cc5dddb76b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "mappedLightmapUV": [
+                  0.8920861267321611,
+                  0.3519677898005363
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.8917982757305257,
+                    0.3532463569085222
+                  ],
+                  [
+                    0.8927138170443275,
+                    0.3522545204852369
+                  ],
+                  [
+                    0.8917982757305257,
+                    0.3503776607919432
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-2",
+                "screen": [
+                  700,
+                  300
+                ],
+                "world": [
+                  1.0181168683133204,
+                  39.31800576714061,
+                  -28.02995331828601
+                ],
+                "faceNormalWorld": [
+                  -0.002702504339568678,
+                  -0.999926605640439,
+                  -0.011810156759532406
+                ],
+                "material": {
+                  "id": "3538c62f-7c2a-4aa7-98c8-75cc5dddb76b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "mappedLightmapUV": [
+                  0.6896115862790737,
+                  0.6642707225784568
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.688059815365835,
+                    0.6637064164187075
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.665140764476997
+                  ],
+                  [
+                    0.6901045242999924,
+                    0.6622873273823148
+                  ]
+                ]
+              },
+              {
+                "label": "coffer-3",
+                "screen": [
+                  510,
+                  330
+                ],
+                "world": [
+                  -15.939859520708797,
+                  38.892983620611346,
+                  -29.562507992524303
+                ],
+                "faceNormalWorld": [
+                  0,
+                  -0.8025954838184761,
+                  0.5965236704056145
+                ],
+                "material": {
+                  "id": "3538c62f-7c2a-4aa7-98c8-75cc5dddb76b",
+                  "name": "PaleVaultPlaster",
+                  "type": "MeshStandardMaterial",
+                  "side": 2,
+                  "transmission": 0,
+                  "transparent": false,
+                  "opacity": 1,
+                  "roughness": 0.8399999737739563,
+                  "metalness": 0,
+                  "aoIntensity": 0.25,
+                  "lightIntensity": 3.141592653589793,
+                  "skyFile": "lighting-waiting-room-vault-sky.webp",
+                  "skyScale": 1,
+                  "ao": {
+                    "channel": 0,
+                    "width": 2048,
+                    "height": 2048,
+                    "flipY": false,
+                    "wrapS": 1000,
+                    "wrapT": 1000,
+                    "colorSpace": ""
+                  },
+                  "lightmap": {
+                    "channel": 0,
+                    "width": 8192,
+                    "height": 8192,
+                    "flipY": false,
+                    "wrapS": 1001,
+                    "wrapT": 1001,
+                    "colorSpace": "srgb"
+                  }
+                },
+                "mesh": "waiting-room-vault_baked_static_architecture_1",
+                "uv0": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "uv1": null,
+                "mappedAOuv": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "mappedLightmapUV": [
+                  0.7754094127903839,
+                  0.9957419476054356
+                ],
+                "triangleUV1": null,
+                "triangleAOuv": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ],
+                "triangleLightmapUV": [
+                  [
+                    0.7749599450675212,
+                    0.99316395819028
+                  ],
+                  [
+                    0.7743495841916533,
+                    0.9955443656061647
+                  ],
+                  [
+                    0.7754634927901122,
+                    0.995880064087892
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "nearLOD0 attempted pair",
+      "status": "INCOMPLETE: closecamera obstructed by structuralarch; ray-material assertion stopped before accepted comparison",
+      "sourceReport": {
+        "originalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase5-materials/guided-normal-v3/mip-near-comparison/diagnostic-report.json",
+        "originalBytes": 16488,
+        "originalSha256": "d07dd4594e99a2e5b397b4e51f73d965420c320a6ead3f69175e462e174b5e82"
+      },
+      "sourceAppSha256": "dbb2398697043fbc935bf4dd88a2da440057c729426c3b6795cc5e57392b1867",
+      "diagnosticBundleSha256": "fa495d2e5e46ec2240f6675f519fb1248a91356fd782742349cdd5e2c757a2bb",
+      "browser": "156.0.8078.74",
+      "pageErrors": [],
+      "variants": []
+    }
+  ],
+  "literalScope": "OnlyPaleVaultPlaster becomes unlitMeshBasic; Travertine and other material types keep original lighting. See material attribution correction."
+}

@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "scope": "Blender4.3 CPU import only; no render or mesh mutation",
+  "files": [
+    {
+      "context": "retained-exterior-visible-occluder.glb",
+      "sourceVisibilityRule": "Doric column master \u2014 35ft",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Doric column master \u2014 35ft",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -0.9100000262260437,
+              -0.9100000262260437,
+              0.0
+            ],
+            [
+              0.9100000262260437,
+              0.9100000262260437,
+              10.668000221252441
+            ]
+          ],
+          "boundErrorM": 0.0,
+          "meshMaterialAndMatrixExact": true
+        }
+      ],
+      "allOtherVisibilityExact": true,
+      "allObjectMatricesDataAndMaterialsExact": true,
+      "objectCount": 15,
+      "inputSha256": "9e342b9ca33d32284fd1e9466a7a5b40955c08d9a611d9233ab841620d1f625b"
+    },
+    {
+      "context": "retained-main-visible-occluder-main0.glb",
+      "sourceVisibilityRule": "Fluted Corinthian shaft master.001",
+      "alreadyExcludedByImporter": false,
+      "changedObjects": [
+        {
+          "name": "Fluted Corinthian shaft master.001",
+          "hideRenderBefore": false,
+          "hideRenderAfter": true,
+          "sourceHideRender": true,
+          "actualWorldBounds": [
+            [
+              -1.2690494060516357,
+              -1.2690494060516357,
+              -104.26719665527344
+            ],
+            [
+              1.2690494060516357,
+              1.2690494060516357,
+              -88.64619445800781
+            ]
+          ],
+          "boundErrorM": 0.0,
+          "meshMaterialAndMatrixExact": true
+        }
+      ],
+      "allOtherVisibilityExact": true,
+      "allObjectMatricesDataAndMaterialsExact": true,
+      "objectCount": 28,
+      "inputSha256": "1c1fbfcebc204264050e16fbc179b8ab5e3186c6815dfcc48baade634ae8be9e"
+    }
+  ],
+  "status": "PASS"
+}

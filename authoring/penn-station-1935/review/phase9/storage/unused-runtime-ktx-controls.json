@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "sourceCommit": "89035a4f09fcf43046c3651d6473de20f270e299",
+  "controls": [
+    {
+      "control": "Actual8-file exact recovery from Git",
+      "status": "PASS",
+      "proof": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/recovered-git-v1/recovery-proof.json"
+    },
+    {
+      "control": "Actual8-file exact recovery from backup",
+      "status": "PASS",
+      "proof": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/unused-runtime-ktx-v1/recovered-backup-v1/recovery-proof.json"
+    },
+    {
+      "control": "Changed frozen model is rejected",
+      "status": "PASS",
+      "rejection": "Frozen current model changed"
+    },
+    {
+      "control": "Changed protected texture is rejected",
+      "status": "PASS",
+      "rejection": "Protected image/metadata changed"
+    },
+    {
+      "control": "Any altered expected image-array slot is rejected",
+      "status": "PASS",
+      "rejection": "Every image array slot, including unused slots, stays protected"
+    },
+    {
+      "control": "Referenced image URI cannot be archived",
+      "status": "PASS",
+      "rejection": ""
+    },
+    {
+      "control": "Corrupted recovery pin rejects before output creation",
+      "status": "PASS",
+      "rejection": "Recovery source/pin mismatch"
+    },
+    {
+      "control": "Escaping recovery path rejects before output creation",
+      "status": "PASS",
+      "rejection": "Only the exact scoped content-addressed texture paths are allowed"
+    },
+    {
+      "control": "After-archival verification cannot pass while files remain",
+      "status": "PASS",
+      "rejection": "Proposed archived path still exists"
+    }
+  ],
+  "guardSha256": "fdf00c9e702a7d0164c5d1449cb3ea4f1b3eda44dd939422e5a74e44334c0de0",
+  "rootFilesChanged": false
+}

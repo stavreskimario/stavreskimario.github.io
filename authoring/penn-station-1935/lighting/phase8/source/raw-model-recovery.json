@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "original": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-baked-v1/model-concourse-arrivals.glb",
+    "bytes": 47633400,
+    "sha256": "25bc201678022895b1255d598fa4b62edad107b49f7a90a2ffa09615e426521b"
+  },
+  "losslessExternalBackup": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-source-archive-v1/external-recovery/model-concourse-arrivals.glb.gz",
+    "bytes": 33959208,
+    "sha256": "b88c9dcf9ab32bc76423ed2088f8d85449bbad1c9d33335dda532e4aad204656",
+    "decodedBytes": 47633400,
+    "decodedSha256": "25bc201678022895b1255d598fa4b62edad107b49f7a90a2ffa09615e426521b"
+  },
+  "includedInRepositoryCandidate": false,
+  "recovery": "Decompress the lossless external backup to a fresh output and verify decoded SHA256. The original raw GLB also remains unchanged at its recorded work path. Replay of the pinned bake recreates the production procedure but stochastic Cycles output is not promised byte-identical.",
+  "authoringInput": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/geometry-input/p5-arrivals-preserved-input-v3.glb",
+    "bytes": 44632896,
+    "sha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b"
+  },
+  "sourceAssembler": "source/assemble_input.py",
+  "frozenCommand": "source/frozen-bake-command.json",
+  "frozenFilePinCount": 68,
+  "replayPrerequisites": "Restore all external files to the 68 pinned paths and verify their SHA256 values. The exact executed runner is retained as evidence; its output guard correctly refuses the existing output folder. A future authorized replay must use a separately reviewed fresh output destination and explicit GPU authorization."
+}

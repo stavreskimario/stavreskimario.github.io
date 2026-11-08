@@ -1,0 +1,112 @@
+{
+  "sourceSha256": "bd0db82b40dfb51e15820937c88c4b258fb0f8740d1b3116d46df14db9c77356",
+  "arches": [
+    {
+      "axis": "X",
+      "rise": null,
+      "faces": 576,
+      "incorrectFaces": [],
+      "minimumExpectedOrientationDot": 0.9999998167477315
+    },
+    {
+      "axis": "X",
+      "rise": 13.2364,
+      "faces": 576,
+      "incorrectFaces": [],
+      "minimumExpectedOrientationDot": 0.9754225015640259
+    },
+    {
+      "axis": "Y",
+      "rise": null,
+      "faces": 576,
+      "incorrectFaces": [],
+      "minimumExpectedOrientationDot": 0.9999998167477315
+    },
+    {
+      "axis": "Y",
+      "rise": 13.2364,
+      "faces": 576,
+      "incorrectFaces": [],
+      "minimumExpectedOrientationDot": 0.9754225015640259
+    }
+  ],
+  "candelabrumContacts": {
+    "checks": 19,
+    "failures": 0
+  },
+  "globes": [
+    {
+      "name": "Candelabrum lower opal globe",
+      "vertices": 1106,
+      "allFacesSmooth": true,
+      "centre": [
+        0.6399999856948853,
+        0.0,
+        5.690000057220459
+      ],
+      "top": 5.914999961853027
+    },
+    {
+      "name": "Candelabrum lower opal globe.001",
+      "vertices": 1106,
+      "allFacesSmooth": true,
+      "centre": [
+        3.91886972974919e-17,
+        0.6399999856948853,
+        5.690000057220459
+      ],
+      "top": 5.914999961853027
+    },
+    {
+      "name": "Candelabrum lower opal globe.002",
+      "vertices": 1106,
+      "allFacesSmooth": true,
+      "centre": [
+        -0.6399999856948853,
+        7.83773945949838e-17,
+        5.690000057220459
+      ],
+      "top": 5.914999961853027
+    },
+    {
+      "name": "Candelabrum lower opal globe.003",
+      "vertices": 1106,
+      "allFacesSmooth": true,
+      "centre": [
+        -1.1756609520119815e-16,
+        -0.6399999856948853,
+        5.690000057220459
+      ],
+      "top": 5.914999961853027
+    },
+    {
+      "name": "Candelabrum raised central opal globe",
+      "vertices": 1106,
+      "allFacesSmooth": true,
+      "centre": [
+        0.0,
+        0.0,
+        6.2855000495910645
+      ],
+      "top": 6.575500011444092
+    }
+  ],
+  "abacus": {
+    "vertices": 384,
+    "triangles": 764,
+    "zeroAreaTriangles": 0
+  },
+  "leaf": {
+    "vertices": 1722,
+    "polygons": 1720,
+    "allFacesSmooth": true,
+    "inconsistentlyOrientedSharedEdges": 0
+  },
+  "checkpointNegativeControl": {
+    "commit": "b86a591",
+    "sourceSha256": "2a7d2588aab5fb13bd9a3f9b3a9ffe5979f5ffab387b2a70d4c4cea8c2498ec6",
+    "leafInconsistentlyOrientedSharedEdges": 62,
+    "axisYIncorrectArchFaces": 192,
+    "axisYArchFaces": 192
+  }
+}

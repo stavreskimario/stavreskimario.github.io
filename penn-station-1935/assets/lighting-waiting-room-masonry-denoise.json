@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "zone": "waiting-room-masonry",
+  "source": "lighting-waiting-room-masonry-sky.hdr",
+  "sourceSha256": "7dad0cacb4a00b151b091caf8bd02f5733fbbfbca6675cb0f4aabdbbbf608313",
+  "inputTransfer": "linear",
+  "inputScale": 1,
+  "radianceScale": 1.0,
+  "method": "Blender4.3 compositor OpenImageDenoise,color-only,prefilterNONE; no geometry/AO changes",
+  "encoding": "Explicit IEC61966-2-1 sRGB once for PNG/WebP; direct linear Radiance RGBE writer with no view transform",
+  "sourceStored": {
+    "mean": 0.006643590051680803,
+    "minimum": 0.0,
+    "maximum": 0.671875
+  },
+  "originalLinear": {
+    "mean": 0.006643590051680803,
+    "minimum": 0.0,
+    "maximum": 0.671875
+  },
+  "denoisedLinear": {
+    "mean": 0.006665732245892286,
+    "minimum": 0.0,
+    "maximum": 1.1283419132232666
+  },
+  "relativeMeanChange": 0.0033328658209248463,
+  "negativeOutputSamplesClamped": 0,
+  "constant018Test": {
+    "before": 0.18,
+    "after": 0.18000005185604095,
+    "maximumError": 0.0,
+    "passed": true,
+    "uniformInputProtection": "OIDN is bypassed for exactly uniform images so the learned denoiser cannot introduce false structure; compositor EXR/encoding path is still tested"
+  },
+  "retainedHdr": {
+    "file": "lighting-waiting-room-masonry-sky-denoised-linear.hdr",
+    "sha256": "e51758aa4ba1d0674b413dccdbf9d177f2b506d4aa0ab04af7ae06ee831a0868",
+    "decodedLinear": {
+      "mean": 0.006645835470408201,
+      "minimum": 0.0,
+      "maximum": 1.125
+    },
+    "meanQuantizationError": 1.9921688362956047e-05,
+    "archiveFile": "lighting-waiting-room-masonry-sky-denoised-linear.hdr.gz"
+  },
+  "full": {
+    "png": "lighting-waiting-room-masonry-sky.png",
+    "webp": "lighting-waiting-room-masonry-sky.webp",
+    "clippedRGBSamples": 3,
+    "width": 4096,
+    "height": 4096
+  },
+  "low": {
+    "png": "lighting-waiting-room-masonry-sky-low.png",
+    "webp": "lighting-waiting-room-masonry-sky-low.webp",
+    "clippedRGBSamples": 0,
+    "width": 512,
+    "height": 512
+  },
+  "limitations": "Color-only atlas denoising can soften tiny light/shadow features near islands. Inspect actual mapped geometry; higher-sample source bakes remain preferable. PNG clipping is explicitly reported.",
+  "elapsedSeconds": 9.581695458000468,
+  "authoringDirectory": "authoring/penn-station-1935/lighting/phase4/denoised",
+  "sourceArchiveFile": "../originals/lighting-waiting-room-masonry-sky.hdr.gz"
+}

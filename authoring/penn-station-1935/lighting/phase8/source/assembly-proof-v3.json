@@ -1,0 +1,602 @@
+{
+  "schema": 1,
+  "status": "ASSEMBLY PRESERVATION PASS ONLY; SOURCE/VISUAL/FRESH GI ACCEPTANCE SEPARATE",
+  "base": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-lighting-uv-priority-v1/pack-v1/byte-patch/UV-ONLY-UNBAKED-arrivals-priority.glb",
+    "sha256": "85bfe97fa8c9459aa82591a983efe3165d87b46a1ce86413c13ae18501a89994",
+    "bytes": 44171296
+  },
+  "geometryCandidate": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-curvature-study-v1/candidate-v3-material-fixed/west-p5-curved-study.glb",
+    "sha256": "024e8cff461f7cdb1080652412e52b210495fdaf1d4e1d75945dcce6f4f6d98f"
+  },
+  "geometryManifestSha256": "d776f343b9b7d40716601bc5bd0c0904702e5b131834c438659f43176513e347",
+  "output": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arrivals-p5-bake-preparation-v1/geometry-input/p5-arrivals-preserved-input-v3.glb",
+    "sha256": "26f17e32c793a7a85ea279158a98cecac68e890b77fe2c5d18f74965b9e2713b",
+    "bytes": 44632896
+  },
+  "originalBinPrefixSha256": "cac1749317e142570c474e6f638ea90c17bf6c4f990545614275953a3fc664cf",
+  "originalBinPrefixByteExact": true,
+  "allOriginalNodeFramesAndNonownedNodeDefinitionsExact": true,
+  "allOpaqueArchitectureMeshAndAccessorBytesExact": true,
+  "allOriginalMaterialTextureImageSamplerDefinitionsAndImageBytesExact": true,
+  "unownedMeshCount": 3898,
+  "unownedMeshesExact": true,
+  "ownedReplacedMeshIndices": [
+    1266,
+    1300,
+    1334,
+    1368,
+    1404,
+    1412
+  ],
+  "ownedReplacedNames": [
+    "Arrival row5 west west flight1 rounded top rail",
+    "Arrival row5 west Arrival intermediate landing top rail",
+    "Arrival row5 west west flight2 rounded top rail",
+    "Arrival row5 west west flight1 rounded top rail.001",
+    "Arrival row5 west Arrival intermediate landing top rail.001",
+    "Arrival row5 west west flight2 rounded top rail.001"
+  ],
+  "ownedMeshFanoutAndActions": [
+    {
+      "owner": "Arrival row5 west west flight1 rounded top rail",
+      "originalMesh": 1266,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1266
+    },
+    {
+      "owner": "Arrival row5 west Arrival intermediate landing top rail",
+      "originalMesh": 1404,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1404
+    },
+    {
+      "owner": "Arrival row5 west west flight2 rounded top rail",
+      "originalMesh": 1334,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1334
+    },
+    {
+      "owner": "Arrival row5 west west flight1 rounded top rail.001",
+      "originalMesh": 1300,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1300
+    },
+    {
+      "owner": "Arrival row5 west Arrival intermediate landing top rail.001",
+      "originalMesh": 1412,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1412
+    },
+    {
+      "owner": "Arrival row5 west west flight2 rounded top rail.001",
+      "originalMesh": 1368,
+      "originalFanout": 1,
+      "action": "replace unique owned mesh definition",
+      "resultMesh": 1368
+    }
+  ],
+  "newMetalObjectNames": [
+    "P5Finish west flight1 side-plus",
+    "P5Finish west flight1 side-minus",
+    "P5Finish west flight2 side-plus",
+    "P5Finish west flight2 side-minus",
+    "P5Finish west landing side-minus",
+    "P5Finish west landing side-plus",
+    "P5Finish east flight1 side-plus",
+    "P5Finish east flight1 side-minus",
+    "P5Finish east flight2 side-plus",
+    "P5Finish east flight2 side-minus",
+    "P5Finish east landing side-minus",
+    "P5Finish east landing side-plus",
+    "P5Finish west gallery fascia",
+    "P5Finish east gallery fascia",
+    "P5Curve west lower haunch side-plus",
+    "P5Curve west lower haunch side-minus"
+  ],
+  "originalNodeCount": 3904,
+  "outputNodeCount": 3920,
+  "newNodeTransforms": [
+    {
+      "name": "P5Finish west flight1 side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight1 steel stringer"
+        },
+        "mesh": 4047,
+        "name": "P5Finish west flight1 side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight1 steel stringer"
+        },
+        "mesh": 3904,
+        "name": "P5Finish west flight1 side-plus"
+      }
+    },
+    {
+      "name": "P5Finish west flight1 side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight1 steel stringer.001"
+        },
+        "mesh": 4048,
+        "name": "P5Finish west flight1 side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight1 steel stringer.001"
+        },
+        "mesh": 3905,
+        "name": "P5Finish west flight1 side-minus"
+      }
+    },
+    {
+      "name": "P5Finish west flight2 side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight2 steel stringer"
+        },
+        "mesh": 4049,
+        "name": "P5Finish west flight2 side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight2 steel stringer"
+        },
+        "mesh": 3906,
+        "name": "P5Finish west flight2 side-plus"
+      }
+    },
+    {
+      "name": "P5Finish west flight2 side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight2 steel stringer.001"
+        },
+        "mesh": 4050,
+        "name": "P5Finish west flight2 side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west flight2 steel stringer.001"
+        },
+        "mesh": 3907,
+        "name": "P5Finish west flight2 side-minus"
+      }
+    },
+    {
+      "name": "P5Finish west landing side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west landing bearing girder.001 | Arrival row5 west west CENTRAL support girder | Arrival row5 west west landing bearing girder"
+        },
+        "mesh": 4051,
+        "name": "P5Finish west landing side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west landing bearing girder.001 | Arrival row5 west west CENTRAL support girder | Arrival row5 west west landing bearing girder"
+        },
+        "mesh": 3908,
+        "name": "P5Finish west landing side-minus"
+      }
+    },
+    {
+      "name": "P5Finish west landing side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west landing bearing girder.001 | Arrival row5 west west CENTRAL support girder | Arrival row5 west west landing bearing girder"
+        },
+        "mesh": 4052,
+        "name": "P5Finish west landing side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 west west landing bearing girder.001 | Arrival row5 west west CENTRAL support girder | Arrival row5 west west landing bearing girder"
+        },
+        "mesh": 3909,
+        "name": "P5Finish west landing side-plus"
+      }
+    },
+    {
+      "name": "P5Finish east flight1 side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight1 steel stringer"
+        },
+        "mesh": 4053,
+        "name": "P5Finish east flight1 side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight1 steel stringer"
+        },
+        "mesh": 3910,
+        "name": "P5Finish east flight1 side-plus"
+      }
+    },
+    {
+      "name": "P5Finish east flight1 side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight1 steel stringer.001"
+        },
+        "mesh": 4054,
+        "name": "P5Finish east flight1 side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight1 steel stringer.001"
+        },
+        "mesh": 3911,
+        "name": "P5Finish east flight1 side-minus"
+      }
+    },
+    {
+      "name": "P5Finish east flight2 side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight2 steel stringer"
+        },
+        "mesh": 4055,
+        "name": "P5Finish east flight2 side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight2 steel stringer"
+        },
+        "mesh": 3912,
+        "name": "P5Finish east flight2 side-plus"
+      }
+    },
+    {
+      "name": "P5Finish east flight2 side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight2 steel stringer.001"
+        },
+        "mesh": 4056,
+        "name": "P5Finish east flight2 side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east flight2 steel stringer.001"
+        },
+        "mesh": 3913,
+        "name": "P5Finish east flight2 side-minus"
+      }
+    },
+    {
+      "name": "P5Finish east landing side-minus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east landing bearing girder | Arrival row5 east east CENTRAL support girder | Arrival row5 east east landing bearing girder.001"
+        },
+        "mesh": 4057,
+        "name": "P5Finish east landing side-minus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east landing bearing girder | Arrival row5 east east CENTRAL support girder | Arrival row5 east east landing bearing girder.001"
+        },
+        "mesh": 3914,
+        "name": "P5Finish east landing side-minus"
+      }
+    },
+    {
+      "name": "P5Finish east landing side-plus",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east landing bearing girder | Arrival row5 east east CENTRAL support girder | Arrival row5 east east landing bearing girder.001"
+        },
+        "mesh": 4058,
+        "name": "P5Finish east landing side-plus"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Arrival row5 east east landing bearing girder | Arrival row5 east east CENTRAL support girder | Arrival row5 east east landing bearing girder.001"
+        },
+        "mesh": 3915,
+        "name": "P5Finish east landing side-plus"
+      }
+    },
+    {
+      "name": "P5Finish west gallery fascia",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Exit bridge continuous edge girder | Arrival row5 west Arrival upper head connection girder"
+        },
+        "mesh": 4059,
+        "name": "P5Finish west gallery fascia"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Exit bridge continuous edge girder | Arrival row5 west Arrival upper head connection girder"
+        },
+        "mesh": 3916,
+        "name": "P5Finish west gallery fascia"
+      }
+    },
+    {
+      "name": "P5Finish east gallery fascia",
+      "sourceNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Exit bridge continuous edge girder.001 | Arrival row5 east Arrival upper head connection girder"
+        },
+        "mesh": 4060,
+        "name": "P5Finish east gallery fascia"
+      },
+      "copiedNode": {
+        "extras": {
+          "reconstruction_status": "Inferred appearance skin;8mm is not a recovered historical fabrication dimension.",
+          "source_family": "LOC det.4a23720 / ASCE plateLXXXIV Fig2 flat visible stringer/landing/gallery face family; curves remain unresolved.",
+          "penn_p5_finish_study": 1,
+          "host_names": "Exit bridge continuous edge girder.001 | Arrival row5 east Arrival upper head connection girder"
+        },
+        "mesh": 3917,
+        "name": "P5Finish east gallery fascia"
+      }
+    },
+    {
+      "name": "P5Curve west lower haunch side-plus",
+      "sourceNode": {
+        "mesh": 4061,
+        "name": "P5Curve west lower haunch side-plus",
+        "extras": {
+          "curvature_study": "C1lower-outline appearance interpretation; no authenticated radius/fabrication."
+        },
+        "translation": [
+          -78.33699798583984,
+          -6.156351566314697,
+          13.807632446289062
+        ]
+      },
+      "copiedNode": {
+        "mesh": 3918,
+        "name": "P5Curve west lower haunch side-plus",
+        "extras": {
+          "curvature_study": "C1lower-outline appearance interpretation; no authenticated radius/fabrication."
+        },
+        "translation": [
+          -78.33699798583984,
+          -6.156351566314697,
+          13.807632446289062
+        ]
+      }
+    },
+    {
+      "name": "P5Curve west lower haunch side-minus",
+      "sourceNode": {
+        "mesh": 4062,
+        "name": "P5Curve west lower haunch side-minus",
+        "extras": {
+          "curvature_study": "C1lower-outline appearance interpretation; no authenticated radius/fabrication."
+        },
+        "translation": [
+          -78.33699798583984,
+          -6.156351566314697,
+          11.527631759643555
+        ]
+      },
+      "copiedNode": {
+        "mesh": 3919,
+        "name": "P5Curve west lower haunch side-minus",
+        "extras": {
+          "curvature_study": "C1lower-outline appearance interpretation; no authenticated radius/fabrication."
+        },
+        "translation": [
+          -78.33699798583984,
+          -6.156351566314697,
+          11.527631759643555
+        ]
+      }
+    }
+  ],
+  "copiedGeometryBufferViews": 77,
+  "copiedGeometryAccessors": 77,
+  "appendedGeometryBytes": 439280,
+  "sourceGeometry": [
+    {
+      "owner": "Arrival row5 west west flight1 rounded top rail",
+      "sourceMesh": 1290,
+      "sourceMeshJsonSha256": "d61c1b899eca1487071fdb60ccf7c93bd6c90329bc837ac57a9b87856bd7ae1d"
+    },
+    {
+      "owner": "Arrival row5 west Arrival intermediate landing top rail",
+      "sourceMesh": 1430,
+      "sourceMeshJsonSha256": "5bafbd17216c0fc22eebbecd13a98e1efc296e0ba3c190327c26ca15f6652938"
+    },
+    {
+      "owner": "Arrival row5 west west flight2 rounded top rail",
+      "sourceMesh": 1359,
+      "sourceMeshJsonSha256": "d1a29e1e824494d87f0c0080595dbe97b5ade473c3231861ecfa683cc2e0fb87"
+    },
+    {
+      "owner": "Arrival row5 west west flight1 rounded top rail.001",
+      "sourceMesh": 1324,
+      "sourceMeshJsonSha256": "2e0da3967635ea50abc958febc51246f809d4cb10ef8580fe2b620c75bc4695f"
+    },
+    {
+      "owner": "Arrival row5 west Arrival intermediate landing top rail.001",
+      "sourceMesh": 1438,
+      "sourceMeshJsonSha256": "4d3068cd065d5c00f04b118adb03ff81a0dd24ac177f12625b5797ef029d56e4"
+    },
+    {
+      "owner": "Arrival row5 west west flight2 rounded top rail.001",
+      "sourceMesh": 1393,
+      "sourceMeshJsonSha256": "54b1caef62215a886bfe60911c43ac3e6080276b147496333cde1bb132c2d38a"
+    },
+    {
+      "owner": "P5Finish west flight1 side-plus",
+      "sourceMesh": 4047,
+      "sourceMeshJsonSha256": "efd0ccecba2dea37efbdeeca3e95e94900ddd81eb12438e4fccfdfd3db82fb5a"
+    },
+    {
+      "owner": "P5Finish west flight1 side-minus",
+      "sourceMesh": 4048,
+      "sourceMeshJsonSha256": "9a30214cc9a032e8c2b7eecad7f0d38c1fedfc65f412c176fbd27069a8ae0109"
+    },
+    {
+      "owner": "P5Finish west flight2 side-plus",
+      "sourceMesh": 4049,
+      "sourceMeshJsonSha256": "4c862687f42ca9cee08961b856bb47b6bf6d96d1b8af0f1b518d2488b61e8d54"
+    },
+    {
+      "owner": "P5Finish west flight2 side-minus",
+      "sourceMesh": 4050,
+      "sourceMeshJsonSha256": "312f721d49fae04d5d434249eed6528f5981ab29f5420a9ccfbf96bb74a4e407"
+    },
+    {
+      "owner": "P5Finish west landing side-minus",
+      "sourceMesh": 4051,
+      "sourceMeshJsonSha256": "0c34ed7db97ca4de409ad6ebee70823500272c326eeb599157709dda59acea84"
+    },
+    {
+      "owner": "P5Finish west landing side-plus",
+      "sourceMesh": 4052,
+      "sourceMeshJsonSha256": "030a8e4dc31a2898b6acb7b0a28b22b522b37b21d9a36dd5e13c93bb7fe9abf2"
+    },
+    {
+      "owner": "P5Finish east flight1 side-plus",
+      "sourceMesh": 4053,
+      "sourceMeshJsonSha256": "bd42a9812c996c425cc77e993e43ce05335d20907a08314807e25961bfcedc41"
+    },
+    {
+      "owner": "P5Finish east flight1 side-minus",
+      "sourceMesh": 4054,
+      "sourceMeshJsonSha256": "1280212c17d781d5f9d604b6af7cebefb58cb4d0f1f484564242b39a48a8057d"
+    },
+    {
+      "owner": "P5Finish east flight2 side-plus",
+      "sourceMesh": 4055,
+      "sourceMeshJsonSha256": "21707a0031dbc11ab808b440453ee6be46da5a8775860ea7188fbbd34ac9a3df"
+    },
+    {
+      "owner": "P5Finish east flight2 side-minus",
+      "sourceMesh": 4056,
+      "sourceMeshJsonSha256": "14ccd55a481d4296d25411b0da74b91d51de872d7205197ed169426f0bf9d180"
+    },
+    {
+      "owner": "P5Finish east landing side-minus",
+      "sourceMesh": 4057,
+      "sourceMeshJsonSha256": "6f4ab079537dcd90029f272e38441fa850d8187b6470b27fe1018480334287dd"
+    },
+    {
+      "owner": "P5Finish east landing side-plus",
+      "sourceMesh": 4058,
+      "sourceMeshJsonSha256": "43322080c86ac2afd53ca4a967d41291c0f8b7ebdee2577f8ff82e769c1091dc"
+    },
+    {
+      "owner": "P5Finish west gallery fascia",
+      "sourceMesh": 4059,
+      "sourceMeshJsonSha256": "acc581f60b0acb34e0bf6bb47eae8d8dc5e5c3df1372b4ee0ea859c93587f9a8"
+    },
+    {
+      "owner": "P5Finish east gallery fascia",
+      "sourceMesh": 4060,
+      "sourceMeshJsonSha256": "d47c67e46a1a7eeedab2aefdd96be518cd9eae5d9b127fa8c6081c6e9978af3f"
+    },
+    {
+      "owner": "P5Curve west lower haunch side-plus",
+      "sourceMesh": 4061,
+      "sourceMeshJsonSha256": "99892ff24bb0ed8245809c8d1f19219d6839d1e4d649c747acb04982d729bce4"
+    },
+    {
+      "owner": "P5Curve west lower haunch side-minus",
+      "sourceMesh": 4062,
+      "sourceMeshJsonSha256": "9e3811eae66b1a06e4b7219b8806e79559487e78fa5698686d87b2add0811866"
+    }
+  ],
+  "choice": "85bf is the previously accepted pre-bake source with original authored corner normals and weighted UV1. It avoids another Blender normal re-encoding from b8ad and retains the current source optical PBR/maps. Its old AO and lighting extras are placeholders; fresh AO/DIFFUSE/export gates are mandatory.",
+  "oldLightingBytesMayNotBePromoted": true,
+  "generatorSha256": "dff77339b65a1c7f7776120843310d19a73ae75f4dfdc3fcb175748163767a7f"
+}

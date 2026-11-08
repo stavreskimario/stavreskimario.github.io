@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "status": "PASS deterministic explicit delivery transform; physical denoise inputs retained unchanged",
+  "algorithm": "bounded-linear-radiance-stitch",
+  "results": {
+    "full": {
+      "width": 4096,
+      "height": 4096,
+      "coveredPixels": 4581864,
+      "underRoofPixels": 2710774,
+      "transitionPixels": 1871090,
+      "paddedPixels": 587297,
+      "underRoofRGBByteErrors": 0,
+      "uncoveredOutsidePaddingRGBByteErrors": 0,
+      "clippedRGBSamples": 0,
+      "png": {
+        "file": "lighting-platform-enclosure-floor-sky-transition.png",
+        "sha256": "e9683c3c72ea9d70de55c21ab13f16479569524374086589fb47fc00dd022506",
+        "bytes": 2334994
+      },
+      "webp": {
+        "file": "lighting-platform-enclosure-floor-sky.webp",
+        "sha256": "f1a4eff577b3ad79edef3c60f7aaba59eeb5638c9bfb9ed8e22d0bd7dd985717",
+        "bytes": 1264706
+      },
+      "decodedRgbSha256": "c98e02538d5215025221db660e500bd4d059b73e4c79fef7aead4c283262c166",
+      "physicalInputSha256": "06a139b654259bcd190a555d3f3e8a0f1f13881f9d8a1696cd371ebef32c17f2"
+    },
+    "low": {
+      "width": 512,
+      "height": 512,
+      "coveredPixels": 71993,
+      "underRoofPixels": 42578,
+      "transitionPixels": 29415,
+      "paddedPixels": 9689,
+      "underRoofRGBByteErrors": 0,
+      "uncoveredOutsidePaddingRGBByteErrors": 0,
+      "clippedRGBSamples": 0,
+      "png": {
+        "file": "lighting-platform-enclosure-floor-sky-transition-low.png",
+        "sha256": "926308c85d176aa54894530e2de660cbfd65d13eff3aa11af8485231d0edb892",
+        "bytes": 102255
+      },
+      "webp": {
+        "file": "lighting-platform-enclosure-floor-sky-low.webp",
+        "sha256": "fabc583f6e5f6e83aa60f2200294102006d3abe562f48ecee5e892b9a150de9f",
+        "bytes": 55232
+      },
+      "decodedRgbSha256": "dd13a1ebc186d47e22f659d82c5583f22be4dc81d335161e406df7f3aff58eb6",
+      "physicalInputSha256": "38d7693e3ccd348e000e10cdfaf7e256c732d751a916471c4b93ad3d5dd65ec0"
+    }
+  },
+  "controlSha256": "e0d5d76b840cf5198b58041bbaeaf0b89f3f2895a56e34054631850483d5cd44",
+  "helperSha256": "178e573c44bc60a54331fa7b00f711cb99b03ef88b9669f4b6a6892b9140746f"
+}

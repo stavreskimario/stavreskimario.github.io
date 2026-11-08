@@ -1,0 +1,962 @@
+{
+  "status": "PASS visible floor minimum-direction lighting density",
+  "input": {
+    "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/model-platform-low.glb.gz",
+    "sha256": "4431f8e1b774f0fa1c3468d1a7ec56f8468e4f995d8068222f0e954c78c273dd",
+    "bytes": 802608
+  },
+  "targetVisibleFloorMinDirectionalPixelsPerMetre": 7.5,
+  "selector": "RailwayPlatformStippledGranolithicEnclosure14 family, actual oriented geometric world normalY>.95; excludes underside/coves/rubbed underdeck",
+  "method": "Per-triangle pixel-space UV Jacobian from an orthonormal physical tangent basis. Singular minimum reports weakest resolved direction, sqrt(abs(detJ)) reports equivalent area density. Authoritative runtime AO texCoord/texture transform; actual sky_illumination image dimensions independently read from file header. No sourceUV0/material tiling used.",
+  "bindings": [
+    {
+      "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+      "aoTexCoord": 1,
+      "attribute": "TEXCOORD_1",
+      "transform": {},
+      "image": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp",
+        "sha256": "be3820ee8b02f1683bc336b15f11bdae39c63646cf3ce80d314fedf2c487ba5d",
+        "bytes": 54372,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "aoTexCoord": 1,
+      "attribute": "TEXCOORD_1",
+      "transform": {},
+      "image": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp",
+        "sha256": "525d7adbe7b70ace8238dcb0acd0578c3b55f314a987523f50e58798805ac055",
+        "bytes": 56046,
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "summary": {
+    "visibleStippledFloorTop": {
+      "triangles": 24,
+      "physicalAreaM2": 795.1973416610927,
+      "actualLightingPixelArea": 50857.0183470304,
+      "equivalentAreaPixelsPerMetre": 7.997200557232818,
+      "minimumDirectionalPixelsPerMetre": 7.995001152094132,
+      "areaWeightedMinimumDirectionPercentiles": {
+        "0": 7.995001152094132,
+        "1": 7.995009429204795,
+        "0.05": 7.995004864837553,
+        "0.5": 7.99500654030567,
+        "0.95": 7.995009016429506
+      },
+      "maximumAnisotropy": 1.000557373019634,
+      "worst5": [
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+          "owner": "Continuity exact original floor receivers",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 11,
+          "centerWorld": [
+            -128.3783664703369,
+            -11.985624797058104,
+            40.275218327840165
+          ],
+          "geometricNormalWorld": [
+            0,
+            0.9999999999999999,
+            0
+          ],
+          "worldAreaM2": 15.815387685681344,
+          "lightingPixelArea": 1011.4753781559103,
+          "minimumDirectionalPixelsPerMetre": 7.995001152094132,
+          "maximumDirectionalPixelsPerMetre": 7.999391319787738,
+          "areaEquivalentPixelsPerMetre": 7.99719593468578,
+          "anisotropy": 1.000549114078921,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+          "owner": "Continuity exact original floor receivers",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 56,
+          "centerWorld": [
+            -145.33203315734863,
+            -11.985624797058104,
+            13.13131554921468
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 7.739127434242619,
+          "lightingPixelArea": 494.9553141857918,
+          "minimumDirectionalPixelsPerMetre": 7.9950041664843425,
+          "maximumDirectionalPixelsPerMetre": 7.99936105245378,
+          "areaEquivalentPixelsPerMetre": 7.997182312763699,
+          "anisotropy": 1.0005449510567739,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+          "owner": "Continuity exact original floor receivers",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 34,
+          "centerWorld": [
+            -145.33203315734863,
+            -11.985624797058104,
+            25.77427609761556
+          ],
+          "geometricNormalWorld": [
+            0,
+            0.9999999999999999,
+            0
+          ],
+          "worldAreaM2": 15.547058969081263,
+          "lightingPixelArea": 994.3135188175856,
+          "minimumDirectionalPixelsPerMetre": 7.995004704814401,
+          "maximumDirectionalPixelsPerMetre": 7.999380862831167,
+          "areaEquivalentPixelsPerMetre": 7.997192484487132,
+          "anisotropy": 1.0005473615311484,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+          "owner": "Continuity exact original floor receivers",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 10,
+          "centerWorld": [
+            -145.33203315734863,
+            -11.985624797058104,
+            40.252543131510414
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 8.50619493360864,
+          "lightingPixelArea": 544.0108288856454,
+          "minimumDirectionalPixelsPerMetre": 7.995004864837553,
+          "maximumDirectionalPixelsPerMetre": 7.999327568176378,
+          "areaEquivalentPixelsPerMetre": 7.997165924438438,
+          "anisotropy": 1.00054067551076,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+        },
+        {
+          "group": "visibleStippledFloorTop",
+          "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+          "owner": "Continuity exact original floor receivers",
+          "node": 19,
+          "primitive": 2,
+          "triangleOffset": 59,
+          "centerWorld": [
+            -145.33203315734863,
+            -11.985624797058104,
+            13.715592384338379
+          ],
+          "geometricNormalWorld": [
+            0,
+            1,
+            0
+          ],
+          "worldAreaM2": 22.447004348750852,
+          "lightingPixelArea": 1435.611921565127,
+          "minimumDirectionalPixelsPerMetre": 7.995005093399415,
+          "maximumDirectionalPixelsPerMetre": 7.999446177054888,
+          "areaEquivalentPixelsPerMetre": 7.997225326944859,
+          "anisotropy": 1.0005554822796972,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+        }
+      ]
+    },
+    "paintedStructureAllFaces": {
+      "triangles": 28932,
+      "physicalAreaM2": 10235.218021807472,
+      "actualLightingPixelArea": 26340.60927066724,
+      "equivalentAreaPixelsPerMetre": 1.6042215980285142,
+      "minimumDirectionalPixelsPerMetre": 1.5955646168132438,
+      "areaWeightedMinimumDirectionPercentiles": {
+        "0": 1.5955646168132438,
+        "1": 1.6051261513816582,
+        "0.05": 1.6037614313320259,
+        "0.5": 1.603783226407431,
+        "0.95": 1.6037880919429253
+      },
+      "maximumAnisotropy": 1.0086794400225814,
+      "worst5": [
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+          "owner": "Continuity exact source structure",
+          "node": 18,
+          "primitive": 0,
+          "triangleOffset": 22392,
+          "centerWorld": [
+            -141.9986998240153,
+            -6.006930673531691,
+            27.865312576293945
+          ],
+          "geometricNormalWorld": [
+            0,
+            0,
+            -1
+          ],
+          "worldAreaM2": 0.09798368119502143,
+          "lightingPixelArea": 0.2507341839373112,
+          "minimumDirectionalPixelsPerMetre": 1.5955646168132438,
+          "maximumDirectionalPixelsPerMetre": 1.6037822375652797,
+          "areaEquivalentPixelsPerMetre": 1.599668150377675,
+          "anisotropy": 1.0051502901640228,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+          "owner": "Continuity exact source structure",
+          "node": 18,
+          "primitive": 0,
+          "triangleOffset": 22932,
+          "centerWorld": [
+            -141.9986998240153,
+            -6.006930673531691,
+            30.54983139038086
+          ],
+          "geometricNormalWorld": [
+            0,
+            0,
+            -1
+          ],
+          "worldAreaM2": 0.09798368119502143,
+          "lightingPixelArea": 0.2507341839373112,
+          "minimumDirectionalPixelsPerMetre": 1.5955646168132438,
+          "maximumDirectionalPixelsPerMetre": 1.6037822375652797,
+          "areaEquivalentPixelsPerMetre": 1.599668150377675,
+          "anisotropy": 1.0051502901640228,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+          "owner": "Continuity exact source structure",
+          "node": 18,
+          "primitive": 0,
+          "triangleOffset": 21889,
+          "centerWorld": [
+            -131.71169980367023,
+            -6.009047340327998,
+            25.557266235351562
+          ],
+          "geometricNormalWorld": [
+            0,
+            0,
+            -1
+          ],
+          "worldAreaM2": 0.09798368119502143,
+          "lightingPixelArea": 0.2507343385368586,
+          "minimumDirectionalPixelsPerMetre": 1.5955646168132476,
+          "maximumDirectionalPixelsPerMetre": 1.6037832264372527,
+          "areaEquivalentPixelsPerMetre": 1.5996686435452403,
+          "anisotropy": 1.0051509099270575,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+          "owner": "Continuity exact source structure",
+          "node": 18,
+          "primitive": 0,
+          "triangleOffset": 27829,
+          "centerWorld": [
+            -131.71169980367023,
+            -6.009047340327998,
+            35.714338302612305
+          ],
+          "geometricNormalWorld": [
+            0,
+            0,
+            -1
+          ],
+          "worldAreaM2": 0.09798368119502143,
+          "lightingPixelArea": 0.2507343385368586,
+          "minimumDirectionalPixelsPerMetre": 1.5955646168132476,
+          "maximumDirectionalPixelsPerMetre": 1.6037832264372527,
+          "areaEquivalentPixelsPerMetre": 1.5996686435452403,
+          "anisotropy": 1.0051509099270575,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp"
+        },
+        {
+          "group": "paintedStructureAllFaces",
+          "material": "PaintedStructuralIronEighthAvenueBridgePhase14Continuity",
+          "owner": "Continuity exact source structure",
+          "node": 18,
+          "primitive": 0,
+          "triangleOffset": 19729,
+          "centerWorld": [
+            -131.71169980367023,
+            -6.009047340327998,
+            15.107302188873291
+          ],
+          "geometricNormalWorld": [
+            0,
+            0,
+            -1
+          ],
+          "worldAreaM2": 0.09798368119502143,
+          "lightingPixelArea": 0.25073433853685856,
+          "minimumDirectionalPixelsPerMetre": 1.595564616842916,
+          "maximumDirectionalPixelsPerMetre": 1.6037832264074308,
+          "areaEquivalentPixelsPerMetre": 1.59966864354524,
+          "anisotropy": 1.005150909889677,
+          "aoTexCoord": 1,
+          "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-sky-low.webp"
+        }
+      ]
+    }
+  },
+  "allVisibleFloorTriangles": [
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 6,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        38.730312983194985
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 60.85624475438817,
+      "lightingPixelArea": 3892.0810558132766,
+      "minimumDirectionalPixelsPerMetre": 7.995006307054381,
+      "maximumDirectionalPixelsPerMetre": 7.999409245516906,
+      "areaEquivalentPixelsPerMetre": 7.997207473275705,
+      "anisotropy": 1.0005507110680627,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 7,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        39.343366622924805
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 46.770781811574125,
+      "lightingPixelArea": 2991.224970229705,
+      "minimumDirectionalPixelsPerMetre": 7.995006578783167,
+      "maximumDirectionalPixelsPerMetre": 7.999367009111552,
+      "areaEquivalentPixelsPerMetre": 7.997186496759213,
+      "anisotropy": 1.000545394213928,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 8,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        42.722722371419266
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 38.399915352172684,
+      "lightingPixelArea": 2455.883617624067,
+      "minimumDirectionalPixelsPerMetre": 7.995007069144006,
+      "maximumDirectionalPixelsPerMetre": 7.999423011221188,
+      "areaEquivalentPixelsPerMetre": 7.997214735380477,
+      "anisotropy": 1.0005523374825052,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 9,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        42.04121462504069
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 20.653113862026657,
+      "lightingPixelArea": 1320.865925830134,
+      "minimumDirectionalPixelsPerMetre": 7.99500630755152,
+      "maximumDirectionalPixelsPerMetre": 7.9993442479083265,
+      "areaEquivalentPixelsPerMetre": 7.997174983599086,
+      "anisotropy": 1.0005425812300748,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 10,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        40.252543131510414
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 8.50619493360864,
+      "lightingPixelArea": 544.0108288856454,
+      "minimumDirectionalPixelsPerMetre": 7.995004864837553,
+      "maximumDirectionalPixelsPerMetre": 7.999327568176378,
+      "areaEquivalentPixelsPerMetre": 7.997165924438438,
+      "anisotropy": 1.00054067551076,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 11,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        40.275218327840165
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 15.815387685681344,
+      "lightingPixelArea": 1011.4753781559103,
+      "minimumDirectionalPixelsPerMetre": 7.995001152094132,
+      "maximumDirectionalPixelsPerMetre": 7.999391319787738,
+      "areaEquivalentPixelsPerMetre": 7.99719593468578,
+      "anisotropy": 1.000549114078921,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 12,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        41.37095959981282
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 44.07498039957136,
+      "lightingPixelArea": 2818.8396988431687,
+      "minimumDirectionalPixelsPerMetre": 7.995005657617494,
+      "maximumDirectionalPixelsPerMetre": 7.99943798584727,
+      "areaEquivalentPixelsPerMetre": 7.997221514664278,
+      "anisotropy": 1.0005543871286136,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 13,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        40.88206227620442
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 23.70537726576731,
+      "lightingPixelArea": 1516.0676420980772,
+      "minimumDirectionalPixelsPerMetre": 7.995006777214728,
+      "maximumDirectionalPixelsPerMetre": 7.999316326026408,
+      "areaEquivalentPixelsPerMetre": 7.997161261326768,
+      "anisotropy": 1.000539030038594,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 30,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        24.73663330078125
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 36.109711324155796,
+      "lightingPixelArea": 2309.4014337596423,
+      "minimumDirectionalPixelsPerMetre": 7.995009016429506,
+      "maximumDirectionalPixelsPerMetre": 7.9993823735962515,
+      "areaEquivalentPixelsPerMetre": 7.997195396060377,
+      "anisotropy": 1.000547010911152,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 31,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        25.097178777058918
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 27.50655523644673,
+      "lightingPixelArea": 1759.1827336628141,
+      "minimumDirectionalPixelsPerMetre": 7.995006196886368,
+      "maximumDirectionalPixelsPerMetre": 7.999372926583455,
+      "areaEquivalentPixelsPerMetre": 7.997189263687571,
+      "anisotropy": 1.000546182152903,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 32,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        29.012255986531574
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 43.685001570673194,
+      "lightingPixelArea": 2793.863544631069,
+      "minimumDirectionalPixelsPerMetre": 7.995007046047477,
+      "maximumDirectionalPixelsPerMetre": 7.99933683495101,
+      "areaEquivalentPixelsPerMetre": 7.997171647472652,
+      "anisotropy": 1.0005415616119655,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 33,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        28.238444010416664
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 29.53866506688064,
+      "lightingPixelArea": 1889.1475097952332,
+      "minimumDirectionalPixelsPerMetre": 7.995005944637106,
+      "maximumDirectionalPixelsPerMetre": 7.999377915251907,
+      "areaEquivalentPixelsPerMetre": 7.997191631181397,
+      "anisotropy": 1.000546837694065,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 34,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        25.77427609761556
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 15.547058969081263,
+      "lightingPixelArea": 994.3135188175856,
+      "minimumDirectionalPixelsPerMetre": 7.995004704814401,
+      "maximumDirectionalPixelsPerMetre": 7.999380862831167,
+      "areaEquivalentPixelsPerMetre": 7.997192484487132,
+      "anisotropy": 1.0005473615311484,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 35,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        25.962888717651367
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 22.99269580643886,
+      "lightingPixelArea": 1470.5158441455496,
+      "minimumDirectionalPixelsPerMetre": 7.995008116631108,
+      "maximumDirectionalPixelsPerMetre": 7.999464318447073,
+      "areaEquivalentPixelsPerMetre": 7.997235907154751,
+      "anisotropy": 1.000557373019634,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 36,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        27.384275436401367
+      ],
+      "geometricNormalWorld": [
+        0,
+        0.9999999999999999,
+        0
+      ],
+      "worldAreaM2": 50.97741165175103,
+      "lightingPixelArea": 3260.2747014870683,
+      "minimumDirectionalPixelsPerMetre": 7.9950051788355685,
+      "maximumDirectionalPixelsPerMetre": 7.999404610345903,
+      "areaEquivalentPixelsPerMetre": 7.997204592063193,
+      "anisotropy": 1.0005502725028848,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 37,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        26.731255213419594
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 34.46961752545758,
+      "lightingPixelArea": 2204.5044186411324,
+      "minimumDirectionalPixelsPerMetre": 7.995007523086004,
+      "maximumDirectionalPixelsPerMetre": 7.999367190070846,
+      "areaEquivalentPixelsPerMetre": 7.997187059494342,
+      "anisotropy": 1.000545298671984,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 52,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        11.270660400390625
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 74.79735732471454,
+      "lightingPixelArea": 4783.685894219177,
+      "minimumDirectionalPixelsPerMetre": 7.9950056115881125,
+      "maximumDirectionalPixelsPerMetre": 7.999403954897564,
+      "areaEquivalentPixelsPerMetre": 7.997204480864933,
+      "anisotropy": 1.000550136363016,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 53,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        12.049458662668863
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 59.415687697901376,
+      "lightingPixelArea": 3799.9530715402266,
+      "minimumDirectionalPixelsPerMetre": 7.995006672600479,
+      "maximumDirectionalPixelsPerMetre": 7.999415855915968,
+      "areaEquivalentPixelsPerMetre": 7.9972109603882675,
+      "anisotropy": 1.000551492137036,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 54,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        15.417012691497803
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 35.80664102345145,
+      "lightingPixelArea": 2290.029114127558,
+      "minimumDirectionalPixelsPerMetre": 7.995009429204795,
+      "maximumDirectionalPixelsPerMetre": 7.999418925553044,
+      "areaEquivalentPixelsPerMetre": 7.997213873465926,
+      "anisotropy": 1.0005515311004065,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 55,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        14.809299945831299
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 19.258333238347404,
+      "lightingPixelArea": 1231.6711392852983,
+      "minimumDirectionalPixelsPerMetre": 7.995007658621777,
+      "maximumDirectionalPixelsPerMetre": 7.999395763704134,
+      "areaEquivalentPixelsPerMetre": 7.997201410191015,
+      "anisotropy": 1.0005488556446378,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 56,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        13.13131554921468
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 7.739127434242619,
+      "lightingPixelArea": 494.9553141857918,
+      "minimumDirectionalPixelsPerMetre": 7.9950041664843425,
+      "maximumDirectionalPixelsPerMetre": 7.99936105245378,
+      "areaEquivalentPixelsPerMetre": 7.997182312763699,
+      "anisotropy": 1.0005449510567739,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 57,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        13.11830695470174
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 14.389224437338271,
+      "lightingPixelArea": 920.2641154961183,
+      "minimumDirectionalPixelsPerMetre": 7.995007192237599,
+      "maximumDirectionalPixelsPerMetre": 7.999378422914219,
+      "areaEquivalentPixelsPerMetre": 7.997192508913953,
+      "anisotropy": 1.0005467450586991,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 58,
+      "centerWorld": [
+        -128.3783664703369,
+        -11.985624797058104,
+        14.148192087809244
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 41.73525294067076,
+      "lightingPixelArea": 2669.194954191021,
+      "minimumDirectionalPixelsPerMetre": 7.99500654030567,
+      "maximumDirectionalPixelsPerMetre": 7.99941857080388,
+      "areaEquivalentPixelsPerMetre": 7.9972122512923,
+      "anisotropy": 1.0005518482662856,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    },
+    {
+      "group": "visibleStippledFloorTop",
+      "material": "RailwayPlatformStippledGranolithicEnclosure14Phase14Floor",
+      "owner": "Continuity exact original floor receivers",
+      "node": 19,
+      "primitive": 2,
+      "triangleOffset": 59,
+      "centerWorld": [
+        -145.33203315734863,
+        -11.985624797058104,
+        13.715592384338379
+      ],
+      "geometricNormalWorld": [
+        0,
+        1,
+        0
+      ],
+      "worldAreaM2": 22.447004348750852,
+      "lightingPixelArea": 1435.611921565127,
+      "minimumDirectionalPixelsPerMetre": 7.995005093399415,
+      "maximumDirectionalPixelsPerMetre": 7.999446177054888,
+      "areaEquivalentPixelsPerMetre": 7.997225326944859,
+      "anisotropy": 1.0005554822796972,
+      "aoTexCoord": 1,
+      "image": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/integration/candidate-continuity-v1/lighting-platform-continuity-floor-sky-low.webp"
+    }
+  ],
+  "qualification": "Unfiltered structural family includes hidden embedded beam faces; reported separately for comparable packing quality, not folded into visible-floor metric. Full desktop target enforced; deliberately downsampled low atlases must be reported separately."
+}

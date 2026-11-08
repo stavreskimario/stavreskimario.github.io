@@ -1,0 +1,287 @@
+{
+  "scope": "Bounded interpreted linear roughness derivatives only; old geometry, nodes, normal/colour/AO/lightmap bindings and BIN bytes stay exact. Original CC0 source maps remain unchanged.",
+  "profiles": [
+    {
+      "profile": "InteriorGranite",
+      "low": false,
+      "sourceFile": "InteriorGranite-roughness.png",
+      "sourceSha256": "b4e76aef9fa19e9ecab13fb99194914b67c617d0c4ebfb2d157ff07c980226ad",
+      "uri": "textures/02474452a0e7a2da0cfb.ktx2",
+      "sha256": "02474452a0e7a2da0cfb2b688bb6afa44c2ec7ba40ac576bb3ceebd9838fd45f",
+      "bytes": 3734401,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mipLevels": 12,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.0010534015356325635,
+      "roundtripMaximumAbsoluteError": 0.01568627450980392
+    },
+    {
+      "profile": "InteriorGranite",
+      "low": true,
+      "sourceFile": "InteriorGranite-roughness-low.png",
+      "sourceSha256": "721e053a2963c77985f75547e75096a00f3b7059c55efb9935b271e1ed4a8574",
+      "uri": "textures/e6417bb84166b7f417ae.ktx2",
+      "sha256": "e6417bb84166b7f417ae930a66352deb8431d4f477fcbf5d1d25e9bdc4ec899e",
+      "bytes": 250305,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mipLevels": 10,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.0008640364104626225,
+      "roundtripMaximumAbsoluteError": 0.011764705882352941
+    },
+    {
+      "profile": "MilfordGranite",
+      "low": false,
+      "sourceFile": "MilfordGranite-roughness.png",
+      "sourceSha256": "906cc4a225389a2d6590d6cd408d4a4f382cbe45a4d3a3be99889348871560f7",
+      "uri": "textures/c7f8f448d11f12484907.ktx2",
+      "sha256": "c7f8f448d11f12484907a76adc96dbd3a78cc7164f38a0552aa698f4cd9ed329",
+      "bytes": 3716906,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mipLevels": 12,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.0010841696870093251,
+      "roundtripMaximumAbsoluteError": 0.01568627450980392
+    },
+    {
+      "profile": "MilfordGranite",
+      "low": true,
+      "sourceFile": "MilfordGranite-roughness-low.png",
+      "sourceSha256": "5ff06d0cd4cf1e76190ec5b41aa44022ebe9fbe1eb9e3ce8ceee8d9409f22bc8",
+      "uri": "textures/9e395005f83383f2235b.ktx2",
+      "sha256": "9e395005f83383f2235bfbb19228978d777f493e3b9c3b075007a338855951ca",
+      "bytes": 247153,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mipLevels": 10,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.001131588804955576,
+      "roundtripMaximumAbsoluteError": 0.011764705882352941
+    },
+    {
+      "profile": "Travertine",
+      "low": false,
+      "sourceFile": "Travertine-roughness.png",
+      "sourceSha256": "45fb894d7b28fbf2951d929ec106454a3c56f8fb871e26e53e1677d42b5acded",
+      "uri": "textures/c7670262d7c33cc39671.ktx2",
+      "sha256": "c7670262d7c33cc39671918fddf782b1fad42ab5e9e6ab04c494eabfe459d7a0",
+      "bytes": 3106230,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mipLevels": 12,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.00031133352541456034,
+      "roundtripMaximumAbsoluteError": 0.011764705882352941
+    },
+    {
+      "profile": "Travertine",
+      "low": true,
+      "sourceFile": "Travertine-roughness-low.png",
+      "sourceSha256": "9e8a219f9ad8ff92ee9a48e6cfe0dbd026467dfae360b82a9b370d4cf0e75fcb",
+      "uri": "textures/cd5b2e95d69b82d43084.ktx2",
+      "sha256": "cd5b2e95d69b82d43084bca72583d8ad972adfd5af127c75fca22777a76d2933",
+      "bytes": 247116,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mipLevels": 10,
+      "transfer": "linear Non-Color",
+      "roughnessFactor": 1,
+      "roundtripMeanAbsoluteError": 0.00041620591107536766,
+      "roundtripMaximumAbsoluteError": 0.011764705882352941
+    }
+  ],
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "bindings": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordGranite",
+          "uri": "textures/c7f8f448d11f12484907.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2"
+        }
+      ],
+      "inputSha256": "570308ab4f0f5f609564bed7dd6fb32ee1fe7b4f388c0ed17b53b283e1758381",
+      "outputSha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "unchangedBinarySha256": "9b50f101e055df3c23e8ad23418776ff1bba7c71b603de91aa9c9811de9a4512",
+      "unchangedBinaryBytes": 8817344
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "bindings": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordGranite",
+          "uri": "textures/9e395005f83383f2235b.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2"
+        }
+      ],
+      "inputSha256": "83779ef15f18ac98c7455cd34e1be52b9408c978028006b71dbf63ce07b622b8",
+      "outputSha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "unchangedBinarySha256": "12469bbafdc17a4f744d741ec7425c624574444c20c4c503516a8ba37413a049",
+      "unchangedBinaryBytes": 7947228
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "bindings": [
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2"
+        },
+        {
+          "material": "InteriorGranite",
+          "profile": "InteriorGranite",
+          "uri": "textures/02474452a0e7a2da0cfb.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2"
+        }
+      ],
+      "inputSha256": "55184fcef6fe8f96e39f33b165b308abae3693a5fd2bf0839cc1ceebb9ea641e",
+      "outputSha256": "4b2a0a96d3d9f84c21a0f41d6b941deea1260be82b93ed50567604ce71943464",
+      "unchangedBinarySha256": "dbef7adbe582c5fb9a4f843324752f4164bf9d58e31e1a9a5d6f461b3ca8fd5d",
+      "unchangedBinaryBytes": 17697632
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "bindings": [
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2"
+        },
+        {
+          "material": "InteriorGranite",
+          "profile": "InteriorGranite",
+          "uri": "textures/e6417bb84166b7f417ae.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2"
+        }
+      ],
+      "inputSha256": "99faaa426205058d9a9ccc3b6cc418db815ca7a304dc04b990c06120f0ee860a",
+      "outputSha256": "eb9b5997195a17c11195bb62cc9e1a4b5d01bec96712361584fc17b2f6528569",
+      "unchangedBinarySha256": "3c604e4683f53d8ab45969e11a9a40e0777f601aace306777888e70ee664450a",
+      "unchangedBinaryBytes": 13292040
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "bindings": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordGranite",
+          "uri": "textures/c7f8f448d11f12484907.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/c7670262d7c33cc39671.ktx2"
+        }
+      ],
+      "inputSha256": "17b8d29112d4ca46ee47d237e46b1293aaaa07c4fd5ee63ae1f3327467b1f1b7",
+      "outputSha256": "7e011b54a922e0092a6b91540b97fa3c46eac21ed764a60e79a8571a72f44748",
+      "unchangedBinarySha256": "ec64574f2d7fff70c7a167765177dda8d3e0674045f02909326a66593a94b6ef",
+      "unchangedBinaryBytes": 10997480
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "bindings": [
+        {
+          "material": "MilfordGranite",
+          "profile": "MilfordGranite",
+          "uri": "textures/9e395005f83383f2235b.ktx2"
+        },
+        {
+          "material": "Travertine",
+          "profile": "Travertine",
+          "uri": "textures/cd5b2e95d69b82d43084.ktx2"
+        }
+      ],
+      "inputSha256": "155fc3cf39cf54130845d24dffa96ba2c11c359b7fda4c5383f93ffb66421190",
+      "outputSha256": "3baef9925b0e6bf44347a58d231d91e1216ae117140e0ca74ce07af5f6567463",
+      "unchangedBinarySha256": "0f8657531c205bbeaa7c86a48072a64462085833f72c6c3a8cf942848fa06be0",
+      "unchangedBinaryBytes": 10234152
+    },
+    {
+      "file": "model-context.glb.gz",
+      "bindings": [],
+      "inputSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "outputSha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "unchangedBinarySha256": "9d41e48a98b2459703ad6a39a561548d3c8e340e7dfb946a2ccfc22cd47a0127",
+      "unchangedBinaryBytes": 2114828
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "bindings": [],
+      "inputSha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "outputSha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "unchangedBinarySha256": "844d364d0f66ffdd4c4141d4f85b1f527d5b1add48fced82bf269dbc0bc32aec",
+      "unchangedBinaryBytes": 1673968
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "bindings": [],
+      "inputSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "outputSha256": "2a535ab684efe1a7c42fa95262e4c0fe1bcc9aaee6dbfcdb8deeb0af4c2661eb",
+      "unchangedBinarySha256": "66fc949d71456862338b34e2580dd826b32832bb203bd36aadd66fb45a1921eb",
+      "unchangedBinaryBytes": 1033736
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "bindings": [],
+      "inputSha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "outputSha256": "45310a28f4db90f9a50a2388f1bd27c67fd04bf799024d954b2f3e8f8527944c",
+      "unchangedBinarySha256": "35d6fd4160669b99caab6e4d8c145b9bce0611970267e4e9ff8e163b0409b98b",
+      "unchangedBinaryBytes": 846700
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "bindings": [],
+      "inputSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "outputSha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "unchangedBinarySha256": "47ab5884e75ed79bd131c1072a70df0d15a1cd933df342efe9380a9a03d5cf42",
+      "unchangedBinaryBytes": 637748
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "bindings": [],
+      "inputSha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "outputSha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "unchangedBinarySha256": "69eff93e7480868fdce4d6d97c94934f569382cf5373606a9294ebda98c8506d",
+      "unchangedBinaryBytes": 459284
+    }
+  ]
+}

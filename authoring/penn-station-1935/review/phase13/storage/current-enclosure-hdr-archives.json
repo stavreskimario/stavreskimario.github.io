@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "Active Git-backed exact source retention; all source bytes remain reachable through ordinary feature-branch history. No downsampling.",
+  "sourceCheckpoint": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+  "externalByteExactBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/retention-activation-v1",
+  "fullSourceValidationBeforeRetirement": "promotion-v1/assets-present-validation.json",
+  "zeroOldBridgeRuntimeReferences": true,
+  "files": [
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-enclosure/raw/lighting-platform-enclosure-sky.hdr.gz",
+      "commit": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+      "blob": "3ffcc74cd8dfdab3dc8185e236a85129ae5cf096",
+      "bytes": 10103890,
+      "sha256": "cd57685746dda71e3fcffe59277e3142fe29544b97c778abe0d917b6b192aa5d",
+      "decodedBytes": 12733546,
+      "decodedSha256": "cd0dbc691d11ce2abd8268ec296115c53fdd747c4eb38ccf5cbd1644bd4319d9"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-enclosure/denoised/lighting-platform-enclosure-sky-denoised-linear.hdr.gz",
+      "commit": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+      "blob": "a995beeb1e1a898c80aa0fd5733f27238724928b",
+      "bytes": 14833097,
+      "sha256": "5fafcb3e554670efbdd0b56e31b11e761d8d88ae129a4273dc6c831210d7ebb5",
+      "decodedBytes": 67649587,
+      "decodedSha256": "d3e74faebaae77c9f54b7da2a68960fe3c40911cda344c1c5102645a9beb3ca5"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-floor/raw/lighting-platform-enclosure-floor-sky.hdr.gz",
+      "commit": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+      "blob": "934efae16ad267167dae86cfd63ba672e623135e",
+      "bytes": 15932959,
+      "sha256": "247c38e990bf87213d0ecf7add9a9a50ec735403dc6a84a43c7e1532d9e094d4",
+      "decodedBytes": 19700785,
+      "decodedSha256": "380b84d96dc50e46f8e40378459039d94e15babf269e636e8b285f7c1b089a60"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-floor/denoised/lighting-platform-enclosure-floor-sky-denoised-linear.hdr.gz",
+      "commit": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+      "blob": "ab645b4d29305a7285dbd0baf327e6bb35026e0a",
+      "bytes": 14610944,
+      "sha256": "706e69290e4957b7b1e1a6e5e91ddf52ff35e9f08188a8ac4f7d458dce7d075d",
+      "decodedBytes": 67649587,
+      "decodedSha256": "7cbb14ab9fb4c0afe3fa99c0cc5f611406bdf39e54fc455c88b61952678014e1"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-enclosure/reflections/reflection-platform-enclosure-linear.exr.gz",
+      "commit": "ccc8531be44d376d188da20eba113cb6ed08c9dc",
+      "blob": "d3b79cc9a7dfbafa8498aafe6a17259062141429",
+      "bytes": 24158394,
+      "sha256": "0a13adf280c539777235c25a708443069fbac094e2a3441c746746109e366fa8",
+      "decodedBytes": 24166491,
+      "decodedSha256": "3d330c5cb576acfbb486c1fc4010bf01912672d911492476341152bad265e732"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-soffit/raw/lighting-concourse-exit-soffit-sky.hdr.gz",
+      "commit": "f2860296b8ffd05d7d694122a9537f2b14662ae7",
+      "blob": "b75fca49615213c0b72493c34f50a60e40d899a4",
+      "bytes": 17006284,
+      "sha256": "356080a01e8c4de1fdd651f36b3b42681107e3fe83ff6b461ad87985129ca89d",
+      "decodedBytes": 20257724,
+      "decodedSha256": "9034a717b15e84d220e43231de2a8a480ec045e0ddb04e91f33c374f0aeff010"
+    },
+    {
+      "path": "authoring/penn-station-1935/lighting/phase13-soffit/denoised/lighting-concourse-exit-soffit-sky-denoised-linear.hdr.gz",
+      "commit": "f2860296b8ffd05d7d694122a9537f2b14662ae7",
+      "blob": "baa7c0b0df3a68892466282e61f8804761ccec6c",
+      "bytes": 8858038,
+      "sha256": "09518ac0c9e2a026f4852a2630a0508fd1ba73454afca9425443076d5659a9ff",
+      "decodedBytes": 67649587,
+      "decodedSha256": "c5a6940dc306d096df596f6be507c3ba5da78aa03835a1dfbffc9430628d4516"
+    }
+  ],
+  "additionalSourceCheckpoint": "f2860296b8ffd05d7d694122a9537f2b14662ae7",
+  "additionalExternalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/retention-final-v2"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "status": "APPLIED: recoverable archival of eight unreferenced texture encodings",
+  "created": "2026-11-02T03:58:03.392679+00:00",
+  "sourceCommit": "89035a4f09fcf43046c3651d6473de20f270e299",
+  "sourceInventorySha256": "72d591436d2b1c1988320c0c5408b1a04f7b046e77c2b5540139d1c89c31f787",
+  "preGuard": {
+    "schema": 1,
+    "status": "PASS",
+    "mode": "before-archival",
+    "models": 12,
+    "allImageArrayEntries": 182,
+    "protectedTextures": 89,
+    "proposedFiles": 8,
+    "proposedBytes": 7202466,
+    "rootFilesWritten": false
+  },
+  "postGuard": {
+    "schema": 1,
+    "status": "PASS",
+    "mode": "after-archival",
+    "models": 12,
+    "allImageArrayEntries": 182,
+    "protectedTextures": 89,
+    "proposedFiles": 8,
+    "proposedBytes": 7202466,
+    "rootFilesWritten": false
+  },
+  "filesArchived": 8,
+  "bytesArchived": 7202466,
+  "allImmutableGitAndExternalBackupsVerified": true,
+  "all12ModelsAnd89ReferencedTexturesByteExact": true,
+  "protectedMetadataByteExact": true,
+  "legacyRootBytesBeforeThisReceipt": 991157980,
+  "headroomBeforeThisReceipt": 8842020,
+  "qualityChanged": false,
+  "fpsGainClaimed": false,
+  "assetValidationReport": "unused-runtime-ktx-asset-validation.json",
+  "assetValidationSha256": "e8cda70e27f533a064dc1a2dacd5bf8a82ef93055cfa3315e113575a97920a8c",
+  "all12GlbsZeroValidationErrors": true,
+  "sevenStagingTestsPassed": true
+}

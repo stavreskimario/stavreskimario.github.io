@@ -1,0 +1,209 @@
+{
+  "status": "PASS fresh linear archives decoded byte-exact; source/metadata prepared, no root mutation",
+  "sourcePrimarySha256": "e888dd861313368251d438203ee2c10a3ff3efe9b80f33b0e4d78f5345724d3b",
+  "archives": [
+    {
+      "file": "raw/lighting-platform-bridge-sky.hdr.gz",
+      "decodedBytes": 18666535,
+      "archiveBytes": 15415933,
+      "decodedSha256": "52df460c3d0d358ddab7ebf75131088c91b924329331eadae3048fee15bc513b",
+      "archiveSha256": "716f5b17aebfc2e7181f4793b409903df2cae37ea4f90b0bff3a22be28a59268"
+    },
+    {
+      "file": "denoised/lighting-platform-bridge-sky-denoised-linear.hdr.gz",
+      "decodedBytes": 67649587,
+      "archiveBytes": 18567132,
+      "decodedSha256": "ea734e8b085cd5362c9c7b26adb6749e1d49449ecbfcad2b1277c15042de76f1",
+      "archiveSha256": "fb2f7fefdf1da7c1c73a364875e31e1758b47c0e5dac78ad734cde1c1c02fb1e"
+    }
+  ],
+  "allSourceFiles": [
+    {
+      "file": "actual-bake-completion.json",
+      "bytes": 2320,
+      "sha256": "c436444d5349623139005f4c993d4193cbae65f9178dd2808ff844d4f8081ee2"
+    },
+    {
+      "file": "actual-postprocess-completion.json",
+      "bytes": 2893,
+      "sha256": "a0a8cbe8aff85f52a490b056cbb603bf2852dda4f9e5e30f3085fcc636244888"
+    },
+    {
+      "file": "actual-prebake-acceptance.json",
+      "bytes": 6152,
+      "sha256": "3705447714120a163c50195e8e75832b8822cbb88b9e8f7eb982f273029f3ea3"
+    },
+    {
+      "file": "denoised/lighting-platform-bridge-denoise.json",
+      "bytes": 2553,
+      "sha256": "77f2d85a28c6cccf2ec0b227580c3626ebd7b974b6735cc233257ff4053f25a3"
+    },
+    {
+      "file": "denoised/lighting-platform-bridge-sky-denoised-linear.hdr.gz",
+      "bytes": 18567132,
+      "sha256": "fb2f7fefdf1da7c1c73a364875e31e1758b47c0e5dac78ad734cde1c1c02fb1e"
+    },
+    {
+      "file": "denoised/lighting-platform-bridge-sky-low.png",
+      "bytes": 109951,
+      "sha256": "ff00dd301e673fd4c861e357d482e84f40112dc52d25379b1637bd88b1a5fd19"
+    },
+    {
+      "file": "denoised/lighting-platform-bridge-sky.png",
+      "bytes": 3423261,
+      "sha256": "1138ce5db4aff06c5d26271c480a3c133e5059ab3d8b64611bb97316337a1512"
+    },
+    {
+      "file": "frozen-bake-command.json",
+      "bytes": 30959,
+      "sha256": "16e09eb44521dfc74b332a863be9ff08cea99ee0aab4770281f0cb0fe83e0d22"
+    },
+    {
+      "file": "prepared-scene-control.json",
+      "bytes": 24563,
+      "sha256": "9eeac7254f1b906b9096061a36eb68d7c376a06ae92be4479dc0d3947d03a1a5"
+    },
+    {
+      "file": "primary-contract.json",
+      "bytes": 918,
+      "sha256": "1404bbb79f7bc040628eba9e420555b6ef3141865641cd6cf7bccf4a190b54b4"
+    },
+    {
+      "file": "raw/lighting-platform-bridge-sky.hdr.gz",
+      "bytes": 15415933,
+      "sha256": "716f5b17aebfc2e7181f4793b409903df2cae37ea4f90b0bff3a22be28a59268"
+    },
+    {
+      "file": "raw/lighting-platform-bridge.json",
+      "bytes": 26420,
+      "sha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff"
+    },
+    {
+      "file": "source/arcade_corner_normals.py",
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    {
+      "file": "source/assemble-bridge.py",
+      "bytes": 5296,
+      "sha256": "69d737cbd90a400b392b11a25053504846f92679f9e4e87f251d3de75e6e82ae"
+    },
+    {
+      "file": "source/authored_lighting_uv_guard.py",
+      "bytes": 4263,
+      "sha256": "16f747d602ca5cf3d69e1b5b3fbb82cf71eef019bd468c29d521e546f417aabf"
+    },
+    {
+      "file": "source/bake_lighting.py",
+      "bytes": 33532,
+      "sha256": "959e6ccc613fa5ae22c58a720394675747b757247a7f15d464cb48928c68e01f"
+    },
+    {
+      "file": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "file": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "file": "source/encode-lossless-meshopt.mjs",
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    {
+      "file": "source/material_library.py",
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    {
+      "file": "source/occluder_materials.py",
+      "bytes": 4289,
+      "sha256": "2096e33b27a30682e479617eda3a742ed28c1d791d0e208ed9ef4d031d63551c"
+    },
+    {
+      "file": "source/order_lighting_uv.py",
+      "bytes": 11793,
+      "sha256": "f8d6d1268462f54893129a7c200d6b899d5fdb2eaffd09630f8acca177ac3f6c"
+    },
+    {
+      "file": "source/package-bridge-lossless.mjs",
+      "bytes": 7594,
+      "sha256": "9e823b44868724425ad8ac2c6e0976e4a113a45543dcb0e54d5f975b30698cde"
+    },
+    {
+      "file": "source/postprocess-bridge.py",
+      "bytes": 3943,
+      "sha256": "1e24690337ddb431bc531ab040d2c4747885126ae76ef37ba16efb265b678d95"
+    },
+    {
+      "file": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/restore_imported_visibility.py",
+      "bytes": 2390,
+      "sha256": "176216a551bb70e8fee1be1d89bf2154d8851485d3b9618f74e11e260bfbcf21"
+    },
+    {
+      "file": "source/reuse-texture-cache.mjs",
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    },
+    {
+      "file": "source/run-reviewed-bridge.py",
+      "bytes": 3925,
+      "sha256": "e9e4220f7872400a609ccf50bb98c8a4cb46d93a0608e52db2cf1a2c2c28ae51"
+    },
+    {
+      "file": "source/vault_lighting_uv.py",
+      "bytes": 6302,
+      "sha256": "8dfe9bc7c02a79c6778c31d3ba13b986a4524107b696e40fad406599793626ee"
+    }
+  ],
+  "cache": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/gallery-prebake-scene.blend",
+    "sha256": "89f47e7286fd148b757df35e5615ce8a16ae02cb079b6ec264851f14c68c44a3",
+    "control": "/Users/stavreskimario/Desktop/penn-station-work/phase11-arrivals-finish/bake-run-v4/raw/prepared-scene-control.json",
+    "controlSha256": "f244b2d7765bb037747fa298dccd52a54b5bfa6421a51370e720b1e1a8b96edf",
+    "qualification": "Accepted normal-correct full pre-bake cache includes original nine registered contexts, corrected exit with ten lamps, and gallery. Floor calibrated mean preserved; later floor micro-normal/roughness absent only in light-transport context."
+  },
+  "actualRawOutputs": {
+    "model-platform-bridge.glb": {
+      "bytes": 5346804,
+      "sha256": "0187cd04b333d106bb7a4df622a506070c750a662a0438bd3051be2f51cbbc3a"
+    },
+    "lighting-platform-bridge-ao.png": {
+      "bytes": 4628953,
+      "sha256": "daa993645861f23ce11297efa010967611a2a2b34857bd09df2f0321a2e08a9e"
+    },
+    "lighting-platform-bridge-sky-low.png": {
+      "bytes": 128701,
+      "sha256": "536daf6a3973ad7f686889240046eaa73bdf450e00b7bcfb19577e5906a6a614"
+    },
+    "actual-prebake-acceptance.json": {
+      "bytes": 6152,
+      "sha256": "3705447714120a163c50195e8e75832b8822cbb88b9e8f7eb982f273029f3ea3"
+    },
+    "prepared-scene-control.json": {
+      "bytes": 24563,
+      "sha256": "9eeac7254f1b906b9096061a36eb68d7c376a06ae92be4479dc0d3947d03a1a5"
+    },
+    "lighting-platform-bridge.json": {
+      "bytes": 26420,
+      "sha256": "951440195b5799bf6d0c96da692b1ca5f175d2ecdf14d459bd168116391facff"
+    },
+    "lighting-platform-bridge-sky.hdr": {
+      "bytes": 18666535,
+      "sha256": "52df460c3d0d358ddab7ebf75131088c91b924329331eadae3048fee15bc513b"
+    },
+    "lighting-platform-bridge-sky.png": {
+      "bytes": 6796339,
+      "sha256": "28ec62a1b267750c9f9fb5d31d2378d0e2547fae2fc93b9a58b2d32c14c06c7a"
+    }
+  },
+  "rawAoQualification": "Actual raw AO preserved externally; embedded fresh AO is retained in raw module and packaged content-addressed runtime KTX. Raw AO is not copied redundantly to repository."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "method": "Every nondegenerate existing public tread/landing/gallery/retained-floor triangle compared individually; not only aggregate averages.",
+  "rows": [
+    {
+      "class": "public_treads_landings",
+      "nondegenerateTriangles": 832,
+      "minimumDensityRatio": 2.7379744052886963,
+      "maximumDensityRatio": 2.738004446029663,
+      "noFaceDensityRegression": true
+    },
+    {
+      "class": "public_gallery_floor",
+      "nondegenerateTriangles": 50,
+      "minimumDensityRatio": 1.0951954126358032,
+      "maximumDensityRatio": 1.0951968431472778,
+      "noFaceDensityRegression": true
+    },
+    {
+      "class": "public_retained_floor",
+      "nondegenerateTriangles": 6,
+      "minimumDensityRatio": 1.0951950550079346,
+      "maximumDensityRatio": 1.0951967239379883,
+      "noFaceDensityRegression": true
+    }
+  ]
+}

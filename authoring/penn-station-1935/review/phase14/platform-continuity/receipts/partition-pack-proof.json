@@ -1,0 +1,82 @@
+{
+  "status": "PASS runtimefloorpartition prepared;freshfloor append stillrequired",
+  "variants": [
+    {
+      "quality": "full",
+      "status": "PASS exact originalBIN+bindings; onlyownedfloorindices andretainedboundary additions",
+      "source": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform.glb.gz",
+        "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e"
+      },
+      "output": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/retained-base-v1/model-platform.glb.gz",
+        "sha256": "fef38bec0dbd20110a0fb9688c40721df91da75a5b1084ab56a5eea194d61010",
+        "bytes": 272207
+      },
+      "originalBinaryPrefixExact": true,
+      "allOriginalMaterialsImagesTexturesSamplersExact": true,
+      "onlyModifiedOldPrimitives": [
+        {
+          "node": 0,
+          "primitive": 2,
+          "removedOriginalTriangles": 2,
+          "keptOriginalIndexSequenceExact": true
+        },
+        {
+          "node": 14,
+          "primitive": 0,
+          "removedOriginalTriangles": 264,
+          "keptOriginalIndexSequenceExact": true
+        },
+        {
+          "node": 14,
+          "primitive": 1,
+          "removedOriginalTriangles": 34,
+          "keptOriginalIndexSequenceExact": true
+        }
+      ],
+      "ownedFloorTriangles": 600,
+      "retainedBoundaryTriangles": 904,
+      "conservedAreaErrorMax": 6.821210263296962e-13
+    },
+    {
+      "quality": "low",
+      "status": "PASS exact originalBIN+bindings; onlyownedfloorindices andretainedboundary additions",
+      "source": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase11-exit-street-fix/candidate-wall-v1/model-platform-low.glb.gz",
+        "sha256": "2ad1e8aba6106c96da90545f78bf9f558134aab845e908f2a72d78a97bfbc779"
+      },
+      "output": {
+        "file": "/Users/stavreskimario/Desktop/penn-station-work/phase14-platform-continuity/geometry/floor-ownership-v1/retained-base-v1/model-platform-low.glb.gz",
+        "sha256": "175294560c8d531fd6646c9abb858e2b7af3f91745684da96f9887feef55c324",
+        "bytes": 298060
+      },
+      "originalBinaryPrefixExact": true,
+      "allOriginalMaterialsImagesTexturesSamplersExact": true,
+      "onlyModifiedOldPrimitives": [
+        {
+          "node": 0,
+          "primitive": 2,
+          "removedOriginalTriangles": 2,
+          "keptOriginalIndexSequenceExact": true
+        },
+        {
+          "node": 14,
+          "primitive": 0,
+          "removedOriginalTriangles": 264,
+          "keptOriginalIndexSequenceExact": true
+        },
+        {
+          "node": 14,
+          "primitive": 1,
+          "removedOriginalTriangles": 34,
+          "keptOriginalIndexSequenceExact": true
+        }
+      ],
+      "ownedFloorTriangles": 600,
+      "retainedBoundaryTriangles": 904,
+      "conservedAreaErrorMax": 6.821210263296962e-13
+    }
+  ],
+  "qualification": "Thesearepre-bridgebases, removing oldPhase12modulebyconstruction. Onlyexactfloorownershipfaces removed; freshcombined bridge/floormustappendoncebeforepublishing."
+}

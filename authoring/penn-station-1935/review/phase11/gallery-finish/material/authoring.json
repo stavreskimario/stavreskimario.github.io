@@ -1,0 +1,49 @@
+{
+  "scope": "Material only; sample geometry never appended to station",
+  "inputs": {
+    "asset": "Concrete034",
+    "page": "https://ambientcg.com/view?id=Concrete034",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "technique": "Approximation, as identified by ambientCG; not a measured original station surface",
+    "physicalTileMetres": [
+      1.1,
+      0.55
+    ],
+    "interpretation": "Subtle grey concrete appearance for the already-qualified neutral lower gallery floor; original complete floor finish remains unverified. No new slab or floor geometry.",
+    "zipSha256": "fafd7cd3aee2b703abbb12b7810ef565ab76ac7ea3b1ea9a73b088e423e670b3",
+    "maps": [
+      {
+        "name": "Concrete034_2K-JPG_Color.jpg",
+        "bytes": 1156573,
+        "sha256": "fa27982687596d7aa080db1e9b88c30f48a3c32eb3e50b27a2ea27c431e4cde9"
+      },
+      {
+        "name": "Concrete034_2K-JPG_NormalGL.jpg",
+        "bytes": 3325261,
+        "sha256": "b077dfe6b3b8fbe794d82b9014d030fa01984a25ab67d2e21310995e6ea5b881"
+      },
+      {
+        "name": "Concrete034_2K-JPG_Roughness.jpg",
+        "bytes": 879275,
+        "sha256": "fd39973b8ef8212d1c99d18b6665595db3ab96f1c124e062fea52b9bda4ffa63"
+      }
+    ]
+  },
+  "tileMetres": [
+    1.1,
+    0.55
+  ],
+  "oldUvTileMetres": 1.5,
+  "normalStrength": 0.22,
+  "meanLinearAlbedo": [
+    0.44,
+    0.445,
+    0.42
+  ],
+  "mapsUnmodified": true,
+  "outputs": {
+    "gallery-floor-material.blend": "61ff5e9dfb6ebf1598045b6f0ee6a4f944978fd638a73cb97c22015acca40118",
+    "gallery-floor-material.glb": "66716db38c7fd68260bbc81e938251c26d12f240b331dad2bb769787033a027b"
+  }
+}

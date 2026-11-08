@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "sourceSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+  "candidateSha256": "c4aa88af40c449bb111a7e3d9d41a9b071bde2205a6d0c2525f25c5d00815fcc",
+  "sourceUnchanged": true,
+  "candidateUnchanged": true,
+  "oldLightCameraCount": 0,
+  "oldLightCameraObjectsDataNodesExtrasExact": true,
+  "oldSceneCameraExact": true,
+  "worldDataNodesExtrasExact": true,
+  "worldDifferences": [],
+  "runtimeIdentityTreatment": "Session UIDs are per-load identities, not persisted settings; non-ID RNA pointers compare their actual nested properties instead of memory addresses. No shading/world value is excluded.",
+  "oldObjectVisibilityAndCollectionsExact": true,
+  "newObjectsByType": {
+    "MESH": 2041
+  },
+  "newLightsOrCameras": {},
+  "obsoleteExportObjects": [],
+  "obsoleteExportCollections": [],
+  "changedActors": {},
+  "changedVisibility": {},
+  "meaning": "Old-owned mesh components were actually removed; the temporary removal collection/objects were deleted before save. New architecture remains editable individual meshes in the external source review collection. Studio preview runs never save back to this blend. No canonical write performed.",
+  "backupHistory": {
+    "gitCommit": "abde5167c984b6bf28286af3259e79380ba7fb36",
+    "gitPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+    "verifiedSha256": "c96fb37215d4ebfc7bbbba9154fe7f96a8daf8500e9c61778136e286c4a03739",
+    "externalCopy": "connected-v12/inputs/penn-station-phase5-c96.blend"
+  }
+}

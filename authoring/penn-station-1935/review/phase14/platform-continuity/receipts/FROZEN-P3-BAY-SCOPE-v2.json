@@ -1,0 +1,176 @@
+{
+  "status": "FROZEN bounded firstP3connectedbay design; individualcapchainread, no generic N-Sgrid",
+  "source": {
+    "publication": "Francis/O\u2019Brien,TransactionsASCE69(1910),paper1164",
+    "url": "https://archive.org/download/transactionsofam69amer/transactionsofam69amer.pdf",
+    "plate": "LIX, PDF301",
+    "raster": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/platform-enclosure-research/asce-pdf301.png",
+    "sha256": "c844c68568309169634c40c167c04ba8e126b94f6ffc80f4f514fa1c52ca759f",
+    "registeredNativeAxisU": 1051,
+    "metresPerNativePixel": 0.09584905660377359,
+    "method": "Distinct permanent cap/girder chain nearU615 traced across all11column stations; temporary full-width post nearU631 rejected. New600dpi primaryPDF render confirms cap-chain identity. Tiny lateral deviations remain below\u00b14nativepixel reading uncertainty; adopt one fitted straight center, not a claimed recovered skew."
+  },
+  "retainedPhase13Scope": {
+    "path": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/research/FROZEN-ADJACENT-ROWS-v1.json",
+    "sha256": "f624be99c7b6f09245b716728ae110465268a3178a3e759cf161e8ee3d54d821"
+  },
+  "retainedRowsWorldZ": [
+    6.33,
+    33.983721
+  ],
+  "retainedBentRows": [
+    6.33,
+    13.0,
+    20.314408,
+    26.646037735849056,
+    33.983721
+  ],
+  "newRow": {
+    "id": "B5",
+    "adoptedNativeU": 615.0,
+    "authoringWorldZ": 41.04018867924528,
+    "sourceNativeObservations": [
+      {
+        "station": 0,
+        "nativeV": 1154.5,
+        "readNativeU": 614.5,
+        "nominalObservedWorldZ": 41.838113207547174,
+        "authoringWorldX": -152.0952,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 1,
+        "nativeV": 1186.3,
+        "readNativeU": 614.5,
+        "nominalObservedWorldZ": 41.838113207547174,
+        "authoringWorldX": -149.0472,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 2,
+        "nativeV": 1218.1,
+        "readNativeU": 615.0,
+        "nominalObservedWorldZ": 41.79018867924528,
+        "authoringWorldX": -145.9992,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 3,
+        "nativeV": 1249.9,
+        "readNativeU": 615.0,
+        "nominalObservedWorldZ": 41.79018867924528,
+        "authoringWorldX": -142.9512,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 4,
+        "nativeV": 1281.7,
+        "readNativeU": 615.0,
+        "nominalObservedWorldZ": 41.79018867924528,
+        "authoringWorldX": -139.9032,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 5,
+        "nativeV": 1313.5,
+        "readNativeU": 615.5,
+        "nominalObservedWorldZ": 41.7422641509434,
+        "authoringWorldX": -136.8552,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 6,
+        "nativeV": 1345.3,
+        "readNativeU": 615.5,
+        "nominalObservedWorldZ": 41.7422641509434,
+        "authoringWorldX": -133.8072,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 7,
+        "nativeV": 1377.1,
+        "readNativeU": 615.5,
+        "nominalObservedWorldZ": 41.7422641509434,
+        "authoringWorldX": -130.7592,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 8,
+        "nativeV": 1408.9,
+        "readNativeU": 616.0,
+        "nominalObservedWorldZ": 41.69433962264151,
+        "authoringWorldX": -127.71119999999999,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 9,
+        "nativeV": 1440.7,
+        "readNativeU": 615.5,
+        "nominalObservedWorldZ": 41.7422641509434,
+        "authoringWorldX": -124.66319999999999,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      },
+      {
+        "station": 10,
+        "nativeV": 1472.5,
+        "readNativeU": 615.0,
+        "nominalObservedWorldZ": 41.79018867924528,
+        "authoringWorldX": -121.6152,
+        "minimumReadingUncertaintyNativePx": 4,
+        "minimumAbsoluteRegistrationUncertaintyM": 1
+      }
+    ],
+    "qualification": "Source-observed chain retained separately. Adopted row is fitted0.75m north to the existing P3 taper so both platform walking sides remain supported; within stated absolute registration uncertainty, not an engineering clearance tolerance. No prior row, track or platform is moved.",
+    "observedNominalWorldZ": 41.79018867924528,
+    "coordinationDeltaZ": -0.75
+  },
+  "newBay": {
+    "between": [
+      "B4",
+      "B5"
+    ],
+    "z": [
+      33.983721,
+      41.04018867924528
+    ],
+    "spanM": 7.05646767924528,
+    "printedSourceSpanFamilyM": [
+      6.223,
+      13.335
+    ],
+    "sourceProfileFamilyRetained": true,
+    "newColumnCount": 11,
+    "finalColumnCount": 66
+  },
+  "roof": {
+    "x": [
+      -152.2857,
+      -121.4247
+    ],
+    "northZ": 6.1014,
+    "southZ": 41.26878867924528,
+    "newRoofBeginsAtExistingSouthEnd": true
+  },
+  "floorReceiverROI": {
+    "x": [
+      -162.2857,
+      -111.4247
+    ],
+    "z": [
+      3.1014,
+      45.3
+    ]
+  },
+  "futureTrace": "Continue separately to genuinely oblique P2/P1 cap chains; do not cloneU615 spacing or call irregularity unsupported. Current straight adopted rail/short platform envelopes must be reconciled against each source row before authoring.",
+  "coordinationApproval": "Parent approved qualified\u22120.75m current-P3-taper fit subject to actual two-lane/train/receiver proof; original first4baystructure exact."
+}

@@ -1,0 +1,179 @@
+{
+  "status": "ONE DIAGNOSIS COMPLETE; intended80s window interrupted by shared suspension. No uninterrupted80s performance certificate.",
+  "scope": "One80s quiet normal-arrivalsWalk diagnostic. BrowserRAF/main-thread,controller anddetachedchild timing are observational. All6zones stay visible; no quality/shadow/scene changes.",
+  "bundleSha256": "03c2f0a578c6ed7291eb4f4bd7dd7c413f45271e0f9630957b939d02f9ac6d37",
+  "manifestSha256": "f2d0e638a8db9b6b968c747bd69fb3f0e875a5ac4182607fad7835c88aeffe03",
+  "models": [
+    {
+      "file": "model-exterior.glb.gz",
+      "sha256": "308b4665b2476895af99613e3a72affe8563eab9f165e17dff0c79b89adf485d",
+      "bytes": 2711634
+    },
+    {
+      "file": "model-exterior-low.glb.gz",
+      "sha256": "e68d4a0bfd4ba9db7844d8d972b460e42d73b9d4790181c80404c8221666ac2a",
+      "bytes": 2805415
+    },
+    {
+      "file": "model-waiting-room.glb.gz",
+      "sha256": "94d3685baf1d8aca42e9e4add2bb70a40ff179ad198ca19f5b487c9f67fda277",
+      "bytes": 8274157
+    },
+    {
+      "file": "model-waiting-room-low.glb.gz",
+      "sha256": "2e9ec8445aa486ca82f67b48705a0d0fae4a4e558485173cce3417adc145b52a",
+      "bytes": 7239871
+    },
+    {
+      "file": "model-concourse.glb.gz",
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "bytes": 5171505
+    },
+    {
+      "file": "model-concourse-low.glb.gz",
+      "sha256": "38325d19bed22bb395f81f8baf4824b24beecd1804d3f5d879c25ba9ab6d8e0b",
+      "bytes": 5171505
+    },
+    {
+      "file": "model-context.glb.gz",
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "bytes": 504344
+    },
+    {
+      "file": "model-context-low.glb.gz",
+      "sha256": "9d376ce09430d2e2e46b40b80decfdc6ca4a68602ff17e2df30def88fc712d4e",
+      "bytes": 684590
+    },
+    {
+      "file": "model-platform.glb.gz",
+      "sha256": "1a8049fa890f666c20927973bc2ecec6ab7d8807da8bfe013b6a349e8c77d72b",
+      "bytes": 160991
+    },
+    {
+      "file": "model-platform-low.glb.gz",
+      "sha256": "14c9c2fe3bd482eebc0aaee71b93dd761e8cd25552cc702dbde08a0ab21f12ba",
+      "bytes": 187321
+    },
+    {
+      "file": "model-trains.glb.gz",
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "bytes": 123231
+    },
+    {
+      "file": "model-trains-low.glb.gz",
+      "sha256": "e179f456508c298fb37052066c8704764d4087210f56a93d91c1783fc523192d",
+      "bytes": 157720
+    }
+  ],
+  "requestedObservationMs": 80000,
+  "actualParentMonotonicMs": 207741.6256249994,
+  "actualBrowserClockMs": 35284.70000000298,
+  "browserClockToParentMonotonicOffsetShiftMs": 172457.60647952557,
+  "calibrationRoundTripUncertaintyMs": [
+    0.8576250001788139,
+    0.5572294965386391
+  ],
+  "parentInterval": {
+    "samples": 346,
+    "p50Ms": 101.34270799160004,
+    "p95Ms": 102.51174999773502,
+    "p99Ms": 102.81879200041294,
+    "maxMs": 172785.02904199064,
+    "gapsAbove250ms": 1,
+    "gapsAbove1000ms": 1
+  },
+  "childInterval": {
+    "samples": 343,
+    "p50Ms": 102.12366700172424,
+    "p95Ms": 102.30441699922085,
+    "p99Ms": 102.33999998867512,
+    "maxMs": 172811.70324999094,
+    "gapsAbove250ms": 1,
+    "gapsAbove1000ms": 1
+  },
+  "browserRAF": {
+    "samples": 2098,
+    "p50Ms": 16.69999999552965,
+    "p95Ms": 18.799999997019768,
+    "p99Ms": 19.5,
+    "maxMs": 332.8999999985099,
+    "gapsAbove250ms": 1,
+    "gapsAbove1000ms": 0
+  },
+  "browserMainInterval": {
+    "samples": 701,
+    "p50Ms": 50,
+    "p95Ms": 51,
+    "p99Ms": 51.29999999701977,
+    "maxMs": 268.59999999403954,
+    "gapsAbove250ms": 1,
+    "gapsAbove1000ms": 0
+  },
+  "parentEventLoopDelay": {
+    "minMs": 19.103744,
+    "maxMs": 172738.215935,
+    "meanMs": 127.42012199263803,
+    "p50Ms": 21.741567,
+    "p99Ms": 22.740991
+  },
+  "sharedPause": {
+    "parentStartHrMs": 88610354.252791,
+    "parentEndHrMs": 88783139.281833,
+    "parentGapMs": 172785.02904199064,
+    "childStartHrMs": 88610327.605458,
+    "childEndHrMs": 88783139.308708,
+    "childGapMs": 172811.70324999094,
+    "overlapMs": 172785.02904199064,
+    "resumptionDifferenceMs": 0.026875004172325134,
+    "parentTickWallMs": 1793346832294,
+    "childTickWallMs": 1793346832294,
+    "childPID": 92868,
+    "childDetachedProcessGroup": true,
+    "childSelfExited": true
+  },
+  "browserLongTasks": [],
+  "beginCamera": {
+    "position": [
+      -70,
+      -5.7876,
+      28
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "fov": 50
+  },
+  "endCamera": {
+    "position": [
+      -70,
+      -5.787227535211418,
+      15.360261302520476
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "fov": 50
+  },
+  "sixOriginalZoneIDsPreserved": true,
+  "qualityAndShadowsUnchanged": true,
+  "pageErrors": [],
+  "localServerErrors": [],
+  "browserClosed": true,
+  "observation": "Parent and separate detached child both stopped receiving timer callbacks over the same172.8s OS-monotonic interval and resumed within0.027ms. Browserperformance clock advanced only35.3s while wall/Nodeclock advanced207.7s. This is shared host/process/clock-domain suspension evidence, not evidence isolated to the station page. Specific cause unassigned. No multi-second browser-only gap reproduced in the35.3s active-browser portion; that shorter portion cannot settle long-session smoothness.",
+  "rawEvidence": {
+    "report.json": {
+      "sha256": "cfbd066d226659cb51ef934364434b9ed0ebc041b8ed368a27f357111d3c0de9",
+      "bytes": 297648
+    },
+    "child-heartbeat.jsonl": {
+      "sha256": "34a4dfc43f384b6b875c2e3528f70e11fcf90f34d52dd4d0a7c285d400f4d627",
+      "bytes": 30197
+    }
+  }
+}

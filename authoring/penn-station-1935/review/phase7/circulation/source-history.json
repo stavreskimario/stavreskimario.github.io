@@ -1,0 +1,140 @@
+{
+  "scope": "Source/doc integration only. This operation does not replace the canonical scene or promote runtime assets; parent owns final source/runtime publication.",
+  "input": {
+    "sha256": "ab7af4ede715cd87337117053ddc8c46e4ba393a6d5a75f4200a92294fcf9c7d",
+    "bytes": 72422578,
+    "verifiedPersistentBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/input/penn-station-phase5-before-circulation.blend",
+    "immutableGitCommit": "4b97d5e54947084629c04b4f7307c26bf98019cb",
+    "gitBlob": "aca4f7fd8e6a835fceb3be7e794dd8643c2d20fa",
+    "gitBlobBytesSha256Verified": true,
+    "publicUrl": "https://github.com/stavreskimario/stavreskimario.github.io/blob/4b97d5e54947084629c04b4f7307c26bf98019cb/authoring/penn-station-1935/penn-station-phase5.blend"
+  },
+  "candidateReview": {
+    "bytes": 72399076,
+    "sha256": "f2e5a0e382b5d6771030055ed527546005cd18d2a3e2d77f204d570c0a9cc588",
+    "workPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate-v2/penn-station-phase7-circulation-review.blend"
+  },
+  "canonicalPath": "authoring/penn-station-1935/penn-station-phase5.blend",
+  "canonicalPromotionOwner": "Parent; not changed by this source/doc task",
+  "helper": {
+    "path": "penn-station-1935/model/repair_concourse_circulation.py",
+    "sha256": "31d6291748c8c5efdbbb7f7a9a6ceecb18129689963bcdcc3a9771b5e56ccc26"
+  },
+  "payloads": [
+    {
+      "file": "source-proof.json.gz",
+      "bytes": 311400,
+      "sha256": "0c922fdd61593e3b8dc25997545bfc6fe5f2e9eb2d1076894704b904c197b90c",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate-v2/source-proof.json",
+      "originalBytes": 915150,
+      "originalSha256": "a7214793534d9700e1124c0b8cc6f97fd85fead6e313b7607e8d241dc85ad8b4",
+      "losslessGzip": true
+    },
+    {
+      "file": "component-census.json.gz",
+      "bytes": 19141,
+      "sha256": "7611f26c8f87f8192966e3128164b4d9bce6f6f3db9c39501d8fb7b7a434be96",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate-v2/component-census.json",
+      "originalBytes": 233729,
+      "originalSha256": "80c0efc7f20c16139dcc67f8fe621b3c48f35922ee18907e5db7ee32db587cb2",
+      "losslessGzip": true
+    },
+    {
+      "file": "ready.json",
+      "bytes": 2004,
+      "sha256": "356dcf9c0d19c55e969393f33f932a6cd8f566a82f80ef70ecf5312a43927aa0",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate-v2/ready.json",
+      "originalBytes": 2004,
+      "originalSha256": "356dcf9c0d19c55e969393f33f932a6cd8f566a82f80ef70ecf5312a43927aa0",
+      "losslessGzip": false
+    },
+    {
+      "file": "raw-review.json",
+      "bytes": 2410,
+      "sha256": "e6ed8336ffa3c6abf654d5013e729824783950236ed29224b25ef4343c47bf7b",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate-v2/raw-review.json",
+      "originalBytes": 2410,
+      "originalSha256": "e6ed8336ffa3c6abf654d5013e729824783950236ed29224b25ef4343c47bf7b",
+      "losslessGzip": false
+    },
+    {
+      "file": "independent-historical-scope-v2.json",
+      "bytes": 39895,
+      "sha256": "2836c2a26d60f4bcebb65757ee01a4deec88da10411c8249e171c2f67d74c7ac",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/independent-historical-scope-v2.json",
+      "originalBytes": 39895,
+      "originalSha256": "2836c2a26d60f4bcebb65757ee01a4deec88da10411c8249e171c2f67d74c7ac",
+      "losslessGzip": false
+    },
+    {
+      "file": "optimized-native-route-cpu.json.gz",
+      "bytes": 2578,
+      "sha256": "deb4b6a6438781e65ccade34e20f3f7ec6fba1a58bb98aaa9a76173dc239f988",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/final-optimized-native-route-cpu.json",
+      "originalBytes": 36999,
+      "originalSha256": "61155869d350d3815c76d6fc49258bad6ff8303c436accdd91639272a96b12f8",
+      "losslessGzip": true
+    },
+    {
+      "file": "rejected-v1.json",
+      "bytes": 1112,
+      "sha256": "7ebd8e503186f25a52d4028a968aefb3d1f494c76e7c62273f51522ab66c6b03",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate/REJECTED_INTER_PIER_OVERLAP.json",
+      "originalBytes": 1112,
+      "originalSha256": "7ebd8e503186f25a52d4028a968aefb3d1f494c76e7c62273f51522ab66c6b03",
+      "losslessGzip": false
+    },
+    {
+      "file": "rejected-v1-actual-inter-pier-overlap.json",
+      "bytes": 6584,
+      "sha256": "1d5c561c7df82887200fa9b1afc5a3c0994dbd40f93e323c7727b5146fc2ae1f",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/actual-inter-pier-overlap.json",
+      "originalBytes": 6584,
+      "originalSha256": "1d5c561c7df82887200fa9b1afc5a3c0994dbd40f93e323c7727b5146fc2ae1f",
+      "losslessGzip": false
+    },
+    {
+      "file": "rejected-transform-roundtrip.json.gz",
+      "bytes": 2227,
+      "sha256": "be4c045500c3bd800b62edcd0194a3b8eb38c3e96ec3af888700de1c32d45ecc",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/rejected-transform-roundtrip.json",
+      "originalBytes": 102895,
+      "originalSha256": "1407152c0393610a86f1040089237e34a5406cb90c1d72241cd9fd4171fc9c39",
+      "losslessGzip": true
+    },
+    {
+      "file": "rejected-alias-only-normalization.json",
+      "bytes": 975,
+      "sha256": "8daed2ecf31a639af77c716209ae3d7d1f67c290a80b899c5e2a41a6b990b2ac",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/candidate/old-owned-alias-proof.json",
+      "originalBytes": 975,
+      "originalSha256": "8daed2ecf31a639af77c716209ae3d7d1f67c290a80b899c5e2a41a6b990b2ac",
+      "losslessGzip": false
+    },
+    {
+      "file": "research-sources.json",
+      "bytes": 8094,
+      "sha256": "6aaa791e0c9352af9b9059a5b80b666e1749bcac3881935bb3d544465280c438",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/research-sources.json",
+      "originalBytes": 8094,
+      "originalSha256": "6aaa791e0c9352af9b9059a5b80b666e1749bcac3881935bb3d544465280c438",
+      "losslessGzip": false
+    },
+    {
+      "file": "cli-replay-proof.json",
+      "bytes": 1667,
+      "sha256": "b2de19e76e554c5a2f943cc2231420068effc17899310017999b27533a3ab00c",
+      "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/cli-replay-proof.json",
+      "originalBytes": 1667,
+      "originalSha256": "b2de19e76e554c5a2f943cc2231420068effc17899310017999b27533a3ab00c",
+      "losslessGzip": false
+    }
+  ],
+  "adaptedResearch": {
+    "originalWorkPath": "/Users/stavreskimario/Desktop/penn-station-work/phase7-circulation/research.md",
+    "originalSha256": "a8bcd57df17e10c5e5eb3f284d93c0e9a972dcd887b7589be4f810bef9043ad4",
+    "archiveSha256": "3d41cd9e633f1d6a2deb7686247a0697e4fdf3debf24d90144f4a0e161419f7e",
+    "change": "Header and unsupported local image links replaced with a pointer to exact external crop metadata; primary claims unchanged."
+  },
+  "noLargePayloadCopies": "No rawGLBs,Blenderduplicate,fullhistoricalrasters,or bakes copied into this archive."
+}

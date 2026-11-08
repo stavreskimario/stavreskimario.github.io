@@ -1,0 +1,1339 @@
+{
+  "revision": 3,
+  "units": "metres",
+  "axes": "X east, Y up, Z south (glTF)",
+  "coordinateSpace": "walkable floors and stair endpoints below are WORLD coordinates after chunkOffsets; architectural dimensions and survey-relative levels are local Main=0; editableblend is already worldaligned",
+  "chunkOffsets": {
+    "exterior": [
+      0,
+      0,
+      0
+    ],
+    "waiting": [
+      0,
+      -4.2672,
+      0
+    ],
+    "concourse": [
+      0,
+      -4.2672,
+      0
+    ],
+    "platform": [
+      0,
+      -4.2672,
+      0
+    ],
+    "railway": [
+      0,
+      -4.2672,
+      0
+    ]
+  },
+  "levels": {
+    "streetWorld": 0,
+    "mainWorld": -4.2672,
+    "exitWorld": -7.4676,
+    "platformWorld": -11.985624999999999,
+    "railWorld": -13.154025,
+    "platformAboveRail": 1.1684,
+    "mainToStreet": 4.2672,
+    "exitDatumStatus": "Working10ft6in drop derived from lift travels;1926plan indicates circa10ft, not exact certification"
+  },
+  "status": "Detailed evidence-led reconstruction; precise residual assumptions listed individually",
+  "waitingRoomHeightStatus": "The model adopts the143ft highest finished-ceiling datum explicitly stated by Francis and O'Brien ASCE1910p194, with167ft roof unchanged. Gibbs in the same volume also states150ft from floor to ceiling; the conflicting narrative remains documented rather than declared resolved.",
+  "dimensions": {
+    "nominalFootprint": [
+      238.9632,
+      131.064
+    ],
+    "waitingRoomClear": [
+      31.3944,
+      84.42960000000001,
+      43.586400000000005
+    ],
+    "waitingRoomWallExtent": [
+      33.1216,
+      95.8088
+    ],
+    "waitingLanternExterior": [
+      36.2712,
+      99.06
+    ],
+    "waitingLanternFrameWidth": 34.3916,
+    "waitingRoofAboveMain": 50.9016,
+    "waitingRoofAboveStreet": 46.6344,
+    "exteriorDoricColumnHeight": 10.668000000000001,
+    "exteriorDoricColumnDiameter": 1.3716000000000002,
+    "interiorColumn": {
+      "pedestal": 2.8448,
+      "base": 0.9906,
+      "shaft": 14.630400000000002,
+      "capital": 2.5146,
+      "totalAboveFloor": 20.980400000000003,
+      "entablatureHeight": 4.0894
+    },
+    "lowerWallArchRadius": 5.8674,
+    "concourse": {
+      "overall": [
+        64.2874,
+        97.536
+      ],
+      "ewBarrelSpans": [
+        26.162,
+        29.0576,
+        26.162
+      ],
+      "nsBarrelSpan": 29.8704,
+      "nsBarrelCenterX": -64.3767,
+      "roofCrownAboveMain": 29.727525,
+      "mainPierWidth": 0.9144000000000001,
+      "webSpacing": 0.6096,
+      "archCrownDepth": 0.6096,
+      "archHaunchDepth": 2.0066,
+      "passengerFloorNS": 144.78,
+      "branchJunctionAboveMain": 22.402800000000003,
+      "gutterTopAboveMain": 24.9174
+    },
+    "reportedGeneralRoomHeight": 45.72,
+    "waitingRoomEndPorticoDepth": 5.689599999999999,
+    "wingRoofAboveStreet": 19.2024,
+    "wingParapetAboveStreet": 19.812,
+    "easternCourtRoof": {
+      "plan": [
+        46.545500000000004,
+        35.2044
+      ],
+      "longAxis": "East\u2013west",
+      "eaveAboveStreet": 0.15,
+      "ridgeAboveStreet": 1.5,
+      "monitorAboveStreet": 2.25,
+      "levelStatus": "Street-level roof role documented; minor rise and exact registration reconstructed from engineering description and Bain view"
+    },
+    "seventhAvenueClockAtticWidth": 30.2
+  },
+  "assets": [
+    {
+      "file": "model-exterior.glb",
+      "zone": "exterior"
+    },
+    {
+      "file": "model-waiting-room.glb",
+      "zone": "waiting"
+    },
+    {
+      "file": "model-concourse.glb",
+      "zone": "concourse"
+    },
+    {
+      "file": "model-railway.glb",
+      "zone": "railway",
+      "externalAuthoring": true
+    }
+  ],
+  "cameraPresets": {
+    "exterior": {
+      "position": [
+        180,
+        42,
+        125
+      ],
+      "target": [
+        35,
+        16,
+        0
+      ]
+    },
+    "waiting": {
+      "position": [
+        0,
+        2.0,
+        34
+      ],
+      "target": [
+        0,
+        22,
+        -18
+      ]
+    },
+    "concourse": {
+      "position": [
+        -73,
+        2.0,
+        38
+      ],
+      "target": [
+        -73,
+        18,
+        -18
+      ]
+    }
+  },
+  "walkable": [
+    {
+      "label": "Main waiting hall",
+      "bounds": [
+        -15.6972,
+        15.6972,
+        -42.214800000000004,
+        42.214800000000004
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "East hall stair threshold",
+      "bounds": [
+        15.6972,
+        16.5,
+        -6.0198,
+        6.0198
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "Main39ft6 stair",
+      "bounds": [
+        16.5,
+        24.9,
+        -6.0198,
+        6.0198
+      ],
+      "floor": -4.2672,
+      "surface": "stair; use actual floor raycast"
+    },
+    {
+      "label": "West hall axial threshold",
+      "bounds": [
+        -16.5608,
+        -15.6972,
+        -7.75,
+        7.75
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "Street-level loggia and arcade",
+      "bounds": [
+        24.9,
+        119.4816,
+        -6.9,
+        6.9
+      ],
+      "floor": 0
+    },
+    {
+      "label": "Axial concourse passage",
+      "bounds": [
+        -44.4,
+        -16.5608,
+        -7.75,
+        7.75
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "Main concourse",
+      "bounds": [
+        -105.1437,
+        -40.8563,
+        -72.39,
+        72.39
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "Exit concourse",
+      "bounds": [
+        -55.256299999999996,
+        -47.756299999999996,
+        -72.39,
+        72.39
+      ],
+      "floor": -7.4676
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        66.914528,
+        70.61452799999999
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        52.941452999999996,
+        56.641453
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        38.968378,
+        42.668378000000004
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        25.299065,
+        28.999065
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        11.477870000000001,
+        15.17787
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        -2.191443,
+        1.5085570000000001
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        -15.405111999999999,
+        -11.705112
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        -29.074425,
+        -25.374425
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "Lower platform-access doglegs",
+      "bounds": [
+        -54.156299999999995,
+        -47.3563,
+        -42.17146,
+        -38.47146
+      ],
+      "floor": -11.985624999999999,
+      "surface": "Stairs and receivinglandings; use actualfloor raycast"
+    },
+    {
+      "label": "North/south raised-end stair",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -42.214800000000004,
+        -31.546800000000005
+      ],
+      "floor": -4.2672,
+      "surface": "Stair; use actual floor intersections"
+    },
+    {
+      "label": "North/south Ionic landing",
+      "bounds": [
+        -16.5608,
+        16.5608,
+        -47.9044,
+        -42.214800000000004
+      ],
+      "floor": 0
+    },
+    {
+      "label": "North/south street-level pedestrian bridge",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -65.532,
+        -47.9044
+      ],
+      "floor": 0
+    },
+    {
+      "label": "North/south raised-end stair",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        31.546800000000005,
+        42.214800000000004
+      ],
+      "floor": -4.2672,
+      "surface": "Stair; use actual floor intersections"
+    },
+    {
+      "label": "North/south Ionic landing",
+      "bounds": [
+        -16.5608,
+        16.5608,
+        42.214800000000004,
+        47.9044
+      ],
+      "floor": 0
+    },
+    {
+      "label": "North/south street-level pedestrian bridge",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        47.9044,
+        65.532
+      ],
+      "floor": 0
+    },
+    {
+      "label": "Waiting-room wall-to-wall floor strip",
+      "bounds": [
+        -16.5608,
+        -15.6972,
+        -47.9044,
+        47.9044
+      ],
+      "floor": -4.2672
+    },
+    {
+      "label": "Waiting-room wall-to-wall floor strip",
+      "bounds": [
+        15.6972,
+        16.5608,
+        -47.9044,
+        47.9044
+      ],
+      "floor": -4.2672
+    }
+  ],
+  "mainStair": {
+    "bounds": [
+      16.5,
+      24.9,
+      -6.0198,
+      6.0198
+    ],
+    "startFloorWorld": -4.2672,
+    "endFloorWorld": 0,
+    "risers": 28,
+    "riser": 0.1524,
+    "tread": 0.3,
+    "riserCountStatus": "Reconstructed to fit verified14ft working drop and39ft6 publishedwidth"
+  },
+  "accessStairs": [
+    {
+      "centerZ": 68.764528,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        67.11452799999999,
+        70.414528
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          68.764528
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          68.764528
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          69.594528
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          68.764528
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          68.764528
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": 54.791453,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        53.141453,
+        56.441452999999996
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          54.791453
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          54.791453
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          55.621452999999995
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          54.791453
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          54.791453
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": 40.818378,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        39.168378000000004,
+        42.468378
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          40.818378
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          40.818378
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          41.648378
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          40.818378
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          40.818378
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": 27.149065,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        25.499065,
+        28.799065
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          27.149065
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          27.149065
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          27.979065
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          27.149065
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          27.149065
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": 13.32787,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        11.67787,
+        14.977870000000001
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          13.32787
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          13.32787
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          14.15787
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          13.32787
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          13.32787
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": -0.341443,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        -1.9914429999999999,
+        1.308557
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          -0.341443
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          -0.341443
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          0.48855699999999996
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          -0.341443
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          -0.341443
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": -13.555112,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        -15.205112,
+        -11.905111999999999
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          -13.555112
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          -13.555112
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          -12.725112
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          -13.555112
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          -13.555112
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": -27.224425,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        -28.874425,
+        -25.574425
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          -27.224425
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          -27.224425
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          -26.394425000000002
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          -27.224425
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          -27.224425
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    },
+    {
+      "centerZ": -40.32146,
+      "mainOpening": [
+        -48.656299999999995,
+        -42.1363,
+        -41.97146,
+        -38.67146
+      ],
+      "mainFlight": {
+        "start": [
+          -42.256299999999996,
+          -4.2672,
+          -40.32146
+        ],
+        "end": [
+          -47.9563,
+          -7.4676,
+          -40.32146
+        ],
+        "width": 3.0,
+        "steps": 19
+      },
+      "exitToPlatform": {
+        "upperStart": [
+          -48.9563,
+          -7.4676,
+          -39.491460000000004
+        ],
+        "turningLanding": [
+          -53.9563,
+          -9.7266125,
+          -40.32146
+        ],
+        "lowerLanding": [
+          -48.506299999999996,
+          -11.985624999999999,
+          -40.32146
+        ],
+        "flightWidth": 1.45,
+        "stepsPerFlight": 15
+      }
+    }
+  ],
+  "representativePlatform": {
+    "bounds": [
+      -85.0,
+      25.0,
+      8.8664,
+      13.1336
+    ],
+    "floor": -11.985624999999999,
+    "trackCenterZ": 7.2662,
+    "trackTopOfRailWorld": -13.154025,
+    "nearPlatformEdgeZ": 8.8664,
+    "sourceEdgeOffset": 1.6002,
+    "representativeInterpretation": "One linked section; longitudinalposition,widthandassignmentnotcertifiedcomplete21-tracklayout;railsectionminuteprofileinferred100lbtype",
+    "deprecatedPhase2": true,
+    "runtimeStatus": "Replaced by model-railway.glb and railway-manifest.json; not exported by this build"
+  },
+  "obstacles": [
+    {
+      "bounds": [
+        -79.9319,
+        -78.69189999999999,
+        40.0708,
+        41.31079999999999
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -79.9319,
+        -78.69189999999999,
+        13.908799999999998,
+        15.148799999999996
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -79.9319,
+        -78.69189999999999,
+        -15.148800000000003,
+        -13.908800000000005
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -79.9319,
+        -78.69189999999999,
+        -41.3108,
+        -40.070800000000006
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -50.06149999999999,
+        -48.82149999999999,
+        40.0708,
+        41.31079999999999
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -50.06149999999999,
+        -48.82149999999999,
+        13.908799999999998,
+        15.148799999999996
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -50.06149999999999,
+        -48.82149999999999,
+        -15.148800000000003,
+        -13.908800000000005
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -50.06149999999999,
+        -48.82149999999999,
+        -41.3108,
+        -40.070800000000006
+      ],
+      "floor": -4.2672,
+      "label": "Main concourse lattice pier"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        -33.9,
+        -32.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        -11.9,
+        -10.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        10.1,
+        11.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -7.300000000000001,
+        -5.5,
+        32.1,
+        33.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        -33.9,
+        -32.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        -11.9,
+        -10.1
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        10.1,
+        11.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        5.5,
+        7.300000000000001,
+        32.1,
+        33.9
+      ],
+      "label": "Waiting room lamp pedestal"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -35.4,
+        -30.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -25.4,
+        -20.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        -7.4,
+        -2.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        2.6,
+        7.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        20.6,
+        25.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        -11.6,
+        -9.799999999999999,
+        30.6,
+        35.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -35.4,
+        -30.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -25.4,
+        -20.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        -7.4,
+        -2.6
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        2.6,
+        7.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        20.6,
+        25.4
+      ],
+      "label": "Waiting room bench"
+    },
+    {
+      "bounds": [
+        9.799999999999999,
+        11.6,
+        30.6,
+        35.4
+      ],
+      "label": "Waiting room bench"
+    }
+  ],
+  "verified": [
+    "Waitinglantern325x119ft external;320x112ft10 frame;314ft4x108ft8 room;277x103 clear datums distinguished",
+    "Eight colossal interiorcolumns with48ftshaft,3ft3base,8ft3capital,9ft4pedestal",
+    "Three high windows perlongwall,eachfiveprimarylights;oneateachend",
+    "Octagonalrecessesinsquarecofferfield fromplate302",
+    "Onlycentralaxiallowerwallbayarched;outerbaysrectangularmuralpanels",
+    "ASCEthreeE-Wvaultspans85ft10,95ft4,85ft10;98ftcrossbarrel",
+    "ASCEthreeftpierswithfour8inangles,doublelatticeallfaces,diaphragms10ft",
+    "Doric35ftheight/4ft6diameter;EighthAvenuepredominantlypilasters",
+    "225x45ftarcade;39ft6mainstair",
+    "Mainwaiting/concourse equallevel;workingstreetE334/mainE320 datum"
+  ],
+  "reconstructed": [
+    "Coffer exactspacingand.36mreliefdepth inferredfromprimaryphotographs",
+    "Corinthianacanthusandvolutedetail profiles interpretedfromplates308/310",
+    "Individualashlarcoursing cadenceandmouldingminuteprofiles",
+    "Separatecolossalimposts tracedfromsection302",
+    "Westlowerarcade11baychainmeasuredfromLXIX;shallowarchrisesandtilegroinrelieftracedratherthanfabricationcertified",
+    "Knownnorthsouthwestadjoiningaccommodationenclosedwithoutinventedshopfronts",
+    "Nine eaststairheads tracedfromGibbsplan243;individualdimensions/railplatformmappingnotcertified",
+    "Exitdatumqualifiedagainst1926plan;platformindependentlyanchoredby3ft10overrail",
+    "Rivets,anglethicknessandminortrusssectiondetails withoutcompletefabricationschedule",
+    "Benches,lampplacementand1935ticketingalterations",
+    "Street wings closed with source-based solid roof ring, recessed attic bodies and genuine eastern open courts above street-level train-shed glazing",
+    "Single physical thermal glass sheets with reconstructed6mm thickness; stone reveals exist on both sides",
+    "Raised north/south Ionic landings and central stairs traced from plate300; lowerfloor and ceiling extend to reported room planes",
+    "Botticino ticket/parcel fronts and telephone booth bays follow opening-era plan labels;1935 changes not certified",
+    "Paired16ft cast-iron gate indicator posts replace floating boards; timetable cards remain unassigned"
+  ],
+  "uncertain": [
+    "Nominalwholefootprint784x430versus788ft9x430ft6source outside-edge datums",
+    "Smallmainfloorgradients319ft11to320ft0\u00be;Seventhcurb registrationandexactriserdistribution",
+    "Upper-window E421.25 control crosses circular base features; their identity and exact sill offset remain unverified; glazing uses31m local approximation",
+    "Gu\u00e9rinmaps exactcolour andcompleteauthenticatedartworkreproductions",
+    "Clearfloor277/103versusroom314ft4/108ft8 endportico registration",
+    "Individual1935 operationalsigns/timetables notinvented",
+    "Materialcoloursrequirephysicalsamplecalibration;originalproceduralmapsarefallbacksourceassets",
+    "Francis143ft highest-ceiling datum adopted; Gibbs150ft ceiling narrative remains conflicting",
+    "Exact coffer count and360mm relief remain interpreted; nominal10ft module is documented by Gibbs255",
+    "Eastern street-level skylight pitch and exact room/roof registration are inferred, distinct from documented152ft8\u00bdx115ft6 plan dimensions",
+    "Detailed truss profiles and joint locations follow structural roles and primary photographs, not a full fabrication survey",
+    "Concourse perimeter backing remains unfinished: documented two-level gridded fenestration is not yet reconstructed",
+    "Concourse opaque floor-grid material is interpreted; Gibbs marble-floor list does not specifically identify this floor, and documented glass-prism vault-light fields remain unmodelled"
+  ],
+  "contextIncluded": false,
+  "walkingSpawnsWorld": {
+    "waiting": [
+      0,
+      -2.5872,
+      26.0
+    ],
+    "endBridgeNorth": [
+      0,
+      1.68,
+      -45.2
+    ],
+    "endBridgeSouth": [
+      0,
+      1.68,
+      45.2
+    ]
+  },
+  "endEntranceStairs": [
+    {
+      "side": "north",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -42.214800000000004,
+        -31.546800000000005
+      ],
+      "landingBounds": [
+        -16.5608,
+        16.5608,
+        -47.9044,
+        -42.214800000000004
+      ],
+      "bridgeBounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -65.532,
+        -47.9044
+      ],
+      "bottomWorld": -4.2672,
+      "topWorld": 0,
+      "startFloorWorld": -4.2672,
+      "endFloorWorld": 0,
+      "roomSideDoorPlaneZ": -47.324400000000004,
+      "innerEndWallPlaneZ": -47.4044,
+      "steps": 28,
+      "riser": 0.1524,
+      "tread": 0.38100000000000006,
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+    },
+    {
+      "side": "south",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        31.546800000000005,
+        42.214800000000004
+      ],
+      "landingBounds": [
+        -16.5608,
+        16.5608,
+        42.214800000000004,
+        47.9044
+      ],
+      "bridgeBounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        47.9044,
+        65.532
+      ],
+      "bottomWorld": -4.2672,
+      "topWorld": 0,
+      "startFloorWorld": -4.2672,
+      "endFloorWorld": 0,
+      "roomSideDoorPlaneZ": 47.324400000000004,
+      "innerEndWallPlaneZ": 47.4044,
+      "steps": 28,
+      "riser": 0.1524,
+      "tread": 0.38100000000000006,
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+    }
+  ],
+  "waitingEndStairs": [
+    {
+      "side": "north",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -42.214800000000004,
+        -31.546800000000005
+      ],
+      "landingBounds": [
+        -16.5608,
+        16.5608,
+        -47.9044,
+        -42.214800000000004
+      ],
+      "bridgeBounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        -65.532,
+        -47.9044
+      ],
+      "bottomWorld": -4.2672,
+      "topWorld": 0,
+      "startFloorWorld": -4.2672,
+      "endFloorWorld": 0,
+      "roomSideDoorPlaneZ": -47.324400000000004,
+      "innerEndWallPlaneZ": -47.4044,
+      "steps": 28,
+      "riser": 0.1524,
+      "tread": 0.38100000000000006,
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+    },
+    {
+      "side": "south",
+      "bounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        31.546800000000005,
+        42.214800000000004
+      ],
+      "landingBounds": [
+        -16.5608,
+        16.5608,
+        42.214800000000004,
+        47.9044
+      ],
+      "bridgeBounds": [
+        -2.7432000000000003,
+        2.7432000000000003,
+        47.9044,
+        65.532
+      ],
+      "bottomWorld": -4.2672,
+      "topWorld": 0,
+      "startFloorWorld": -4.2672,
+      "endFloorWorld": 0,
+      "roomSideDoorPlaneZ": 47.324400000000004,
+      "innerEndWallPlaneZ": 47.4044,
+      "steps": 28,
+      "riser": 0.1524,
+      "tread": 0.38100000000000006,
+      "basis": "35x18ft footprint traced from plate300 scale bar, approximately\u00b12ft; longitudinal room registration inferred from277/314ft4 hierarchy"
+    }
+  ],
+  "waitingRoomBounds": {
+    "roomWallExtent": [
+      -16.5608,
+      16.5608,
+      -47.9044,
+      47.9044
+    ],
+    "clearFloor": [
+      -15.6972,
+      15.6972,
+      -42.214800000000004,
+      42.214800000000004
+    ],
+    "innerEndWallPlaneZ": [
+      -47.4044,
+      47.4044
+    ],
+    "roomSideDoorPlaneZ": [
+      -47.324400000000004,
+      47.324400000000004
+    ],
+    "endDoorsStatus": "Closed glazing and door leaves; no automatic opening is claimed"
+  },
+  "historicalMural": {
+    "material": "GuerinMuralField6",
+    "location": "North end only",
+    "source": "LOC det.4a23713",
+    "status": "Mechanical monochrome photographic recovery; original colour and official title unverified. Other five fields stay neutral."
+  },
+  "glazing": {
+    "thermalPaneCount": 8,
+    "physicalThickness": 0.006,
+    "exteriorDuplicateSheets": false,
+    "thicknessStatus": "Reconstructed glass thickness, not an authenticated surviving pane measurement"
+  },
+  "contactAudit": {
+    "file": "architecture-contact-audit.json",
+    "checks": 2334,
+    "failures": 0,
+    "scope": "Registered visible architectural bearing chains; assembled floor/railway intersections checked separately"
+  }
+}

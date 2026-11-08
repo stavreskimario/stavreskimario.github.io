@@ -1,0 +1,1473 @@
+{
+  "created": "2026-10-29T03:38:12.964Z",
+  "deploymentPrefix": "/exhibition/",
+  "scope": "Installed Chrome, headless desktop and 390 px touch/mobile emulation. Not real mobile hardware or a production CDN.",
+  "rendererNote": "Software ANGLE/SwiftShader is requested for deterministic availability. Frame intervals describe browser scheduling, not a hardware performance claim.",
+  "checks": [
+    "Desktop authored geometry, local HDR, meaningful progress completion, Enter Station and prefixed asset paths",
+    "Core materials retain baked WebP illumination, ambient occlusion and exported atlas channels; context, unbaked platform and period rolling stock decode locally",
+    "Exterior, waiting-room and concourse viewpoints render; drag orbit changes camera position",
+    "Hotel Pennsylvania and General Post Office controls reach distinct, correctly oriented neighbourhood viewpoints",
+    "WASD movement, fixed eye height and measured stop at waiting-room wall/envelope",
+    "Morning/afternoon/evening, keyboard FOV, shadow toggle, mobile GLB quality asset and historical hotspot dialog",
+    "Decoded historical comparison and explicitly approximate framing, native modal focus/Tab/Escape and guided tour start/cancel"
+  ],
+  "contexts": [
+    {
+      "label": "desktop",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3f048a6c06cf38b8262f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f20a20acf02f7ce2462f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a39f7640085f37632425.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/69568bc9b65cd706ace5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ebad7b61f035b595fc1f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/de511a781294895dfd20.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/90e6455c8ad02ae0eefb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ef7fd884a3d0c11e51a5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4d7a733aa9e3a117b76b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/96c2452f554cdcc0f0cc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13ccf7ecaf95c5e9de8a.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/911a361e2370f842c598.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/7a0eea2b54cb58d7296d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/772eced7e742a43d978e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/13c4f61beb144394cd73.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3335d12c85f0a74be102.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f674cdbc2a30bb6f79e5.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3d6f4a3323017ae4bc57.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/79410fc7f29b67cf4e8c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/b64c55705256a5018846.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/e9617f9c27a00f4287f1.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-platform.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-trains.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f32c702ad0508fcd84ed.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f827c7f915d3d0910681.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3b45d2f165e94f00482a.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/3fd19ca7c33c82238530.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/bd4573fc7dd8e24ce5fc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5be97a02f824d013360b.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5c6c2c7409337af4cd71.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/49f21a731702220b5bd7.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-concourse-sky.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/0663da69b5940183c02f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f4caf730a085bde61cdb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5a9772cb39ace88e956f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/64b525034a9a4df87410.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/17a7c7833754aad20681.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/84ca1fa3bf5561015fe0.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/1ed31ea622d96e47544c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/045483ffdbb9fca9da9d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/38556271990a26e3bd5e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky-low.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/reference-waiting.jpg",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/e25abc85a6ecd814ea97.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/33721d1aecd74f3fd521.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/d3af65ba7e33b704f9c1.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/8b602c339be41e7e043a.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f3c33e9e13a60222a23d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a88cd37c93251ba8c26e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/beeae21668c73f74ea5d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/46d8c3d4cc2d1185893e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/acc04afd2689712b1b12.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/727a06452744061516f9.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky-low.webp",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "desktop-intro": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 73,
+            "triangles": 1943080,
+            "geometries": 56,
+            "textures": 21
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        "desktop-waiting": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 1,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              8,
+              3.732800000000001,
+              37
+            ],
+            "quaternion": [
+              0.14068191942738867,
+              0.09051058880350103,
+              -0.012916300639636422,
+              0.9858243251403649
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 26,
+            "triangles": 977640,
+            "geometries": 69,
+            "textures": 29
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "desktop-concourse": {
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 2,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 50,
+            "triangles": 1707180,
+            "geometries": 101,
+            "textures": 37
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "desktop-hotel": {
+          "state": {
+            "view": "exterior",
+            "framing": "hotel",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 4,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              140,
+              6.0000000000000036,
+              65.00000000000001
+            ],
+            "quaternion": [
+              0.1204334546580115,
+              -0.22143272258837313,
+              0.027568927212671845,
+              0.9673175727849563
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 30,
+            "triangles": 962370,
+            "geometries": 101,
+            "textures": 37
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "desktop-farley": {
+          "state": {
+            "view": "exterior",
+            "framing": "farley",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "balanced",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 5,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -130,
+              8.000000000000009,
+              71
+            ],
+            "quaternion": [
+              0.052976827836534165,
+              0.21754839714491386,
+              -0.011826128861932201,
+              0.9745390157855139
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 28,
+            "triangles": 820318,
+            "geometries": 101,
+            "textures": 39
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "desktop-archive-comparison": {
+          "state": {
+            "view": "waiting",
+            "framing": "waiting",
+            "mode": "orbit",
+            "light": "evening",
+            "quality": "low",
+            "fov": 56,
+            "shadows": false,
+            "annotations": true,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 7,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              -2,
+              1.700000000000001,
+              38
+            ],
+            "quaternion": [
+              0.095990487373652,
+              -0.017154092737099426,
+              0.0016545167189330762,
+              0.9952330511043946
+            ],
+            "fov": 56
+          },
+          "metrics": {
+            "calls": 26,
+            "triangles": 632108,
+            "geometries": 114,
+            "textures": 54
+          },
+          "assets": [
+            {
+              "file": "model-context.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-exterior.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-waiting-room.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-waiting-room-low.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      },
+      "bakedLighting": [
+        {
+          "file": "model-context.glb",
+          "materials": 26,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-exterior.glb",
+          "materials": 8,
+          "bakedMaterials": 6,
+          "occlusionMaterials": 6,
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-waiting-room.glb",
+          "materials": 13,
+          "bakedMaterials": 12,
+          "occlusionMaterials": 12,
+          "atlasChannels": [
+            0,
+            1
+          ]
+        },
+        {
+          "file": "model-trains.glb",
+          "materials": 14,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-platform.glb",
+          "materials": 6,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-concourse.glb",
+          "materials": 10,
+          "bakedMaterials": 9,
+          "occlusionMaterials": 9,
+          "atlasChannels": [
+            0,
+            1
+          ]
+        }
+      ],
+      "walking": {
+        "before": [
+          0,
+          -2.5872,
+          31
+        ],
+        "afterForward": [
+          0,
+          -2.5849579237085,
+          30.381923919357977
+        ],
+        "boundarySamples": [
+          [
+            0,
+            -2.5849414580861563,
+            41.9605269875377
+          ],
+          [
+            0,
+            -2.5849414580861563,
+            41.9605269875377
+          ],
+          [
+            0,
+            -2.5849414580861563,
+            41.9605269875377
+          ],
+          [
+            0,
+            -2.5849414580861563,
+            41.9605269875377
+          ]
+        ]
+      },
+      "qualityCycles": {
+        "before": {
+          "calls": 26,
+          "triangles": 632108,
+          "geometries": 114,
+          "textures": 54
+        },
+        "after": {
+          "calls": 26,
+          "triangles": 632108,
+          "geometries": 114,
+          "textures": 54
+        }
+      },
+      "frameScheduling": {
+        "samples": 45,
+        "medianFrameIntervalMs": 16.699999999982538,
+        "p95FrameIntervalMs": 499.8999999999942,
+        "maximumFrameIntervalMs": 4899.799999999988
+      }
+    },
+    {
+      "label": "mobile emulation 390 × 844, touch, reduced motion",
+      "errors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requests": [
+        {
+          "path": "/exhibition/penn-station-1935/",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/theme.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/styles.css",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/shared/ui.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/app.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/dist/chunks/chunk-PPXUOJ6P.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/sky.hdr",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/scene-manifest.json",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-exterior-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-context-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/1ed31ea622d96e47544c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/045483ffdbb9fca9da9d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/cfbd6e09ee4a3cb3df61.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/727a06452744061516f9.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f4caf730a085bde61cdb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/5a9772cb39ace88e956f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/64b525034a9a4df87410.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/e25abc85a6ecd814ea97.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/33721d1aecd74f3fd521.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/f3c33e9e13a60222a23d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/8b602c339be41e7e043a.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a88cd37c93251ba8c26e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/d3af65ba7e33b704f9c1.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/beeae21668c73f74ea5d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/46d8c3d4cc2d1185893e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/acc04afd2689712b1b12.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.js",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/basis/basis_transcoder.wasm",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-exterior-sky-low.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-waiting-room-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/0663da69b5940183c02f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/17a7c7833754aad20681.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/38556271990a26e3bd5e.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/84ca1fa3bf5561015fe0.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-waiting-room-sky-low.webp",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-platform-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-trains-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/model-concourse-low.glb.gz",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ea2070fbe776040f22cb.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/a97fd9ee2b34d38ec11c.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/4f8d892ee7633a32162d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/c0868a78a1038306a222.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/ded8551495b688b06a64.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/7d4841447665d723f34f.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/23377872e769ee72152d.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/textures/6b991d2d4d6842ad19fc.ktx2",
+          "status": 200
+        },
+        {
+          "path": "/exhibition/penn-station-1935/assets/lighting-concourse-sky-low.webp",
+          "status": 200
+        }
+      ],
+      "blockedExternal": [
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+      ],
+      "snapshots": {
+        "mobile-intro": {
+          "state": {
+            "view": "exterior",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": false,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 0,
+            "instant": false
+          },
+          "camera": {
+            "position": [
+              145,
+              8.000000000000002,
+              88
+            ],
+            "quaternion": [
+              0.019613231515716492,
+              0.18815900475112515,
+              -0.003758297779044665,
+              0.9819355301028582
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 29,
+            "triangles": 543517,
+            "geometries": 39,
+            "textures": 16
+          },
+          "assets": [
+            {
+              "file": "model-exterior-low.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-context-low.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            }
+          ]
+        },
+        "mobile-concourse": {
+          "state": {
+            "view": "concourse",
+            "framing": "",
+            "mode": "orbit",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 2,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              -64,
+              3.7327999999999957,
+              38.000000000000014
+            ],
+            "quaternion": [
+              0.10778367340324127,
+              0.1104452884527139,
+              -0.012049430351643943,
+              0.9879470275447471
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 50,
+            "triangles": 1400264,
+            "geometries": 79,
+            "textures": 32
+          },
+          "assets": [
+            {
+              "file": "model-exterior-low.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-context-low.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-waiting-room-low.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains-low.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform-low.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse-low.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "mobile-walking": {
+          "state": {
+            "view": "waiting",
+            "framing": "",
+            "mode": "walk",
+            "light": "afternoon",
+            "quality": "low",
+            "fov": 50,
+            "shadows": true,
+            "annotations": false,
+            "entered": true,
+            "tour": false,
+            "sound": false,
+            "loading": false,
+            "error": "",
+            "progress": 100,
+            "renderer": "WebGL 2",
+            "revision": 0,
+            "pose": 3,
+            "instant": true
+          },
+          "camera": {
+            "position": [
+              0,
+              -2.584941655012544,
+              29.73953183985499
+            ],
+            "quaternion": [
+              0.06998933413988094,
+              0,
+              0,
+              0.9975477397631934
+            ],
+            "fov": 50
+          },
+          "metrics": {
+            "calls": 92,
+            "triangles": 1488990,
+            "geometries": 79,
+            "textures": 32
+          },
+          "assets": [
+            {
+              "file": "model-exterior-low.glb",
+              "materials": 8,
+              "bakedMaterials": 6,
+              "occlusionMaterials": 6,
+              "atlasChannels": [
+                1,
+                0
+              ]
+            },
+            {
+              "file": "model-context-low.glb",
+              "materials": 26,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-waiting-room-low.glb",
+              "materials": 13,
+              "bakedMaterials": 12,
+              "occlusionMaterials": 12,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            },
+            {
+              "file": "model-trains-low.glb",
+              "materials": 14,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-platform-low.glb",
+              "materials": 6,
+              "bakedMaterials": 0,
+              "occlusionMaterials": 0,
+              "atlasChannels": []
+            },
+            {
+              "file": "model-concourse-low.glb",
+              "materials": 10,
+              "bakedMaterials": 9,
+              "occlusionMaterials": 9,
+              "atlasChannels": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      },
+      "bakedLighting": [
+        {
+          "file": "model-exterior-low.glb",
+          "materials": 8,
+          "bakedMaterials": 6,
+          "occlusionMaterials": 6,
+          "atlasChannels": [
+            1,
+            0
+          ]
+        },
+        {
+          "file": "model-context-low.glb",
+          "materials": 26,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-waiting-room-low.glb",
+          "materials": 13,
+          "bakedMaterials": 12,
+          "occlusionMaterials": 12,
+          "atlasChannels": [
+            0,
+            1
+          ]
+        },
+        {
+          "file": "model-trains-low.glb",
+          "materials": 14,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-platform-low.glb",
+          "materials": 6,
+          "bakedMaterials": 0,
+          "occlusionMaterials": 0,
+          "atlasChannels": []
+        },
+        {
+          "file": "model-concourse-low.glb",
+          "materials": 10,
+          "bakedMaterials": 9,
+          "occlusionMaterials": 9,
+          "atlasChannels": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "browser": "156.0.8078.48",
+  "passed": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Sources panel remains readable without horizontal overflow at 200% text\n    at /private/tmp/penn-station-pages-20261029/tests/penn-station.cjs:455:5"
+}

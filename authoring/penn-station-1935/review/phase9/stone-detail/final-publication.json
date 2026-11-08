@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "created": "2026-11-02T01:27:10.002Z",
+  "status": "PASS",
+  "runtimeCommit": "8ad62cf96f6215fa0f75df28efa1b4d69c2c4167",
+  "runtimeRevision": "9-stone-detail-1",
+  "url": "https://stavreskimario.github.io/penn-station-1935/?preview=8ad62cf",
+  "scope": "Actual Pages production response hashes, full six-zone mount, new material bindings and native street-to-arcade walking. Local21-leg full roundtrip is recorded separately. No physical mobile, new WebGPU or universal FPS claim.",
+  "pagesRun": 41372383038,
+  "siteChecksRun": 41372392154,
+  "workflows": [
+    {
+      "databaseId": 41372383038,
+      "workflowName": "pages build and deployment",
+      "headSha": "8ad62cf96f6215fa0f75df28efa1b4d69c2c4167",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T01:26:47Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41372383038",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41372383038"
+    },
+    {
+      "databaseId": 41372392154,
+      "workflowName": "Site checks",
+      "headSha": "8ad62cf96f6215fa0f75df28efa1b4d69c2c4167",
+      "status": "completed",
+      "conclusion": "success",
+      "updatedAt": "2026-11-02T01:25:52Z",
+      "url": "https://github.com/stavreskimario/stavreskimario.github.io/actions/runs/41372392154",
+      "apiURL": "https://api.github.com/repos/stavreskimario/stavreskimario.github.io/actions/runs/41372392154"
+    }
+  ],
+  "workflowVerification": {
+    "source": "Read-only connected GitHub workflow-run API, independently checked during packaging",
+    "externalEvidence": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/final-publication-v1/workflow-runs.json",
+    "sha256": "18ae64d679295e8e65f3e7adbaeddf36426acb47e5e4f52ed1a6a0651e8fba65"
+  },
+  "naturalBodies": [
+    {
+      "file": "index.html",
+      "bytes": 18272,
+      "sha256": "25f7fd1db9eb41b1e1ee3f299f45927e4988cccf9dc97f4835ae359b2e26235e",
+      "immutableCommitExact": true,
+      "gitBlob": "44c380e562cc0095fcc19b5689ab08b222eaf126"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 27463,
+      "sha256": "86620c71d21347b27ff95d5809d98e609f795e69f3fa60d4b129ba98a8257617",
+      "immutableCommitExact": true,
+      "gitBlob": "7443419a64337c26ba12f2f9d8aab4b15658263b"
+    },
+    {
+      "file": "dist/app.js",
+      "bytes": 1046059,
+      "sha256": "772342f64ad292379a4212689df75b1d33181c4b5355b667fefb5dfc1fd92300",
+      "immutableCommitExact": true,
+      "gitBlob": "dcb423f4df2c900c59c1c8d005e0a28ad13219ac"
+    },
+    {
+      "file": "assets/scene-manifest.json",
+      "bytes": 693276,
+      "sha256": "4710619e32446dab107745ace51e6f8f1807687750f33439d80426be568231f7",
+      "immutableCommitExact": true,
+      "gitBlob": "c02bd7785536b7f4bf27a9d98d5255e7ed248e99"
+    },
+    {
+      "file": "assets/model-context.glb.gz",
+      "bytes": 504344,
+      "sha256": "95706c770b1133e571e69629fde16f2ad05f23d9eca545e5360f11028636912c",
+      "immutableCommitExact": true,
+      "gitBlob": "742ca49a369530e69c37fb8adf0b8cf529517363"
+    },
+    {
+      "file": "assets/model-platform.glb.gz",
+      "bytes": 213970,
+      "sha256": "8eca3566831131633ecaa099066b7fc62ad49efda16b1df95e888457fae0288e",
+      "immutableCommitExact": true,
+      "gitBlob": "6cffbedac20acdcf6d94d5d071dc21c12428657f"
+    },
+    {
+      "file": "assets/model-trains.glb.gz",
+      "bytes": 123231,
+      "sha256": "601ecec8fc138b11f0c860b19c53684c123fff9f5399e8729b93e7974b219254",
+      "immutableCommitExact": true,
+      "gitBlob": "2330c20887fb934e42ac67305ddb23b43d2451b1"
+    },
+    {
+      "file": "assets/model-exterior.glb.gz",
+      "bytes": 4206073,
+      "sha256": "81a5b1b03b3d2beeab26f38a4f1411aea7d2f85c816e28e71436a480e55b7866",
+      "immutableCommitExact": true,
+      "gitBlob": "0e0ff830f15eff15db899b8d7a23400f303e65f7"
+    },
+    {
+      "file": "assets/model-concourse.glb.gz",
+      "bytes": 5092816,
+      "sha256": "b2bce204874acee3e4b51153170d98f5e7e25510231bc77e59eeeea95fcfa8e6",
+      "immutableCommitExact": true,
+      "gitBlob": "36cd4c25cab97654c6b219d8009c37f5f4bc3e0b"
+    },
+    {
+      "file": "assets/model-waiting-room.glb.gz",
+      "bytes": 8304517,
+      "sha256": "deb012520940ea10b91551ca53b405642f25a5068ed23f1d41a115a602f9d595",
+      "immutableCommitExact": true,
+      "gitBlob": "2afbbb8ecda9442689a1684578cdda9f846718e2"
+    },
+    {
+      "file": "assets/textures/363923bafe6efcb2994c.ktx2",
+      "bytes": 1731155,
+      "sha256": "363923bafe6efcb2994c3c9af760bc144583e38bfcf66f7030a8f792648be08a",
+      "immutableCommitExact": true,
+      "gitBlob": "ed7e4edcf124bad0db1498fb19cffd401033330a"
+    },
+    {
+      "file": "assets/textures/57b74bfd6c788b7c2da2.ktx2",
+      "bytes": 2357761,
+      "sha256": "57b74bfd6c788b7c2da23af64a4ec96e62c55531a3934df0f746b21c1680bee2",
+      "immutableCommitExact": true,
+      "gitBlob": "b178fc417e44b74e3997cc2de9ada097186f99fb"
+    },
+    {
+      "file": "assets/textures/d027c562b48d63001b53.ktx2",
+      "bytes": 3847041,
+      "sha256": "d027c562b48d63001b53f41b3151cc4b1f9c159b7827baf27b3e325a071ce372",
+      "immutableCommitExact": true,
+      "gitBlob": "497913255906e55a3b8a4b3ca726a99ff7584242"
+    },
+    {
+      "file": "assets/reflection-arcade.hdr.gz",
+      "bytes": 4292934,
+      "sha256": "c7a7826d6ec46fbfdbd6bf95c643a328fe368cc608b86fa1637b7b19980afff5",
+      "immutableCommitExact": true,
+      "gitBlob": "aa2b19110d9565e3d659e34dc0525c26c17f98bf"
+    },
+    {
+      "file": "assets/lighting-arcade-enclosure-sky.webp",
+      "bytes": 2076130,
+      "sha256": "cc5c592848851cc5ec977717177d0f2fe9b6602aa4b96fa25793d63e84fe307d",
+      "immutableCommitExact": true,
+      "gitBlob": "80212ad522799e9befc525b7a835c7c3f9299ab1"
+    }
+  ],
+  "publicObservation": {
+    "initialWalk": true,
+    "quality": "balanced",
+    "renderer": "WebGL 2",
+    "sixZoneIdsAndVisibilityExactAcrossStreetArcadeAndArrivals": true,
+    "nativeStreetToArcadeDistanceMetres": 34.464492578241845,
+    "floorWorldAfterWalk": -0.0017307747940940033,
+    "eyeHeightOverFloorAfterWalk": 1.6800000000000002,
+    "mountedArcadeMaterialNames": [
+      "TravertineArcadeCastComposition",
+      "PublicFloorMarbleArcadeRecessBearingPhase9",
+      "ArcadeNeutralUnassignedShopBacking",
+      "ArcadeVaultCastComposition",
+      "MilfordGraniteArcadeRepairPhase9",
+      "TravertineArcadeRepairPhase9",
+      "TravertineAshlar-2ArcadeRepairPhase9",
+      "TravertineAshlar-1ArcadeRepairPhase9",
+      "TravertineAshlar0ArcadeRepairPhase9",
+      "TravertineAshlar1ArcadeRepairPhase9",
+      "TravertineAshlar2ArcadeRepairPhase9",
+      "ArcadeShopAndClerestoryGlass",
+      "ArcadeOrnamentalMetal"
+    ],
+    "arrivalsPreset": "arrivals",
+    "pageErrors": 0,
+    "httpFailures": 0,
+    "unexplainedRequestFailures": 0,
+    "intentionalBlocks": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;500&display=swap"
+    ],
+    "browserClosed": true
+  },
+  "archive": {
+    "file": "public-browser.json.gz",
+    "decodedBytes": 29862,
+    "decodedSha256": "fe0a175ba603bf9ee18eff196c0fb2766961be2347a8466adfb403756f09c2c8",
+    "archiveBytes": 4505,
+    "archiveSha256": "1bed4621aafb4086e7e8b954eedeb175e8a72a696de8392a1b01c0254b6efd9b"
+  },
+  "screenshots": [
+    {
+      "file": "public-arcade.png",
+      "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/public-A-v1/public-arcade.png",
+      "bytes": 1115793,
+      "sha256": "9c66e7896b55720fed8f1cdce02b9c809efe760e606507717282e906338f0759",
+      "width": 1440,
+      "height": 1000,
+      "includedInRepo": false
+    },
+    {
+      "file": "public-arrivals.png",
+      "externalPath": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/texture-diagnosis-v1/public-A-v1/public-arrivals.png",
+      "bytes": 653611,
+      "sha256": "84f228e9ebc186fec8b8c24c448b566d8c7ce0e93e658aec5df4eee862d826dc",
+      "width": 1440,
+      "height": 1000,
+      "includedInRepo": false
+    }
+  ],
+  "followupSourceEvidence": {
+    "file": "pipeline-primary-code-proof.json",
+    "bytes": 1266,
+    "sha256": "62d470643eb911df2b0c63c3e36c3975ffdd879c8172deb31192afb66ade99b3",
+    "committedImplementation": [
+      {
+        "path": "penn-station-1935/optimise.mjs",
+        "sha256": "6f4dafbe308c1b633cd6033e0cdb2df6844545ede4600e6e1532080d099297a5",
+        "immutableCommitExact": true
+      },
+      {
+        "path": "penn-station-1935/model/patch_reviewed_stone_normals.py",
+        "sha256": "b726c4b0bc8e1121c1d918ea29aae0116eb6bd51cd513aff8dd35b71c9036d72",
+        "immutableCommitExact": true
+      }
+    ]
+  },
+  "limits": [
+    "This public run verifies native street-to-arcade walking and arrival-preset framing, not a fresh complete platform stair loop. Local A/B stair walks and prior21leg station roundtrip remain separate evidence.",
+    "No new FPS, physical-mobile, new WebGPU or final photographic-fidelity certification.",
+    "Normal-image encoding is corrected at the retained .035strength; coarse GI/AO smudging remains visible."
+  ]
+}

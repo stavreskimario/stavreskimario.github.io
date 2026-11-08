@@ -1,0 +1,150 @@
+{
+  "status": "PASS exact4K physical source archives; no modified radiance/statistics or duplicate rawsourceGLB",
+  "artifact": "platform-continuity-floor",
+  "sourcePrimarySha256": "495716296f8b142c1b792e1f68af501296d7cfcd81ad970e6d411a7024aca03c",
+  "selectedSourceOwnerNames": [
+    "Fresh true receiver Railway smooth concrete track base",
+    "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+    "Fresh true receiver RailwayPlatformStippledGranolithicPhase9"
+  ],
+  "selectedTriangles": 600,
+  "archives": [
+    {
+      "file": "raw/lighting-platform-continuity-floor-sky.hdr.gz",
+      "rawBytes": 19381763,
+      "rawSha256": "2caa229408d72796b2c2c4fd09c47eb898d5c670ecfd1ea6ec3729c289b2ee18",
+      "archiveBytes": 15436324,
+      "archiveSha256": "cf6f4ef3bab342a2700497b7e7a0e52c757625d320248c40d152e585585f3334"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-floor-sky-denoised-linear.hdr.gz",
+      "rawBytes": 67649587,
+      "rawSha256": "c8991a875d8ecdba8624932d15d1a84a8446913350f566cce1391a9b3971df8c",
+      "archiveBytes": 13647937,
+      "archiveSha256": "f1cfc20ddaa46fe601b1089f6ad4ab76e9f900c0697bf7394f8098d62b64e8ef"
+    }
+  ],
+  "replayQualification": "Executed prepared-scene and source/context files remain externally pinned. Source helpers retained here are review copies; runtime requires only static optimized assets.",
+  "files": [
+    {
+      "file": "actual-bake-completion.json",
+      "bytes": 1815,
+      "sha256": "681c9a4a5cdabfd63650575f7b94977de8a7957e3b6b9c0912715982afcbaeda"
+    },
+    {
+      "file": "actual-postprocess-completion.json",
+      "bytes": 1182,
+      "sha256": "47f3817a292b13d5ccadd4d4167effdda876f29f85614ca1711eb08321ec7cdd"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-floor-denoise.json",
+      "bytes": 2649,
+      "sha256": "bb82a0a8c7f78973055f288bb88430648b8b7ca71e667639a6d19f7b45397f1f"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-floor-sky-denoised-linear.hdr.gz",
+      "bytes": 13647937,
+      "sha256": "f1cfc20ddaa46fe601b1089f6ad4ab76e9f900c0697bf7394f8098d62b64e8ef"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-floor-sky-low.png",
+      "bytes": 82140,
+      "sha256": "ae2a17db8db5c28fb8ead682e5ea6f33c32db5d6b775365194091a571f6c906a"
+    },
+    {
+      "file": "denoised/lighting-platform-continuity-floor-sky.png",
+      "bytes": 2374336,
+      "sha256": "df5aa610b7191ea3ce6d6e2b812195ed5c2b07eadee5fa852a772e9891800f1a"
+    },
+    {
+      "file": "floor-uv-preflight.json",
+      "bytes": 1953,
+      "sha256": "3b4906e19bf5d7fe8dd5790b70e2f6d29a17d50fef8565d4e2e6727dd02e98c7"
+    },
+    {
+      "file": "packet.json",
+      "bytes": 5828,
+      "sha256": "62f3a92ecef08865dcdffd8f430e5723de856002b221816781246389cfc38a17"
+    },
+    {
+      "file": "prepared-context-proof.json",
+      "bytes": 4415,
+      "sha256": "47b04a68a518a8829d83602814be8e6bfb660ad287c1a744586ae2390f210620"
+    },
+    {
+      "file": "prepared-current-control.json",
+      "bytes": 36008,
+      "sha256": "bc8be086d428add2efe9f8dea861e949dd8d95d6718230bb5fe686620d5b0529"
+    },
+    {
+      "file": "raw/lighting-platform-continuity-floor-sky.hdr.gz",
+      "bytes": 15436324,
+      "sha256": "cf6f4ef3bab342a2700497b7e7a0e52c757625d320248c40d152e585585f3334"
+    },
+    {
+      "file": "raw/lighting-platform-continuity-floor.json",
+      "bytes": 38121,
+      "sha256": "ac35bd4fad0c74f745936edc0e98d39c791e3079ade2100d9c4b9dded054a53d"
+    },
+    {
+      "file": "source/archive-receiver.py",
+      "bytes": 3277,
+      "sha256": "fcdacba1864cba8b15f3e51a68bec88525d368763727317c39a331aca5989528"
+    },
+    {
+      "file": "source/bake-prepared-receiver.py",
+      "bytes": 16238,
+      "sha256": "c495abbfd94251c601117c2350060cfaf50cc4e33ec12255ad023c2090fbf357"
+    },
+    {
+      "file": "source/baked_occlusion_binding.py",
+      "bytes": 3167,
+      "sha256": "c77f2e435cc9e56409e78f95d950708f664c10395157903b532ddb88c89e7c7e"
+    },
+    {
+      "file": "source/denoise_lighting.py",
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    {
+      "file": "source/encode-lossless-meshopt.mjs",
+      "bytes": 8281,
+      "sha256": "52ab9dcd751c608841524ab3ab642a0ba33aa2d6e32d272351f401fe227a3a2f"
+    },
+    {
+      "file": "source/package-continuity-floor-lossless.mjs",
+      "bytes": 7723,
+      "sha256": "524d595950bc406f315bf23e496a6eff58aa4a4c297457de80e742357a40d1a7"
+    },
+    {
+      "file": "source/postprocess-receiver.py",
+      "bytes": 3382,
+      "sha256": "23dc7a08e159820e4bc1dd1f21cea10bffa884ecddaefaf1d731dc9347078dac"
+    },
+    {
+      "file": "source/prepare-floor-uv.py",
+      "bytes": 6379,
+      "sha256": "211261ce2548bfe593e4717027c383be1dacccf004b13f57f49b7078e11abece"
+    },
+    {
+      "file": "source/render_device.py",
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    {
+      "file": "source/reuse-texture-cache.mjs",
+      "bytes": 7538,
+      "sha256": "5533f01af9c33690181995575f173353e74d0037a107964f2c48c198dcd8902f"
+    },
+    {
+      "file": "source/split-receivers.py",
+      "bytes": 5769,
+      "sha256": "1f3cb842763cc3c9c161c79de3b636c4889f0a4981afd41088425241a8a84373"
+    },
+    {
+      "file": "split-receivers-proof.json",
+      "bytes": 2311,
+      "sha256": "c28114103d0a53d639b2a25cfa87f14b5fba395f86db768fd626e642b963c519"
+    }
+  ]
+}

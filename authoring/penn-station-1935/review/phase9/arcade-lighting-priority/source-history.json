@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "status": "PASS: complete old archive recoverable; new source/runtime copied exactly and local native/asset checks pass; publication pending",
+  "oldSourceGitCommit": "aa1a08a5425042433f6042db71985e8b7b762cad",
+  "oldExternalBackup": "/Users/stavreskimario/Desktop/penn-station-work/phase9-interiors/arcade/previous-live-lighting-before-priority-v2",
+  "oldFiles": {
+    "README.md": {
+      "bytes": 1495,
+      "sha256": "b24620d7fa68adbc5851de3b4bad3deca70441c475938c9bb5366ba02f976e11"
+    },
+    "source-provenance.json": {
+      "bytes": 5883,
+      "sha256": "71d8a6984719e24fa951bb26566b833bcec2ff3cb7cd08f50f53e7a8b105d064"
+    },
+    "archive-manifest.json": {
+      "bytes": 3174,
+      "sha256": "57aac0ebc5f57cb818707f0e8324bd3814b974a870a74e9d4877fcc5be90cbbb"
+    },
+    "denoised/lighting-arcade-enclosure-sky-denoised-linear.hdr.gz": {
+      "bytes": 19231136,
+      "sha256": "9f4106f72938a3996d78ced3557dadce482457a1f458d97a17b1a7db9e7670ce"
+    },
+    "denoised/lighting-arcade-enclosure-denoise.json": {
+      "bytes": 2550,
+      "sha256": "c9d246819841dd8747c9ddcc5009b4c636e400d1e5325d065812c7fa3bbada18"
+    },
+    "denoised/lighting-arcade-enclosure-sky-low.png": {
+      "bytes": 117468,
+      "sha256": "30f1db836706150491926c218624e22f07999987111603fec34ec97706600c18"
+    },
+    "denoised/lighting-arcade-enclosure-sky.png": {
+      "bytes": 3103619,
+      "sha256": "7bd36ac3c3d7d2c6bcb3a7e08ddf42c36d0964fec2ecdc03c3930690462a1dc0"
+    },
+    "source/visible-context-proof.json": {
+      "bytes": 5035,
+      "sha256": "3a081a2fc5505895c8b3aed69806c9e093a7fe972c523d04b87a9905591e4af9"
+    },
+    "source/bake_lighting.py": {
+      "bytes": 20408,
+      "sha256": "935aecc05eebdeea227ecb79e6effa592f7af56160d340ef58113402fa6dc7a9"
+    },
+    "source/material_library.py": {
+      "bytes": 9855,
+      "sha256": "190f6b6df6776d9e1d60ef53ae71c49e5fbdac01cb23be4a49afc4aa43efd2d8"
+    },
+    "source/render_device.py": {
+      "bytes": 1188,
+      "sha256": "b065177a1347eab7a49fa5bc4096a7d23b6433e48ceafd26ca9990c29d54312a"
+    },
+    "source/arcade_corner_normals.py": {
+      "bytes": 5450,
+      "sha256": "bd9336815cf9c60c16745b6db833b0ece3cd1daf29a3fc2e093b123ef1a1c567"
+    },
+    "source/restore_imported_visibility.py": {
+      "bytes": 2160,
+      "sha256": "3d1e89900dfe2eb521a64dcda8ea14abc6c71501104da2c65d1165d7a77b4498"
+    },
+    "source/denoise_lighting.py": {
+      "bytes": 8443,
+      "sha256": "60ad57a58cd3f22871af23c5af031553413c8d726f30de9e56805b401df0c20a"
+    },
+    "raw/lighting-arcade-enclosure-ao.png": {
+      "bytes": 5846971,
+      "sha256": "c83e6d635f2856e93add1b9d253e33fdff2f464ac7905496f8cd0ac80d0a79bc"
+    },
+    "raw/lighting-arcade-enclosure-sky.hdr.gz": {
+      "bytes": 11088245,
+      "sha256": "76317e971b3ead0d2f7bd0eea77354a732ebb52edd79380731f1cba27d9bba18"
+    },
+    "raw/lighting-arcade-enclosure.json": {
+      "bytes": 14877,
+      "sha256": "a021cdc69f07ecd4de955b63f731b201bf73eba7171cd0daa6fa7b73377d23b8"
+    }
+  },
+  "newArchiveManifestSha256": "94223f41b27848db1108035d8fe82928c5b52783b838c820d5fac2627aacbbc6",
+  "newSourceCopiedByteExact": true,
+  "canonicalSceneChanged": false
+}

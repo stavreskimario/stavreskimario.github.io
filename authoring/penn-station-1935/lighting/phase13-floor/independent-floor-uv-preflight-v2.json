@@ -1,0 +1,82 @@
+{
+  "status": "PASS CPU-only independent floor UV density gate; no new transport yet",
+  "sourcePrimarySha256": "9ce58f7125367a12e94b5dda1527d268f039ba8a73969df42277376faabb0e54",
+  "sourceFloorOwnerNames": [
+    "Fresh true receiver RailwayPlatformRubbedConcretePhase9",
+    "Fresh true receiver Railway smooth concrete track base",
+    "Fresh true receiver RailwayPlatformStippledGranolithicPhase9"
+  ],
+  "sourceFileMeshOwners": 27,
+  "selectedSourceFloorOwners": 3,
+  "selectedFloorTriangles": 402,
+  "retainedStructuralTriangles": 24996,
+  "architecture": "Exact three floor receivers for independent contact GI",
+  "contextArchitecture": "Twenty-four source structural owners retained as physical conte",
+  "preparedScene": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/floor-bake-v1/independent-floor-prebake-scene.blend",
+  "preparedSceneSha256": "f82c477cff0727e0e501f1ee02d7bf10ed5c55acb7623ed9b17c7305414aeb63",
+  "physicalDigest": "6ac4183b1b73172daea430c11258f3519861a0804b48f17d3fb7c01f08ae05fc",
+  "structureLightDigest": "18e83a09707d099a651b7743f214ad92ee921c1f249ddb2da8aa82d0fc6dcc74",
+  "minimumVisibleTopDensity": 76.92764506513112,
+  "selectedTrial": {
+    "walkingTopWeight": 4,
+    "visibleTopTriangles": 16,
+    "minimumJacobianPixelsPerMetre": 76.92764506513112,
+    "maximumJacobianPixelsPerMetre": 76.92768162453672,
+    "materials": {
+      "RailwayTrackBaseConcreteEnclosure13": {
+        "area": 1734.915665016597,
+        "uvArea": 0.03829761384986341,
+        "areaPixelsPerMetre": 19.244499545293632
+      },
+      "RailwayPlatformRubbedConcreteEnclosure13": {
+        "area": 1572.0278996348868,
+        "uvArea": 0.03448870962247952,
+        "areaPixelsPerMetre": 19.18528681333969
+      },
+      "RailwayPlatformStippledGranolithicEnclosure13": {
+        "area": 1026.5999502307586,
+        "uvArea": 0.2002793783507002,
+        "areaPixelsPerMetre": 57.21072427760795
+      }
+    },
+    "physicalPositionNormalUV0Exact": true,
+    "structureLightUVExact": true,
+    "uvBounds": [
+      0.0009765034192241728,
+      0.9990235567092896
+    ]
+  },
+  "trials": [
+    {
+      "walkingTopWeight": 4,
+      "visibleTopTriangles": 16,
+      "minimumJacobianPixelsPerMetre": 76.92764506513112,
+      "maximumJacobianPixelsPerMetre": 76.92768162453672,
+      "materials": {
+        "RailwayTrackBaseConcreteEnclosure13": {
+          "area": 1734.915665016597,
+          "uvArea": 0.03829761384986341,
+          "areaPixelsPerMetre": 19.244499545293632
+        },
+        "RailwayPlatformRubbedConcreteEnclosure13": {
+          "area": 1572.0278996348868,
+          "uvArea": 0.03448870962247952,
+          "areaPixelsPerMetre": 19.18528681333969
+        },
+        "RailwayPlatformStippledGranolithicEnclosure13": {
+          "area": 1026.5999502307586,
+          "uvArea": 0.2002793783507002,
+          "areaPixelsPerMetre": 57.21072427760795
+        }
+      },
+      "physicalPositionNormalUV0Exact": true,
+      "structureLightUVExact": true,
+      "uvBounds": [
+        0.0009765034192241728,
+        0.9990235567092896
+      ]
+    }
+  ],
+  "baseControl": "/Users/stavreskimario/Desktop/penn-station-work/phase13-track-enclosure/integration/bake-run-v2/raw/prepared-scene-control.json",
+  "seconds": 19.945373791008024
+}
