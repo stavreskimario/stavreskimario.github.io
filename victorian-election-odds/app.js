@@ -7,7 +7,7 @@
   'https://vicmap.land.vic.gov.au/agsgis/rest/services/vicmap/Vicmap_Admin/MapServer/15/query'
  ];
  const colours = {Labor:'#ac5548',Liberal:'#426b88',Nationals:'#8b7044',Greens:'#5b7d5e','One Nation':'#c28b3e',Independent:'#82719a',Tied:'#9e988c',Unknown:'#d1c9bc'};
- const key = v => String(v||'').toLowerCase().normalize('NFKD').replace(/\\b(district|electoral)\\b/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+ const key = v => String(v||'').toLowerCase().normalize('NFKD').replace(/\b(district|electoral)\b/g,'').replace(/[^a-z0-9]+/g,' ').trim();
  const family = value => value.startsWith('Independent') ? 'Independent' : (value==='Liberals' ? 'Liberal' : value);
  const sorted = market => [...market.odds].sort((a,b) => a.decimal-b.decimal);
  const leader = market => {
@@ -57,7 +57,7 @@
    const name=document.createElement('span');name.className='seat-name';name.textContent=m.name;
    const odds=document.createElement('span');odds.className='district-odds';odds.textContent=fixed(sorted(m)[0].decimal);
    label.append(dot,name);btn.append(label,odds);
-   btn.addEventListener('click',()=>{setSelected(m.name,true);if(window.matchMedia('(max-width:800px)').matches)$('detail').scrollIntoView({block:'start',behavior:'instant'});});
+   btn.addEventListener('click',()=>{setSelected(m.name,true);if(window.matchMedia('(max-width:800px)').matches)$('detail').scrollIntoView({block:'start',behavior:'auto'});});
    directory.append(btn);
   });
   $('list-count').textContent=filtered.length+' of '+markets.length+' electorates';
