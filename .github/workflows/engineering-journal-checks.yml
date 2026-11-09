@@ -1,8 +1,11 @@
-name: Engineering Journal checks
+name: Site collection checks
 on:
   pull_request:
     paths:
       - engineering-journal/**
+      - victorian-election-odds/**
+      - tests/victorian-election-odds.cjs
+      - index.html
       - scripts/engineering-feed/**
       - tests/*engineering*
       - tests/fixtures/engineering-feed/**
@@ -30,3 +33,7 @@ jobs:
         env:
           NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
         run: node tests/engineering-journal.cjs
+      - name: Verify election atlas interactions
+        env:
+          NODE_PATH: ${{ runner.temp }}/journal-tools/node_modules
+        run: node tests/victorian-election-odds.cjs

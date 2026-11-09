@@ -145,8 +145,12 @@ class CollectionTests(unittest.TestCase):
             self.assertTrue((output/'.nojekyll').exists())
             for app in json.loads((ROOT/'apps.json').read_text())['apps']:
                 self.assertTrue((output/app['id']/'index.html').exists())
-            self.assertTrue((output/'la-trip/assets/la-skyline.jpg').exists())
-            self.assertTrue((output/'engineering-journal/data/catalogue.json').exists())
+            self.assertTrue((output/'victorian-election-odds/electorates.geojson').exists())
+            self.assertTrue((output/'victorian-election-odds/odds.json').exists())
+            # Unlisted apps remain in the Git repository but not in a staged Pages artifact.
+            for unlisted in ('la-trip', 'engineering-journal', 'crystal-palace'):
+                self.assertTrue((ROOT/unlisted/'index.html').exists())
+                self.assertFalse((output/unlisted).exists())
             self.assertFalse((output/'.git').exists())
             self.assertFalse((output/'scripts').exists())
             self.assertFalse((output/'.github').exists())

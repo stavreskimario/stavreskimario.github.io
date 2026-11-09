@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#faf7ef">
+ <meta name="description" content="An interactive map of all 88 Victorian electorates, coloured by Sportsbet's 2026 state election seat odds.">
+ <title>Victoria, by the odds · Mario's Sites</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Cpath d='M8 29V11h6l6 10 6-10h6v18h-6V20l-6 9-6-9v9z' fill='%23ad5738'/%3E%3C/svg%3E">
+ <link rel="stylesheet" href="../shared/theme.css?v=1">
+ <link rel="stylesheet" href="./styles.css?v=1">
+ <script src="../shared/ui.js?v=1" defer></script>
+ <script src="./atlas.js?v=1" defer></script>
+ <script src="./app.js?v=2" defer></script>
+</head>
+<body>
+ <a class="skip-link" href="#main">Skip to election map</a>
+ <div class="site-shell">
+  <header class="site-header"><a href="../">← All apps</a><span class="wordmark">Mario's sites</span></header>
+  <main id="main">
+   <div class="hero">
+    <div><p class="eyebrow">2026 Victorian state election · 28 November</p>
+    <h1 class="display">Victoria, <em>by the odds.</em></h1>
+    <p class="hero-copy">Every electorate. Every market leader. One map of what the bookmaker is pricing, not a prediction of the result.</p></div>
+    <div class="hero-note"><span class="handwritten">88 electorates</span><span>Lower house · market snapshot</span></div>
+   </div>
+   <section class="summary-strip" aria-label="Market summary">
+    <div><strong id="market-count">88</strong><span>Electorates</span></div>
+    <div><strong id="tight-count">—</strong><span>Close markets*</span></div>
+    <div><strong id="priced-count">—</strong><span>Markets with prices</span></div>
+    <div class="snapshot-card"><span class="eyebrow">Price snapshot</span><strong id="capture-date">9 Nov 2026</strong><span>Not live odds</span></div>
+   </section>
+   <section class="map-section" aria-labelledby="map-title">
+    <div class="section-heading">
+     <div><p class="eyebrow">Explore the landscape</p><h2 id="map-title">Electorate map</h2></div>
+     <a class="source-link" href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986" target="_blank" rel="noopener noreferrer">View original Sportsbet markets ↗</a>
+    </div>
+    <div class="toolbar">
+     <div class="map-controls segmented" role="group" aria-label="Map view"><button type="button" data-zoom="state" aria-pressed="true">All Victoria</button><button type="button" data-zoom="metro" aria-pressed="false">Melbourne</button></div>
+     <div class="filter-controls"><label for="party-filter">Highlight</label>
+      <select id="party-filter"><option value="All">All favourites</option><option value="Labor">Labor</option><option value="Liberal">Liberal</option><option value="Nationals">Nationals</option><option value="Greens">Greens</option><option value="One Nation">One Nation</option><option value="Independent">Independent</option><option value="Tied">Tied markets</option></select></div>
+    </div>
+    <div class="map-layout">
+     <div class="map-wrap">
+      <div id="map" role="region" aria-label="Map of Victoria's 88 Legislative Assembly electoral districts. Use the searchable electorate list for keyboard navigation."></div>
+      <div class="atlas-caption"><strong>VIC / 88</strong><span>ELECTORATE ATLAS</span></div>
+      <div id="map-loading" class="map-loading" role="status">Loading locally hosted electoral boundaries…</div>
+      <div id="map-hover" class="map-hover" hidden></div>
+      <div class="atlas-tools" role="group" aria-label="Map zoom controls">
+       <button id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+       <button id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+      </div>
+      <p class="atlas-hint">Drag to pan · pinch or use +/− to zoom</p>
+      <div class="map-legend" aria-label="Map colours"><span><i class="swatch labor"></i>Labor</span><span><i class="swatch liberal"></i>Liberal</span><span><i class="swatch national"></i>Nationals</span><span><i class="swatch greens"></i>Greens</span><span><i class="swatch one-nation"></i>One Nation</span><span><i class="swatch tied"></i>Tied</span></div>
+     </div>
+     <aside class="detail panel" id="detail" aria-labelledby="seat-title">
+      <p class="eyebrow">Selected electorate</p>
+      <h3 id="seat-title">Choose a district</h3>
+      <p class="detail-intro" id="seat-summary">Select any district on the map or from the list below to see the published prices.</p>
+      <div id="seat-offers" class="seat-offers" aria-live="polite" aria-atomic="true"></div>
+      <p class="detail-caption" id="seat-caption">Odds are decimal prices. Shorter odds indicate the bookmaker's favourite, not a confirmed winner.</p>
+      <a id="seat-source" class="button secondary" href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986" target="_blank" rel="noopener noreferrer">Check current Sportsbet odds ↗</a>
+     </aside>
+    </div>
+    <p class="footnote">*Close means the two shortest quoted prices differ by no more than $0.50. Ties are not assigned a party. Boundary geometry: <a href="https://discover.data.vic.gov.au/dataset/vicmap-admin-state-assembly-polygon-2022" target="_blank" rel="noopener noreferrer">State of Victoria / Vicmap Admin (CC BY 4.0)</a>. Locally hosted, simplified for visual display.</p>
+   </section>
+   <section class="directory-section" aria-labelledby="directory-title">
+    <div class="section-heading"><div><p class="eyebrow">All 88 districts</p><h2 id="directory-title">Find an electorate</h2></div><span id="list-count" class="muted small">Loading markets…</span></div>
+    <div class="search-row"><label class="field-label" for="seat-search">Search by electorate name</label><input type="search" id="seat-search" placeholder="e.g. Ivanhoe, Melbourne, Bass" autocomplete="off"><button id="clear-search" type="button" class="button secondary">Clear</button></div>
+    <div id="seat-directory" class="seat-directory" aria-label="Electorates"></div>
+    <p id="list-empty" class="muted" hidden>No matching electorates. Try another name or change the party filter.</p>
+   </section>
+   <footer class="bottom-note"><p><strong>How to read this:</strong> these are quoted market prices at a point in time. They are not election forecasts or vote shares, and bookmaker margins mean 1/odds is not an unbiased probability. Sportsbet may suspend, remove or update prices at any moment. The app doesn't place bets or receive live price updates.</p><p>Independent civic visualisation. Not affiliated with Sportsbet or the Victorian Electoral Commission. <a href="https://www.vec.vic.gov.au/" target="_blank" rel="noopener noreferrer">Official VEC election information ↗</a></p></footer>
+  </main>
+ </div>
+ <noscript><p class="site-shell">Enable JavaScript to explore the map. <a href="https://www.vec.vic.gov.au/electoral-boundaries/state-districts">Browse all electorates at the VEC</a>.</p></noscript>
+</body>
+</html>

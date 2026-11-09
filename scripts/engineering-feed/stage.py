@@ -23,7 +23,7 @@ def stage(root, destination):
         if not (root / app['id'] / 'index.html').is_file():
             raise ValueError('Missing app entrypoint')
         folders.append(app['id'])
-    # Explicit manifest directories retain all app assets, including LA photos.
+    # Stage only manifest-listed apps. Unlisted app folders remain in the repository.
     files = [p for folder in folders for p in (root / folder).rglob('*') if p.is_file()]
     files += [root / name for name in ('index.html', 'apps.json', '.nojekyll', 'CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico') if (root / name).is_file()]
     for file in files:
