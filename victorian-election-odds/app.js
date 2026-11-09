@@ -2,10 +2,6 @@
 (() => {
  const $ = id => document.getElementById(id);
  const sourceURL = 'https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986';
- const boundarySources = [
-  'https://spatial.planning.vic.gov.au/gis/rest/services/state_electoral_boundary/MapServer/4/query',
-  'https://vicmap.land.vic.gov.au/agsgis/rest/services/vicmap/Vicmap_Admin/MapServer/15/query'
- ];
  const colours = {Labor:'#ac5548',Liberal:'#426b88',Nationals:'#8b7044',Greens:'#5b7d5e','One Nation':'#c28b3e',Independent:'#82719a',Tied:'#9e988c',Unknown:'#d1c9bc'};
  const key = v => String(v||'').toLowerCase().normalize('NFKD').replace(/\b(district|electoral)\b/g,'').replace(/[^a-z0-9]+/g,' ').trim();
  const family = value => value.startsWith('Independent') ? 'Independent' : (value==='Liberals' ? 'Liberal' : value);
@@ -19,7 +15,7 @@
  const fixed = price => Number(price).toFixed(2);
  const dotClass = party => party==='One Nation' ? 'OneNation' : party;
  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
- let markets=[],byName=new Map(),selected='',map=null,geoLayer=null,byLayer=new Map(),stateBounds=null,view='state',partyFilter='All';
+ let markets=[],byName=new Map(),selected='',map=null,view='state',partyFilter='All';
  const showStatus = (message,permanent=false) => { const box=$('map-loading');box.textContent=message;box.hidden=!message;if(permanent)box.classList.add('failed'); };
  function setSelected(name,zoom) {
   const market=byName.get(key(name));if(!market)return;
@@ -40,11 +36,7 @@
   $('seat-caption').textContent='Published selections as captured 9 November 2026. Some markets have additional selections behind Sportsbet’s “Show All” control. Prices are not live and can change.';
   document.querySelectorAll('.district-button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.seat===name)));
   restyle();
-  const shape=byLayer.get(key(name));
-  if(map && shape) {
-   shape.bringToFront();
-   if(zoom)map.fitBounds(shape.getBounds().pad(.28),{maxZoom:11,animate:!reduceMotion.matches});
-  }
+  map?.select(market.name,Boolean(zoom));
  }
  function renderDirectory(){
   const search=key($('seat-search').value),matchParty = market => partyFilter==='All'||leader(market)===partyFilter;
@@ -63,53 +55,31 @@
   $('list-count').textContent=filtered.length+' of '+markets.length+' electorates';
   $('list-empty').hidden=Boolean(filtered.length);
  }
- function shapeStyle(feature){
-  const name=extractName(feature),market=byName.get(key(name)),fav=leader(market);
-  const matches=partyFilter==='All'||fav===partyFilter;
-  const active=key(name)===key(selected);
-  return {color:active?'#28241e':'#fffdf7',weight:active?3:1.2,opacity:1,fillColor:colours[fav]||colours.Unknown,fillOpacity:active?.91:(matches?.77:.15),dashArray:fav==='Tied'?'4 3':null};
- }
- function restyle(){if(geoLayer)geoLayer.setStyle(shapeStyle);}
- function extractName(feature){
-  const p=feature.properties||{};
-  return p.district||p.DISTRICT||p.district_label||p.DISTRICT_LABEL||p.name||p.NAME||'';
- }
- function createMap(features){
-  if(!window.L){showStatus('The map library could not be loaded. All 88 electorates remain available below.',true);return;}
-  map=L.map('map',{zoomControl:true,scrollWheelZoom:false,preferCanvas:true});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
-   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-   maxZoom:18,subdomains:'abcd'
-  }).addTo(map);
-  const seen=new Set();
-  geoLayer=L.geoJSON(features,{style:shapeStyle,onEachFeature:(feature,layer)=>{
-   const name=extractName(feature),id=key(name),market=byName.get(id);
-   if(!market)return;
-   seen.add(id);byLayer.set(id,layer);
-   const tooltip=document.createElement('span');tooltip.textContent=name+' · '+(leader(market)==='Tied'?'tied favourites':leader(market)+' '+fixed(sorted(market)[0].decimal));
-   layer.bindTooltip(tooltip,{sticky:true,direction:'top'});
-   layer.on('click',()=>setSelected(market.name,false));
-   layer.on('mouseover',()=>{if(key(selected)!==id)layer.setStyle({weight:2,color:'#463b32',fillOpacity:.90});});
-   layer.on('mouseout',()=>layer.setStyle(shapeStyle(feature)));
-  }}).addTo(map);
-  stateBounds=geoLayer.getBounds();
-  if(stateBounds.isValid())map.fitBounds(stateBounds.pad(.015),{animate:false});
-  const missing=markets.filter(m=>!seen.has(key(m.name)));
-  if(missing.length)showStatus('Boundaries loaded for '+seen.size+' of '+markets.length+' electorates. The complete list remains available below.',true);
-  else showStatus('');
+ function restyle(){map?.updateFilter(partyFilter);}
+ function createMap(data){
+  if(!window.ElectorateAtlas)throw Error('Local map renderer unavailable');
+  map=window.ElectorateAtlas.mount({
+   container:$('map'),
+   features:data.features,
+   onSelect:name=>setSelected(name,false),
+   getLeader:name=>leader(byName.get(key(name))),
+   getLabel:name=>{
+    const market=byName.get(key(name));
+    if(!market)return name;
+    return name+' · '+(leader(market)==='Tied'?'tied favourites':leader(market)+' '+fixed(sorted(market)[0].decimal));
+   }
+  });
+  map.select(selected,false);
+  map.updateFilter(partyFilter);
+  map.frame(view);
+  showStatus('');
  }
  async function loadBoundaries(){
-  const params=new URLSearchParams({where:'1=1',outFields:'*',returnGeometry:'true',outSR:'4326',f:'geojson',geometryPrecision:'4',maxAllowableOffset:'0.002'});
-  for(const url of boundarySources){
-   try {
-    const response=await fetch(url+'?'+params.toString(),{cache:'force-cache',mode:'cors'});
-    if(!response.ok)throw Error('HTTP '+response.status);
-    const payload=await response.json();
-    if(payload.type!=='FeatureCollection'||!Array.isArray(payload.features)||payload.features.length<80)throw Error('Incomplete boundaries');
-    return payload;
-   }catch(error){console.warn('Boundary source unavailable:',url,error);}
-  }
-  throw Error('Official boundary services did not return a complete GeoJSON dataset.');
+  const res=await fetch('./electorates.geojson',{cache:'force-cache'});
+  if(!res.ok)throw Error('HTTP '+res.status);
+  const data=await res.json();
+  if(data.type!=='FeatureCollection'||!Array.isArray(data.features)||data.features.length!==88)throw Error('Expected exactly 88 local electorate polygons');
+  return data;
  }
  async function boot(){
   $('seat-search').addEventListener('input',renderDirectory);
@@ -122,9 +92,7 @@
    view=button.dataset.zoom;
    controls.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
    pill?.sync();
-   if(!map)return;
-   if(view==='metro')map.fitBounds([[-38.45,144.20],[-37.25,145.72]],{maxZoom:10,animate:!reduceMotion.matches});
-   else if(stateBounds)map.fitBounds(stateBounds.pad(.015),{animate:!reduceMotion.matches});
+   map?.frame(view);
   });
   pill?.sync(true);
   if(pill&&window.ResizeObserver)new ResizeObserver(()=>pill.sync(true)).observe(controls);
@@ -142,7 +110,7 @@
    $('capture-date').textContent=new Date(data.capturedDate+'T12:00:00+11:00').toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric',timeZone:'Australia/Melbourne'});
    renderDirectory();
    setSelected('Melbourne',false);
-   try{createMap(await loadBoundaries());}catch(error){console.warn(error);showStatus('Map boundaries could not load. Use the searchable list below, or open the official VEC boundary map.',true);}
+   try{createMap(await loadBoundaries());}catch(error){console.warn(error);showStatus('Locally hosted boundary data could not load. Use the complete searchable list below.',true);}
   }catch(error){
    console.error(error);
    $('list-count').textContent='Market data unavailable';
