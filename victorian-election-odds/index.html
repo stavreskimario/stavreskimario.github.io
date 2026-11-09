@@ -8,11 +8,10 @@
  <title>Victoria, by the odds · Mario's Sites</title>
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23faf7ef'/%3E%3Cpath d='M8 29V11h6l6 10 6-10h6v18h-6V20l-6 9-6-9v9z' fill='%23ad5738'/%3E%3C/svg%3E">
  <link rel="stylesheet" href="../shared/theme.css?v=1">
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
  <link rel="stylesheet" href="./styles.css?v=1">
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
  <script src="../shared/ui.js?v=1" defer></script>
- <script src="./app.js?v=1" defer></script>
+ <script src="./atlas.js?v=1" defer></script>
+ <script src="./app.js?v=2" defer></script>
 </head>
 <body>
  <a class="skip-link" href="#main">Skip to election map</a>
@@ -44,7 +43,14 @@
     <div class="map-layout">
      <div class="map-wrap">
       <div id="map" role="region" aria-label="Map of Victoria's 88 Legislative Assembly electoral districts. Use the searchable electorate list for keyboard navigation."></div>
-      <div id="map-loading" class="map-loading" role="status">Loading official Victorian electoral boundaries…</div>
+      <div class="atlas-caption"><strong>VIC / 88</strong><span>ELECTORATE ATLAS</span></div>
+      <div id="map-loading" class="map-loading" role="status">Loading locally hosted electoral boundaries…</div>
+      <div id="map-hover" class="map-hover" hidden></div>
+      <div class="atlas-tools" role="group" aria-label="Map zoom controls">
+       <button id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+       <button id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+      </div>
+      <p class="atlas-hint">Drag to pan · pinch or use +/− to zoom</p>
       <div class="map-legend" aria-label="Map colours"><span><i class="swatch labor"></i>Labor</span><span><i class="swatch liberal"></i>Liberal</span><span><i class="swatch national"></i>Nationals</span><span><i class="swatch greens"></i>Greens</span><span><i class="swatch one-nation"></i>One Nation</span><span><i class="swatch tied"></i>Tied</span></div>
      </div>
      <aside class="detail panel" id="detail" aria-labelledby="seat-title">
@@ -56,7 +62,7 @@
       <a id="seat-source" class="button secondary" href="https://www.sportsbet.com.au/betting/politics/vic-politics/victorian-state-election-seat-betting-10944986" target="_blank" rel="noopener noreferrer">Check current Sportsbet odds ↗</a>
      </aside>
     </div>
-    <p class="footnote">*Close means the two shortest quoted prices differ by no more than $0.50. Ties are not assigned a party. Boundary geometry: <a href="https://spatial.planning.vic.gov.au/gis/rest/services/state_electoral_boundary/MapServer" target="_blank" rel="noopener noreferrer">Victorian Government, STATE_ASSEMBLY_2022</a>.</p>
+    <p class="footnote">*Close means the two shortest quoted prices differ by no more than $0.50. Ties are not assigned a party. Boundary geometry: <a href="https://discover.data.vic.gov.au/dataset/vicmap-admin-state-assembly-polygon-2022" target="_blank" rel="noopener noreferrer">State of Victoria / Vicmap Admin (CC BY 4.0)</a>. Locally hosted, simplified for visual display.</p>
    </section>
    <section class="directory-section" aria-labelledby="directory-title">
     <div class="section-heading"><div><p class="eyebrow">All 88 districts</p><h2 id="directory-title">Find an electorate</h2></div><span id="list-count" class="muted small">Loading markets…</span></div>
