@@ -39,4 +39,6 @@ node --test tests/food-wine.cjs
 
 The matching regression explores all 648 input combinations, style filtering, dessert constraints, uniqueness, both sort orders and representative sauce/weight/chilli cases. Browser checks should cover the four-step flow, nested icon/text clicks, Back, answer editing, dessert conversion, restart, sorting, native details, keyboard focus and immediate feedback, reduced motion, narrow layout and 200% text enlargement. Physical iPhone/Safari feel remains a separate check.
 
+The Food & Wine checks workflow runs the static validator and pairing regressions on relevant pull requests. The existing Engineering Journal browser check is pinned to Ubuntu 24.04 because its Playwright 1.51.1 dependency does not support Ubuntu 26.04.
+
 Keep app and manifest changes on a feature branch and open a pull request. The live subpage is published only after an authorised merge and successful GitHub Pages deployment.
