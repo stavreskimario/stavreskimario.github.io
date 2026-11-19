@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#faf7ef">
+ <meta name="description" content="Four little questions. Eight wine styles to try with dinner, with pairing notes and indicative Australian budgets.">
+ <title>Food & Wine · Mario’s Sites</title>
+ <link rel="icon" href="./assets/glass.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="../shared/theme.css?v=1">
+ <link rel="stylesheet" href="./styles.css?v=1">
+ <script src="../shared/ui.js?v=1" defer></script>
+ <script src="./pairings.js?v=1" defer></script>
+ <script src="./app.js?v=1" defer></script>
+</head>
+<body>
+ <a class="skip-link" href="#main">Skip to pairing guide</a>
+ <div class="site-shell">
+  <header class="site-header"><a href="../">All apps</a><span class="wordmark">Mario’s sites</span></header>
+  <main id="main">
+   <header class="intro">
+    <div><p class="eyebrow">At the table · Food & wine</p><h1 class="display">A good meal.<br><em>A great pairing.</em></h1><p class="intro-copy">Tell us what’s cooking. Find a wine that belongs beside it.</p><p class="intro-meta">Four questions <span aria-hidden="true">·</span> Eight wine styles <span aria-hidden="true">·</span> No sign-up</p></div>
+    <div class="table-sketch" aria-hidden="true"><svg viewBox="0 0 300 220" fill="none"><ellipse cx="114" cy="123" rx="76" ry="59"/><ellipse cx="114" cy="123" rx="59" ry="44"/><path d="M13 67v42c0 12 17 12 17 0V67m-9 0v132M235 29c-6 25-7 47-2 58 5 15 30 15 36 0 5-12 3-35-1-58zM234 62c8-3 25 6 36 0m-20 36v69m-17 2c8-5 27-5 35 0M285 105c0 8-5 15-5 15m-5-18-3 7"/><path d="M68 120c24-25 61-15 81 4m-71 19c19-9 43-9 65 1" stroke-dasharray="2 7"/></svg><span class="handwritten">let dinner lead.</span></div>
+   </header>
+   <div class="guide-layout">
+    <div class="guide-content">
+     <section id="quiz" class="panel quiz-panel" aria-labelledby="question-title" hidden>
+      <nav aria-label="Pairing questions"><ol class="stepper" id="steps"></ol></nav>
+      <div class="question-head"><p class="eyebrow" id="question-count"></p><h2 id="question-title" tabindex="-1"></h2><p class="muted" id="question-hint"></p></div>
+      <div class="options" id="options" role="group" aria-labelledby="question-title" aria-describedby="question-hint"></div>
+      <div class="quiz-actions"><button class="text-button" id="back" type="button">Back</button><span class="muted small">Choose an option to continue</span></div>
+     </section>
+     <section id="results" aria-labelledby="results-title" hidden>
+      <div class="results-heading"><p class="eyebrow">Your dinner, paired</p><h2 id="results-title" tabindex="-1">Eight wines to explore.</h2><p id="result-note" class="muted"></p></div>
+      <div class="results-toolbar"><span class="small">Look for these styles on the label.</span><label for="sort">Sort by <select id="sort"><option value="price">Price: low to high</option><option value="match">Pairing fit</option></select></label></div>
+      <p class="price-note small">AUD planning estimates, not live prices. Bottle sizes are shown for sweet wines.</p>
+      <div class="wine-grid" id="wine-grid"></div>
+      <p class="small muted results-footnote">These are wine styles, not specific producers or vintages. Start with the highlighted pairing, then choose a bottle you enjoy.</p>
+      <button class="button secondary" id="new-pairing" type="button">Pair another meal</button>
+     </section>
+    </div>
+    <aside class="dinner-note" aria-labelledby="summary-title">
+     <p class="eyebrow">The dinner notes</p><h2 id="summary-title">On your menu</h2><p id="summary-empty" class="muted">A few little details make a better match.</p><ol id="answers" class="answer-list"></ol>
+     <button class="text-button restart" id="restart" type="button" hidden>Start again</button>
+     <div class="note-divider"></div><p class="handwritten">The sauce matters, too.</p><p class="small muted">A lemon dressing, mushroom sauce or tomato base can change the pairing as much as the main ingredient.</p>
+    </aside>
+   </div>
+   <p class="status sr-only" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+   <details class="guide-notes"><summary>A little pairing know-how</summary><div class="know-how"><div><h3>Match the mood of the meal</h3><p>Think about the sauce and the dish’s weight. Fresh acidity can lift richness; a little sweetness can soften chilli heat. For dessert, choose a wine at least as sweet as the food.</p></div><div><h3>A guide, with room for taste</h3><p>Matches use a curated style catalogue and pairing rules. Regions are examples to explore. Budgets are broad editorial estimates in Australian dollars, not retailer quotes or availability checks.</p><p>Read more: <a href="https://www.australianwine.com/experience/articles/5-steps-to-pairing-food-with-wine">Wine Australia’s pairing guide</a> and <a href="https://www.wsetglobal.com/news-insights/insight-opinion/four-rules-to-masterful-food-and-wine-pairing/">WSET’s food and wine principles</a>.</p></div></div></details>
+  </main>
+  <footer class="page-footer"><a href="../">All apps</a><span>Made for a good evening.</span><span>Answers stay in this tab. Refresh to start fresh.</span></footer>
+ </div>
+ <noscript><div class="site-shell panel"><h2>A little pairing know-how</h2><p>Enable JavaScript for the four-question guide. As a starting point, try Riesling with fresh seafood, Pinot Noir with mushrooms, Sangiovese with tomato-based dishes, or a sweet wine with dessert.</p></div></noscript>
+</body>
+</html>
