@@ -2,13 +2,16 @@
 
 A collection of small apps built with Codex. Live at **[stavreskimario.github.io](https://stavreskimario.github.io/)**, published from this repository with GitHub Pages.
 
-## Apps
+## Visible apps
 
 | App | What it does | Open |
 | --- | --- | --- |
-| Nine Days in Los Angeles | December 20–28, 2026 trip journal with an editable daily itinerary, editable booking records and map locations, Google map embeds, Google/Apple directions and a packing checklist. | [LA trip](https://stavreskimario.github.io/la-trip/) |
 | Hello World | A working, copyable starter with the collection’s typography, colours, accessible controls and fluid interactions. | [Hello World](https://stavreskimario.github.io/hello-world/) |
-| Engineering Journal | Searchable daily engineering and AI reading list with device-local saves. | [Engineering Journal](engineering-journal/) |
+| Food & Wine | Four-question guide to eight wine styles, with pairing notes and indicative AUD budgets. | [Food & Wine](food-wine/) |
+
+The collection and its static fallback list only Hello World and Food & Wine. The LA trip, Engineering Journal and Crystal Palace apps keep their catalogue records with `visible: false`, preserving their code and assets for publishing. This changes discovery on the collection page; their direct GitHub Pages URLs remain public. Their documentation below is retained for future use.
+
+To show an app again, remove its `visible: false` flag or set it to `true`. Keep the static links in `index.html` aligned with the visible collection so fallback loading shows the same apps.
 
 ## Engineering Journal
 
@@ -83,6 +86,7 @@ See the [starter recipe](hello-world/README.md), [design language](DESIGN.md), [
 | `shared/` | Common theme, controls, catalog styles and rendering |
 | `hello-world/` | Copyable app starter |
 | `engineering-journal/` | Daily engineering reader and public article catalogue |
+| `food-wine/` | Food and wine pairing guide; answers stay in the current tab |
 | `scripts/engineering-feed/` | Bounded, standard-library collection and whole-site staging |
 | `la-trip/` | Trip app, itinerary/booking/location editor, photos and source attributions |
 | `DESIGN.md`, `docs/UI_CRAFT_REFERENCE.md`, `AGENTS.md` | Design decisions, UI craft reference, interaction rules and development lessons |

@@ -9,7 +9,8 @@
       "path": "./la-trip/",
       "image": "./la-trip/assets/la-skyline.jpg",
       "imageAlt": "Palm trees overlooking the Los Angeles skyline",
-      "meta": "20–28 December 2026"
+      "meta": "20–28 December 2026",
+      "visible": false
     },
     {
       "id": "hello-world",
@@ -26,7 +27,8 @@
       "category": "Reading",
       "path": "./engineering-journal/",
       "specimen": "Under the hood.",
-      "meta": "The daily edition"
+      "meta": "The daily edition",
+      "visible": false
     },
     {
       "id": "crystal-palace",
@@ -35,7 +37,17 @@
       "category": "History",
       "path": "./crystal-palace/",
       "specimen": "A cathedral of light.",
-      "meta": "London · 1851"
+      "meta": "London · 1851",
+      "visible": false
+    },
+    {
+      "id": "food-wine",
+      "name": "Food & Wine",
+      "description": "Four little questions. Eight wine styles to bring to the table, with pairing notes and indicative Australian budgets.",
+      "category": "Food & drink",
+      "path": "./food-wine/",
+      "specimen": "A great pairing.",
+      "meta": "Let dinner lead"
     }
   ]
 }

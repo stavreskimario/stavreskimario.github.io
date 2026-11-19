@@ -10,9 +10,12 @@
   const data = await response.json();
   const ids = new Set();
   if (data.version !== 1 || !Array.isArray(data.apps)) throw new Error('Invalid collection');
-  const cards = data.apps.map((app, index) => {
-   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(app.id) || ids.has(app.id) || app.path !== `./${app.id}/` || !localPath(app.path) || ![app.name,app.description,app.category].every(value => typeof value === 'string' && value.trim()) || (app.image && !localPath(app.image))) throw new Error('Invalid app entry');
+  let visibleIndex = 0;
+  const cards = data.apps.map(app => {
+   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(app.id) || ids.has(app.id) || app.path !== `./${app.id}/` || !localPath(app.path) || ![app.name,app.description,app.category].every(value => typeof value === 'string' && value.trim()) || (app.image && !localPath(app.image)) || ('visible' in app && typeof app.visible !== 'boolean')) throw new Error('Invalid app entry');
    ids.add(app.id);
+   if (app.visible === false) return null;
+   const index = visibleIndex++;
    const card = element('a','project'); card.href = app.path; card.setAttribute('aria-label',`Open ${app.name}`);
    const visual = element('div',app.image ? 'photo' : 'specimen');
    if (app.image) {
@@ -22,9 +25,9 @@
    const copy = element('div','copy');
    copy.append(element('span','category',`${app.category} · ${String(index+1).padStart(2,'0')}`),element('h2','',app.name),element('p','',app.description));
    const open = element('span','open','Open app '), arrow = element('span','arrow','→'); arrow.setAttribute('aria-hidden','true'); open.append(arrow); copy.append(open); card.append(visual,copy); return card;
-  });
+  }).filter(Boolean);
   list.replaceChildren(...cards);
-  status.textContent = cards.length ? '' : 'No apps published yet.';
+  status.textContent = cards.length ? '' : 'No apps to show yet.';
  } catch {
   // Keep working static links if JSON is unavailable; never replace the page with a blank grid.
   status.textContent = 'Showing the saved collection. Refresh to try loading the latest apps.';

@@ -1,0 +1,24 @@
+name: Food & Wine checks
+on:
+  pull_request:
+    paths:
+      - food-wine/**
+      - tests/food-wine.cjs
+      - scripts/validate.py
+      - shared/**
+      - apps.json
+      - .github/workflows/food-wine-checks.yml
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Validate static site and pairing rules
+        run: |
+          python3 scripts/validate.py
+          node --test tests/food-wine.cjs
