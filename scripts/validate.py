@@ -42,6 +42,7 @@ def validate():
         ids.add(slug)
         require(app.get('path') == f'./{slug}/', f'{slug}: path must be ./{slug}/')
         require((ROOT/slug/'index.html').is_file(), f'{slug}: missing app index.html')
+        require('visible' not in app or isinstance(app['visible'], bool), f'{slug}: visible must be a boolean')
         for key in ('name','description','category'):
             require(isinstance(app.get(key), str) and app[key].strip(), f'{slug}: missing {key}')
         if app.get('image'):
